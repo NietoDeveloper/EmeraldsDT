@@ -1,1 +1,3 @@
-# EmeraldsDT
+# Emeralds DT
+
+# Jewellery bussnines
