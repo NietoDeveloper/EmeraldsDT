@@ -153,7 +153,7 @@ JSON
   "title": "Finish README file",
   "completed": false,
   "user": "60c72b2f9b1d8c001c8e1a7b",
-  "createdAt": "2023-10-26T11:00:00.000Z"
+  "createdAt": "2025-10-26T11:00:00.000Z"
 }
 PUT /api/tasks/:id
 
