@@ -37,4 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 # Manuel Nieto 
 
-##  NietoSoftware Developer  2025
+##  Nieto Software Developer  2025
