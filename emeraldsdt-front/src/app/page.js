@@ -15,7 +15,7 @@ export default function Home() {
         />
         <ol>
           <li>
-            Esmeraldas D T <code></code>.
+            From Colombia <code>The Best Worlds Emeralds</code>.
           </li>
           <li>Emeralds D T.</li>
         </ol>
