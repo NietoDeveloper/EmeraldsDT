@@ -17,7 +17,7 @@ export default function Home() {
           <li>
             From Colombia <code>The Best Worlds Emeralds</code>.
           </li>
-          <li>Emeralds D T.</li>
+          <li>Buy On Line</li>
         </ol>
 
         <div className={styles.ctas}>
