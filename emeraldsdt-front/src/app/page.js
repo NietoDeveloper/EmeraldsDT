@@ -15,9 +15,9 @@ export default function Home() {
         />
         <ol>
           <li>
-            Get started by editing <code>src/app/page.js</code>.
+            Esmeraldas D T <code></code>.
           </li>
-          <li>.</li>
+          <li>Emeralds D T.</li>
         </ol>
 
         <div className={styles.ctas}>
