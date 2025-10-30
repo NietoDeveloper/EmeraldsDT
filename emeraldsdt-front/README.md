@@ -20,8 +20,6 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 You can check out  [https://github.com/NietoDeveloper/EmeraldsDT] your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
 # Manuel Nieto 
 
 ##  Nieto Software Developer  2025
