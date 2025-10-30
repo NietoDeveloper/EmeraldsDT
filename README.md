@@ -1,6 +1,6 @@
 # Emeralds DT
 
-# Jewellery bussnines
+## Jewellery bussnines
 
 
 My Awesome Node.js App
