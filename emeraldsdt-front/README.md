@@ -45,3 +45,9 @@ A React-based frontend application built with JavaScript, CSS, Vite for developm
 
 ## License
 MIT
+
+# Manuel Nieto 
+
+##  Nieto Software Developer  
+
+### 2025
