@@ -94,7 +94,7 @@ const Footer = () => {
           <p className="text-md cursor-pointer">Terms of Use</p>
         </div>
         <div>
-          <p>© 20. All Rights Reserved</p>
+          <p>© Emeralds DT 2025. All Rights Reserved</p>
         </div>
         <div>
           <p>
