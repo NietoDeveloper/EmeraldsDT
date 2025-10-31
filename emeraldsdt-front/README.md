@@ -24,7 +24,9 @@ You can check out  [https://github.com/NietoDeveloper/EmeraldsDT] your feedback 
 
 ### 2025
 
-# Frontend App README
+# Emeralds DT
+
+## Front End
 
 ## Description
 A React-based frontend application built with JavaScript, CSS, Vite for development tooling, Node.js for runtime, and Next.js for server-side rendering.
