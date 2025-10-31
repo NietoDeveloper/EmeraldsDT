@@ -3,6 +3,7 @@
 ## Front End
 
 ## Description
+
 A React-based frontend application built with JavaScript, CSS, Vite for development tooling, Node.js for runtime, and Next.js for server-side rendering.
 
 ## Installation
@@ -18,6 +19,7 @@ A React-based frontend application built with JavaScript, CSS, Vite for developm
 - `npm run start`: Starts the production server
 
 ## Tech Stack
+
 - JavaScript
 - React
 - CSS
