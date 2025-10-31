@@ -1,6 +1,6 @@
 
 
-You can check out  [https://github.com/NietoDeveloper/EmeraldsDT] your feedback and contributions are welcome!
+You can check out  your feedback and contributions are welcome!
 
 # Emeralds DT
 
