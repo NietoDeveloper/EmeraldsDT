@@ -1,5 +1,3 @@
-
-
 # Emeralds DT
 
 ## Front End
