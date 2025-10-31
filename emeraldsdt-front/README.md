@@ -1,7 +1,5 @@
 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
 You can check out  [https://github.com/NietoDeveloper/EmeraldsDT] your feedback and contributions are welcome!
 
 # Emeralds DT
