@@ -28,10 +28,11 @@ A React-based frontend application built with JavaScript, CSS, Vite for developm
 - Next.js
 
 ## License
+
 MIT
 
-# Manuel Nieto 
+# Manuel Nieto
 
-##  Nieto Software Developer  
+## Nieto Software Developer  
 
 ### 2025
