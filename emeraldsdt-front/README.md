@@ -18,12 +18,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can check out  [https://github.com/NietoDeveloper/EmeraldsDT] your feedback and contributions are welcome!
 
-# Manuel Nieto 
-
-##  Nieto Software Developer  
-
-### 2025
-
 # Emeralds DT
 
 ## Front End
