@@ -4,7 +4,7 @@
 
 ## Description
 
-A React-based frontend application built with JavaScript, CSS, Vite for development tooling, Node.js for runtime, and Next.js for server-side rendering.
+A React-based frontend application built with JavaScript, CSS, Tailwind, Vite for development tooling, Node.js for runtime, and Next.js for server-side rendering.
 
 ## Installation
 
