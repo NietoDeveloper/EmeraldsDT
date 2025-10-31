@@ -1,7 +1,5 @@
 
 
-You can check out  your feedback and contributions are welcome!
-
 # Emeralds DT
 
 ## Front End
