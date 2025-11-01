@@ -8,7 +8,6 @@ Fast & Modern Frontend: Utilizes React with Vite for lightning-fast module bundl
 
 Responsive UI: Styled using Tailwind CSS utility-first framework for a fully responsive and clean design.
 
-
 ## 🛠️ Tech Stack
 
 This project is divided into two main components: client (Frontend) and server (Backend).
@@ -54,7 +53,7 @@ Follow these steps to get your development environment running:
 git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
 cd your-repo-name
 
-3. Frontend Setup (Client)
+2. Frontend Setup
 
 Navigate to the client directory and install dependencies.
 
@@ -70,14 +69,6 @@ VITE_API_BASE_URL="<http://localhost:3000/api>"
 🏃 Running the Application
 
 You will need two separate terminal windows, one for the backend and one for the frontend.
-
-1. Start the Backend API
-
-From the server directory:
-
-npm start
-
-# The server will run at <http://localhost:3000> (or your configured PORT)
 
 2. Start the Frontend Development Server
 
