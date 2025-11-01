@@ -82,23 +82,6 @@ git clone [https://github.com/your-username/your-repo-name.git](https://github.c
 cd your-repo-name
 
 
-2. Backend Setup (Server)
-
-Navigate to the server directory, install dependencies, and set up your environment variables.
-
-cd server
-npm install
-
-
-Configuration:
-
-Create a file named .env in the server directory and add your configuration variables (e.g., database connection strings, API keys, port number):
-
-PORT=3000
-DATABASE_URL="your_database_connection_string_here"
-JWT_SECRET="super_secret_key"
-
-
 3. Frontend Setup (Client)
 
 Navigate to the client directory and install dependencies.
