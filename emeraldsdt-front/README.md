@@ -127,3 +127,5 @@ To create a production build of the React app:
 
 cd client
 npm run build
+
+# Manuel Nieto
