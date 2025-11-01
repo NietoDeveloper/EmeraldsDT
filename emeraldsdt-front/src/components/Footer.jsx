@@ -30,7 +30,7 @@ const Footer = () => {
         <div>
           <h1 className="font-hobo text-color-red text-2xl ">Contact Us</h1>
           <Link to="/contact">
-            <p className=" text-md mt-3 ml-[1px]">Let's Talk</p>
+            <p className=" text-md mt-3 ml-[1px]"> Talk</p>
           </Link>
         </div>
         <div>
