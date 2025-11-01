@@ -38,8 +38,6 @@ Build tool and development server for fast development.
 
 Utility-first CSS framework for styling.
 
-
-
 ### JavaScript (ESM)
 
 Primary language for the client-side logic.
@@ -50,13 +48,9 @@ Node.js
 
 Server-side runtime environment.
 
-
-
 Express.js
 
 Web application framework (or similar, e.g., Koa).
-
-
 
 [Database]
 
@@ -81,7 +75,6 @@ Follow these steps to get your development environment running:
 git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
 cd your-repo-name
 
-
 3. Frontend Setup (Client)
 
 Navigate to the client directory and install dependencies.
@@ -89,13 +82,11 @@ Navigate to the client directory and install dependencies.
 cd ../client
 npm install
 
-
 Configuration:
 
 If your frontend needs environment variables (e.g., the API URL), create a file named .env in the client directory. Vite requires prefixing environment variables with VITE_.
 
-VITE_API_BASE_URL="http://localhost:3000/api"
-
+VITE_API_BASE_URL="<http://localhost:3000/api>"
 
 🏃 Running the Application
 
@@ -106,16 +97,16 @@ You will need two separate terminal windows, one for the backend and one for the
 From the server directory:
 
 npm start
-# The server will run at http://localhost:3000 (or your configured PORT)
 
+# The server will run at <http://localhost:3000> (or your configured PORT)
 
 2. Start the Frontend Development Server
 
 From the client directory:
 
 npm run dev
-# The client app will be accessible at http://localhost:5173
 
+# The client app will be accessible at <http://localhost:5173>
 
 The application is now running and ready for development!
 
@@ -128,4 +119,8 @@ To create a production build of the React app:
 cd client
 npm run build
 
-# Manuel Nieto
+## Manuel Nieto
+
+## NietoSoftware Developer
+
+### 
