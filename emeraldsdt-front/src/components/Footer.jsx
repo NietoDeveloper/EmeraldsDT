@@ -94,7 +94,7 @@ const Footer = () => {
           <p className="text-md cursor-pointer">Terms of Use</p>
         </div>
         <div>
-          <p>© 2024 Let's Falafel. All Rights Reserved</p>
+          <p>© 2025 Emeralds D.T. All Rights Reserved</p>
         </div>
         <div>
           <p>
@@ -105,7 +105,7 @@ const Footer = () => {
               className="text-red-500 cursor-pointer font-medium"
             >
               {" "}
-              V Patch
+              Nieto Software Developer
             </a>{" "}
           </p>
         </div>
