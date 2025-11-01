@@ -8,13 +8,8 @@ Fast & Modern Frontend: Utilizes React with Vite for lightning-fast module bundl
 
 Responsive UI: Styled using Tailwind CSS utility-first framework for a fully responsive and clean design.
 
-Robust Backend: Powered by Node.js and Express (or similar framework) to handle API requests and business logic.
 
-[Feature 4]: Example: User authentication using JWTs.
-
-[Feature 5]: Example: Real-time data synchronization.
-
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 This project is divided into two main components: client (Frontend) and server (Backend).
 
