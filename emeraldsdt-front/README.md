@@ -30,9 +30,7 @@ React
 
 User interface library.
 
-
-
-Vite
+### Vite
 
 Build tool and development server for fast development.
 
