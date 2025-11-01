@@ -144,10 +144,3 @@ To create a production build of the React app:
 
 cd client
 npm run build
-
-
-This generates a highly optimized static build in the dist folder, ready to be served by any static hosting service (e.g., Vercel, Netlify, Firebase Hosting).
-
-Backend (Server)
-
-The Node.js server can be deployed to platforms like Heroku, AWS, Google Cloud, or DigitalOcean. Ensure your deployment script uses the production build command for the frontend if you are serving the frontend files directly from the Node.js server.
