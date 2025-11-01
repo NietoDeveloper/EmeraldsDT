@@ -40,7 +40,7 @@ Utility-first CSS framework for styling.
 
 
 
-JavaScript (ESM)
+### JavaScript (ESM)
 
 Primary language for the client-side logic.
 
