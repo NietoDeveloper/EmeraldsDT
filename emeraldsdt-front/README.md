@@ -36,7 +36,7 @@ Build tool and development server for fast development.
 
 
 
-Tailwind CSS
+### Tailwind CSS
 
 Utility-first CSS framework for styling.
 
