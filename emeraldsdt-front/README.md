@@ -45,22 +45,6 @@ Server-side runtime environment.
 
 Express.js
 
-Web application framework (or similar, e.g., Koa).
-
-[Database]
-
-E.g., MongoDB, PostgreSQL, or SQLite.
-
-⚙️ Prerequisites
-
-Before you begin, ensure you have the following installed on your system:
-
-Node.js (v18 or higher recommended)
-
-npm (or yarn/pnpm)
-
-Git
-
 💻 Installation and Setup
 
 Follow these steps to get your development environment running:
