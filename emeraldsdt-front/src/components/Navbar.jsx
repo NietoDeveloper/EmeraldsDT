@@ -140,19 +140,19 @@ const Navbar = () => {
               { text: "our menu", link: "#", drop: true, pdf: false },
               // i added the link to the about our food pdf here
               {
-                text: "About Our drones",
+                text: "About Our Emeralds",
                 link: AllergensGuidePDF,
                 drop: false,
                 pdf: true,
               },
               {
-                text: "our merchandise",
+                text: "our Products",
                 link: "/merchandise",
                 drop: false,
                 pdf: false,
               },
               {
-                text: "news & events",
+                text: "news & ",
                 link: "/allnews",
                 drop: false,
                 pdf: false,
