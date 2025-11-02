@@ -152,7 +152,7 @@ const Navbar = () => {
                 pdf: false,
               },
               {
-                text: "news & ",
+                text: "news & Sells",
                 link: "/allnews",
                 drop: false,
                 pdf: false,
