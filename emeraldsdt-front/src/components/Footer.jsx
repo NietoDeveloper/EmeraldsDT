@@ -49,7 +49,7 @@ const Footer = () => {
             <p className=" text-md mt-1 ml-[1px]">Our Menu</p>
           </Link>
           <Link to="/merchandise">
-            <p className=" text-md mt-1 ml-[1px]">Our Merchandise</p>
+            <p className=" text-md mt-1 ml-[1px]">Our Investigations</p>
           </Link>
         </div>
         <div className="">
