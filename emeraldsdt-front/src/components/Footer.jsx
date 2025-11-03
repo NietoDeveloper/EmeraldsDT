@@ -63,7 +63,7 @@ const Footer = () => {
       <div className="flex items-center gap-3 max-sm:mt-10 mt-5">
         <div className="h-10 w-10 rounded-full border-[1.5px] border-black flex items-center justify-center cursor-pointer hover:bg-white  transition-all duration-300">
           <a
-            href="https://www.facebook.com/letsfalafelofficial"
+            href="https://www.facebook.com/"
             target="_blank" rel="noreferrer"
           >
             <FaFacebookF className="text-md" />
