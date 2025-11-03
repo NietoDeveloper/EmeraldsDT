@@ -82,7 +82,7 @@ The application is now running and ready for development!
 
 ## 📦 Deployment
 
-Frontend (Client)
+### Frontend (Client)
 
 To create a production build of the React app:
 
