@@ -80,7 +80,7 @@ npm run dev
 
 The application is now running and ready for development!
 
-📦 Deployment
+## 📦 Deployment
 
 Frontend (Client)
 
