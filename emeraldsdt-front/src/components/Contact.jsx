@@ -160,7 +160,7 @@ const Contact = () => {
                       className="mr-2 leading-tight"
                     />
                     Please send me special offers, vouchers, news and/or
-                    information on  promotions & activities.
+                    information on Emeralds DT promotions & activities.
                   </label>
                 </div>
                 <button
