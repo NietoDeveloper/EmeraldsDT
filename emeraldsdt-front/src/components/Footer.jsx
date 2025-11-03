@@ -55,7 +55,7 @@ const Footer = () => {
         <div className="">
           <h1 className="font-hobo text-color-red text-2xl ">News & Products</h1>
           <Link to="/allnews">
-            <p className=" text-md mt-3 ml-[1px]">News & Events</p>
+            <p className=" text-md mt-3 ml-[1px]">News & s</p>
           </Link>
         </div>
       </div>
