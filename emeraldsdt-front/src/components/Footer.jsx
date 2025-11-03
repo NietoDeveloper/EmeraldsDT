@@ -53,7 +53,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="">
-          <h1 className="font-hobo text-color-red text-2xl ">News & Events</h1>
+          <h1 className="font-hobo text-color-red text-2xl ">News & Products</h1>
           <Link to="/allnews">
             <p className=" text-md mt-3 ml-[1px]">News & Events</p>
           </Link>
