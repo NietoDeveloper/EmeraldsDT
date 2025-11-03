@@ -66,7 +66,7 @@ If your frontend needs environment variables (e.g., the API URL), create a file 
 
 VITE_API_BASE_URL="<http://localhost:3000/api>"
 
-🏃 Running the Application
+## 🏃 Running the Application
 
 You will need two separate terminal windows, one for the backend and one for the frontend.
 
