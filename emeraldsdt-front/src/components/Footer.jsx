@@ -24,7 +24,7 @@ const Footer = () => {
         <div>
           <h1 className="font-hobo text-color-red text-2xl ">Our Company</h1>
           <p className="text-md mt-3">About Us</p>
-          <p className="text-md mt-1">Our </p>
+          <p className="text-md mt-1">Our Products</p>
           <p className="text-md mt-1">Our Team</p>
         </div>
         <div>
