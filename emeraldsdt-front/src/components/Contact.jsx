@@ -160,7 +160,7 @@ const Contact = () => {
                       className="mr-2 leading-tight"
                     />
                     Please send me special offers, vouchers, news and/or
-                    information on Let's Falafel promotions & activities.
+                    information on  promotions & activities.
                   </label>
                 </div>
                 <button
