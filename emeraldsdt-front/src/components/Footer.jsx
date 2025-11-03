@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
         <div className="h-10 w-10 rounded-full border-[1.5px] border-black flex items-center justify-center cursor-pointer hover:bg-white  transition-all duration-300">
           <a
-            href="https://www.instagram.com/letsfalafelofficial/"
+            href="https://www.instagram.com/"
             target="_blank" rel="noreferrer"
           >
             <FaInstagram className="text-md" />
