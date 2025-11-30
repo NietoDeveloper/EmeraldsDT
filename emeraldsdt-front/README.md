@@ -34,7 +34,6 @@ cd your-repo-name
 
 Configuration:
 
-If your frontend needs environment variables (e.g., the API URL), create a file named .env in the client directory. Vite requires prefixing 
 
 2. Start the Frontend Development Server
 
