@@ -32,12 +32,7 @@ User interface library.
 git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
 cd your-repo-name
 
-2. Frontend Setup
 
-Navigate to the client directory and install dependencies.
-
-cd ../client
-npm install
 
 Configuration:
 
