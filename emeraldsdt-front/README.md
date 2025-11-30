@@ -10,15 +10,4 @@ Responsive UI: Styled using Tailwind CSS utility-first framework for a fully res
 
 ## 🛠️ Tech Stack
 
-This project is divided into two main components: client (Frontend) and server (Backend).
-
-Component
-
-Technology
-
-Description
-
-Frontend
-
-
-c
+This project is divided into two main components: 
