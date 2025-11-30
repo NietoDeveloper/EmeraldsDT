@@ -27,9 +27,7 @@ User interface library.
 ### Vite
 
 
-1. Clone the repository
-
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+1. Clone the rep
 cd your-repo-name
 
 
