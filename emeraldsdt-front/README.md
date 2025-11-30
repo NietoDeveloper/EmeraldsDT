@@ -6,8 +6,4 @@ A full-stack web application built with a modern and efficient stack: React, Vit
 
 Fast & Modern Frontend: Utilizes React with Vite for lightning-fast module bundling and HMR (Hot Module Replacement).
 
-Responsive UI: Styled using Tailwind CSS utility-first framework for a fully responsive and clean design.
-
-## 🛠️ Tech Stack
-
-This project is divided into two main components: 
+Responsive UI: Styled using Tailwind CSS utility-first framework for a fully resp
