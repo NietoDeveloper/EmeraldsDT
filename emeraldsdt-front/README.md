@@ -22,12 +22,6 @@ Frontend
 
 React
 
-User interface library.
-
-### Vite
-
-
-1. Clone the rep
 cd your-repo-name
 
 
