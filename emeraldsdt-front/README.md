@@ -26,13 +26,6 @@ User interface library.
 
 ### Vite
 
-Build tool and development server for fast development.
-
-### Tailwind CSS
-
-Utility-first CSS framework for styling.
-
-
 
 1. Clone the repository
 
