@@ -34,13 +34,7 @@ cd your-repo-name
 
 Configuration:
 
-If your frontend needs environment variables (e.g., the API URL), create a file named .env in the client directory. Vite requires prefixing environment variables with VITE_.
-
-VITE_API_BASE_URL="<http://localhost:3000/api>"
-
-## 🏃 Running the Application
-
-You will need two separate terminal windows, one for the backend and one for the frontend.
+If your frontend needs environment variables (e.g., the API URL), create a file named .env in the client directory. Vite requires prefixing 
 
 2. Start the Frontend Development Server
 
