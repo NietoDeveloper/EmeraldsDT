@@ -32,13 +32,7 @@ Build tool and development server for fast development.
 
 Utility-first CSS framework for styling.
 
-### JavaScript (ESM)
 
-Primary language for the client-side logic.
-
-Backend
-
-Node.js
 
 Server-side runtime environment.
 
