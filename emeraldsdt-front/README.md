@@ -26,12 +26,6 @@ cd your-repo-name
 
 
 
-Configuration:
-
-
-2. Start the Frontend Development Server
-
-From the client directory:
 
 # The client app will be accessible at <http://localhost:5173>
 
