@@ -26,11 +26,6 @@ cd your-repo-name
 
 
 
-
-# The client app will be accessible at <http://localhost:5173>
-
-The application is now running and ready for development!
-
 ## 📦 Deployment
 
 ### Frontend (Client)
