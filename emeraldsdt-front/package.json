@@ -2,13 +2,7 @@
   "name": "emeraldsdt",
   "private": true,
   d-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-
-    "react-dom": "^18.2.0",
-    "react-hot-toast": "^2.4.1",
-    "react-icons": "^5.0.1",
+ 
     "swiper": "^11.0.5"
   },
   "devDependencies": {
