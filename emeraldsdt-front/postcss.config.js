@@ -1,3 +1,1 @@
-export default {
-  plugins: {
-    tailwindcss: {
+export d
