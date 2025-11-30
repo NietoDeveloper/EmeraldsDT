@@ -22,13 +22,6 @@ Frontend
 
 React
 
-cd your-repo-name
-
-
-
-## 📦 Deployment
-
-### Frontend (Client)
 
 To create a production build of the React app:
 
