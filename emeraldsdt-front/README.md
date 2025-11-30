@@ -20,9 +20,5 @@ Description
 
 Frontend
 
-React
-
-
-To create a production build of the React app:
 
 c
