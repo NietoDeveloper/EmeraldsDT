@@ -1,13 +1,7 @@
 {
   "name": "emeraldsdt",
   "private": true,
-  d-disable-directives --max-warnings 0",
- 
-    "swiper": "^11.0.5"
-  },
-  "devDependencies": {
 
-    "eslint-plugin-react-refresh": "^0.4.5",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
     "vite": "^5.0.8"
