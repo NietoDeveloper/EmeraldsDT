@@ -33,8 +33,6 @@ Configuration:
 
 From the client directory:
 
-npm run dev
-
 # The client app will be accessible at <http://localhost:5173>
 
 The application is now running and ready for development!
