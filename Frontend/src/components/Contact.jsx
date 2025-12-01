@@ -17,9 +17,7 @@ const Contact = () => {
                 Contact Us
               </h1>
               <p>
-                Whether you’re looking for more information, or you’d just like
-                to share your thoughts, you’ll find easy ways to contact us
-                right here.
+                .
               </p>
               <form className="w-full mx-auto mt-10">
                 <div className="relative z-0 w-full mb-5 group">
