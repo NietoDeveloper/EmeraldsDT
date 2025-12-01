@@ -154,15 +154,3 @@ const RegisterModal = ({ setShowModal, showModal, setIsUserAuthenticated }) => {
             <span className="text-sm text-gray-600">
               Already have an account?
             </span>
-            <div
-              className="text-sm font-bold text-red-500 hover:underline cursor-pointer"
-              onClick={showLoginModalHandler}
-            >
-              &nbsp; Login
-
-      />
-    </>
-  );
-};
-
-export default RegisterModal;
