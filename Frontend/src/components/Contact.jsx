@@ -114,7 +114,7 @@ const Contact = () => {
                     <option value="">-- Selecciona --</option>
                     <option value="special_offers">Ofertas Especiales</option>
                     <option value="vouchers">Vouchers</option>
-                    <option value="news">NOticias</option>
+                    <option value="news">Noticias</option>
                     <option value="promotions">Promociones y Actividades</option>
                   </select>
                 </div>
