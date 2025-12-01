@@ -1,37 +1,5 @@
 
-
-      if (data.success) {
-        // console.log(data);
-        const messageToShow =
-          typeof data.message === "object"
-            ? JSON.stringify(data.message)
-            : data.message;
-        MySwal.fire({
-          title: messageToShow,
-          text: "You clicked the button!",
-          icon: "success",
-        });
-      }
-    } catch (error) {
-      setError(
-        error.response ? error.response.data.message : "An error occurred"
-      );
-      toast.error(error.response.data.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleFileChange = (e) => {
-    setCategoryImage(e.target.files[0]);
-  };
-
-  useEffect(() => {
-    // Reset error when categoryImage changes
-    setError(null);
-  }, [categoryImage]);
-  return (
-    <div className="min-h-screen flex items-center">
+ter">
       <div className="bg-white shadow-sm shadow-color-red p-10 md:w-1/2 lg:w-full mx-auto rounded">
         <h1 className="text-2xl font-bold mb-10 text-center font-hobo text-color-red">
           Add Category
