@@ -1,36 +1,4 @@
-i
-     
-          text: `There are ${itemsCount} item(s) associated with this category. You must delete these items before deleting the category.`,
-          icon: "warning",
-        });
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
-  const confirmAndDeleteCategory = async (categoryId) => {
-    try {
-      // Show confirmation dialog
-      const result = await MySwal.fire({
-        title: "Are you sure?",
-        text: "You want to delete this category!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!",
-      });
-
-      // If confirmed, delete the category
-      if (result.isConfirmed) {
-        await axios.delete(`/admin/deleteCategory/${categoryId}`);
-        // Update the state to remove the deleted category
-        setData((prevData) => ({
-          ...prevData,
-          categories: prevData.categories.filter(
-            (category) => category._id !== categoryId
-          ),
         }));
 
         // Show success message
