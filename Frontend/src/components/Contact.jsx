@@ -17,7 +17,7 @@ const Contact = () => {
                 Contactanos
               </h1>
               <p>
-                Permitenos ofrecerte  la mejor asesoria.
+                Permitenos ofrecerte  la mejor asesoria e Informacion sobre nuestro Catalogo.
               </p>
               <form className="w-full mx-auto mt-10">
                 <div className="relative z-0 w-full mb-5 group">
