@@ -73,7 +73,7 @@ const Contact = () => {
                     htmlFor="country_code"
                     className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Country Code
+                    Pais Code
                   </label>
                   <input
                     type="text"
@@ -88,7 +88,7 @@ const Contact = () => {
                     htmlFor="mobile_number"
                     className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Mobile Number
+                    Numero Telefono
                   </label>
                   <input
                     type="tel"
