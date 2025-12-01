@@ -18,19 +18,7 @@ function NavItem({ text, menu, link, pdf, setMenu, drop, index }) {
       }`}
       onClick={() => {
         if (index === 0) {
-          setMenu(!menu);
-        }
-      }}
-    >
-      <a href={link} download={pdf ? "ABOUT OUR FOOD" : undefined}>
-        {text}
-      </a>{" "}
-      {drop &&
-        (menu ? (
-          <FaAngleDown className="text-[18px] ml-2 transform rotate-180" />
-        ) : (
-          <FaAngleDown className="text-[18px] ml-2 " />
-        ))}
+
     </li>
   );
 }
