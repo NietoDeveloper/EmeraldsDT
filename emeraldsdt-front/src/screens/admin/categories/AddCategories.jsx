@@ -1,35 +1,4 @@
-import React, { useEffect, useState } from "react";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
-import axios from "../../../utils/axios";
-import toast from "react-hot-toast";
 
-const MySwal = withReactContent(Swal);
-
-const AddCategories = () => {
-  const [categoryImage, setCategoryImage] = useState(null);
-  const [categoryName, setCategoryName] = useState("");
-  const [categoryPosition, setCategoryPosition] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  const submitHandler = async (e) => {
-    e.preventDefault();
-
-    try {
-      setLoading(true);
-      setError(null);
-
-      const formData = new FormData();
-      formData.append("category", categoryName);
-      formData.append("image", categoryImage);
-      formData.append("position", categoryPosition);
-
-      const { data } = await axios.post("/admin/addCategory", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
 
       if (data.success) {
         // console.log(data);
