@@ -151,18 +151,3 @@ const OneProductPage = () => {
                 ))}
           </Swiper>
 
-          {/*related product section end */}
-
-          <Footer />
-        </div>
-      )}
-      <AddToCart
-        showModal={showModal}
-        closeModal={closeModel}
-        selectedItem={selectedItem}
-      />
-    </div>
-  );
-};
-
-export default OneProductPage;
