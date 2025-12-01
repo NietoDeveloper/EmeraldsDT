@@ -1,29 +1,5 @@
 i
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  const deleteHandler = async (categoryId) => {
-    try {
-      // Check if there are any items associated with the category
-      const { data } = await axios.get(
-        `/admin/getItemByCategory/${categoryId}`
-      );
-      const itemsCount = data.items.length;
-
-      if (itemsCount === 0) {
-        // If no items associated, directly delete the category
-        await confirmAndDeleteCategory(categoryId);
-      } else {
-        // If items associated, show alert
-        await MySwal.fire({
-          title: "Warning!",
+     
           text: `There are ${itemsCount} item(s) associated with this category. You must delete these items before deleting the category.`,
           icon: "warning",
         });
