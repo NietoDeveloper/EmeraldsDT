@@ -1,43 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { AiOutlineLogout, AiOutlineHome } from "react-icons/ai";
-import { TbDeviceAnalytics, TbSitemap } from "react-icons/tb";
-import { MdOutlineNoteAlt } from "react-icons/md";
-import { FaChevronDown, FaUserFriends } from "react-icons/fa";
-import { Link, Outlet, useNavigate } from "react-router-dom";
-import axios from "../../utils/axios";
 
-const SubAdmin = () => {
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (!localStorage.getItem("subAdminToken")) {
-      navigate("/admin/signin");
-    }
-  }, []);
-  const [subAmdinId, setsubAdminId] = useState();
-  useEffect(() => {
-    const id = localStorage.getItem("subAdminId");
-    setsubAdminId(id);
-  }, []);
-
-
-
-  const toggleCategorySubchildVisibility = () => {
-    setCategorySubchildVisible(!isCategorySubchildVisible);
-    setItemSubchildVisible(false);
-    setBannerSubchildVisible(false);
-    setProductSubchildVisible(false);
-    setNewsSubchildVisible(false);
-    setIngrdientSubchildVisible(false);
-  };
-
-  const toggleProductSubchildVisibility = () => {
-    setProductSubchildVisible(!isProductSubchildVisible);
-    setItemSubchildVisible(false);
-    setBannerSubchildVisible(false);
-    setCategorySubchildVisible(false);
-    setNewsSubchildVisible(false);
-    setIngrdientSubchildVisible(false);
-  };
 
   const toggleNewsSubchildVisibility = () => {
     setNewsSubchildVisible(!isNewsSubchildVisible);
