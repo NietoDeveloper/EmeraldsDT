@@ -1,36 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { MdDelete } from "react-icons/md";
-import axios from "../../../utils/axios";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
-import UpdateModel from "./UpdateModel";
-
-const MySwal = withReactContent(Swal);
-
-const AllCategoies = () => {
-  const [data, setData] = React.useState({});
-  const [loading, setLoading] = React.useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedCategory, setSelctedCategory] = useState({});
-
-  const locaton = useLocation();
-
-  const toggleModal = (cat) => {
-    setIsOpen(!isOpen);
-    setSelctedCategory(cat);
-  };
-
-  React.useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        const { data } = await axios.get("/admin/getCategory");
-        const sortadCategory = data.categories.sort(
-          (a, b) => a.position - b.position
-        );
-        setData({ ...data, categories: sortadCategory });
-        // console.log(data);
+i
       } catch (error) {
         console.log(error);
       } finally {
