@@ -19,32 +19,7 @@ const SubAdmin = () => {
     setsubAdminId(id);
   }, []);
 
-  const [isItemSubchildVisible, setItemSubchildVisible] = useState(false);
-  const [isBannerSubchildVisible, setBannerSubchildVisible] = useState(false);
-  const [isCategorySubchildVisible, setCategorySubchildVisible] =
-    useState(false);
-  const [isProductSubchildVisible, setProductSubchildVisible] = useState(false);
-  const [isNewsSubchildVisible, setNewsSubchildVisible] = useState(false);
-  const [isIngrdientSubchildVisible, setIngrdientSubchildVisible] =
-    useState(false);
 
-  const toggleItemSubchildVisibility = () => {
-    setItemSubchildVisible(!isItemSubchildVisible);
-    setBannerSubchildVisible(false);
-    setCategorySubchildVisible(false);
-    setProductSubchildVisible(false);
-    setNewsSubchildVisible(false);
-    setIngrdientSubchildVisible(false);
-  };
-
-  const toggleBannerSubchildVisibility = () => {
-    setBannerSubchildVisible(!isBannerSubchildVisible);
-    setItemSubchildVisible(false);
-    setCategorySubchildVisible(false);
-    setProductSubchildVisible(false);
-    setNewsSubchildVisible(false);
-    setIngrdientSubchildVisible(false);
-  };
 
   const toggleCategorySubchildVisibility = () => {
     setCategorySubchildVisible(!isCategorySubchildVisible);
