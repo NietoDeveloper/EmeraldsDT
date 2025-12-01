@@ -1,30 +1,4 @@
 
-  useEffect(() => {
-    const fetchItemData = async () => {
-      try {
-        const { data } = await axios.get(
-          `/admin/getItemById/${oneItemIdFromLocalStorage}`
-        );
-        // console.log(data?.item?.category, "data");
-        setItemData(data);
-        setLoading(false); // Set loading to false when data is fetched
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchItemData();
-  }, [oneItemIdFromLocalStorage]);
-
-  useEffect(() => {
-    const fetchRelatedProducts = async () => {
-      try {
-        const { data } = await axios.get(
-          `/admin/getItemByCategory/${catgoryId}`
-        );
-
-        setRelatedProducts(data.items);
-      } catch (error) {
-        console.log(error);
       }
     };
 
