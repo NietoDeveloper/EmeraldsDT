@@ -141,13 +141,4 @@ const OneProductPage = () => {
                           className="h-8 w-8  absolute top-[30%] right-0 -translate-x-1/3 flex items-center cursor-pointer justify-center"
                         >
                           <FaPlus className="text-[#bebebe] hover:text-red-500" />
-                        </div>
-                        <div className="h-8 w-8 absolute top-[30%] left-3 -translate-x-1/3 flex items-center cursor-pointer justify-center">
-                          <FaMinus className="text-[#bebebe] hover:text-red-500" />
-                        </div>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
-          </Swiper>
 
