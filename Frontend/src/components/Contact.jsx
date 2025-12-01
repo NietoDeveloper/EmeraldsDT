@@ -14,7 +14,7 @@ const Contact = () => {
           <div className="h-full w-full p-4">
             <div className=" py-5 h-full px-3">
               <h1 className="font-hobo mb-8 text-5xl text-center">
-                Contact Us
+                Conta
               </h1>
               <p>
                 Permitenos ofrecerte  la mejor asesoria.
