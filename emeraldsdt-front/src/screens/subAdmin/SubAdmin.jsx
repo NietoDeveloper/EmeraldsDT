@@ -1,33 +1,4 @@
 
-
-  const toggleNewsSubchildVisibility = () => {
-    setNewsSubchildVisible(!isNewsSubchildVisible);
-    setItemSubchildVisible(false);
-    setBannerSubchildVisible(false);
-    setCategorySubchildVisible(false);
-    setProductSubchildVisible(false);
-    setIngrdientSubchildVisible(false);
-  };
-
-  const toggleIngrdientSubchildVisibility = () => {
-    setIngrdientSubchildVisible(!isIngrdientSubchildVisible);
-    setItemSubchildVisible(false);
-    setBannerSubchildVisible(false);
-    setCategorySubchildVisible(false);
-    setProductSubchildVisible(false);
-    setNewsSubchildVisible(false);
-  };
-
-  const logoutHandler = () => {
-    localStorage.removeItem("subAdminToken");
-    navigate("/admin/signin");
-  };
-
-  const [subAdmin, setSubAdmin] = useState({});
-
-  // console.log(subAmdinId);
-
-  useEffect(() => {
     const getSubadmin = async () => {
       try {
         const { data } = await axios.get(`/admin/getSubAdmin/${subAmdinId}`);
