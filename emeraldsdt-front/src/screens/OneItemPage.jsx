@@ -1,28 +1,4 @@
 
-      }
-    };
-
-    fetchRelatedProducts();
-  }, [catgoryId]);
-
-  // console.log(relatedProducts, "relatedProducts");
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data } = await axios.get(
-          `/admin/getItemByCategory/${itemData?.item?.category}`
-        );
-        // console.log(data, "dfs");
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchData();
-  }, []);
-
-  const handleModalShow = (item) => {
-    setShowModal(true);
     setSelectedItem(item);
   };
 
