@@ -1,30 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import { DataContext } from "../ContexApi";
-import RegisterModal from "../components/RegisterModal";
-import axios from "../utils/axios";
-import DisableOrderModal from "../components/DisableOrderModal";
-import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
 
-const Cart = () => {
-  const [total, setTotal] = useState(0);
-  const [existingCart, setExistingCart] = useState([]);
-  const [showModal, setShowModal] = useState(false);
-  const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
-  const { setExistingCartContext, setCartValue } = useContext(DataContext);
-  const [userId, setUserId] = useState("");
-
-  useEffect(() => {
-    const savedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
-    setExistingCart(savedCart);
-  }, []);
-
-  useEffect(() => {
-    const token = localStorage.getItem("userToken");
-    if (token) {
-      setIsUserAuthenticated(true);
     }
 
     const userId = localStorage.getItem("userId");
