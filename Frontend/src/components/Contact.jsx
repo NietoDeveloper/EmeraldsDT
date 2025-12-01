@@ -111,7 +111,7 @@ const Contact = () => {
                     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-red-600 peer"
                     required
                   >
-                    <option value="">--  --</option>
+                    <option value="">-- Selecciona --</option>
                     <option value="special_offers">Special Offers</option>
                     <option value="vouchers">Vouchers</option>
                     <option value="news">News</option>
