@@ -14,10 +14,12 @@ const Contact = () => {
           <div className="h-full w-full p-4">
             <div className=" py-5 h-full px-3">
               <h1 className="font-hobo mb-8 text-5xl text-center">
-                Contactanos
+                Contact Us
               </h1>
               <p>
-                Permitenos ofrecerte  la mejor asesoria e Informacion sobre nuestro Catalogo.
+                Whether you’re looking for more information, or you’d just like
+                to share your thoughts, you’ll find easy ways to contact us
+                right here.
               </p>
               <form className="w-full mx-auto mt-10">
                 <div className="relative z-0 w-full mb-5 group">
@@ -25,7 +27,7 @@ const Contact = () => {
                     htmlFor="first_name"
                     className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    * Nombre
+                    * First Name
                   </label>
                   <input
                     type="text"
@@ -41,7 +43,7 @@ const Contact = () => {
                     htmlFor="last_name"
                     className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    * Apellido
+                    * Last Name
                   </label>
                   <input
                     type="text"
@@ -73,7 +75,7 @@ const Contact = () => {
                     htmlFor="country_code"
                     className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Pais Code
+                    Country Code
                   </label>
                   <input
                     type="text"
@@ -88,7 +90,7 @@ const Contact = () => {
                     htmlFor="mobile_number"
                     className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    Numero Telefono
+                    Mobile Number
                   </label>
                   <input
                     type="tel"
@@ -103,7 +105,7 @@ const Contact = () => {
                     htmlFor="topic"
                     className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-red-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
-                    * Selecciona
+                    * Select a topic
                   </label>
                   <select
                     name="topic"
@@ -111,11 +113,11 @@ const Contact = () => {
                     className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-red-600 peer"
                     required
                   >
-                    <option value="">-- Selecciona --</option>
-                    <option value="special_offers">Ofertas Especiales</option>
+                    <option value="">-- Please select --</option>
+                    <option value="special_offers">Special Offers</option>
                     <option value="vouchers">Vouchers</option>
-                    <option value="news">Noticias</option>
-                    <option value="promotions">Promociones y Actividades</option>
+                    <option value="news">News</option>
+                    <option value="promotions">Promotions & Activities</option>
                   </select>
                 </div>
                 <div className="relative z-0 w-full mb-5 group">
