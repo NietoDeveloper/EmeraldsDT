@@ -105,7 +105,7 @@ const Footer = () => {
               className="text-red-500 cursor-pointer font-medium"
             >
               {" "}
-              V Patch
+              NietoDeveloper
             </a>{" "}
           </p>
         </div>
