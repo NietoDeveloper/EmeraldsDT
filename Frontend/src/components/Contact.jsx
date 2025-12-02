@@ -196,13 +196,3 @@ const Contact = () => {
             <div className="flex flex-col space-y-2">
               <p className="text-gray-700">Email: example@email.com</p>
               <div className="flex space-x-4">
-                <button
-                  onClick={handleCopyEmail}
-                  className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300"
-                >
-
-    </div>
-  );
-};
-
-export default Contact;
