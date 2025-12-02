@@ -178,21 +178,3 @@ const Contact = () => {
               >
                 Submit
               </button>
-            </form>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md flex flex-col space-y-6">
-            <h2 className="text-2xl font-semibold text-gray-800 text-center">Other Ways to Contact</h2>
-
-            <a
-              href="https://wa.me/1234567890?text=Hello%20from%20your%20website"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center bg-green-500 text-white py-3 px-4 rounded-lg hover:bg-green-600 transition duration-300"
-            >
-              Contact via WhatsApp
-            </a>
-            
-            <div className="flex flex-col space-y-2">
-              <p className="text-gray-700">Email: example@email.com</p>
-              <div className="flex space-x-4">
