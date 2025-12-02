@@ -195,7 +195,6 @@ const Contact = () => {
               Contact via WhatsApp
             </a>
             
-            {/* Correo electrónico con botones */}
             <div className="flex flex-col space-y-2">
               <p className="text-gray-700">Email: example@email.com</p>
               <div className="flex space-x-4">
