@@ -100,7 +100,7 @@ const Footer = () => {
           <p>
             Managed by{" "}
             <a
-              href="https://vpatch.ae/"
+              href=""
               target="_blank"
               className="text-red-500 cursor-pointer font-medium"
             >
