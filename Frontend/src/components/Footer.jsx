@@ -100,9 +100,9 @@ const Footer = () => {
           <p>
             Managed by{" "}
             <a
-              href=""
+              href="https://manuelnieto.netlify.app/"
               target="_blank"
-              className="text-red-500 cursor-pointer font-medium"
+              className="text-red-500 cursor-pointer font-medium" rel="noreferrer"
             >
               {" "}
               NietoDeveloper
