@@ -212,8 +212,7 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-            
-            {/* Mapa Google */}
+
             <div className="flex flex-col space-y-2">
               <p className="text-gray-700 text-center">Our Location: Santa Marta, Colombia</p>
               <iframe
