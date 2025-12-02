@@ -132,7 +132,7 @@ const Contact = () => {
                       className="mr-2 leading-tight"
                       required
                     />
-                    Yes, I have read and agree to the Let's Falafel{" "}
+                    Yes, I have read and agree to the Emeralds DT{" "}
                     <a
                       href="#"
                       className="text-red-600 hover:underline focus:outline-none"
