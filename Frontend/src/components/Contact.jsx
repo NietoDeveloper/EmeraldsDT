@@ -28,7 +28,7 @@ const Contact = () => {
           right here.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12">
-          {/* Formulario mantenido intacto */}
+
           <div className="bg-white p-6 rounded-lg shadow-md">
             <form className="w-full mx-auto">
               <div className="relative z-0 w-full mb-5 group">
