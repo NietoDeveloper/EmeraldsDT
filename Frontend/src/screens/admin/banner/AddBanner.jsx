@@ -60,7 +60,7 @@ const AddBanner = () => {
   };
 
   useEffect(() => {
-    // Reset error when bannerImage changes
+
     setError(null);
   }, [bannerImage]);
 
