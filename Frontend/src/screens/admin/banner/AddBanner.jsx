@@ -73,7 +73,6 @@ const AddBanner = () => {
         </h1>
 
         <form onSubmit={submitHandler}>
-          {/* select field for in which admin want to add banner eg: slide1 or slide2 */}
 
           <div className="flex items-center mb-10">
             <label
