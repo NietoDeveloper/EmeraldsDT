@@ -146,7 +146,6 @@ const Admin = () => {
             </Link>
           </li>
 
-          {/* Log out */}
           <li
             className="mb-2 transition-all duration-300 hover:bg-amber-300	hover:text-black"
             onClick={logoutHandler}
