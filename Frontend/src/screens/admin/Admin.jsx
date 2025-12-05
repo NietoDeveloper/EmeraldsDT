@@ -116,7 +116,6 @@ const Admin = () => {
             </li>
           ))}
 
-          {/* user */}
           <li className="mb-2 transition-all duration-300 hover:bg-amber-300	hover:text-black">
             <Link
               to="/admin/allUser"
