@@ -67,8 +67,6 @@ const AddBanner = () => {
   return (
     <div className="min-h-screen flex items-center">
       <div className="bg-white shadow-sm shadow-color-red p-10 md:w-1/2 lg:w-full mx-auto rounded">
-        {/* here specify the size of banner that need to be uploaded and the size is 1168 × 520 px
-         */}
 
         <h1 className="text-2xl font-bold mb-10 text-center font-hobo text-color-red">
           Add Banner
