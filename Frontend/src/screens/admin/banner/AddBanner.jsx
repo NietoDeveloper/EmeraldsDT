@@ -35,7 +35,7 @@ const AddBanner = () => {
       });
 
       if (data.success) {
-        // console.log(data);
+
         const messageToShow =
           typeof data.message === "object"
             ? JSON.stringify(data.message)
