@@ -62,7 +62,7 @@ const Admin = () => {
           Admin Panel
         </Link>
         <ul className="text-white pt-4">
-          {/* Home */}
+
           <li className="mb-2 transition-all duration-300 hover:bg-amber-300	hover:text-black">
             <Link to="/" className="flex items-center gap-4 px-4 py-2">
               <AiOutlineHome className="text-xl  mr-2" />
