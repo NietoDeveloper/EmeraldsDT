@@ -82,8 +82,6 @@ const AllProduct = () => {
     getSubadmin();
   }, []);
 
-  // console.log(subAdmin);
-
   const SubadminAccessHandler = async (id) => {
     try {
       await axios.post(`/admin/updateSubAdmin/${id}`, {
