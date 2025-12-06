@@ -22,11 +22,7 @@ const Footer = () => {
       <hr className="mb-10" />
       <div className="w-full flex justify-between gap-7 max-sm:flex-col">
         <div>
-          <h1 className="font-hobo text-color-red text-2xl ">Our Company</h1>
-          <p className="text-md mt-3">About Us</p>
-          <p className="text-md mt-1">Our Fundamentals</p>
-          <p className="text-md mt-1">Our Team</p>
-        </div>
+
         <div>
           <h1 className="font-hobo text-color-red text-2xl ">Contact Us</h1>
           <Link to="/contact">
