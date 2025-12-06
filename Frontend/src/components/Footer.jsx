@@ -23,7 +23,7 @@ const Footer = () => {
         minute: "2-digit",
         second: "2-digit",
         hour12: true,
-        timeZone: "America/Bogota", // Ubicación del usuario (Bogotá, Colombia)
+        timeZone: "America/Bogota", 
       };
       
       const timeString = new Date().toLocaleTimeString("es-CO", options);
