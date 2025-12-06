@@ -7,9 +7,7 @@ export default {
         // Colores existentes
         "color-red": "var(--color-red)",
         "color-yellow": "var(--color-yellow)",
-        
-        // ✨ Nuevo color Esmeralda para Colombia:
-        // Uso de un color hexadecimal fijo para el esmeralda
+
         "color-emerald": "#00A36C", 
       },
       fontFamily: {
