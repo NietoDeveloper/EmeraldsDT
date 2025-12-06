@@ -1,8 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-@font-face {
   font-family: hobo;
   src: url("../src/assets/Speedee/TTF/Speedee-Bold.ttf");
 }
