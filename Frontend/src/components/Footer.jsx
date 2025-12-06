@@ -121,7 +121,6 @@ const Footer = () => {
                 Follow Us
             </h2>
             <div className="flex items-center gap-3">
-            {/* Íconos de redes sociales con estilo moderno y hover esmeralda */}
             {[
               { Icon: FaFacebookF, href: "https://www.facebook.com/letsfalafelofficial" },
               { Icon: FaInstagram, href: "https://www.instagram.com/letsfalafelofficial/" },
