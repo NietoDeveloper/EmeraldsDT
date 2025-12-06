@@ -67,8 +67,7 @@ const Footer = () => {
             Our Team
           </p>
         </div>
-        
-        {/* Columna 2: Important Links (Se mueve aquí para balancear el layout en mobile/tablet) */}
+
         <div className="col-span-1">
           <h2 className="font-bold text-xl md:text-2xl text-[#00A36C] mb-4">
             Important Links
