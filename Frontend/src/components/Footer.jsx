@@ -27,18 +27,7 @@ const Footer = () => {
 
           >
             Home
-          </p>
-
-          <Link to="/our-menu/main">
-            <p className=" text-md mt-1 ml-[1px]">Our Menu</p>
-          </Link>
-          <Link to="/merchandise">
-            <p className=" text-md mt-1 ml-[1px]">Our Merchandise</p>
-          </Link>
-        </div>
-        <div className="">
-          <h1 className="font-hobo text-color-red text-2xl ">News & Events</h1>
-          <Link to="/allnews">
+          <
             <p className=" text-md mt-3 ml-[1px]">News & Events</p>
           </Link>
         </div>
