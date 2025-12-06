@@ -163,7 +163,6 @@ const Footer = () => {
             <p>© 2025 Emeralds DT.</p>
             <p className="font-medium text-[#00A36C] flex gap-2">
                 <span className="hidden sm:inline">|</span>
-                {/* Se mantiene 2025 y se agrega la hora actual */}
                 Hora Actual: **{currentTime}**
             </p>
         </div>
