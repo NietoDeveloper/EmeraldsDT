@@ -51,8 +51,7 @@ const Footer = () => {
       
       {/* Sección principal de enlaces y responsividad mejorada */}
       <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 py-10 md:py-16">
-        
-        {/* Columna 1: Our Company */}
+
         <div className="col-span-1">
           <h2 className="font-bold text-xl md:text-2xl text-[#00A36C] mb-4">
             Our Company
