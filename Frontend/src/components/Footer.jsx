@@ -84,23 +84,3 @@ const Footer = () => {
           >
             <FaLinkedinIn className="text-md" />
           </a>
-        </div>
-      </div>
-      <hr className="mt-10" />
-
-      <div className="flex pt-10 lg:pb-24 pb-10 items-center max-sm:flex-col justify-between">
-        <div className="flex items-center gap-7">
-          <p className="text-md cursor-pointer">Privacy Policy</p>
-          <p className="text-md cursor-pointer">Terms of Use</p>
-        </div>
-        <div>
-          <p>© 2025 Emeralds DT. All Rights Reserved</p>
-        </div>
-        <div>
-          <p>
-            Managed by{" "}
-            <a
-              href="https://manuelnieto.netlify.app/"
-              target="_blank"
-              className="text-red-500 cursor-pointer font-medium" rel="noreferrer"
-            >
