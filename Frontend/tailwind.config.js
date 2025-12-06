@@ -5,12 +5,4 @@ export default {
     extend: {
       colors: {
         "color-red": "var(--color-red)",
-        "color-yellow": "var(--color-yellow)",
-      },
-      fontFamily: {
-        hobo: ["var(--font-hobo)"],
-      }
-    },
-  },
-  plugins: [],
-};
+
