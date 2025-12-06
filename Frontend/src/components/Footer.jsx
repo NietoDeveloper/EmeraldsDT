@@ -104,10 +104,3 @@ const Footer = () => {
               target="_blank"
               className="text-red-500 cursor-pointer font-medium" rel="noreferrer"
             >
-              {" "}
-              NietoDeveloper
-            </a>{" "}
-          </p>
-        </div>
-      </div>
-    </div>
