@@ -1,17 +1,6 @@
 
   font-family: hobo;
-  src: url("../src/assets/Speedee/TTF/Speedee-Bold.ttf");
-}
-@font-face {
-  font-family: hobo-light;
-  src: url("../src/assets/Speedee/TTF/Speedee-Regular.ttf");
-}
 
-:root {
-  --color-red: #ee3636;
-  --color-yellow: #fff;
-  --font-hobo: hobo;
-}
 
 .menu-wrapper {
   height: 8vmax;
