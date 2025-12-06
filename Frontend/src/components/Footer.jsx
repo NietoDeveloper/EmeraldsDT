@@ -125,7 +125,6 @@ const Footer = () => {
             {[
               { Icon: FaFacebookF, href: "https://www.facebook.com/letsfalafelofficial" },
               { Icon: FaInstagram, href: "https://www.instagram.com/letsfalafelofficial/" },
-              { Icon: FaLinkedinIn, href: "" }, // Enlace vacío para LinkedIn
               { Icon: FaTwitter, href: "" },
             ].map(({ Icon, href }, index) => (
               <div 
