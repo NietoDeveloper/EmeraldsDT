@@ -17,7 +17,6 @@ const Footer = () => {
   // Función para obtener y formatear la hora actual y la fecha
   useEffect(() => {
     const updateTime = () => {
-      // Configuraciones regionales para mostrar la hora en Colombia/Bogotá
       const options = {
         hour: "2-digit",
         minute: "2-digit",
