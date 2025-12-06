@@ -26,7 +26,7 @@
   background-repeat: no-repeat;
   flex-shrink: 0;
 }
-/* scroll bar with main-color and background transparent */
+
 ::-webkit-scrollbar {
   width: 0.5rem;
 }
