@@ -12,10 +12,8 @@
 }
 
 :root {
-  --color-red: #5d0808;
+  --color-red: #00A36C;
   --color-yellow: #fff;
-  
-  /* ✨ NUEVA VARIABLE: Color Esmeralda de Colombia */
   --color-emerald: #00A36C; 
 
   --font-hobo: hobo;
