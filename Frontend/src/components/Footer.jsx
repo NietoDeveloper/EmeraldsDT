@@ -144,7 +144,7 @@ const Footer = () => {
           <p>© 2025 Emeralds DT.</p>
           <p className="font-medium text-[#00A36C] flex gap-2">
             <span className="hidden sm:inline">|</span>
-            Hora Actual: **{currentTime}**
+            Hora Actual: **{currentTime}
           </p>
         </div>
 
