@@ -30,11 +30,10 @@ const Footer = () => {
       setCurrentTime(timeString);
     };
 
-    // Actualiza inmediatamente y luego cada segundo
     updateTime();
     const timerId = setInterval(updateTime, 1000);
 
-    return () => clearInterval(timerId); // Limpia el intervalo al desmontar
+    return () => clearInterval(timerId); 
   }, []);
 
   const handleReload = () => {
