@@ -4,7 +4,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Colores existentes
         "color-red": "var(--color-red)",
         "color-yellow": "var(--color-yellow)",
 
