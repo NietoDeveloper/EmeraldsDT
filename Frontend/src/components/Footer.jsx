@@ -73,9 +73,3 @@ const Footer = () => {
           <a
             href="https://www.instagram.com/letsfalafelofficial/"
             target="_blank"
-          >
-            <FaInstagram className="text-md" />
-          </a>
-        </div>
-        <div className="h-10 w-10 rounded-full border-[1.5px] border-black flex sdfgsfgsdgasdvgsenter justify-center cursor-pointer hover:bg-white  transition-all duration-300">
-          <a
