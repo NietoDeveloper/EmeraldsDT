@@ -146,8 +146,7 @@ const Footer = () => {
       <hr className="border-gray-200" />
 
       <div className="flex flex-col md:flex-row md:justify-between items-center py-6 text-sm md:text-base">
-        
-        {/* Políticas */}
+
         <div className="flex flex-col sm:flex-row items-center gap-4 order-3 md:order-1 mt-4 md:mt-0">
           <p className="hover:text-[#00A36C] transition duration-200 cursor-pointer">
             Privacy Policy
