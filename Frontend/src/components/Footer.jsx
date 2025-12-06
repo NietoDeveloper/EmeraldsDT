@@ -7,9 +7,6 @@ import {
 } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 
-// Definición de color esmeralda para usar en las clases (simulando que está en tailwind.config.js)
-// Aquí lo usamos directamente con sintaxis de color arbitrario de Tailwind: text-[#00A36C]
-
 const Footer = () => {
   const navigate = useNavigate();
   const [currentTime, setCurrentTime] = useState("");
