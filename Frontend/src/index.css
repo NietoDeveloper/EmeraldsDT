@@ -1,23 +1,4 @@
 
-::-webkit-scrollbar-track {
-  background: #fff;
-}
-::-webkit-scrollbar-thumb {
-  background: #e3e2e2;
-  border-radius: 5px;
-}
-.footer-box {
-  padding-top: 7rem;
-}
-.order-btn {
-  z-index: 99;
-  position: fixed;
-  bottom: 5%;
-  right: 5%;
-  font-size: 1.2rem;
-  font-family: "hobo";
-  font-weight: 600;
-  color: #fff;
   background-color: var(--color-red);
   padding: 0.5rem 0.3rem;
   border-radius: 5px;
