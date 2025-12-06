@@ -167,8 +167,7 @@ const Footer = () => {
                 Hora Actual: **{currentTime}**
             </p>
         </div>
-        
-        {/* Créditos del Desarrollador (NietoDeveloper) */}
+
         <div className="order-2 md:order-3 mt-4 md:mt-0">
           <p className="text-center">
             Managed by
