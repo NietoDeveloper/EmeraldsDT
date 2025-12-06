@@ -1,9 +1,5 @@
-import React, { useEffect, useState } from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-} from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
@@ -17,9 +13,9 @@ const Footer = () => {
         minute: "2-digit",
         second: "2-digit",
         hour12: true,
-        timeZone: "America/Bogota", 
+        timeZone: "America/Bogota",
       };
-      
+
       const timeString = new Date().toLocaleTimeString("es-CO", options);
       setCurrentTime(timeString);
     };
@@ -27,7 +23,7 @@ const Footer = () => {
     updateTime();
     const timerId = setInterval(updateTime, 1000);
 
-    return () => clearInterval(timerId); 
+    return () => clearInterval(timerId);
   }, []);
 
   const handleReload = () => {
@@ -43,7 +39,6 @@ const Footer = () => {
       <hr className="border-gray-200" />
 
       <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 py-10 md:py-16">
-
         <div className="col-span-1">
           <h2 className="font-bold text-xl md:text-2xl text-[#00A36C] mb-4">
             Our Company
@@ -104,16 +99,22 @@ const Footer = () => {
         </div>
 
         <div className="col-span-2 md:col-span-4 lg:col-span-1 flex flex-col items-start lg:items-end mt-4 lg:mt-0">
-            <h2 className="font-bold text-xl md:text-2xl text-[#00A36C] mb-4">
-                Follow Us
-            </h2>
-            <div className="flex items-center gap-3">
+          <h2 className="font-bold text-xl md:text-2xl text-[#00A36C] mb-4">
+            Follow Us
+          </h2>
+          <div className="flex items-center gap-3">
             {[
-              { Icon: FaFacebookF, href: "https://www.facebook.com/letsfalafelofficial" },
-              { Icon: FaInstagram, href: "https://www.instagram.com/letsfalafelofficial/" },
+              {
+                Icon: FaFacebookF,
+                href: "https://www.facebook.com/letsfalafelofficial",
+              },
+              {
+                Icon: FaInstagram,
+                href: "https://www.instagram.com/letsfalafelofficial/",
+              },
               { Icon: FaTwitter, href: "" },
             ].map(({ Icon, href }, index) => (
-              <div 
+              <div
                 key={index}
                 className="h-10 w-10 rounded-full border border-gray-400 flex items-center justify-center cursor-pointer 
                           hover:bg-[#00A36C] hover:border-[#00A36C] hover:text-white transition-all duration-300"
@@ -125,13 +126,11 @@ const Footer = () => {
             ))}
           </div>
         </div>
-
       </div>
 
       <hr className="border-gray-200" />
 
       <div className="flex flex-col md:flex-row md:justify-between items-center py-6 text-sm md:text-base">
-
         <div className="flex flex-col sm:flex-row items-center gap-4 order-3 md:order-1 mt-4 md:mt-0">
           <p className="hover:text-[#00A36C] transition duration-200 cursor-pointer">
             Privacy Policy
@@ -142,11 +141,11 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 order-1 md:order-2">
-            <p>© 2025 Emeralds DT.</p>
-            <p className="font-medium text-[#00A36C] flex gap-2">
-                <span className="hidden sm:inline">|</span>
-                Hora Actual: **{currentTime}**
-            </p>
+          <p>© 2025 Emeralds DT.</p>
+          <p className="font-medium text-[#00A36C] flex gap-2">
+            <span className="hidden sm:inline">|</span>
+            Hora Actual: **{currentTime}**
+          </p>
         </div>
 
         <div className="order-2 md:order-3 mt-4 md:mt-0">
