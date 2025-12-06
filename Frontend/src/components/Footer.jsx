@@ -115,7 +115,6 @@ const Footer = () => {
           </Link>
         </div>
 
-        {/* Columna 5 (o final en grid): Redes Sociales */}
         <div className="col-span-2 md:col-span-4 lg:col-span-1 flex flex-col items-start lg:items-end mt-4 lg:mt-0">
             <h2 className="font-bold text-xl md:text-2xl text-[#00A36C] mb-4">
                 Follow Us
