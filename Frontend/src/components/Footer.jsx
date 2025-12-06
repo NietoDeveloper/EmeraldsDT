@@ -48,8 +48,7 @@ const Footer = () => {
   return (
     <footer className="w-full bg-white text-gray-700 pt-16 md:pt-20 lg:pt-24 px-4 sm:px-8 xl:px-20 mx-auto max-w-[1800px]">
       <hr className="border-gray-200" />
-      
-      {/* Sección principal de enlaces y responsividad mejorada */}
+
       <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 py-10 md:py-16">
 
         <div className="col-span-1">
