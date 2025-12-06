@@ -13,8 +13,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();
   const [currentTime, setCurrentTime] = useState("");
-  
-  // Función para obtener y formatear la hora actual y la fecha
+
   useEffect(() => {
     const updateTime = () => {
       const options = {
