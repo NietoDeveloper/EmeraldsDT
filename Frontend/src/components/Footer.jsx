@@ -26,19 +26,6 @@ const Footer = () => {
         <div>
 
           >
-            Home
-          <
-            <p className=" text-md mt-3 ml-[1px]">News & Events</p>
-          </Link>
-        </div>
-      </div>
-
-      <div className="flex items-center gap-3 max-sm:mt-10 mt-5">
-        <div className="h-10 w-10 rounded-full border-[1.5px] border-black flex items-center justify-center cursor-pointer hover:bg-white  transition-all duration-300">
-          <a
-            href="https://www.facebook.com/letsfalafelofficial"
-            target="_blank"
-          >
             <FaFacebookF className="text-md" />
           </a>
         </div>
