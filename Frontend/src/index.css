@@ -1,20 +1,4 @@
 
-  font-family: hobo;
-
-
-.menu-wrapper {
-  height: 8vmax;
-  width: 8vmax;
-  background-image: url("../src/assets/menuwrpper.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  flex-shrink: 0;
-}
-
-::-webkit-scrollbar {
-  width: 0.5rem;
-}
 ::-webkit-scrollbar-track {
   background: #fff;
 }
