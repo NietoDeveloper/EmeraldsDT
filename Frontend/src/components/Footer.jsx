@@ -79,8 +79,3 @@ const Footer = () => {
         </div>
         <div className="h-10 w-10 rounded-full border-[1.5px] border-black flex items-center justify-center cursor-pointer hover:bg-white  transition-all duration-300">
           <a
-            href=""
-            target="_blank"
-          >
-            <FaLinkedinIn className="text-md" />
-          </a>
