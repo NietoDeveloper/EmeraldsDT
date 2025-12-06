@@ -7,14 +7,6 @@ import {
 } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 
-const Footer = () => {
-  const navigate = useNavigate();
-  const handleReload = () => {
-    if (window.location.pathname === "/") {
-      window.scrollTo(0, 0); // Scroll to the top before reloading
-    } else {
-      navigate("/");
-    }
   };
 
   return (
