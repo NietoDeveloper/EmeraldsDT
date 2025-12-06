@@ -145,7 +145,6 @@ const Footer = () => {
 
       <hr className="border-gray-200" />
 
-      {/* Sección de Políticas, Copyright y Créditos */}
       <div className="flex flex-col md:flex-row md:justify-between items-center py-6 text-sm md:text-base">
         
         {/* Políticas */}
