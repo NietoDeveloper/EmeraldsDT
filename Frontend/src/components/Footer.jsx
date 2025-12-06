@@ -82,7 +82,7 @@ const Footer = () => {
           </h2>
           <Link to="/contact">
             <p className="text-sm hover:text-[#00A36C] transition duration-200 mt-2">
-              Let's Talk
+              Talk
             </p>
           </Link>
         </div>
