@@ -67,7 +67,6 @@
   transition: all 0.3s ease-in-out;
 }
 .menupage path:hover {
-  /* Si el menú es
   color: var(--color-red) !important;
 }
 .navitemli {
