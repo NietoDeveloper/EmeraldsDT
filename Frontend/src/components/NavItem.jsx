@@ -22,7 +22,7 @@ function NavItem({ text, menu, link, pdf, setMenu, drop, index }) {
         }
       }}
     >
-      <a href={link} download={pdf ? "ABOUT OUR " : undefined}>
+      <a href={link} download={pdf ? "ABOUT OUR EMERALDS" : undefined}>
         {text}
       </a>{" "}
       {drop &&
