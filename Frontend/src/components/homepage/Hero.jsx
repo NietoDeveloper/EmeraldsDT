@@ -9,7 +9,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-// import required modules
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const Hero = () => {
