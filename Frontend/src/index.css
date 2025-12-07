@@ -40,7 +40,7 @@
   border-radius: 5px;
 }
 .footer-box {
-  /* NOTA: Esta clase .footer-box ya no se necesita si usamos el Footer de Tailwind */
+  /* NOTA: Esta clase .footer-box  */
   padding-top: 7rem;
 }
 .order-btn {
