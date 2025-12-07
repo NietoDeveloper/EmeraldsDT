@@ -67,7 +67,7 @@
   transition: all 0.3s ease-in-out;
 }
 .menupage path:hover {
-  /* Si el menú esmeralda, considera cambiar a var(--color-emerald) */
+  /* Si el menú es
   color: var(--color-red) !important;
 }
 .navitemli {
