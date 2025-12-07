@@ -33,7 +33,7 @@
   width: 0.5rem;
 }
 ::-webkit-scrollbar-track {
-  background: ga;
+  background: gainsboro;
 }
 ::-webkit-scrollbar-thumb {
   background: #e3e2e2;
