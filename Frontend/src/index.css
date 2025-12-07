@@ -52,7 +52,7 @@
   font-family: "hobo";
   font-weight: 600;
   color: #fff;
-  /* Considera cambiar a var(--color-emerald) o usar clases de Tailwind */
+  /* Considera cambi
   background-color: var(--color-red); 
   padding: 0.5rem 0.3rem;
   border-radius: 5px;
