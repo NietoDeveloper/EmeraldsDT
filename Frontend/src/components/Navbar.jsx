@@ -223,7 +223,7 @@ const Navbar = () => {
             onClick={handleviewfullmenu}
             className="bg-color-red text-white px-3 py-2 rounded-md font-hobo mt-3 -ml-32"
           >
-            View Full Menu
+            View Full Products
           </button>
         </div>
       </div>
