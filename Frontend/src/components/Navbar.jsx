@@ -140,7 +140,7 @@ const Navbar = () => {
               { text: "our Emeralds", link: "#", drop: true, pdf: false },
 
               {
-                text: "About Our ",
+                text: "About Our Emeralds",
                 link: AllergensGuidePDF,
                 drop: false,
                 pdf: true,
