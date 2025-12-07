@@ -17,7 +17,6 @@ const NewNews = () => {
       try {
         const { data } = await axios.get("/news/readNews");
         setData(data.news);
-        // console.log(data, "data");
         const featured = data.news.filter((news) => news.featured === true);
         setFeaturedNews(featured);
       } catch (error) {
