@@ -137,10 +137,10 @@ const Navbar = () => {
             }`}
           >
             {[
-              { text: "our menu", link: "#", drop: true, pdf: false },
+              { text: "our Emeralds", link: "#", drop: true, pdf: false },
 
               {
-                text: "About Our Food",
+                text: "About Our ",
                 link: AllergensGuidePDF,
                 drop: false,
                 pdf: true,
