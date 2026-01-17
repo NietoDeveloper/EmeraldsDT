@@ -21,24 +21,7 @@ const UserSchema = new mongoose.Schema(
           // required: true,
         },
    
-        totalPrice: {
-          type: Number,
-          required: true,
-        },
-        ingredients: [
-          {
-            name: {
-              type: String,
-              required: true,
-            },
-            price: {
-              type: Number,
-              required: true,
-            },
-            quantity: {
-              type: Number,
-              // required: true,
-            },
+        s
           },
         ],
       },
