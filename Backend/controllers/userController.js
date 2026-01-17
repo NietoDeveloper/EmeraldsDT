@@ -17,12 +17,6 @@ export const userRegister = async (req, res) => {
 export const userLogin = async (req, res) => {
   try {
 
-    res.status(200).json({
-      success: true,
-      message: "User logged in successfully",
-      token: token,
-      user: user,
-    });
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: "Internal Server Error" });
