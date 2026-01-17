@@ -17,13 +17,6 @@ export const deleteProduct = async (req, res) => {
   try {
     const productId = req.params.id;
 
-    const product = await Product.findByIdAndDelete(productId);
-
-    if (!product) {
-      return res
-        .status(400)
-        .json({ success: false, message: "Product not found" });
-    }
 
     await imagekit.deleteFile(product.image.fileId);
 
