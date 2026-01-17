@@ -12,14 +12,6 @@ export const createProduct = async (req, res) => {
     const fileName = `falafel-${Date.now()}${path.extname(file.name)}`;
 
 
-      const itemAlreadyExistInProdcut = await Product.findOne({ name: name });
-      if (itemAlreadyExistInProdcut) {
-        return res.status(400).json({
-          success: false,
-          message: "Product already registered",
-        });
-      }
-    }
 
     if (!name || !price || !stock || !description) {
       return res.status(400).json({ message: "All fields are required" });
