@@ -8,10 +8,6 @@ import {
   addItem,
   getItem,
 
-  deleteSubAdmin,
-  getAdmin,
-  updateAdmin,
-  getSubAdminById
 } from "../controllers/adminController.js";
 
 const router = express.Router();
