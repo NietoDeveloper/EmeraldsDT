@@ -12,12 +12,6 @@ export const createNews = async (req, res) => {
 
 };
 
-export const updateNews = async (req, res) => {
-  try {
-    const news = await News.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-      runValidators: true,
-    });
 
     // check if admin want to update image
 
