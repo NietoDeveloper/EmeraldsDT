@@ -8,15 +8,6 @@ const imagekit = initImageKit();
       const file = req.files.image;
       const fileName = `falafel-news-${Date.now()}${path.extname(file.name)}`;
 
-
-
-    // Delete the category from ImageKit
-    await imagekit.deleteFile(news.image.fileId);
-
-    res.status(200).json({
-      success: true,
-      message: "News deleted successfully",
-    });
   } catch (error) {
     res.status(500).json({ message: error.message, success: false });
   }
