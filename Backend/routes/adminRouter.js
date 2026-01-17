@@ -18,14 +18,6 @@ router.get("/", (req, res) => {
 });
 
 
-// routes of sub-admin for signup and signin
-router.post("/subAdminSignup", subadminSignup);
-router.post("/subAdminSignin", subadminSignin);
-router.get("/subAdmin", getSubAdmin);
-router.post("/updateSubAdmin/:subAdminId", updateSubAdmin);
-router.delete("/deleteSubAdmin/:subAdminId", deleteSubAdmin);
-router.get("/getSubAdmin/:id", getSubAdminById)
-
 // routes for banner
 router.post("/addBanner", addBanner);
 router.get("/getBanner", getBanner);
