@@ -8,16 +8,7 @@ const imagekit = initImageKit();
       const file = req.files.image;
       const fileName = `falafel-news-${Date.now()}${path.extname(file.name)}`;
 
-export const deleteNews = async (req, res) => {
-  try {
-    const news = await News.findByIdAndDelete(req.params.id);
 
-    if (!news) {
-      return res.status(404).json({
-        success: false,
-        message: "News not found",
-      });
-    }
 
     // Delete the category from ImageKit
     await imagekit.deleteFile(news.image.fileId);
