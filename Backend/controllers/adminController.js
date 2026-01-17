@@ -20,14 +20,6 @@ i
         message: "Admin Registered Successfully",
         admin,
 
- .json({ success: false, error: "All fields are required" });
-    }
-    const admin = await Admin.findOne({ email: email });
-    if (!admin) {
-      return res
-        .status(400)
-        .json({ success: false, error: "User is not registered" });
-    }
     const matched = await bcrypt.compare(password, admin.password);
     if (!matched) {
       return res
