@@ -14,13 +14,6 @@ const imagekit = initImageKit();
         fileName,
 
 
-    if (!news) {
-      return res.status(404).json({
-        success: false,
-        message: "News not found",
-      });
-    }
-
     res.status(200).json({
       success: true,
       message: "News updated successfully",
