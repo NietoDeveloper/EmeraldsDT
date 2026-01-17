@@ -11,22 +11,7 @@ const itemSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    description: {
-      type: String,
-      required: true,
-    },
-    category: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Category",
-      required: true,
-    },
-    image: {
-      fileId: {
-        type: String,
-        required: true,
-      },
-      url: {
-        type: String,
+
         required: true,
       },
     },
