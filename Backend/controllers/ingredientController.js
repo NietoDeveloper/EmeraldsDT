@@ -4,19 +4,6 @@ import path from "path";
 import Item from "../models/ItemModel.js";
 const imagekit = initImageKit();
 
-export const createIngredient = async (req, res) => {
-  try {
-    const file = req.files.IngredientImage;
-    const { name, price, item } = req.body;
-    const fileName = `falafel-${Date.now()}${path.extname(file.name)}`;
-
-    // Ensure imagekit is properly initialized
-    const result = await imagekit.upload({
-      file: file.data,
-      fileName,
-    });
-
-};
 
 export const readAllIngredients = async (req, res) => {
   try {
