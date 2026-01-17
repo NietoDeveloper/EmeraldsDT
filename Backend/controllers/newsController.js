@@ -15,14 +15,7 @@ export const createNews = async (req, res) => {
       fileName,
     });
 
-    const news = await News.create({
-      title,
-      description,
-      featured,
-      image: {
-        fileId: result.fileId,
-        url: result.url,
-      },
+
     });
     res.status(201).json({
       success: true,
