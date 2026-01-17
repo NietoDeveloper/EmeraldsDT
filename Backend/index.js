@@ -20,18 +20,7 @@ xt();
 });
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-  console.log("hitted on root : ", req.headers["user-agent"]);
-  res.status(200).json("Hello World!");
-Router);
-app.use("/api/user", userRouter);
-
-// ===============================Routes End==================================
-
-app.all("*", (req, res) => {
-  res.sendStatus(404);
 });
 
 mongoose.connection.once("open", () => {
