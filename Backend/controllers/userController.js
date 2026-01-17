@@ -26,16 +26,6 @@ export const updateUser = async (req, res) => {
 
 
 
-    
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: "Internal Server Error",
-      errorMessage: error.message,
-    });
-  }
-};
-
 export const updateCart = async (req, res) => {
   try {
     const userId = req.params.id;
