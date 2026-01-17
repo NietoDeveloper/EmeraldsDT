@@ -18,13 +18,6 @@ export const getProductById = async (req, res) => {
     const productId = req.params.id;
 
 
-export const updateProduct = async (req, res) => {
-d,
-        url: result.url,
-      };
-      await updatedProduct.save();
-
-};
 
 // delete pruduct with images
 export const deleteProduct = async (req, res) => {
