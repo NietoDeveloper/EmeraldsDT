@@ -15,8 +15,6 @@ router.get("/", (req, res) => {
   res.send("user is ready");
 });
 
-router.post("/register", userRegister);
-router.post("/login", userLogin);
 
 router.get("/all", allUsers);
 router.get("/:id", UserById);
