@@ -5,23 +5,7 @@ import Item from "../models/ItemModel.js";
 const imagekit = initImageKit();
 
 
-    // check if admin want to update image
-    if (req.files) {
-      const file = req.files.IngredientImage;
-      const fileName = `falafel-${Date.now()}${path.extname(file.name)}`;
-      const result = await imagekit.upload({
-        file: file.data,
-        fileName,
-      });
 
-      await imagekit.deleteFile(ingredient.IngredientImage.fileId);
-
-      ingredient.IngredientImage = {
-        fileId: result.fileId,
-        url: result.url,
-      };
-      await ingredient.save();
-    }
 
     return res.status(200).json({
       success: true,
