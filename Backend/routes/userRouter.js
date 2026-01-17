@@ -4,10 +4,6 @@ import {
   accpetOrder,
   allUsers,
   updateCart,
-  updateUser,
-  userLogin,
-  userRegister,
-} from "../controllers/userController.js";
 
 
 
