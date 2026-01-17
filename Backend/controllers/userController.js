@@ -14,10 +14,7 @@ export const userRegister = async (req, res) => {
 
 export const updateCart = async (req, res) => {
   try {
-    const userId = req.params.id;
-    const { orders } = req.body;
-
-
+    
 
     if (!updatedUser) {
       return res
