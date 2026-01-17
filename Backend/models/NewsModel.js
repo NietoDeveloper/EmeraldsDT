@@ -13,15 +13,7 @@ const newsSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    image: {
-      fileId: {
-        type: String,
-        required: true,
-      },
-      url: {
-        type: String,
-        required: true,
-      },
+
     },
     date: {
       type: Date,
