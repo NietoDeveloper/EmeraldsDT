@@ -18,15 +18,6 @@ export const createProduct = async (req, res) => {
     }
 
 
-
-
-    
-    
-  } catch (error) {
-    console.log(error);
-  }
-};
-
 export const getProduct = async (req, res) => {
   try {
     const products = await Product.find();
