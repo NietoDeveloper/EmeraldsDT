@@ -25,14 +25,3 @@ export const updateCart = async (req, res) => {
     await updatedUser.save();
 
 
-    order.status = "Accepted";
-
-
-  } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: "Internal Server Error",
-      errorMessage: error.message,
-    });
-  }
-};
