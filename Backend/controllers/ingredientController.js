@@ -5,23 +5,6 @@ import Item from "../models/ItemModel.js";
 const imagekit = initImageKit();
 
 
-export const readAllIngredients = async (req, res) => {
-  try {
-    const ingredients = await Ingredient.find({});
-    return res.status(200).json({
-      success: true,
-      message: "All ingredients fetched successfully",
-      ingredients,
-    });
-  } catch (error) {
-    console.error(error);
-    return res.status(500).json({
-      success: false,
-      message: "Something went wrong, please try again",
-      error,
-    });
-  }
-};
 
 export const updateIngredient = async (req, res) => {
   try {
