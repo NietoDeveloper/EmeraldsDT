@@ -24,13 +24,6 @@ d,
       };
       await updatedProduct.save();
 
-
-    return res.status(200).json({
-      success: true,
-      message: "Product updated successfully",
-      product: updatedProduct,
-onsole.log(error);
-  }
 };
 
 // delete pruduct with images
