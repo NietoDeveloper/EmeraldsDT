@@ -10,10 +10,7 @@ export const userRegister = async (req, res) => {
       return res.status(400).json({ error: "Please fill all the fields" });
     }
 
-    const user = await User.findOne({ email });
-    if (user) {
-      return res.status(400).json({ error: "User already exists" });
-  
+
 
 
 
