@@ -10,9 +10,6 @@ export const userRegister = async (req, res) => {
       return res.status(400).json({ error: "Please fill all the fields" });
     }
 
-
-
-
 export const UserById = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
