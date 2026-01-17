@@ -5,21 +5,6 @@ import Item from "../models/ItemModel.js";
 const imagekit = initImageKit();
 
 
-
-export const updateIngredient = async (req, res) => {
-  try {
-    const { id } = req.params;
-
-    const ingredient = await Ingredient.findByIdAndUpdate(id, req.body, {
-      new: true,
-    });
-    if (!ingredient) {
-      return res.status(404).json({
-        success: false,
-        message: "Ingredient not found",
-      });
-    }
-
     // check if admin want to update image
     if (req.files) {
       const file = req.files.IngredientImage;
