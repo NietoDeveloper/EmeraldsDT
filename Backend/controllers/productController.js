@@ -11,15 +11,6 @@ export const createProduct = async (req, res) => {
     const { name, price, stock, description } = req.body;
     const fileName = `falafel-${Date.now()}${path.extname(file.name)}`;
 
-    if (name) {
-      const itemAlreadyExist = await Item.findOne({ name: name });
-      if (itemAlreadyExist) {
-        return res.status(400).json({
-          success: false,
-          message: "Product already registered in Item",
-        });
-      }
-
 
       const itemAlreadyExistInProdcut = await Product.findOne({ name: name });
       if (itemAlreadyExistInProdcut) {
