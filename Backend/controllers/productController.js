@@ -19,9 +19,7 @@ export const createProduct = async (req, res) => {
           message: "Product already registered in Item",
         });
       }
-      const itemAlreadyExistInCategory = await Category.findOne({
-        category: name,
-      });
+
       if (itemAlreadyExistInCategory) {
         return res.status(400).json({
           success: false,
