@@ -23,14 +23,7 @@ export const userLogin = async (req, res) => {
   }
 };
 
-export const allUsers = async (req, res) => {
 
-    });
-  } catch (error) {
-
-   
-  }
-};
 
 export const UserById = async (req, res) => {
   try {
