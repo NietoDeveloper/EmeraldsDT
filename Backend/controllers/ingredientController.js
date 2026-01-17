@@ -16,15 +16,6 @@ export const createIngredient = async (req, res) => {
       fileName,
     });
 
-
-  } catch (error) {
-    console.error(error);
-    return res.status(500).json({
-      success: false,
-      message: "Something went wrong, please try again",
-      error,
-    });
-  }
 };
 
 export const readAllIngredients = async (req, res) => {
