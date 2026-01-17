@@ -11,11 +11,4 @@ export const createProduct = async (req, res) => {
     const { name, price, stock, description } = req.body;
     const fileName = `falafel-${Date.now()}${path.extname(file.name)}`;
 
-    return res.status(200).json({
-      success: true,
-      message: "Product deleted successfully",
-    });
-  } catch (error) {
-    console.log(error);
-  }
 };
