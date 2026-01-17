@@ -17,10 +17,6 @@ export const createProduct = async (req, res) => {
       return res.status(400).json({ message: "All fields are required" });
     }
 
-    // validation for image
-    if (!req.files) {
-      return res.status(400).json({ message: "Image is required" });
-    }
 
     const result = await imagekit.upload({
       file: file.data,
