@@ -23,15 +23,6 @@ export const updateProduct = async (req, res) => {
     const productId = req.params.id;
 
 
-    // check if admin want to update image
-    if (req.files) {
-      const file = req.files.image;
-      const fileName = `falafel-${Date.now()}${path.extname(file.name)}`;
-      const result = await imagekit.upload({
-        file: file.data,
-        fileName,
-      });
-
       await imagekit.deleteFile(updatedProduct.image.fileId);
 
       updatedProduct.image = {
