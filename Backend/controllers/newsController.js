@@ -12,17 +12,7 @@ const imagekit = initImageKit();
       const result = await imagekit.upload({
         file: file.data,
         fileName,
-      });
 
-      // Delete the old image from ImageKit
-      await imagekit.deleteFile(news.image.fileId);
-
-      news.image = {
-        fileId: result.fileId,
-        url: result.url,
-      };
-      await news.save();
-    }
 
     if (!news) {
       return res.status(404).json({
