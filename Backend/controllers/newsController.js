@@ -10,18 +10,6 @@ export const createNews = async (req, res) => {
     const fileName = `falafel-news-${Date.now()}${path.extname(file.name)}`;
 
 
-export const getNews = async (req, res) => {
-  try {
-    const news = await News.find();
-    res.status(200).json({
-      success: true,
-      news,
-    });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-};
-
 export const getNewsById = async (req, res) => {
   try {
     const news = await News.findById(req.params.id);
