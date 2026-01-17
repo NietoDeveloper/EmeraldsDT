@@ -12,13 +12,6 @@ export const createProduct = async (req, res) => {
     const fileName = `falafel-${Date.now()}${path.extname(file.name)}`;
 
 
-
-export const getProductById = async (req, res) => {
-  try {
-    const productId = req.params.id;
-
-
-
 // delete pruduct with images
 export const deleteProduct = async (req, res) => {
   try {
