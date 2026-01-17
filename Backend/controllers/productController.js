@@ -13,12 +13,6 @@ export const createProduct = async (req, res) => {
 
 
 
-  
-  } catch (error) {
-    console.log(error);
-  }
-};
-
 export const getProductById = async (req, res) => {
   try {
     const productId = req.params.id;
