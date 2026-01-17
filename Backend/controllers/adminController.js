@@ -1,38 +1,4 @@
-
-
-export const getSubAdmin = async (req, res) => {
-  try {
-    const subadmin = await SubAdmin.find({});
-    if (!subadmin) {
-      return res.status(404).json({
-        success: false,
-        message: "SubAdmin not found",
-      });
-    }
-    return res.status(200).json({
-      success: true,
-      message: "SubAdmin fetched successfully",
-      subadmin,
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-// update subadmin
-
-export const updateSubAdmin = async (req, res) => {
-  try {
-    const subAdminId = req.params.subAdminId;
-    const updatedSubAdmin = await SubAdmin.findByIdAndUpdate(
-      subAdminId,
-      req.body,
-      {
-        new: true,
-      }
-    );
-    if (!updatedSubAdmin) {
-      return res.status(404).json({
+satus(404).json({
         success: false,
         message: "SubAdmin not found",
       });
