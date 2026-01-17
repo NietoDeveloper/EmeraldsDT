@@ -8,17 +8,6 @@ const imagekit = initImageKit();
       const file = req.files.image;
       const fileName = `falafel-news-${Date.now()}${path.extname(file.name)}`;
 
-
-    res.status(200).json({
-      success: true,
-      message: "News updated successfully",
-      news,
-    });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-};
-
 export const deleteNews = async (req, res) => {
   try {
     const news = await News.findByIdAndDelete(req.params.id);
