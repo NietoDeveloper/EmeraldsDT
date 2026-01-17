@@ -5,30 +5,6 @@ import Item from "../models/ItemModel.js";
 const imagekit = initImageKit();
 
 
-export const deleteIngredient = async (req, res) => {
-  try {
-    const { id } = req.params;
-    const ingredient = await Ingredient.findByIdAndDelete(id);
-    if (!ingredient) {
-      return res.status(404).json({
-        success: false,
-        message: "Ingredient not found",
-      });
-    }
-    await imagekit.deleteFile(ingredient.IngredientImage.fileId);
-    return res.status(200).json({
-      success: true,
-      message: "Ingredient deleted successfully",
-    });
-  } catch (error) {
-    return res.status(500).json({
-      success: false,
-      message: "Something went wrong, please try again",
-      error,
-    });
-  }
-};
-
 export const getIngredientById = async (req, res) => {
   try {
     const { id } = req.params;
