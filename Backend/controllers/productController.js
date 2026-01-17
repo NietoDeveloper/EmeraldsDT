@@ -23,10 +23,6 @@ export const getProductById = async (req, res) => {
   try {
     const productId = req.params.id;
 
-  } catch (error) {
-    console.log(error);
-  }
-};
 
 export const updateProduct = async (req, res) => {
   try {
