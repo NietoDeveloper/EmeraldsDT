@@ -13,14 +13,6 @@ export const createProduct = async (req, res) => {
 
 
 
-export const getProduct = async (req, res) => {
-  try {
-    const products = await Product.find();
-
-    if (!products) {
-      return res.status(400).json({ message: "No products found" });
-    }
-
   
   } catch (error) {
     console.log(error);
