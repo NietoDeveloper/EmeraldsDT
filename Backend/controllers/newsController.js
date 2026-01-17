@@ -3,17 +3,6 @@ import { initImageKit } from "../utils/imageKit.js";
 import path from "path";
 const imagekit = initImageKit();
 
-export const createNews = async (req, res) => {
-  try {
-    const file = req.files.image;
-    const { title, description, featured } = req.body;
-    const fileName = `falafel-news-${Date.now()}${path.extname(file.name)}`;
-
-
-};
-
-
-    // check if admin want to update image
 
     if (req.files) {
       const file = req.files.image;
