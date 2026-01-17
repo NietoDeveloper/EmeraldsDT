@@ -23,12 +23,6 @@ export const getProductById = async (req, res) => {
   try {
     const productId = req.params.id;
 
-
-    return res.status(200).json({
-      success: true,
-      message: "Product found",
-      product,
-    });
   } catch (error) {
     console.log(error);
   }
