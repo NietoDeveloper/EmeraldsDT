@@ -23,13 +23,6 @@ router.post("/addBanner", addBanner);
 router.get("/getBanner", getBanner);
 router.post("/deleteBanner/:bannerId", deleteBanner);
 
-// route for item
-router.post("/addItem", addItem);
-router.post("/updateItem/:itemId", updateItem);
-router.get("/getItem", getItem);
-router.post("/deleteItem/:itemId", deleteItem);
-router.get("/getItemByCategory/:categoryId", getItemByCategory);
-router.get("/getItemById/:itemId", getItemByItemId);
 
 // category route
 router.post("/addCategory", addCategory);
