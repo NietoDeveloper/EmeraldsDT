@@ -8,28 +8,7 @@ const subAdminSchema = mongoose.Schema({
   password: {
     type: String,
     required: true,
-  },
 
-  orderPermission: {
-    type: Boolean,
-    default: false,
-  },
-  userPermission: {
-    type: Boolean,
-    default: false,
-  },
-  marchandisePermission: {
-    type: Boolean,
-    default: false,
-  },
-  newsPermission: {
-    type: Boolean,
-    default: false,
-  },
-  ingrdientPermission: {
-    type: Boolean,
-    default: false,
-  },
 });
 
 const SubAdmin = mongoose.model("SubAdmin", subAdminSchema);
