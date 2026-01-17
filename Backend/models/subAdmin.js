@@ -9,22 +9,7 @@ const subAdminSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  role: {
-    type: String,
-    default: "subAdmin",
-  },
-  itemPermission: {
-    type: Boolean,
-    default: false,
-  },
-  categoryPermission: {
-    type: Boolean,
-    default: false,
-  },
-  bannerPermission: {
-    type: Boolean,
-    default: false,
-  },
+
   orderPermission: {
     type: Boolean,
     default: false,
