@@ -10,22 +10,3 @@ import corsOptions from "./middlewares/corsOption.js";
 
 const PORT = 8080;
 
-DB();
-
-app.use(credentials);
-
-app.use(morgan("tiny"));
-
-xt();
-});
-
-app.use(express.json());
-
-});
-
-mongoose.connection.once("open", () => {
-  console.log("connected to MongoDB");
-  app.listen(PORT, () => {
-    console.log(`server is listening at port : ${PORT}`);
-  });
-});
