@@ -20,15 +20,7 @@ export const createProduct = async (req, res) => {
 
 
 
-    if (!newProduct) {
-      return res
-        .status(400)
-        .json({ success: false, message: "Product creation failed" });
-    }
-
-    await newProduct.save();
-
-    return res.status(201).json({
+    
       success: true,
       message: "Product created successfully",
       product: newProduct,
