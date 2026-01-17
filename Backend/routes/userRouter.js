@@ -16,11 +16,6 @@ router.get("/", (req, res) => {
 });
 
 
-router.get("/all", allUsers);
-router.get("/:id", UserById);
-
-router.post("/update/:id", updateUser);
-router.post("/addCart/:id", updateCart);
 
 router.post("/accpetOrder/:userId/:orderId", accpetOrder);
 
