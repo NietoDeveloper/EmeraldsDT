@@ -29,11 +29,6 @@ app.get("/", (req, res) => {
 
 // ============================ Routes  ======================================
 
-import adminRoutes from "./routes/adminRouter.js";
-import newsRouter from "./routes/newsRouter.js";
-import productRouter from "./routes/productRouter.js";
-import ingredientRouter from "./routes/ingredientRouter.js";
-import userRouter from "./routes/userRouter.js";
 
 app.use("/api/admin", adminRoutes);
 app.use("/api/news", newsRouter);
