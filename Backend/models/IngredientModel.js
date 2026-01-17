@@ -7,20 +7,7 @@ const ingredientSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    IngredientImage: {
-      fileId: {
-        type: String,
-        required: true,
-      },
-      url: {
-        type: String,
-        required: true,
-      },
-    },
-    price: {
-      type: Number,
-      required: true,
-    },
+
   },
   { timestamps: true }
 );
