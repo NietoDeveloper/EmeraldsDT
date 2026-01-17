@@ -20,11 +20,6 @@ export const UserById = async (req, res) => {
   }
 };
 
-export const updateUser = async (req, res) => {
-  try {
-
-
-
 
 export const updateCart = async (req, res) => {
   try {
