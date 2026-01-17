@@ -17,12 +17,6 @@ export const userRegister = async (req, res) => {
 export const userLogin = async (req, res) => {
   try {
 
-   
-  
-    const token = jwt.sign({ _id: user._id }, "SECRETTOKEN");
-    res.cookie("token", token, {
-      httpOnly: true,
-    });
     res.status(200).json({
       success: true,
       message: "User logged in successfully",
