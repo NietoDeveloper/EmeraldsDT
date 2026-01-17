@@ -19,14 +19,7 @@ export const getProductById = async (req, res) => {
 
 
 export const updateProduct = async (req, res) => {
-  try {
-    const productId = req.params.id;
-
-
-      await imagekit.deleteFile(updatedProduct.image.fileId);
-
-      updatedProduct.image = {
-        fileId: result.fileId,
+d,
         url: result.url,
       };
       await updatedProduct.save();
