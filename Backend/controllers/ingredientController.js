@@ -16,15 +16,6 @@ export const createIngredient = async (req, res) => {
       fileName,
     });
 
-    const newIngredient = {
-      name,
-      price,
-      item,
-      IngredientImage: {
-        fileId: result.fileId,
-        url: result.url,
-      },
-    };
 
     const ingredient = new Ingredient(newIngredient);
     await ingredient.save();
