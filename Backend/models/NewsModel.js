@@ -6,19 +6,7 @@ const newsSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    description: {
-      type: String,
-    },
-    featured: {
-      type: Boolean,
-      default: false,
-    },
 
-    },
-    date: {
-      type: Date,
-      default: Date.now,
-    },
   },
   {
     timestamps: true,
