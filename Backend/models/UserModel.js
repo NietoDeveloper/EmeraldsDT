@@ -16,18 +16,7 @@ const UserSchema = new mongoose.Schema(
         },
         status: {
           type: String,
-          required: true,
-          default: "Pending",
-        },
-        image: {
-          type: String,
-          required: true,
-        },
-        price: {
-          type: Number,
-          required: true,
-        },
-        quantity: {
+{
           type: Number,
           // required: true,
         },
