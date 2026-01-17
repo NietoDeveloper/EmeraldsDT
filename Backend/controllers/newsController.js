@@ -9,23 +9,6 @@ export const createNews = async (req, res) => {
     const { title, description, featured } = req.body;
     const fileName = `falafel-news-${Date.now()}${path.extname(file.name)}`;
 
-    // Ensure imagekit is properly initialized
-    const result = await imagekit.upload({
-      file: file.data,
-      fileName,
-    });
-
-
-    });
-    res.status(201).json({
-      success: true,
-      message: "News created successfully",
-      news,
-    });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-};
 
 export const getNews = async (req, res) => {
   try {
