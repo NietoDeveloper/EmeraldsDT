@@ -22,7 +22,7 @@ export const UserById = async (req, res) => {
 
 export const updateUser = async (req, res) => {
   try {
-    const userId = req.params.id;
+
 
 
     if (!updatedUser) {
