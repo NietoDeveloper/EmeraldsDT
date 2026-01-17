@@ -5,22 +5,6 @@ import Item from "../models/ItemModel.js";
 const imagekit = initImageKit();
 
 
-
-
-    return res.status(200).json({
-      success: true,
-      message: "Ingredient updated successfully",
-      ingredient,
-    });
-  } catch (error) {
-    return res.status(500).json({
-      success: false,
-      message: "Something went wrong, please try again",
-      error,
-    });
-  }
-};
-
 export const deleteIngredient = async (req, res) => {
   try {
     const { id } = req.params;
