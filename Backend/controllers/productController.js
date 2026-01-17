@@ -23,16 +23,6 @@ export const createProduct = async (req, res) => {
       fileName,
     });
 
-    const newProduct = new Product({
-      name,
-      price,
-      stock,
-      description,
-      image: {
-        fileId: result.fileId,
-        url: result.url,
-      },
-    });
 
     if (!newProduct) {
       return res
