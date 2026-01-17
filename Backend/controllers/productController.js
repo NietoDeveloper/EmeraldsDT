@@ -22,11 +22,6 @@ export const updateProduct = async (req, res) => {
   try {
     const productId = req.params.id;
 
-    const updatedProduct = await Product.findByIdAndUpdate(
-      productId,
-      req.body,
-      { new: true }
-    );
 
     // check if admin want to update image
     if (req.files) {
