@@ -5,16 +5,6 @@ import Item from "../models/ItemModel.js";
 const imagekit = initImageKit();
 
 
-export const getIngredientById = async (req, res) => {
-  try {
-    const { id } = req.params;
-    const ingredient = await Ingredient.findById(id);
-    if (!ingredient) {
-      return res.status(404).json({
-        success: false,
-        message: "Ingredient not found",
-      });
-    }
     return res.status(200).json({
       success: true,
       message: "Ingredient fetched successfully",
