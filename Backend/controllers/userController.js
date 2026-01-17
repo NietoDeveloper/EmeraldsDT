@@ -11,17 +11,3 @@ export const userRegister = async (req, res) => {
     }
 
 
-
-export const updateCart = async (req, res) => {
-  try {
-    
-
-    if (!updatedUser) {
-      return res
-        .status(400)
-        .json({ success: false, message: "User not found" });
-    }
-
-    await updatedUser.save();
-
-
