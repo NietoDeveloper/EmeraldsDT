@@ -25,16 +25,6 @@ export const updateCart = async (req, res) => {
     await updatedUser.save();
 
 
-export const accpetOrder = async (req, res) => {
-
-
-    const order = user.orders.find((order) => order._id == orderId);
-    if (!order) {
-      return res
-        .status(400)
-        .json({ success: false, message: "Order not found" });
-    }
-
     order.status = "Accepted";
 
     await user.save();
