@@ -20,15 +20,7 @@ i
         message: "Admin Registered Successfully",
         admin,
 
-// admin signin
-
-export const adminSignin = async (req, res) => {
-  try {
-    const { email, password } = req.body;
-    if (!email || !password) {
-      return res
-        .status(400)
-        .json({ success: false, error: "All fields are required" });
+ .json({ success: false, error: "All fields are required" });
     }
     const admin = await Admin.findOne({ email: email });
     if (!admin) {
