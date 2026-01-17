@@ -1,38 +1,4 @@
-satus(404).json({
-        success: false,
-        message: "SubAdmin not found",
-      });
-    } else {
-      return res.status(200).json({
-        success: true,
-        message: "SubAdmin updated successfully",
-        subadmin: updatedSubAdmin,
-      });
-    }
-  } catch (error) {
-    console.log(error);
-    return res.status(500).json({
-      success: false,
-      message: "Internal server error",
-    });
-  }
-};
-
-// delete subadmin
-
-export const deleteSubAdmin = async (req, res) => {
-  try {
-    const subAdminId = req.params.subAdminId;
-    const subadmin = await SubAdmin.findByIdAndDelete(subAdminId);
-    if (!subadmin) {
-      return res.status(404).json({
-        success: false,
-        message: "SubAdmin not found",
-      });
-    } else {
-      return res.status(200).json({
-        success: true,
-        message: "SubAdmin deleted successfully",
+ge: "SubAdmin deleted successfully",
       });
     }
   } catch (error) {
