@@ -25,15 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   console.log("hitted on root : ", req.headers["user-agent"]);
   res.status(200).json("Hello World!");
-});
-
-// ============================ Routes  ======================================
-
-
-app.use("/api/admin", adminRoutes);
-app.use("/api/news", newsRouter);
-app.use("/api/product", productRouter);
-app.use("/api/ingredient", ingredientRouter);
+Router);
 app.use("/api/user", userRouter);
 
 // ===============================Routes End==================================
