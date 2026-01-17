@@ -18,10 +18,6 @@ export const createProduct = async (req, res) => {
     }
 
 
-    const result = await imagekit.upload({
-      file: file.data,
-      fileName,
-    });
 
 
     if (!newProduct) {
