@@ -8,21 +8,7 @@ import bcrypt from "bcryptjs";
 import { initImageKit } from "../utils/imageKit.js";
 import path from "path";
 import Banner from "../models/AddBanner.js";
-import Ingredient from "../models/IngredientModel.js";
-const imagekit = initImageKit();
-
-
-    if (role === "admin") {
-      return res
-        .status(400)
-        .json({ success: false, error: "Admin Already Registered" });
-    }
-    const hashedPassword = await bcrypt.hash(password, 10); // 10 is the salt rounds
-
-    const admin = await Admin.create({
-      email: email,
-      password: hashedPassword,
-      role: role,
+i
     });
     if (!admin) {
       return res
