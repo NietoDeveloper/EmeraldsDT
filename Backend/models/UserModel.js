@@ -20,13 +20,7 @@ const UserSchema = new mongoose.Schema(
           type: Number,
           // required: true,
         },
-        spicyOrNonSpicy: {
-          type: String,
-          required: true,
-        },
-        vegOrNonVeg: {
-          type: String,
-        },
+   
         totalPrice: {
           type: Number,
           required: true,
