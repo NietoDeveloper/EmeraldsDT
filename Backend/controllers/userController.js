@@ -27,13 +27,7 @@ export const updateCart = async (req, res) => {
 
     order.status = "Accepted";
 
-    await user.save();
 
-    return res.status(200).json({
-      success: true,
-      message: "Order accepted successfully",
-      user: user,
-    });
   } catch (error) {
     res.status(500).json({
       success: false,
