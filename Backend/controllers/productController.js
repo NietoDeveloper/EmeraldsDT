@@ -11,15 +11,6 @@ export const createProduct = async (req, res) => {
     const { name, price, stock, description } = req.body;
     const fileName = `falafel-${Date.now()}${path.extname(file.name)}`;
 
-
-// delete pruduct with images
-export const deleteProduct = async (req, res) => {
-  try {
-    const productId = req.params.id;
-
-
-    await imagekit.deleteFile(product.image.fileId);
-
     return res.status(200).json({
       success: true,
       message: "Product deleted successfully",
