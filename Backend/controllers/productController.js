@@ -23,13 +23,7 @@ d,
         url: result.url,
       };
       await updatedProduct.save();
-    }
 
-    if (!updatedProduct) {
-      return res
-        .status(400)
-        .json({ success: false, message: "Product not found" });
-    }
 
     return res.status(200).json({
       success: true,
