@@ -11,22 +11,7 @@ import Banner from "../models/AddBanner.js";
 import Ingredient from "../models/IngredientModel.js";
 const imagekit = initImageKit();
 
-// admin signup
 
-export const adminSignup = async (req, res) => {
-  try {
-    const { email, password, role } = req.body;
-    if (!email || !password || !role) {
-      return res
-        .status(400)
-        .json({ success: false, error: "All fields are required" });
-    }
-    const adminAlreadyExist = await Admin.findOne({ email: email });
-    if (adminAlreadyExist) {
-      return res
-        .status(400)
-        .json({ success: false, message: "Admin already registered" });
-    }
     if (role === "admin") {
       return res
         .status(400)
