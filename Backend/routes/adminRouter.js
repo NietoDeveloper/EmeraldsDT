@@ -17,11 +17,6 @@ router.get("/", (req, res) => {
   res.send("Admin Router");
 });
 
-// routes of admin for signup and signin
-router.post("/adminSignup", adminSignup);
-router.post("/adminSignin", adminSignin);
-router.get("/getAdmin", getAdmin)
-router.post("/updateAdmin/:adminId", updateAdmin);
 
 // routes of sub-admin for signup and signin
 router.post("/subAdminSignup", subadminSignup);
