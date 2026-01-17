@@ -8,11 +8,6 @@ const imagekit = initImageKit();
       const file = req.files.image;
       const fileName = `falafel-news-${Date.now()}${path.extname(file.name)}`;
 
-      // Ensure imagekit is properly initialized
-      const result = await imagekit.upload({
-        file: file.data,
-        fileName,
-
 
     res.status(200).json({
       success: true,
