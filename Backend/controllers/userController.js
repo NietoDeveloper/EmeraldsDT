@@ -13,11 +13,7 @@ export const userRegister = async (req, res) => {
     const user = await User.findOne({ email });
     if (user) {
       return res.status(400).json({ error: "User already exists" });
-    }
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = new User({
-
-    });
+  
 
     });
   } catch (error) {
