@@ -29,9 +29,7 @@ d,
       success: true,
       message: "Product updated successfully",
       product: updatedProduct,
-    });
-  } catch (error) {
-    console.log(error);
+onsole.log(error);
   }
 };
 
