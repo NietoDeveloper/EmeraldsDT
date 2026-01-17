@@ -64,7 +64,7 @@ export const getAdmin = async (req, res) => {
     }
     return res.status(200).json({
       success: true,
-      message: "Admin fetched successfully",
+      message: "Admin fetched successfully"
       admin,
     });
   } catch (error) {
@@ -77,39 +77,7 @@ export const getAdmin = async (req, res) => {
 export const updateAdmin = async (req, res) => {
   try {
     const adminId = req.params.adminId;
-    const updatedAdmin = await Admin.findByIdAndUpdate(adminId, req.body, {
-      new: true,
-    });
-    if (!updatedAdmin) {
-      return res.status(404).json({
-        success: false,
-        message: "Admin not found",
-      });
-    } else {
-      return res.status(200).json({
-        success: true,
-        message: "Admin updated successfully",
-        admin: updatedAdmin,
-      });
-    }
-  } catch (error) {
-    console.log(error);
-    return res.status(500).json({
-      success: false,
-      message: "Internal server error",
-    });
-  }
-};
-
-// subadmin signup
-
-export const subadminSignup = async (req, res) => {
-  try {
-    const { email, password, role } = req.body;
-    if (!email || !password || !role) {
-      return res
-        .status(400)
-        .json({ success: false, error: "All fields are required" });
+    cse, error: "All fields are required" });
     }
     const subadminAlreadyExist = await SubAdmin.findOne({ email: email });
     if (subadminAlreadyExist) {
