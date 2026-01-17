@@ -13,18 +13,6 @@ export const userRegister = async (req, res) => {
 
 
 
-
-export const userLogin = async (req, res) => {
-  try {
-
-  } catch (error) {
-   
-   
-  }
-};
-
-
-
 export const UserById = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
