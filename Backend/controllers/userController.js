@@ -26,16 +26,7 @@ export const updateCart = async (req, res) => {
 
 
 export const accpetOrder = async (req, res) => {
-  try {
-    const userId = req.params.userId;
-    const orderId = req.params.orderId;
 
-    const user = await User.findById(userId);
-    if (!user) {
-      return res
-        .status(400)
-        .json({ success: false, message: "User not found" });
-    }
 
     const order = user.orders.find((order) => order._id == orderId);
     if (!order) {
