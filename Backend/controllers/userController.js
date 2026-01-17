@@ -17,13 +17,7 @@ export const updateCart = async (req, res) => {
     const userId = req.params.id;
     const { orders } = req.body;
 
-    const updatedUser = await User.findByIdAndUpdate(
-      userId,
-      {
-        $push: { orders: orders },
-      },
-      { new: true }
-    );
+
 
     if (!updatedUser) {
       return res
