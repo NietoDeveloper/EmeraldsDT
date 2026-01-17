@@ -13,11 +13,6 @@ export const createProduct = async (req, res) => {
 
 
 
-    if (!name || !price || !stock || !description) {
-      return res.status(400).json({ message: "All fields are required" });
-    }
-
-
 export const getProduct = async (req, res) => {
   try {
     const products = await Product.find();
