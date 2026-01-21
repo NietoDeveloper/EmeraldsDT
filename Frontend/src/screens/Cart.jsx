@@ -1,41 +1,4 @@
 
-    }
-  };
-
-  const [adminData, setAdminData] = useState({});
-  const [acceptOrder, setAcceptOrder] = useState(false);
-
-  useEffect(() => {
-    const fetchAdminData = async () => {
-      try {
-        const { data } = await axios.get("/admin/getAdmin");
-        setAdminData(data?.admin[0]);
-        setAcceptOrder(data?.admin[0]?.orderAccept);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchAdminData();
-  }, [isUserAuthenticated]);
-
-  const CheckOutHandler = async () => {
-    if (!acceptOrder) {
-      setShowModal(true);
-      return;
-    }
-    try {
-      const sendeddata = existingCart.map((item) => {
-        return {
-          name: item.name,
-          image: item.image,
-          price: item.price,
-          quantity: item.quantity,
-          spicyOrNonSpicy: item.spicy,
-          vegOrNonVeg: item.veg,
-          totalPrice: item.totalPrice,
-          ingredients: item.ingredients.map((ing) => ({
-            name: ing.name,
-            price: ing.price,
             quantity: ing.quantity,
           })),
         };
