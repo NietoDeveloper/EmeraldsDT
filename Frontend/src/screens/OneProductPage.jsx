@@ -8,16 +8,7 @@ import AddToCart from "../components/ourMenu/AddToCart";
             <div className="h-auto flex max-sm:flex-col w-full items-center">
               <div className="lg:w-3/5 w-full h-full flex items-center justify-center">
                 <img
-                  className="h-[300px] lg:w-[350px] w-[250px] object-cover"
-                  src={itemData?.product?.image?.url}
-                  alt=""
-                />
-              </div>
-              <div className="lg:w-2/5 w-full h-full">
-                <div className="w-full h-full flex flex-col max-sm:text-center">
-                  <h1 className="text-4xl font-hobo">
-                    {itemData?.product?.name}
-                  </h1>
+
                   <p className="text-2xl mt-5">€ {itemData?.product?.price}</p>
                   <p className="mt-3">{itemData?.product?.description}</p>
 
