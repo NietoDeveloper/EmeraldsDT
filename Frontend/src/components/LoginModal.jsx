@@ -14,14 +14,7 @@ const LoginModal = ({ showModal, setShowModal, setIsUserAuthenticated }) => {
       const { data } = await axios.post("/user/login", {
         email,
         password,
-      });
 
-      toast.success(data?.message);
-
-      setShowModal(false);
-      localStorage.setItem("userToken", data?.token);
-      localStorage.setItem("userId", data?.user?._id);
-      setIsUserAuthenticated(true);
 
       // window.location.reload();
     } catch (error) {
