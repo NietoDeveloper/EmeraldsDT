@@ -3,20 +3,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import axios from "../utils/axios";
 import AddToCart from "../components/ourMenu/AddToCart";
-
-
-  const handleModalShow = (item) => {
-og(itemData);
-  return (
-    <div style={{ maxWidth: "1600px" }} className="mx-auto">
-      <Navbar />
-      {loading ? ( // Render loading message while data is being fetched
-        <div className="flex justify-center items-center h-screen">
-          <div class="flex justify-center items-center h-screen">
-            <div class="animate-spin ease-linear rounded-full w-10 h-10 border-t-2 border-b-2 border-red-500 ml-3"></div>
-          </div>
-        </div>
-      ) : (
         <div className="lg:px-40 lg:mt-36">
           <div className="h-auto w-full pt-20 px-10">
             <div className="h-auto flex max-sm:flex-col w-full items-center">
