@@ -1,30 +1,4 @@
 
-              </div>
-            </div>
-            {itemData?.ingredients ? (
-              <div className="h-auto w-full  lg:mt-32 max-sm:mt-20">
-                <h1 className="text-4xl font-hobo text-center">
-                  Ingredients in the {itemData?.item?.name}
-                </h1>
-                <div className="h-full w-full  lg:mt-8 grid lg:grid-cols-6 grid-cols-2">
-                  {itemData?.ingredients &&
-                    itemData?.ingredients.map((ingredient, index) => (
-                      <div key={index} className="lg:p-5 p-2">
-                        <img
-                          className="w-[150px] h-[150px]  object-contain"
-                          src={ingredient?.IngredientImage?.url}
-                          alt=""
-                        />
-                        <p className="text-center mt-2 capitalize">
-                          {ingredient.name}
-                        </p>
-                      </div>
-                    ))}
-                </div>
-              </div>
-            ) : (
-              " "
-            )}
           </div>
           {/*Nutritional Information section start */}
           <div className="relative font-inter antialiased lg:mt-20 my-10">
