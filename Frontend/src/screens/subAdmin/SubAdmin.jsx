@@ -1,38 +1,4 @@
 
-                </ul>
-              )}
-            </li>
-          )}
-
-          {/* Products */}
-          {subAdmin && subAdmin?.marchandisePermission === true && (
-            <li
-              className={`mb-2 transition-all duration-300 h-10 overflow-hidden ${
-                isProductSubchildVisible ? "h-32" : ""
-              }`}
-              onClick={toggleProductSubchildVisibility}
-            >
-              <div className="flex items-center gap-4 px-4 py-2 cursor-pointer transition-all duration-300 hover:bg-amber-300	hover:text-black">
-                <MdOutlineNoteAlt className="text-xl mr-2" />
-                <span>Merchandise</span>
-                <FaChevronDown className="d-block ms-auto" />
-              </div>
-
-              {isProductSubchildVisible && (
-                <ul className="transition-all duration-300 ">
-                  <li className="py-2 ps-10 hover:bg-color-red">
-                    <Link to="/subAdmin/addproducts" className="px-4 py-2">
-                      Add Merchandise
-                    </Link>
-                  </li>
-                  <li className="py-2 ps-10 hover:bg-color-red">
-                    <Link to="/subAdmin/allproducts" className="px-4 py-2">
-                      All Merchandise
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
           )}
 
           {/* News */}
