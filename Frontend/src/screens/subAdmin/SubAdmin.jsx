@@ -1,29 +1,4 @@
-"transition-all duration-300 ">
-                  <li className="py-2 ps-10 hover:bg-color-red">
-                    <Link to="/subAdmin/addingredient" className="px-4 py-2">
-                      Add Ingredient
-                    </Link>
-                  </li>
-                  <li className="py-2 ps-10 hover:bg-color-red">
-                    <Link to="/subAdmin/allingredient" className="px-4 py-2">
-                      All Ingredient
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-          )}
 
-          {subAdmin && subAdmin?.userPermission === true && (
-            <li className="mb-2 transition-all duration-300 hover:bg-amber-300	hover:text-black">
-              <Link
-                to="/subadmin/allUser"
-                className="flex items-center gap-4 px-4 py-2"
-              >
-                <FaUserFriends className="text-xl mr-2" />
-                <span>User</span>
-              </Link>
-            </li>
           )}
 
           {subAdmin && subAdmin?.orderPermission === true && (
