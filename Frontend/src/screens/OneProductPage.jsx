@@ -13,18 +13,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data } = await axios.get(
-          `/product/getProduct/${oneProductIdFromLocalStorage}`
-        );
-        setItemData(data);
-        setLoading(false); // Set loading to false when data is fetched
-      } catch (error) {
-        console.log(error);
-      }
-    };
+
     fetchData();
   }, [oneProductIdFromLocalStorage]);
 
