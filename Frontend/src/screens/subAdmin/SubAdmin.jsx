@@ -33,52 +33,7 @@ setIngrdientSubchildVisible] =
     setProductSubchildVisible(false);
     setNewsSubchildVisible(false);
     setIngrdientSubchildVisible(false);
-  };
-
-  const toggleCategorySubchildVisibility = () => {
-    setCategorySubchildVisible(!isCategorySubchildVisible);
-    setItemSubchildVisible(false);
-    setBannerSubchildVisible(false);
-    setProductSubchildVisible(false);
-    setNewsSubchildVisible(false);
-    setIngrdientSubchildVisible(false);
-  };
-
-  const toggleProductSubchildVisibility = () => {
-    setProductSubchildVisible(!isProductSubchildVisible);
-    setItemSubchildVisible(false);
-    setBannerSubchildVisible(false);
-    setCategorySubchildVisible(false);
-    setNewsSubchildVisible(false);
-    setIngrdientSubchildVisible(false);
-  };
-
-  const toggleNewsSubchildVisibility = () => {
-    setNewsSubchildVisible(!isNewsSubchildVisible);
-    setItemSubchildVisible(false);
-    setBannerSubchildVisible(false);
-    setCategorySubchildVisible(false);
-    setProductSubchildVisible(false);
-    setIngrdientSubchildVisible(false);
-  };
-
-  const toggleIngrdientSubchildVisibility = () => {
-    setIngrdientSubchildVisible(!isIngrdientSubchildVisible);
-    setItemSubchildVisible(false);
-    setBannerSubchildVisible(false);
-    setCategorySubchildVisible(false);
-    setProductSubchildVisible(false);
-    setNewsSubchildVisible(false);
-  };
-
-  const logoutHandler = () => {
-    localStorage.removeItem("subAdminToken");
-    navigate("/admin/signin");
-  };
-
-  const [subAdmin, setSubAdmin] = useState({});
-
-  // console.log(subAmdinId);
+  };nsole.log(subAmdinId);
 
   useEffect(() => {
     const getSubadmin = async () => {
