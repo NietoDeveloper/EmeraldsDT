@@ -10,18 +10,6 @@ const LoginModal = ({ showModal, setShowModal, setIsUserAuthenticated }) => {
   const SubmitHandler = async (e) => {
     e.preventDefault();
 
-    try {
-      const { data } = await axios.post("/user/login", {
-        email,
-        password,
-
-
-      // window.location.reload();
-    } catch (error) {
-      toast.error(error.response.data.error);
-      // console.log(error.response.data.error);
-    }
-  };
   return (
     <>
       <div
