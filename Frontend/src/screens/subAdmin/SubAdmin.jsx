@@ -1,30 +1,5 @@
 
 
-  return (
-    <>
-      <div
-        className={`fixed top-0 left-0 h-full w-64 bg-[#ff0000]  text-white font-bold transition-all duration-500 ease-in-out`}
-      >
-        <Link
-          to="/"
-          className="flex items-center justify-center h-20  flex-col text-lg font-bold my-5 gap-2"
-        >
-          <img
-            src="https://lets-falafel.netlify.app/assets/logo-K5rFdi-p.png"
-            alt=""
-            className="h-20 w-20"
-          />
-          Sub Admin Panel
-        </Link>
-        <ul className="text-white pt-4">
-          {/* Home */}
-          <li className="mb-2 transition-all duration-300 hover:bg-amber-300	hover:text-black">
-            <Link to="/" className="flex items-center gap-4 px-4 py-2">
-              <AiOutlineHome className="text-xl  mr-2" />
-              <span>Home</span>
-            </Link>
-          </li>
-
           {/* Dashboard */}
           <li className="mb-2 transition-all duration-300 hover:bg-amber-300	hover:text-black">
             <Link
