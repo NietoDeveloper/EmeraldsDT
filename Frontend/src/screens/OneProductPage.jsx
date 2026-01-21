@@ -6,16 +6,7 @@ import AddToCart from "../components/ourMenu/AddToCart";
 
 
   const handleModalShow = (item) => {
-    // console.log(item, "lkl");
-    setShowModal(true);
-    setSelectedItem(item);
-  };
-
-  const closeModel = (e) => {
-    setShowModal(false);
-  };
-
-  // console.log(itemData);
+og(itemData);
   return (
     <div style={{ maxWidth: "1600px" }} className="mx-auto">
       <Navbar />
