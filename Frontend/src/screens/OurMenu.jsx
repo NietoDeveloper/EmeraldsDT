@@ -8,7 +8,4 @@ const OurMenu = () => {
   const location = useLocation();
 
   return (
-    <div style={{ maxWidth: "1600px" }} className="mx-auto">
-      <Navbar />
-      <div className="lg:px-40 lg:pt-16 relative lg:mt-28">
 
