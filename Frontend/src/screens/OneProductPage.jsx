@@ -8,21 +8,7 @@ import AddToCart from "../components/ourMenu/AddToCart";
             <div className="h-auto flex max-sm:flex-col w-full items-center">
 
                 </div>
-              </div>
-            </div>
-          </div>
 
-          {/*related product section start */}
-          <h1 className="text-4xl font-hobo text-center  mt-20">
-            Related Products{" "}
-          </h1>
-          <Swiper
-            modules={[Pagination, Navigation, Autoplay]}
-            spaceBetween={20}
-            slidesPerView={window.innerWidth > 768 ? 4 : 1}
-            autoplay={{ delay: 2000, disableOnInteraction: true }}
-            className="mySwiper max-sm:px-10 "
-          >
             {relatedProducts &&
               relatedProducts
                 .filter((item) => item._id !== itemData?.product?._id) // Filter out the selected item
