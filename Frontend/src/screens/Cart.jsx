@@ -1,30 +1,4 @@
 
-
-  return (
-    <>
-      <Navbar />
-
-      <div className="lg:px-40 mt-16 lg:mt-44">
-        <section className=" bg-gray-100 pt-10 font-poppins">
-          <div className="px-4 py-6 mx-auto max-w-7xl lg:py-4 md:px-6">
-            <div>
-              <h2 className="mb-8 text-4xl font-bold text-center text-color-red font-hobo">
-                Your Cart
-              </h2>
-              <div className="p-6 mb-8 border bg-gray-50 border-gray-800">
-                <div className="flex-wrap items-center hidden mb-6 -mx-4 md:flex md:mb-8">
-                  <div className="w-full px-4 mb-6 md:w-4/6 lg:w-6/12 md:mb-0">
-                    <h2 className="font-bold text-gray-500">Product name</h2>
-                  </div>
-                  <div className="hidden px-4 lg:block lg:w-2/12">
-                    <h2 className="font-bold text-gray-500">Price</h2>
-                  </div>
-                  <div className="w-auto px-4 md:w-1/6 lg:w-2/12 ">
-                    <h2 className="font-bold text-gray-500">Quantity</h2>
-                  </div>
-                  <div className="w-auto px-4 text-right md:w-1/6 lg:w-2/12 ">
-                    <h2 className="font-bold text-gray-500"> Subtotal</h2>
-                  </div>
                 </div>
 
                 {existingCart &&
