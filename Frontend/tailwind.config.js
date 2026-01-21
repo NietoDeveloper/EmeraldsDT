@@ -3,16 +3,3 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: {
-        "color-red": "var(--color-red)",
-        "color-yellow": "var(--color-yellow)",
-
-        "color-emerald": "#00A36C", 
-      },
-      fontFamily: {
-        hobo: ["var(--font-hobo)"],
-      }
-    },
-  },
-  plugins: [],
-};
