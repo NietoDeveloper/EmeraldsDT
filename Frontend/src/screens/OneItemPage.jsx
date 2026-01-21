@@ -1,27 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import axios from "../utils/axios";
-import { useNavigate } from "react-router-dom";
-import AddToCart from "../components/ourMenu/AddToCart";
-import { FaMinus, FaPlus } from "react-icons/fa";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-  useEffect(() => {
-    const fetchItemData = async () => {
-      try {
-        const { data } = await axios.get(
-          `/admin/getItemById/${oneItemIdFromLocalStorage}`
-        );
-        // console.log(data?.item?.category, "data");
-        setItemData(data);
-        setLoading(false); // Set loading to false when data is fetched
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchItemData();
-  }, [oneItemIdFromLocalStorage]);
 
   useEffect(() => {
     const fetchRelatedProducts = async () => {
