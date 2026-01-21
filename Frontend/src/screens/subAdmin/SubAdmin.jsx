@@ -1,31 +1,4 @@
 
-
-          {/* Categories */}
-          {subAdmin && subAdmin?.categoryPermission === true && (
-            <li
-              className={`mb-2 transition-all duration-300 h-10 overflow-hidden ${
-                isCategorySubchildVisible ? "h-32" : ""
-              }`}
-              onClick={toggleCategorySubchildVisibility}
-            >
-              <div className="flex items-center gap-4 px-4 py-2 cursor-pointer transition-all duration-300 hover:bg-amber-300	hover:text-black">
-                <MdOutlineNoteAlt className="text-xl mr-2" />
-                <span>Categories</span>
-                <FaChevronDown className="d-block ms-auto" />
-              </div>
-
-              {isCategorySubchildVisible && (
-                <ul className="transition-all duration-300 ">
-                  <li className="py-2 ps-10 hover:bg-color-red">
-                    <Link to="/subAdmin/addcategories" className="px-4 py-2">
-                      Add Categories
-                    </Link>
-                  </li>
-                  <li className="py-2 ps-10 hover:bg-color-red">
-                    <Link to="/subAdmin/allcategories" className="px-4 py-2">
-                      All Categories
-                    </Link>
-                  </li>
                 </ul>
               )}
             </li>
