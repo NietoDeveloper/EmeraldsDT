@@ -1,30 +1,4 @@
 
-            quantity: ing.quantity,
-          })),
-        };
-      });
-
-      // console.log(sendeddata);
-
-      const { data } = await axios.post(`/user/addCart/${userId}`, {
-        orders: sendeddata,
-      });
-
-      // console.log(data);
-
-      if (data.success) {
-        toast.success("Order Placed Successfully");
-        localStorage.removeItem("cartItems");
-        setExistingCart([]);
-        setExistingCartContext([]);
-        setCartValue(0);
-        navigate("/user");
-      }
-    } catch (error) {
-      toast.error(error?.response?.data?.message || "Something went wrong");
-      console.log(error);
-    }
-  };
 
   return (
     <>
