@@ -1,30 +1,4 @@
 
-                </div>
-
-                {existingCart &&
-                  existingCart.map((item, index) => (
-                    <div
-                      key={index}
-                      className="py-4 lg:mb-8 border-t border-b border-gray-200"
-                    >
-                      <div className="flex flex-wrap items-center mb-6 -mx-4 md:mb-8">
-                        <div className="w-full px-4 lg:mb-6 md:w-4/6 lg:w-6/12 md:mb-0">
-                          <div className="flex lg:flex-wrap items-center -mx-4 max-sm:h-32">
-                            <div className="w-full px-4 mb-3 md:w-1/3">
-                              <div className="w-[100px] h-96 md:h-24 md:w-24 flex items-center">
-                                <img
-                                  src={item.image}
-                                  alt=""
-                                  className="lg:object-cover object-contain w-full h-2/3"
-                                />
-                              </div>
-                            </div>
-                            <div className="lg:w-2/3 w-full lg:px-4">
-                              <h2 className="mb-2 text-xl font-bold text-gray-700">
-                                {item.name}
-                              </h2>
-                              <p className="text-gray-500">Picture frame</p>
-                            </div>
                           </div>
                         </div>
                         <div className="hidden px-4 lg:block lg:w-2/12">
