@@ -1,29 +1,4 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
-
-  useEffect(() => {
-    const fetchRelatedProducts = async () => {
-      try {
-        const { data } = await axios.get(
-          `/admin/getItemByCategory/${catgoryId}`
-        );
-
-        setRelatedProducts(data.items);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchRelatedProducts();
-  }, [catgoryId]);
-
-  // console.log(relatedProducts, "relatedProducts");
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data } = await axios.get(
-          `/admin/getItemByCategory/${itemData?.item?.category}`
+admin/getItemByCategory/${itemData?.item?.category}`
         );
         // console.log(data, "dfs");
       } catch (error) {
