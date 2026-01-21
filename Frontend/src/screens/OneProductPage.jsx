@@ -6,23 +6,7 @@ import AddToCart from "../components/ourMenu/AddToCart";
         <div className="lg:px-40 lg:mt-36">
           <div className="h-auto w-full pt-20 px-10">
             <div className="h-auto flex max-sm:flex-col w-full items-center">
-              <div className="lg:w-3/5 w-full h-full flex items-center justify-center">
-                <img
 
-                  <p className="text-2xl mt-5">€ {itemData?.product?.price}</p>
-                  <p className="mt-3">{itemData?.product?.description}</p>
-
-                  {/* add to cart btn */}
-                  <div className="mt-10 gap-5 flex justify-start max-sm:justify-center">
-                    <button
-                      onClick={() =>
-                        handleModalShow({ item: itemData?.product })
-                      }
-                      className="bg-color-red text-white py-2 px-6 rounded-lg font-hobo-light"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
