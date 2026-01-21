@@ -7,23 +7,6 @@ import AddToCart from "../components/ourMenu/AddToCart";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-// import required modules
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
-const OneItemPage = () => {
-  const [itemData, setItemData] = useState({});
-  const navigate = useNavigate();
-  const oneItemIdFromLocalStorage = localStorage.getItem("oneItemId");
-  const catgoryId = localStorage.getItem("categoryId");
-  const [selectedItem, setSelectedItem] = useState({});
-  const [showModal, setShowModal] = useState(false);
-  const [expanded1, setExpanded1] = useState(true);
-  const [relatedProducts, setRelatedProducts] = useState([]);
-  const [loading, setLoading] = useState(true); // Add loading state
-
   useEffect(() => {
     const fetchItemData = async () => {
       try {
