@@ -16,24 +16,6 @@ const Cart = () => {
   const { setExistingCartContext, setCartValue } = useContext(DataContext);
   const [userId, setUserId] = useState("");
 
-  useEffect(() => {
-    const savedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
-    setExistingCart(savedCart);
-  }, []);
-
-  useEffect(() => {
-    const token = localStorage.getItem("userToken");
-    if (token) {
-      setIsUserAuthenticated(true);
-    }
-
-    const userId = localStorage.getItem("userId");
-    setUserId(userId);
-    if (!userId) {
-      setIsUserAuthenticated(false);
-    }
-  }, []);
-
   const navigate = useNavigate();
 
   useEffect(() => {
