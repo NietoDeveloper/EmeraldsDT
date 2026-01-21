@@ -5,21 +5,7 @@ import axios from "../utils/axios";
 import AddToCart from "../components/ourMenu/AddToCart";
         <div className="lg:px-40 lg:mt-36">
           <div className="h-auto w-full pt-20 px-10">
-            <div className="h-auto flex max-sm:flex-col w-full items-center">
-
-                </div>
-
-            {relatedProducts &&
-              relatedProducts
-                .filter((item) => item._id !== itemData?.product?._id) // Filter out the selected item
-                .map((item, index) => (
-                  <SwiperSlide key={index}>
-                    <div
-                      onClick={() => {
-                        localStorage.setItem("oneItemId", item._id);
-                        navigate(`/our-menu/${item.category}`);
-                      }}
-                      className="w-full lg:h-[400px] flex max-sm:pt-10  items-center justify-center"
+            <div className="h-auto flex max-sm:flex-col w-full items-center"s="w-full lg:h-[400px] flex max-sm:pt-10  items-center justify-center"
                     >
                       <div className="w-[250px] h-[200px] flex flex-col items-center text-center justify-center">
                         <img
