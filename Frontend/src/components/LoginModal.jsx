@@ -35,19 +35,7 @@ const LoginModal = ({ showModal, setShowModal, setIsUserAuthenticated }) => {
                   className="block w-full mt-2 text-sm py-2 outline-none  form-input "
                   placeholder="example@gmail.com"
                   onChange={(e) => setEmail(e.target.value)}
-                  value={email}
-                  required
-                />
 
-        </div>
-
-        {/* Close Model Icon */}
-        <div
-          className="absolute top-0 right-0 mt-10 mr-10 cursor-pointer h-10 w-10 rounded-full bg-color-red flex justify-center items-center hover:bg-red-400 transition-all duration-300 delay-200 ease-out"
-          onClick={() => setShowModal(false)}
-        >
-          <IoClose className="text-white text-2xl" />
-        </div>
       </div>
     </>
   );
