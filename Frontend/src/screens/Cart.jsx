@@ -1,31 +1,4 @@
 
-    });
-
-    updatedCart[index] = updatedItem;
-
-    setExistingCart(updatedCart);
-    localStorage.setItem("cartItems", JSON.stringify(updatedCart));
-  };
-
-  const increaseCartQuantity = (index) => {
-    updateCartQuantity(index, existingCart[index].quantity + 1);
-  };
-
-  const removeItem = (index) => {
-    const updatedCart = existingCart.filter((_, i) => i !== index);
-    setExistingCart(updatedCart);
-    setExistingCartContext(updatedCart);
-    setCartValue(updatedCart.length);
-    localStorage.setItem("cartItems", JSON.stringify(updatedCart));
-  };
-
-  const decreaseCartQuantity = (index) => {
-    const newQuantity = existingCart[index].quantity - 1;
-
-    if (newQuantity === 0) {
-      removeItem(index);
-    } else if (newQuantity >= 0) {
-      updateCartQuantity(index, newQuantity);
     }
   };
 
