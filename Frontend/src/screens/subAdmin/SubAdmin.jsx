@@ -1,27 +1,4 @@
-k={toggleBannerSubchildVisibility}
-            >
-              <div className="flex items-center gap-4 px-4 py-2 cursor-pointer transition-all duration-300 hover:bg-amber-300	hover:text-black">
-                <MdOutlineNoteAlt className="text-xl mr-2" />
-                <span>Banner</span>
-                <FaChevronDown className="d-block ms-auto" />
-              </div>
 
-              {isBannerSubchildVisible && (
-                <ul className="transition-all duration-300 ">
-                  <li className="py-2 ps-10 hover:bg-color-red">
-                    <Link to="/subAdmin/addBanner" className="px-4 py-2">
-                      Add Banner
-                    </Link>
-                  </li>
-                  <li className="py-2 ps-10 hover:bg-color-red">
-                    <Link to="/subAdmin/allBanner" className="px-4 py-2">
-                      All Banners
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-          )}
 
           {/* Categories */}
           {subAdmin && subAdmin?.categoryPermission === true && (
