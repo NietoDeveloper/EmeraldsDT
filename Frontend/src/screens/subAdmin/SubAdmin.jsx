@@ -14,18 +14,7 @@ const SubAdmin = () => {
     }
   }, []);
   const [subAmdinId, setsubAdminId] = useState();
-  useEffect(() => {
-    const id = localStorage.getItem("subAdminId");
-    setsubAdminId(id);
-  }, []);
-
-  const [isItemSubchildVisible, setItemSubchildVisible] = useState(false);
-  const [isBannerSubchildVisible, setBannerSubchildVisible] = useState(false);
-  const [isCategorySubchildVisible, setCategorySubchildVisible] =
-    useState(false);
-  const [isProductSubchildVisible, setProductSubchildVisible] = useState(false);
-  const [isNewsSubchildVisible, setNewsSubchildVisible] = useState(false);
-  const [isIngrdientSubchildVisible, setIngrdientSubchildVisible] =
+setIngrdientSubchildVisible] =
     useState(false);
 
   const toggleItemSubchildVisibility = () => {
