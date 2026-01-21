@@ -39,17 +39,7 @@ const LoginModal = ({ showModal, setShowModal, setIsUserAuthenticated }) => {
                   required
                 />
               </label>
-              <label className="block mt-4 text-sm after:content-[''] after:absolute relative after:h-[1px] after:w-full after:transition-all after:duration-300 after:bg-color-red after:bottom-0 after:left-0  ">
-                <span className="text-gray-700">Password</span>
-                <input
-                  type="password"
-                  className="block w-full mt-2 text-sm outline-none focus:border-red-400 form-input"
-                  placeholder="***************"
-                  onChange={(e) => setPassword(e.target.value)}
-                  value={password}
-                  required
-                />
-              </label>
+ 
 
               <div className="mt-4">
                 <button
