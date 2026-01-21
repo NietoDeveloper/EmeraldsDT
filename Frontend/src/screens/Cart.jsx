@@ -1,42 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import { DataContext } from "../ContexApi";
-import RegisterModal from "../components/RegisterModal";
-import axios from "../utils/axios";
-import DisableOrderModal from "../components/DisableOrderModal";
-import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
 
-const Cart = () => {
-  const [total, setTotal] = useState(0);
-  const [existingCart, setExistingCart] = useState([]);
-  const [showModal, setShowModal] = useState(false);
-  const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
-  const { setExistingCartContext, setCartValue } = useContext(DataContext);
-  const [userId, setUserId] = useState("");
-
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    let subtotal = 0;
-    existingCart.forEach((item) => {
-      subtotal += item.totalPrice * item.quantity;
-    });
-    setTotal(subtotal);
-  }, [existingCart]);
-
-  const updateCartQuantity = (index, newQuantity) => {
-    const updatedCart = [...existingCart];
-
-    const updatedItem = {
-      ...updatedCart[index],
-      quantity: newQuantity,
-      totalPrice: newQuantity * updatedCart[index].price,
-    };
-
-    updatedItem.ingredients.forEach((ing) => {
-      updatedItem.totalPrice += ing.price * ing.quantity;
     });
 
     updatedCart[index] = updatedItem;
