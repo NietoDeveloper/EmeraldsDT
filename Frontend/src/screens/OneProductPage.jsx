@@ -3,26 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import axios from "../utils/axios";
 import AddToCart from "../components/ourMenu/AddToCart";
-import { FaMinus, FaPlus } from "react-icons/fa";
-import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-// import required modules
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
-
-
-    fetchData();
-  }, [oneProductIdFromLocalStorage]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-
-    };
-    fetchData();
-  }, []);
 
   const handleModalShow = (item) => {
     // console.log(item, "lkl");
