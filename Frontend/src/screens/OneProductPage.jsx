@@ -19,12 +19,7 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const { data } = await axios.get("/product/getProducts");
-        setRelatedProducts(data.products);
-      } catch (error) {
-        console.log(error);
-      }
+
     };
     fetchData();
   }, []);
