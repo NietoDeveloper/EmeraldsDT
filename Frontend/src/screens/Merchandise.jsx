@@ -39,18 +39,7 @@ const Merchandise = () => {
 
   const closeModel = (e) => {
     setShowModal(false);
-  };
-  return (
-    <div style={{ maxWidth: "1600px" }} className="mx-auto">
-      <Navbar />
-      <div className="lg:px-40 lg:mt-52 mt-24">
-        <h1 className="text-4xl font-bold pl-5 text-center">Our Merchandise</h1>
-        {loading ? ( // Render loading message while data is being fetched
-          <div className="flex justify-center items-center h-screen lg:-mt-52">
-            <div class="flex justify-center items-center h-screen">
-              <div class="animate-spin ease-linear rounded-full w-20 h-20 border-t-2 border-b-2 border-red-500 ml-3"></div>
-            </div>
-          </div>
+
         ) : (
           <div className="mt-16 max-sm:px-10 grid md:grid-cols-4 gap-8 lg:gap-x-[7.5rem] lg:gap-y-24 lg:ml-6  grid-cols-2 relative menupage">
             {menuItems.map((item, index) => (
