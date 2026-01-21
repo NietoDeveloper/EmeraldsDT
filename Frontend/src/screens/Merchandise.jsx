@@ -27,31 +27,7 @@ const Merchandise = () => {
     };
     fetchData();
   }, []);
-
-  const handleModalShow = (item) => {
-    setShowModal(true);
-    setSelectedItem(item);
-  };
-  const navigateToOneProduct = (item) => {
-    localStorage.setItem("oneProductId", item._id);
-    navigate(`/merchandise/${item._id}`);
-  };
-
-  const closeModel = (e) => {
-    setShowModal(false);
-
-        ) : (
-          <div className="mt-16 max-sm:px-10 grid md:grid-cols-4 gap-8 lg:gap-x-[7.5rem] lg:gap-y-24 lg:ml-6  grid-cols-2 relative menupage">
-            {menuItems.map((item, index) => (
-              <div
-                key={index}
-                className="relative lg:w-56 w-full mx-auto cursor-pointer"
-              >
-                <img
-                  src={item.image.url}
-                  alt=""
-                  className="lg:w-[140px] lg:h-[120px] w-[100px] h-[80px] object-cover block mx-auto"
-                  onClick={() => navigateToOneProduct(item)}
+oduct(item)}
                 />
                 <p className="text-center lg:text-[18px] text-sm mt-3">
                   {item.name}
