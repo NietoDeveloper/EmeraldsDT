@@ -13,14 +13,6 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
-const OneProductPage = () => {
-  const [selectedItem, setSelectedItem] = useState({});
-  const [showModal, setShowModal] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const oneProductIdFromLocalStorage = localStorage.getItem("oneProductId");
-  const [itemData, setItemData] = useState({});
-  const [relatedProducts, setRelatedProducts] = useState([]);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
