@@ -47,14 +47,4 @@ const Navbar = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get("/admin/getCategory");
-        const sortadCategory = data.categories.sort(
-          (a, b) => a.position - b.position
-        );
-        setCategory(sortadCategory);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
 
