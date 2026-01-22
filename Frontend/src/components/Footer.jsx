@@ -50,21 +50,7 @@ const Footer = () => {
             Our Fundamentals
           </p>
           <p className="text-sm hover:text-[#00A36C] transition duration-200 cursor-pointer mt-2">
-            Our Team
-          </p>
-        </div>
 
-        <div className="col-span-1">
-          <h2 className="font-bold text-xl md:text-2xl text-[#00A36C] mb-4">
-            Important Links
-          </h2>
-          <p
-            onClick={handleReload}
-            className="cursor-pointer text-sm hover:text-[#00A36C] transition duration-200 mt-2"
-
-
-
-    </footer>
   );
 };
 
