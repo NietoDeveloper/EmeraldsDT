@@ -87,13 +87,7 @@ const Navbar = () => {
       >
         <div className="w-full flex pl-5  items-center justify-left lg:hidden">
           <button
-      
-       
-                  alt=""
-                  className="w-[78px] h-[78px] object-cover"
-                />
-                <p className="text-[1pc] text-[#292929]">{cat.category}</p>
-              </div>
+  
             ))}
         </div>
         <div className="w-full flex  items-center justify-center max-sm:hidden">
