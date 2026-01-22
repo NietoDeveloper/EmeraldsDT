@@ -11,12 +11,4 @@ function NavItem({ text, menu, link, pdf, setMenu, drop, index }) {
 
   return (
     <li
-      className={`capitalize px-5 text-[18px]  h-full font-hobo-light relative transition-all duration-100 cursor-pointer after:lg:block after:hidden flex items-center lg:mt-0 mt-4 ${
-        isActive
-     />
-        ))}
-    </li>
-  );
-}
-
-export default NavItem;
+      clas
