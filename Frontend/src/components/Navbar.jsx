@@ -84,14 +84,6 @@ const Navbar = () => {
 
       )}
 
-      <nav
-
-        ) : (
-          <IoIosMenu
-            className="text-[30px] lg:hidden block absolute right-5 top-5 cursor-pointer"
-            onClick={handleOpenNavbar}
-          />
-        )}
         <Link to="/">
           <img src={logo} className="lg:h-24 h-16 lg:pl-8" alt="" />
         </Link>
