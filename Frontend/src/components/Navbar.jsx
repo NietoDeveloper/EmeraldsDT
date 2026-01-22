@@ -86,12 +86,6 @@ const Navbar = () => {
             {[
               { text: "our Emeralds", link: "#", drop: true, pdf: false },
 
-              {
-                text: "news & events",
-                link: "/allnews",
-                drop: false,
-                pdf: false,
-              },
             ].map((item, index) => (
               <NavItem
                 key={index}
