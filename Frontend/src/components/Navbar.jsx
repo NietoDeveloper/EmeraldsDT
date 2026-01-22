@@ -82,18 +82,10 @@ const Navbar = () => {
 
       <div
         className={`w-full flex lg:pl-32 pl-10 justify-between items-center lg:gap-12  flex-col transition-all duration-100 ease-linear overflow-hidden bg-white shadow-md  absolute top-18 left-1/2 -translate-x-1/2 z-30 ${
-          menu ? "h-auto py-10 " : "h-0"
-        }`}
-      >
-dleviewfullmenu}
-            className="bg-color-red text-white px-3 py-2 rounded-md font-hobo mt-3 -ml-32"
-          >
+          men
             View Full Products
           </button>
-        </div>
-      </div>
-    </div>
-  );
+    
 };
 
 export default Navbar;
