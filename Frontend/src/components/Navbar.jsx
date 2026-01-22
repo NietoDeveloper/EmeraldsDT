@@ -90,13 +90,7 @@ const Navbar = () => {
             onClick={handleviewfullmenu}
             className="bg-color-red text-white px-3 py-2 rounded-md font-hobo"
           >
-            View Full Products
-          </button>
-        </div>
-        <div className="grid lg:grid-cols-3 content-center gap-3 grid-cols-1 pt-5  lg:w-[60%] w-full">
-          {category &&
-            category?.map((cat, index) => (
-              <div
+
                 key={index}
                 className="flex justify-start items-center gap-5 cursor-pointer"
                 onClick={() => handleNavigateToOurMenu(cat._id, cat.category)}
