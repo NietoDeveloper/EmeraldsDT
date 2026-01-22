@@ -81,40 +81,6 @@ const Footer = () => {
             Contact Us
           </h2>
           <Link to="/contact">
-            <p className="text-sm hover:text-[#00A36C] transition duration-200 mt-2">
-              Talk
-            </p>
-          </Link>
-        </div>
-
-        <div className="col-span-1">
-          <h2 className="font-bold text-xl md:text-2xl text-[#00A36C] mb-4">
-            News & Events
-          </h2>
-          <Link to="/allnews">
-            <p className="text-sm hover:text-[#00A36C] transition duration-200 mt-2">
-              News & Events
-            </p>
-          </Link>
-        </div>
-
-        <div className="col-span-2 md:col-span-4 lg:col-span-1 flex flex-col items-start lg:items-end mt-4 lg:mt-0">
-          <h2 className="font-bold text-xl md:text-2xl text-[#00A36C] mb-4">
-            Follow Us
-          </h2>
-          <div className="flex items-center gap-3">
-            {[
-              {
-                Icon: FaFacebookF,
-                href: "https://www.facebook.com/letsfalafelofficial",
-              },
-              {
-                Icon: FaInstagram,
-                href: "https://www.instagram.com/letsfalafelofficial/",
-              },
-              { Icon: FaTwitter, href: "" },
-            ].map(({ Icon, href }, index) => (
-
 
       <hr className="border-gray-200" />
 
