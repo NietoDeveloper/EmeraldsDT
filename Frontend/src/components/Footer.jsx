@@ -20,12 +20,6 @@ const Footer = () => {
       setCurrentTime(timeString);
     };
 
-    updateTime();
-    const timerId = setInterval(updateTime, 1000);
-
-    return () => clearInterval(timerId);
-  }, []);
-
 
 
   return (
