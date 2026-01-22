@@ -90,11 +90,6 @@ const Navbar = () => {
 
             ))}
 
-            <li className="uppercase px-5 text-[20px] text-color-red font-hobo relative cursor-pointer lg:mt-0 mt-4">
-              <Link to="/userLogin">
-                <FaRegUser />
-              </Link>
-            </li>
             <li
               className="uppercase px-5 text-[20px] text-color-red font-hobo relative cursor-pointer lg:mt-0 mt-4"
               onClick={() => navigate("/cart")}
