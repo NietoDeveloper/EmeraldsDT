@@ -28,8 +28,3 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
-  const handleNavigateToOurMenu = (id, name) => {
-    localStorage.setItem("categoryId", id);
-    localStorage.setItem("categoryName", name);
-
-
