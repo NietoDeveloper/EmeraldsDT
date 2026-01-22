@@ -87,16 +87,7 @@ const Navbar = () => {
               { text: "our Emeralds", link: "#", drop: true, pdf: false },
 
             ].map((item, index) => (
-              <NavItem
-                key={index}
-                pdf={item.pdf}
-                text={item.text}
-                menu={menu}
-                setMenu={setMenu}
-                link={item.link}
-                drop={item.drop}
-                index={index}
-              />
+
             ))}
 
             <li className="uppercase px-5 text-[20px] text-color-red font-hobo relative cursor-pointer lg:mt-0 mt-4">
