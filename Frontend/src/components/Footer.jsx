@@ -143,10 +143,7 @@ const Footer = () => {
 
 
         <div className="order-2 md:order-3 mt-4 md:mt-0">
-          <p className="text-center">
-            Managed by
-ssName="text-[#00A36C] hover:text-emerald-700 cursor-pointer font-bold ml-1 transition duration-200"
-            >
+
               NietoDeveloper
             </a>
           </p>
