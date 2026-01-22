@@ -12,7 +12,4 @@ import AllergensGuidePDF from "../assets/AllergensGuide.pdf";
 
 const Navbar = () => {
   const [navbar, setNavbar] = React.useState(false);
-  const [menu, setMenu] = React.useState(false);
-  const [category, setCategory] = React.useState([]);
-t handleCloseNavbar = () => {
 
