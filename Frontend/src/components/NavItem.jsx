@@ -6,9 +6,4 @@ function NavItem({ text, menu, link, pdf, setMenu, drop, index }) {
   const location = useLocation();
 
   const isActive =
-    location.pathname === link && location.pathname !== "/our-menu/main";
-  const isActivemenu = location.pathname === "/our-menu/main";
-
-  return (
-    <li
-      clas
+  
