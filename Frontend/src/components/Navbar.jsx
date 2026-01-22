@@ -61,10 +61,5 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    const existingCart = JSON.parse(localStorage.getItem("cartItems")) || [];
-    setCartValue(existingCart.length);
-  }, [cartValue, existingCartContext]);
-
-  const isActivemenu = window.location.pathname === "/our-menu/main";
 
 
