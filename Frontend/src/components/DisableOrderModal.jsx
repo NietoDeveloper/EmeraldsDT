@@ -10,15 +10,7 @@ const DisableOrderModal = ({ setShowModal, showModal }) => {
         }`}
         id="modal"
       >
-        <div
-          className={`w-full px-6 py-4 mx-auto bg-white rounded-3xl shadow-md shadow-color-red md:max-w-md pointer-events-auto transition-all duration-300 delay-200 ${
-            showModal ? "scale-100" : "scale-0"
-          } `}
-        >
-          <div className="mb-4 text-lg font-bold text-center text-gray-700">
-            We are currently not accepting any orders. Please try again later.
-          </div>
-        </div>
+
 
         {/* Close Model Icon */}
         <div
