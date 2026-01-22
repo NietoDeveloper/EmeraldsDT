@@ -87,12 +87,6 @@ const Navbar = () => {
               { text: "our Emeralds", link: "#", drop: true, pdf: false },
 
               {
-                text: "About Our Emeralds",
-                link: AllergensGuidePDF,
-                drop: false,
-                pdf: true,
-              },
-              {
                 text: "our merchandise",
                 link: "/merchandise",
                 drop: false,
