@@ -87,11 +87,7 @@ const Navbar = () => {
       >
         <div className="w-full flex pl-5  items-center justify-left lg:hidden">
           <button
-            onClick={handleviewfullmenu}
-            className="bg-color-red text-white px-3 py-2 rounded-md font-hobo"
-          >
-
-                key={index}
+      
        
                   alt=""
                   className="w-[78px] h-[78px] object-cover"
