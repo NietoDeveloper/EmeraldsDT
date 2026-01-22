@@ -57,9 +57,4 @@ const Navbar = () => {
       }
     };
 
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-
 
