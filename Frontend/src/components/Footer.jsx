@@ -63,11 +63,7 @@ const Footer = () => {
             className="cursor-pointer text-sm hover:text-[#00A36C] transition duration-200 mt-2"
 
 
-      <hr className="border-gray-200" />
 
-      <div className="flex flex-col md:flex-row md:justify-between items-center py-6 text-sm md:text-base">
-
-      </div>
     </footer>
   );
 };
