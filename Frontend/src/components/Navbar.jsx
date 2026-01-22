@@ -82,13 +82,6 @@ const Navbar = () => {
   }, []);
   return (
 
-        <div className="flex items-center lg:h-32">
-          <ul
-            className={`lg:flex lg:mt-0 mt-5 items-center relative lg:h-full ${
-              isActivemenu
-                ? "[&>*:nth-child(1)]:font-[700] [&>*:nth-child(1)]:border-b-4 [&>*:nth-child(1)]:border-b-red-500"
-                : ""
-            }`}
           >
             {[
               { text: "our Emeralds", link: "#", drop: true, pdf: false },
