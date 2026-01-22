@@ -13,13 +13,7 @@ function NavItem({ text, menu, link, pdf, setMenu, drop, index }) {
     <li
       className={`capitalize px-5 text-[18px]  h-full font-hobo-light relative transition-all duration-100 cursor-pointer after:lg:block after:hidden flex items-center lg:mt-0 mt-4 ${
         isActive
-          ? "font-hobo-light font-[700] border-b-4 border-b-red-500 text-[18px]"
-  
-    >
-      <a href={link} download={pdf ? "ABOUT OUR EMERALDS" : undefined}>
-        {text}
-      </a>{" "}
-      {drop &&
+     
         (menu ? (
           <FaAngleDown className="text-[18px] ml-2 transform rotate-180" />
         ) : (
