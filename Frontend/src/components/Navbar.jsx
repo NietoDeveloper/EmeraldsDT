@@ -82,11 +82,6 @@ const Navbar = () => {
   }, []);
   return (
 
-      )}
-
-        <Link to="/">
-          <img src={logo} className="lg:h-24 h-16 lg:pl-8" alt="" />
-        </Link>
         <div className="flex items-center lg:h-32">
           <ul
             className={`lg:flex lg:mt-0 mt-5 items-center relative lg:h-full ${
