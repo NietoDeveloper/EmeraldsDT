@@ -80,11 +80,7 @@ const Navbar = () => {
     };
     fetchAdminData();
 
-      <div
-        className={`w-full flex lg:pl-32 pl-10 justify-between items-center lg:gap-12  flex-col transition-all duration-100 ease-linear overflow-hidden bg-white shadow-md  absolute top-18 left-1/2 -translate-x-1/2 z-30 ${
-          men
-            View Full Products
-          </button>
+
     
 };
 
