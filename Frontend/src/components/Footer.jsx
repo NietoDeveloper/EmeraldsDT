@@ -64,9 +64,7 @@ const Footer = () => {
 
 
         <div className="col-span-1">
-          <h2 className="font-bold text-xl md:text-2xl text-[#00A36C] mb-4">
-            Contact Us
-          </h2>
+     
           <Link to="/contact">
 
       <hr className="border-gray-200" />
