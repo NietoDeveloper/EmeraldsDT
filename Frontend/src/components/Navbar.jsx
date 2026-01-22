@@ -85,14 +85,7 @@ const Navbar = () => {
           menu ? "h-auto py-10 " : "h-0"
         }`}
       >
-        <div className="w-full flex pl-5  items-center justify-left lg:hidden">
-          <button
-  
-            ))}
-        </div>
-        <div className="w-full flex  items-center justify-center max-sm:hidden">
-          <button
-            onClick={handleviewfullmenu}
+dleviewfullmenu}
             className="bg-color-red text-white px-3 py-2 rounded-md font-hobo mt-3 -ml-32"
           >
             View Full Products
