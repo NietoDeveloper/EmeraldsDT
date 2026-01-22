@@ -13,10 +13,7 @@ const DisableOrderModal = ({ setShowModal, showModal }) => {
 
 
         {/* Close Model Icon */}
-        <div
-          className="absolute top-0 right-0 mt-10 mr-10 cursor-pointer h-10 w-10 rounded-full bg-color-red flex justify-center items-center hover:bg-red-400 transition-all duration-300 delay-200 ease-out"
-          onClick={() => setShowModal(false)}
-
+   
         </div>
       </div>
     </>
