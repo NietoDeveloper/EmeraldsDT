@@ -39,8 +39,4 @@ const Navbar = () => {
     }
     navigate(`/our-menu/${id}`);
     setMenu(false);
-  };
-  const handleviewfullmenu = () => {
-    navigate(`/our-menu/main`);
-    setMenu(false);
 
