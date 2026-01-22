@@ -69,11 +69,7 @@ const Footer = () => {
               Our Menu
             </p>
           </Link>
-          <Link to="/merchandise">
-            <p className="text-sm hover:text-[#00A36C] transition duration-200 mt-2">
-              Our Merchandise
-            </p>
-          </Link>
+
         </div>
 
         <div className="col-span-1">
