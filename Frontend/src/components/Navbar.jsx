@@ -34,9 +34,6 @@ const Navbar = () => {
 
     if (!id) {
       navigate("/our-menu/main");
-      setMenu(false);
-      return;
-    }
-    navigate(`/our-menu/${id}`);
+      setMenu(false    navigate(`/our-menu/${id}`);
     setMenu(false);
 
