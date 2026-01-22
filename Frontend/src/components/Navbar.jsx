@@ -5,8 +5,3 @@ import { IoBagOutline } from "react-icons/io5";
 import { IoIosMenu } from "react-icons/io";
 import { MdOutlineClose } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
-import NavItem from "./NavItem";
-import axios from "../utils/axios";
-import { DataContext } from "../ContexApi";
-import AllergensGuidePDF from "../assets/AllergensGuide.pdf";
-
