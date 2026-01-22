@@ -12,13 +12,7 @@ const Footer = () => {
         hour: "2-digit",
         minute: "2-digit",
         second: "2-digit",
-        hour12: true,
-        timeZone: "America/Bogota",
-      };
-
-      const timeString = new Date().toLocaleTimeString("es-CO", options);
-      setCurrentTime(timeString);
-    };
+  
 
 
 export default Footer;
