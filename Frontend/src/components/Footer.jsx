@@ -26,13 +26,7 @@ const Footer = () => {
     return () => clearInterval(timerId);
   }, []);
 
-  const handleReload = () => {
-    if (window.location.pathname === "/") {
-      window.scrollTo(0, 0);
-    } else {
-      navigate("/");
-    }
-  };
+
 
   return (
     <footer className="w-full bg-white text-gray-700 pt-16 md:pt-20 lg:pt-24 px-4 sm:px-8 xl:px-20 mx-auto max-w-[1800px]">
