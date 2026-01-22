@@ -67,10 +67,4 @@ const Navbar = () => {
 
   const isActivemenu = window.location.pathname === "/our-menu/main";
 
-  const [adminData, setAdminData] = useState({});
-
-  useEffect(() => {
-    const fetchAdminData = async () => {
-      try {
-        const { data } = await axios.get("/admin/getAdmin");
 
