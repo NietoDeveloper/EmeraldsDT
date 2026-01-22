@@ -76,12 +76,6 @@ const Navbar = () => {
         setAdminData(data?.admin[0]);
       } catch (error) {
         console.log(error);
-      }
-    };
-    fetchAdminData();
 
-
-    
-};
 
 export default Navbar;
