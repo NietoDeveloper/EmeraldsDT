@@ -18,13 +18,4 @@ const Navbar = () => {
   const { existingCartContext } = useContext(DataContext);
 
   const handleCloseNavbar = () => {
-    setNavbar(false);
-    setMenu(false);
-  };
-
-  const handleOpenNavbar = () => {
-    setNavbar(true);
-  };
-
-  const navigate = useNavigate();
 
