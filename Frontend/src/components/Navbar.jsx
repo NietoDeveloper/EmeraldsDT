@@ -93,11 +93,7 @@ const Navbar = () => {
             <li
               className="uppercase px-5 text-[20px] text-color-red font-hobo relative cursor-pointer lg:mt-0 mt-4"
               onClick={() => navigate("/cart")}
-            >
-              <IoBagOutline />
-              <span className="absolute -top-2 lg:right-2 left-10 text-[12px] bg-black h-4 w-4 flex items-center justify-center m-0 rounded-full text-white">
-                {cartValue}
-              </span>
+
             </li>
           </ul>
         </div>
