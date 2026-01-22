@@ -61,16 +61,7 @@ const Footer = () => {
           <p
             onClick={handleReload}
             className="cursor-pointer text-sm hover:text-[#00A36C] transition duration-200 mt-2"
-          >
-            Home
-          </p>
-          <Link to="/our-menu/main">
-            <p className="text-sm hover:text-[#00A36C] transition duration-200 mt-2">
-              Our Menu
-            </p>
-          </Link>
 
-        </div>
 
         <div className="col-span-1">
           <h2 className="font-bold text-xl md:text-2xl text-[#00A36C] mb-4">
