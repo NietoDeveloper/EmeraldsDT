@@ -92,11 +92,7 @@ const Navbar = () => {
           >
 
                 key={index}
-                className="flex justify-start items-center gap-5 cursor-pointer"
-                onClick={() => handleNavigateToOurMenu(cat._id, cat.category)}
-              >
-                <img
-                  src={cat.image.url}
+       
                   alt=""
                   className="w-[78px] h-[78px] object-cover"
                 />
