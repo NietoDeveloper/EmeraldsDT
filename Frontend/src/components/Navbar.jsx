@@ -32,8 +32,4 @@ const Navbar = () => {
     localStorage.setItem("categoryId", id);
     localStorage.setItem("categoryName", name);
 
-    if (!id) {
-      navigate("/our-menu/main");
-      setMenu(false    navigate(`/our-menu/${id}`);
-    setMenu(false);
 
