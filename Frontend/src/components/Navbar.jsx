@@ -14,8 +14,5 @@ const Navbar = () => {
   const [navbar, setNavbar] = React.useState(false);
   const [menu, setMenu] = React.useState(false);
   const [category, setCategory] = React.useState([]);
-  const { cartValue, setCartValue } = useContext(DataContext);
-  const { existingCartContext } = useContext(DataContext);
-
-  const handleCloseNavbar = () => {
+t handleCloseNavbar = () => {
 
