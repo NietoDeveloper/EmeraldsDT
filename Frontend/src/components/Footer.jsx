@@ -137,11 +137,6 @@ const Footer = () => {
 
 
 
-
-        <div className="order-2 md:order-3 mt-4 md:mt-0">
-
-              NietoDeveloper
-            </a>
           </p>
         </div>
       </div>
