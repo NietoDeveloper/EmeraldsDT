@@ -114,19 +114,7 @@ const Footer = () => {
               },
               { Icon: FaTwitter, href: "" },
             ].map(({ Icon, href }, index) => (
-              <div
-                key={index}
-                className="h-10 w-10 rounded-full border border-gray-400 flex items-center justify-center cursor-pointer 
-                          hover:bg-[#00A36C] hover:border-[#00A36C] hover:text-white transition-all duration-300"
-              >
-                <a href={href} target="_blank" rel="noopener noreferrer">
-                  <Icon className="text-lg" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+
 
       <hr className="border-gray-200" />
 
