@@ -85,13 +85,7 @@ const Navbar = () => {
       )}
 
       <nav
-        className={`relative   w-full lg:flex mx-auto  z-40 items-center justify-between lg:px-40 px-8 lg:h-auto overflow-hidden transition-all duration-300 ease-linear  ${
 
-        {navbar ? (
-          <MdOutlineClose
-            className="text-[30px] lg:hidden block absolute right-5 top-5 cursor-pointer"
-            onClick={handleCloseNavbar}
-          />
         ) : (
           <IoIosMenu
             className="text-[30px] lg:hidden block absolute right-5 top-5 cursor-pointer"
