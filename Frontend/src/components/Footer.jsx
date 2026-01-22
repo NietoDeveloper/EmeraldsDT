@@ -134,11 +134,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center gap-4 order-3 md:order-1 mt-4 md:mt-0">
           <p className="hover:text-[#00A36C] transition duration-200 cursor-pointer">
             Privacy Policy
-          </p>
-          <p className="hover:text-[#00A36C] transition duration-200 cursor-pointer">
-            Terms of Use
-          </p>
-        </div>
+
 
 
 
