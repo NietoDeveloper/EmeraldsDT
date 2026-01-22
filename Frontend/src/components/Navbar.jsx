@@ -84,12 +84,7 @@ const Navbar = () => {
     <div className="absolute top-0 left-1/2 -translate-x-1/2 z-30 w-full shadow">
       {adminData?.orderAccept === false && (
         <div className="w-full py-2 moving px-5 bg-color-red  whitespace-nowrap items-center overflow-x-auto">
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{" "}
 
-
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-ur patience.
-          </h1>{" "}
           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         </div>
       )}
