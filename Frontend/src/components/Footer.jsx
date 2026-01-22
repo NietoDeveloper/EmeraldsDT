@@ -140,10 +140,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 order-1 md:order-2">
-          <p>© 2025 Emeralds DT</p>
 
-        </div>
 
         <div className="order-2 md:order-3 mt-4 md:mt-0">
           <p className="text-center">
