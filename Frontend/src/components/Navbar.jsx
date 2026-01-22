@@ -73,9 +73,4 @@ const Navbar = () => {
     const fetchAdminData = async () => {
       try {
         const { data } = await axios.get("/admin/getAdmin");
-        setAdminData(data?.admin[0]);
-      } catch (error) {
-        console.log(error);
 
-
-export default Navbar;
