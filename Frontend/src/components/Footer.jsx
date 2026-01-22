@@ -38,20 +38,5 @@ const Footer = () => {
     <footer className="w-full bg-white text-gray-700 pt-16 md:pt-20 lg:pt-24 px-4 sm:px-8 xl:px-20 mx-auto max-w-[1800px]">
       <hr className="border-gray-200" />
 
-      <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 py-10 md:py-16">
-        <div className="col-span-1">
-          <h2 className="font-bold text-xl md:text-2xl text-[#00A36C] mb-4">
-            Our Company
-          </h2>
-          <p className="text-sm hover:text-[#00A36C] transition duration-200 cursor-pointer mt-2">
-            About Us
-          </p>
-          <p className="text-sm hover:text-[#00A36C] transition duration-200 cursor-pointer mt-2">
-            Our Fundamentals
-          </p>
-          <p className="text-sm hover:text-[#00A36C] transition duration-200 cursor-pointer mt-2">
-
-  );
-};
 
 export default Footer;
