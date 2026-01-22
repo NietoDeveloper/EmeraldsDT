@@ -86,11 +86,7 @@ const Navbar = () => {
         <div className="w-full py-2 moving px-5 bg-color-red  whitespace-nowrap items-center overflow-x-auto">
           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{" "}
 
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          <h1 className="text-white inline-block">
-            We are currently not taking any orders. We will be back soon. Thank
-            you for your patience.
-          </h1>{" "}
+
           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
           <h1 className="text-white inline-block">
             We are currently not taking any orders. We will be back soon. Thank
