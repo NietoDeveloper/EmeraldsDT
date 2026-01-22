@@ -43,8 +43,4 @@ const Navbar = () => {
   const handleviewfullmenu = () => {
     navigate(`/our-menu/main`);
     setMenu(false);
-  };
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
 
