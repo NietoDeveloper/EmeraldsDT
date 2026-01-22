@@ -10,6 +10,3 @@ import axios from "../utils/axios";
 import { DataContext } from "../ContexApi";
 import AllergensGuidePDF from "../assets/AllergensGuide.pdf";
 
-const Navbar = () => {
-  const [navbar, setNavbar] = React.useState(false);
-
