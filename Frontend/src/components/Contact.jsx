@@ -23,13 +23,7 @@ se), 2000);
                     className="block text-sm text-gray-700"
                   >
 
-                    Yes, I have read and agree to the Emeralds DT{" "}
-
-                      href="#"
-                      className="text-red-600 hover:underline focus:outline-none"
-                    >
-                      Privacy Policy
-                    </a>
+     
                   </label>
                 </div>
                 <div className="relative z-0 w-full mb-5 group">
