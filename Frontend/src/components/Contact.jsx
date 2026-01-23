@@ -17,12 +17,7 @@ se), 2000);
 
 
                 </div>
-                <div className="relative z-0 w-full mb-5 group">
-                  <label
-                    htmlFor="special_offers"
-                    className="block text-sm text-gray-700"
-                  >
-                    <input
+        
                       type="checkbox"
                       name="special_offers"
                       id="special_offers"
