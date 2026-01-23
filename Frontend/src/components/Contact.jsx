@@ -14,10 +14,6 @@ se), 2000);
               </div>
             </div>
 
-            {/* Sección de WhatsApp */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold text-gray-800 text-center mb-4">Contact via WhatsApp</h2>
-              <a
                 href="https://wa.me/1234567890?text=Hello%20from%20your%20website"
                 target="_blank"
                 rel="noopener noreferrer"
