@@ -20,7 +20,7 @@ se), 2000);
                 <div className="relative z-0 w-full mb-5 group">
                   <label
                     htmlFor="terms_conditions"
-                    className="block text-sm text-gray-700"
+               
                   >
 
      
