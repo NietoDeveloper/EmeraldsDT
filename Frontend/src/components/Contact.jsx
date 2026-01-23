@@ -13,9 +13,7 @@ se), 2000);
                 </div>
 
             </div
-            <div className="bg-white p-6 rounded-lg shadow-md">
 
-        </div>
       </main>
       <Footer />
     </div>
