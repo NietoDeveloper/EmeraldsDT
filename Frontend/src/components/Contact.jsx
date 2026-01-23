@@ -17,11 +17,7 @@ se), 2000);
 
                 <div className="relative z-0 w-full mb-5 group">
                   <label
-        
-                <div className="relative z-0 w-full mb-5 group">
-                  
-                    * Select a topic
-                  </label>
+
                   <select
                     name="topic"
                     id="topic"
