@@ -12,11 +12,7 @@ se), 2000);
   };
 
   return (
-    <div className="max-w-[1800px] mx-auto bg-white">
-
-            {/* Sección de Correo electrónico */}
-            <div className="bg-whiter">example@email.com</p>
-                <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
+    <div className="max-w-[col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
                   <button
                     onClick={handleCopyEmail}
                     className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300"
