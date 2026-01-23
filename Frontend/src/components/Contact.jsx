@@ -16,15 +16,7 @@ se), 2000);
 
 
                 <div className="relative z-0 w-full mb-5 group">
-                  <label
-
-                    <option value="">-- Please select --</option>
-                    <option value="special_offers">Special Offers</option>
-                    <option value="vouchers">Vouchers</option>
-                    <option value="news">News</option>
-                    <option value="promotions">Promotions & Activities</option>
-                  </select>
-                </div>
+>
                 <div className="relative z-0 w-full mb-5 group">
                   <label
                     htmlFor="terms_conditions"
