@@ -17,11 +17,7 @@ se), 2000);
                 href="https://wa.me/1234567890?text=Hello%20from%20your%20website"
                 target="_blank"
                 rel="noopener noreferrer"
-              
-              </a>
-            </div>
-          </div>
-
+      
           <div className="flex flex-col space-y-6">
             {/* Formulario */}
             <div className="bg-white p-6 rounded-lg shadow-md">
