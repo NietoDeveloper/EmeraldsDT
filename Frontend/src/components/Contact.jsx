@@ -16,10 +16,7 @@ se), 2000);
 
                 href="https://wa.me/1234567890?text=Hello%20from%20your%20website"
                 target="_blank"
-                rel="noult_name"
-                    id="first_napy-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-red-600 peer"
-                    placeholder=" "
-                    required
+                red
                   />
                 </div>
                 <div className="relative z-0 w-full mb-5 group">
