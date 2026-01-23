@@ -9,14 +9,7 @@ const Contact = () => {
 
   const [copied, setCopied] = useState(false);
 se), 2000);
-                    {copied ? "Copied!" : "Copy Email"}
-                  </button>
-                  <a
-                    href="mailto:example@email.com?subject=Contact%20Inquiry"
-                    className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300"
-                  >
-                    Send Email
-                  </a>
+                   
                 </div>
               </div>
             </div>
