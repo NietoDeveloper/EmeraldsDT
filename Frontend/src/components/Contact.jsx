@@ -22,7 +22,7 @@ se), 2000);
 
                 allowFullScreen=""
                 loading="lazy"
-                className="rounded-lg"
+  
               ></iframe>
             </div>
           </div>
