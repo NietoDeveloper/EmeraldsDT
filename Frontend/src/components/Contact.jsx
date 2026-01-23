@@ -16,13 +16,7 @@ se), 2000);
 
                 href="https://wa.me/1234567890?text=Hello%20from%20your%20website"
                 target="_blank"
-                rel="noopener noreferrer"
-      
-          <div className="flex flex-col space-y-6">
-            {/* Formulario */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold text-gray-800 text-center mb-4">Send Us a Message</h2>
-              <form className="w-full mx-auto">
+                rel="noull mx-auto">
                 <div className="relative z-0 w-full mb-5 group">
                   <label
                     htmlFor="first_name"
