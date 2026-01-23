@@ -9,7 +9,7 @@ const Contact = () => {
 
   const [copied, setCopied] = useState(false);
 
-  const handleCopyEmail = () => {
+const handleCopyEmail = () => {
     navigator.clipboard.writeText("example@email.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
