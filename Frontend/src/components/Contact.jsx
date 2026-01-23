@@ -24,10 +24,7 @@ se), 2000);
                   >
 
                     Yes, I have read and agree to the Emeralds DT{" "}
-                    <a
-                      href="#"
-                      className="text-red-600 hover:underline focus:outline-none"
-                    >
+
                       Terms & Conditions
                     </a>{" "}
                     and{" "}
