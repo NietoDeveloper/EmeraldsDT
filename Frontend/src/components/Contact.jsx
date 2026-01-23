@@ -22,13 +22,7 @@ se), 2000);
                     htmlFor="terms_conditions"
                     className="block text-sm text-gray-700"
                   >
-                    <input
-                      type="checkbox"
-                      name="terms_conditions"
-                      id="terms_conditions"
-                      className="mr-2 leading-tight"
-                      required
-                    />
+
                     Yes, I have read and agree to the Emeralds DT{" "}
                     <a
                       href="#"
