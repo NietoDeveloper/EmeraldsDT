@@ -17,9 +17,7 @@ se), 2000);
                 href="https://wa.me/1234567890?text=Hello%20from%20your%20website"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center bg-green-500 text-white py-3 px-4 rounded-lg hover:bg-green-600 transition duration-300"
-              >
-                Chat on WhatsApp
+              
               </a>
             </div>
           </div>
