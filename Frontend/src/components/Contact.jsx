@@ -19,8 +19,7 @@ se), 2000);
                 </div>
         
                       type="checkbox"
-                      name="special_offers"
-                      id="special_offers"
+               
 
                 </button>
               </form>
