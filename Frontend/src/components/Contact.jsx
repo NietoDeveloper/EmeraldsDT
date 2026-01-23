@@ -23,10 +23,7 @@ const Contact = () => {
           to share
         </p>e-y-6">
             {/* Sección de Correo electrónico */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold text-gray-800 text-center mb-4">Email Us</h2>
-              <div className="flex flex-col space-y-2">
-                <p className="text-gray-700 text-center">example@email.com</p>
+            <div className="bg-whiter">example@email.com</p>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
                   <button
                     onClick={handleCopyEmail}
