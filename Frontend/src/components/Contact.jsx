@@ -17,8 +17,7 @@ se), 2000);
 
 
                 </div>
-        
-                      type="checkbox"
+        ¿
                
 
 
