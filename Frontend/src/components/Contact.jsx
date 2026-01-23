@@ -20,8 +20,7 @@ const Contact = () => {
       <Navbar />
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20 lg:mt-44 py-10">
 
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Whether you’re looking for more information, or you’d just like
+        <looking for more information, or you’d just like
           to share
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12">
