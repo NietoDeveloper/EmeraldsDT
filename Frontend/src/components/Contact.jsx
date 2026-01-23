@@ -11,7 +11,7 @@ const Contact = () => {
 se), 2000);
                    
                 </div>
-              </div>
+
             </div>
 
 
