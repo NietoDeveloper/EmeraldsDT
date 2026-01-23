@@ -22,9 +22,6 @@ se), 2000);
                       name="special_offers"
                       id="special_offers"
 
-                  className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
-                >
-                  Submit
                 </button>
               </form>
             </div>
