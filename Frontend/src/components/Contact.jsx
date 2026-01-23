@@ -19,13 +19,10 @@ const Contact = () => {
     <div className="max-w-[1800px] mx-auto bg-white">
       <Navbar />
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20 lg:mt-44 py-10">
-        <h1 className="font-hobo text-4xl sm:text-5xl text-center mb-8 text-gray-800">
-          Contact Us
-        </h1>
+
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
           Whether you’re looking for more information, or you’d just like
-          to share your thoughts, you’ll find easy ways to contact us
-          right here.
+          to share
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12">
           <div className="flex flex-col space-y-6">
