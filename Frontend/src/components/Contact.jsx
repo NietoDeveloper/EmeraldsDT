@@ -21,9 +21,6 @@ se), 2000);
                       type="checkbox"
                
 
-                </button>
-              </form>
-            </div>
 
             {/* Sección de Mapa */}
             <div className="bg-white p-6 rounded-lg shadow-md">
