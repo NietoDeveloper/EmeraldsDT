@@ -8,11 +8,7 @@ const Contact = () => {
   }, []);
 
   const [copied, setCopied] = useState(false);
-
-const handleCopyEmail = () => {
-    navigator.clipboard.writeText("example@email.com");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+se), 2000);
   };
 
   return (
