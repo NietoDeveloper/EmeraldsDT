@@ -9,13 +9,7 @@ const Contact = () => {
 
   const [copied, setCopied] = useState(false);
 se), 2000);
-                   
-                </div>
 
-            </div
-
-      </main>
-      <Footer />
     </div>
   );
 };
