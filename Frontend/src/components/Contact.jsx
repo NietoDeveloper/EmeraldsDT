@@ -19,9 +19,7 @@ se), 2000);
                   <label
                   <input
                     type="t_code"
-                    id="country_co
-                  />
-                </div>
+              
                 <div className="relative z-0 w-full mb-5 group">
                   <label
                     htmlFor="mobile_number"
