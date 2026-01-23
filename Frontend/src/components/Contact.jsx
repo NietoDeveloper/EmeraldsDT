@@ -18,7 +18,6 @@ const Contact = () => {
   return (
     <div className="max-w-[1800px] mx-auto bg-white">
       <Navbar />
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20 lg:mt-44 py-10">
 
 
           to share
