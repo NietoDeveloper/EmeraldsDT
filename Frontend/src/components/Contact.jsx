@@ -21,9 +21,7 @@ const Contact = () => {
 
 
           to share
-        </p>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12">
-          <div className="flex flex-col space-y-6">
+        </p>e-y-6">
             {/* Sección de Correo electrónico */}
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h2 className="text-2xl font-semibold text-gray-800 text-center mb-4">Email Us</h2>
