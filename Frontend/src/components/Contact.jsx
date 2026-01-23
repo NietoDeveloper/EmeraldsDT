@@ -20,10 +20,6 @@ se), 2000);
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.0000000000005!2d-74.20000000000000!3d11.240000000000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42f0000000000%3A0x0000000000000000!2sSanta%20Marta%2C%20Magdalena%2C%20Colombia!5e0!3m2!1sen!2sus!4v1630000000000"
       
 
-                allowFullScreen=""
-                loading="lazy"
-  
-              ></iframe>
             </div>
           </div>
         </div>
