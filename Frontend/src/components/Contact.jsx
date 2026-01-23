@@ -9,14 +9,6 @@ const Contact = () => {
 
   const [copied, setCopied] = useState(false);
 se), 2000);
-  };
-
-  return (
-    <div className="max-w-[col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-                  <button
-                    onClick={handleCopyEmail}
-                    className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300"
-                  >
                     {copied ? "Copied!" : "Copy Email"}
                   </button>
                   <a
