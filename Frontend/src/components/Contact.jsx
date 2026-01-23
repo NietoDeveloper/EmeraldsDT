@@ -17,8 +17,6 @@ se), 2000);
 
                 <div className="relative z-0 w-full mb-5 group">
                   <label
-                    htmlFor="country_code"
-                  
                   <input
                     type="t_code"
                     id="country_co
