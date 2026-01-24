@@ -12,8 +12,6 @@ seState([]);andedCardId] = useState(null);
 
   return (
  />
-
-      <div className="lg:px-40 lg:mt-44">
         <dnd Events
             </h1>
             <div className="grid lg:grid-cols-3 grid-cols-1 gap-5">
