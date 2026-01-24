@@ -14,12 +14,7 @@ seState([]);andedCardId] = useState(null);
  />
                 <di" : ""
                   }`}
-                >>on
-                          : news.description.slice(0, 100)}
-                        {news.description.length > 100 && (
-                          <span
-                            className="text-color-red cursor-pointer"
-                            onClick={() => toggleExpandCard(news._id)}
+                >>ontoggleExpandCard(news._id)}
                           >
                             {expandedCardId === news._id
                               ? " Read Less"
