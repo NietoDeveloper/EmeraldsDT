@@ -17,11 +17,7 @@ seState([]);andedCardId] = useState(null);
                 >>
                     <div className="px-5 h-full">
                  
-                        className="text-xl font-semibold text-color-red mb-5 cursor-pointer"
-                        onClick={() => toggleExpandCard(news._id)}
-                      >
-                        {news.title}
-                      </h1>
+                        
                       <p className="mt-2">
                         {expandedCardId === news._id
                           ? news.description
