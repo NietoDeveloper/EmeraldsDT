@@ -14,10 +14,7 @@ seState([]);andedCardId] = useState(null);
  />
 
       <div className="lg:px-40 lg:mt-44">
-        <div className="h-[auto] w-full flex flex-col items-end relative lg:mt-12 mt-20">
-          <div className=" w-full px-10 pr-5 relative">
-            <h1 className="text-3xl font-hobo text-color-red text-center lg:mb-12 ">
-              News and Events
+        <dnd Events
             </h1>
             <div className="grid lg:grid-cols-3 grid-cols-1 gap-5">
               {data.map((news) => (
