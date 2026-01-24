@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import axios from "../utils/axios";
-
-const AllNews = () => {
-  const [data, setData] = useState([]);
+seState([]);
   const [expandedCardId, setExpandedCardId] = useState(null);
 
   useEffect(() => {
