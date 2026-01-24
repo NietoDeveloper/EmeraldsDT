@@ -9,8 +9,7 @@ const ComingSoon = () => {
     >
       <div className="flex justify-between max-sm:flex-col-reverse items-center w-full">
         <div className="w-1/2 flex justifext-3xl font-hobo ">Coming Soon</h1>
-        </div>
-        <div className="w-1/2 flex justify-center items-center ">
+        </div>tify-center items-center ">
           <img src={lgo}className="lg:w-80 w-full " />
         </div>
       </div>
