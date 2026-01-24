@@ -14,13 +14,7 @@ seState([]);andedCardId] = useState(null);
  />
                 <di" : ""
                   }`}
-                >>
-                    <div className="px-5 h-full">
-                 
-                        
-                      <p className="mt-2">
-                        {expandedCardId === news._id
-                          ? news.description
+                >>on
                           : news.description.slice(0, 100)}
                         {news.description.length > 100 && (
                           <span
