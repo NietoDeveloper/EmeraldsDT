@@ -6,13 +6,7 @@ import axios from "../utils/axios";
 seState([]);andedCardId] = useState(null);
 
   useEffect(() => {
-    const fetc> {
-      try 
-   
-      }
-    };
-    fetchData();
-  }, []);
+
 
   const toggleExpandCard = (id) => {
     setExpandedCardId(id === expandedCardId ? null : id);
