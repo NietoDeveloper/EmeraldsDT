@@ -17,8 +17,7 @@ seState([]);andedCardId] = useState(null);
                   className={`h-full relative overflow-hidden py-5 border-2 mt-5 rounded-xl ${
                     expandedCardId === news._id ? "border-red-600" : ""
                   }`}
-                >
-                  <div className="w-full relative">
+                >>
                     <div className="px-5 h-full">
                       <img
                         src={news?.image?.url}
