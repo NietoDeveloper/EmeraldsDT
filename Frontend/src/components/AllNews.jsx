@@ -9,8 +9,6 @@ seState([]);andedCardId] = useState(null);
 
 
   const toggleExpandCard = (id) => {
-    setExpandedCardId(id === expandedCardId ? null : id);
-  };
 
   return (
  />
