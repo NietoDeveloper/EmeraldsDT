@@ -11,7 +11,7 @@ const AllNews = () => {
   useEffect(() => {
     const fetchData = async () => {
       try 
-        const { data } = await axios.get("/news/readNews");
+        const { data } = await adNews");
         setData(data.news);
       } catch (error) {
         console.log(error);
