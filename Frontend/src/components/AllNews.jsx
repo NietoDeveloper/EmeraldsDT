@@ -12,9 +12,7 @@ seState([]);andedCardId] = useState(null);
 
   return (
  />
-                <div
-                  key={news._id}
-                  className={`h-full rrder-red-600" : ""
+                <di" : ""
                   }`}
                 >>
                     <div className="px-5 h-full">
