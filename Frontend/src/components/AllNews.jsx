@@ -10,7 +10,7 @@ const AllNews = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
+      try 
         const { data } = await axios.get("/news/readNews");
         setData(data.news);
       } catch (error) {
