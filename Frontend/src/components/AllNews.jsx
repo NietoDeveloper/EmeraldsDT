@@ -9,7 +9,7 @@ const AllNews = () => {
   const [expandedCardId, setExpandedCardId] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetc> {
       try 
         const { data } = await adNews");
         setData(data.news);
