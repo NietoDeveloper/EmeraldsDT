@@ -14,8 +14,7 @@ seState([]);andedCardId] = useState(null);
  />
         <dnd Events
             </h1>
-            <div className="grid lg:grid-cols-3 grid-cols-1 gap-5">
-              {data.map((news) => (
+            <di (
                 <div
                   key={news._id}
                   className={`h-full relative overflow-hidden py-5 border-2 mt-5 rounded-xl ${
