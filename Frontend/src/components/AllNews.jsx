@@ -8,10 +8,7 @@ seState([]);andedCardId] = useState(null);
   useEffect(() => {
     const fetc> {
       try 
-        const { data } = await adNews");
-        setData(data.news);
-      } catch (error) {
-        console.log(error);
+   
       }
     };
     fetchData();
