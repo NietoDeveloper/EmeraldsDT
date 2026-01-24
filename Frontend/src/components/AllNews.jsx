@@ -16,12 +16,7 @@ seState([]);andedCardId] = useState(null);
                   }`}
                 >>
                     <div className="px-5 h-full">
-                      <img
-                        src={news?.image?.url}
-                        alt=""
-                        className="w-1/2 block mx-auto mb-5"
-                      />
-                      <h1
+                 
                         className="text-xl font-semibold text-color-red mb-5 cursor-pointer"
                         onClick={() => toggleExpandCard(news._id)}
                       >
