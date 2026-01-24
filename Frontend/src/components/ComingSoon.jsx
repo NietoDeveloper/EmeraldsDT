@@ -5,7 +5,7 @@ const ComingSoon = () => {
   return (
     <div
       style={{ maxWidth: "1600px" }}
-      className="mx-auto flex justify-center items-center h-screen  lg:px-44"
+      className="mx-auto flex justifys-center h-screen  lg:px-44"
     >
       <div className="flex justify-between max-sm:flex-col-reverse items-center w-full">
         <div className="w-1/2 flex justifext-3xl font-hobo ">Coming Soon</h1>
