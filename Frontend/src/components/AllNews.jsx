@@ -12,9 +12,6 @@ seState([]);andedCardId] = useState(null);
 
   return (
  />
-        <dnd Events
-            </h1>
-            <di (
                 <div
                   key={news._id}
                   className={`h-full relative overflow-hidden py-5 border-2 mt-5 rounded-xl ${
