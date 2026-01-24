@@ -13,8 +13,7 @@ seState([]);andedCardId] = useState(null);
   };
 
   return (
-    <div style={{ maxWidth: "1600px" }} className="mx-auto">
-      <Navbar />
+ />
 
       <div className="lg:px-40 lg:mt-44">
         <div className="h-[auto] w-full flex flex-col items-end relative lg:mt-12 mt-20">
