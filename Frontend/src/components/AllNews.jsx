@@ -14,10 +14,6 @@ seState([]);andedCardId] = useState(null);
  />
                 <di" : ""
                   }`}
-                >>ontoggleExpandCard(news._id)}
-                          >
-                            {expandedCardId === news._id
-                              ? " Read Less"
                               : " Read More"}
                           </span>
                         )}
