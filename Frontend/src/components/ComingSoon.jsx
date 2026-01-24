@@ -11,7 +11,7 @@ const ComingSoon = () => {
         <div className="w-1/2 flex justifext-3xl font-hobo ">Coming Soon</h1>
         </div>
         <div className="w-1/2 flex justify-center items-center ">
-          <img src={logo} alt="Logo" className="lg:w-80 w-full " />
+          <img src={lgo} alt="Logo" className="lg:w-80 w-full " />
         </div>
       </div>
     </div>
