@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import axios from "../utils/axios";
-seState([]);
-  const [expandedCardId, setExpandedCardId] = useState(null);
+seState([]);andedCardId] = useState(null);
 
   useEffect(() => {
     const fetc> {
