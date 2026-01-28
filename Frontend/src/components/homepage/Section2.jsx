@@ -26,7 +26,7 @@ const Section2 = () => {
           spaceBetween={30}
           loop={true}
           pagination={false}
-          className="mySwiper w-full lg:mt-14 mt-16"
+
           modules={[Pagination, Navigation, Autoplay]}
           navigation={{
             nextEl: ".hero_right",
