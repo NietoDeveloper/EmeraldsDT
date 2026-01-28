@@ -21,8 +21,3 @@ const Section2 = () => {
          
         </div>
 
-          pagination={false}
-
-
-          {banner &&
-  
