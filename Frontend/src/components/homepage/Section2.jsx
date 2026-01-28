@@ -12,8 +12,7 @@ import { Link } from "react-router-dom";
 import axios from "../../utils/axios";
 
 const Section2 = () => {
-  const [banner, setBanner] = useState([]);
-  const [loading, setLoading] = useState(true); // Add loading state
+ 
 
   useEffect(() => {
     try {
