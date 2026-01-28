@@ -23,7 +23,7 @@ const Section2 = () => {
         setBanner(data.banners);
         setLoading(false); 
       };
-      getBanner();
+
     } catch (error) {
       console.log(error);
     }
