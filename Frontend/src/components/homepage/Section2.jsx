@@ -21,7 +21,7 @@ const Section2 = () => {
 
 
         setBanner(data.banners);
-        setLoading(false); // Set loading to false when data is fetched
+        setLoading(false); 
       };
       getBanner();
     } catch (error) {
