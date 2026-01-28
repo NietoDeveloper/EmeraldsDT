@@ -27,27 +27,7 @@ const Section2 = () => {
           {banner &&
             banner.map((banner, index) => (
               <SwiperSlide key={index}>
-                <div className="w-full lg:h-[28rem] h-[25rem] mt-14  lg:pl-10   px-2">
-                  <div className="h-full w-full overflow-hidden flex max-sm:flex-col-reverse items-center py-0  relative">
-                    <div className=" lg:w-[40%] w-full h-fit flex flex-col justify-start gap-5 p-5  rounded lg:absolute lg:top-32 lg:left-5 left-0 translate-[-50%] bg-white ">
-                      <h1 className="lg:text-4xl text-3xl font-hobo">
-                        {banner.banners.head}
-                      </h1>
-                      <p>{banner.banners.content}</p>
-                      <Link to="/our-menu/main">
-                        <button className="bg-color-red font-hobo shadow-md shadow-gray-200 text-white w-fit py-2 px-5 rounded-lg uppercase">
-                          {banner.banners.btn}
-                        </button>
-                      </Link>
-                    </div>
-                    <div className="h-full w-full rounded overflow-hidden">
-                      <img
-                        className="w-full h-full object-cover rounded bg-center"
-                        src={banner.banners.url}
-                        alt=""
-                      />
-                    </div>
-                  </div>
+                
                 </div>
               </SwiperSlide>
             ))}
