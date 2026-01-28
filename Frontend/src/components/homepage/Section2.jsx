@@ -25,10 +25,4 @@ const Section2 = () => {
 
 
           {banner &&
-            banner.map((banner, index) => (
-              <SwiperSlide key={index}>
-
-  );
-};
-
-export default Section2;
+  
