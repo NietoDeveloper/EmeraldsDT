@@ -5,11 +5,7 @@ import AllergensGuidePDF from "../assets/AllergensGuide.pdf";
 
 const AboutOurFood = () => {
   return (
-    <div>
-      {/* Navbar */}
-
-   
-    </div>
+  
   );
 };
 
