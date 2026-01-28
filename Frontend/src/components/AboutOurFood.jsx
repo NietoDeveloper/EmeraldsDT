@@ -4,9 +4,4 @@ import Footer from "./Footer";
 import AllergensGuidePDF from "../assets/AllergensGuide.pdf";
 
 const AboutOurFood = () => {
-  return (
-  
-  );
-};
-
-export default AboutOurFood;
+  retu
