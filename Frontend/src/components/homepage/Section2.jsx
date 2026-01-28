@@ -14,12 +14,7 @@ import axios from "../../utils/axios";
 const Section2 = () => {
  
 
-  useEffect(() => {
-    try {
-      const getBanner = async () => {
 
-  }, []);
-  return (
     <>
       {loading ? ( // Render loading message while data is being fetched
         <div className="flex justify-center items-center h-80">
