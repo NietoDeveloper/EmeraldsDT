@@ -13,9 +13,7 @@ const AboutOurFood = () => {
         <Navbar />
         {/* here i want to on send the link whare user can click and download pdf */}
         <div
-          </a>
-        </div>
-        <Footer />
+         
       </div>
     </div>
   );
