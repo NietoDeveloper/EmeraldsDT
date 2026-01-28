@@ -19,8 +19,6 @@ const Section2 = () => {
       const getBanner = async () => {
         const { data } = await axios.get("/admin/getBanner");
 
-        // console.log(data.banners);
-        // Check if data is an array before setting it
 
         setBanner(data.banners);
         setLoading(false); // Set loading to false when data is fetched
