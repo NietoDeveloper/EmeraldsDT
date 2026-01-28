@@ -29,8 +29,7 @@ const Section2 = () => {
 
           modules={[Pagination, Navigation, Autoplay]}
           navigation={{
-            nextEl: ".hero_right",
-            prevEl: ".hero_left",
+
           }}
           autoplay={{
             delay: 4000,
