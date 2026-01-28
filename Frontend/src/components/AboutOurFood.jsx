@@ -8,13 +8,7 @@ const AboutOurFood = () => {
     <div>
       {/* Navbar */}
 
-      {/* PDF with no scroll bar */}
-      <div className="overflow-hidden lg:px-40">
-        <Navbar />
-        {/* here i want to on send the link whare user can click and download pdf */}
-        <div
-         
-      </div>
+   
     </div>
   );
 };
