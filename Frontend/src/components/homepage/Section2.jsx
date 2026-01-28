@@ -20,10 +20,6 @@ const Section2 = () => {
         const { data } = await axios.get("/admin/getBanner");
 
 
-        setBanner(data.banners);
-        setLoading(false); 
-      };
-
     } catch (error) {
       console.log(error);
     }
