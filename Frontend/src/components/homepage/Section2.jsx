@@ -20,11 +20,7 @@ const Section2 = () => {
         <div className="flex justify-center items-center h-80">
          
         </div>
-      ) : (
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={30}
-          loop={true}
+
           pagination={false}
 
           modules={[Pagination, Navigation, Autoplay]}
