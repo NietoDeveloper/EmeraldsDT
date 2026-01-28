@@ -27,13 +27,7 @@ const Section2 = () => {
           {banner &&
             banner.map((banner, index) => (
               <SwiperSlide key={index}>
-                
-                </div>
-              </SwiperSlide>
-            ))}
-        </Swiper>
-      )}
-    </>
+
   );
 };
 
