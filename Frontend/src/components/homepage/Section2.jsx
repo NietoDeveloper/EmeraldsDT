@@ -17,12 +17,7 @@ const Section2 = () => {
   useEffect(() => {
     try {
       const getBanner = async () => {
-        const { data } = await axios.get("/admin/getBanner");
 
-
-    } catch (error) {
-      console.log(error);
-    }
   }, []);
   return (
     <>
