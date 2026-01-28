@@ -23,16 +23,7 @@ const Section2 = () => {
 
           pagination={false}
 
-          modules={[Pagination, Navigation, Autoplay]}
-          navigation={{
 
-          }}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-        >
           {banner &&
             banner.map((banner, index) => (
               <SwiperSlide key={index}>
