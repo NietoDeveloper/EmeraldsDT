@@ -87,10 +87,7 @@ const App = () => {
           
   
           
-            <Route path="allIngredient" element={<AllIngredient />} />
-            <Route path="addIngredient" element={<AddIngredient />} />
-
-          </Route>
+          
 
           <Route path="/our-menu/item/:id" element={<OneItemPage />} />
           <Route path="/cart" element={<Cart />} />
