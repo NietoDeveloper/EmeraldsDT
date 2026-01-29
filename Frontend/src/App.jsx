@@ -60,8 +60,7 @@ const App = () => {
             <Route path="dashboardView" element={<DashboardView />} />
             <Route path="addItems" element={<AddItems />} />
             <Route path="allItems" element={<AllItems />} />
-            <Route path="addBanner" element={<AddBanner />} />
-            <Route path="allBanner" element={<AllBanner />} />
+
 
            
     </>
