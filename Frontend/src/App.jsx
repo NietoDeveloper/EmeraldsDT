@@ -80,11 +80,7 @@ const App = () => {
             <Route path="addItems" element={<AddItems />} />
             <Route path="allItems" element={<AllItems />} />
             <Route path="addBanner" element={<AddBanner />} />
-            <Route path="allBanner" element={<AllBanner />} />
-            <Route path="addCategories" element={<AddCategories />} />
-            <Route path="allCategories" element={<AllCategoies />} />
-            <Route path="allmerchandise" element={<AllProduct />} />
-          
+    
   
           
           
