@@ -84,7 +84,7 @@ const App = () => {
             <Route path="addCategories" element={<AddCategories />} />
             <Route path="allCategories" element={<AllCategoies />} />
             <Route path="allmerchandise" element={<AllProduct />} />
-            <Route path="addmerchandise" element={<AddProduct />} />
+          
             <Route path="allNews" element={<AllNewsAdmin />} />
             <Route path="addNews" element={<AddNews />} />
             <Route path="allIngredient" element={<AllIngredient />} />
