@@ -45,13 +45,7 @@ const App = () => {
           {/* <Route path="/" element={<ComingSoon />} /> */}
           <Route path="/user" element={<UserProfile />} />
           <Route path="/userLogin" element={<UserLogin />} />
-          <Route path="/userSingup" element={<UserSignUp />} />
-          <Route path="/our-menu" element={<OurMenu />}>
-            <Route path="main" element={<Main />} />
-            <Route path=":category" element={<Items />} />
-          </Route>
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/About" element={<AboutOurFood />} />
+
 
 
 export default App;
