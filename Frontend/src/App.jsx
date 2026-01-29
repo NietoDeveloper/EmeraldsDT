@@ -56,8 +56,7 @@ const App = () => {
           <Route path="/merchandise" element={<Merchandise />} />
           <Route path="/merchandise/:id" element={<OneProductPage />} />
           <Route path="/admin/signin" element={<Signin />} />
-          <Route path="/admin" element={<Admin />}>
-            <Route path="dashboardView" element={<DashboardView />} />
+
 
 
 
