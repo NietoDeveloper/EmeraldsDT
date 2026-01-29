@@ -89,8 +89,7 @@ const App = () => {
           
             <Route path="allIngredient" element={<AllIngredient />} />
             <Route path="addIngredient" element={<AddIngredient />} />
-            <Route path="allUser" element={<User />} />
-            <Route path="allOrders" element={<Orders />} />
+
           </Route>
 
           <Route path="/our-menu/item/:id" element={<OneItemPage />} />
