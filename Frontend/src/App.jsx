@@ -75,15 +75,6 @@ const App = () => {
             <Route path="makeSubAdmin" element={<MakeSubAdmin />} />
           </Route>
 
-          <Route path="/subAdmin" element={<SubAdmin />}>
-
-    
-  
-          
-          
-
-          <Route path="/our-menu/item/:id" element={<OneItemPage />} />
-          <Route path="/cart" element={<Cart />} />
 
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
