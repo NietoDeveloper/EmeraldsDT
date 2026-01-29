@@ -63,13 +63,7 @@ const App = () => {
             <Route path="addBanner" element={<AddBanner />} />
             <Route path="allBanner" element={<AllBanner />} />
             <Route path="addCategories" element={<AddCategories />} />
-            <Route path="allCategories" element={<AllCategoies />} />
-            <Route path="allMerchandise" element={<AllProduct />} />
-            <Route path="addMerchandise" element={<AddProduct />} />
-            <Route path="allNews" element={<AllNewsAdmin />} />
-            <Route path="addNews" element={<AddNews />} />
-            <Route path="allIngredient" element={<AllIngredient />} />
- 
+           
     </>
   );
 };
