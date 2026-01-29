@@ -70,13 +70,7 @@ const App = () => {
             <Route path="addNews" element={<AddNews />} />
             <Route path="allIngredient" element={<AllIngredient />} />
             <Route path="addIngredient" element={<AddIngredient />} />
-            <Route path="allUser" element={<User />} />
-            <Route path="allOrders" element={<Orders />} />
-            <Route path="makeSubAdmin" element={<MakeSubAdmin />} />
-          </Route>
-
-
-          <Route path="*" element={<Navigate to="/" />} />
+       
         </Routes>
       </BrowserRouter>
     </>
