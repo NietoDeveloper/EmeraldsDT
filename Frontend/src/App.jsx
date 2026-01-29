@@ -54,12 +54,4 @@ const App = () => {
           <Route path="/About" element={<AboutOurFood />} />
 
 
-
-
-
-           
-    </>
-  );
-};
-
 export default App;
