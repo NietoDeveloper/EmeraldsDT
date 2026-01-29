@@ -17,11 +17,6 @@ import AboutOurFood from "./components/AboutOurFood";
 
 import { Navigate } from "react-router-dom";
 import OneItemPage from "./screens/OneItemPage";
-import Cart from "./screens/Cart";
-import AddCategories from "./screens/admin/categories/AddCategories";
-import AllCategoies from "./screens/admin/categories/AllCategoies";
-import AllProduct from "./screens/admin/product/AllProduct";
-
 
 
 
