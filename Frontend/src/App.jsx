@@ -58,8 +58,7 @@ const App = () => {
           <Route path="/admin/signin" element={<Signin />} />
           <Route path="/admin" element={<Admin />}>
             <Route path="dashboardView" element={<DashboardView />} />
-            <Route path="addItems" element={<AddItems />} />
-            <Route path="allItems" element={<AllItems />} />
+
 
 
            
