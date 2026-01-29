@@ -12,11 +12,7 @@ import AllBanner from "./screens/admin/banner/AllBanner";
 import Contact from "./components/Contact";
 import Items from "./components/ourMenu/Items";
 import Main from "./components/ourMenu/Main";
-import AllNews from "./components/AllNews";
-import AboutOurFood from "./components/AboutOurFood";
 
-import { Navigate } from "react-router-dom";
-import OneItemPage from "./screens/OneItemPage";
 
 
 
