@@ -76,10 +76,7 @@ const App = () => {
           </Route>
 
           <Route path="/subAdmin" element={<SubAdmin />}>
-            <Route path="dashboardView" element={<DashboardView />} />
-            <Route path="addItems" element={<AddItems />} />
-            <Route path="allItems" element={<AllItems />} />
-            <Route path="addBanner" element={<AddBanner />} />
+
     
   
           
