@@ -30,21 +30,7 @@ import SubAdmin from "./screens/subAdmin/SubAdmin";
 import User from "./screens/admin/user/User";
 import Orders from "./screens/admin/orders/Orders";
 import OneProductPage from "./screens/OneProductPage";
-import UserProfile from "./screens/user/UserProfile";
-import UserLogin from "./screens/user/UserLogin";
-import MakeSubAdmin from "./screens/admin/subAdmin/MakeSubAdmin";
-import UserSignUp from "./screens/user/UserSignUp";
-import ComingSoon from "./components/ComingSoon";
 
-const App = () => {
-  return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Hompage />} />
-          {/* <Route path="/" element={<ComingSoon />} /> */}
-          <Route path="/user" element={<UserProfile />} />
-          <Route path="/userLogin" element={<UserLogin />} />
 
 
 
