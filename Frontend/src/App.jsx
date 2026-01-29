@@ -69,10 +69,7 @@ const App = () => {
             <Route path="allNews" element={<AllNewsAdmin />} />
             <Route path="addNews" element={<AddNews />} />
             <Route path="allIngredient" element={<AllIngredient />} />
-            <Route path="addIngredient" element={<AddIngredient />} />
-       
-        </Routes>
-      </BrowserRouter>
+ 
     </>
   );
 };
