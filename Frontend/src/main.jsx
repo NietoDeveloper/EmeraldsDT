@@ -8,7 +8,5 @@ import DataStore from "./ContexApi.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <DataStore>
 
-  </React.StrictMode>
 );
