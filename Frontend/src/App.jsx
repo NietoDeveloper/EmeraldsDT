@@ -21,15 +21,7 @@ import Cart from "./screens/Cart";
 import AddCategories from "./screens/admin/categories/AddCategories";
 import AllCategoies from "./screens/admin/categories/AllCategoies";
 import AllProduct from "./screens/admin/product/AllProduct";
-import AddProduct from "./screens/admin/product/AddProduct";
-import AddNews from "./screens/admin/news/AddNews";
-import AllNewsAdmin from "./screens/admin/news/AllNews";
-import AllIngredient from "./screens/admin/ingredient/AllIngredient";
-import AddIngredient from "./screens/admin/ingredient/AddIngredient";
-import SubAdmin from "./screens/subAdmin/SubAdmin";
-import User from "./screens/admin/user/User";
-import Orders from "./screens/admin/orders/Orders";
-import OneProductPage from "./screens/OneProductPage";
+
 
 
 
