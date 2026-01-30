@@ -82,15 +82,7 @@ const Main = () => {
           </div>
         </div>
       ) : (
-        <div className="lg:mt-24 relative menupage lg:pl-10">
-          {firstTwoCategories.map((category, index) => (
-            <div key={index} className="">
-              <h1 className="text-3xl font-bold mt-20 max-sm:mt-28 lg:mb-12 text-center">
-                {category.category}
-              </h1>
-              <div className="mt-10 grid lg:grid-cols-3 grid-cols-2 gap-8 lg:gap-x-20 lg:gap-y-20 max-sm:-mb-20 relative menupage  w-full">
 
-      )}
 
       <div
         className="absolute overflow-hidden z-10  left-0 mx-auto w-full lg:px-40  "
