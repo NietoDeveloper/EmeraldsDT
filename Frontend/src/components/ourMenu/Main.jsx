@@ -48,20 +48,6 @@ const Main = () => {
         setLoading(false);
       } catch (error) {
         console.log(error);
-      }
-    };
-    fetchData();
-  }, []);
-
-  const handleModalShow = async (item) => {
-    setShowModal(true);
-    try {
-      const { data } = await axios.get(`/admin/getItemById/${item._id}`);
-      setSelectedItem(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
 
 
