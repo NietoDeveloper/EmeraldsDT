@@ -111,10 +111,7 @@ const Main = () => {
         </div>
         <Footer />
       </div>
-      {/* modal for details */}
-      <AddToCart
 
-      />
     </>
   );
 };
