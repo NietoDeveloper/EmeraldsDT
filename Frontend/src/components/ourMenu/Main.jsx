@@ -95,12 +95,7 @@ const Main = () => {
                       className="relative lg:w-56 w-full  mx-auto"
                       onClick={() => setSelectedItem(item)}
                     >
-                      <img
-                        src={item.image.url}
-                        alt=""
-                        className="lg:w-[140px] lg:h-[120px] w-[100px] h-[80px] object-cover block mx-auto cursor-pointer"
-                        onClick={() => navigateToOneItem(item)}
-                      />
+                      
                       <p className="text-center lg:text-[18px] text-sm mt-3 ">
                         {item.name}
                       </p>
