@@ -63,10 +63,6 @@ const Main = () => {
     }
   };
 
-  const navigateToOneItem = (item) => {
-    localStorage.setItem("oneItemId", item._id);
-    navigate(`/our-menu/item/${item._id}`);
-  };
 
   const groupedCategories = state.data.items?.reduce((acc, item) => {
     if (item && item.category) {
