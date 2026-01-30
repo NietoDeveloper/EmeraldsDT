@@ -95,10 +95,7 @@ const Main = () => {
                       className="relative lg:w-56 w-full  mx-auto"
                       onClick={() => setSelectedItem(item)}
                     >
-                      
-                      <p className="text-center lg:text-[18px] text-sm mt-3 ">
-                        {item.name}
-                      </p>
+
                       <div
                         className="h-8 w-8  absolute lg:top-1/2   right-0  lg:translate-x-[-30%] top-[40%] translate-x-1/2 -translate-y-1/2 flex items-center cursor-pointer justify-center"
                         onClick={() => handleModalShow(item)}
