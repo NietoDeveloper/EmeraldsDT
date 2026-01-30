@@ -64,23 +64,5 @@ const Main = () => {
   };
 
 
-  // Slice the first two categories and their items
-  const firstTwoCategories = state.categoryNames.slice(0, 2);
-
-  // Filter out the first two categories from all categories
-  const remainingCategories = state.categoryNames.slice(2);
-
-  return (
-    <>
-      <h1 className="font-hobo lg:text-6xl text-4xl text-center lg:pl-10 lg:mt-0 mt-20">
-        Full Menu
-      </h1>
-      {loading ? ( // Render loading message while data is being fetched
-        <div className="flex justify-center items-center lg:h-screen lg:-mt-52">
-          <div class="flex justify-center items-center lg:h-screen">
-            <div class="animate-spin ease-linear rounded-full w-20 h-20 border-t-2 border-b-2 border-red-500 ml-3"></div>
-
-
-};
 
 export default Main;
