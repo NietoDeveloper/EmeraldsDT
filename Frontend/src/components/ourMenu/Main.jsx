@@ -89,8 +89,7 @@ const Main = () => {
                 {category.category}
               </h1>
               <div className="mt-10 grid lg:grid-cols-3 grid-cols-2 gap-8 lg:gap-x-20 lg:gap-y-20 max-sm:-mb-20 relative menupage  w-full">
-                {groupedCategories[category._id].map((item, index) => (
-                  <div key={index} className=" w-full ">
+   
                    
                   </div>
                 ))}
