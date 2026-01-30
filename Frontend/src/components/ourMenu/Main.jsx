@@ -102,18 +102,7 @@ const Main = () => {
                       className="relative lg:w-56 w-full mx-auto"
                       onClick={() => setSelectedItem(item)}
                     >
-                    
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-        <Footer />
-      </div>
 
-    </>
-  );
 };
 
 export default Main;
