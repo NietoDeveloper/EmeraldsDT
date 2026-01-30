@@ -87,20 +87,7 @@ const Main = () => {
       <div
         className="absolute overflow-hidden z-10  left-0 mx-auto w-full lg:px-40  "
         style={{ maxWidth: "1600px" }}
-      >
-        <div>
-          {remainingCategories.map((category, index) => (
-            <div key={index} className="">
-              <h1 className="text-3xl font-bold mt-20 max-sm:mt-28 lg:mb-24 text-center">
-                {category.category}
-              </h1>
-              <div className="mt-10 grid lg:grid-cols-4 grid-cols-2 gap-8 lg:gap-y-20 lg:gap-x-16 lg:ml-2 relative menupage w-full">
-                {/* Replace the placeholder logic with your actual rendering logic */}
-                {groupedCategories[category._id].map((item, index) => (
-                  <div key={index} className="w-full">
-                    <div
-                      className="relative lg:w-56 w-full mx-auto"
-                      onClick={() => setSelectedItem(item)}
+
                     >
 
 };
