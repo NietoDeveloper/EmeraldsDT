@@ -113,9 +113,7 @@ const Main = () => {
       </div>
       {/* modal for details */}
       <AddToCart
-        showModal={showModal}
-        closeModal={closeModel}
-        selectedItem={selectedItem}
+
       />
     </>
   );
