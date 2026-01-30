@@ -13,12 +13,7 @@ const Main = () => {
   const [selectedItem, setSelectedItem] = useState({});
   const [loading, setLoading] = useState(true);
 
-  const [showModal, setShowModal] = useState(false);
-  const [state, setState] = useState({
-    data: { items: [] },
-    categories: [],
-    categoryNames: [],
-  });
+
 
   const navigate = useNavigate();
 
