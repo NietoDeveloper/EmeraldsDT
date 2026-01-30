@@ -64,14 +64,6 @@ const Main = () => {
   };
 
 
-  const groupedCategories = state.data.items?.reduce((acc, item) => {
-    if (item && item.category) {
-      acc[item.category] = acc[item.category] || [];
-      acc[item.category].push(item);
-    }
-    return acc;
-  }, {});
-
   // Slice the first two categories and their items
   const firstTwoCategories = state.categoryNames.slice(0, 2);
 
