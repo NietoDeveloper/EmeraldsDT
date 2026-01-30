@@ -102,25 +102,7 @@ const Main = () => {
                       className="relative lg:w-56 w-full mx-auto"
                       onClick={() => setSelectedItem(item)}
                     >
-                      <img
-                        src={item.image.url}
-                        alt=""
-                        className="lg:w-[140px] lg:h-[120px] w-[100px] h-[80px] object-cover block mx-auto cursor-pointer"
-                        onClick={() => navigateToOneItem(item)}
-                      />
-                      <p className="text-center lg:text-[18px] text-sm mt-3 ">
-                        {item.name}
-                      </p>
-                      <div
-                        className="h-8 w-8 absolute  right-0 lg:-right-0 top-[40%] flex items-center cursor-pointer justify-center"
-                        onClick={() => handleModalShow(item)}
-                      >
-                        <FaPlus className="text-[#bebebe]" />
-                      </div>
-                      <div className="h-8 w-8 absolute lg:top-1/2 left-6 lg:-translate-x-1/2 -translate-x-full -translate-y-1/2 top-[40%] flex items-center cursor-pointer justify-center">
-                        <FaMinus className="text-[#bebebe]" />
-                      </div>
-                    </div>
+                    
                   </div>
                 ))}
               </div>
