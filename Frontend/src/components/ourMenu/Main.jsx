@@ -79,16 +79,7 @@ const Main = () => {
         <div className="flex justify-center items-center lg:h-screen lg:-mt-52">
           <div class="flex justify-center items-center lg:h-screen">
             <div class="animate-spin ease-linear rounded-full w-20 h-20 border-t-2 border-b-2 border-red-500 ml-3"></div>
-          </div>
-        </div>
-      ) : (
 
-
-      <div
-        className="absolute overflow-hidden z-10  left-0 mx-auto w-full lg:px-40  "
-        style={{ maxWidth: "1600px" }}
-
-                    >
 
 };
 
