@@ -110,34 +110,3 @@ const AddItems = () => {
   const SubmitHandler = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-
-    try {
-      setUploading(true);
-
-      const formData = new FormData();
-      formData.append("name", name);
-      formData.append("price", price);
-      formData.append("description", description);
-      formData.append("category", category);
-      formData.append("image", image);
-      formData.append("calories", calories);
-      formData.append("protein", protein);
-      formData.append("carbs", carbs);
-      formData.append("fat", fat);
-      nutrition.forEach((item, index) => {
-        formData.append(`nutrition[${index}][name]`, item.name);
-        formData.append(`nutrition[${index}][value]`, item.value);
-      });
-      selectedIngredients.forEach((id) => {
-        formData.append("ingredients", id);
-      });
-
-      const { data } = await axios.post("/admin/addItem", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-
-      if (data.success) {
-        MySwal.fire({
-              
