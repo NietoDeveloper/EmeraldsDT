@@ -165,25 +165,4 @@ const AddItems = () => {
           </div>
 
        
-                    id={`ingredient-${index}`}
-                    value={item._id}
-                    onChange={(e) => {
-                      if (e.target.checked) {
-                        setSelectedIngredients((prev) => [...prev, item._id]);
-                      } else {
-                        setSelectedIngredients((prev) =>
-                          prev.filter((id) => id !== item._id)
-                        );
-                      }
-                    }}
-                  />
-                  <label
-                    htmlFor={`ingredient-${index}`}
-                    className="block text-sm font-medium"
-                  >
-                    {item.name}
-                  </label>
-                </div>
-              ))}
-            </div>
-          </div>
+                   
