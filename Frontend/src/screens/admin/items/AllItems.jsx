@@ -220,13 +220,7 @@ const AllItems = () => {
                           {categories[item.category]}
                         </td>
                         <td className="px-6 py-4">
-                          <Link
-                            href="#"
-                            className="font-medium text-blue-600 hover:underline"
-                            onClick={() => toggleModal(item)}
-                          >
-                            Update
-                          </Link>
+  
                         </td>
                         <td className="px-6 py-4 text-right">
                           <MdDelete
