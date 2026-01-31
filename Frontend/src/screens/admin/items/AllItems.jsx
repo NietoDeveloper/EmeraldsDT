@@ -205,20 +205,7 @@ const AllItems = () => {
                             {(increment = increment + 1)}.
                           </h6>
                         </td>
-                        <th className="px-6 py-4 whitespace-nowrap">
-                          <div className="h-20 w-24 rounded-md bg-blue-200 overflow-hidden">
-                            <img
-                              className="h-full w-full object-cover"
-                              src={item.image.url}
-                              alt=""
-                            />
-                          </div>
-                        </th>
-                        <td className="px-6 py-4">{item.name}</td>
-                        <td className="px-6 py-4">€ {item.price}</td>
-                        <td className="px-6 py-4">
-                          {categories[item.category]}
-                        </td>
+
                         <td className="px-6 py-4">
   
                         </td>
