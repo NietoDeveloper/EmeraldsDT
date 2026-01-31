@@ -206,9 +206,7 @@ const AllItems = () => {
                           </h6>
                         </td>
 
-                        <td className="px-6 py-4">
-  
-                        </td>
+
 
                       </tr>
                     ))}
