@@ -209,12 +209,7 @@ const AllItems = () => {
                         <td className="px-6 py-4">
   
                         </td>
-                        <td className="px-6 py-4 text-right">
-                          <MdDelete
-                            className="text-2xl text-color-red cursor-pointer"
-                            onClick={() => deleteHandler(item._id)}
-                          />
-                        </td>
+
                       </tr>
                     ))}
                   </React.Fragment>
