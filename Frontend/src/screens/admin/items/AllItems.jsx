@@ -182,9 +182,7 @@ const AllItems = () => {
                 <th scope="col" className="px-6 py-3">
                   Item Name
                 </th>
-                <th scope="col" className="px-6 py-3">
-                  Item Price
-                </th>
+                
                 <th scope="col" className="px-6 py-3">
                   Item Category
                 </th>
