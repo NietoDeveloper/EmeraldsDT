@@ -158,13 +158,7 @@ const AllItems = () => {
                   Remove Access
                 </button>
               ) : (
-                <button
-                  type="submit"
-                  className="bg-green-600 mt-3 text-white px-2 rounded-lg"
-                  onClick={() => SubadminAccessHandler(suba?._id)}
-                >
-                  Give Access
-                </button>
+
               )}
             </div>
           ))}
