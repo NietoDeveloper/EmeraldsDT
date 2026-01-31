@@ -140,29 +140,4 @@ const AddItems = () => {
 
       if (data.success) {
         MySwal.fire({
-          title: data.message,
-          text: "You clicked the button!",
-          icon: "success",
-        });
-        // reload the window
-        window.location.reload();
-      }
-    } catch (error) {
-      toast.error(error?.response?.data?.message);
-      console.log(error);
-    } finally {
-      setUploading(false);
-    }
-  };
-
-  
-              required
-            />
-
-            {errors.description && (
-              <p className="text-red-500 mt-1">{errors.description}</p>
-            )}
-          </div>
-
-       
-                   
+              
