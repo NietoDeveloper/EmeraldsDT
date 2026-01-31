@@ -83,19 +83,7 @@ const AllItems = () => {
     } catch (error) {
       console.log(error);
     }
-  };
 
-  useEffect(() => {
-    const getSubadmin = async () => {
-      try {
-        const { data } = await axios.get("/admin/subAdmin");
-        setSubAdmin(data.subadmin);
-      } catch (error) {
-        alert(error.response.data.error);
-      }
-    };
-    getSubadmin();
-  }, []);
 
 
   const SubadminRemoveAccessHandler = async (id) => {
