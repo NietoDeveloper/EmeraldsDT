@@ -21,69 +21,6 @@ const AllItems = () => {
     setSelectedItem(item);
   };
 
-  const location = useLocation();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        const { data } = await axios.get("/admin/getItem");
-        setData(data);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const { data } = await axios.get("/admin/getCategory");
-        const categoryData = {};
-        data.categories.forEach((category) => {
-          categoryData[category._id] = category.category;
-        });
-        setCategories(categoryData);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchCategories();
-  }, []);
-
-  const deleteHandler = async (itemId) => {
-    try {
-      await MySwal.fire({
-        title: "Are you sure?",
-        text: "You want to delete this item!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!",
-      }).then(async (result) => {
-        if (result.isConfirmed) {
-          await axios.post(`/admin/deleteItem/${itemId}`);
-          setData((prevData) => ({
-            ...prevData,
-            items: prevData?.items?.filter((item) => item._id !== itemId),
-          }));
-
-          await MySwal.fire({
-            title: "Deleted!",
-            text: "Your file has been deleted.",
-            icon: "success",
-          });
-        }
-      });
-    } catch (error) {
-      console.log(error);
-    }
-
 
 
   const SubadminRemoveAccessHandler = async (id) => {
