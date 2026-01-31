@@ -182,16 +182,7 @@ const AllItems = () => {
                 <th scope="col" className="px-6 py-3">
                   Item Name
                 </th>
-                
-                <th scope="col" className="px-6 py-3">
-                  Item Category
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  Update
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  Delete
-                </th>
+            
               </tr>
             </thead>
             <tbody>
