@@ -97,21 +97,6 @@ const AllItems = () => {
     getSubadmin();
   }, []);
 
-  const SubadminAccessHandler = async (id) => {
-    try {
-      await axios.post(`/admin/updateSubAdmin/${id}`, {
-        itemPermission: true,
-      });
-      await MySwal.fire({
-        title: "Access Given!",
-        text: "Subadmin can now access the Items!",
-        icon: "success",
-      });
-      window.location.reload();
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   const SubadminRemoveAccessHandler = async (id) => {
     try {
