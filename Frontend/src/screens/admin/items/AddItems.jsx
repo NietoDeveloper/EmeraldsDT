@@ -165,26 +165,6 @@ const AddItems = () => {
           </div>
 
        
-                  </option>
-                  {categories.map((cat) => (
-                    <option key={cat._id} value={cat._id}>
-                      {cat.category}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              {errors.category && (
-                <p className="text-red-500 mt-1">{errors.category}</p>
-              )}
-            </div>
-
-            <div className="relative z-0 w-full mb-7 group">
-              <div>
-                <label
-                  className="block mb-2 text-md font-medium "
-                  htmlFor="user_avatar"
-                >
-                  Upload Item Image
                   <span className="text-red-500">*</span>
                 </label>
                 <input
