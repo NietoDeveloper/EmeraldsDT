@@ -164,28 +164,7 @@ const AddItems = () => {
             )}
           </div>
 
-          <div className="grid md:grid-cols-2  md:gap-6">
-            <div className="relative z-0 w-full mb-7 group">
-              <div className="flex flex-col items-start mb-3">
-                <label
-                  className="block mb-2 text-md font-medium "
-                  htmlFor="category"
-                >
-                  Select Category <span className="text-red-500">*</span>
-                </label>
-
-                <select
-                  name="category"
-                  id="category"
-                  className={`block w-full p-2 text-gray-900 border-2 border-gray-700 rounded-lg bg-gray-50 text-base focus:ring-color-red focus:border-color-red ${
-                    errors.category ? "border-red-500" : ""
-                  }`}
-                  onChange={(e) => setCategory(e.target.value)}
-                  value={category}
-                  required
-                >
-                  <option value="" disabled selected>
-                    Select Category
+       
                   </option>
                   {categories.map((cat) => (
                     <option key={cat._id} value={cat._id}>
