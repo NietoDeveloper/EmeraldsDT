@@ -165,38 +165,6 @@ const AddItems = () => {
           </div>
 
        
-                  <span className="text-red-500">*</span>
-                </label>
-                <input
-                  className={`block w-full text-sm text-gray-900 border-2 border-gray-700 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none focus:border-color-red ${
-                    errors.image ? "border-red-500" : ""
-                  }`}
-                  aria-describedby="user_avatar_help"
-                  id="user_avatar"
-                  type="file"
-                  onChange={handleFileChange}
-                  accept="image/*"
-                  required
-                />
-              </div>
-              {errors.image && (
-                <p className="text-red-500 mt-1">{errors.image}</p>
-              )}
-            </div>
-          </div>
-
-          <div className="ring-1 shadow-xl ring-black mt-20 rounded-xl p-5">
-            <h3 className="text-center mb-8 font-bold text-color-red">
-              Ingredients Information
-            </h3>
-
-            <div className="grid grid-cols-3 gap-4 mb-4">
-              {/* Ingredients checkbox */}
-
-              {ingredients.map((item, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <input
-                    type="checkbox"
                     id={`ingredient-${index}`}
                     value={item._id}
                     onChange={(e) => {
