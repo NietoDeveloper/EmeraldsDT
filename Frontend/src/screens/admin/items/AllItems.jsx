@@ -23,24 +23,4 @@ const AllItems = () => {
 
 
 
-  const SubadminRemoveAccessHandler = async (id) => {
-    try {
-      await axios.post(`/admin/updateSubAdmin/${id}`, {
-        itemPermission: false,
-      });
-      await MySwal.fire({
-        title: "Access Removed!",
-        text: "Subadmin can't access the Items now!",
-        icon: "success",
-      });
-
-      <UpdateModal
-        toggleModal={toggleModal}
-        isOpen={isOpen}
-        selectedItem={selectedItem}
-      />
-    </>
-  );
-};
-
-export default AllItems;
+  
