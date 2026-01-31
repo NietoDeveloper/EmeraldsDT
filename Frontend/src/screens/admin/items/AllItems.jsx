@@ -8,18 +8,6 @@ import UpdateModal from "./UpdateModal";
 
 const MySwal = withReactContent(Swal);
 
-const AllItems = () => {
-  const [data, setData] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [categories, setCategories] = useState({});
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState({});
-  const [subAdmin, setSubAdmin] = useState([]);
-
-  const toggleModal = (item) => {
-    setIsOpen(!isOpen);
-    setSelectedItem(item);
-  };
 
 
 
