@@ -200,11 +200,6 @@ const AllItems = () => {
                     </tr> */}
                     {categoryItems.map((item, index) => (
                       <tr key={item._id} className="border-b hover:bg-gray-100">
-                        <td className="px-6 py-4">
-                          <h6 className="font-bold">
-                            {(increment = increment + 1)}.
-                          </h6>
-                        </td>
 
 
 
