@@ -85,8 +85,7 @@ const NewNews = () => {
 
                       )}
                     </p>
-                    <h6 className="font-semibold text-color-red mt-5">
-                      {news.createdAt.slice(0, 10)}
+    
                     </h6>
                   </div>
                 </div>
