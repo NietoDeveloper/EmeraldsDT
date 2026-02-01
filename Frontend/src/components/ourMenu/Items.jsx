@@ -64,9 +64,7 @@ const Items = () => {
 
   return (
     <>
-      <h1 className="font-hobo lg:pl-14 lg:text-5xl text-4xl text-center  lg:mt-0 mt-20">
-        {categoryName}
-      </h1>
+     
       <div className="lg:mt-24 lg:pl-10 mt-10 grid  lg:grid-cols-3 grid-cols-2 gap-8 lg:gap-x-20 lg:gap-y-24 relative menupage  w-full">
 
 
