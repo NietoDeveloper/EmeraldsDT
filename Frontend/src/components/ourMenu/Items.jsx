@@ -26,14 +26,6 @@ const Items = () => {
       try {
         setLoading(true);
 
-        const { data } = await axios.get(
-          `/admin/getItemByCategory/${catgoryId}`
-        );
-
-        setData(data.items);
-      } catch (error) {
-        console.log(error);
-      } finally {
 
 
      
