@@ -11,22 +11,6 @@ const Items = () => {
   const [loading, setLoading] = React.useState(false);
   const [data, setData] = React.useState([]);
   const [itemData, setItemData] = useState({});
-  const [selectedItem, setSelectedItem] = useState({});
-
-  const [showModal, setShowModal] = useState(false);
-
-  const catgoryId = localStorage.getItem("categoryId");
-  const categoryName = localStorage.getItem("categoryName");
-
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-
-
 
      
      
