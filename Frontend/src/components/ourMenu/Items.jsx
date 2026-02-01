@@ -74,10 +74,6 @@ const Items = () => {
           ))}
       </div>
 
-      <AddToCart
-        showModal={showModal}
-        closeModal={closeModel}
-        selectedItem={selectedItem}
       />
     </>
   );
