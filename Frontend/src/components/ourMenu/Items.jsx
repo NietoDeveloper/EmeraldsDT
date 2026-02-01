@@ -70,13 +70,5 @@ const Items = () => {
 
 
 
-            </div>
-          ))}
-      </div>
-
-      />
-    </>
-  );
-};
-
+           
 export default Items;
