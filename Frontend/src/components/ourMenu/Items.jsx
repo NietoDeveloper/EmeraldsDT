@@ -84,8 +84,6 @@ const Items = () => {
                 {item.name}
               </p>
 
-                <FaPlus className="text-[#bebebe]" />
-              </div>
               <div className="h-8 w-8 absolute lg:top-1/2 left-6 lg:-translate-x-1/2 -translate-x-full -translate-y-1/2 top-[40%] flex items-center cursor-pointer justify-center">
                 <FaMinus className="text-[#bebebe]" />
               </div>
