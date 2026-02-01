@@ -82,14 +82,7 @@ const NewNews = () => {
                         ? news.description
                         : news.description.slice(0, 100)}
                       {news.description.length > 100 && (
-                        <span
-                          className="text-color-red cursor-pointer"
-                          onClick={() => toggleExpandCard(news._id)}
-                        >
-                          {expandedCardId === news._id
-                            ? " Read Less"
-                            : " Read More"}
-                        </span>
+
                       )}
                     </p>
                     <h6 className="font-semibold text-color-red mt-5">
