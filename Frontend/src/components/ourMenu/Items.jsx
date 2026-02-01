@@ -74,12 +74,7 @@ const Items = () => {
               key={item._id}
               className="relative lg:w-56 w-full mx-auto cursor-pointer"
             >
-              <img
-                src={item.image.url}
-                alt=""
-                className="lg:w-[140px] lg:h-[120px] w-[100px] h-[80px] object-cover block mx-auto"
-                onClick={() => navigateToOneItem(item)}
-              />
+
 
 
             </div>
