@@ -48,22 +48,6 @@ const Items = () => {
     navigate(`/our-menu/item/${item._id}`);
   };
 
-  const handleModalShow = async (item) => {
-    setShowModal(true);
-    try {
-      const { data } = await axios.get(`/admin/getItemById/${item._id}`);
-      setSelectedItem(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const closeModel = (e) => {
-    setShowModal(false);
-  };
-
-  return (
-    <>
      
      
 
