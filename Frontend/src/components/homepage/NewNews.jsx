@@ -76,12 +76,7 @@ const NewNews = () => {
                       onClick={() => toggleExpandCard(news._id)}
                     >
                       {news.title}
-                    </h1>
-                    <p className="mt-2">
-                      {expandedCardId === news._id
-                        ? news.description
-                        : news.description.slice(0, 100)}
-                      {news.description.length > 100 && (
+         
 
                       )}
                     </p>
