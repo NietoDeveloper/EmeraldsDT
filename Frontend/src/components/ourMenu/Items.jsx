@@ -8,15 +8,4 @@ const Items = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const [loading, setLoading] = React.useState(false);
-  const [data, setData] = React.useState([]);
-  const [itemData, setItemData] = useState({});
 
-     
-     
-
-
-
-
-           
-export default Items;
