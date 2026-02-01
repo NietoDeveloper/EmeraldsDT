@@ -34,19 +34,7 @@ const Items = () => {
       } catch (error) {
         console.log(error);
       } finally {
-        setLoading(false);
-      }
-    };
 
-    fetchData();
-  }, [catgoryId]);
-
-  // console.log(data);
-
-  const navigateToOneItem = (item) => {
-    localStorage.setItem("oneItemId", item._id);
-    navigate(`/our-menu/item/${item._id}`);
-  };
 
      
      
