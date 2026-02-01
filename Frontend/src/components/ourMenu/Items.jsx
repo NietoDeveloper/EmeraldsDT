@@ -68,12 +68,7 @@ const Items = () => {
         {categoryName}
       </h1>
       <div className="lg:mt-24 lg:pl-10 mt-10 grid  lg:grid-cols-3 grid-cols-2 gap-8 lg:gap-x-20 lg:gap-y-24 relative menupage  w-full">
-        {data &&
-          data.map((item) => (
-            <div
-              key={item._id}
-              className="relative lg:w-56 w-full mx-auto cursor-pointer"
-            >
+
 
 
 
