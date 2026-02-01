@@ -80,9 +80,7 @@ const Items = () => {
                 className="lg:w-[140px] lg:h-[120px] w-[100px] h-[80px] object-cover block mx-auto"
                 onClick={() => navigateToOneItem(item)}
               />
-              <p className="text-center lg:text-[18px] text-sm mt-3">
-                {item.name}
-              </p>
+
 
             </div>
           ))}
