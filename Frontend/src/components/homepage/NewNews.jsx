@@ -12,19 +12,6 @@ const NewNews = () => {
   const [featuredNews, setFeaturedNews] = useState([]);
   const [expandedCardId, setExpandedCardId] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data } = await axios.get("/news/readNews");
-        setData(data.news);
-        const featured = data.news.filter((news) => news.featured === true);
-        setFeaturedNews(featured);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchData();
-  }, []);
 
   const toggleExpandCard = (id) => {
     setExpandedCardId(id === expandedCardId ? null : id);
