@@ -5,21 +5,7 @@ import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
 import AddToCart from "./AddToCart";
 
-const Hero = () => {
-  const navigate = useNavigate();
-  const [category, setCategory] = useState([]);
-  const [loading, setLoading] = useState(true);
 
-  const location = useLocation();
-  // const [selectedItem, setSelectedItem] = useState({});
-
-  // const [showModal, setShowModal] = useState(false);
-
-  // // new
-  // const [data, setData] = useState({ items: [] });
-
-  // const [categories, setCategories] = useState([]);
-  // const [categoryNames, setCategoryNames] = useState([]);
 
   const closeModel = (e) => {
     setShowModal(false);
