@@ -13,11 +13,6 @@ const DashboardView = () => {
       userGain: 100,
     },
 
-    {
-      id: 4,
-      name: "All Details",
-      userGain: 400,
-    },
   ];
 
   const [userData, setUserData] = useState({
