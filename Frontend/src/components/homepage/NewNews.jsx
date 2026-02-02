@@ -17,15 +17,6 @@ const NewNews = () => {
     setExpandedCardId(id === expandedCardId ? null : id);
   };
 
-  return (
-
-
-
-
-          ))}
-        </Swiper>
-      </div>
-    </div>
   );
 };
 
