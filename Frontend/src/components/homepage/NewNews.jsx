@@ -57,13 +57,7 @@ const NewNews = () => {
             pauseOnMouseEnter: true,
           }}
         >
-          {featuredNews.map((news) => (
-            <SwiperSlide key={news._id}>
-              <div className="h-full relative overflow-hidden py-5 border-2 mt-5 rounded-xl">
-                <div className="w-full relative">
-                  <div
-                    className={`px-5 h-[400px] ${
-                      expandedCardId === news._id ? "h-auto" : ""
+xpandedCardId === news._id ? "h-auto" : ""
                     }`}
                   >
 
