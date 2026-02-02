@@ -89,11 +89,6 @@ const UpdateModel = ({ toggleModal, isOpen, selectedCategory }) => {
                 </label>
 
 
-              <div className="mb-4">
-                <label className="block text-gray-900 text-sm font-bold mb-2">
-                  Category Image
-                </label>
-
 
 s
                 </button>
