@@ -38,15 +38,3 @@ const DashboardView = () => {
 
 
 
-
-              <button
-                className="py-1 px-3 bg-green-600 rounded-xl mb-6 text-white flex items-center space-x-1"
-                onClick={() => switchOnOrder(adminData?._id)}
-              >
-                <FaLock />
-                <span>Switch On Order</span>
-              </button>
-            )}
-          </div>
-        )}
-
