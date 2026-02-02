@@ -6,16 +6,6 @@ import { FaPlus } from "react-icons/fa6";
 import AddToCart from "./AddToCart";
 
 
-
-    fetchData();
-  }, []);
-
-  const HandleNavigate = (id, name) => {
-    localStorage.setItem("categoryId", id);
-    localStorage.setItem("categoryName", name);
-    navigate(`/our-menu/${id}`);
-  };
-
   // const handleModalShow = async (item) => {
   //   setShowModal(true);
   //   try {
