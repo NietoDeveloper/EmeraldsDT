@@ -87,19 +87,5 @@ const AddToCart = ({ showModal, closeModal, selectedItem }) => {
 
             <div className="mt-5">
               {selectedItem?.ingredients?.map((ingredient, index) => (
-                <div key={index} className="flex justify-between w-full my-4">
-                  <p>{ingredient.name}</p>
-                  <div className="flex items-center gap-3">
-                    <div
-                      className="h-6 w-6  flex items-center cursor-pointer justify-center"
-                      onClick={() =>
-                        handleRemoveIngredient(
-                          ingredient.name,
-                          ingredient.price
-                        )
-                      }
-                    >
-
-};
 
 export default AddToCart;
