@@ -50,19 +50,3 @@ const DashboardView = () => {
           </div>
         )}
 
-ame="cardName text-black2 text-sm mt-2">
-                  {data.name}
-                </div>
-              </div>
-            </div>
-          ))}
-
-            />
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default DashboardView;
