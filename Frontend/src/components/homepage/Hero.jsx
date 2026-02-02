@@ -14,19 +14,6 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 const Hero = () => {
   const [banner, setBanner] = useState([]);
 
-  useEffect(() => {
-    try {
-      const getBanner = async () => {
-        const { data } = await axios.get("/admin/getBanner");
-
-
-        setBanner(data.banners);
-      };
-      getBanner();
-    } catch (error) {
-      console.log(error);
-    }
-  }, []);
 
 
 
