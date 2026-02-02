@@ -13,11 +13,5 @@ const NewNews = () => {
   const [expandedCardId, setExpandedCardId] = useState(null);
 
 
-  const toggleExpandCard = (id) => {
-    setExpandedCardId(id === expandedCardId ? null : id);
-  };
-
-  );
-};
 
 export default NewNews;
