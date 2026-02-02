@@ -56,16 +56,7 @@ const NewNews = () => {
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
-        >
-xpandedCardId === news._id ? "h-auto" : ""
-                    }`}
-                  >
 
-     
-         
-
-                      )}
-                    </p>
     
                     </h6>
                   </div>
