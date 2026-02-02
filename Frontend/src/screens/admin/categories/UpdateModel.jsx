@@ -16,22 +16,7 @@ const UpdateModel = ({ toggleModal, isOpen, selectedCategory }) => {
     setCategoryImage(file);
   };
 
-  const submitHandler = async (e) => {
-    e.preventDefault();
 
-    const formData = new FormData();
-
-
-
-
-
-
-s
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
       </div>
     </>
   );
