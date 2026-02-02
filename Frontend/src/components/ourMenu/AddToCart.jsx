@@ -57,30 +57,6 @@ const AddToCart = ({ showModal, closeModal, selectedItem }) => {
       setAllIngredients((prev) => [
         ...prev,
         { name: name, price: price, quantity: 1 }, // Initialize quantity to 1
-      ]);
-    }
-
-    setTotalPrice((prev) => prev + price);
-  };
-
-  const handleRemoveIngredient = (name, price) => {
-    const existingIngredient = allIngredients.find(
-      (ingredient) => ingredient.name === name
-    );
-
-    if (existingIngredient && existingIngredient.quantity > 1) {
-      setAllIngredients((prev) =>
-        prev.map((ingredient) =>
-          ingredient.name === name
-            ? { ...ingredient, quantity: ingredient.quantity - 1 }
-            : ingredient
-        )
-      );
-    } else if (existingIngredient) {
-      setAllIngredients((prev) =>
-        prev.filter((ingredient) => ingredient.name !== name)
-      );
-    }
 
 
           
