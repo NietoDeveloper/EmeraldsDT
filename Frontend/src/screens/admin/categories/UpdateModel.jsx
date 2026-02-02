@@ -71,17 +71,6 @@ const UpdateModel = ({ toggleModal, isOpen, selectedCategory }) => {
             <form onSubmit={submitHandler}>
               <div className="mb-4">
 
-                <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-900 leading-tight focus:outline-none focus:shadow-outline ring-1 ring-black"
-                  id="itemName"
-                  type="text"
-                  placeholder={selectedCategory.category}
-                  onChange={(e) => setCategoryName(e.target.value)}
-                  value={categoryName}
-                />
-              </div>
-              <div className="mb-4">
-
 
 
 
