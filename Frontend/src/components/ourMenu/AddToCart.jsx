@@ -92,11 +92,6 @@ const AddToCart = ({ showModal, closeModal, selectedItem }) => {
       setTotalPrice((prev) =>
         Math.max(initialItemPrice, prev - ingredient.price)
       );
-    } else {
-      setAllIngredients((prev) => [...prev, ingredient]);
-      setTotalPrice((prev) => prev + ingredient.price);
-    }
-  };
 
   const addToCart = () => {
     if (!spicynonspicy && !location.pathname.includes("/merchandise")) {
