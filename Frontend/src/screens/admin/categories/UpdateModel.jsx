@@ -95,9 +95,6 @@ const UpdateModel = ({ toggleModal, isOpen, selectedCategory }) => {
                 </label>
 
 
-              <div className="w-full flex items-center justify-end gap-4">
-
-                <button
 s
                 </button>
               </div>
