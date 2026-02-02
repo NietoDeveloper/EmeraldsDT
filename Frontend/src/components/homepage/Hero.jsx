@@ -31,17 +31,7 @@ const Hero = () => {
   return (
     <div className="h-85vh]  relative w-full  flex items-center justify-between">
       <Swiper
-        slidesPerView={1}
-        spaceBetween={30}
 
-        pagination={false}
-        className="mySwiper w-full h-full"
-        modules={[Pagination, Navigation, Autoplay]}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
       >
         {banner &&
           banner.map((banner, index) => (
