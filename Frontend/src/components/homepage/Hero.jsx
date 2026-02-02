@@ -33,16 +33,7 @@ const Hero = () => {
       <Swiper
 
       >
-        {banner &&
-          banner.map((banner, index) => (
-            <SwiperSlide key={index}>
 
-            </SwiperSlide>
-          ))}
-      </Swiper>
-
-      
-    </div>
   );
 };
 
