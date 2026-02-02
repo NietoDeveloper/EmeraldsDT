@@ -50,17 +50,7 @@ const DashboardView = () => {
           </div>
         )}
 
-        <div className="cardBox grid grid-cols-4 mb-7 gap-4">
-          {UserData.map((data) => (
-            <div
-              key={data.id}
-              className="card relative bg-white shadow-sm shadow-color-red p-6 rounded-lg flex justify-between cursor-pointer transition duration-500 ease-in-out transform hover:scale-105"
-            >
-              <div>
-                <div className="numbers text-blue-500 text-2xl font-semibold">
-                  {data.userGain}
-                </div>
-                <div className="cardName text-black2 text-sm mt-2">
+ame="cardName text-black2 text-sm mt-2">
                   {data.name}
                 </div>
               </div>
