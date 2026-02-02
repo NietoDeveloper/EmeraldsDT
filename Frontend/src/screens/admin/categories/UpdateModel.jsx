@@ -93,15 +93,7 @@ const UpdateModel = ({ toggleModal, isOpen, selectedCategory }) => {
                 <label className="block text-gray-900 text-sm font-bold mb-2">
                   Category Image
                 </label>
-                <input
-                  className="block w-full text-sm text-gray-900 ring-1 ring-black rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 "
-                  aria-describedby="user_avatar_help"
-                  id="user_avatar"
-                  type="file"
-                  onChange={handleFileChange}
-                  accept="image/*"
-                />
-              </div>
+
 
               <div className="w-full flex items-center justify-end gap-4">
 
