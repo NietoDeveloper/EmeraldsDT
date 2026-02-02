@@ -106,10 +106,7 @@ const UpdateModel = ({ toggleModal, isOpen, selectedCategory }) => {
               <div className="w-full flex items-center justify-end gap-4">
 
                 <button
-                  type="submit"
-                  className="py-2 cursor-pointer px-5 rounded-xl bg-color-red text-white"
-                >
-                  {loading ? "Updating..." : "Update"}
+s
                 </button>
               </div>
             </form>
