@@ -148,13 +148,7 @@ const AddToCart = ({ showModal, closeModal, selectedItem }) => {
                     <label>Mild</label>
                   </div>
                   <div className="flex items-center gap-2">
-                    <input
-                      type="radio"
-                      name="spiciness"
-                      id="Hot"
-                      checked={spicynonspicy === "Hot"}
-                      onChange={() => setSpicyNonSpicy("Hot")}
-                    />
+                    
                     <label>Hot</label>
                   </div>
                   <div className="flex items-center gap-2">
