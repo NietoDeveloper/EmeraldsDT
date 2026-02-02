@@ -81,12 +81,7 @@ const UpdateModel = ({ toggleModal, isOpen, selectedCategory }) => {
                 />
               </div>
               <div className="mb-4">
-                <label
-                  className="block text-gray-900 text-sm font-bold mb-2"
-                  htmlFor="itemName"
-                >
-                  Category Position
-                </label>
+
 
 
 
