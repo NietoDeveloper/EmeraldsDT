@@ -55,13 +55,6 @@ const UpdateModel = ({ toggleModal, isOpen, selectedCategory }) => {
 
   return (
     <>
-      <div
-        className={`${
-          isOpen ? "block" : "hidden"
-        } fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity duration-300`}
-        onClick={toggleModal}
-      ></div>
-
 
 
 
