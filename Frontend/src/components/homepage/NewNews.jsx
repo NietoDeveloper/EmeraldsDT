@@ -66,11 +66,7 @@ const NewNews = () => {
                       expandedCardId === news._id ? "h-auto" : ""
                     }`}
                   >
-                    <img
-                      src={news?.image?.url}
-                      alt=""
-                      className="w-1/2 block mx-auto mb-5"
-                    />
+
      
          
 
