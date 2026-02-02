@@ -99,16 +99,7 @@ const AddToCart = ({ showModal, closeModal, selectedItem }) => {
                         )
                       }
                     >
-                     
-        <div
-          className="h-8 w-8 bg-red-500 rounded-full menupage absolute top-20 right-10 -translate-x-1/2 flex items-center cursor-pointer justify-center"
-          onClick={closeModal}
-        >
-          <IoMdClose className="text-white" />
-        </div>
-      </div>
-    </>
-  );
+
 };
 
 export default AddToCart;
