@@ -36,13 +36,7 @@ const Hero = () => {
         {banner &&
           banner.map((banner, index) => (
             <SwiperSlide key={index}>
-              <div className="flex items-center relative md:justify-between h-full justify-center w-full">
-                <img
-                  className="w-full h-full object-cover bg-center"
 
-             
-                />
-              </div>
             </SwiperSlide>
           ))}
       </Swiper>
