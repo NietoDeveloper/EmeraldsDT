@@ -8,9 +8,6 @@ import { Link } from "react-router-dom";
 import axios from "../../utils/axios";
 
 const NewNews = () => {
-  const [data, setData] = useState([]);
-  const [featuredNews, setFeaturedNews] = useState([]);
-  const [expandedCardId, setExpandedCardId] = useState(null);
 
 
 
