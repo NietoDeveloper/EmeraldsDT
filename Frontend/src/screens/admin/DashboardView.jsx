@@ -12,11 +12,7 @@ const DashboardView = () => {
       name: "Total Users",
       userGain: 100,
     },
-    {
-      id: 2,
-      name: "Total Orders",
-      userGain: 200,
-    },
+
     {
       id: 3,
       name: "Total Products",
