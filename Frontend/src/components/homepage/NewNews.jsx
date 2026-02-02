@@ -36,12 +36,7 @@ const NewNews = () => {
         <div className="flex justify-between items-center">
           <h1 className="lg:text-3xl text-2xl font-hobo text-color-red">
             News and Events
-          </h1>
-          <Link to="/allnews">
-            <button className="bg-color-red text-white max-sm:text-sm px-3 py-2 rounded-md font-hobo">
-              View All News
-            </button>
-          </Link>
+
         </div>
 
 
