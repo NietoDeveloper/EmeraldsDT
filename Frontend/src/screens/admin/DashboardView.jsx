@@ -36,17 +36,7 @@ const DashboardView = () => {
     fetchAdminData();
   }, []);
 
-  const switchOffOrder = async (id) => {
-    try {
-      const { data } = await axios.post(`/admin/updateAdmin/${id}`, {
-        orderAccept: false,
-      });
-      setAdminData(data?.admin);
-      window.location.reload();
-    } catch (error) {
-      console.log(error);
-    }
-  };
+
 
   const switchOnOrder = async (id) => {
     try {
