@@ -99,37 +99,7 @@ const AddToCart = ({ showModal, closeModal, selectedItem }) => {
                         )
                       }
                     >
-                      <FaMinus className="text-white" />
-                    </div>
-                    <p className="font-bold">
-                      {allIngredients?.find((i) => i.name === ingredient.name)
-                        ?.quantity || 0}
-                    </p>
-                    <div
-                      className="h-6 w-6 flex items-center cursor-pointer justify-center"
-                      onClick={() =>
-                        handleAddIngredient(ingredient.name, ingredient.price)
-                      }
-                    >
-                      <FaPlus className="text-white" />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <button
-            id="details-modal-btn"
-            onClick={addToCart}
-            className={`bg-color-red w-[200px] h-12 rounded-md block mx-auto mt-10 text-white ${
-              loading ? "pointer-events-none opacity-50" : ""
-            }`}
-          >
-            {loading ? "Loading..." : "Add to Cart"}
-          </button>
-        </div>
-
+                     
         <div
           className="h-8 w-8 bg-red-500 rounded-full menupage absolute top-20 right-10 -translate-x-1/2 flex items-center cursor-pointer justify-center"
           onClick={closeModal}
