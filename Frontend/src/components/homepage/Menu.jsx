@@ -10,7 +10,7 @@ const Menu = () => {
       <div className=" w-full lg:px-10 px-5 lg:pr-5 relative">
         <MenuItems />
       </div>
-      <NewNews />
+
     </div>
   );
 };
