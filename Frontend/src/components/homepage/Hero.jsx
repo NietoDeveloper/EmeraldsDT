@@ -39,7 +39,7 @@ const Hero = () => {
               <div className="flex items-center relative md:justify-between h-full justify-center w-full">
                 <img
                   className="w-full h-full object-cover bg-center"
-                  src={banner.banners.url}
+
                   alt=""
                 />
               </div>
