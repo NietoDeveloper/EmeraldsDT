@@ -83,30 +83,7 @@ const AddToCart = ({ showModal, closeModal, selectedItem }) => {
     }
 
 
-          <div className="w-full lg:mt-2 mt-10  menupage grid gap-10 lg:grid-cols-2 grid-cols-1 px-5 ">
-            <div className="mt-5">
-              {defaultIngredients &&
-                defaultIngredients.map((defaultIngredient, index) => (
-                  <div key={index} className="flex justify-between w-full my-4">
-                    <p>{defaultIngredient.name}</p>
-                    <div
-                      className="flex items-center py-2 px-5  rounded-full bg-red-100 gap-3"
-                      onClick={() => toggleIngredient(defaultIngredient)}
-                    >
-                      <p className="max-sm:text-sm">
-                        No {defaultIngredient.name}
-                      </p>
-                      {allIngredients.find(
-                        (i) => i.name === defaultIngredient.name
-                      ) ? (
-                        <IoCheckmarkCircle className="text-green-500 text-2xl" />
-                      ) : (
-                        <IoMdClose className="text-red-500 text-2xl" />
-                      )}
-                    </div>
-                  </div>
-                ))}
-            </div>
+          
 
             <div className="mt-5">
               {selectedItem?.ingredients?.map((ingredient, index) => (
