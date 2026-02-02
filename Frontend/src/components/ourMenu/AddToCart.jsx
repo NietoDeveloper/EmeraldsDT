@@ -83,13 +83,6 @@ const AddToCart = ({ showModal, closeModal, selectedItem }) => {
     }
 
 
-
-  const handleRemoveDefaultIngredient = (ingredient) => {
-    const updatedIngredients = allIngredients.filter(
-      (i) => i.name !== ingredient.name
-    );
-
-
   const toggleIngredient = (ingredient) => {
     const index = allIngredients.findIndex((i) => i.name === ingredient.name);
     if (index !== -1) {
