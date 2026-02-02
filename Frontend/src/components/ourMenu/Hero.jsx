@@ -7,26 +7,6 @@ import AddToCart from "./AddToCart";
 
 
 
-  const closeModel = (e) => {
-    setShowModal(false);
-  };
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data } = await axios.get("/admin/getCategory");
-        const sortadCategory = data.categories.sort(
-          (a, b) => a.position - b.position
-        );
-
-        setCategory(sortadCategory);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
     fetchData();
   }, []);
 
