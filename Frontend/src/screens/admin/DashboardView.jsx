@@ -56,18 +56,7 @@ ame="cardName text-black2 text-sm mt-2">
               </div>
             </div>
           ))}
-        </div>
-        <div className="grid grid-cols-2 gap-4">
-          <div className="flex items-center">
-            <Bar data={userData} options={options} />
-          </div>
-          <div>
-            <Pie
-              data={userData}
-              options={{
-                ...options,
-                style: { width: "280px", height: "280px" },
-              }}
+
             />
           </div>
         </div>
