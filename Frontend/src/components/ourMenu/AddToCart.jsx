@@ -82,10 +82,7 @@ const AddToCart = ({ showModal, closeModal, selectedItem }) => {
       );
     }
 
-    if (existingIngredient) {
-      setTotalPrice((prev) => Math.max(initialItemPrice, prev - price));
-    }
-  };
+
 
   const handleRemoveDefaultIngredient = (ingredient) => {
     const updatedIngredients = allIngredients.filter(
