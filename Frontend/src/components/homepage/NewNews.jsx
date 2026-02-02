@@ -31,13 +31,7 @@ const NewNews = () => {
   };
 
   return (
-    <div className="h-[auto] w-full flex flex-col items-end relative mt-16">
-      <div className=" w-full lg:px-10 px-5 lg:pr-5 relative">
-        <div className="flex justify-between items-center">
-          <h1 className="lg:text-3xl text-2xl font-hobo text-color-red">
-            News and Events
 
-        </div>
 
 
     
