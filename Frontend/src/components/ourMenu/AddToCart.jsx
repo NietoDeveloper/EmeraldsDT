@@ -123,13 +123,7 @@ const AddToCart = ({ showModal, closeModal, selectedItem }) => {
               />
             </div>
             <div className="">
-              <p className="text-center text-[18px] -mt-5 font-semibold">
-                {selectedItem?.item?.name}
-              </p>
-              <p className="text-center text-red-500 text-[25px] mt-3 font-bold">
-                € {totalPrice}
-              </p>
-            </div>
+
             {selectedItem?.ingredients?.length > 0 && (
               <div>
                 <p className="text-center text-[18px] -mt-5 font-semibold">
