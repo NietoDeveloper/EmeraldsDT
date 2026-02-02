@@ -99,17 +99,6 @@ const AddToCart = ({ showModal, closeModal, selectedItem }) => {
       return;
     }
 
-    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-
-    setLoading(true);
-    closeModal();
-    cartItems.push(item);
-    setExistingCartContext(cartItems);
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    setLoading(false);
-    toast.success("Item added to cart");
-  };
 
   const location = useLocation();
 
