@@ -43,15 +43,6 @@ const UpdateModel = ({ toggleModal, isOpen, selectedCategory }) => {
           icon: "success",
           title: "Item Updated Successfully",
         });
-      }
-      toggleModal();
-      window.location.reload();
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <>
