@@ -62,11 +62,7 @@ const UpdateModel = ({ toggleModal, isOpen, selectedCategory }) => {
         onClick={toggleModal}
       ></div>
 
-      <div
-        className={`${
-          isOpen ? "block" : "hidden"
-        } fixed inset-0 flex items-center justify-center z-10`}
-      >
+  
         <div className="bg-white p-6 rounded-lg shadow-xl w-1/2">
           <div className="text-gray-800">
             <h1 className="text-2xl font-bold mb-4 text-center font-hobo text-color-red">
