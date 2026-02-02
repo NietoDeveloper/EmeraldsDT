@@ -12,25 +12,7 @@ import AddToCart from "./AddToCart";
   //     const { data } = await axios.get(`/admin/getItemById/${item._id}`);
   //     setSelectedItem(data);
   //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // const navigateToOneItem = (item) => {
-  //   localStorage.setItem("oneItemId", item._id);
-  //   navigate(`/our-menu/item/${item._id}`);
-  // };
-  // // fetch all items from the backend
-  // useEffect(() => {
-  //   const fetchAllItems = async () => {
-  //     const { data } = await axios.get("/admin/getItem");
-  //     setData(data);
-  //     const uniqueCategories = [
-  //       ...new Set(data.items.map((item) => item.category)),
-  //     ];
-  //     setCategories(uniqueCategories);
-  //   };
-  //   fetchAllItems();
+  
   // }, []);
 
   // useEffect(() => {
@@ -144,39 +126,7 @@ import AddToCart from "./AddToCart";
                 <div className="mt-10 grid lg:grid-cols-3 grid-cols-2 max-sm:px-5 gap-8 relative menupage  w-full">
                   {groupedCategories[category].map((item, index) => (
                     <div key={index} className=" w-full ">
-                      <div className="relative lg:w-64 w-full mx-auto">
-                        <img
-                          src={item.image.url}
-                          alt=""
-                          className="lg:w-[140px] lg:h-[120px] w-[100px] h-[80px] object-cover block mx-auto cursor-pointer"
-                          onClick={() => navigateToOneItem(item)}
-                        />
-                        <p className="text-center lg:text-[18px] text-sm mt-3">
-                          {item.name}
-                        </p>
-                        <div
-                          className="h-8 w-8  absolute lg:top-1/2   right-0  lg:translate-x-[-30%] top-[40%] translate-x-1/2 -translate-y-1/2 flex items-center cursor-pointer justify-center"
-                          onClick={() => handleModalShow(item)}
-                        >
-                          <FaPlus className="text-[#bebebe]" />
-                        </div>
-                        <div className="h-8 w-8 absolute lg:top-1/2 left-6 lg:-translate-x-1/2 -translate-x-full -translate-y-1/2 top-[40%] flex items-center cursor-pointer justify-center">
-                          <FaMinus className="text-[#bebebe]" />
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-        </div>
-      )} */}
 
-      {/* <AddToCart
-        showModal={showModal}
-        closeModal={closeModel}
-        selectedItem={selectedItem}
-      /> */}
     </>
   );
 };
