@@ -38,18 +38,6 @@ const DashboardView = () => {
 
 
 
-  const switchOnOrder = async (id) => {
-    try {
-      const { data } = await axios.post(`/admin/updateAdmin/${id}`, {
-        orderAccept: true,
-      });
-      setAdminData(data?.admin);
-      window.location.reload();
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   const locaton = useLocation();
   return (
     <>
