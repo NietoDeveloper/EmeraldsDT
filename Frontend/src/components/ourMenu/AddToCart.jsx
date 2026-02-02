@@ -100,15 +100,7 @@ const AddToCart = ({ showModal, closeModal, selectedItem }) => {
     }
 
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    const item = {
-      name: selectedItem?.item?.name,
-      image: selectedItem?.item?.image?.url,
-      price: selectedItem?.item?.price,
-      quantity: quantity,
-      totalPrice: totalPrice,
-      ingredients: allIngredients,
-      spicy: spicynonspicy,
-    };
+
 
     setLoading(true);
     closeModal();
