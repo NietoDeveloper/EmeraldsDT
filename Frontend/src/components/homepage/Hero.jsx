@@ -28,13 +28,6 @@ const Hero = () => {
     }
   }, []);
 
-  return (
-    <div className="h-85vh]  relative w-full  flex items-center justify-between">
-      <Swiper
 
-      >
-
-  );
-};
 
 export default Hero;
