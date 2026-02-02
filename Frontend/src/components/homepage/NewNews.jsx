@@ -44,18 +44,6 @@ const NewNews = () => {
           </Link>
         </div>
 
-        <Swiper
-          slidesPerView={window.innerWidth > 768 ? 3 : 1}
-          spaceBetween={30}
-          pagination={false}
-          className="mySwiper w-full pb-10 lg:px-2 mt-7"
-          modules={[Pagination, Navigation, Autoplay]}
-          navigation={false}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
 
     
                     </h6>
