@@ -21,31 +21,7 @@ const UpdateModel = ({ toggleModal, isOpen, selectedCategory }) => {
 
     const formData = new FormData();
 
-    if (categoryName !== "") formData.append("category", categoryName);
-    if (categoryImage !== null) formData.append("image", categoryImage);
-    if (categoryPosition !== "") formData.append("position", categoryPosition);
 
-    try {
-      setLoading(true);
-
-      const { data } = await axios.post(
-        `/admin/updateCategory/${selectedCategory._id}`,
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
-
-      if (data.success) {
-        MySwal.fire({
-          icon: "success",
-          title: "Item Updated Successfully",
-        });
-
-  return (
-    <>
 
 
 
