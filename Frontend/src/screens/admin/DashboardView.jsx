@@ -38,21 +38,7 @@ const DashboardView = () => {
 
 
 
-  const locaton = useLocation();
-  return (
-    <>
-      <div className="main mt-8">
-        {locaton.pathname === "/admin/dashboardView" && (
-          <div className="w-full flex justify-end">
-            {adminData?.orderAccept ? (
-              <button
-                className="py-1 px-3 bg-red-600 rounded-xl mb-6 text-white flex items-center space-x-1"
-                onClick={() => switchOffOrder(adminData?._id)}
-              >
-                <FaUnlock />
-                <span>Switch Off Order</span>
-              </button>
-            ) : (
+
               <button
                 className="py-1 px-3 bg-green-600 rounded-xl mb-6 text-white flex items-center space-x-1"
                 onClick={() => switchOnOrder(adminData?._id)}
