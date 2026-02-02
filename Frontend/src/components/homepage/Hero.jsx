@@ -33,7 +33,7 @@ const Hero = () => {
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
-        loop={true}
+
         pagination={false}
         className="mySwiper w-full h-full"
         modules={[Pagination, Navigation, Autoplay]}
