@@ -21,12 +21,7 @@ const NewNews = () => {
 
 
 
-    
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+
           ))}
         </Swiper>
       </div>
