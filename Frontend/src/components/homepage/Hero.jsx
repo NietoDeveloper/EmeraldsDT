@@ -40,7 +40,7 @@ const Hero = () => {
                 <img
                   className="w-full h-full object-cover bg-center"
 
-                  alt=""
+             
                 />
               </div>
             </SwiperSlide>
