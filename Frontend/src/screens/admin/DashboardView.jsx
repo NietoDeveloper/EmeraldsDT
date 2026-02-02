@@ -14,11 +14,6 @@ const DashboardView = () => {
     },
 
     {
-      id: 3,
-      name: "Total Products",
-      userGain: 300,
-    },
-    {
       id: 4,
       name: "All Details",
       userGain: 400,
