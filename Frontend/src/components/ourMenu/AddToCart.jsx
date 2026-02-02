@@ -88,11 +88,7 @@ const AddToCart = ({ showModal, closeModal, selectedItem }) => {
     const updatedIngredients = allIngredients.filter(
       (i) => i.name !== ingredient.name
     );
-    setAllIngredients(updatedIngredients);
-    setTotalPrice((prev) =>
-      Math.max(initialItemPrice, prev - ingredient.price)
-    );
-  };
+
 
   const toggleIngredient = (ingredient) => {
     const index = allIngredients.findIndex((i) => i.name === ingredient.name);
