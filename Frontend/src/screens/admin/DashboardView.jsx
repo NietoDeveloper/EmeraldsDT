@@ -19,14 +19,7 @@ const DashboardView = () => {
     labels: UserData.map((data) => data.name),
     datasets: [
       {
-        label: "Users Gained",
-        data: UserData.map((data) => data.userGain),
-        backgroundColor: [
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(153, 102, 255, 0.2)",
-        ],
+
         borderColor: [
           "rgba(75, 192, 192, 1)",
           "rgba(54, 162, 235, 1)",
