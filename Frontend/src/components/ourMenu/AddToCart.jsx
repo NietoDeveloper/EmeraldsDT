@@ -11,7 +11,7 @@ const AddToCart = ({ showModal, closeModal, selectedItem }) => {
   const [allIngredients, setAllIngredients] = useState([]);
   const [initialItemPrice, setInitialItemPrice] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [quantity, setQuantity] = useState(1);
+
   const { setExistingCartContext } = useContext(DataContext);
   const [spicynonspicy, setSpicyNonSpicy] = useState(false);
   const [defaultIngredients, setDefaultIngredients] = useState([]);
