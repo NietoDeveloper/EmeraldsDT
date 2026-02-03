@@ -116,15 +116,7 @@ const MenuItems = () => {
                 navigate={navigate}
                 itemName={cat.category}
                 cat_id={cat._id}
-                itemDesc={
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-                }
-                itemImage={cat.image.url}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      )}
+}
 
 
 
