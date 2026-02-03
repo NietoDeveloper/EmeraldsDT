@@ -134,10 +134,6 @@ const MenuItems = () => {
     <div
       className="h-full relative overflow-hidden border-2 py-5 rounded-xl cursor-pointer"
       onClick={() => HandleNavigate(cat_id, itemName)}
-    >
-      <div className="w-full relative">
-
-    </div>
   );
 };
 
