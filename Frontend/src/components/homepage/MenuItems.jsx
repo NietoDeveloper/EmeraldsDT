@@ -54,17 +54,7 @@ const MenuItems = () => {
             <div className="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded "></div>
 
 
-          </div>
-          <div
-            role="status"
-            
-          >
 
-
-
-          </div>
-        </div>
-      ) : (
 
 
 
