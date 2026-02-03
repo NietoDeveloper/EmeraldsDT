@@ -61,9 +61,6 @@ const MenuItems = () => {
           >
 
 
-            <div className="flex items-center mt-4">
-
-            </div>
 
           </div>
         </div>
