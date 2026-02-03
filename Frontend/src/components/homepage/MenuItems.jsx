@@ -43,17 +43,6 @@ const MenuItems = () => {
 
       {loading ? (
         <div className="flex justify-between items-center ">
-          <div
-            role="status"
-            className=" p-10  w-[33%]  rounded animate-pulse md:p-6 "
-          >
-
-            role="status"
-            className=" w-[33%]  p-10   rounded animate-pulse md:p-6 "
-        
-            <div className="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded "></div>
-
-
 
 
 
