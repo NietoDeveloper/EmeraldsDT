@@ -96,20 +96,7 @@ const MenuItems = () => {
           </div>
         </div>
       ) : (
-        <Swiper
-          modules={[Pagination, Navigation, Autoplay]}
-          slidesPerView={window.innerWidth > 768 ? 3 : 1}
-          spaceBetween={30}
-          loop={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
-          pagination={false}
-          className="mySwiper w-full lg:pb-10 mt-10"
-          navigation={false}
-        >
+
 
 
 
