@@ -131,9 +131,6 @@ const MenuItems = () => {
 
 
   return (
-    <div
-      className="h-full relative overflow-hidden border-2 py-5 rounded-xl cursor-pointer"
 
-};
 
 export default MenuItems;
