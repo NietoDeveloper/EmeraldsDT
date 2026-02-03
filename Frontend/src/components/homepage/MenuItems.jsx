@@ -57,7 +57,7 @@ const MenuItems = () => {
           </div>
           <div
             role="status"
-            className=" w-[33%]  p-10  rounded animate-pulse md:p-6 "
+            
           >
             <div className="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded "></div>
             <div className="h-2.5 bg-gray-200 rounded-full  w-48 mb-4" />
