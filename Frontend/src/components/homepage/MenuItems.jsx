@@ -7,14 +7,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "../../utils/axios";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
-const MenuItems = () => {
-  const navigate = useNavigate();
-  const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  const location = useLocation();
-  useEffect(() => {
-
 
 
 export default MenuItems;
