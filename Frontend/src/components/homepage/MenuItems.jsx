@@ -110,13 +110,7 @@ const MenuItems = () => {
           className="mySwiper w-full lg:pb-10 mt-10"
           navigation={false}
         >
-          {categories.map((cat, index) => (
-            <SwiperSlide key={index}>
-              <Slide
-                navigate={navigate}
-                itemName={cat.category}
-                cat_id={cat._id}
-}
+
 
 
 
