@@ -63,8 +63,7 @@ const MenuItems = () => {
 
             <div className="flex items-center mt-4">
               <div>
-                <div className="h-2.5 bg-gray-200 rounded-full  w-32 mb-2" />
-                <div className="w-48 h-2 bg-gray-200 rounded-full " />
+                
               </div>
             </div>
             <span className="sr-only">Loading...</span>
