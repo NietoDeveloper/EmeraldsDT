@@ -129,12 +129,6 @@ const MenuItems = () => {
   );
 };
 
-const Slide = ({ navigate, itemName, cat_id, itemImage, itemDesc }) => {
-  const HandleNavigate = (id, name) => {
-
-
-    navigate(`/our-menu/${id}`);
-  };
 
   return (
     <div
