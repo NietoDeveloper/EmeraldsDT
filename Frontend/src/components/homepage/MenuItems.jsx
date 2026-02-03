@@ -14,12 +14,6 @@ const MenuItems = () => {
 
   const location = useLocation();
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data } = await axios.get("/admin/getCategory");
-        setCategories(data.categories);
-      } catch (error) {
-
 
 
 
