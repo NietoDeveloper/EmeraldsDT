@@ -66,7 +66,7 @@ const MenuItems = () => {
                 
               </div>
             </div>
-            <span className="sr-only">Loading...</span>
+
           </div>
         </div>
       ) : (
