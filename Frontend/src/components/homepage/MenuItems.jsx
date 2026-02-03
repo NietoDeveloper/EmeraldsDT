@@ -137,10 +137,7 @@ const MenuItems = () => {
     >
       <div className="w-full relative">
         <div className="px-5 h-full">
-          <img src={itemImage} alt="" className="w-1/2 block mx-auto mb-5" />
-        </div>
 
-        </div>
       </div>
     </div>
   );
