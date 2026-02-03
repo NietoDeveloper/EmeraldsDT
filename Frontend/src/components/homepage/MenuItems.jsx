@@ -59,9 +59,7 @@ const MenuItems = () => {
             role="status"
             
           >
-           
-            <div className="h-2 bg-gray-200 rounded-full  mb-2.5" />
-            <div className="h-2 bg-gray-200 rounded-full  mb-2.5" />
+
 
             <div className="flex items-center mt-4">
               <div>
