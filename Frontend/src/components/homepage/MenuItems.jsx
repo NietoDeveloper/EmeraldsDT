@@ -132,7 +132,7 @@ const MenuItems = () => {
 const Slide = ({ navigate, itemName, cat_id, itemImage, itemDesc }) => {
   const HandleNavigate = (id, name) => {
     localStorage.setItem("categoryId", id);
-    localStorage.setItem("categoryName", name);
+
     navigate(`/our-menu/${id}`);
   };
 
