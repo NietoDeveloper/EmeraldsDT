@@ -47,16 +47,7 @@ const MenuItems = () => {
             role="status"
             className=" p-10  w-[33%]  rounded animate-pulse md:p-6 "
           >
-            <div className="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded "></div>
-            <div className="h-2.5 bg-gray-200 rounded-full  w-48 mb-4" />
 
-                <div className="h-2.5 bg-gray-200 rounded-full  w-32 mb-2" />
-                <div className="w-48 h-2 bg-gray-200 rounded-full " />
-              </div>
-            </div>
-            <span className="sr-only">Loading...</span>
-
-          <div
             role="status"
             className=" w-[33%]  p-10   rounded animate-pulse md:p-6 "
           >
