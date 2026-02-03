@@ -136,9 +136,7 @@ const MenuItems = () => {
       onClick={() => HandleNavigate(cat_id, itemName)}
     >
       <div className="w-full relative">
-        <div className="px-5 h-full">
 
-      </div>
     </div>
   );
 };
