@@ -133,8 +133,7 @@ const MenuItems = () => {
   return (
     <div
       className="h-full relative overflow-hidden border-2 py-5 rounded-xl cursor-pointer"
-      onClick={() => HandleNavigate(cat_id, itemName)}
-  );
+
 };
 
 export default MenuItems;
