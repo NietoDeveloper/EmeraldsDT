@@ -140,9 +140,7 @@ const MenuItems = () => {
           <img src={itemImage} alt="" className="w-1/2 block mx-auto mb-5" />
         </div>
         <div className="px-4 pt-4 h-[5rem] w-full">
-          <div className="flex justify-center">
-            <h1 className="text-[21px] font-hoboc font-semibold ">
-              {itemName}
+
             </h1>
           </div>
         </div>
