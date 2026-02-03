@@ -125,12 +125,7 @@ const MenuItems = () => {
           ))}
         </Swiper>
       )}
-    </>
-  );
-};
 
-
-  return (
 
 
 export default MenuItems;
