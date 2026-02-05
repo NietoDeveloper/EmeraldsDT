@@ -23,27 +23,3 @@ Este repositorio contiene el **Front-end** construido con un enfoque de **World-
 ---
 
 ## 📂 Project Structure (Nieto Lab Standard)
-
-```
-src/
-├── app/                # Routing & Server Components (Performance-first)
-│   ├── [lang]/         # Dynamic i18n support (English/Spanish)
-│   │   ├── products/   # High-value asset listings
-│   │   ├── about/      # Brand timeline (SpaceX style)
-│   │   └── page.tsx    # Immersive Hero Landing (Full-screen Video)
-│   ├── layout.tsx      # Root layout, Theme providers, Metadata
-│   └── not-found.tsx   # Custom minimalist 404
-├── components/         # Atomic Design System
-│   ├── ui/             # Atomic: buttons, inputs, high-quality cards
-│   ├── shared/         # Shared: Fixed Navbar, Footer, Modals
-│   ├── sections/       # Composite: HeroSection, ProductsGrid
-│   └── animations/     # Framer Motion Wrappers (Parallax, Fades)
-├── hooks/              # Custom logic: useScroll, useIntersectionObserver
-├── services/           # API Integration & Caching layers
-├── store/              # Global State: Zustand (User prefs, Cart)
-├── lib/                # Pure helpers: Validators, formatters
-├── types/              # Strict TS definitions for API & Props
-├── tests/              # Unit & Integration testing (Jest/Cypress)
-└── public/             # Optimized Static Assets (WebM/Avif)
-```
-
