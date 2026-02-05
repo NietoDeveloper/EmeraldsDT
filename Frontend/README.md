@@ -61,16 +61,3 @@ Double Cluster Ready: Configuración optimizada para balanceo de carga en entorn
 
 Image Optimization: Uso de next/image con formatos AVIF para carga ultra rápida de gemas en alta resolución.
 
-🚀 **Getting Started**  
-Clone & Install:  
-
-```bash
-git clone https://github.com/NietoDeveloper/emerald-dt-front.git
-npm install
-```  
-
-Environment Setup: Crea un archivo `.env.local` con las credenciales de AWS y la URL del Backend de Node.js.  
-
-Run Development:  
-
-
