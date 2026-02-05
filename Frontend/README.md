@@ -73,14 +73,4 @@ Environment Setup: Crea un archivo `.env.local` con las credenciales de AWS y la
 
 Run Development:  
 
-```bash
-npm run dev
-```  
 
-🛠️ **Deployment**  
-Este proyecto está preparado para ejecutarse en contenedores Docker:  
-
-```bash
-docker build -t emerald-dt-front .
-docker run -p 3000:3000 emerald-dt-front
-```  
