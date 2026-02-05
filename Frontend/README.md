@@ -47,17 +47,3 @@ src/
 └── public/             # Optimized Static Assets (WebM/Avif)
 ```
 
-🎨 **Design Philosophy: "The SpaceX Way"**  
-Immersive Visuals: Fondos oscuros (#000000), tipografía Sans-Serif audaz y uso masivo de espacios en blanco.  
-
-Cinematic Transitions: Movimientos de entrada sutiles (Fade-in up) al estilo de los lanzamientos de Falcon 9.  
-
-Technical Reliability: Interfaz clara que transmite confianza, esencial para la venta de activos de alto valor como las esmeraldas.
-
-🔒 **Security & Performance Features**  
-Security Architecture: Implementación de Content Security Policy (CSP) estricta y protección contra CSRF.  
-
-Double Cluster Ready: Configuración optimizada para balanceo de carga en entornos Dockerizados.  
-
-Image Optimization: Uso de next/image con formatos AVIF para carga ultra rápida de gemas en alta resolución.
-
