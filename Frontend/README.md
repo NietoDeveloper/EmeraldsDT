@@ -84,6 +84,3 @@ Este proyecto está preparado para ejecutarse en contenedores Docker:
 docker build -t emerald-dt-front .
 docker run -p 3000:3000 emerald-dt-front
 ```  
-
-Developed by Manuel Nieto (NietoDeveloper)  
-Building scalable systems with 100% discipline. #1 GitHub Colombia Ranking
