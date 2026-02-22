@@ -94,7 +94,7 @@ Building scalable systems with 100% discipline. #1 GitHub Colombia Ranking
 <https://manuelnieto.netlify.app/>  
 This app is created by Software DT and supervised and reviewed by NietoDeveloper.  
 <https://softwaredt.vercel.app/>  
-Last updated: February 4, 2026
+Last updated: February 24, 2026
 
 
 
@@ -186,4 +186,10 @@ Developed by Manuel Nieto (NietoDeveloper) Building scalable systems with 100% d
 
 GitHub Profile | Portfolio
 
-Supervisado por Software DT & Nieto Lab. Last updated: February 21, 2026
+Developed by Manuel Nieto (NietoDeveloper)  
+Building scalable systems with 100% discipline. #1 GitHub Colombia Ranking  
+<https://github.com/NietoDeveloper>  
+<https://manuelnieto.netlify.app/>  
+This app is created by Software DT and supervised and reviewed by NietoDeveloper.  
+<https://softwaredt.vercel.app/>  
+Last updated: February 24, 2026
