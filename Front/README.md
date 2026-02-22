@@ -45,7 +45,7 @@ src/
 ├── types/              # Strict TS definitions for API & Props
 ├── tests/              # Unit & Integration testing (Jest/Cypress)
 └── public/             # Optimized Static Assets (WebM/Avif)
-```
+
 
 🎨 **Design Philosophy: "The SpaceX Way"**  
 Immersive Visuals: Dark backgrounds (#000000), bold Sans-Serif typography and massive use of white spaces.  
