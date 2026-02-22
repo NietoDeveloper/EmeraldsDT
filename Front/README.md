@@ -35,10 +35,3 @@ Environment Setup: Create a `.env.local` file with AWS credentials and the Node.
 
 ---
 
-Developed by Manuel Nieto (NietoDeveloper)  
-Building scalable systems with 100% discipline. #1 GitHub Colombia Ranking  
-<https://github.com/NietoDeveloper>  
-<https://manuelnieto.netlify.app/>  
-This app is created by Software DT and supervised and reviewed by NietoDeveloper.  
-<https://softwaredt.vercel.app/>  
-Last updated: February 4, 2026
