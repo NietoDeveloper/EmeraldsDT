@@ -31,19 +31,7 @@ Security Architecture: Implementation of strict Content Security Policy
 
 Environment Setup: Create a `.env.local` file with AWS credentials and the Node.js Backend URL.  
 
-Run Development:  
 
-```bash
-npm run dev
-```  
-
-🛠️ **Deployment**  
-This project is prepared to run in Docker containers:  
-
-```bash
-docker build -t emerald-dt-front .
-docker run -p 3000:3000 emerald-dt-front
-```  
 
 ---
 
