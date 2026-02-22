@@ -27,19 +27,7 @@ Cinematic Transitions: Subtle entry movements (Fade-in up) in the style of Falco
 Technical Reliability: Clear interface that conveys confidence, essential for the sale of high-value assets like emeralds.
 
 🔒 **Security & Performance Features**  
-Security Architecture: Implementation of strict Content Security Policy (CSP) and protection against CSRF.  
-
-Double Cluster Ready: Optimized configuration for load balancing in Dockerized environments.  
-
-Image Optimization: Use of next/image with AVIF formats for ultra-fast loading of high-resolution gems.
-
-🚀 **Getting Started**  
-Clone & Install:  
-
-```bash
-git clone https://github.com/NietoDeveloper/emerald-dt-front.git
-npm install
-```  
+Security Architecture: Implementation of strict Content Security Policy 
 
 Environment Setup: Create a `.env.local` file with AWS credentials and the Node.js Backend URL.  
 
