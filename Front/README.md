@@ -25,7 +25,6 @@ This repository contains the **Front-end** built with a **World-Class Engineerin
 
 ## 📂 Project Structure (Nieto Lab Standard)
 
-```
 src/
 ├── app/                # Routing & Server Components (Performance-first)
 │   ├── [lang]/         # Dynamic i18n support (English/Spanish)
