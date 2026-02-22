@@ -10,6 +10,37 @@
 
 ---
 
+## 🚀 Getting Started
+
+Clone & Install:
+
+```bash
+git clone https://github.com/NietoDeveloper/emerald-dt-front.git
+npm install
+```
+
+Environment Setup:
+Create a `.env.local` file with AWS credentials and the Node.js Backend URL (Nieto Lab API).
+
+Run Development:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🛠️ Deployment
+
+This project is prepared to run in Docker containers:
+
+```bash
+docker build -t emerald-dt-front .
+docker run -p 3000:3000 emerald-dt-front
+```
+
+---
+
 ## 🏗️ Architecture & Core Stack (Nieto Lab Standard)
 
 This repository contains the **Front-end** built with a **World-Class Engineering** approach:
@@ -20,6 +51,14 @@ This repository contains the **Front-end** built with a **World-Class Engineerin
 * **State Management:** Zustand (Lightweight and scalable).
 * **Internationalization:** Dynamic i18n via `[lang]` routes (EN/ES) & Middleware.
 * **Deployment:** Dockerized for AWS & Railway infrastructure.
+
+---
+
+## 🔒 Security & Performance Features
+
+* **Maximum Security Architecture:** Implementation of strict Content Security Policy (CSP) and CSRF protection.
+* **Double Cluster Ready:** Optimized configuration for load balancing in Dockerized environments.
+* **Image Optimization:** Use of `next/image` with AVIF formats for ultra-fast loading of high-resolution gems.
 
 ---
 
@@ -46,50 +85,21 @@ src/
 ├── types/              # Strict TS definitions for API & Props
 ├── tests/              # Unit & Integration testing (Jest/Cypress)
 └── public/             # Optimized Static Assets (4K WebM/Avif)
-🎨 Design Philosophy: "The SpaceX Way"
-Immersive Visuals: Dark backgrounds (#000000), bold Sans-Serif typography, and massive use of white spaces.
+```
 
-Paleta de Lujo: Acentos en Verde Esmeralda (#047857) y detalles en Oro (#D4AF37).
+---
 
-Cinematic Transitions: Subtle entry movements (Fade-in up) in the style of Falcon 9 launches.
+## 🎨 Design Philosophy: "The SpaceX Way"
 
-Technical Reliability: Clear interface that conveys confidence, essential for high-value assets.
+* **Immersive Visuals:** Dark backgrounds (`#000000`), bold Sans-Serif typography, and massive use of white spaces.
+* **Paleta de Lujo:** Acentos en Verde Esmeralda (`#047857`) y detalles en Oro (`#D4AF37`).
+* **Cinematic Transitions:** Subtle entry movements (Fade-in up) in the style of Falcon 9 launches.
+* **Technical Reliability:** Clear interface that conveys confidence, essential for high-value assets.
 
-🔒 Security & Performance Features
-Maximum Security Architecture: Implementation of strict Content Security Policy (CSP) and CSRF protection.
+---
 
-Double Cluster Ready: Optimized configuration for load balancing in Dockerized environments.
+Developed by **Manuel Nieto** ([NietoDeveloper](https://github.com/NietoDeveloper)) — Building scalable systems with 100% discipline. #1 GitHub Colombia Ranking.
 
-Image Optimization: Use of next/image with AVIF formats for ultra-fast loading of high-resolution gems.
+[GitHub Profile](https://github.com/NietoDeveloper) | [Portfolio](https://github.com/NietoDeveloper) | [Software DT Website](https://softwaredt.com)
 
-🚀 Getting Started
-Clone & Install:
-
-Bash
-
-git clone [https://github.com/NietoDeveloper/emerald-dt-front.git](https://github.com/NietoDeveloper/emerald-dt-front.git)
-npm install
-Environment Setup:
-Create a .env.local file with AWS credentials and the Node.js Backend URL (Nieto Lab API).
-
-Run Development:
-
-Bash
-
-npm run dev
-🛠️ Deployment
-This project is prepared to run in Docker containers:
-
-Bash
-
-docker build -t emerald-dt-front .
-docker run -p 3000:3000 emerald-dt-front
-Developed by Manuel Nieto (NietoDeveloper) Building scalable systems with 100% discipline. #1 GitHub Colombia Ranking
-
-GitHub Profile | Portfolio
-
-This app is created by Software DT and supervised/reviewed by NietoDeveloper.
-
-Software DT Website
-
-Last updated: February 24, 2026
+*Last updated: February 24, 2026*
