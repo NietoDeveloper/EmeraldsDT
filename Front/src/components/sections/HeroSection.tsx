@@ -9,19 +9,7 @@ export const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
 
-
-
-      {/* Overlay: Degradado SpaceX (más oscuro abajo para legibilidad) */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-1" />
-
-      {/* Content */}
-      <div className="container mx-auto px-10 z-10 animate-fade-in-up">
-
-
-      </div>
-
-      {/* Control de Audio Minimalista */}
-      <MuteToggle isMuted={isMuted} onToggle={toggleMute} />
+le isMuted={isMuted} onToggle={toggleMute} />
     </section>
   );
 };
