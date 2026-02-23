@@ -1,6 +1,6 @@
 import { HeroSection } from '@/components/sections/HeroSection';
-// Intenta con la ruta completa o verifica que el archivo exista en src/components/
-import Footer from '../components/Footer'; 
+// Usamos el alias @ que apunta a la raíz de src
+import Footer from '@/components/layout/Footer'; 
 
 interface HomePageProps {
   params: Promise<{ lang: string }>;
