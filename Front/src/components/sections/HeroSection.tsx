@@ -36,9 +36,6 @@ export const HeroSection = () => {
 
       {/* Content */}
       <div className="container mx-auto px-10 z-10 animate-fade-in-up">
-        <h2 className="text-gold tracking-[0.4em] uppercase text-xs mb-4 font-mono opacity-90">
-          Emerald DT // Nieto Lab
-        </h2>
 
 
       </div>
