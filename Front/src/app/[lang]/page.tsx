@@ -23,7 +23,7 @@ export default async function HomePage({ params }: HomePageProps) {
         <HeroSection />
       </section>
 
-      {/* SECCIÓN 2: PRÓXIMO LANZAMIENTO (Esmeraldas en subasta o nueva colección) */}
+   
       <section className="snap-start min-h-screen flex items-center bg-black border-t border-white/10">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-xl animate-fade-in-up">
