@@ -20,14 +20,6 @@ export const HeroSection = () => {
       {/* Overlay para legibilidad técnica */}
       <div className="absolute inset-0 bg-black/30 z-1" />
 
-      {/* Content */}
-      <div className="container mx-auto px-10 z-10 animate-fade-in-up">
-        <h2 className="text-gold tracking-[0.3em] uppercase text-sm mb-2 font-mono">
-          Emerald DT
-        </h2>
-
-
-      </div>
     </section>
   );
 };
