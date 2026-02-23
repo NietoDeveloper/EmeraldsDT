@@ -1,71 +1,49 @@
-import { HeroSection } from '@/components/sections/HeroSection';
+{/* SECCIÓN 3: Footer Técnico / Contacto */}
+      <section className="snap-start h-screen md:h-[50vh] w-full bg-black flex flex-col justify-between p-10 md:p-20 border-t border-emerald-900/20 relative overflow-hidden">
+        {/* Sutil resplandor esmeralda en la esquina inferior para coherencia visual */}
+        <div className="absolute -bottom-20 -right-20 w-[300px] h-[300px] bg-emerald-500/5 blur-[100px] rounded-full" />
 
-interface HomePageProps {
-  params: Promise<{ lang: string }>;
-}
-
-/**
- * Emerald DT - Orquestador de la Home
- * Aquí se apilan las secciones snap-start para el efecto SpaceX.
- */
-export default async function Home({ params }: HomePageProps) {
-  const { lang } = await params;
-
-  return (
-    // El contenedor principal maneja el scroll magnético
-    <main className="relative w-full bg-black h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth">
-      
-      {/* SECCIÓN 1: El video 4K con sonido y CTA principal */}
-      <section className="snap-start h-screen w-full">
-        <HeroSection />
-      </section>
-
-      {/* SECCIÓN 2: Preview de Colección / Próximo Drop */}
-      <section className="snap-start h-screen w-full flex items-center bg-black border-t border-white/5 relative overflow-hidden">
-        {/* Resplandor Esmeralda de fondo para profundidad */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald/10 blur-[120px] rounded-full" />
-        
-        <div className="container mx-auto px-10 md:px-20 relative z-10">
-          <div className="max-w-3xl animate-fade-in-up">
-            <h2 className="text-emerald font-mono tracking-[0.4em] uppercase mb-6 text-sm">
-              {lang === 'es' ? '// Patrimonio Colombiano' : '// Colombian Heritage'}
-            </h2>
-            <h3 className="text-5xl md:text-8xl font-bold uppercase mb-8 tracking-tighter leading-none">
-              Muzo Star <br/> <span className="text-white/50 italic">Collection</span>
-            </h3>
-            <p className="text-zinc-400 text-xl mb-12 max-w-xl leading-relaxed">
+        <div className="flex flex-col md:flex-row justify-between items-start z-10 gap-10 md:gap-0">
+          <div>
+            <span className="font-bold tracking-[0.3em] text-3xl text-white">
+              EMERALD<span className="text-emerald-500">DT</span>
+            </span>
+            <p className="text-[10px] text-zinc-500 uppercase tracking-[0.2em] mt-4 max-w-xs leading-relaxed">
               {lang === 'es' 
-                ? 'Descubra la perfección tallada por la naturaleza y certificada por los estándares más rigurosos del Nieto Laboratory.' 
-                : 'Discover perfection carved by nature and certified by the most rigorous standards of the Nieto Laboratory.'}
+                ? 'Liderando la industria de gemas con tecnología blockchain y estándares del Nieto Laboratory.' 
+                : 'Leading the gemstone industry with blockchain technology and Nieto Laboratory standards.'}
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6">
-              <button className="px-12 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-emerald hover:text-white transition-all duration-300">
-                {lang === 'es' ? 'Ver Colección' : 'View Collection'}
-              </button>
-              <button className="px-12 py-4 border border-white/20 font-bold uppercase tracking-widest hover:bg-white/10 transition-all duration-300">
-                {lang === 'es' ? 'Certificación GIA' : 'GIA Certification'}
-              </button>
+          </div>
+
+          <nav className="grid grid-cols-2 md:flex md:gap-12 gap-6 text-[10px] uppercase tracking-[0.2em] font-bold">
+            <div className="flex flex-col gap-4">
+              <span className="text-emerald-500 mb-2">{lang === 'es' ? '// Social' : '// Social'}</span>
+              <a href="https://github.com/NietoDeveloper" target="_blank" className="text-zinc-400 hover:text-amber-400 transition-colors">GitHub</a>
+              <a href="#" className="text-zinc-400 hover:text-amber-400 transition-colors">LinkedIn</a>
             </div>
+            <div className="flex flex-col gap-4">
+              <span className="text-emerald-500 mb-2">{lang === 'es' ? '// Legal' : '// Legal'}</span>
+              <a href="#" className="text-zinc-400 hover:text-amber-400 transition-colors">{lang === 'es' ? 'Privacidad' : 'Privacy'}</a>
+              <a href="#" className="text-zinc-400 hover:text-amber-400 transition-colors">{lang === 'es' ? 'Términos' : 'Terms'}</a>
+            </div>
+            <div className="flex flex-col gap-4">
+              <span className="text-emerald-500 mb-2">{lang === 'es' ? '// Sistema' : '// System'}</span>
+              <a href="#" className="text-zinc-400 hover:text-amber-400 transition-colors">Railway Status</a>
+              <a href="#" className="text-zinc-400 hover:text-amber-400 transition-colors">AWS Cloud</a>
+            </div>
+          </nav>
+        </div>
+
+        <div className="flex flex-col md:flex-row justify-between items-center z-10 pt-10 border-t border-white/5">
+          <div className="text-[9px] text-zinc-600 uppercase tracking-[0.4em] mb-4 md:mb-0 text-center md:text-left">
+            © 2026 NIETO LABORATORY — BUILDING THE FUTURE OF ASSETS.
+          </div>
+          
+          <div className="flex items-center gap-4">
+            <div className="h-[1px] w-8 bg-emerald-500/30 hidden md:block" />
+            <span className="text-[9px] text-amber-400 font-bold uppercase tracking-[0.3em]">
+              #1 Committer Colombia
+            </span>
           </div>
         </div>
       </section>
-
-      {/* SECCIÓN 3: Footer Técnico / Contacto */}
-      <section className="snap-start h-[40vh] w-full bg-zinc-950 flex flex-col justify-between p-10 border-t border-white/10">
-        <div className="flex justify-between items-start">
-          <span className="font-bold tracking-tighter text-2xl">EMERALD DT</span>
-          <nav className="flex gap-8 text-xs uppercase tracking-widest text-zinc-500">
-            <a href="#" className="hover:text-gold transition-colors">Privacy</a>
-            <a href="#" className="hover:text-gold transition-colors">Lab Specs</a>
-            <a href="#" className="hover:text-gold transition-colors">Twitter</a>
-          </nav>
-        </div>
-        <div className="text-[10px] text-zinc-600 uppercase tracking-[0.5em] text-center">
-          © 2026 Nieto Laboratory - Building the future of assets.
-        </div>
-      </section>
-
-    </main>
-  );
-}
