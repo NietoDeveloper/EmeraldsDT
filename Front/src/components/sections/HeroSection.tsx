@@ -17,9 +17,5 @@ export const HeroSection = () => {
         Your browser does not support the video tag.
       </video>
 
-      {/* Overlay para legibilidad técnica */}
-      <div className="absolute inset-0 bg-black/30 z-1" />
-
-    </section>
   );
 };
