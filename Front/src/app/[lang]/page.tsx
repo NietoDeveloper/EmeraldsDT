@@ -7,17 +7,6 @@ interface HomePageProps {
   params: Promise<{ lang: string }>;
 }
 
-/**
- * Emerald DT - Home Page
- * Diseñada bajo el estándar Nieto Laboratory.
- * Implementa scroll-snap para una experiencia cinemática similar a SpaceX.
- */
-export default async function HomePage({ params }: HomePageProps) {
-  // En Next.js 15, los params de rutas dinámicas son promesas.
-  const { lang } = await params;
-
-  return (
-    <main className="relative w-full bg-black">
 
 
 
