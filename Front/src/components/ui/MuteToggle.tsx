@@ -6,8 +6,3 @@ interface MuteToggleProps {
   onToggle: () => void;
 }
 
-export const MuteToggle = ({ isMuted, onToggle }: MuteToggleProps) => {
-  return (
-
-  );
-};
