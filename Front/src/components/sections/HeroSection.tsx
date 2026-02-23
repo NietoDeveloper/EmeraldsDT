@@ -39,10 +39,7 @@ export const HeroSection = () => {
         <h2 className="text-gold tracking-[0.4em] uppercase text-xs mb-4 font-mono opacity-90">
           Emerald DT // Nieto Lab
         </h2>
-        <h1 className="text-6xl md:text-[100px] font-bold uppercase mb-8 leading-[0.85] tracking-tighter">
-          Eternal <br /> 
 
-        </h1>
 
       </div>
 
