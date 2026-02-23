@@ -21,24 +21,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
 
 
-      <section className="snap-start min-h-screen flex items-center bg-black border-t border-white/10">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="max-w-xl animate-fade-in-up">
-
-            <h3 className="text-4xl md:text-6xl font-bold uppercase mb-6">
-      
-            </h3>
-            <p className="text-gray-400 text-lg mb-8">
-              {lang === 'es' 
-                ? 'La pureza del cristal colombiano alcanza nuevas alturas. Una serie limitada de 12 piezas maestras certificadas.' 
-                : 'The purity of Colombian crystal reaches new heights. A limited series of 12 certified masterpieces.'}
-            </p>
-            <button className="px-12 py-4 border-2 border-white hover:bg-white hover:text-black transition-all duration-300 uppercase font-bold tracking-tighter">
-              {lang === 'es' ? 'Ver Detalles' : 'View Details'}
-            </button>
-          </div>
-        </div>
-      </section>
+    
 
       {/* SECCIÓN 3: TECNOLOGÍA (Nieto Lab Standards) */}
       <section className="snap-start min-h-screen bg-[url('/assets/images/tech-bg.jpg')] bg-cover bg-center relative">
