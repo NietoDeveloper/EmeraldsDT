@@ -33,15 +33,6 @@ export default function RootLayout({
   params,
 }: RootLayoutProps) {
   // Nota: En el RootLayout, params.lang viene de la URL dinámica [lang]
-  return (
-    <html lang={params.lang || "en"} className="scroll-smooth">
-      <body
-        className={`${sans.variable} ${mono.variable} antialiased bg-black text-white`}
-      >
-        {/* Aquí es donde iría el Navbar compartido más adelante */}
-        {children}
-        {/* Aquí es donde iría el Footer compartido más adelante */}
-      </body>
-    </html>
+ 
   );
 }
