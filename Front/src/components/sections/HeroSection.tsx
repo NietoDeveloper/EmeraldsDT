@@ -9,14 +9,7 @@ export const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
 
-  return (
-    <section className="relative h-screen w-full overflow-hidden flex flex-col justify-end pb-24">
-      {/* Video Background */}
-assName="absolute top-0 left-0 w-full h-full object-cover z-0"
-      >
-        <source src="/assets/videos/hero-emerald.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+
 
       {/* Overlay: Degradado SpaceX (más oscuro abajo para legibilidad) */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-1" />
