@@ -22,17 +22,5 @@ export const metadata: Metadata = {
     description: "World-class emerald commercialization with SpaceX-inspired engineering.",
     images: ["/og-image.jpg"], // Imagen para compartir en redes
   },
-  icons: {
-    icon: "/favicon.ico",
-  }
-};
 
-
-export default function RootLayout({
-  children,
-  params,
-}: RootLayoutProps) {
-  // Nota: En el RootLayout, params.lang viene de la URL dinámica [lang]
- 
-  );
 }
