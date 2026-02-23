@@ -19,11 +19,8 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <main className="relative w-full bg-black">
 
-      <section className="snap-start">
-        <HeroSection />
-      </section>
 
-   
+
       <section className="snap-start min-h-screen flex items-center bg-black border-t border-white/10">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-xl animate-fade-in-up">
