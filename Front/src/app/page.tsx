@@ -1,25 +1,32 @@
 import { HeroSection } from '@/components/sections/HeroSection';
-// Usamos el alias @ que apunta a la raíz de src
-import Footer from '@/components/layout/Footer'; 
+// Ajustado: Importación desde la carpeta shared confirmada
+import Footer from '@/components/shared/Footer'; 
 
 interface HomePageProps {
   params: Promise<{ lang: string }>;
 }
 
+/**
+ * Emerald DT - Home Orchestrator
+ * Arquitectura de secciones snap-start optimizada para el Nieto Laboratory.
+ */
 export default async function Home({ params }: HomePageProps) {
-  const { lang } = await params;
+  // Resolvemos la promesa de params para evitar el ReferenceError en Next.js 15+
+  const resolvedParams = await params;
+  const lang = resolvedParams?.lang || 'en'; // Fallback por seguridad
   const isEs = lang === 'es';
 
   return (
     <main className="relative w-full bg-black h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth select-none">
       
-      {/* SECCIÓN 1: Hero Video */}
+      {/* SECCIÓN 1: Hero Video (Estilo SpaceX) */}
       <section className="snap-start h-screen w-full">
         <HeroSection />
       </section>
 
-      {/* SECCIÓN 2: Preview de Colección */}
+      {/* SECCIÓN 2: Preview de Colección / Heritage */}
       <section className="snap-start h-screen w-full flex items-center bg-black border-t border-white/5 relative overflow-hidden">
+        {/* Resplandor Esmeralda ambiental para profundidad visual */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none" />
         
         <div className="container mx-auto px-10 md:px-20 relative z-10">
@@ -45,7 +52,10 @@ export default async function Home({ params }: HomePageProps) {
         </div>
       </section>
 
-      {/* SECCIÓN 3: Footer Snap */}
+      {/* SECCIÓN 3: Footer Snap (Componente en Shared)
+          El contenedor flex justify-end permite que el Footer se asiente 
+          perfectamente al final del scroll snap.
+      */}
       <section className="snap-start h-screen w-full flex flex-col justify-end bg-black">
         <Footer />
       </section>
