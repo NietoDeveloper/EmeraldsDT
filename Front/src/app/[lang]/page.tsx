@@ -18,12 +18,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <main className="relative w-full bg-black">
-      {/* Contenedor de Secciones: 
-          Si decides usar scroll-snapping (que la pantalla salte de sección en sección),
-          puedes añadir 'h-screen overflow-y-auto snap-y snap-mandatory'
-      */}
-      
-      {/* SECCIÓN 1: HERO - El video inmersivo con sonido */}
+
       <section className="snap-start">
         <HeroSection />
       </section>
