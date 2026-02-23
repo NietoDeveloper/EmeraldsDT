@@ -25,9 +25,7 @@ export const HeroSection = () => {
         <h2 className="text-gold tracking-[0.3em] uppercase text-sm mb-2 font-mono">
           Emerald DT
         </h2>
-        <h1 className="text-5xl md:text-8xl font-bold uppercase mb-6 leading-none">
-          Eternal <br /> Emeralds
-        </h1>
+
 
       </div>
     </section>
