@@ -28,9 +28,7 @@ export const HeroSection = () => {
         <h1 className="text-5xl md:text-8xl font-bold uppercase mb-6 leading-none">
           Eternal <br /> Emeralds
         </h1>
-        <div className="flex gap-4">
 
-        </div>
       </div>
     </section>
   );
