@@ -29,8 +29,7 @@ export const HeroSection = () => {
           Eternal <br /> Emeralds
         </h1>
         <div className="flex gap-4">
-          <MainButton text="Explore Collection" variant="white" />
-          <MainButton text="Technical Specs" variant="gold" />
+
         </div>
       </div>
     </section>
