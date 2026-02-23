@@ -9,7 +9,7 @@ interface MuteToggleProps {
 export const MuteToggle = ({ isMuted, onToggle }: MuteToggleProps) => {
   return (
     <button
-      onClick={onToggle}
+
       className="fixed bottom-10 right-10 z-50 flex items-center gap-3 group"
       aria-label="Toggle Sound"
     >
