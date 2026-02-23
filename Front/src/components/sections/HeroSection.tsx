@@ -41,7 +41,7 @@ export const HeroSection = () => {
         </h2>
         <h1 className="text-6xl md:text-[100px] font-bold uppercase mb-8 leading-[0.85] tracking-tighter">
           Eternal <br /> 
-          <span className="text-emerald">Emeralds</span>
+
         </h1>
         <div className="flex flex-wrap gap-5">
           <MainButton text="Explore Collection" variant="white" />
