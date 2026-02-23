@@ -36,7 +36,7 @@ export default async function HomePage({ params }: HomePageProps) {
               {lang === 'es' ? 'Próximo Lanzamiento' : 'Upcoming Release'}
             </h2>
             <h3 className="text-4xl md:text-6xl font-bold uppercase mb-6">
-              Muzo Star Collection
+      
             </h3>
             <p className="text-gray-400 text-lg mb-8">
               {lang === 'es' 
