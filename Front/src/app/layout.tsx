@@ -1,11 +1,64 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/shared/Navbar";
 
-// Fuentes que dan el look técnico de SpaceX
+// Configuración de fuentes con el look técnico de SpaceX
 const sans = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 const mono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  display: 'swap',
+});
+
+export const metadata: Metadata = {
+  title: "Emerald DT | Colombian Emeralds & High Engineering",
+  description: "The world's premier platform for high-value Colombian emeralds. Designed by Nieto Laboratory.",
+  keywords: ["Emeralds", "Colombia", "Luxury", "Nieto Laboratory", "Blockchain", "Gems"],
+  openGraph: {
+    title: "Emerald DT | Eternal Emeralds",
+    description: "World-class emerald commercialization with SpaceX-inspired engineering.",
+    images: ["/og-image.jpg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  }
+};
+
+interface RootLayoutProps {
+  children: React.ReactNode;
+  params: { lang: string };
+}
+
+/**
+ * Root Layout - Emerald DT
+ * Punto de entrada principal que envuelve toda la aplicación.
+ */
+export default function RootLayout({
+  children,
+  params,
+}: RootLayoutProps) {
+  // Aseguramos que el lang se pase correctamente al HTML
+  const lang = params?.lang || "en";
+
+  return (
+    <html lang={lang} className="scroll-smooth">
+      <body
+        className={`${sans.variable} ${mono.variable} antialiased bg-black text-white min-h-screen selection:bg-emerald selection:text-white`}
+      >
+        {/* Navbar persistente con efectos Emerald & Gold */}
+        <Navbar />
+        
+        {/* Contenido dinámico de las páginas */}
+        {children}
+
+        {/* El Footer se agregará aquí cuando lo definamos */}
+      </body>
+    </html>
+  );
+}
