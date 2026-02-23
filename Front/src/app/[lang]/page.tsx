@@ -21,22 +21,6 @@ export default async function HomePage({ params }: HomePageProps) {
 
 
 
-    
-
-      {/* SECCIÓN 3: TECNOLOGÍA (Nieto Lab Standards) */}
-      <section className="snap-start min-h-screen bg-[url('/assets/images/tech-bg.jpg')] bg-cover bg-center relative">
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="container mx-auto px-6 md:px-12 h-full flex flex-col justify-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-bold uppercase mb-4">
-            Nieto Lab <br /> <span className="text-gold">Engineering</span>
-          </h2>
-          <p className="max-w-md text-gray-300 mb-6">
-            {lang === 'es'
-              ? 'Arquitectura de seguridad máxima y trazabilidad blockchain para cada activo.'
-              : 'Maximum security architecture and blockchain traceability for every asset.'}
-          </p>
-        </div>
-      </section>
 
     </main>
   );
