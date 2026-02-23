@@ -21,7 +21,7 @@ export const MuteToggle = ({ isMuted, onToggle }: MuteToggleProps) => {
         )}
       </div>
       <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 group-hover:text-white transition-opacity hidden md:block">
-        {isMuted ? "Sound Off" : "Sound On"}
+
       </span>
     </button>
   );
