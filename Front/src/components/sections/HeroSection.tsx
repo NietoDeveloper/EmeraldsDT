@@ -8,13 +8,6 @@ export const HeroSection = () => {
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const toggleMute = () => {
-    if (videoRef.current) {
-      // Sincronizamos el estado de React con la propiedad nativa del video
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(videoRef.current.muted);
-    }
-  };
 
   return (
     <section className="relative h-screen w-full overflow-hidden flex flex-col justify-end pb-24">
