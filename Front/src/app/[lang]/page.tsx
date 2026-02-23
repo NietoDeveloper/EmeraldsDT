@@ -27,9 +27,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <section className="snap-start min-h-screen flex items-center bg-black border-t border-white/10">
         <div className="container mx-auto px-6 md:px-12">
           <div className="max-w-xl animate-fade-in-up">
-            <h2 className="text-emerald font-mono tracking-widest uppercase mb-4">
-              {lang === 'es' ? 'Próximo Lanzamiento' : 'Upcoming Release'}
-            </h2>
+
             <h3 className="text-4xl md:text-6xl font-bold uppercase mb-6">
       
             </h3>
