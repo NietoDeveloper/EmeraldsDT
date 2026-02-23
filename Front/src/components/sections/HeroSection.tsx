@@ -43,10 +43,7 @@ export const HeroSection = () => {
           Eternal <br /> 
 
         </h1>
-        <div className="flex flex-wrap gap-5">
-          <MainButton text="Explore Collection" variant="white" />
-          <MainButton text="Technical Specs" variant="gold" />
-        </div>
+
       </div>
 
       {/* Control de Audio Minimalista */}
