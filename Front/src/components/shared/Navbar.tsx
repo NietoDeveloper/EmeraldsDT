@@ -67,11 +67,7 @@ export const Navbar = () => {
               </Link>
             ))}
           </div>
-
-
-      {/* MOBILE MENU OVERLAY (SPACEX STYLE) */}
-      <div className={`fixed inset-0 bg-black/95 backdrop-blur-3xl z-[105] transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] 
-        ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
+${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
       >
 
     </>
