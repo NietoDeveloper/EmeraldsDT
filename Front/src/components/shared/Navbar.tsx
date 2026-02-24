@@ -61,7 +61,7 @@ export const Navbar = () => {
         {/* CTA - RESERVE ACCESS (GOLD HOVER) */}
         <div className="flex items-center gap-6">
           <button className="hidden sm:block px-8 py-2.5 border border-emerald/40 text-[9px] uppercase tracking-[0.2em] font-bold hover:border-gold hover:text-gold transition-all duration-700 bg-emerald/5 backdrop-blur-sm relative overflow-hidden group">
-            <span className="relative z-10">Reserve Access</span>
+
             <div className="absolute inset-0 bg-gold/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
           </button>
           
