@@ -4,9 +4,6 @@ import { useScrollDirection } from "@/hooks/useScrollDirection";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-export const Navbar = () => {
-  const scrollDirection = useScrollDirection();
-  const [isAtTop, setIsAtTop] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
