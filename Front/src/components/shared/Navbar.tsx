@@ -7,18 +7,5 @@ import { useState, useEffect } from "react";
 
   useEffect(() => {
 
-
-  
-
-  return (
-    <nav
-
-
-       
-
-        </div>
-
-      </div>
-    </nav>
   );
 };
