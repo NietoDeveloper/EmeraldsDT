@@ -27,19 +27,7 @@ export default async function Home({ params }: HomePageProps) {
       {/* SECCIÓN 2: Preview de Colección / Heritage */}
       <section className="snap-start h-screen w-full flex items-center bg-black border-t border-white/5 relative overflow-hidden">
         {/* Resplandor Esmeralda ambiental para profundidad visual */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none" />
-        
-        <div className="container mx-auto px-10 md:px-20 relative z-10">
-          <div className="max-w-3xl">
 
-
-            <p className="text-zinc-400 text-xl mb-12 max-w-xl leading-relaxed">
-              {isEs 
-                ? 'Descubra la perfección tallada por la naturaleza y certificada por el Nieto Laboratory.' 
-                : 'Discover perfection carved by nature and certified by the Nieto Laboratory.'}
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6">
 
             </div>
           </div>
