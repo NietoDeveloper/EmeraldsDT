@@ -18,11 +18,6 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleLogoClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.location.href = "/";
-  };
-
   const navLinks = [
     { name: "Catalog", href: "/catalog" },
     { name: "Categories", href: "/categories" },
@@ -32,72 +27,55 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full z-[100] transition-all duration-700 ease-in-out 
+      <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] 
         ${scrollDirection === "down" && !isMobileMenuOpen ? "-translate-y-full" : "translate-y-0"} 
-        ${isAtTop ? "bg-transparent mt-4 md:mt-8 py-10" : "bg-black/95 backdrop-blur-2xl mt-0 py-5 border-b border-emerald/20 shadow-2xl"}`}
+        ${isAtTop ? "bg-transparent mt-6 md:mt-10 py-10" : "bg-black/95 backdrop-blur-3xl mt-0 py-5 border-b border-emerald/20 shadow-2xl"}`}
       >
-        {/* PADDING LATERAL REFORZADO: Separación agresiva de los bordes */}
-        <div className="w-full max-w-[2200px] mx-auto flex justify-between items-center 
-          px-12 sm:px-24 md:px-32 lg:px-40 xl:px-56 uw:px-72 transition-all duration-500"
-        >
+        <div className="w-full max-w-[2200px] mx-auto flex justify-between items-center px-10 sm:px-20 md:px-28 lg:px-36 xl:px-44 uw:px-64">
           
-          {/* LOGO & BRAND */}
-          <a href="/" onClick={handleLogoClick} className="group flex items-center gap-6 z-[110] outline-none cursor-pointer flex-shrink-0">
-            {/* Imagen de Logo más grande */}
-            <div className="relative w-14 h-14 md:w-20 md:h-20 transition-all duration-700 group-hover:scale-110 animate-float flex-shrink-0">
-              <Image 
-                src="/assets/img/logo.png" 
-                alt="Emerald DT Logo" 
-                fill 
-                className="object-contain"
-              />
+          {/* LOGO: Emerald DT en una sola línea */}
+          <Link href="/" className="group flex items-center gap-4 z-[110] outline-none">
+            <div className="relative w-12 h-12 md:w-16 md:h-16 transition-all duration-700 group-hover:rotate-[360deg] animate-float">
+              <Image src="/assets/img/logo.png" alt="Logo" fill className="object-contain" />
             </div>
-
-            {/* Tipografía Ajustada */}
-            <div className="flex flex-col md:flex-row md:items-center md:gap-4 whitespace-nowrap">
-              {/* Emerald: Tracking más cerrado para un look premium y sólido */}
-              <span className="font-black tracking-[-0.02em] md:tracking-[-0.05em] uppercase text-emerald text-3xl md:text-5xl group-hover:text-gold transition-colors duration-500 leading-none">
-                Emerald
-              </span>
-              {/* DT: Escalado y con peso visual fuerte */}
-              <span className="font-black tracking-[0.1em] uppercase text-gold text-2xl md:text-4xl italic animate-pulse-slow leading-none">
-                DT
-              </span>
+            <div className="flex items-center gap-3">
+              <span className="font-bold tracking-tight uppercase text-emerald text-xl md:text-3xl">Emerald</span>
+              <span className="font-black tracking-tighter uppercase text-gold text-3xl md:text-5xl italic animate-pulse-slow">DT</span>
             </div>
-          </a>
+          </Link>
 
           {/* DESKTOP MENU */}
-          <div className="hidden lg:flex items-center gap-16">
+          <div className="hidden lg:flex items-center gap-14">
             {navLinks.map((link) => (
-              <Link key={link.name} href={link.href} className="relative text-[14px] uppercase tracking-[0.4em] font-black text-emerald hover:text-gold transition-all duration-500 group">
+              <Link key={link.name} href={link.href} className="text-[13px] uppercase tracking-[0.5em] font-black text-emerald/80 hover:text-gold transition-all duration-500">
                 {link.name}
-                <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-gold transition-all duration-500 group-hover:w-full" />
               </Link>
             ))}
           </div>
 
-          {/* ICONS & TOOLS */}
-          <div className="flex items-center gap-10 md:gap-14">
-            <div className="hidden md:flex items-center gap-12 border-l border-emerald/30 pl-14">
-              <Link href="/cart" className="text-emerald hover:text-gold transition-transform hover:scale-125"><ShoppingCart size={28} /></Link>
-              <Link href="/orders" className="text-emerald hover:text-gold transition-transform hover:scale-125"><Package size={28} /></Link>
-              <Link href="/login" className="text-[13px] uppercase tracking-[0.3em] font-black text-emerald hover:text-gold transition-colors">Log In</Link>
+          {/* ICONS & HAMBURGER */}
+          <div className="flex items-center gap-8 md:gap-12">
+            <div className="hidden md:flex items-center gap-8 border-l border-emerald/20 pl-10">
+              <Link href="/cart" className="text-emerald hover:text-gold transition-all"><ShoppingCart size={24} /></Link>
+              <Link href="/login" className="text-[12px] uppercase tracking-[0.3em] font-black text-emerald">Log In</Link>
             </div>
 
-            {/* HAMBURGUER BUTTON: Con margen extra interno para no tocar el borde del padding */}
+            {/* HAMBURGER: Movimiento Moderno Verde/Gold */}
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden relative z-[110] cursor-pointer group outline-none ml-4"
-              aria-label="Toggle Menu"
+              className="lg:hidden relative z-[110] p-4 group outline-none overflow-visible"
             >
-              <div className="relative w-14 h-14 flex items-center justify-center">
+              {/* Círculo de fondo con pulso magnético */}
+              <div className="absolute inset-0 bg-emerald/10 rounded-full blur-md group-hover:bg-gold/20 transition-all duration-500 group-hover:scale-150 animate-pulse" />
+              
+              <div className="relative flex items-center justify-center w-14 h-14 bg-black border border-emerald/30 rounded-full group-hover:border-gold transition-all duration-500 animate-magnetic">
                 <Menu 
-                  size={54} 
-                  className={`absolute transition-all duration-500 ${isMobileMenuOpen ? 'opacity-0 rotate-90 scale-0' : 'opacity-100 rotate-0 scale-100'} text-emerald group-hover:text-gold`} 
+                  size={40} 
+                  className={`absolute transition-all duration-700 ${isMobileMenuOpen ? 'opacity-0 rotate-180 scale-0' : 'opacity-100 rotate-0 scale-100'} text-emerald group-hover:text-gold`} 
                 />
                 <X 
-                  size={54} 
-                  className={`absolute transition-all duration-500 ${isMobileMenuOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-0'} text-gold`} 
+                  size={40} 
+                  className={`absolute transition-all duration-700 ${isMobileMenuOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-180 scale-0'} text-gold`} 
                 />
               </div>
             </button>
@@ -105,20 +83,11 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* MOBILE MENU OVERLAY */}
-      <div className={`fixed inset-0 bg-black/98 backdrop-blur-3xl z-[105] transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] 
-        ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
-      >
-        <div className="flex flex-col h-full justify-center items-end px-16 sm:px-32 gap-12">
-          {[...navLinks, {name: "Cart", href: "/cart"}, {name: "My Orders", href: "/orders"}, {name: "Log In", href: "/login"}].map((item, index) => (
-            <Link 
-              key={item.name} 
-              href={item.href} 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`text-5xl sm:text-8xl uppercase tracking-[0.5em] font-black text-emerald hover:text-gold transition-all duration-500
-                ${isMobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0"}`}
-              style={{ transitionDelay: `${index * 70}ms` }}
-            >
+      {/* MOBILE MENU */}
+      <div className={`fixed inset-0 bg-black/98 backdrop-blur-3xl z-[105] transition-all duration-1000 ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}>
+        <div className="flex flex-col h-full justify-center items-end px-16 sm:px-32 gap-8">
+          {navLinks.map((item, i) => (
+            <Link key={item.name} href={item.href} onClick={() => setIsMobileMenuOpen(false)} className="text-5xl sm:text-7xl uppercase font-black text-emerald hover:text-gold transition-all" style={{ transitionDelay: `${i * 50}ms` }}>
               {item.name}
             </Link>
           ))}
@@ -126,16 +95,10 @@ export const Navbar = () => {
       </div>
 
       <style jsx global>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-15px); }
-        }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
         .animate-float { animation: float 4s ease-in-out infinite; }
-        .animate-pulse-slow { animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-        @keyframes pulse {
-          0%, 100% { opacity: 1; filter: brightness(1); }
-          50% { opacity: 0.7; filter: brightness(1.7); }
-        }
+        @keyframes magnetic { 0%, 100% { transform: translate(0,0); } 25% { transform: translate(2px, -2px); } 75% { transform: translate(-2px, 2px); } }
+        .animate-magnetic { animation: magnetic 3s ease-in-out infinite; }
       `}</style>
     </>
   );
