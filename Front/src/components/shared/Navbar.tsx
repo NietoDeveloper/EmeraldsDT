@@ -54,15 +54,6 @@ export const Navbar = () => {
             </span>
           </a>
 
-          {/* DESKTOP MENU (HIDDEN < 1024px) */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link key={link.name} href={link.href} className="relative text-[11px] uppercase tracking-[0.3em] font-bold text-emerald hover:text-gold transition-all duration-500 group">
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gold transition-all duration-500 group-hover:w-full" />
-              </Link>
-            ))}
-          </div>
 
           </div>
         </div>
