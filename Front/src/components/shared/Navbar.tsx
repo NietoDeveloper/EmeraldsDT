@@ -48,7 +48,7 @@ export const Navbar = () => {
           {["Products", "Certification", "Laboratory", "About"].map((item) => (
 
               {item}
-              {/* Gold Floating Underline */}
+
               <span className="absolute -bottom-2 left-1/2 w-0 h-[1px] bg-gold transition-all duration-500 group-hover:w-full group-hover:left-0" />
             </Link>
           ))}
