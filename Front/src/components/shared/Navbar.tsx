@@ -102,21 +102,7 @@ export const Navbar = () => {
       <div className={`fixed inset-0 bg-black/95 backdrop-blur-3xl z-[105] transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] 
         ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
       >
-        <div className="flex flex-col h-full justify-center items-end pr-10 sm:pr-20 gap-8">
-          {[...navLinks, {name: "Cart", href: "/cart"}, {name: "My Orders", href: "/orders"}, {name: "Log In", href: "/login"}].map((item, index) => (
-            <Link 
-              key={item.name} 
-              href={item.href} 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`text-3xl sm:text-4xl uppercase tracking-[0.5em] font-black text-emerald hover:text-gold transition-all duration-500 transform
-                ${isMobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0"}`}
-              style={{ transitionDelay: `${index * 50}ms` }}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-      </div>
+
 
       <style jsx global>{`
         @keyframes float {
