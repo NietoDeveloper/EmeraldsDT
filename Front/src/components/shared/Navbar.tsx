@@ -35,11 +35,7 @@ import { useState, useEffect } from "react";
         </div>
 
         <div className="flex items-center gap-6">
-          <button className="hidden sm:block px-8 py-2.5 border border-emerald/40 text-[9px] uppercase tracking-[0.2em] font-bold hover:border-gold hover:text-gold transition-all duration-700 bg-emerald/5 backdrop-blur-sm relative overflow-hidden group">
-
-            <div className="absolute inset-0 bg-gold/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-          </button>
-
+         
           <button className="lg:hidden flex flex-col gap-1.5 items-end group">
             <div className="w-8 h-[1px] bg-white group-hover:bg-gold transition-colors" />
             <div className="w-5 h-[1px] bg-white group-hover:bg-emerald transition-colors" />
