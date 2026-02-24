@@ -65,7 +65,6 @@ export const Navbar = () => {
           </div>
 
 
-            {/* BOTÓN MENÚ MÓVIL (ESTILO SPACEX) */}
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden text-white z-[110]"
