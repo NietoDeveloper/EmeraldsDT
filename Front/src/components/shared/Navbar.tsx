@@ -64,13 +64,6 @@ export const Navbar = () => {
             ))}
           </div>
 
-
-            <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden text-white z-[110]"
-            >
-              {isMobileMenuOpen ? <X size={28} className="text-gold" /> : <Menu size={28} className="text-emerald" />}
-            </button>
           </div>
         </div>
       </nav>
