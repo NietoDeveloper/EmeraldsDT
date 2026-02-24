@@ -68,35 +68,6 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* ICONS & TOOLS */}
-          <div className="flex items-center gap-5 md:gap-8">
-            <div className="hidden md:flex items-center gap-6 border-l border-emerald/30 pl-8">
-              <Link href="/cart" className="text-emerald hover:text-gold hover:scale-110 transition-all duration-300"><ShoppingCart size={20} /></Link>
-              <Link href="/orders" className="text-emerald hover:text-gold hover:scale-110 transition-all duration-300"><Package size={20} /></Link>
-              <Link href="/history" className="text-emerald hover:text-gold hover:scale-110 transition-all duration-300"><History size={20} /></Link>
-              <Link href="/login" className="text-[11px] uppercase tracking-[0.3em] font-black text-emerald hover:text-gold transition-colors ml-2">Log In</Link>
-            </div>
-
-            {/* HAMBURGUER / CLOSE BUTTON */}
-            <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 group transition-all duration-500 z-[110] outline-none"
-              aria-label="Menu"
-            >
-              <div className="relative w-8 h-8 flex items-center justify-center">
-                <Menu 
-                  size={32} 
-                  className={`absolute transition-all duration-500 transform ${isMobileMenuOpen ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'} text-emerald group-hover:text-gold group-hover:rotate-12`} 
-                />
-                <X 
-                  size={32} 
-                  className={`absolute transition-all duration-500 transform ${isMobileMenuOpen ? 'rotate-0 scale-100 opacity-100' : '-rotate-90 scale-0 opacity-0'} text-gold group-hover:scale-110`} 
-                />
-              </div>
-            </button>
-          </div>
-        </div>
-      </nav>
 
       {/* MOBILE MENU OVERLAY (SPACEX STYLE) */}
       <div className={`fixed inset-0 bg-black/95 backdrop-blur-3xl z-[105] transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] 
