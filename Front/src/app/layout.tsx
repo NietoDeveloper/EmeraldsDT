@@ -50,24 +50,23 @@ export default async function RootLayout({
           antialiased 
           bg-black 
           text-white
-          /* RESET DE CAJA: Forzamos que el body ocupe todo el ancho real */
-          w-full 
-          max-w-[100vw]
+          /* ELIMINAMOS max-w-[100vw] que causa el gap del scrollbar */
+          /* Usamos min-h-screen y margin-0 implícito para reset total */
+          m-0 p-0
+          w-full
           overflow-x-hidden
           selection:bg-emerald/30 
           selection:text-gold
           relative
         `}
       >
-        {/* Navbar: Al estar fuera del main, se rige por el body */}
         <Navbar />
         
-        {/* Contenedor de contenido: Usamos min-h-screen para asegurar que empuje el footer */}
-        <main className="relative flex flex-col w-full min-h-screen">
+        {/* Eliminamos el flex-col del main si vas a usar Scroll Snap, 
+            ya que el snap funciona mejor sobre un contenedor directo */}
+        <main>
           {children}
         </main>
-
-        {/* El Footer se insertará aquí */}
       </body>
     </html>
   );
