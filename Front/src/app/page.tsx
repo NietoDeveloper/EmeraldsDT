@@ -52,10 +52,6 @@ export default async function Home({ params }: HomePageProps) {
         </div>
       </section>
 
-      {/* SECCIÓN 3: Footer Snap (Componente en Shared)
-          El contenedor flex justify-end permite que el Footer se asiente 
-          perfectamente al final del scroll snap.
-      */}
       <section className="snap-start h-screen w-full flex flex-col justify-end bg-black">
         <Footer />
       </section>
