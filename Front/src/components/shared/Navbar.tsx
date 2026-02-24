@@ -9,9 +9,7 @@ import { useState, useEffect } from "react";
     const handleScroll = () => {
       // Usamos 20px para una respuesta más rápida al salir del Hero
       setIsAtTop(window.scrollY < 20);
-    };
-    
-    // Ejecutar inmediatamente para el estado inicial
+
     handleScroll();
     
     window.addEventListener("scroll", handleScroll, { passive: true });
