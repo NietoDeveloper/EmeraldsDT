@@ -3,7 +3,6 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/shared/Navbar";
 
-// Look técnico Nieto Lab / SpaceX
 const sans = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  params: Promise<{ lang: string }>; // En Next.js 15+ params es un Promise
+  params: Promise<{ lang: string }>;
 }
 
 export default async function RootLayout({
@@ -51,21 +50,21 @@ export default async function RootLayout({
           antialiased 
           bg-black 
           text-white 
-          min-h-screen 
+          /* Eliminamos flex y min-h-screen del body para evitar conflictos de centrado */
           overflow-x-hidden
           selection:bg-emerald/30 
           selection:text-gold
         `}
       >
-        {/* Capa superior: Navbar (Fixed) */}
+        {/* EL NAVBAR DEBE ESTAR SOLO: Sin contenedores que lo limiten */}
         <Navbar />
         
-        {/* Capa base: Contenido */}
-        <div className="relative flex flex-col w-full min-h-screen">
+        {/* EL CONTENIDO: Aquí es donde controlamos el flujo de las secciones */}
+        <main className="relative w-full">
           {children}
-        </div>
+        </main>
 
-        {/* El Footer se insertará aquí */}
+        {/* El Footer irá aquí, también fuera del main si es fixed o al final del flujo */}
       </body>
     </html>
   );
