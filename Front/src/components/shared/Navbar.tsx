@@ -11,12 +11,6 @@ export const Navbar = () => {
   const [isAtTop, setIsAtTop] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => setIsAtTop(window.scrollY < 20);
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Forzar recarga al hacer click en el logo (Requerimiento Nieto Lab)
   const handleLogoClick = (e: React.MouseEvent) => {
