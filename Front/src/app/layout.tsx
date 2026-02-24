@@ -43,8 +43,7 @@ export default function RootLayout({
   children,
   params,
 }: RootLayoutProps) {
-  // Aseguramos que el lang se pase correctamente al HTML
-  const lang = params?.lang || "en";
+
 
   return (
     <html lang={lang} className="scroll-smooth">
