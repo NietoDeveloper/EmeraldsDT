@@ -14,9 +14,7 @@ import { useState, useEffect } from "react";
     <nav
 
 
-        </div>
-
-        <div className="flex items-center gap-6">
+       
 
         </div>
 
