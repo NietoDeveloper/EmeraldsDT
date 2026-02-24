@@ -11,10 +11,4 @@ export const Navbar = () => {
   const [isAtTop, setIsAtTop] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-
-  // Forzar recarga al hacer click en el logo (Requerimiento Nieto Lab)
-  const handleLogoClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-
-  );
 };
