@@ -75,15 +75,6 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* MOBILE MENU OVERLAY (SPACEX EXPANDABLE) */}
-      <div className={`fixed inset-0 bg-black z-[105] transition-transform duration-500 ease-in-out p-12 flex flex-col justify-center items-end text-right
-        ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
-      >
-        <div className="flex flex-col gap-8">
-          {[...navLinks, {name: "Log In", href: "/login"}, {name: "Cart", href: "/cart"}, {name: "My Orders", href: "/orders"}].map((item) => (
-
-
-            </Link>
           ))}
         </div>
       </div>
