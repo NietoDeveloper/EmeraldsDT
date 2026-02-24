@@ -63,8 +63,7 @@ export const Navbar = () => {
 
             <div className="absolute inset-0 bg-gold/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
           </button>
-          
-          {/* Mobile Menu Icon (Placeholder) */}
+
           <button className="lg:hidden flex flex-col gap-1.5 items-end group">
             <div className="w-8 h-[1px] bg-white group-hover:bg-gold transition-colors" />
             <div className="w-5 h-[1px] bg-white group-hover:bg-emerald transition-colors" />
