@@ -58,18 +58,5 @@ export const Navbar = () => {
             </div>
           </a>
 
-          {/* DESKTOP MENU */}
-          <div className="hidden lg:flex items-center gap-10 xl:gap-14">
-            {navLinks.map((link) => (
-              <Link key={link.name} href={link.href} className="relative text-[11px] xl:text-[13px] uppercase tracking-[0.4em] font-extrabold text-emerald hover:text-gold transition-all duration-500 group">
-                {link.name}
-                <span className="absolute -bottom-2 left-0 w-0 h-[1.5px] bg-gold transition-all duration-500 group-hover:w-full shadow-[0_0_8px_#D4AF37]" />
-              </Link>
-            ))}
-          </div>
-${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
-      >
-
-    </>
   );
 };
