@@ -81,12 +81,7 @@ export const Navbar = () => {
       >
         <div className="flex flex-col gap-8">
           {[...navLinks, {name: "Log In", href: "/login"}, {name: "Cart", href: "/cart"}, {name: "My Orders", href: "/orders"}].map((item) => (
-            <Link 
-              key={item.name} 
-              href={item.href} 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-2xl uppercase tracking-[0.4em] font-bold text-emerald hover:text-gold transition-colors"
-            >
+
 
             </Link>
           ))}
