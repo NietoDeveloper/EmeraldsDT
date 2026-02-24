@@ -35,13 +35,6 @@ interface RootLayoutProps {
   params: { lang: string };
 }
 
-/**
- * Root Layout - Emerald DT
- * Punto de entrada principal que envuelve toda la aplicación.
- */
-export default function RootLayout({
-  children,
-  params,
 }: RootLayoutProps) {
 
   );
