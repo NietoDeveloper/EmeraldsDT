@@ -22,7 +22,7 @@ import { useState, useEffect } from "react";
     >
       <div className="max-w-[1600px] mx-auto flex justify-between items-center">
         
-        {/* LOGO - NIETO LAB IDENTITY */}
+   
         <Link href="/" className="group flex items-center gap-3">
           <div className="relative w-7 h-7">
              <div className="absolute inset-0 bg-emerald rounded-sm group-hover:bg-gold transition-colors duration-700 shadow-[0_0_20px_rgba(4,120,87,0.5)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.5)]" />
