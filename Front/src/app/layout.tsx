@@ -46,12 +46,7 @@ export default function RootLayout({
 
 
   return (
-    
-        {/* Navbar persistente con efectos Emerald & Gold */}
-        <Navbar />
-        
-        {/* Contenido dinámico de las páginas */}
-        {children}
+
 
         {/* El Footer se agregará aquí cuando lo definamos */}
       </body>
