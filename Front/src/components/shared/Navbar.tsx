@@ -12,14 +12,7 @@ import { useState, useEffect } from "react";
 
   return (
     <nav
-      className={`fixed top-0 w-full z-[100] transition-all duration-500 ease-in-out px-6 md:px-12 ${
-        scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
-      } ${
-        isAtTop 
-          ? "bg-transparent py-8" 
-          : "bg-black/80 backdrop-blur-xl py-4 border-b border-emerald/20"
-      }`}
-    >
+
       <div className="max-w-[1600px] mx-auto flex justify-between items-center">
         
    
