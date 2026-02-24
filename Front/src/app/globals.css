@@ -2,12 +2,12 @@
 
 :root {
   /* SpaceX Style Palette + Emerald DT Identity */
-  --background: #000000;       /* Negro absoluto */
-  --foreground: #ffffff;       /* Texto principal blanco */
-  --emerald-primary: #047857;  /* Verde Esmeralda profundo */
-  --emerald-light: #10b981;    /* Brillo esmeralda */
-  --gold-accent: #D4AF37;      /* Oro metálico para detalles de lujo */
-  --gold-dark: #996515;        /* Sombra de oro */
+  --background: #000000;
+  --foreground: #ffffff;
+  --emerald-primary: #047857;
+  --emerald-light: #10b981;
+  --gold-accent: #D4AF37;
+  --gold-dark: #996515;
 }
 
 @theme inline {
@@ -18,41 +18,46 @@
   --color-gold: var(--gold-accent);
   --color-gold-dark: var(--gold-dark);
   
-  /* Tipografía técnica y limpia */
   --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 }
 
+/* RESET CRÍTICO PARA MOVIMIENTO */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  /* Efecto de scroll suave para las secciones */
-  scroll-behavior: smooth;
+html, body {
+  /* Usar 100% en lugar de 100vw evita que el scrollbar empuje el contenido de forma errática */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  /* Aseguramos que nada bloquee el padding del Navbar */
+  min-height: 100vh;
 }
 
-/* Scrollbar minimalista tipo Nieto Lab */
+/* Ajuste del Scrollbar para que no flote sobre el Navbar */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: transparent; /* Track transparente para dar sensación de más espacio */
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--emerald-primary);
-  border-radius: 10px;
+  border-radius: 0px; /* Estilo SpaceX: más rígido y técnico */
+  border: 1px solid #000;
 }
 
 /* Utility para secciones de pantalla completa */
