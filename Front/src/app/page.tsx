@@ -19,13 +19,6 @@ export default async function Home({ params }: HomePageProps) {
   return (
     <main className="relative w-full bg-black h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth select-none">
       
-      {/* SECCIÓN 1: Hero Video (Estilo SpaceX) */}
-      <section className="snap-start h-screen w-full">
-        <HeroSection />
-      </section>
-
-      </section>
-
 
     </main>
   );
