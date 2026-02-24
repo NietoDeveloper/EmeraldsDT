@@ -19,7 +19,7 @@
   --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* RESET TOTAL PARA DISEÑO TÉCNICO */
+/* RESET TOTAL */
 *, ::before, ::after {
   margin: 0;
   padding: 0;
@@ -27,10 +27,10 @@
 }
 
 html {
-  /* Forzamos que el scroll sea interno para no desplazar elementos fixed */
-  overflow-y: scroll;
+  /* Permitimos que el scroll fluya naturalmente */
   overflow-x: hidden;
   height: 100%;
+  background-color: #000000;
 }
 
 body {
@@ -38,31 +38,37 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   min-height: 100%;
-  width: 100%;
+  width: 100vw; /* Forzamos el ancho del viewport */
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  /* Evita que el navegador añada padding extra por el scrollbar */
-  scrollbar-gutter: stable;
+  
+  /* ELIMINADO: scrollbar-gutter: stable; <- ESTO ALEJABA EL SCROLLBAR */
 }
 
-/* SCROLLBAR SPACEX STYLE (Más fino y separado) */
+/* SCROLLBAR SPACEX STYLE (Ultrafino y pegado al borde) */
 ::-webkit-scrollbar {
-  width: 8px; /* Un poco más ancho para dar espacio visual */
+  width: 5px; /* Más delgado para máxima elegancia */
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: transparent; /* Track transparente para que parezca que flota sobre el contenido */
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--emerald-primary);
-  /* Borde negro alrededor del thumb crea un efecto de "separación" del borde de la pantalla */
-  border: 2px solid #000000;
-  border-radius: 10px;
+  /* Sin bordes transparentes para que se pegue al borde físico de la pantalla */
+  border-radius: 0px; 
+  transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--emerald-light);
+  background: var(--gold-accent); /* Cambio a Gold en hover para feedback premium */
+}
+
+/* Soporte para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--emerald-primary) transparent;
 }
 
 /* Utility para las secciones de Emerald DT */
@@ -76,10 +82,4 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-}
-
-/* Clase de emergencia para el Navbar si sigue pegado */
-.navbar-safe-area {
-  padding-left: clamp(1.5rem, 5vw, 8rem);
-  padding-right: clamp(1.5rem, 5vw, 8rem);
 }
