@@ -46,11 +46,7 @@ export const Navbar = () => {
         {/* NAVIGATION LINKS - SPACEX STYLE */}
         <div className="hidden lg:flex items-center gap-12">
           {["Products", "Certification", "Laboratory", "About"].map((item) => (
-            <Link
-              key={item}
-              href={`/${item.toLowerCase()}`}
-              className="relative text-[10px] uppercase tracking-[0.3em] font-bold text-white/60 hover:text-gold transition-all duration-500 group"
-            >
+
               {item}
               {/* Gold Floating Underline */}
               <span className="absolute -bottom-2 left-1/2 w-0 h-[1px] bg-gold transition-all duration-500 group-hover:w-full group-hover:left-0" />
