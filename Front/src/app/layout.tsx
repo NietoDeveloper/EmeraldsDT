@@ -44,12 +44,5 @@ export default function RootLayout({
   params,
 }: RootLayoutProps) {
 
-
-  return (
-
-
-        {/* El Footer se agregará aquí cuando lo definamos */}
-      </body>
-    </html>
   );
 }
