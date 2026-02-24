@@ -52,9 +52,6 @@ export default async function Home({ params }: HomePageProps) {
         </div>
       </section>
 
-      <section className="snap-start h-screen w-full flex flex-col justify-end bg-black">
-        <Footer />
-      </section>
 
     </main>
   );
