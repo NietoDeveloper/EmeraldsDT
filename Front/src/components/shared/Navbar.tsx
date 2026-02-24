@@ -8,11 +8,7 @@ import { useState, useEffect } from "react";
   useEffect(() => {
 
 
-    handleScroll();
-    
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  
 
   return (
     <nav
