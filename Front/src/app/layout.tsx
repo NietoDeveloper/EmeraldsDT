@@ -46,10 +46,7 @@ export default function RootLayout({
 
 
   return (
-    <html lang={lang} className="scroll-smooth">
-      <body
-        className={`${sans.variable} ${mono.variable} antialiased bg-black text-white min-h-screen selection:bg-emerald selection:text-white`}
-      >
+    
         {/* Navbar persistente con efectos Emerald & Gold */}
         <Navbar />
         
