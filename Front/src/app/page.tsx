@@ -34,9 +34,7 @@ export default async function Home({ params }: HomePageProps) {
             <h2 className="text-emerald-500 font-mono tracking-[0.4em] uppercase mb-6 text-sm">
               {isEs ? '// Patrimonio Colombiano' : '// Colombian Heritage'}
             </h2>
-            <h3 className="text-5xl md:text-8xl font-bold uppercase mb-8 tracking-tighter leading-none text-white">
-              Muzo Star <br/> <span className="text-white/50 italic">Collection</span>
-            </h3>
+
             <p className="text-zinc-400 text-xl mb-12 max-w-xl leading-relaxed">
               {isEs 
                 ? 'Descubra la perfección tallada por la naturaleza y certificada por el Nieto Laboratory.' 
