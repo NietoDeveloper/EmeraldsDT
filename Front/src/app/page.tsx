@@ -24,14 +24,6 @@ export default async function Home({ params }: HomePageProps) {
         <HeroSection />
       </section>
 
-      {/* SECCIÓN 2: Preview de Colección / Heritage */}
-      <section className="snap-start h-screen w-full flex items-center bg-black border-t border-white/5 relative overflow-hidden">
-        {/* Resplandor Esmeralda ambiental para profundidad visual */}
-
-
-            </div>
-          </div>
-        </div>
       </section>
 
 
