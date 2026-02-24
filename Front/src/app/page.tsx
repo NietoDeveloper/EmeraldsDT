@@ -8,13 +8,5 @@ interface HomePageProps {
 
 /**
  * Emerald DT - Home Orchestrator
- * Arquitectura de secciones snap-start optimizada para el Nieto Laboratory.
- */
-export default async function Home({ params }: HomePageProps) {
-  // Resolvemos la promesa de params para evitar el ReferenceError en Next.js 15+
-  const resolvedParams = await params;
-  const lang = resolvedParams?.lang || 'en'; // Fallback por seguridad
-  const isEs = lang === 'es';
 
-  );
 }
