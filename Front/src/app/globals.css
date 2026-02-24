@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 :root {
-  /* SpaceX Style Palette + Emerald DT Identity */
   --background: #000000;
   --foreground: #ffffff;
   --emerald-primary: #047857;
@@ -17,50 +16,56 @@
   --color-emerald-light: var(--emerald-light);
   --color-gold: var(--gold-accent);
   --color-gold-dark: var(--gold-dark);
-  
   --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* RESET CRÍTICO PARA MOVIMIENTO */
-* {
+/* RESET TOTAL PARA DISEÑO TÉCNICO */
+*, ::before, ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  /* Usar 100% en lugar de 100vw evita que el scrollbar empuje el contenido de forma errática */
-  width: 100%;
-  max-width: 100%;
+html {
+  /* Forzamos que el scroll sea interno para no desplazar elementos fixed */
+  overflow-y: scroll;
   overflow-x: hidden;
-  position: relative;
+  height: 100%;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  /* Aseguramos que nada bloquee el padding del Navbar */
-  min-height: 100vh;
+  /* Evita que el navegador añada padding extra por el scrollbar */
+  scrollbar-gutter: stable;
 }
 
-/* Ajuste del Scrollbar para que no flote sobre el Navbar */
+/* SCROLLBAR SPACEX STYLE (Más fino y separado) */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px; /* Un poco más ancho para dar espacio visual */
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; /* Track transparente para dar sensación de más espacio */
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--emerald-primary);
-  border-radius: 0px; /* Estilo SpaceX: más rígido y técnico */
-  border: 1px solid #000;
+  /* Borde negro alrededor del thumb crea un efecto de "separación" del borde de la pantalla */
+  border: 2px solid #000000;
+  border-radius: 10px;
 }
 
-/* Utility para secciones de pantalla completa */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--emerald-light);
+}
+
+/* Utility para las secciones de Emerald DT */
 .snap-section {
   height: 100vh;
   width: 100%;
@@ -71,4 +76,10 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+}
+
+/* Clase de emergencia para el Navbar si sigue pegado */
+.navbar-safe-area {
+  padding-left: clamp(1.5rem, 5vw, 8rem);
+  padding-right: clamp(1.5rem, 5vw, 8rem);
 }
