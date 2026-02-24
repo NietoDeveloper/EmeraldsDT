@@ -31,9 +31,7 @@ export default async function Home({ params }: HomePageProps) {
         
         <div className="container mx-auto px-10 md:px-20 relative z-10">
           <div className="max-w-3xl">
-            <h2 className="text-emerald-500 font-mono tracking-[0.4em] uppercase mb-6 text-sm">
-              {isEs ? '// Patrimonio Colombiano' : '// Colombian Heritage'}
-            </h2>
+
 
             <p className="text-zinc-400 text-xl mb-12 max-w-xl leading-relaxed">
               {isEs 
