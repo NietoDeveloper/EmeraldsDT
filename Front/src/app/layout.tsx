@@ -49,22 +49,25 @@ export default async function RootLayout({
           ${mono.variable} 
           antialiased 
           bg-black 
-          text-white 
-          /* Eliminamos flex y min-h-screen del body para evitar conflictos de centrado */
+          text-white
+          /* RESET DE CAJA: Forzamos que el body ocupe todo el ancho real */
+          w-full 
+          max-w-[100vw]
           overflow-x-hidden
           selection:bg-emerald/30 
           selection:text-gold
+          relative
         `}
       >
-        {/* EL NAVBAR DEBE ESTAR SOLO: Sin contenedores que lo limiten */}
+        {/* Navbar: Al estar fuera del main, se rige por el body */}
         <Navbar />
         
-        {/* EL CONTENIDO: Aquí es donde controlamos el flujo de las secciones */}
-        <main className="relative w-full">
+        {/* Contenedor de contenido: Usamos min-h-screen para asegurar que empuje el footer */}
+        <main className="relative flex flex-col w-full min-h-screen">
           {children}
         </main>
 
-        {/* El Footer irá aquí, también fuera del main si es fixed o al final del flujo */}
+        {/* El Footer se insertará aquí */}
       </body>
     </html>
   );
