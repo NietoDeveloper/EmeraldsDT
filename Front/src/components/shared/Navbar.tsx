@@ -87,7 +87,7 @@ export const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-2xl uppercase tracking-[0.4em] font-bold text-emerald hover:text-gold transition-colors"
             >
-              {item.name}
+
             </Link>
           ))}
         </div>
