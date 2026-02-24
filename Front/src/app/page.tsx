@@ -9,7 +9,7 @@ interface HomePageProps {
 /**
  * Emerald DT - Home Orchestrator
  * Arquitectura de secciones optimizada para el Nieto Laboratory.
- * El scroll snap se gestiona ahora desde el Layout para liberar el Navbar.
+ * Responsive garantizado: 310px - 1900px.
  */
 export default async function Home({ params }: HomePageProps) {
   const resolvedParams = await params;
@@ -70,4 +70,21 @@ export default async function Home({ params }: HomePageProps) {
         </div>
 
         {/* Decoración lateral técnica (SpaceX Style) */}
-        <div className="absolute right-10 bottom-20 hidden xl:block
+        <div className="absolute right-10 bottom-20 hidden xl:block">
+          <div className="flex flex-col gap-4 items-center">
+            <span className="[writing-mode:vertical-lr] uppercase tracking-[0.5em] text-[10px] text-zinc-600 font-mono">
+              Nieto Lab — 2026
+            </span>
+            <div className="w-[1px] h-20 bg-gradient-to-t from-emerald to-transparent" />
+          </div>
+        </div>
+      </section>
+
+      {/* SECCIÓN 3: Footer Snap */}
+      <section className="snap-start h-screen w-full flex flex-col justify-end bg-black">
+        <Footer />
+      </section>
+
+    </div>
+  );
+}
