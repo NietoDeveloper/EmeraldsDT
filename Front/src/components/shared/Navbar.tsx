@@ -6,9 +6,7 @@ import { useState, useEffect } from "react";
 
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Usamos 20px para una respuesta más rápida al salir del Hero
-      setIsAtTop(window.scrollY < 20);
+
 
     handleScroll();
     
