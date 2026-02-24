@@ -45,19 +45,7 @@ export const Navbar = () => {
               <Image 
                 src="/assets/img/logo.png" 
                 alt="Emerald DT Logo" 
-                fill 
-                className="object-contain"
-              />
-            </div>
-            <span className="font-bold tracking-[0.4em] uppercase text-emerald text-sm md:text-xl group-hover:text-gold transition-colors duration-700">
-              Emerald <span className="italic font-light">DT</span>
-            </span>
-          </a>
 
-
-          </div>
-        </div>
-      </nav>
 
           ))}
         </div>
