@@ -16,10 +16,5 @@ export default async function Home({ params }: HomePageProps) {
   const lang = resolvedParams?.lang || 'en'; // Fallback por seguridad
   const isEs = lang === 'es';
 
-  return (
-    <main className="relative w-full bg-black h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth select-none">
-      
-
-    </main>
   );
 }
