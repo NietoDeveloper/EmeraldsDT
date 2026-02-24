@@ -44,9 +44,7 @@ export default async function Home({ params }: HomePageProps) {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6">
-              <button className="px-12 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-emerald-600 hover:text-white transition-all duration-300">
-                {isEs ? 'Ver Colección' : 'View Collection'}
-              </button>
+
             </div>
           </div>
         </div>
