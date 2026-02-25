@@ -83,11 +83,7 @@ export default async function Home({ params }: HomePageProps) {
         <div className="flex-grow flex items-center px-12 sm:px-24 md:px-32 lg:px-40 xl:px-56 uw:px-72">
 
         </div>
-        
-        {/* COMPONENTE FOOTER: Ahora incluido correctamente al final del flujo */}
-        <div className="w-full">
 
-        </div>
       </section>
 
     </main>
