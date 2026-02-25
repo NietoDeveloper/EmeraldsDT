@@ -42,13 +42,7 @@ export default async function RootLayout({
   const { lang } = await params;
 
 riable} 
-
-          text-white
-          /* ELIMINAMOS max-w-[100vw] que causa el gap del scrollbar */
-          /* Usamos min-h-screen y margin-0 implícito para reset total */
-          m-0 p-0
-          w-full
-          overflow-x-hidden
+-hidden
           selection:bg-emerald/30 
           selection:text-gold
           relative
