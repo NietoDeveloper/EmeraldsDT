@@ -80,9 +80,7 @@ export default async function Home({ params }: HomePageProps) {
 
       {/* SECCIÓN 3: Footer Snap - Reintegrado con texto técnico de seguridad */}
       <section className="snap-start min-h-screen w-full flex flex-col justify-between bg-black pt-32">
-        <div className="flex-grow flex items-center px-12 sm:px-24 md:px-32 lg:px-40 xl:px-56 uw:px-72">
 
-        </div>
 
       </section>
 
