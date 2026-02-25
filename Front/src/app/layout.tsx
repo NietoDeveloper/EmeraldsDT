@@ -42,13 +42,7 @@ export default async function RootLayout({
   const { lang } = await params;
 
 
-        
-        {/* Eliminamos el flex-col del main si vas a usar Scroll Snap, 
-            ya que el snap funciona mejor sobre un contenedor directo */}
-        <main>
-          {children}
-        </main>
-      </body>
+   
     </html>
   );
 }
