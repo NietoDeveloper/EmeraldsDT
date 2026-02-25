@@ -103,15 +103,7 @@ export const Navbar = () => {
         @keyframes magnetic {
           0%, 100% { transform: translate(0,0) scale(1); }
           25% { transform: translate(4px, -4px) scale(1.05); }
-          75% { transform: translate(-4px, 4px) scale(1.05); }
-        }
-        .group-hover\:animate-magnetic:hover { animation: magnetic 2.5s ease-in-out infinite; }
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-        }
-        .animate-float { animation: float 4s ease-in-out infinite; }
-      `}</style>
+
     </>
   );
 };
