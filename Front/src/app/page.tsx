@@ -84,7 +84,7 @@ export default async function Home({ params }: HomePageProps) {
             <div className="max-w-4xl">
                 <h4 className="text-emerald text-2xl md:text-4xl font-black uppercase tracking-widest mb-8">Maximum Security Architecture</h4>
                 <p className="text-zinc-500 text-lg md:text-2xl leading-relaxed mb-6">
-                    Absolute traceability for every high-value asset. Our double cluster infrastructure ensures your investment is backed by the highest standards of digital and physical security.
+                   
                 </p>
                 <div className="w-20 h-[2px] bg-gold" />
             </div>
