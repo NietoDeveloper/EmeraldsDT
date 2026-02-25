@@ -20,20 +20,3 @@ export const metadata: Metadata = {
   description: "The world's premier platform for high-value Colombian emeralds. Designed by Nieto Laboratory.",
   keywords: ["Emeralds", "Colombia", "Luxury", "Nieto Laboratory", "Gems", "Nieto Lab"],
   openGraph: {
-    title: "Emerald DT | Eternal Emeralds",
-    description: "World-class emerald commercialization with SpaceX-inspired engineering.",
-    images: ["/assets/img/og-emerald.jpg"],
-    type: "website",
-  },
-  icons: {
-    icon: "/favicon.ico",
-  }
-};
-
-interface RootLayoutProps {
-  children: React.ReactNode;
-  params: Promise<{ lang: string }>;
-}
-
-
-}
