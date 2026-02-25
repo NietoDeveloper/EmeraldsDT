@@ -115,10 +115,3 @@ export const Navbar = () => {
     </>
   );
 };
-
-const navLinks = [
-  { name: "Catalog", href: "/catalog" },
-  { name: "Categories", href: "/categories" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
-];
