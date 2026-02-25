@@ -83,16 +83,5 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* MOBILE MENU OVERLAY */}
-      <div className={`fixed inset-0 bg-black/98 backdrop-blur-3xl z-[105] transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] 
-        ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
-      >
-        <div className="flex flex-col h-full justify-center items-end px-16 sm:px-32 gap-10">
-          {[...navLinks, {name: "Cart", href: "/cart"}, {name: "Orders", href: "/orders"}, {name: "Log In", href: "/login"}].map((item, index) => (
-            <Link key={item.name} href={item.href} onClick={() => setIsMobileMenuOpen(false)}
-              className={`text-5xl sm:text-8xl uppercase tracking-[0.4em] font-black text-emerald hover:text-gold transition-all duration-700 ${isMobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-40 opacity-0"}`}
-              style={{ transitionDelay: `${index * 80}ms` }}
-            >
-
   );
 };
