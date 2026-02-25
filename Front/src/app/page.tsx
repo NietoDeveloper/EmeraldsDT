@@ -67,10 +67,6 @@ export default async function Home({ params }: HomePageProps) {
           </div>
         </div>
 
-        {/* Decoración lateral técnica */}
-        <div className="absolute right-12 md:right-24 bottom-24 hidden xl:block">
-
-        </div>
       </section>
 
       {/* SECCIÓN 3: Footer Snap - Reintegrado con texto técnico de seguridad */}
