@@ -71,15 +71,3 @@ body {
   scrollbar-color: var(--emerald-primary) transparent;
 }
 
-/* Utility para las secciones de Emerald DT */
-.snap-section {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 100px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
