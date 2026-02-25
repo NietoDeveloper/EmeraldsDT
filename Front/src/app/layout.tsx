@@ -35,9 +35,5 @@ interface RootLayoutProps {
   params: Promise<{ lang: string }>;
 }
 
-export default async function RootLayout({
-  children,
-  params,
 
-  );
 }
