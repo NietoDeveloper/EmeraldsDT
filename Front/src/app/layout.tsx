@@ -15,8 +15,3 @@ const mono = JetBrains_Mono({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: "Emerald DT | Colombian Emeralds & High Engineering",
-  description: "The world's premier platform for high-value Colombian emeralds. Designed by Nieto Laboratory.",
-  keywords: ["Emeralds", "Colombia", "Luxury", "Nieto Laboratory", "Gems", "Nieto Lab"],
-  openGraph: {
