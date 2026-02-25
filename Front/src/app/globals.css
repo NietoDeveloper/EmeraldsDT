@@ -12,8 +12,8 @@
   --gold-dark: #996515;
   
   /* Variables de fuente alineadas con layout.tsx */
-  --font-sans: var(--font-sans), 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  --font-mono: var(--font-mono), 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 /* RESET TOTAL */
@@ -35,16 +35,15 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   min-height: 100%;
-  /* Cambiamos 100vw por 100% para evitar saltos con el scrollbar */
   width: 100%; 
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* SCROLLBAR SPACEX STYLE (Ultrafino y pegado al borde) */
+/* SCROLLBAR SPACEX STYLE */
 ::-webkit-scrollbar {
-  width: 4px; /* Un toque más fino para elegancia extrema */
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -66,7 +65,8 @@ body {
   scrollbar-color: var(--emerald-primary) transparent;
 }
 
-/* Utility para las secciones de Emerald DT (Snap Layout) */
+/* --- UTILITIES PARA EMERALD DT --- */
+
 .snap-section {
   height: 100vh;
   width: 100%;
@@ -79,7 +79,11 @@ body {
   position: relative;
 }
 
-/* Capa de acabado para las secciones */
+/* REEMPLAZO TÉCNICO: Eliminamos @apply para evitar SyntaxError */
 .section-overlay {
-  @apply absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-[1];
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #000000, transparent, transparent);
+  z-index: 1;
+  pointer-events: none;
 }
