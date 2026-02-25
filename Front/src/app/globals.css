@@ -17,19 +17,4 @@
   --color-gold: var(--gold-accent);
   --color-gold-dark: var(--gold-dark);
   --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-}
-
-/* RESET TOTAL */
-*, ::before, ::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  /* Permitimos que el scroll fluya naturalmente */
-  overflow-x: hidden;
-  height: 100%;
-  background-color: #000000;
-}
 
