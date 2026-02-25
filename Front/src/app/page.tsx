@@ -69,10 +69,7 @@ export default async function Home({ params }: HomePageProps) {
 
         {/* Decoración lateral técnica */}
         <div className="absolute right-12 md:right-24 bottom-24 hidden xl:block">
-          <div className="flex flex-col gap-6 items-center">
 
-            <div className="w-[1px] h-24 bg-gradient-to-t from-emerald to-transparent" />
-          </div>
         </div>
       </section>
 
