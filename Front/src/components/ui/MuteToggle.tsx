@@ -1,10 +1,3 @@
-"use client";
-import { Volume2, VolumeX } from "lucide-react";
-
-interface MuteToggleProps {
-  isMuted: boolean;
-  onToggle: () => void;
-}
 
 
 
