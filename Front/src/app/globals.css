@@ -54,20 +54,3 @@ body {
   background: transparent; /* Track transparente para que parezca que flota sobre el contenido */
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--emerald-primary);
-  /* Sin bordes transparentes para que se pegue al borde físico de la pantalla */
-  border-radius: 0px; 
-  transition: background 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--gold-accent); /* Cambio a Gold en hover para feedback premium */
-}
-
-/* Soporte para Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--emerald-primary) transparent;
-}
-
