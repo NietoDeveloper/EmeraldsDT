@@ -17,16 +17,7 @@ const config: Config = {
       '2xl': '1536px',
       'uw': '1900px', // Ultra-Wide: El estándar de tu proyecto
     },
-    extend: {
-      colors: {
- "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-      },
-      keyframes: {
-        fadeInUp: {
-          "0%": { opacity: "0", transform: "translateY(30px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        fadeIn: {
+
 
       },
     },
