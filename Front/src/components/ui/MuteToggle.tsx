@@ -23,26 +23,7 @@ export const MuteToggle = ({ isMuted, onToggle }: MuteToggleProps) => {
         </span>
       </div>
 
-      {/* Botón Circular */}
-      <div className="relative">
-        {/* Efecto de pulso cuando el sonido está activo */}
-        {!isMuted && (
-          <div className="absolute inset-0 rounded-full bg-emerald/20 animate-ping z-0" />
-        )}
-        
-        <div className={`
-          relative z-10 w-14 h-14 rounded-full border border-white/10 
-          flex items-center justify-center bg-black/40 backdrop-blur-md 
-          transition-all duration-500 ease-in-out
-          group-hover:border-emerald group-active:scale-95
-          ${!isMuted ? 'border-emerald/50 bg-emerald/5' : 'border-white/20'}
-        `}>
-          {isMuted ? (
-            <VolumeX className="text-white/60 w-5 h-5 group-hover:text-white transition-colors" />
-          ) : (
-            <Volume2 className="text-emerald w-5 h-5 group-hover:text-emerald-light transition-colors" />
-          )}
-        </div>
+
 
         {/* Decoración técnica (Bordes esquineros) */}
         <div className="absolute -top-1 -left-1 w-2 h-2 border-t border-l border-white/0 group-hover:border-gold transition-all duration-500" />
