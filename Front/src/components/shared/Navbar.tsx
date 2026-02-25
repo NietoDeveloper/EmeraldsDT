@@ -53,24 +53,5 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* ICONS & HAMBURGER */}
-          <div className="flex items-center gap-10 md:gap-14">
-            <div className="hidden md:flex items-center gap-12 border-l border-emerald/30 pl-14 text-emerald">
-              <Link href="/cart" className="hover:text-gold transition-transform hover:scale-125"><ShoppingCart size={28} /></Link>
-              <Link href="/login" className="text-[13px] uppercase tracking-[0.3em] font-black hover:text-gold transition-colors">Log In</Link>
-            </div>
-
-            {/* HAMBURGUER: Movimiento moderno Verde y Gold flotante */}
-            <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden relative z-[110] cursor-pointer group outline-none ml-6 mt-2 md:mt-4 overflow-visible"
-            >
-              <div className="relative w-16 h-16 flex items-center justify-center bg-emerald/5 rounded-full border border-emerald/20 group-hover:border-gold group-hover:bg-gold/10 transition-all duration-500 group-hover:animate-magnetic">
-                {/* Aura de pulso */}
-                <div className="absolute inset-0 bg-emerald/20 rounded-full blur-md group-hover:bg-gold/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                <Menu 
-                  size={42} 
-
-  );
+;
 };
