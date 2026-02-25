@@ -9,13 +9,6 @@
     "lint": "next lint",
     "clean": "rd /s /q .next node_modules && npm install"
   },
-  "dependencies": {
-    "lucide-react": "^0.475.0",
-    "next": "15.1.7",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "clsx": "^2.1.1",
-    "tailwind-merge": "^2.6.0"
-  },
+
 
 }
