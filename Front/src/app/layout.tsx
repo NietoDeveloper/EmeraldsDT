@@ -38,11 +38,6 @@ interface RootLayoutProps {
 export default async function RootLayout({
   children,
   params,
-}: RootLayoutProps) {
-  const { lang } = await params;
 
-
-   
-    </html>
   );
 }
