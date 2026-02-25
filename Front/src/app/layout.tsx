@@ -47,8 +47,7 @@ export default async function RootLayout({
         className={`
           ${sans.variable} 
           ${mono.variable} 
-          antialiased 
-          bg-black 
+
           text-white
           /* ELIMINAMOS max-w-[100vw] que causa el gap del scrollbar */
           /* Usamos min-h-screen y margin-0 implícito para reset total */
