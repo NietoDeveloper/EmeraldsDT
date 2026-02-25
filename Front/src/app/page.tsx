@@ -71,7 +71,7 @@ export default async function Home({ params }: HomePageProps) {
         <div className="absolute right-12 md:right-24 bottom-24 hidden xl:block">
           <div className="flex flex-col gap-6 items-center">
             <span className="[writing-mode:vertical-lr] uppercase tracking-[0.6em] text-[11px] text-zinc-600 font-mono">
-              Nieto Lab — 2026
+
             </span>
             <div className="w-[1px] h-24 bg-gradient-to-t from-emerald to-transparent" />
           </div>
