@@ -33,24 +33,3 @@ html {
   background-color: #000000;
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
-  min-height: 100%;
-  width: 100vw; /* Forzamos el ancho del viewport */
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  
-  /* ELIMINADO: scrollbar-gutter: stable; <- ESTO ALEJABA EL SCROLLBAR */
-}
-
-/* SCROLLBAR SPACEX STYLE (Ultrafino y pegado al borde) */
-::-webkit-scrollbar {
-  width: 5px; /* Más delgado para máxima elegancia */
-}
-
-::-webkit-scrollbar-track {
-  background: transparent; /* Track transparente para que parezca que flota sobre el contenido */
-}
-
