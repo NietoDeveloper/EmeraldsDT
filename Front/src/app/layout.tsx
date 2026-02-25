@@ -41,12 +41,7 @@ export default async function RootLayout({
 }: RootLayoutProps) {
   const { lang } = await params;
 
-  return (
-    <html lang={lang || "en"} className="scroll-smooth">
-      <body
-        className={`
-          ${sans.variable} 
-          ${mono.variable} 
+riable} 
 
           text-white
           /* ELIMINAMOS max-w-[100vw] que causa el gap del scrollbar */
