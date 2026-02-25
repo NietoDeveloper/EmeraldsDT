@@ -86,7 +86,7 @@ export default async function Home({ params }: HomePageProps) {
         
         {/* COMPONENTE FOOTER: Ahora incluido correctamente al final del flujo */}
         <div className="w-full">
-          <Footer />
+
         </div>
       </section>
 
