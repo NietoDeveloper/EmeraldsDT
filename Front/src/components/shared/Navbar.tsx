@@ -29,28 +29,7 @@ export const Navbar = () => {
         >
           
           {/* LOGO & BRAND: Emerald DT en una sola línea */}
-          <Link href="/" className="group flex items-center gap-5 z-[110] outline-none cursor-pointer flex-shrink-0">
-            <div className="relative w-12 h-12 md:w-16 md:h-16 transition-all duration-700 group-hover:rotate-[360deg] animate-float flex-shrink-0">
-              <Image src="/assets/img/logo.png" alt="Emerald DT Logo" fill className="object-contain" />
-            </div>
 
-            <div className="flex items-center gap-3 md:gap-4 whitespace-nowrap">
-              <span className="font-bold tracking-tight uppercase text-emerald text-xl md:text-3xl group-hover:text-white transition-colors duration-500 leading-none">
-                Emerald
-              </span>
-              <span className="font-black tracking-tighter uppercase text-gold text-3xl md:text-5xl italic leading-none drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]">
-                DT
-              </span>
-            </div>
-          </Link>
-
-          {/* DESKTOP MENU */}
-          <div className="hidden lg:flex items-center gap-16">
-            {navLinks.map((link) => (
-              <Link key={link.name} href={link.href} className="text-[13px] uppercase tracking-[0.5em] font-black text-emerald/80 hover:text-gold transition-all duration-500">
-                {link.name}
-              </Link>
-            ))}
           </div>
 
 ;
