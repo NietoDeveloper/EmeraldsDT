@@ -41,13 +41,6 @@ export default async function RootLayout({
 }: RootLayoutProps) {
   const { lang } = await params;
 
-riable} 
--hidden
-          selection:bg-emerald/30 
-          selection:text-gold
-          relative
-        `}
-      >
 
         
         {/* Eliminamos el flex-col del main si vas a usar Scroll Snap, 
