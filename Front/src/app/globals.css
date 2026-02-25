@@ -1,4 +1,7 @@
-@import "tailwindcss";
+/* Directivas estándar de Tailwind v3 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #000000;
@@ -7,14 +10,76 @@
   --emerald-light: #10b981;
   --gold-accent: #D4AF37;
   --gold-dark: #996515;
+  
+  /* Variables de fuente alineadas con layout.tsx */
+  --font-sans: var(--font-sans), 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: var(--font-mono), 'JetBrains Mono', monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-emerald: var(--emerald-primary);
-  --color-emerald-light: var(--emerald-light);
-  --color-gold: var(--gold-accent);
-  --color-gold-dark: var(--gold-dark);
-  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+/* RESET TOTAL */
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  overflow-x: hidden;
+  height: 100%;
+  background-color: #000000;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100%;
+  /* Cambiamos 100vw por 100% para evitar saltos con el scrollbar */
+  width: 100%; 
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* SCROLLBAR SPACEX STYLE (Ultrafino y pegado al borde) */
+::-webkit-scrollbar {
+  width: 4px; /* Un toque más fino para elegancia extrema */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--emerald-primary);
+  border-radius: 0px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-accent);
+}
+
+/* Soporte para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--emerald-primary) transparent;
+}
+
+/* Utility para las secciones de Emerald DT (Snap Layout) */
+.snap-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 100px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Capa de acabado para las secciones */
+.section-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-[1];
+}
