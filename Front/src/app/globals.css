@@ -1,24 +1,94 @@
-/* Directivas estándar de Tailwind v3 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #000000;
-  --foreground: #ffffff;
-  --emerald-primary: #047857;
-  --emerald-light: #10b981;
-  --gold-accent: #D4AF37;
-  --gold-dark: #996515;
-  
-  /* Variables de fuente alineadas con layout.tsx */
-  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+/* Configuración de Capas para evitar conflictos de especificidad */
+@layer base {
+  :root {
+    --background: #000000;
+    --foreground: #ffffff;
+    
+    /* Paleta Emerald DT */
+    --emerald: #50C878;
+    --emerald-dark: #047857;
+    --gold: #D4AF37;
+    --gold-dark: #996515;
+    
+    /* Tipografía */
+    --font-sans: var(--font-sans);
+    --font-mono: var(--font-mono);
+  }
+
+  html {
+    @apply scroll-smooth;
+    height: 100%;
+    background-color: #000000;
+  }
+
+  body {
+    @apply antialiased bg-black text-white overflow-x-hidden;
+    min-height: 100%;
+    width: 100%;
+    /* Prevención de Layout Shift */
+    text-rendering: optimizeLegibility;
+  }
 }
 
-/* RESET TOTAL */
-*, ::before, ::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer components {
+  /* Scrollbar Estilo SpaceX / Minimalista */
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 1);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(80, 200, 120, 0.2); /* Emerald con opacidad */
+    transition: all 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+  }
+
+  /* Clases de Utilidad de Marca */
+  .text-gold {
+    color: var(--gold);
+  }
+  
+  .text-emerald {
+    color: var(--emerald);
+  }
+
+  .bg-emerald {
+    background-color: var(--emerald);
+  }
+
+  /* Snap Section para el Hero */
+  .snap-section {
+    @apply relative h-[100dvh] w-full flex flex-col justify-end overflow-hidden;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .section-overlay {
+    @apply absolute inset-0 pointer-events-none;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+  }
+}
+
+/* Soporte para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(80, 200, 120, 0.3) transparent;
+}
+
+/* Estilo de selección de texto Nieto Lab */
+::selection {
+  background-color: rgba(80, 200, 120, 0.3);
+  color: #D4AF37;
 }
