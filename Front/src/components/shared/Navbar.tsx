@@ -97,10 +97,7 @@ export const Navbar = () => {
       >
         <div className="flex flex-col h-full justify-center items-end px-10 sm:px-32 gap-6 md:gap-10">
           {[...navLinks, {name: "Cart", href: "/cart"}, {name: "Log In", href: "/login"}].map((item, index) => (
-            <Link 
-              
-            >
-            </Link>
+
           ))}
         </div>
       </div>
