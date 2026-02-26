@@ -6,61 +6,60 @@
   :root {
     --background: #000000;
     --foreground: #ffffff;
-    
-    /* Paleta Emerald DT */
     --emerald: #50C878;
     --emerald-dark: #047857;
     --gold: #D4AF37;
     --gold-dark: #996515;
-    
-    /* Tipografía heredada de Layout */
     --font-sans: var(--font-sans);
     --font-mono: var(--font-mono);
   }
 
-  /* ELIMINACIÓN DE DOBLE SCROLL:
-     Quitamos 'height: 100%' que fuerza al viewport a medir dos veces.
+  /* SOLUCIÓN DEFINITIVA DOBLE SCROLL:
+     Forzamos que el scroll pertenezca ÚNICAMENTE al HTML.
+     El body debe ser un contenedor pasivo.
   */
   html {
-    @apply scroll-smooth bg-black;
-    /* Dejamos que el contenido defina la altura */
+    @apply bg-black scroll-smooth;
     overflow-x: hidden;
+    overflow-y: scroll; /* Cambiamos a scroll para reservar el espacio y evitar saltos */
+    height: auto;
   }
 
   body {
     @apply antialiased bg-black text-white;
-    /* Solo el body controla el scroll */
     width: 100%;
     min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto; 
+    /* Eliminamos overflow-y del body para que no cree su propio contexto */
+    overflow: visible; 
     text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
   }
 }
 
 @layer components {
-  /* Scrollbar SpaceX Style */
+  /* Scrollbar SpaceX Style - Extremadamente delgado para evitar intrusión */
   ::-webkit-scrollbar {
-    width: 3px;
+    width: 4px; /* Un poco más grueso para facilitar interacción */
   }
 
   ::-webkit-scrollbar-track {
-    background: #000000;
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(80, 200, 120, 0.3);
-    border-radius: 10px;
+    background: rgba(80, 200, 120, 0.2);
+    border-radius: 0px; /* Estilo SpaceX: Recto y técnico */
   }
 
   ::-webkit-scrollbar-thumb:hover {
     background: var(--gold);
   }
 
-  /* Snap Section - Ajustada para Responsive 310px-1900px */
+  /* Snap Section */
   .snap-section {
     @apply relative w-full flex flex-col justify-end overflow-hidden;
-    height: 100dvh; /* Altura dinámica para móviles */
+    height: 100dvh; 
     background-size: cover;
     background-position: center;
   }
