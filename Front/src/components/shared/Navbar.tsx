@@ -75,35 +75,6 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* ICONS & HAMBURGER */}
-          <div className="flex items-center gap-4 md:gap-10">
-            <div className="hidden md:flex items-center gap-8 border-l border-emerald/30 pl-10 text-emerald">
-              <Link href="/cart" className="hover:text-gold transition-transform hover:scale-125">
-                <ShoppingCart size={24} />
-              </Link>
-              <Link href="/login" className="text-[12px] uppercase tracking-[0.3em] font-black hover:text-gold transition-colors">
-                Log In
-              </Link>
-            </div>
-
-            <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden relative z-[150] cursor-pointer group outline-none overflow-visible"
-            >
-              <div className="relative w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-emerald/5 rounded-full border border-emerald/20 group-hover:border-gold transition-all duration-500">
-                <Menu 
-                  size={28} 
-                  className={`absolute transition-all duration-700 ${isMobileMenuOpen ? 'opacity-0 rotate-180 scale-0' : 'opacity-100 rotate-0 scale-100'} text-emerald`} 
-                />
-                <X 
-                  size={32} 
-                  className={`absolute transition-all duration-700 ${isMobileMenuOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-180 scale-0'} text-gold font-bold`} 
-                />
-              </div>
-            </button>
-          </div>
-        </div>
-      </nav>
 
 
 
