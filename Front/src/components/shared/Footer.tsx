@@ -51,17 +51,6 @@ export const Footer = () => {
             </ul>
           </div>
 
-
-
-        {/* Bottom Bar - Nieto Developer Signature */}
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[8px] md:text-[9px] tracking-[0.3em] uppercase gap-8">
-          <p className="opacity-30 text-center md:text-left">© {currentYear} EMERALD DT. ALL RIGHTS RESERVED.</p>
-          
-          <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-10">
-
-          </div>
-        </div>
-      </div>
     </footer>
   );
 };
