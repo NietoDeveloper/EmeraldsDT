@@ -95,11 +95,6 @@ export const Footer = () => {
           
           <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-10">
 
-            
-            <div className="relative group cursor-pointer">
-              <div className="absolute -inset-1 bg-emerald/20 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-700"></div>
-        
-            </div>
           </div>
         </div>
       </div>
