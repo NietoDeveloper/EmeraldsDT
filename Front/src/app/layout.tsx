@@ -10,23 +10,7 @@ const sans = Inter({
   display: 'swap',
 });
 
-const mono = JetBrains_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-  display: 'swap',
-});
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://emeralddt.com'),
-  title: {
-    default: "Emerald DT | Colombian Emeralds & High Engineering",
-    template: "%s | Emerald DT"
-  },
-  description: "The world's premier platform for high-value Colombian emeralds. Designed by Nieto Laboratory.",
-  keywords: ["Emeralds", "Colombia", "Luxury", "Nieto Laboratory", "Gems", "Engineering"],
-  openGraph: {
-
-      >
 
         
         {/* Estructura de contenido */}
