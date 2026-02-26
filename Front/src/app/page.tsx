@@ -67,15 +67,7 @@ export default async function Home({ params }: HomePageProps) {
           </div>
         </div>
 
-        {/* Decoración lateral técnica (Oculta en móviles < 1280px) */}
-        <div className="absolute right-8 md:right-16 bottom-24 hidden xl:block">
-          <div className="flex flex-col gap-6 items-center">
-            <span className="[writing-mode:vertical-lr] uppercase tracking-[0.5em] text-[10px] text-zinc-700 font-mono">
-              Nieto Laboratory — 2026
-            </span>
-            <div className="w-[1px] h-20 bg-gradient-to-t from-emerald/50 to-transparent" />
-          </div>
-        </div>
+
       </section>
 
       {/* SECCIÓN 3: Security & Footer Integrado */}
