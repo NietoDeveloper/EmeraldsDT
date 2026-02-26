@@ -95,9 +95,7 @@ export const Navbar = () => {
       <div className={`fixed inset-0 bg-black/98 backdrop-blur-3xl z-[105] transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] 
         ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
       >
-        <div className="flex flex-col h-full justify-center items-end px-10 sm:px-32 gap-6 md:gap-10">
 
-        </div>
       </div>
 
     </>
