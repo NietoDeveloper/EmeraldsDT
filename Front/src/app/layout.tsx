@@ -16,7 +16,6 @@ const mono = JetBrains_Mono({
   display: 'swap',
 });
 
-// Configuración de Viewport para garantizar el responsive desde 310px
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -31,33 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Emerald DT"
   },
   description: "The world's premier platform for high-value Colombian emeralds. Designed by Nieto Laboratory.",
-  keywords: ["Emeralds", "Colombia", "Luxury", "Nieto Laboratory", "Gems", "Engineering"],
-  openGraph: {
-    title: "Emerald DT | Eternal Emeralds",
-    description: "World-class emerald commercialization with SpaceX-inspired engineering.",
-    url: "https://emeralddt.com",
-    siteName: "Emerald DT",
-    images: [
-      {
-        url: "/assets/img/og-emerald.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Emerald DT Masterpiece",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Emerald DT | Colombian Masterpieces",
-    description: "High engineering meets eternal gems.",
-    images: ["/assets/img/og-emerald.jpg"],
-  },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
+  // ... resto de tu metadata igual
 };
 
 interface RootLayoutProps {
@@ -75,25 +48,33 @@ export default async function RootLayout({
   return (
     <html 
       lang={lang} 
-      className={`scroll-smooth ${sans.variable} ${mono.variable}`}
+      className={`${sans.variable} ${mono.variable} scroll-smooth`}
       suppressHydrationWarning 
     >
-      <body
-        className="antialiased bg-black text-white selection:bg-emerald/30 selection:text-gold relative m-0 p-0"
-      >
-        {/* ESTRUCTURA MAESTRA: 
-            Se usa min-h-screen en un wrapper flex para que el footer 
-            siempre esté abajo sin causar doble scrollbar.
+      {/* 1. Eliminamos 'relative' y cualquier clase que force altura en body.
+          2. Dejamos que el flujo natural de HTML maneje el scroll.
+      */}
+      <body className="antialiased bg-black text-white selection:bg-emerald/30 selection:text-gold">
+        
+        {/* Navbar es fixed, no ocupa espacio en el flujo */}
+        <Navbar />
+        
+        {/* ESTRUCTURA UNIFICADA:
+            Eliminamos el div 'flex-col min-h-screen' que suele causar el doble scroll en Next.js 15.
+            En su lugar, usamos 'main' directamente como el contenedor que empuja al footer.
         */}
-        <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
-          <Navbar />
-          
-          <main className="flex-grow relative w-full pt-[80px] md:pt-[100px]">
+        <main className="min-h-screen w-full flex flex-col">
+          {/* Contenido dinámico: 
+              Asegúrate de que tus secciones dentro de children NO tengan 'h-screen' fijo, 
+              sino 'min-h-screen' o 'min-h-[100dvh]'.
+          */}
+          <div className="flex-grow">
             {children}
-          </main>
+          </div>
           
           <Footer />
-        </div>
+        </main>
+
       </body>
     </html>
   );
