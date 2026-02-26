@@ -25,64 +25,7 @@ export const metadata: Metadata = {
   description: "The world's premier platform for high-value Colombian emeralds. Designed by Nieto Laboratory.",
   keywords: ["Emeralds", "Colombia", "Luxury", "Nieto Laboratory", "Gems", "Engineering"],
   openGraph: {
-    title: "Emerald DT | Eternal Emeralds",
-    description: "World-class emerald commercialization with SpaceX-inspired engineering.",
-    url: "https://emeralddt.com",
-    siteName: "Emerald DT",
-    images: [
-      {
-        url: "/assets/img/og-emerald.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Emerald DT Masterpiece",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Emerald DT | Colombian Masterpieces",
-    description: "High engineering meets eternal gems.",
-    images: ["/assets/img/og-emerald.jpg"],
-  },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
-};
 
-interface RootLayoutProps {
-  children: React.ReactNode;
-  params: Promise<{ lang: string }>;
-}
-
-export default async function RootLayout({
-  children,
-  params,
-}: RootLayoutProps) {
-  const resolvedParams = await params;
-  const lang = resolvedParams?.lang || "en";
-
-  return (
-    <html 
-      lang={lang} 
-      className={`scroll-smooth ${sans.variable} ${mono.variable}`}
-      suppressHydrationWarning 
-    >
-      <body
-        className={`
-          antialiased 
-          bg-black 
-          text-white
-          min-h-screen
-          w-full
-          overflow-x-hidden
-          selection:bg-emerald/30 
-          selection:text-gold
-          relative
-          m-0 p-0
-        `}
       >
 
         
