@@ -1,5 +1,4 @@
 import { HeroSection } from '@/components/sections/HeroSection';
-// CORRECCIÓN: Importación nombrada para coincidir con export const Footer
 import { Footer } from '@/components/shared/Footer'; 
 import { MainButton } from '@/components/ui/MainButton';
 
@@ -9,8 +8,8 @@ interface HomePageProps {
 
 /**
  * Emerald DT - Home Orchestrator
- * Ajustado para Responsive 310px - 1900px+
- * Garantía: Nieto Laboratory Standard
+ * Ajustado: Eliminamos el tag <main> redundante que causaba el doble scroll.
+ * El scroll ahora lo gestiona el body del layout.
  */
 export default async function Home({ params }: HomePageProps) {
   const resolvedParams = await params;
@@ -18,17 +17,21 @@ export default async function Home({ params }: HomePageProps) {
   const isEs = lang === 'es';
 
   return (
-    <main className="relative w-full bg-black select-none overflow-x-hidden">
+    /* Cambiamos <main> por <div> porque el <main> ya vive en RootLayout.
+       Eliminamos overflow-x-hidden de aquí, ya lo tiene el body.
+    */
+    <div className="relative w-full bg-black select-none">
       
-      {/* SECCIÓN 1: Hero Video (Full Screen Snap) */}
-      <section className="h-[100dvh] w-full relative overflow-hidden">
+      {/* SECCIÓN 1: Hero Video */}
+      {/* Usamos min-h-[100dvh] para evitar saltos en móvil */}
+      <section className="relative w-full min-h-[100dvh] flex flex-col overflow-hidden">
         <HeroSection />
       </section>
 
       {/* SECCIÓN 2: Heritage & Collection */}
-      <section className="min-h-screen w-full flex items-center bg-black border-t border-emerald/10 relative overflow-hidden py-20 lg:py-32">
+      <section className="relative w-full min-h-screen flex items-center bg-black border-t border-emerald/10 overflow-hidden py-20 lg:py-32">
         
-        {/* Resplandor Esmeralda Ambiental */}
+        {/* Resplandor Esmeralda */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[700px] h-[300px] md:h-[700px] bg-emerald/5 blur-[120px] rounded-full pointer-events-none" />
         
         <div className="w-full px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 relative z-10">
@@ -78,7 +81,7 @@ export default async function Home({ params }: HomePageProps) {
       </section>
 
       {/* SECCIÓN 3: Security & Trust */}
-      <section className="min-h-[60vh] w-full flex flex-col justify-center bg-black py-32 border-t border-white/5">
+      <section className="relative w-full min-h-[60vh] flex flex-col justify-center bg-black py-32 border-t border-white/5">
         <div className="w-full px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48">
             <div className="max-w-4xl">
                 <h4 className="text-emerald text-xl md:text-3xl font-black uppercase tracking-widest mb-8">Maximum Security Architecture</h4>
@@ -89,10 +92,11 @@ export default async function Home({ params }: HomePageProps) {
             </div>
         </div>
       </section>
-      
-      {/* Footer fuera de secciones para evitar saltos de scroll */}
-      <Footer />
 
-    </main>
+      {/* FOOTER: 
+          Si lo tienes en el Layout, ELIMÍNALO de aquí. 
+          Tenerlo en ambos archivos es lo que causa el doble scroll.
+      */}
+    </div>
   );
 }
