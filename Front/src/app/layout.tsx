@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/shared/Navbar";
+import { Footer } from "@/components/shared/Footer"; // Importación vital
 
 const sans = Inter({
   variable: "--font-sans",
@@ -15,15 +16,14 @@ const mono = JetBrains_Mono({
   display: 'swap',
 });
 
-// Calibración de Metadata para evitar warnings y mejorar SEO
 export const metadata: Metadata = {
-  metadataBase: new URL('https://emeralddt.com'), // Ajustar cuando tengas el dominio final
+  metadataBase: new URL('https://emeralddt.com'),
   title: {
     default: "Emerald DT | Colombian Emeralds & High Engineering",
     template: "%s | Emerald DT"
   },
   description: "The world's premier platform for high-value Colombian emeralds. Designed by Nieto Laboratory.",
-  keywords: ["Emeralds", "Colombia", "Luxury", "Nieto Laboratory", "Gems", "Nieto Lab", "Engineering"],
+  keywords: ["Emeralds", "Colombia", "Luxury", "Nieto Laboratory", "Gems", "Engineering"],
   openGraph: {
     title: "Emerald DT | Eternal Emeralds",
     description: "World-class emerald commercialization with SpaceX-inspired engineering.",
@@ -57,16 +57,10 @@ interface RootLayoutProps {
   params: Promise<{ lang: string }>;
 }
 
-/**
- * Emerald DT - Root Architecture
- * Garantía de estabilidad: Next.js 15.1.7 + React 19
- * Responsive: 310px - 1900px
- */
 export default async function RootLayout({
   children,
   params,
 }: RootLayoutProps) {
-  // En Next 15, los params DEBEN ser awaitados
   const resolvedParams = await params;
   const lang = resolvedParams?.lang || "en";
 
@@ -74,7 +68,7 @@ export default async function RootLayout({
     <html 
       lang={lang} 
       className={`scroll-smooth ${sans.variable} ${mono.variable}`}
-      suppressHydrationWarning // Evita warnings de extensiones de navegador
+      suppressHydrationWarning 
     >
       <body
         className={`
@@ -90,13 +84,18 @@ export default async function RootLayout({
           m-0 p-0
         `}
       >
-        {/* Navbar fijo con z-index superior */}
+        {/* Capa superior de navegación */}
         <Navbar />
         
-        {/* Contenedor principal sin restricciones de ancho para permitir scroll snap fluido */}
-        <main className="relative w-full overflow-x-hidden">
-          {children}
-        </main>
+        {/* Estructura de contenido */}
+        <div className="flex flex-col min-h-screen">
+          <main className="flex-grow relative w-full overflow-x-hidden">
+            {children}
+          </main>
+          
+          {/* El Footer ahora cierra cada página del ecosistema Emerald DT */}
+          <Footer />
+        </div>
       </body>
     </html>
   );
