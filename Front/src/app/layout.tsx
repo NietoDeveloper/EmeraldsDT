@@ -13,16 +13,7 @@ const sans = Inter({
 
 
         
-        {/* Estructura de contenido */}
-        <div className="flex flex-col min-h-screen">
-          <main className="flex-grow relative w-full overflow-x-hidden">
-            {children}
-          </main>
-          
-          {/* El Footer ahora cierra cada página del ecosistema Emerald DT */}
-          <Footer />
-        </div>
-      </body>
+       
     </html>
   );
 }
