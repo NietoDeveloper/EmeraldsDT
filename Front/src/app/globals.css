@@ -14,29 +14,35 @@
     --font-mono: var(--font-mono);
   }
 
-  /* SOLUCIÓN FINAL DOBLE SCROLL:
-     Matamos el scroll en el body y lo centralizamos en el elemento raíz.
+  /* SOLUCIÓN ATÓMICA NIETO LABORATORY:
+     Eliminamos 'height: 100%' para evitar que el navegador reserve espacio extra.
+     Usamos 'overflow-y: overlay' si está disponible o 'auto' para centralizar.
   */
   html {
     @apply bg-black scroll-smooth;
-    height: 100%; /* Necesario para que min-h-screen funcione correctamente */
+    /* Evitamos forzar el 100% para que el contenido dicte la altura real */
+    height: auto; 
+    min-height: 100dvh;
     overflow-x: hidden;
+    /* Solo el HTML gestiona el scroll */
     overflow-y: auto; 
   }
 
   body {
     @apply antialiased bg-black text-white;
     width: 100%;
-    min-height: 100%;
-    overflow: visible; /* El body no debe tener barra de scroll propia */
-    text-rendering: optimizeLegibility;
+    /* Importante: No ponemos min-h-screen aquí para no duplicar el cálculo del HTML */
     margin: 0;
     padding: 0;
+    /* Forzamos a que el body sea un contenedor pasivo */
+    overflow: visible; 
+    position: relative;
+    text-rendering: optimizeLegibility;
   }
 }
 
 @layer components {
-  /* Scrollbar Estilo SpaceX */
+  /* Scrollbar Estilo SpaceX - Ultra Delgado */
   ::-webkit-scrollbar {
     width: 4px;
   }
@@ -51,8 +57,10 @@
     background: var(--gold);
   }
 
+  /* Snap Section Ajustado para Responsive 310px-1900px */
   .snap-section {
     @apply relative w-full flex flex-col justify-end overflow-hidden;
+    /* Usamos dvh para ignorar las barras de navegación móviles que causan el salto de scroll */
     height: 100dvh; 
     background-size: cover;
     background-position: center;
@@ -65,9 +73,11 @@
   }
 }
 
+/* Soporte Universal */
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(80, 200, 120, 0.3) transparent;
+  box-sizing: border-box; /* Crucial para que bordes no sumen altura */
 }
 
 ::selection {
