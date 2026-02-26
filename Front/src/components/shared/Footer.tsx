@@ -73,25 +73,6 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Social */}
-          <div>
-            <h3 className="text-emerald font-bold mb-6 uppercase text-[9px] md:text-[10px] tracking-[0.4em] flex items-center gap-2">
-              <span className="w-4 h-[1px] bg-emerald/30" /> Social
-            </h3>
-            <div className="flex space-x-6 mb-8">
-              <a href="https://github.com/NietoDeveloper" target="_blank" rel="noopener noreferrer" className="text-zinc-500 hover:text-gold transition-all transform hover:scale-110">
-                <Github size={18} strokeWidth={1.5} />
-              </a>
-              <a href="#" className="text-zinc-500 hover:text-gold transition-all transform hover:scale-110">
-                <Linkedin size={18} strokeWidth={1.5} />
-              </a>
-              <a href="#" className="text-zinc-500 hover:text-gold transition-all transform hover:scale-110">
-                <Mail size={18} strokeWidth={1.5} />
-              </a>
-            </div>
-            <p className="text-[9px] tracking-[0.3em] text-zinc-600 font-mono">BOGOTÁ // COLOMBIA</p>
-          </div>
-        </div>
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[8px] md:text-[9px] tracking-[0.3em] uppercase gap-8">
