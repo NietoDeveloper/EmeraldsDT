@@ -1,9 +1,4 @@
 "use client";
-
-import React from 'react';
-import Link from 'next/link';
-import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
-
 // Cambiamos a export const para evitar el error de "undefined" en el layout
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
