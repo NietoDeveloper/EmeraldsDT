@@ -45,13 +45,3 @@ body {
 ::-webkit-scrollbar {
   width: 4px;
 }
-
-
-/* REEMPLAZO TÉCNICO: Eliminamos @apply para evitar SyntaxError */
-.section-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, #000000, transparent, transparent);
-  z-index: 1;
-  pointer-events: none;
-}
