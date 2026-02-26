@@ -44,30 +44,7 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
 
-      {/* SECCIÓN 3: TECNOLOGÍA */}
-      <section className="snap-start h-screen shrink-0 bg-black relative flex items-center">
-         {/* Aquí podrías poner una imagen de fondo técnica con opacidad baja */}
-        <div className="container mx-auto px-10 md:px-20 z-10">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
-            <div>
-              <h2 className="text-4xl md:text-6xl font-bold uppercase mb-8 leading-tight">
-                Nieto Lab <br /> <span className="text-gold">Engineering</span>
-              </h2>
-              <div className="space-y-6 border-l border-emerald/50 pl-8">
-                <p className="text-gray-300 text-lg italic">
-                  "Building scalable systems with 100% discipline."
-                </p>
-                <p className="text-gray-500 max-w-md">
-                  {lang === 'es'
-                    ? 'Arquitectura de seguridad máxima y trazabilidad absoluta para cada activo de alto valor.'
-                    : 'Maximum security architecture and absolute traceability for every high-value asset.'}
-                </p>
-              </div>
-            </div>
 
-          </div>
-        </div>
-      </section>
 
     </main>
   );
