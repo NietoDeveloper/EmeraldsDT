@@ -84,8 +84,7 @@ export default async function RootLayout({
           m-0 p-0
         `}
       >
-        {/* Capa superior de navegación */}
-        <Navbar />
+
         
         {/* Estructura de contenido */}
         <div className="flex flex-col min-h-screen">
