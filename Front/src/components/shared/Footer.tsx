@@ -20,58 +20,7 @@ export const Footer = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 lg:gap-20 mb-16">
           
-          {/* Branding - Estilo SpaceX */}
-          <div className="col-span-1 sm:col-span-2 md:col-span-1">
-            <h2 className="text-xl md:text-2xl font-black tracking-[0.2em] text-white mb-6 flex items-center gap-2">
-              EMERALD<span className="text-gold italic">DT</span>
-            </h2>
-            <div className="space-y-3">
-              <p className="text-[10px] leading-relaxed uppercase tracking-[0.3em] text-emerald font-bold">
-                // Nieto Laboratory Legacy
-              </p>
-              <p className="text-[11px] leading-relaxed uppercase tracking-[0.15em] opacity-40 max-w-xs font-mono">
-                The standard of Colombian gems. <br />
-                Excellence. Transparency. <br />
-                High Engineering.
-              </p>
-            </div>
-          </div>
 
-          {/* Navigation */}
-          <div>
-            <h3 className="text-emerald font-bold mb-6 uppercase text-[9px] md:text-[10px] tracking-[0.4em] flex items-center gap-2">
-              <span className="w-4 h-[1px] bg-emerald/30" /> Navigation
-            </h3>
-            <ul className="space-y-4 text-[11px] uppercase tracking-[0.2em] font-medium">
-              <li>
-                <Link href="/" className="hover:text-gold transition-colors duration-300">Home</Link>
-              </li>
-              <li>
-                <Link href="/collections" className="hover:text-gold transition-colors duration-300">Collections</Link>
-              </li>
-              <li>
-                <Link href="/traceability" className="hover:text-gold transition-colors duration-300">Traceability</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Ecosystem */}
-          <div>
-            <h3 className="text-emerald font-bold mb-6 uppercase text-[9px] md:text-[10px] tracking-[0.4em] flex items-center gap-2">
-              <span className="w-4 h-[1px] bg-emerald/30" /> DT Ecosystem
-            </h3>
-            <ul className="space-y-4 text-[11px] uppercase tracking-[0.2em] font-medium text-zinc-500">
-              <li className="flex items-center group cursor-pointer hover:text-gold transition-colors">
-                Drone DT <ExternalLink size={10} className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </li>
-              <li className="flex items-center group cursor-pointer hover:text-gold transition-colors">
-                Software DT <ExternalLink size={10} className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </li>
-              <li className="flex items-center group cursor-pointer hover:text-gold transition-colors">
-                Drunvity DT <ExternalLink size={10} className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </li>
-            </ul>
-          </div>
 
 
         {/* Bottom Bar */}
