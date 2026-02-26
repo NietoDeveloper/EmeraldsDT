@@ -98,9 +98,7 @@ export const Footer = () => {
             
             <div className="relative group cursor-pointer">
               <div className="absolute -inset-1 bg-emerald/20 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-700"></div>
-              <span className="relative flex items-center text-emerald px-4 py-2 border border-emerald/20 rounded-full bg-black/80 backdrop-blur-sm transition-all duration-500 group-hover:border-emerald group-hover:text-white">
-                GitHub Top #1 Colombia
-              </span>
+        
             </div>
           </div>
         </div>
