@@ -50,14 +50,7 @@ export const HeroSection = () => {
 
       {/* Content Layer - Adaptativo 310px - 1900px */}
       <div className="w-full max-w-[1900px] mx-auto px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 z-10 animate-fade-in">
-        
-        {/* Etiqueta Técnica */}
-        <div className="flex items-center gap-3 mb-4 overflow-hidden">
-          <div className="w-8 h-[1px] bg-gold/50" />
-          <h2 className="text-gold tracking-[0.3em] md:tracking-[0.5em] uppercase text-[9px] md:text-xs font-mono font-bold">
-            Emerald DT <span className="text-white/30 px-2">//</span> Nieto Lab
-          </h2>
-        </div>
+
 
 
       </div>
