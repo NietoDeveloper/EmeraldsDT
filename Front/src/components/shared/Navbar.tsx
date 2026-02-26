@@ -81,10 +81,7 @@ export const Navbar = () => {
                   size={28} 
                   className={`absolute transition-all duration-700 ${isMobileMenuOpen ? 'opacity-0 rotate-180 scale-0' : 'opacity-100 rotate-0 scale-100'} text-emerald`} 
                 />
-                <X 
-                  size={28} 
-                  className={`absolute transition-all duration-700 ${isMobileMenuOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-180 scale-0'} text-gold`} 
-                />
+
               </div>
             </button>
           </div>
