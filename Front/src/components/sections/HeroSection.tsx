@@ -48,12 +48,6 @@ export const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-[2]" />
       <div className="absolute inset-0 bg-black/20 z-[2]" />
 
-      {/* Content Layer - Adaptativo 310px - 1900px */}
-      <div className="w-full max-w-[1900px] mx-auto px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 z-10 animate-fade-in">
-
-
-
-      </div>
 
       {/* Control de Audio Flotante */}
       <MuteToggle isMuted={isMuted} onToggle={toggleMute} />
