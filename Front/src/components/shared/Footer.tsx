@@ -1,8 +1,11 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 
-const Footer = () => {
+// Cambiamos a export const para evitar el error de "undefined" en el layout
+export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -91,12 +94,7 @@ const Footer = () => {
           <p className="opacity-30 text-center md:text-left">© {currentYear} EMERALD DT. ALL RIGHTS RESERVED.</p>
           
           <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-10">
-            <div className="flex items-center gap-2">
-              <span className="opacity-30">Developed by</span>
-              <span className="text-gold font-black tracking-[0.3em] hover:opacity-80 transition-opacity cursor-default">
-                NietoDeveloper
-              </span>
-            </div>
+
             
             <div className="relative group cursor-pointer">
               <div className="absolute -inset-1 bg-emerald/20 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-700"></div>
@@ -110,5 +108,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;
