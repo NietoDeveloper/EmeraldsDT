@@ -64,10 +64,7 @@ export default async function HomePage({ params }: HomePageProps) {
                 </p>
               </div>
             </div>
-            {/* Espacio para una imagen técnica o diagrama */}
-            <div className="hidden md:block h-[400px] border border-white/10 bg-white/5 backdrop-blur-sm relative">
 
-            </div>
           </div>
         </div>
       </section>
