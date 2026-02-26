@@ -104,7 +104,6 @@ export const Navbar = () => {
               className={`text-3xl sm:text-6xl md:text-8xl uppercase tracking-[0.3em] md:tracking-[0.4em] font-black text-emerald hover:text-gold transition-all duration-700 ${isMobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-40 opacity-0"}`}
               style={{ transitionDelay: `${index * 50}ms` }}
             >
-              {item.name}
             </Link>
           ))}
         </div>
