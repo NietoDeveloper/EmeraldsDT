@@ -96,9 +96,7 @@ export const Navbar = () => {
         ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
       >
         <div className="flex flex-col h-full justify-center items-end px-10 sm:px-32 gap-6 md:gap-10">
-          {[...navLinks, {name: "Cart", href: "/cart"}, {name: "Log In", href: "/login"}].map((item, index) => (
 
-          ))}
         </div>
       </div>
 
