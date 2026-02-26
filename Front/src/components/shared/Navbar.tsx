@@ -105,41 +105,7 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* MOBILE MENU OVERLAY */}
-      <div className={`fixed inset-0 bg-black z-[130] transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] 
-        ${isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
-      >
-        <div className="flex flex-col h-full justify-center items-end px-10 sm:px-32 gap-6 md:gap-8">
-          {navLinks.map((item, index) => (
-            <div key={item.name} className="flex flex-col items-end">
-              <Link 
-                href={item.href} 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-3xl sm:text-6xl uppercase tracking-[0.3em] font-black text-emerald hover:text-gold transition-all duration-700 ${isMobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-40 opacity-0"}`}
-                style={{ transitionDelay: `${index * 50}ms` }}
-              >
-                {item.name}
-              </Link>
-              {/* Indicador de submenús en móvil */}
-              {item.subItems && <span className="text-[10px] text-gold/50 tracking-[.5em] uppercase mt-2">Explore Series →</span>}
-            </div>
-          ))}
-          <div className="h-[1px] w-20 bg-emerald/20 my-4" />
-          <Link href="/cart" onClick={() => setIsMobileMenuOpen(false)} className="text-xl uppercase tracking-[.4em] text-white/50 hover:text-gold">Cart</Link>
-          <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="text-xl uppercase tracking-[.4em] text-white/50 hover:text-gold">Log In</Link>
-        </div>
-      </div>
 
-      <style jsx global>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-        }
-        .animate-float { animation: float 4s ease-in-out infinite; }
-      `}</style>
-    </>
-  );
-};
 
 const navLinks = [
   { 

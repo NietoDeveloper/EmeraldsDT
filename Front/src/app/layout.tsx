@@ -30,7 +30,26 @@ export const metadata: Metadata = {
     template: "%s | Emerald DT"
   },
   description: "The world's premier platform for high-value Colombian emeralds. Designed by Nieto Laboratory.",
-  // ... resto de tu metadata igual
+  keywords: ["Emeralds", "Colombia", "Luxury", "Nieto Laboratory", "Gems", "Engineering"],
+  openGraph: {
+    title: "Emerald DT | Eternal Emeralds",
+    description: "World-class emerald commercialization with SpaceX-inspired engineering.",
+    url: "https://emeralddt.com",
+    siteName: "Emerald DT",
+    images: [{ url: "/assets/img/og-emerald.jpg", width: 1200, height: 630, alt: "Emerald DT" }],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Emerald DT | Colombian Masterpieces",
+    description: "High engineering meets eternal gems.",
+    images: ["/assets/img/og-emerald.jpg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 interface RootLayoutProps {
@@ -42,39 +61,29 @@ export default async function RootLayout({
   children,
   params,
 }: RootLayoutProps) {
-  const resolvedParams = await params;
-  const lang = resolvedParams?.lang || "en";
+  const { lang } = await params;
 
   return (
     <html 
-      lang={lang} 
+      lang={lang || "en"} 
       className={`${sans.variable} ${mono.variable} scroll-smooth`}
       suppressHydrationWarning 
     >
-      {/* 1. Eliminamos 'relative' y cualquier clase que force altura en body.
-          2. Dejamos que el flujo natural de HTML maneje el scroll.
-      */}
-      <body className="antialiased bg-black text-white selection:bg-emerald/30 selection:text-gold">
-        
-        {/* Navbar es fixed, no ocupa espacio en el flujo */}
+      <body className="antialiased bg-black text-white selection:bg-emerald/30 selection:text-gold min-h-screen flex flex-col">
+        {/* 1. Navbar es fixed (no ocupa espacio).
+            2. children contiene las secciones de la página.
+            3. Footer se renderiza al final del flujo.
+            
+            Al poner 'flex flex-col' y 'min-h-screen' directamente en el BODY,
+            eliminamos la necesidad de DIVs intermedios que duplican el scroll.
+        */}
         <Navbar />
         
-        {/* ESTRUCTURA UNIFICADA:
-            Eliminamos el div 'flex-col min-h-screen' que suele causar el doble scroll en Next.js 15.
-            En su lugar, usamos 'main' directamente como el contenedor que empuja al footer.
-        */}
-        <main className="min-h-screen w-full flex flex-col">
-          {/* Contenido dinámico: 
-              Asegúrate de que tus secciones dentro de children NO tengan 'h-screen' fijo, 
-              sino 'min-h-screen' o 'min-h-[100dvh]'.
-          */}
-          <div className="flex-grow">
-            {children}
-          </div>
-          
-          <Footer />
+        <main className="flex-grow w-full">
+          {children}
         </main>
-
+        
+        <Footer />
       </body>
     </html>
   );

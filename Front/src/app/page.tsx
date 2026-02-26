@@ -1,5 +1,4 @@
 import { HeroSection } from '@/components/sections/HeroSection';
-import { Footer } from '@/components/shared/Footer'; 
 import { MainButton } from '@/components/ui/MainButton';
 
 interface HomePageProps {
@@ -8,8 +7,8 @@ interface HomePageProps {
 
 /**
  * Emerald DT - Home Orchestrator
- * Ajustado: Eliminamos el tag <main> redundante que causaba el doble scroll.
- * El scroll ahora lo gestiona el body del layout.
+ * Ajustado para Responsive 310px - 1900px+
+ * Sin etiquetas <main> duplicadas para erradicar el doble scroll.
  */
 export default async function Home({ params }: HomePageProps) {
   const resolvedParams = await params;
@@ -17,19 +16,15 @@ export default async function Home({ params }: HomePageProps) {
   const isEs = lang === 'es';
 
   return (
-    /* Cambiamos <main> por <div> porque el <main> ya vive en RootLayout.
-       Eliminamos overflow-x-hidden de aquí, ya lo tiene el body.
-    */
     <div className="relative w-full bg-black select-none">
       
-      {/* SECCIÓN 1: Hero Video */}
-      {/* Usamos min-h-[100dvh] para evitar saltos en móvil */}
-      <section className="relative w-full min-h-[100dvh] flex flex-col overflow-hidden">
+      {/* SECCIÓN 1: Hero Video (Compensación de Navbar en HeroSection interior) */}
+      <section className="relative w-full h-[100dvh] overflow-hidden">
         <HeroSection />
       </section>
 
       {/* SECCIÓN 2: Heritage & Collection */}
-      <section className="relative w-full min-h-screen flex items-center bg-black border-t border-emerald/10 overflow-hidden py-20 lg:py-32">
+      <section className="relative w-full min-h-screen flex items-center bg-black border-t border-emerald/10 overflow-hidden py-24 lg:py-32">
         
         {/* Resplandor Esmeralda */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[700px] h-[300px] md:h-[700px] bg-emerald/5 blur-[120px] rounded-full pointer-events-none" />
@@ -92,11 +87,6 @@ export default async function Home({ params }: HomePageProps) {
             </div>
         </div>
       </section>
-
-      {/* FOOTER: 
-          Si lo tienes en el Layout, ELIMÍNALO de aquí. 
-          Tenerlo en ambos archivos es lo que causa el doble scroll.
-      */}
     </div>
   );
 }
