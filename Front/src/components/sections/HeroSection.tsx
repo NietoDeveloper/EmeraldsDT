@@ -59,13 +59,6 @@ export const HeroSection = () => {
           </h2>
         </div>
 
-        {/* Título Principal - Escalado Fluido */}
-        <h1 className="text-[14vw] sm:text-[10vw] md:text-[90px] lg:text-[110px] xl:text-[130px] font-bold uppercase mb-8 leading-[0.85] tracking-tighter text-white">
-          Eternal <br /> 
-          <span className="text-emerald drop-shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-            Emeralds
-          </span>
-        </h1>
 
       </div>
 
