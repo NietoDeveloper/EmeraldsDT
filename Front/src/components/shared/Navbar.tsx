@@ -41,9 +41,7 @@ export const Navbar = () => {
               <span className="font-bold tracking-tight uppercase text-emerald text-lg md:text-3xl group-hover:text-white transition-colors duration-500 leading-none">
                 Emerald
               </span>
-              <span className="font-black tracking-tighter uppercase text-gold text-2xl md:text-5xl italic leading-none drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]">
-                DT
-              </span>
+
             </div>
 
           </div>
