@@ -46,26 +46,6 @@ body {
   width: 4px;
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--emerald-primary);
-  border-radius: 0px; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--gold-accent);
-}
-
-/* Soporte para Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--emerald-primary) transparent;
-}
-
-}
 
 /* REEMPLAZO TÉCNICO: Eliminamos @apply para evitar SyntaxError */
 .section-overlay {
