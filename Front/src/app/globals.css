@@ -14,23 +14,21 @@
     --font-mono: var(--font-mono);
   }
 
-  /* SOLUCIÓN DEFINITIVA DOBLE SCROLL:
-     Forzamos que el scroll pertenezca ÚNICAMENTE al HTML.
-     El body debe ser un contenedor pasivo.
+  /* SOLUCIÓN FINAL DOBLE SCROLL:
+     Matamos el scroll en el body y lo centralizamos en el elemento raíz.
   */
   html {
     @apply bg-black scroll-smooth;
+    height: 100%; /* Necesario para que min-h-screen funcione correctamente */
     overflow-x: hidden;
-    overflow-y: scroll; /* Cambiamos a scroll para reservar el espacio y evitar saltos */
-    height: auto;
+    overflow-y: auto; 
   }
 
   body {
     @apply antialiased bg-black text-white;
     width: 100%;
-    min-height: 100vh;
-    /* Eliminamos overflow-y del body para que no cree su propio contexto */
-    overflow: visible; 
+    min-height: 100%;
+    overflow: visible; /* El body no debe tener barra de scroll propia */
     text-rendering: optimizeLegibility;
     margin: 0;
     padding: 0;
@@ -38,25 +36,21 @@
 }
 
 @layer components {
-  /* Scrollbar SpaceX Style - Extremadamente delgado para evitar intrusión */
+  /* Scrollbar Estilo SpaceX */
   ::-webkit-scrollbar {
-    width: 4px; /* Un poco más grueso para facilitar interacción */
+    width: 4px;
   }
-
   ::-webkit-scrollbar-track {
     background: transparent;
   }
-
   ::-webkit-scrollbar-thumb {
     background: rgba(80, 200, 120, 0.2);
-    border-radius: 0px; /* Estilo SpaceX: Recto y técnico */
+    border-radius: 0px;
   }
-
   ::-webkit-scrollbar-thumb:hover {
     background: var(--gold);
   }
 
-  /* Snap Section */
   .snap-section {
     @apply relative w-full flex flex-col justify-end overflow-hidden;
     height: 100dvh; 
@@ -71,7 +65,6 @@
   }
 }
 
-/* Soporte Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(80, 200, 120, 0.3) transparent;
