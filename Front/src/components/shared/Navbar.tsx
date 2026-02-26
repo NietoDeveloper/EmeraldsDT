@@ -45,38 +45,7 @@ export const Navbar = () => {
                 DT
               </span>
             </div>
-          </Link>
 
-          {/* DESKTOP MENU */}
-          <div className="hidden lg:flex items-center gap-10 xl:gap-16">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href} 
-                className="text-[11px] xl:text-[13px] uppercase tracking-[0.4em] xl:tracking-[0.5em] font-black text-emerald/80 hover:text-gold transition-all duration-500"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* ICONS & HAMBURGER */}
-          <div className="flex items-center gap-4 md:gap-10">
-            <div className="hidden md:flex items-center gap-8 border-l border-emerald/30 pl-10 text-emerald">
-              <Link href="/cart" className="hover:text-gold transition-transform hover:scale-125">
-                <ShoppingCart size={24} />
-              </Link>
-              <Link href="/login" className="text-[12px] uppercase tracking-[0.3em] font-black hover:text-gold transition-colors">
-                Log In
-              </Link>
-            </div>
-
-            {/* HAMBURGUER (Optimizado para 310px) */}
-            <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden relative z-[110] cursor-pointer group outline-none overflow-visible"
-
-            </button>
           </div>
         </div>
       </nav>
