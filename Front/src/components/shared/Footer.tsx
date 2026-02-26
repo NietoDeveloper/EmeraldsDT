@@ -15,23 +15,7 @@ export const Footer = () => {
       <div className="w-full px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 max-w-[1900px] mx-auto transition-all duration-500">
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 lg:gap-20 mb-16">
-          
-          {/* Branding - Estilo SpaceX / Nieto Lab */}
-          <div className="col-span-1 sm:col-span-2 md:col-span-1">
-            <h2 className="text-xl md:text-2xl font-black tracking-[0.2em] text-white mb-6 flex items-center gap-2">
-              EMERALD<span className="text-gold italic">DT</span>
-            </h2>
-            <div className="space-y-3">
-              <p className="text-[10px] leading-relaxed uppercase tracking-[0.3em] text-emerald font-bold">
-                // Nieto Laboratory Legacy
-              </p>
-              <p className="text-[11px] leading-relaxed uppercase tracking-[0.15em] opacity-40 max-w-xs font-mono">
-                The standard of Colombian gems. <br />
-                Excellence. Transparency. <br />
-                High Engineering.
-              </p>
-            </div>
-          </div>
+
 
           {/* Navigation - Verde Esmeralda en Titulos */}
           <div>
