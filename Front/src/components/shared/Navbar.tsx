@@ -59,13 +59,7 @@ export const Navbar = () => {
           <div className="hidden lg:flex items-center gap-10 xl:gap-16">
             {navLinks.map((link) => (
               <div key={link.name} className="relative group/item">
-                <Link 
-                  href={link.href} 
-                  className="flex items-center gap-2 text-[11px] xl:text-[13px] uppercase tracking-[0.4em] xl:tracking-[0.5em] font-black text-emerald/80 hover:text-gold transition-all duration-500 py-2"
-                >
-                  {link.name}
-                  {link.subItems && <ChevronDown size={14} className="group-hover/item:rotate-180 transition-transform duration-300" />}
-                </Link>
+
 
                 {link.subItems && (
                   <div className="absolute top-full left-0 w-64 bg-black/95 border border-emerald/20 backdrop-blur-3xl p-6 opacity-0 translate-y-4 pointer-events-none group-hover/item:opacity-100 group-hover/item:translate-y-0 group-hover/item:pointer-events-auto transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
