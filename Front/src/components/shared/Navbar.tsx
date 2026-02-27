@@ -29,18 +29,7 @@ export const Navbar = () => {
 
   return (
     <>
-      
 
-          {/* ICONS & HAMBURGER */}
-          <div className="flex items-center gap-4 md:gap-10">
-            <div className="hidden md:flex items-center gap-8 border-l border-emerald/30 pl-10 text-emerald">
-              <Link href="/cart" className="hover:text-gold transition-transform hover:scale-125">
-                <ShoppingCart size={24} />
-              </Link>
-              <Link href="/login" className="text-[12px] uppercase tracking-[0.3em] font-black hover:text-gold transition-colors">
-                Log In
-              </Link>
-            </div>
 
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
