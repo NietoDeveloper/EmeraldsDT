@@ -38,22 +38,7 @@ export const Navbar = () => {
           }`}
       >
         <div className="w-full max-w-[1900px] mx-auto flex justify-between items-center px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 transition-all duration-500">
-          
-          {/* LOGO & BRAND */}
-          <Link href="/" className="group flex items-center gap-3 md:gap-5 z-[120] outline-none cursor-pointer flex-shrink-0">
-            <div className="relative w-10 h-10 md:w-16 md:h-16 transition-all duration-700 group-hover:rotate-[360deg] flex-shrink-0 animate-float">
-              <Image src="/assets/img/logo.png" alt="Emerald DT Logo" fill className="object-contain" />
-            </div>
 
-            <div className="flex items-center gap-2 md:gap-4 whitespace-nowrap -mt-1 md:-mt-2 transition-all duration-500 group-hover:-translate-y-1">
-              <span className="font-bold tracking-tight uppercase text-emerald text-lg md:text-3xl group-hover:text-gold transition-colors duration-500 leading-none">
-                Emerald
-              </span>
-              <span className="font-black tracking-tighter uppercase text-gold text-2xl md:text-5xl italic leading-none drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]">
-                DT
-              </span>
-            </div>
-          </Link>
 
           {/* DESKTOP MENU */}
           <div className="hidden lg:flex items-center gap-10 xl:gap-16">
