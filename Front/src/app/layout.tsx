@@ -31,6 +31,15 @@ export const metadata: Metadata = {
   },
   description: "The world's premier platform for high-value Colombian emeralds. Designed by Nieto Laboratory.",
   keywords: ["Emeralds", "Colombia", "Luxury", "Nieto Laboratory", "Gems", "Engineering"],
+  
+  // --- UNIFICACIÓN DE ICONOS (FAVICON) ---
+  icons: {
+    icon: "/assets/img/logo.png",       // Icono principal (pestaña)
+    shortcut: "/assets/img/logo.png",   // Acceso directo
+    apple: "/assets/img/logo.png",      // Icono para iPhone/iPad
+  },
+  // ---------------------------------------
+
   openGraph: {
     title: "Emerald DT | Eternal Emeralds",
     description: "World-class emerald commercialization with SpaceX-inspired engineering.",
@@ -45,10 +54,6 @@ export const metadata: Metadata = {
     title: "Emerald DT | Colombian Masterpieces",
     description: "High engineering meets eternal gems.",
     images: ["/assets/img/og-emerald.jpg"],
-  },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -70,15 +75,10 @@ export default async function RootLayout({
       suppressHydrationWarning 
     >
       <body className="antialiased bg-black text-white selection:bg-emerald/30 selection:text-gold min-h-screen flex flex-col">
-        {/* 1. Navbar es fixed (no ocupa espacio).
-            2. children contiene las secciones de la página.
-            3. Footer se renderiza al final del flujo.
-            
-            Al poner 'flex flex-col' y 'min-h-screen' directamente en el BODY,
-            eliminamos la necesidad de DIVs intermedios que duplican el scroll.
-        */}
+        {/* Navbar con posición fija para control de scroll */}
         <Navbar />
         
+        {/* Main que crece para empujar el footer y encapsula el contenido */}
         <main className="flex-grow w-full">
           {children}
         </main>
