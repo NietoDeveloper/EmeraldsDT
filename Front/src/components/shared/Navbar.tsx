@@ -145,10 +145,3 @@ export const Navbar = () => {
     </>
   );
 };
-
-const navLinks = [
-  { name: "Catalog", href: "/catalog", subItems: [{ name: "Rough Emeralds", href: "/catalog/rough" }, { name: "Faceted Gems", href: "/catalog/faceted" }, { name: "Investment Grade", href: "/catalog/investment" }] },
-  { name: "Categories", href: "/categories", subItems: [{ name: "Muzo Mine", href: "/categories/muzo" }, { name: "Chivor Mine", href: "/categories/chivor" }, { name: "Coscuez Collection", href: "/categories/coscuez" }] },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
-];
