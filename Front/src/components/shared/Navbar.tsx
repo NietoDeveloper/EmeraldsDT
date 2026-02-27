@@ -64,10 +64,7 @@ export const Navbar = () => {
                 {link.subItems && (
                   <div className="absolute top-full left-0 w-64 bg-black/95 border border-emerald/20 backdrop-blur-3xl p-6 opacity-0 translate-y-4 pointer-events-none group-hover/item:opacity-100 group-hover/item:translate-y-0 group-hover/item:pointer-events-auto transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                     <div className="flex flex-col gap-4">
-                      {link.subItems.map((sub) => (
-                        <Link key={sub.name} href={sub.href} className="text-[10px] uppercase tracking-[0.2em] text-white/60 hover:text-gold transition-colors">
-                          {sub.name}
-                        </Link>
+
                       ))}
                     </div>
                   </div>
