@@ -71,16 +71,13 @@ export const Navbar = () => {
               <Image src="/assets/img/logo.png" alt="Emerald DT Logo" fill className="object-contain" />
             </div>
 
-            <div className="flex flex-col -gap-1">
-              <div className="flex items-center gap-1 md:gap-2">
-                <span className="font-bold tracking-[0.2em] uppercase text-white text-lg md:text-2xl group-hover:text-emerald-400 transition-colors duration-500">
-                  Emerald
-                </span>
-                <span className="font-black tracking-tighter uppercase text-emerald-500 text-lg md:text-2xl italic group-hover:text-white transition-colors duration-500">
-                  DT
-                </span>
-              </div>
-              <span className="text-[7px] md:text-[8px] uppercase tracking-[0.6em] text-zinc-500 font-mono">Colombian Engineering</span>
+            <div className="flex items-center gap-1 md:gap-2">
+              <span className="font-bold tracking-[0.2em] uppercase text-emerald-500 text-lg md:text-3xl group-hover:text-[#D4AF37] transition-all duration-500 group-hover:-translate-y-1">
+                Emerald
+              </span>
+              <span className="font-black tracking-tighter uppercase text-[#D4AF37] text-lg md:text-3xl italic transition-all duration-500 group-hover:-translate-y-1">
+                DT
+              </span>
             </div>
           </Link>
 
@@ -90,7 +87,7 @@ export const Navbar = () => {
               <div key={link.name} className="relative group/item">
                 <Link 
                   href={link.href} 
-                  className="flex items-center gap-2 text-[10px] xl:text-[11px] uppercase tracking-[0.5em] font-bold text-white/80 hover:text-white transition-all duration-300"
+                  className="flex items-center gap-2 text-[10px] xl:text-[11px] uppercase tracking-[0.5em] font-bold text-white/80 hover:text-[#D4AF37] hover:-translate-y-1 transition-all duration-300"
                 >
                   {link.name}
                   {link.subItems && link.subItems.length > 0 && (
@@ -103,7 +100,7 @@ export const Navbar = () => {
                     <div className="bg-black/40 backdrop-blur-3xl border border-white/5 p-6 shadow-2xl">
                       <div className="flex flex-col gap-4 relative">
                         {link.subItems.map((sub) => (
-                          <Link key={sub.name} href={sub.href} className="text-[9px] uppercase tracking-[0.2em] text-zinc-400 hover:text-emerald-400 transition-colors duration-300">
+                          <Link key={sub.name} href={sub.href} className="text-[9px] uppercase tracking-[0.2em] text-zinc-400 hover:text-[#D4AF37] transition-colors duration-300">
                             {sub.name}
                           </Link>
                         ))}
@@ -118,25 +115,26 @@ export const Navbar = () => {
           {/* ICONS & MENU TOGGLE */}
           <div className="flex items-center gap-4 md:gap-8">
             <div className="hidden md:flex items-center gap-8 text-white/70">
-              <Link href="/cart" className="hover:text-emerald-400 transition-all hover:-translate-y-0.5">
+              <Link href="/cart" className="hover:text-[#D4AF37] transition-all hover:-translate-y-1">
                 <ShoppingCart size={20} strokeWidth={1.5} />
               </Link>
-              <Link href="/login" className="text-[10px] uppercase tracking-[0.4em] font-bold hover:text-white transition-all">
+              <Link href="/login" className="text-[10px] uppercase tracking-[0.4em] font-bold hover:text-[#D4AF37] hover:-translate-y-0.5 transition-all">
                 Access
               </Link>
             </div>
 
+            {/* HAMBURGER / X BUTTON */}
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden relative z-[150] w-12 h-12 flex items-center justify-center bg-white/5 rounded-full border border-white/10 transition-all duration-300 hover:border-[#D4AF37] group"
+              className="lg:hidden relative z-[200] w-12 h-12 flex items-center justify-center bg-white/5 rounded-full border border-white/10 transition-all duration-300 hover:border-[#D4AF37] group outline-none"
             >
               <div className="relative w-6 h-6 flex items-center justify-center">
                 <Menu 
-                  size={24} 
+                  size={28} 
                   className={`absolute transition-all duration-500 text-white group-hover:text-[#D4AF37] ${isMobileMenuOpen ? 'opacity-0 scale-50 rotate-90' : 'opacity-100 scale-100 rotate-0'}`} 
                 />
                 <X 
-                  size={24} 
+                  size={28} 
                   className={`absolute transition-all duration-500 text-white group-hover:text-[#D4AF37] ${isMobileMenuOpen ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-50 -rotate-90'}`} 
                 />
               </div>
@@ -147,38 +145,32 @@ export const Navbar = () => {
 
       {/* MOBILE MENU OVERLAY */}
       <div className={`fixed inset-0 z-[130] transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] 
-        ${isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"}`}
+        ${isMobileMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
       >
-        <div className="absolute inset-0 bg-black/80 backdrop-blur-[80px]" />
+        <div className="absolute inset-0 bg-black/95 backdrop-blur-[40px]" />
         
-        {/* Glow Esmeralda */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-emerald-500/10 blur-[100px] rounded-full" />
-
         <div className="relative flex flex-col h-full justify-center items-center px-10 gap-12">
-          {/* Nav Links Móvil */}
           <div className="flex flex-col items-center gap-8 w-full">
             {navLinks.map((item, index) => (
               <div key={item.name} className="flex flex-col items-center group/m-item">
                 <Link 
                   href={item.href} 
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-2xl md:text-3xl uppercase tracking-[0.5em] font-black text-white transition-all duration-700 hover:text-[#D4AF37]
+                  className={`text-3xl md:text-5xl uppercase tracking-[0.5em] font-black text-white transition-all duration-700 hover:text-[#D4AF37] hover:scale-105
                     ${isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   {item.name}
                 </Link>
-                <div className={`h-[1px] bg-[#D4AF37] transition-all duration-700 ${isMobileMenuOpen ? "w-12 mt-2 opacity-30" : "w-0 opacity-0"}`} style={{ transitionDelay: `${index * 150}ms` }} />
               </div>
             ))}
           </div>
 
           <div className={`flex flex-col items-center gap-6 transition-all duration-1000 delay-500 ${isMobileMenuOpen ? "opacity-100" : "opacity-0"}`}>
-            <div className="flex gap-8 text-white/50">
-               <Link href="/cart" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#D4AF37] transition-colors"><ShoppingCart size={20}/></Link>
-               <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="text-[10px] uppercase tracking-[0.3em] font-bold hover:text-[#D4AF37] transition-colors pt-1">Login</Link>
+            <div className="flex gap-12 text-white/50">
+               <Link href="/cart" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#D4AF37] transition-all hover:scale-125"><ShoppingCart size={24}/></Link>
+               <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="text-[12px] uppercase tracking-[0.4em] font-black hover:text-[#D4AF37] transition-all pt-1">Login</Link>
             </div>
-            <p className="text-[8px] uppercase tracking-[0.8em] text-white/20">Emerald DT // Heritage 2026</p>
           </div>
         </div>
       </div>
