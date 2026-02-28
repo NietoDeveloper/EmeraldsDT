@@ -6,7 +6,6 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { ShoppingCart, Menu, X, ChevronDown } from "lucide-react";
 
-// Interfaces con Strict Type para el Nieto Laboratory
 interface NavSubItem {
   name: string;
   href: string;
@@ -64,7 +63,6 @@ export const Navbar = () => {
             : "bg-transparent backdrop-blur-md py-4 border-b border-emerald-500/10"
           }`}
       >
-        {/* Ajuste de ancho máximo para pantallas de 1900px */}
         <div className="w-full max-w-[1900px] mx-auto flex justify-between items-center px-6 sm:px-12 md:px-20 lg:px-24 transition-all duration-500">
           
           {/* LOGO & BRAND */}
@@ -86,7 +84,7 @@ export const Navbar = () => {
             </div>
           </Link>
 
-          {/* DESKTOP MENU - Siempre transparente para ver el banner */}
+          {/* DESKTOP MENU */}
           <div className="hidden lg:flex items-center gap-8 xl:gap-14">
             {navLinks.map((link) => (
               <div key={link.name} className="relative group/item">
@@ -130,44 +128,57 @@ export const Navbar = () => {
 
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden relative z-[150] w-10 h-10 flex items-center justify-center bg-white/5 rounded-full border border-white/10"
+              className="lg:hidden relative z-[150] w-12 h-12 flex items-center justify-center bg-white/5 rounded-full border border-white/10 transition-all duration-300 hover:border-[#D4AF37] group"
             >
-              <div className="relative w-5 h-5">
-                <Menu size={20} className={`absolute transition-all duration-500 ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
-                <X size={20} className={`absolute transition-all duration-500 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0'}`} />
+              <div className="relative w-6 h-6 flex items-center justify-center">
+                <Menu 
+                  size={24} 
+                  className={`absolute transition-all duration-500 text-white group-hover:text-[#D4AF37] ${isMobileMenuOpen ? 'opacity-0 scale-50 rotate-90' : 'opacity-100 scale-100 rotate-0'}`} 
+                />
+                <X 
+                  size={24} 
+                  className={`absolute transition-all duration-500 text-white group-hover:text-[#D4AF37] ${isMobileMenuOpen ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-50 -rotate-90'}`} 
+                />
               </div>
             </button>
           </div>
         </div>
       </nav>
 
-      {/* MOBILE MENU OVERLAY - Blur Esmeralda Cinematográfico */}
+      {/* MOBILE MENU OVERLAY */}
       <div className={`fixed inset-0 z-[130] transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] 
         ${isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"}`}
       >
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-[60px]" />
+        <div className="absolute inset-0 bg-black/80 backdrop-blur-[80px]" />
         
-        {/* Glow Esmeralda de fondo en el menú */}
+        {/* Glow Esmeralda */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-emerald-500/10 blur-[100px] rounded-full" />
 
         <div className="relative flex flex-col h-full justify-center items-center px-10 gap-12">
+          {/* Nav Links Móvil */}
           <div className="flex flex-col items-center gap-8 w-full">
             {navLinks.map((item, index) => (
-              <Link 
-                key={item.name} 
-                href={item.href} 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-2xl uppercase tracking-[0.5em] font-black text-white transition-all duration-700
-                  ${isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                {item.name}
-              </Link>
+              <div key={item.name} className="flex flex-col items-center group/m-item">
+                <Link 
+                  href={item.href} 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`text-2xl md:text-3xl uppercase tracking-[0.5em] font-black text-white transition-all duration-700 hover:text-[#D4AF37]
+                    ${isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  {item.name}
+                </Link>
+                <div className={`h-[1px] bg-[#D4AF37] transition-all duration-700 ${isMobileMenuOpen ? "w-12 mt-2 opacity-30" : "w-0 opacity-0"}`} style={{ transitionDelay: `${index * 150}ms` }} />
+              </div>
             ))}
           </div>
 
-          <div className={`flex flex-col items-center gap-4 transition-all duration-1000 delay-500 ${isMobileMenuOpen ? "opacity-40" : "opacity-0"}`}>
-            <p className="text-[8px] uppercase tracking-[0.8em]">Emerald DT // 2026</p>
+          <div className={`flex flex-col items-center gap-6 transition-all duration-1000 delay-500 ${isMobileMenuOpen ? "opacity-100" : "opacity-0"}`}>
+            <div className="flex gap-8 text-white/50">
+               <Link href="/cart" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#D4AF37] transition-colors"><ShoppingCart size={20}/></Link>
+               <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="text-[10px] uppercase tracking-[0.3em] font-bold hover:text-[#D4AF37] transition-colors pt-1">Login</Link>
+            </div>
+            <p className="text-[8px] uppercase tracking-[0.8em] text-white/20">Emerald DT // Heritage 2026</p>
           </div>
         </div>
       </div>
