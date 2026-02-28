@@ -52,19 +52,3 @@ export const metadata: Metadata = {
   },
   // ---------------------------------------
 
-  openGraph: {
-    title: "Emerald DT | Eternal Emeralds",
-    description: "World-class emerald commercialization with SpaceX-inspired engineering.",
-    url: "https://emeralddt.com",
-    siteName: "Emerald DT",
-    images: [{ url: "/assets/img/og-emerald.jpg", width: 1200, height: 630, alt: "Emerald DT" }],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Emerald DT | Colombian Masterpieces",
-    description: "High engineering meets eternal gems.",
-    images: ["/assets/img/og-emerald.jpg"],
-  },
-};
