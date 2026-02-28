@@ -13,6 +13,7 @@ export default function Preloader() {
 
   const startLoadingCycle = () => {
     setLoading(true);
+    // 5 segundos exactos de ciclo de vida
     const timer = setTimeout(() => {
       setLoading(false);
     }, 5000);
@@ -41,101 +42,84 @@ export default function Preloader() {
           animate={{ opacity: 1 }}
           exit={{ 
             opacity: 0, 
-            transition: { duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] } 
+            transition: { duration: 1, ease: "easeInOut" } 
           }}
-          className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#020a05] select-none pointer-events-auto"
+          className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#010502] select-none pointer-events-auto"
         >
-          {/* FONDO VERDE ULTRA-NOTORIO (Vignette & Blur) */}
+          {/* FONDO VERDE ATMOSFÉRICO */}
           <div className="absolute inset-0 overflow-hidden">
-            {/* Glow Central Primario (Más intenso) */}
             <motion.div 
               animate={{ 
-                scale: [1, 1.4, 1],
-                opacity: [0.6, 0.9, 0.6] 
+                scale: [1, 1.2, 1],
+                opacity: [0.5, 0.8, 0.5] 
               }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/40 blur-[120px] rounded-full" 
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-emerald-500/30 blur-[140px] rounded-full" 
             />
-            
-            {/* Glow Perimetral (Crea la atmósfera verde en toda la pantalla) */}
-            <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/40 to-emerald-900/30 opacity-80" />
-            
-            {/* Destellos Laterales Notorios */}
-            <motion.div 
-              animate={{ opacity: [0.2, 0.5, 0.2], x: [0, 30, 0] }}
-              transition={{ duration: 6, repeat: Infinity }}
-              className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-emerald-400/20 blur-[150px] rounded-full" 
-            />
-            <motion.div 
-              animate={{ opacity: [0.2, 0.5, 0.2], x: [0, -30, 0] }}
-              transition={{ duration: 7, repeat: Infinity }}
-              className="absolute -bottom-20 -right-20 w-[600px] h-[600px] bg-emerald-600/20 blur-[180px] rounded-full" 
-            />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.8)_100%)]" />
           </div>
 
-          <div className="relative z-10 flex flex-col items-center">
+          <div className="relative z-10 flex flex-col items-center w-full max-w-[310px] md:max-w-none px-6">
             
-            {/* LOGO PNG CON MOVIMIENTO DINÁMICO */}
+            {/* LOGO PNG - ANIMACIÓN DE PULSO Y BRILLO */}
             <motion.div
-              initial={{ scale: 0.7, opacity: 0 }}
+              initial={{ scale: 0.8, opacity: 0 }}
               animate={{ 
-                scale: [0.95, 1.05, 0.95],
+                scale: [0.98, 1.02, 0.98],
                 opacity: 1,
-                rotateY: [0, 5, -5, 0],
                 filter: [
-                  "brightness(1.1) drop-shadow(0 0 20px rgba(16,185,129,0.4))",
-                  "brightness(1.6) drop-shadow(0 0 50px rgba(16,185,129,0.7))",
-                  "brightness(1.1) drop-shadow(0 0 20px rgba(16,185,129,0.4))"
+                  "brightness(1) drop-shadow(0 0 15px rgba(16,185,129,0.2))",
+                  "brightness(1.3) drop-shadow(0 0 40px rgba(16,185,129,0.6))",
+                  "brightness(1) drop-shadow(0 0 15px rgba(16,185,129,0.2))"
                 ]
               }}
-              transition={{ 
-                duration: 4, 
-                ease: "easeInOut", 
-                repeat: Infinity 
-              }}
-              className="relative w-40 h-40 md:w-52 md:h-52 mb-8"
+              transition={{ duration: 3, ease: "easeInOut", repeat: Infinity }}
+              className="relative w-44 h-44 md:w-56 md:h-56 mb-6"
             >
               <Image
                 src="/assets/img/logo.png"
                 alt="Emerald DT Logo"
                 fill
-                className="object-contain p-2"
+                className="object-contain"
                 priority
               />
             </motion.div>
 
             <motion.div
-              initial={{ y: 30, opacity: 0 }}
+              initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 1 }}
-              className="text-center"
+              transition={{ delay: 0.3 }}
+              className="text-center w-full flex flex-col items-center"
             >
-              <h2 className="text-white font-mono text-3xl md:text-4xl tracking-[1.2em] uppercase mb-2 font-bold">
+              <h2 className="text-white font-mono text-2xl md:text-4xl tracking-[1em] uppercase mb-4 font-bold ml-[1em]">
                 EMERALD<span className="text-emerald-400">DT</span>
               </h2>
               
-              <div className="flex items-center justify-center gap-4 mb-8">
-                 <span className="h-[1px] w-12 bg-emerald-500/30" />
-                 <span className="text-emerald-500 font-mono text-[10px] tracking-[0.4em] uppercase">Laboratory Grade</span>
-                 <span className="h-[1px] w-12 bg-emerald-500/30" />
+              <div className="flex items-center gap-3 mb-10 opacity-50">
+                 <span className="h-[1px] w-8 bg-emerald-500" />
+                 <span className="text-emerald-400 font-mono text-[9px] tracking-[0.3em] uppercase">Security Cluster Active</span>
+                 <span className="h-[1px] w-8 bg-emerald-500" />
               </div>
 
-              {/* BARRA DE PROGRESO CINEMÁTICA */}
-              <div className="w-80 h-[2px] bg-white/5 relative overflow-hidden rounded-full">
+              {/* BARRA DE PROGRESO SINCRONIZADA A 5s */}
+              <div className="w-full max-w-[300px] h-[2px] bg-emerald-950/50 relative overflow-hidden rounded-full border border-white/5">
                 <motion.div 
                   initial={{ x: "-100%" }}
                   animate={{ x: "0%" }}
-                  transition={{ duration: 4.8, ease: [0.645, 0.045, 0.355, 1.000] }}
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-400 to-transparent"
+                  transition={{ 
+                    duration: 5, // Sincronizado con el setTimeout
+                    ease: [0.65, 0, 0.35, 1] // Curva de aceleración técnica
+                  }}
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-400 to-emerald-600 shadow-[0_0_15px_rgba(52,211,153,0.8)]"
                 />
               </div>
               
               <motion.p 
-                animate={{ opacity: [0.4, 1, 0.4] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="mt-6 text-[10px] text-emerald-300/40 font-mono tracking-[0.6em] uppercase"
+                animate={{ opacity: [0.3, 1, 0.3] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="mt-6 text-[10px] text-emerald-300/40 font-mono tracking-[0.5em] uppercase"
               >
-                {pathname === '/' ? 'Establishing Secure Cluster' : 'Synchronizing Heritage'}
+                {pathname === '/' ? 'Establishing Connection' : `Navigating to ${pathname}`}
               </motion.p>
             </motion.div>
           </div>
