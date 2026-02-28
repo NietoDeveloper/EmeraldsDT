@@ -32,7 +32,6 @@ export const metadata: Metadata = {
   description: "The world's premier platform for high-value Colombian emeralds. Designed by Nieto Laboratory.",
   keywords: ["Emeralds", "Colombia", "Luxury", "Nieto Laboratory", "Gems", "Engineering"],
   
-  // --- FUERZA BRUTA PARA ICONOS ---
   icons: {
     icon: [
       {
@@ -50,5 +49,49 @@ export const metadata: Metadata = {
       },
     ],
   },
-  // ---------------------------------------
 
+  openGraph: {
+    title: "Emerald DT | Eternal Emeralds",
+    description: "World-class emerald commercialization with SpaceX-inspired engineering.",
+    url: "https://emeralddt.com",
+    siteName: "Emerald DT",
+    images: [{ url: "/assets/img/og-emerald.jpg", width: 1200, height: 630, alt: "Emerald DT" }],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Emerald DT | Colombian Masterpieces",
+    description: "High engineering meets eternal gems.",
+    images: ["/assets/img/og-emerald.jpg"],
+  },
+};
+
+// Next.js 16 requiere que el tipo de params sea una Promesa que pueda ser opcional o vacía en el Root
+interface RootLayoutProps {
+  children: React.ReactNode;
+  params: Promise<{ lang?: string }>; 
+}
+
+export default async function RootLayout(props: RootLayoutProps) {
+  // En Next 16, desestructuramos después del await para máxima seguridad de tipos
+  const { children, params } = props;
+  const resolvedParams = await params;
+  const lang = resolvedParams?.lang || "en";
+
+  return (
+    <html 
+      lang={lang} 
+      className={`${sans.variable} ${mono.variable} scroll-smooth`}
+      suppressHydrationWarning 
+    >
+      <body className="antialiased bg-black text-white selection:bg-emerald/30 selection:text-gold min-h-screen flex flex-col font-sans">
+        <Navbar />
+        <main className="flex-grow w-full pt-20 md:pt-24">
+          {children}
+        </main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
