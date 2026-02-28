@@ -68,14 +68,3 @@ export const metadata: Metadata = {
     images: ["/assets/img/og-emerald.jpg"],
   },
 };
-
-interface RootLayoutProps {
-  children: React.ReactNode;
-  params: Promise<{ lang: string }>;
-}
-
-export default async function RootLayout({
-  children,
-  params,
-}: RootLayoutProps) {
-  const { lang } = await params;
