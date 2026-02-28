@@ -79,20 +79,3 @@ export default async function RootLayout({
   params,
 }: RootLayoutProps) {
   const { lang } = await params;
-
-  return (
-    <html 
-      lang={lang || "en"} 
-      className={`${sans.variable} ${mono.variable} scroll-smooth`}
-      suppressHydrationWarning 
-    >
-      <body className="antialiased bg-black text-white selection:bg-emerald/30 selection:text-gold min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow w-full">
-          {children}
-        </main>
-        <Footer />
-      </body>
-    </html>
-  );
-}
