@@ -37,7 +37,7 @@ export const Navbar = () => {
   const [isAtTop, setIsAtTop] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleLogoClick = (e: React.MouseEvent) => {
+  const handleRefresh = (e: React.MouseEvent) => {
     e.preventDefault();
     window.location.href = '/';
   };
@@ -66,13 +66,13 @@ export const Navbar = () => {
         <div className="w-full max-w-[1900px] mx-auto flex justify-between items-center px-6 sm:px-12 md:px-20 lg:px-24 transition-all duration-500">
           
           {/* LOGO & BRAND */}
-          <Link href="/" onClick={handleLogoClick} className="group flex items-center gap-3 md:gap-5 z-[120] outline-none cursor-pointer">
-            <div className="relative w-10 h-10 md:w-16 md:h-16 transition-all duration-700 group-hover:rotate-[360deg] group-hover:scale-110">
+          <Link href="/" onClick={handleRefresh} className="group flex items-center gap-3 md:gap-5 z-[120] outline-none cursor-pointer">
+            <div className="relative w-10 h-10 md:w-16 md:h-16 transition-all duration-700 group-hover:rotate-[360deg]">
               <Image src="/assets/img/logo.png" alt="Emerald DT Logo" fill className="object-contain" />
             </div>
 
             <div className="flex items-center gap-1 md:gap-2">
-              <span className="font-bold tracking-[0.2em] uppercase text-emerald-500 text-lg md:text-3xl group-hover:text-[#D4AF37] transition-all duration-500 group-hover:-translate-y-1">
+              <span className="font-bold tracking-[0.2em] uppercase text-emerald-500 text-lg md:text-3xl transition-all duration-500 group-hover:text-[#D4AF37] group-hover:-translate-y-1">
                 Emerald
               </span>
               <span className="font-black tracking-tighter uppercase text-[#D4AF37] text-lg md:text-3xl italic transition-all duration-500 group-hover:-translate-y-1">
@@ -100,7 +100,7 @@ export const Navbar = () => {
                     <div className="bg-black/40 backdrop-blur-3xl border border-white/5 p-6 shadow-2xl">
                       <div className="flex flex-col gap-4 relative">
                         {link.subItems.map((sub) => (
-                          <Link key={sub.name} href={sub.href} className="text-[9px] uppercase tracking-[0.2em] text-zinc-400 hover:text-[#D4AF37] transition-colors duration-300">
+                          <Link key={sub.name} href={sub.href} className="text-[9px] uppercase tracking-[0.2em] text-zinc-400 hover:text-[#D4AF37] hover:-translate-y-0.5 transition-all duration-300">
                             {sub.name}
                           </Link>
                         ))}
@@ -123,19 +123,18 @@ export const Navbar = () => {
               </Link>
             </div>
 
-            {/* HAMBURGER / X BUTTON */}
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden relative z-[200] w-12 h-12 flex items-center justify-center bg-white/5 rounded-full border border-white/10 transition-all duration-300 hover:border-[#D4AF37] group outline-none"
             >
-              <div className="relative w-6 h-6 flex items-center justify-center">
-                <Menu 
-                  size={28} 
-                  className={`absolute transition-all duration-500 text-white group-hover:text-[#D4AF37] ${isMobileMenuOpen ? 'opacity-0 scale-50 rotate-90' : 'opacity-100 scale-100 rotate-0'}`} 
-                />
+              <div className="relative w-6 h-6">
                 <X 
                   size={28} 
-                  className={`absolute transition-all duration-500 text-white group-hover:text-[#D4AF37] ${isMobileMenuOpen ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-50 -rotate-90'}`} 
+                  className={`absolute inset-0 transition-all duration-500 text-white group-hover:text-[#D4AF37] ${isMobileMenuOpen ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-50 -rotate-90'}`} 
+                />
+                <Menu 
+                  size={28} 
+                  className={`absolute inset-0 transition-all duration-500 text-white group-hover:text-[#D4AF37] ${isMobileMenuOpen ? 'opacity-0 scale-50 rotate-90' : 'opacity-100 scale-100 rotate-0'}`} 
                 />
               </div>
             </button>
@@ -143,34 +142,39 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* MOBILE MENU OVERLAY */}
+      {/* MOBILE MENU OVERLAY - CUEVA DE ESMERALDAS */}
       <div className={`fixed inset-0 z-[130] transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] 
         ${isMobileMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
       >
-        <div className="absolute inset-0 bg-black/95 backdrop-blur-[40px]" />
-        
-        <div className="relative flex flex-col h-full justify-center items-center px-10 gap-12">
-          <div className="flex flex-col items-center gap-8 w-full">
+        <div className="absolute inset-0 bg-[#021510] opacity-98" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-900/40 via-transparent to-transparent opacity-60" />
+
+        <div className="relative flex flex-col h-full justify-center items-center px-10 gap-16">
+          
+          <div onClick={handleRefresh} className="cursor-pointer mb-4 transition-transform active:scale-95 hover:scale-105">
+             <div className="relative w-24 h-24">
+                <Image src="/assets/img/logo.png" alt="Logo" fill className="object-contain" />
+             </div>
+          </div>
+
+          <div className="flex flex-col items-center gap-10 w-full">
             {navLinks.map((item, index) => (
-              <div key={item.name} className="flex flex-col items-center group/m-item">
-                <Link 
-                  href={item.href} 
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-3xl md:text-5xl uppercase tracking-[0.5em] font-black text-white transition-all duration-700 hover:text-[#D4AF37] hover:scale-105
-                    ${isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  {item.name}
-                </Link>
-              </div>
+              <Link 
+                key={item.name} 
+                href={item.href} 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`text-3xl md:text-5xl uppercase tracking-[0.5em] font-black text-white/90 hover:text-[#D4AF37] hover:-translate-y-2 transition-all duration-500
+                  ${isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                style={{ transitionDelay: `${index * 50}ms` }}
+              >
+                {item.name}
+              </Link>
             ))}
           </div>
 
-          <div className={`flex flex-col items-center gap-6 transition-all duration-1000 delay-500 ${isMobileMenuOpen ? "opacity-100" : "opacity-0"}`}>
-            <div className="flex gap-12 text-white/50">
-               <Link href="/cart" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#D4AF37] transition-all hover:scale-125"><ShoppingCart size={24}/></Link>
-               <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="text-[12px] uppercase tracking-[0.4em] font-black hover:text-[#D4AF37] transition-all pt-1">Login</Link>
-            </div>
+          <div className={`flex gap-16 items-center transition-all duration-1000 delay-300 ${isMobileMenuOpen ? "opacity-100" : "opacity-0"}`}>
+             <Link href="/cart" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-[#D4AF37] transition-all hover:-translate-y-1"><ShoppingCart size={32}/></Link>
+             <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="text-sm uppercase tracking-[0.5em] font-black text-white hover:text-[#D4AF37] transition-all hover:-translate-y-1">Access</Link>
           </div>
         </div>
       </div>
