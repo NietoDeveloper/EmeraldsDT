@@ -14,56 +14,52 @@
     --font-mono: var(--font-mono);
   }
 
-  /* SOLUCIÓN ATÓMICA NIETO LABORATORY:
-     Eliminamos 'height: 100%' para evitar que el navegador reserve espacio extra.
-     Usamos 'overflow-y: overlay' si está disponible o 'auto' para centralizar.
+  /* SOLUCIÓN ATÓMICA ANTI-DOUBLE SCROLL:
+     Bloqueamos el scroll en la raíz. Solo el contenedor <main> dentro
+     de la página tendrá permiso para desplazarse.
   */
-  html {
-    @apply bg-black scroll-smooth;
-    /* Evitamos forzar el 100% para que el contenido dicte la altura real */
-    height: auto; 
-    min-height: 100dvh;
-    overflow-x: hidden;
-    /* Solo el HTML gestiona el scroll */
-    overflow-y: auto; 
+  html, body {
+    @apply bg-black antialiased;
+    /* Bloqueo total para evitar el segundo scroll del navegador */
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+    margin: 0;
+    padding: 0;
+    position: fixed; /* Previene rebotes elásticos en iOS */
   }
 
   body {
-    @apply antialiased bg-black text-white;
-    width: 100%;
-    /* Importante: No ponemos min-h-screen aquí para no duplicar el cálculo del HTML */
-    margin: 0;
-    padding: 0;
-    /* Forzamos a que el body sea un contenedor pasivo */
-    overflow: visible; 
-    position: relative;
+    @apply text-white;
     text-rendering: optimizeLegibility;
   }
 }
 
 @layer components {
-  /* Scrollbar Estilo SpaceX - Ultra Delgado */
-  ::-webkit-scrollbar {
-    width: 4px;
+  /* Scrollbar Estilo SpaceX - Ultra Delgado y Minimalista */
+  /* Aplicado al contenedor con scroll, no al body */
+  .scrollbar-hide::-webkit-scrollbar {
+    width: 2px; /* Aún más fino para estilo cinemático */
   }
-  ::-webkit-scrollbar-track {
+  
+  .scrollbar-hide::-webkit-scrollbar-track {
     background: transparent;
   }
-  ::-webkit-scrollbar-thumb {
-    background: rgba(80, 200, 120, 0.2);
+  
+  .scrollbar-hide::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.2); /* Sutil rastro dorado */
     border-radius: 0px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--gold);
   }
 
   /* Snap Section Ajustado para Responsive 310px-1900px */
   .snap-section {
     @apply relative w-full flex flex-col justify-end overflow-hidden;
-    /* Usamos dvh para ignorar las barras de navegación móviles que causan el salto de scroll */
+    /* dvh es vital para que en móviles no "baile" la pantalla */
     height: 100dvh; 
     background-size: cover;
     background-position: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 
   .section-overlay {
@@ -73,11 +69,10 @@
   }
 }
 
-/* Soporte Universal */
+/* Soporte Universal para Firefox */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(80, 200, 120, 0.3) transparent;
-  box-sizing: border-box; /* Crucial para que bordes no sumen altura */
+  scrollbar-width: none; /* Ocultar por defecto para estética SpaceX */
+  box-sizing: border-box;
 }
 
 ::selection {
