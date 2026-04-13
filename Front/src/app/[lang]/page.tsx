@@ -19,7 +19,7 @@ export default async function HomePage({ params }: HomePageProps) {
       desc: 'Legendary for their deep "warm" green. The Muzo mines produce the most coveted gems on Earth, characterized by their incomparable saturation.',
       descEs: 'Legendarias por su verde profundo y "cálido". Las minas de Muzo producen las gemas más codiciadas de la Tierra, caracterizadas por su saturación incomparable.',
       // CORRECCIÓN: Se elimina '/public' y se usa el path directo
-      image: '/img/Muzo1.png', 
+      image: '/img/Muzo1.2.png', 
     },
     {
       id: 'chivor',

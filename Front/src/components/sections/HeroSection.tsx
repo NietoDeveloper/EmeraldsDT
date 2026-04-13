@@ -37,7 +37,7 @@ export const HeroSection = () => {
           muted={isMuted}
           className="w-full h-full object-cover md:object-contain object-center transition-opacity duration-700"
         >
-          <source src="/assets/videos/hero-emerald.webm" type="video/webm" />
+          <source src="/videos/hero-emerald.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </div>
