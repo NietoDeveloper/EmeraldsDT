@@ -71,25 +71,6 @@ export const Navbar = () => {
               <Image src="/assets/img/logo.png" alt="Emerald DT Logo" fill className="object-contain" />
             </div>
             <div className="flex items-center gap-1 md:gap-2">
-              <span className="font-bold tracking-[0.2em] uppercase text-emerald-500 text-lg md:text-3xl transition-all duration-500 group-hover:text-gold group-hover:-translate-y-1">
-                Emerald
-              </span>
-              <span className="font-black tracking-tighter uppercase text-gold text-lg md:text-3xl italic transition-all duration-500 group-hover:-translate-y-1 group-hover:scale-105">
-                DT
-              </span>
-            </div>
-          </Link>
-
-          {/* DESKTOP MENU */}
-          <div className="hidden lg:flex items-center gap-8 xl:gap-14">
-            {navLinks.map((link) => (
-              <div key={link.name} className="relative group/item">
-                <Link 
-                  href={link.href} 
-                  className="flex items-center gap-2 text-[10px] xl:text-[11px] uppercase tracking-[0.5em] font-bold text-gold/70 hover:text-gold hover:-translate-y-1.5 hover:scale-110 transition-all duration-300"
-                >
-                  {link.name}
-                  {link.subItems && (
 
       
       </div>
