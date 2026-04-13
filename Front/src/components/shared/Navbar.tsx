@@ -113,10 +113,6 @@ export const Navbar = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden relative z-[200] w-12 h-12 flex flex-col items-center justify-center bg-emerald-500/5 rounded-full border border-emerald-500/20 transition-all duration-500 hover:border-gold hover:scale-110 hover:-translate-y-1 group outline-none overflow-hidden"
             >
-              <div className="relative w-6 h-5 flex flex-col justify-between items-center transition-all duration-500">
-                <span className={`w-full h-[2px] transition-all duration-500 ease-in-out transform 
-                  ${isMobileMenuOpen ? 'rotate-45 translate-y-[9px] bg-gold' : 'bg-emerald-500 group-hover:bg-gold'}`} 
-                />
       </div>
     </>
   );
