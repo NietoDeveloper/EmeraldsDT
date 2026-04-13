@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import "./globals.css";
+// AJUSTE: Usamos el alias absoluto para evitar el error "Module not found" en Turbopack
+import "@/app/globals.css";
 import { Navbar } from "@/components/shared/Navbar";
 import { Footer } from "@/components/shared/Footer"; 
 import Preloader from "@/components/shared/Preloader";
@@ -48,7 +49,7 @@ interface RootLayoutProps {
 
 /**
  * Emerald DT - Root Layout Orchestrator
- * Arquitectura de Bloqueo Crítico para Ciclo S+
+ * Ajustado para Snap Scroll y resolución de rutas en Ciclo S+
  */
 export default async function RootLayout(props: RootLayoutProps) {
   const { children, params } = props;
@@ -62,7 +63,7 @@ export default async function RootLayout(props: RootLayoutProps) {
       suppressHydrationWarning 
     >
       <head>
-        {/* CSS CRÍTICO INLINE: Evita el parpadeo centesimal antes de cargar globals.css */}
+        {/* CSS CRÍTICO INLINE para evitar FOUC (Flash of Unstyled Content) */}
         <style dangerouslySetInnerHTML={{ __html: `
           html.js-loading body { overflow: hidden !important; background: #000 !important; }
           #main-content { opacity: 0; visibility: hidden; }
@@ -75,16 +76,17 @@ export default async function RootLayout(props: RootLayoutProps) {
       </head>
       <body className="antialiased bg-black text-white selection:bg-emerald-500/30 selection:text-emerald-200 min-h-screen flex flex-col font-sans overflow-x-hidden">
         
-        {/* Capa de Preloader: Controla las clases js-loading/js-loaded */}
         <Suspense fallback={null}>
           <Preloader />
         </Suspense>
 
-        {/* Estructura Principal */}
         <div id="main-content" className="flex flex-col min-h-screen">
           <Navbar />
           
-          <main className="flex-grow w-full pt-20 md:pt-24 relative z-10">
+          {/* IMPORTANTE: Mantener sin paddings (pt-20) para que 
+              el Snap Scroll de HeroSection y las Minas sea 100% exacto. 
+          */}
+          <main className="flex-grow w-full relative z-10">
             <PageTransitionWrapper>
               {children}
             </PageTransitionWrapper>
