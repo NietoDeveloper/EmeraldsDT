@@ -28,12 +28,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${sans.variable} ${mono.variable} scroll-smooth`} suppressHydrationWarning>
       <head>
+        {/* Estilos críticos para evitar FOUC y manejar el Preloader */}
         <style dangerouslySetInnerHTML={{ __html: `
           #main-content { opacity: 0; }
           html.js-loaded #main-content { opacity: 1; transition: opacity 1.2s ease; }
         `}} />
       </head>
       <body className="antialiased bg-black text-white min-h-screen flex flex-col font-sans overflow-x-hidden">
+        {/* Preloader con Suspense para optimización de carga */}
         <Suspense fallback={null}>
           <Preloader />
         </Suspense>
@@ -41,11 +43,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         
         <div id="main-content" className="flex flex-col flex-grow">
-          <main className="flex-grow w-full pt-20 md:pt-24 relative z-10">
+          {/* IMPORTANTE: Se eliminó pt-20/pt-24. 
+            Ahora el contenido empieza en el borde superior (y=0).
+            Esto es vital para que las secciones h-[100dvh] del Home no se desplacen.
+          */}
+          <main className="flex-grow w-full relative z-10">
             <PageTransitionWrapper>
               {children}
             </PageTransitionWrapper>
           </main>
+          
           <Footer />
         </div>
       </body>
