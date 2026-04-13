@@ -17,7 +17,6 @@ interface NavLink {
   subItems?: NavSubItem[];
 }
 
-// Lista de navegación unificada según tus indicaciones
 const navLinks: NavLink[] = [
   { name: "Home", href: "/" },
   { name: "Catalog", href: "/catalog" },
@@ -38,10 +37,12 @@ export const Navbar = () => {
   const scrollDirection = useScrollDirection();
   const [isAtTop, setIsAtTop] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Simulación para login/logout
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
 
+  // REFRESH REAL: Solo para los logos
   const handleRefresh = (e: React.MouseEvent) => {
     e.preventDefault();
+    e.stopPropagation(); // Evita que el evento suba
     window.location.href = '/';
   };
 
@@ -68,8 +69,8 @@ export const Navbar = () => {
       >
         <div className="w-full max-w-[1900px] mx-auto flex justify-between items-center px-6 sm:px-12 md:px-20 lg:px-24">
           
-          {/* LOGO (REFRESH) */}
-          <Link href="/" onClick={handleRefresh} className="group flex items-center gap-3 md:gap-5 z-[120] outline-none cursor-pointer">
+          {/* LOGO (REFRESH FORZADO) */}
+          <div onClick={handleRefresh} className="group flex items-center gap-3 md:gap-5 z-[120] outline-none cursor-pointer">
             <div className="relative w-10 h-10 md:w-14 md:h-14 transition-all duration-700 group-hover:rotate-[360deg] group-hover:scale-110">
               <Image src="/assets/img/logo.png" alt="Emerald DT Logo" fill className="object-contain" />
             </div>
@@ -81,14 +82,15 @@ export const Navbar = () => {
                 DT
               </span>
             </div>
-          </Link>
+          </div>
 
-          {/* DESKTOP MENU */}
+          {/* DESKTOP MENU (CLIENT-SIDE ROUTING) */}
           <div className="hidden lg:flex items-center gap-6 xl:gap-10">
             {navLinks.map((link) => (
               <div key={link.name} className="relative group/item">
                 <Link 
-                  href={link.href} 
+                  href={link.href}
+                  prefetch={true}
                   className="flex items-center gap-2 text-[10px] xl:text-[11px] uppercase tracking-[0.4em] font-bold text-gold/70 hover:text-gold hover:-translate-y-1 transition-all duration-300"
                 >
                   {link.name}
@@ -100,7 +102,7 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* ICONS & AUTH */}
+          {/* ICONS & AUTH (CLIENT-SIDE ROUTING) */}
           <div className="flex items-center gap-4 md:gap-8">
             <div className="hidden md:flex items-center gap-6 text-gold/80">
               <Link href="/cart" className="hover:text-gold transition-all hover:-translate-y-1 hover:scale-110">
@@ -114,7 +116,7 @@ export const Navbar = () => {
               </Link>
             </div>
 
-            {/* HAMBURGER BUTTON */}
+            {/* HAMBURGER */}
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden relative z-[200] w-12 h-12 flex flex-col items-center justify-center bg-emerald-500/5 rounded-full border border-emerald-500/20 transition-all duration-500 hover:border-gold outline-none"
@@ -137,19 +139,20 @@ export const Navbar = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-900/20 via-transparent to-transparent opacity-40" />
 
         <div className="relative flex flex-col h-full justify-center items-center px-10 gap-12">
-          {/* Logo en el menú móvil (Refresh) */}
+          {/* Logo móvil (REFRESH FORZADO) */}
           <div onClick={handleRefresh} className="cursor-pointer mb-2 transition-transform hover:scale-110">
               <div className="relative w-20 h-20">
                 <Image src="/assets/img/logo.png" alt="Logo" fill className="object-contain" />
               </div>
           </div>
 
-          {/* Enlaces del menú móvil */}
+          {/* Menú móvil (CLIENT-SIDE ROUTING) */}
           <div className="flex flex-col items-center gap-6 w-full">
             {navLinks.map((item, index) => (
               <Link 
                 key={item.name} 
-                href={item.href} 
+                href={item.href}
+                prefetch={true}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`text-2xl md:text-4xl uppercase tracking-[0.4em] font-black text-gold/60 hover:text-gold transition-all duration-500
                   ${isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
@@ -160,9 +163,12 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* Botones de acción móvil (Carrito + Login/Logout) */}
           <div className={`flex flex-col items-center gap-8 transition-all duration-1000 delay-500 ${isMobileMenuOpen ? "opacity-100" : "opacity-0"}`}>
-             <Link href="/cart" onClick={() => setIsMobileMenuOpen(false)} className="text-gold flex items-center gap-4 text-xl uppercase tracking-widest font-bold border-b border-gold/30 pb-2">
+             <Link 
+              href="/cart" 
+              onClick={() => setIsMobileMenuOpen(false)} 
+              className="text-gold flex items-center gap-4 text-xl uppercase tracking-widest font-bold border-b border-gold/30 pb-2"
+             >
                 <ShoppingCart size={28}/> Cart
              </Link>
              <Link 
