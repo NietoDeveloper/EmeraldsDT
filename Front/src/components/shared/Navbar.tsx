@@ -145,14 +145,7 @@ export const Navbar = () => {
 
           <div className="flex flex-col items-center gap-10 w-full">
             {navLinks.map((item, index) => (
-              <Link 
-                key={item.name} 
-                href={item.href} 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-3xl md:text-5xl uppercase tracking-[0.5em] font-black text-gold/60 hover:text-gold hover:-translate-y-2 hover:scale-105 transition-all duration-500
-                  ${isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-                style={{ transitionDelay: `${index * 50}ms` }}
-              >
+
                 {item.name}
               </Link>
             ))}
