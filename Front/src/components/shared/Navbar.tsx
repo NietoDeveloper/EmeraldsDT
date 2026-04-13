@@ -117,13 +117,6 @@ export const Navbar = () => {
                 <span className={`w-full h-[2px] transition-all duration-500 ease-in-out transform 
                   ${isMobileMenuOpen ? 'rotate-45 translate-y-[9px] bg-gold' : 'bg-emerald-500 group-hover:bg-gold'}`} 
                 />
-                <span className={`w-full h-[2px] transition-all duration-500 ease-in-out 
-                  ${isMobileMenuOpen ? 'opacity-0 -translate-x-8' : 'bg-emerald-500 group-hover:bg-gold'}`} 
-                />
-                <span className={`w- className="cursor-pointer mb-4 transition-transform hover:scale-110">
-             <div className="relative w-24 h-24">
-                <Image src="/assets/img/logo.png" alt="Logo" fill className="object-contain" />
-        
       </div>
     </>
   );
