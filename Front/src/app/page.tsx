@@ -19,7 +19,7 @@ export default async function Home({ params }: HomePageProps) {
       tagEs: 'La Capital Mundial de las Esmeraldas',
       desc: 'Legendary for their deep "warm" green. The Muzo mines produce the most coveted gems on Earth, characterized by their incomparable saturation.',
       descEs: 'Legendarias por su verde profundo y "cálido". Las minas de Muzo producen las gemas más codiciadas de la Tierra, caracterizadas por su saturación incomparable.',
-      image: '/assets/img/Muzo1.png', // Reemplazar con video/foto real
+      image: '/assets/img/Muzo1.2.png', // Reemplazar con video/foto real
     },
     {
       id: 'chivor',
