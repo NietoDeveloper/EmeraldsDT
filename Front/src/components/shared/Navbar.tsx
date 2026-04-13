@@ -63,11 +63,7 @@ export const Navbar = () => {
             : "bg-black/60 backdrop-blur-xl py-4 shadow-2xl"
           }`}
       >
-        <div className="w-full max-w-[1900px] mx-auto flex justify-between items-center px-6 sm:px-12 md:px-20 lg:px-24">
-          
-          {/* LOGO & BRAND */}
-          <Link href="/" onClick={handleRefresh} className="group flex items-center gap-3 md:gap-5 z-[120] outline-none cursor-pointer">
-            <
+        <div className="w-f
       
       </div>
     </>
