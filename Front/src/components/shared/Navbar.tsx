@@ -140,22 +140,7 @@ export const Navbar = () => {
           <div onClick={handleRefresh} className="cursor-pointer mb-4 transition-transform hover:scale-110">
              <div className="relative w-24 h-24">
                 <Image src="/assets/img/logo.png" alt="Logo" fill className="object-contain" />
-             </div>
-          </div>
-
-          <div className="flex flex-col items-center gap-10 w-full">
-            {navLinks.map((item, index) => (
-
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          <div className={`flex gap-16 items-center transition-all duration-1000 delay-300 ${isMobileMenuOpen ? "opacity-100" : "opacity-0"}`}>
-             <Link href="/cart" onClick={() => setIsMobileMenuOpen(false)} className="text-gold hover:text-gold hover:scale-125 transition-all hover:-translate-y-2"><ShoppingCart size={32}/></Link>
-             <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="text-sm uppercase tracking-[0.5em] font-black text-gold/80 hover:text-gold hover:scale-110 transition-all hover:-translate-y-1">Access</Link>
-          </div>
-        </div>
+        
       </div>
     </>
   );
