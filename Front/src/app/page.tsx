@@ -1,17 +1,19 @@
 "use client";
 
+import { use } from "react";
 import { HeroSection } from '@/components/sections/HeroSection';
 import { MainButton } from '@/components/ui/MainButton';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// Los parámetros en Client Components se manejan vía props directamente o hooks
 interface HomePageProps {
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }
 
 export default function Home({ params }: HomePageProps) {
-  const lang = params?.lang || 'en';
+  // Des envolver params correctamente para evitar warnings de hidratación
+  const resolvedParams = use(params);
+  const lang = resolvedParams?.lang || 'en';
   const isEs = lang === 'es';
 
   const mines = [
@@ -48,7 +50,7 @@ export default function Home({ params }: HomePageProps) {
   ];
 
   return (
-    <div className="relative w-full bg-black select-none">
+    <div className="relative w-full bg-black select-none overflow-x-hidden">
       
       {/* SECCIÓN 1: Hero Section */}
       <section className="relative w-full h-[100dvh]">
@@ -61,44 +63,45 @@ export default function Home({ params }: HomePageProps) {
           key={mine.id}
           className="relative w-full h-[100dvh] flex items-end pb-24 md:pb-32 overflow-hidden border-t border-white/5"
         >
-          {/* Background Layer: Optimización con Next Image */}
+          {/* Background con efecto Parallax suave al hover */}
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
             <Image 
               src={mine.image}
-              alt={mine.name}
+              alt={`${mine.name} Mine Colombia`}
               fill
               priority={index === 0}
-              className="object-cover transition-transform duration-[3000ms] scale-105 hover:scale-100"
+              sizes="100vw"
+              className="object-cover transition-transform duration-[4000ms] ease-out scale-110 hover:scale-100"
             />
           </div>
 
           <div className="w-full px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 relative z-20">
             <div className="max-w-[1900px] mx-auto">
-              <div className="max-w-4xl opacity-0 animate-[fade-in-up_1s_ease-out_forwards]">
+              {/* Animación de entrada por scroll (puedes usar Intersection Observer si prefieres que se repita) */}
+              <div className="max-w-4xl opacity-0 animate-[fade-in-up_1.2s_cubic-bezier(0.23,1,0.32,1)_forwards]">
                 
-                <h2 className="text-emerald-500 font-mono tracking-[0.5em] uppercase mb-4 text-[10px] md:text-xs font-bold">
-                  {isEs ? `// Origen: Boyacá, Colombia` : `// Origin: Boyacá, Colombia`}
+                <h2 className="text-emerald-500 font-mono tracking-[0.6em] uppercase mb-4 text-[10px] md:text-xs font-bold">
+                  {isEs ? `// Boyacá, Colombia` : `// Boyacá, Colombia`}
                 </h2>
                 
-                <h3 className="text-5xl sm:text-7xl md:text-8xl lg:text-[110px] font-black uppercase mb-6 tracking-tighter leading-none text-white">
+                <h3 className="text-5xl sm:text-7xl md:text-8xl lg:text-[120px] font-black uppercase mb-6 tracking-tighter leading-none text-white">
                   {mine.name} <br/> 
-                  <span className="text-gold-500 italic font-light text-2xl sm:text-4xl md:text-5xl tracking-normal block mt-2">
+                  <span className="text-gold-500 italic font-light text-2xl sm:text-4xl md:text-5xl tracking-tight block mt-2">
                     {isEs ? mine.tagEs : mine.tag}
                   </span>
                 </h3>
                 
-                <p className="text-zinc-300 text-sm md:text-lg lg:text-xl mb-10 max-w-xl leading-relaxed font-medium opacity-80">
+                <p className="text-zinc-400 text-sm md:text-lg lg:text-xl mb-10 max-w-xl leading-relaxed font-medium">
                   {isEs ? mine.descEs : mine.desc}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-6">
-                  {/* Navegación SPA sin recarga de página */}
-                  <Link href={mine.href} className="w-fit">
+                  <Link href={mine.href} className="inline-block group">
                     <MainButton 
                       text={isEs ? 'VER COLECCIÓN' : 'VIEW COLLECTION'} 
                       variant="gold" 
-                      className="border-2 border-gold text-gold hover:bg-gold hover:text-black tracking-[0.2em] text-[11px] font-bold py-4 px-12 transition-all duration-300 uppercase"
+                      className="border-2 border-gold text-gold hover:bg-gold hover:text-black tracking-[0.3em] text-[11px] font-bold py-5 px-14 transition-all duration-500 uppercase"
                     />
                   </Link>
                 </div>
@@ -106,22 +109,22 @@ export default function Home({ params }: HomePageProps) {
             </div>
           </div>
 
-          {/* Indicador Numérico lateral estilo SpaceX */}
+          {/* Indicador Numérico lateral */}
           <div className="absolute right-8 md:right-16 bottom-32 hidden md:flex flex-col items-center gap-4">
-            <span className="text-gold font-mono text-sm font-bold opacity-60">0{index + 1}</span>
-            <div className="w-[1px] h-24 bg-gradient-to-b from-gold to-transparent opacity-30" />
+            <span className="text-gold font-mono text-sm font-bold opacity-40">0{index + 1}</span>
+            <div className="w-[1px] h-24 bg-gradient-to-b from-gold/50 to-transparent" />
           </div>
         </section>
       ))}
 
-      {/* SECCIÓN FINAL */}
-      <section className="relative w-full py-40 bg-black flex flex-col items-center text-center px-6 border-t border-white/5">
-        <div className="max-w-3xl">
-          <h4 className="text-emerald-500 text-[10px] tracking-[0.6em] uppercase font-bold mb-8">Earth&apos;s Natural Art</h4>
-          <p className="text-zinc-400 text-lg md:text-2xl font-light leading-relaxed mb-12 italic">
-            &quot;Each emerald is a unique fragment of Colombia&apos;s soul, formed over 65 million years ago in the depths of Boyacá&apos;s mountains.&quot;
+      {/* SECCIÓN FINAL: Cierre de Marca */}
+      <section className="relative w-full py-48 bg-black flex flex-col items-center text-center px-6">
+        <div className="max-w-3xl opacity-0 animate-[fade-in_2s_ease-out_forwards]">
+          <h4 className="text-emerald-500 text-[10px] tracking-[0.8em] uppercase font-bold mb-10">Eternal Legacy</h4>
+          <p className="text-zinc-500 text-xl md:text-3xl font-light leading-relaxed mb-12 italic">
+            &quot;Each emerald is a unique fragment of Colombia&apos;s soul, formed over 65 million years ago.&quot;
           </p>
-          <div className="w-16 h-[1px] bg-gold/50 mx-auto" />
+          <div className="w-20 h-[1px] bg-gold/30 mx-auto" />
         </div>
       </section>
     </div>
