@@ -108,11 +108,7 @@ export const Navbar = () => {
               </Link>
             </div>
 
-            {/* CUSTOM ANIMATED HAMBURGER */}
-            <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden relative z-[200] w-12 h-12 flex flex-col items-center justify-center bg-emerald-500/5 rounded-full border border-emerald-500/20 transition-all duration-500 hover:border-gold hover:scale-110 hover:-translate-y-1 group outline-none overflow-hidden"
-            >
+      
       </div>
     </>
   );
