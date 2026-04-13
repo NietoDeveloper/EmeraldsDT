@@ -37,7 +37,7 @@ export default async function Home({ params }: HomePageProps) {
       tagEs: 'Geometría y Brillo',
       desc: 'Known for producing gems with exceptional brilliance and a slightly yellowish-green tint that captures the sunlight of the Colombian Andes.',
       descEs: 'Conocidas por producir gemas con un brillo excepcional y un tinte verde-amarillento que captura la luz del sol de los Andes colombianos.',
-      image: '/assets/img/mines/coscuez-bg.jpg',
+      image: '/assets/img/Coscuez2.png',
     }
   ];
 
