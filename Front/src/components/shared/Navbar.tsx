@@ -59,11 +59,7 @@ export const Navbar = () => {
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] 
           ${scrollDirection === "down" && !isMobileMenuOpen ? "-translate-y-full" : "translate-y-0"} 
           ${isAtTop 
-            ? "bg-transparent py-6 md:py-10" 
-            : "bg-black/60 backdrop-blur-xl py-4 shadow-2xl"
-          }`}
-      >
-        <div className="w-f
+  
       
       </div>
     </>
