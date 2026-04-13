@@ -28,7 +28,7 @@ export default async function Home({ params }: HomePageProps) {
       tagEs: 'Vibrancia y Tonos Azulados',
       desc: 'Nested in the steep mountains of Boyacá, Chivor emeralds are famous for their crystalline purity and unique bluish-green fire.',
       descEs: 'Enclavadas en las escarpadas montañas de Boyacá, las esmeraldas de Chivor son famosas por su pureza cristalina y su fuego verde-azulado único.',
-      image: '/assets/img/mines/chivor-bg.jpg',
+      image: '/assets/img/mines/',
     },
     {
       id: 'coscuez',
