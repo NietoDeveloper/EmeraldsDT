@@ -1,5 +1,6 @@
 import { HeroSection } from '@/components/sections/HeroSection';
 import { MainButton } from '@/components/ui/MainButton';
+import { Footer } from "@/components/shared/Footer"; // Importamos el Footer aquí
 
 interface HomePageProps {
   params: Promise<{ lang: string }>;
@@ -17,7 +18,8 @@ export default async function HomePage({ params }: HomePageProps) {
       tagEs: 'La Capital Mundial de las Esmeraldas',
       desc: 'Legendary for their deep "warm" green. The Muzo mines produce the most coveted gems on Earth, characterized by their incomparable saturation.',
       descEs: 'Legendarias por su verde profundo y "cálido". Las minas de Muzo producen las gemas más codiciadas de la Tierra, caracterizadas por su saturación incomparable.',
-      image: '/public/img/Muzo1.png',
+      // CORRECCIÓN: Se elimina '/public' y se usa el path directo
+      image: '/img/Muzo1.png', 
     },
     {
       id: 'chivor',
@@ -26,7 +28,7 @@ export default async function HomePage({ params }: HomePageProps) {
       tagEs: 'Vibrancia y Tonos Azulados',
       desc: 'Nested in the steep mountains of Boyacá, Chivor emeralds are famous for their crystalline purity and unique bluish-green fire.',
       descEs: 'Enclavadas en las escarpadas montañas de Boyacá, las esmeraldas de Chivor son famosas por su pureza cristalina y su fuego verde-azulado único.',
-      image: '/assets/img/Chivor4.png',
+      image: '/img/Chivor4.png',
     },
     {
       id: 'coscuez',
@@ -35,17 +37,11 @@ export default async function HomePage({ params }: HomePageProps) {
       tagEs: 'Geometría y Brillo',
       desc: 'Known for producing gems with exceptional brilliance and a slightly yellowish-green tint that captures the sunlight of the Colombian Andes.',
       descEs: 'Conocidas por producir gemas con un brillo excepcional y un tinte verde-amarillento que captura la luz del sol de los Andes colombianos.',
-      image: '/assets/img/Coscuez2.png',
+      image: '/img/Coscuez2.png',
     }
   ];
 
   return (
-    /**
-     * FIX DOUBLE SCROLL: 
-     * 1. 'fixed inset-0': Bloquea el componente a la pantalla completa.
-     * 2. 'overflow-y-auto': Habilita el scroll interno SOLO aquí.
-     * 3. 'snap-y snap-mandatory': Activa el imán de las secciones.
-     */
     <main className="fixed inset-0 w-full bg-black snap-y snap-mandatory overflow-y-auto scrollbar-hide selection:bg-gold/30 z-0">
       
       {/* SECCIÓN 1: HERO */}
@@ -127,6 +123,11 @@ export default async function HomePage({ params }: HomePageProps) {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* SECCIÓN FOOTER: Para que sea parte del Snap Scroll */}
+      <section className="snap-start w-full bg-black shrink-0">
+        <Footer />
       </section>
     </main>
   );
