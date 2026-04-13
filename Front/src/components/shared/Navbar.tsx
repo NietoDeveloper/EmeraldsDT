@@ -99,14 +99,7 @@ export const Navbar = () => {
 
           {/* ICONS & MODERN CUSTOM HAMBURGER */}
           <div className="flex items-center gap-4 md:gap-8">
-            <div className="hidden md:flex items-center gap-8 text-gold/80">
-              <Link href="/cart" className="hover:text-gold transition-all hover:-translate-y-1.5 hover:scale-110">
-                <ShoppingCart size={20} strokeWidth={1.5} />
-              </Link>
-              <Link href="/login" className="text-[10px] uppercase tracking-[0.4em] font-bold hover:text-gold hover:-translate-y-1 transition-all">
-                Access
-              </Link>
-            </div>
+       
 
       
       </div>
