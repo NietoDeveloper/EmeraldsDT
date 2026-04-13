@@ -67,11 +67,7 @@ export const Navbar = () => {
           
           {/* LOGO & BRAND */}
           <Link href="/" onClick={handleRefresh} className="group flex items-center gap-3 md:gap-5 z-[120] outline-none cursor-pointer">
-            <div className="relative w-10 h-10 md:w-16 md:h-16 transition-all duration-700 group-hover:rotate-[360deg] group-hover:scale-110">
-              <Image src="/assets/img/logo.png" alt="Emerald DT Logo" fill className="object-contain" />
-            </div>
-            <div className="flex items-center gap-1 md:gap-2">
-
+            <
       
       </div>
     </>
