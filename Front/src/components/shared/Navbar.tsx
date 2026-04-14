@@ -17,7 +17,6 @@ interface NavLink {
   subItems?: NavSubItem[];
 }
 
-// Lista de navegación actualizada con "Home"
 const navLinks: NavLink[] = [
   { name: "Home", href: "/" },
   { name: "Catalog", href: "/catalog" },
@@ -67,10 +66,10 @@ export const Navbar = () => {
       >
         <div className="w-full max-w-[1900px] mx-auto flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-20">
           
-          {/* LOGO & BRAND - No se toca la lógica de refresh */}
+          {/* LOGO & BRAND */}
           <Link href="/" onClick={handleRefresh} className="group flex items-center gap-2 md:gap-4 z-[120] outline-none cursor-pointer">
             <div className="relative w-8 h-8 md:w-14 md:h-14 transition-all duration-700 group-hover:rotate-[360deg] group-hover:scale-110">
-              <Image src="/assets/img/logo.png" alt="Emerald DT Logo" fill className="object-contain" />
+              <Image src="/img/logo.png" alt="Emerald DT Logo" fill className="object-contain" />
             </div>
             <div className="flex items-center gap-1">
               <span className="font-bold tracking-[0.15em] uppercase text-emerald-500 text-sm md:text-2xl transition-all duration-500 group-hover:text-gold">
@@ -82,13 +81,13 @@ export const Navbar = () => {
             </div>
           </Link>
 
-          {/* DESKTOP MENU - Ajustado con Home y espaciado optimizado */}
+          {/* DESKTOP MENU */}
           <div className="hidden lg:flex items-center gap-6 xl:gap-10">
             {navLinks.map((link) => (
               <div key={link.name} className="relative group/item">
                 <Link 
                   href={link.href} 
-                  className="flex items-center gap-1.5 text-[10px] xl:text-[11px] uppercase tracking-[0.3em] font-bold text-gold/70 hover:text-gold hover:-translate-y-1 transition-all duration-300"
+                  className="flex items-center gap-1.5 text-[10px] xl:text-[11px] uppercase tracking-[0.3em] font-bold text-zinc-400 hover:text-gold hover:-translate-y-1 transition-all duration-300"
                 >
                   {link.name}
                   {link.subItems && (
@@ -101,42 +100,43 @@ export const Navbar = () => {
 
           {/* ICONS & HAMBURGER */}
           <div className="flex items-center gap-3 md:gap-6">
-            <div className="hidden md:flex items-center gap-6 text-gold/80">
-              <Link href="/cart" className="hover:text-gold transition-all hover:-translate-y-1 hover:scale-110">
-                <ShoppingCart size={18} strokeWidth={1.5} />
+            {/* Seccion Carrito y Acceso: Verde Esmeralda con Hover Gold Flotante */}
+            <div className="hidden md:flex items-center gap-6 text-emerald-500">
+              <Link href="/cart" className="hover:text-gold transition-all duration-500 hover:-translate-y-2 hover:drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]">
+                <ShoppingCart size={20} strokeWidth={2} />
               </Link>
-              <Link href="/login" className="text-[10px] uppercase tracking-[0.3em] font-bold hover:text-gold hover:-translate-y-0.5 transition-all">
+              <Link href="/login" className="text-[10px] uppercase tracking-[0.3em] font-black hover:text-gold hover:-translate-y-1 transition-all duration-500">
                 Access
               </Link>
             </div>
 
-            {/* CUSTOM HAMBURGER */}
+            {/* CUSTOM HAMBURGER: Ajustada para evitar que se pisen las rayas */}
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden relative z-[200] w-10 h-10 flex flex-col items-center justify-center bg-emerald-500/5 rounded-full border border-emerald-500/20 transition-all duration-500 hover:border-gold outline-none"
+              className="lg:hidden relative z-[200] w-11 h-11 flex flex-col items-center justify-center bg-emerald-500/5 rounded-full border border-emerald-500/20 transition-all duration-500 hover:border-gold outline-none"
             >
-              <div className="relative w-5 h-4 flex flex-col justify-between items-center transition-all duration-500">
-                <span className={`w-full h-[1.5px] transition-all duration-500 ease-in-out transform ${isMobileMenuOpen ? 'rotate-45 translate-y-[7.5px] bg-gold' : 'bg-emerald-500'}`} />
-                <span className={`w-full h-[1.5px] transition-all duration-500 ease-in-out ${isMobileMenuOpen ? 'opacity-0' : 'bg-emerald-500'}`} />
-                <span className={`w-full h-[1.5px] transition-all duration-500 ease-in-out transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-[7.5px] bg-gold' : 'bg-emerald-500'}`} />
+              <div className="relative w-6 h-5 flex flex-col justify-between items-center transition-all duration-500">
+                <span className={`w-full h-[2px] transition-all duration-500 ease-in-out transform ${isMobileMenuOpen ? 'rotate-45 translate-y-[9px] bg-gold' : 'bg-emerald-500'}`} />
+                <span className={`w-full h-[2px] transition-all duration-500 ease-in-out ${isMobileMenuOpen ? 'opacity-0' : 'bg-emerald-500'}`} />
+                <span className={`w-full h-[2px] transition-all duration-500 ease-in-out transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-[9px] bg-gold' : 'bg-emerald-500'}`} />
               </div>
             </button>
           </div>
         </div>
       </nav>
 
-      {/* MOBILE MENU OVERLAY - Ajustado con todos los botones */}
+      {/* MOBILE MENU OVERLAY */}
       <div className={`fixed inset-0 z-[130] transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] 
         ${isMobileMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
       >
-        <div className="absolute inset-0 bg-black opacity-98" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent opacity-40" />
+        <div className="absolute inset-0 bg-black/95 backdrop-blur-2xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent opacity-40" />
 
         <div className="relative flex flex-col h-full justify-center items-center px-6 gap-10">
           <div onClick={handleRefresh} className="cursor-pointer mb-2">
-             <div className="relative w-16 h-16">
-                <Image src="/assets/img/logo.png" alt="Logo" fill className="object-contain" />
-             </div>
+              <div className="relative w-16 h-16">
+                <Image src="/img/logo.png" alt="Logo" fill className="object-contain" />
+              </div>
           </div>
 
           <div className="flex flex-col items-center gap-6 w-full">
@@ -145,7 +145,7 @@ export const Navbar = () => {
                 key={item.name} 
                 href={item.href} 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-2xl md:text-4xl uppercase tracking-[0.4em] font-black text-gold/60 hover:text-gold transition-all duration-500
+                className={`text-2xl md:text-4xl uppercase tracking-[0.4em] font-black text-emerald-500/60 hover:text-gold transition-all duration-500
                   ${isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
                 style={{ transitionDelay: `${index * 50}ms` }}
               >
@@ -154,10 +154,10 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* Footer Mobile: Carrito y Login */}
+          {/* Footer Mobile: Carrito y Login ajustados */}
           <div className={`flex gap-12 items-center mt-4 transition-all duration-1000 delay-300 ${isMobileMenuOpen ? "opacity-100" : "opacity-0"}`}>
-             <Link href="/cart" onClick={() => setIsMobileMenuOpen(false)} className="text-gold hover:scale-125 transition-all"><ShoppingCart size={28}/></Link>
-             <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="text-xs uppercase tracking-[0.4em] font-black text-gold/80 hover:text-gold transition-all">Access</Link>
+             <Link href="/cart" onClick={() => setIsMobileMenuOpen(false)} className="text-emerald-500 hover:text-gold hover:scale-125 transition-all duration-500"><ShoppingCart size={32}/></Link>
+             <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="text-xs uppercase tracking-[0.4em] font-black text-emerald-500 hover:text-gold transition-all duration-500">Access</Link>
           </div>
         </div>
       </div>
