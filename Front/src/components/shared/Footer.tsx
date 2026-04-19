@@ -32,8 +32,6 @@ export const Footer = () => {
     }).toUpperCase();
   };
 
-  return (
-
            
   
             
