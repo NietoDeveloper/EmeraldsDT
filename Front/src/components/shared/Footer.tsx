@@ -90,9 +90,7 @@ export const Footer = () => {
                 DOUBLE CLUSTER <Cpu size={10} className="ml-2 text-emerald" />
               </li>
             </ul>
-          </div>
-        </div>
-BUILT BY SOFTWARE DT WITH TOTAL CLARITY.
+          </div>TAL CLARITY.
           </p>
           
 export default Footer;
