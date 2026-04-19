@@ -99,5 +99,4 @@ export const Footer = () => {
             © {currentYear} EMERALD DT. BUILT BY SOFTWARE DT WITH TOTAL CLARITY.
           </p>
           
-          <div className="f
 export default Footer;
