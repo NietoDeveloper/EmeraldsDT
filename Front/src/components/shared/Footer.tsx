@@ -53,9 +53,7 @@ export const Footer = () => {
                 <span>LOCATION: BOGOTÁ, COL</span>
                 <span className="text-gold">{formatDateTime(time)}</span>
               </div>
-            </div>
-          </div>
-
+  
             
           
 export default Footer;
