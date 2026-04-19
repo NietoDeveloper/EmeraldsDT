@@ -28,9 +28,7 @@ export const Footer = () => {
       day: '2-digit',
       month: 'short',
       year: 'numeric',
-      hour12: false
-    }).toUpperCase();
-  };
+
 
            
   
