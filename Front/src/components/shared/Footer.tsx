@@ -92,9 +92,7 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
-
-        {/* Bottom Bar */}
-        <div classtYear} EMERALD DT. BUILT BY SOFTWARE DT WITH TOTAL CLARITY.
+BUILT BY SOFTWARE DT WITH TOTAL CLARITY.
           </p>
           
 export default Footer;
