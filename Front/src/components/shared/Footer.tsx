@@ -62,9 +62,7 @@ export const Footer = () => {
               <span className="w-4 h-[1px] bg-emerald/50" /> EMERALD APP
             </h3>
             <ul className="space-y-4 text-[11px] uppercase tracking-[0.2em] font-medium">
-              <li className="hover:text-gold hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <Link href="/catalog">CATALOGUE</Link>
-              </li>
+              <l
               <
           
 export default Footer;
