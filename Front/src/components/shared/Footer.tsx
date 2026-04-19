@@ -13,9 +13,6 @@ import { Mail, ExternalLink, ShieldCheck, Cpu } from 'lucide-react';
 export const Footer = () => {
   const [time, setTime] = useState(new Date());
   // FIX: Definición de currentYear para evitar ReferenceError
-  const currentYear = new Date().getFullYear();
-
-  useEffect(() => {
 
   
             
