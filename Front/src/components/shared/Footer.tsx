@@ -16,10 +16,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
-    const timer = setInterval(() => setTime(new Date()), 1000);
-    return () => clearInterval(timer);
-  }, []);
-    
+
   
             
           
