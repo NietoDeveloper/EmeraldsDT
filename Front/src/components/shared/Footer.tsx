@@ -103,10 +103,7 @@ export const Footer = () => {
             <div className="flex items-center gap-2">
               <span className="text-emerald/40">Architect:</span>
               <a href="https://github.com/NietoDeveloper" target="_blank" rel="noopener noreferrer" 
-                 className="text-gold font-black tracking-[0.4em] hover:scale-110 transition-transform cursor-pointer">
-                NietoDeveloper
-              </a>
-            </div>
+                 className
             
           </div>
         </div>
