@@ -8,7 +8,7 @@ import { Mail, ExternalLink, ShieldCheck, Cpu } from 'lucide-react';
 /**
  * Emerald DT - Footer Final 
  * Calibrated for: 310px - 1900px
- * Engineering: Software DT
+ * Engineering & Architecture: Software DT
  */
 export const Footer = () => {
   const [time, setTime] = useState(new Date());
@@ -97,24 +97,24 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-emerald/10 flex flex-col md:flex-row justify-between items-center text-[8px] md:text-[9px] tracking-[0.3em] uppercase gap-8">
           <p className="text-emerald/40 text-center md:text-left font-mono">
-            © {currentYear} EMERALD DT. BUILT BY SOFTWARE DT WITH TOTAL CLARITY.
+            © {currentYear} EMERALD DT. POWERED BY SOFTWARE DT ARCHITECTURE.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-10">
             <div className="flex items-center gap-2">
-              <span className="text-emerald/40">Architect:</span>
+              <span className="text-emerald/40">Architected by:</span>
               <a href="https://softwaredt.vercel.app/" target="_blank" rel="noopener noreferrer" 
                  className="text-gold font-black tracking-[0.4em] hover:scale-110 transition-transform cursor-pointer">
                 SOFTWARE DT
               </a>
             </div>
             
-            <a href="https://committers.top/colombia" target="_blank" rel="noopener noreferrer" className="relative group cursor-pointer">
+            <div className="relative group">
               <div className="absolute -inset-1 bg-gold/20 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-700"></div>
-              <span className="relative flex items-center text-gold px-5 py-2 border border-gold/30 rounded-full bg-black backdrop-blur-sm transition-all duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-black text-[7px] md:text-[9px] font-bold">
-                GitHub Top #1 Colombia
+              <span className="relative flex items-center text-gold px-5 py-2 border border-gold/30 rounded-full bg-black backdrop-blur-sm transition-all duration-500 text-[7px] md:text-[9px] font-bold tracking-widest">
+                SOFTWARE DT // HIGH-END SYSTEMS
               </span>
-            </a>
+            </div>
           </div>
         </div>
       </div>
