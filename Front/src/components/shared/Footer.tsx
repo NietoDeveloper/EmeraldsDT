@@ -19,11 +19,7 @@ export const Footer = () => {
     const timer = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
-
-  const formatDateTime = (date: Date) => {
-    return date.toLocaleString('en-US', {
-     second: '2-digit',
-         
+    
   
             
           
