@@ -111,7 +111,7 @@ export const Footer = () => {
             <a href="https://committers.top/colombia" target="_blank" rel="noopener noreferrer" className="relative group cursor-pointer">
               <div className="absolute -inset-1 bg-gold/20 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-700"></div>
               <span className="relative flex items-center text-gold px-5 py-2 border border-gold/30 rounded-full bg-black backdrop-blur-sm transition-all duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-black text-[7px] md:text-[9px] font-bold">
-                GitHub Top #1 Colombia
+                Gi
               </span>
             </a>
           </div>
