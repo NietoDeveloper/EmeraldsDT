@@ -56,8 +56,6 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation */}
-          <div>
             
           
 export default Footer;
