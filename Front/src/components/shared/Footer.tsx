@@ -8,8 +8,7 @@ import { Github, Linkedin, Mail, ExternalLink, ShieldCheck, Cpu } from 'lucide-r
 /**
  * Emerald DT - Footer Final 
  * Calibrado para: 310px - 1900px
- * Corregido: Error de referencia currentYear
- * Author: NietoDeveloper - Rank 1 Colombia
+ * Author: NietoDeveloper
  */
 export const Footer = () => {
   const [time, setTime] = useState(new Date());
