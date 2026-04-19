@@ -48,10 +48,7 @@ export const Footer = () => {
               <p className="text-[10px] leading-relaxed uppercase tracking-[0.3em] text-gold font-bold">
                 // Colombian Emeralds
               </p>
-              <div className="flex flex-col gap-2 font-mono text-[10px] tracking-widest text-emerald/80 border-l border-emerald/30 pl-4">
-                <span>SYSTEM: ONLINE</span>
-                <span>LOCATION: BOGOTÁ, COL</span>
-               
+           
   
             
           
