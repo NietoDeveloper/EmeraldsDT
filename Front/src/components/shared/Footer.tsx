@@ -84,9 +84,7 @@ export const Footer = () => {
                 SOFTWARE DT <ExternalLink size={10} className="ml-2" />
               </li>
               <li className="flex items-center group cursor-pointer hover:text-gold hover:-translate-y-1 hover:scale-105 transition-all duration-300">
-                MAX SECURITY <ShieldCheck size={10} className="ml-2 text-emerald" />
-              </li>
-          </div>TAL CLARITY.
+                
           </p>
           
 export default Footer;
