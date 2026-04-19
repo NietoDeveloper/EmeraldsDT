@@ -94,9 +94,7 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-emerald/10 flex flex-col md:flex-row justify-between items-center text-[8px] md:text-[9px] tracking-[0.3em] uppercase gap-8">
-          <p className="text-emerald/40 text-center md:text-left font-mono">
-            © {currentYear} EMERALD DT. BUILT BY SOFTWARE DT WITH TOTAL CLARITY.
+        <div classtYear} EMERALD DT. BUILT BY SOFTWARE DT WITH TOTAL CLARITY.
           </p>
           
 export default Footer;
