@@ -76,8 +76,6 @@ export const Footer = () => {
 
           {/* Software DT Engineering */}
           <div>
-            <h3 className="text-emerald font-black mb-6 uppercase text-[10px] tracking-[0.4em] flex items-center gap-2">
-              <span className="w-4 h-[1px] bg-emerald/50" /> ENGINEERING
-            </h3>
+            <h3 classNam
           
 export default Footer;
