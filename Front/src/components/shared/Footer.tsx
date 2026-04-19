@@ -45,9 +45,7 @@ export const Footer = () => {
               EMERALD<span className="text-gold italic">DT</span>
             </h2>
             <div className="space-y-4">
-              <p className="text-[10px] leading-relaxed uppercase tracking-[0.3em] text-gold font-bold">
-                // Colombian Emeralds
-              </p>
+           >
            
   
             
