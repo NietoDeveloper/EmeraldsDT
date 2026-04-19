@@ -101,11 +101,5 @@ export const Footer = () => {
           
           <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-10">
             <div className="flex items-center gap-2">
-              <span className="text-emerald/40">Architect:</span>
-              <a href="https://github.com/NietoDeveloper" target="_blank" rel="noopener noreferrer" 
-                 className
-            
-          </div>
-        </div>
-      </div>
+              <span c
 export default Footer;
