@@ -33,10 +33,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-black text-gold border-t border-emerald/30 pt-12 pb-8 md:pt-20 md:pb-12 font-sans relative box-border overflow-hidden">
-      
-      <div className="w-full px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 max-w-[1900px] mx-auto transition-all duration-500">
- 
+
            
   
             
