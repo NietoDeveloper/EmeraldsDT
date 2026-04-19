@@ -72,10 +72,7 @@ export const Footer = () => {
                 <Link href="/traceability">TRACEABILITY</Link>
               </li>
             </ul>
-          </div>
-
-          {/* Software DT Engineering */}
-          <div>
+          </div
             <h3 classNam
           
 export default Footer;
