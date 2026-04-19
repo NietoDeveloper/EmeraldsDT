@@ -51,8 +51,7 @@ export const Footer = () => {
               <div className="flex flex-col gap-2 font-mono text-[10px] tracking-widest text-emerald/80 border-l border-emerald/30 pl-4">
                 <span>SYSTEM: ONLINE</span>
                 <span>LOCATION: BOGOTÁ, COL</span>
-                <span className="text-gold">{formatDateTime(time)}</span>
-              </div>
+               
   
             
           
