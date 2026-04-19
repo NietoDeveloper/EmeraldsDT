@@ -43,9 +43,7 @@ export const Footer = () => {
           <div className="col-span-1 sm:col-span-2 md:col-span-1">
             <h2 className="text-xl md:text-2xl font-black tracking-[0.2em] text-emerald mb-6 flex items-center gap-2">
               EMERALD<span className="text-gold italic">DT</span>
-            </h2>
-            <div className="space-y-4">
-           >
+          
            
   
             
