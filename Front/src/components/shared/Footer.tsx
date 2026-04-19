@@ -70,9 +70,6 @@ export const Footer = () => {
               </li>
               <li className="hover:text-gold hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
                 <Link href="/traceability">TRACEABILITY</Link>
-              </li>
-            </ul>
-          </div
-            <h3 classNam
+        
           
 export default Footer;
