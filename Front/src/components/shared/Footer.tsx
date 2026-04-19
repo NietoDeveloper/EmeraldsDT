@@ -65,8 +65,6 @@ export const Footer = () => {
               <li className="hover:text-gold hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
                 <Link href="/catalog">CATALOGUE</Link>
               </li>
-              <li className="hover:text-gold hover:-translate-y-1 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <Link href="/categories">CATEGORIES</Link>
-              </li>
+              <
           
 export default Footer;
