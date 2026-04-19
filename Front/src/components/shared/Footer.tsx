@@ -82,9 +82,6 @@ export const Footer = () => {
             <ul className="space-y-4 text-[11px] uppercase tracking-[0.2em] font-medium text-gold/80">
               <li className="flex items-center group cursor-pointer hover:text-gold hover:-translate-y-1 hover:scale-105 transition-all duration-300">
                 SOFTWARE DT <ExternalLink size={10} className="ml-2" />
-              </li>
-              <li className="flex items-center group cursor-pointer hover:text-gold hover:-translate-y-1 hover:scale-105 transition-all duration-300">
-                
-          </p>
+      
           
 export default Footer;
