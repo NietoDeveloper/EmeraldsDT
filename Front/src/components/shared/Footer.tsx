@@ -99,7 +99,5 @@ export const Footer = () => {
             © {currentYear} EMERALD DT. BUILT BY SOFTWARE DT WITH TOTAL CLARITY.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-10">
-            <div className="flex items-center gap-2">
-              <span c
+          <div className="f
 export default Footer;
