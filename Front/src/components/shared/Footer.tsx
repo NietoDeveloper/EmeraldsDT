@@ -61,8 +61,7 @@ export const Footer = () => {
             <h3 className="text-emerald font-black mb-6 uppercase text-[10px] tracking-[0.4em] flex items-center gap-2">
               <span className="w-4 h-[1px] bg-emerald/50" /> EMERALD APP
             </h3>
-            <ul className="space-y-4 text-[11px] uppercase tracking-[0.2em] font-medium">
-              <l
+            <
               <
           
 export default Footer;
