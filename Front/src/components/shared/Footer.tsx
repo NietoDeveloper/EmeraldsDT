@@ -11,8 +11,7 @@ import { Mail, ExternalLink, ShieldCheck, Cpu } from 'lucide-react';
  * Author: NietoDeveloper
  */
 export const Footer = () => {
-  const [time, setTime] = useState(new Date());
-  // FIX: Definición de currentYear para evitar ReferenceError
+// FIX: Definición de currentYear para evitar ReferenceError
 
   
             
