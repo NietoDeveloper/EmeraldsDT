@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Github, Linkedin, Mail, ExternalLink, ShieldCheck, Cpu } from 'lucide-react';
+import { Mail, ExternalLink, ShieldCheck, Cpu } from 'lucide-react';
 
 /**
  * Emerald DT - Footer Final 
