@@ -15,12 +15,7 @@ nd CSS (V4 ready) + Framer Motion (Cinematic animations).
 
 ## 📂 Project Structure
 
-```text
-src/
-├── app/                #sive HDesign System
-│   ├── ui/             # At Motion Wrappers (Parallax, Fades)
-├── hooks/              # Custom logic: useScrollDirection, useIntersectionObserver
-├── services/           # API Integration & Caching layers (Nieto Lab Core)
+```textation & Caching layers (Nieto Lab Core)
 ├── store/              # Global State: Zustand (User prefs, Cart)
 ├── lib/                # Pure helpers: i18n Dictionaries, Validators
 ├── types/              # Strict TS definitions for API & Props
