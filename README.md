@@ -25,12 +25,6 @@
   <thead>h>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td><strong>🌐 The Launchpad</strong><br/><sub>Front-end</sub></td>
-      <td>Public-facing immconversion UX for global buyers</td>
-      <td><code>emerald-dt-front</code></td>
-    </tr>
     <tr>
       <td><strong>🛰️ Mission Control</strong><br/><sub>Dashboard</sub></td>
       <td>Internal operations and inventory management</td>
