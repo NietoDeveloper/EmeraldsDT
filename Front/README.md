@@ -19,10 +19,6 @@ git clone https://github.com/NietoDeveloper/emerald-dt-front.git
 npm install
 ```
 
-Envir
-```bash
-npm run dev
-```
 
 ---
 
