@@ -19,7 +19,6 @@ Clone & Install:
 This project is prepared to run in Docker containers:
 
 ```bash
-docker build -t emerald-dt-front 
 
 ---
 
