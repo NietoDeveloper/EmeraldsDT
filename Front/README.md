@@ -10,9 +10,7 @@ nd CSS (V4 ready) + Framer Motion (Cinematic animations).
 
 ---
 
-## 🔒 Security & Performance Features
-
-* **Maximum Security Architecture:** Implementation of strict Content Security Policy (CSP) and CSRF protect
+## 🔒 Security & Performance F
 
 ---
 
