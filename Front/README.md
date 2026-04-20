@@ -9,8 +9,7 @@ nd CSS (V4 ready) + Framer Motion (Cinematic animations).
 * **Stat Dockerized for AWS & Railway infrastructure.
 
 ---
-
-## 🔒 Security & Performance F
+ F
 
 ---
 
