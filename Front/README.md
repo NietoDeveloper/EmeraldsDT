@@ -6,9 +6,7 @@
 [![Stack: Next.js 15](https://img.shields.io/badge/Stack-Next.js_15_/_TS-000000?style=for-the-badge&logo=nextdotjs)](https://nextjs.org/)
 [![Design: SpaceX Inspired](https://img.shields.io/badge/Design-SpaceX_Inspired-white?style=for-the-badge&logo=spacex)](https://www.spacex.com/)
 nd CSS (V4 ready) + Framer Motion (Cinematic animations).
-* **State Management:** Zustand (Lightweight and scalable).
-* **Internationalization:** Dynamic i18n via `[lang]` routes (EN/ES) & Middleware.
-* **Deployment:** Dockerized for AWS & Railway infrastructure.
+* **Stat Dockerized for AWS & Railway infrastructure.
 
 ---
 
