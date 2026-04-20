@@ -5,12 +5,7 @@
 [![GitHub Top #1 - Colombia](https://img.shields.io/badge/GitHub-Top_%231_Colombia-047857?style=for-the-badge&logo=github)](https://committers.top/colombia)
 [![Stack: Next.js 15](https://img.shields.io/badge/Stack-Next.js_15_/_TS-000000?style=for-the-badge&logo=nextdotjs)](https://nextjs.org/)
 [![Design: SpaceX Inspired](https://img.shields.io/badge/Design-SpaceX_Inspired-white?style=for-the-badge&logo=spacex)](https://www.spacex.com/)
-
-**Emerald DT** is the high-end e-commerce platform designed by the **Nieto 
-
-* **Framework:** Next.js 15 (App Router) - SSR/SSG prioritized.
-* **Language:** TypeScript (Strict Mode) for robustness and safety.
-* **Styling:** Tailwind CSS (V4 ready) + Framer Motion (Cinematic animations).
+nd CSS (V4 ready) + Framer Motion (Cinematic animations).
 * **State Management:** Zustand (Lightweight and scalable).
 * **Internationalization:** Dynamic i18n via `[lang]` routes (EN/ES) & Middleware.
 * **Deployment:** Dockerized for AWS & Railway infrastructure.
