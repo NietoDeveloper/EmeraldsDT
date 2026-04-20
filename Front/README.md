@@ -20,8 +20,7 @@ npm install
 ```
 
 Environment Setup:
-Create a `.env.local` file with AWS credentials and the Node.js Backend URL (Nieto Lab API).
-
+Create a `.env.local` file with AWS credentials and the Node.js Backend URL 
 Run Development:
 
 ```bash
