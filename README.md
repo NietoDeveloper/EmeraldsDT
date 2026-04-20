@@ -21,16 +21,7 @@
 
 <br/>
 
-<table>
-  <thead>h>
-    </tr>ement, and real-time telemetry of gems</td>
-      <td><code>emerald-dt-dashboard</code></td>
-    </tr>
-    <tr>
-      <td><strong>🧠 The Core</strong><br/><sub>Back-end API</sub></td>
-      <td>Central nervous system and data processing</td>
-      <td><code>Node.js</code> · <code>TypeScript</code> · <code>MongoDB</code> · <code>AWS S3</code></td>
-      <td>Maximum Security Architecture, encrypted transactions, and double-cluster synchronization</td>
+<table> encrypted transactions, and double-cluster synchronization</td>
       <td><code>emerald-dt-api</code></td>
     </tr>
   </tbody>
@@ -42,13 +33,7 @@
 
 ## 🛠️ Global Tech Stack — *Nieto Lab Standard*
 
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| **Runtime** | Node.js / Docker | Scalable execution environment |
-| **Frameworks** | Next.js 15 / Express | SSR for speed, API for robustness |
-| **Database** | MongoDB Atlas | Flexible schema for complex gemstone metadata |
-| **Cloud** | Railway + AWS | Hybrid cloud for failover and asset storage |
-| **Security** | Double Cluster / JWT / CSP | Zero-trust architecture for high-value assets |
+| Layer | Technology | Purpose  / JWT / CSP | Zero-trust architecture for high-value assets |
 
 <br/>
 
