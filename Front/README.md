@@ -16,10 +16,7 @@ nd CSS (V4 ready) + Framer Motion (Cinematic animations).
 ## 📂 Project Structure
 
 ```textation & Caching layers (Nieto Lab Core)
-├── store/              # Global State: Zustand (User prefs, Cart)
-├── lib/                # Pure helpers: i18n Dictionaries, Validators
-├── types/              # Strict TS definitions for API & Props
-├── tests/              # Unit & Integration testing (Jest/Cypress)
+├── store/             t & Integration testing (Jest/Cypress)
 └── public/             # Optimized Static Assets (4K WebM/Avif)
 ```
 
