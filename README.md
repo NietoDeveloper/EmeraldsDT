@@ -22,13 +22,7 @@
 <br/>
 
 <table>
-  <thead>
-    <tr>
-      <th>Pillar</th>
-      <th>Role</th>
-      <th>Tech</th>
-      <th>Focus</th>
-      <th>Repo</th>
+  <thead>h>
     </tr>
   </thead>
   <tbody>
