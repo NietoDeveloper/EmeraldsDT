@@ -18,10 +18,7 @@ nd CSS (V4 ready) + Framer Motion (Cinematic animations).
 ```text
 src/
 ├── app/                #sive HDesign System
-│   ├── ui/             # Atomic: buttons (SpaceX style), countdowns, inputs
-│   ├── shared/         # Shared: Fixed Navbar (Scroll-aware), Footer
-│   ├── sections/       # Composite: HeroSection, ProductsGrid, TechSection
-│   └── animations/     # Framer Motion Wrappers (Parallax, Fades)
+│   ├── ui/             # At Motion Wrappers (Parallax, Fades)
 ├── hooks/              # Custom logic: useScrollDirection, useIntersectionObserver
 ├── services/           # API Integration & Caching layers (Nieto Lab Core)
 ├── store/              # Global State: Zustand (User prefs, Cart)
