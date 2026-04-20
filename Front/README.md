@@ -17,10 +17,7 @@ nd CSS (V4 ready) + Framer Motion (Cinematic animations).
 
 ```text
 src/
-├── app/                # Routing  support (English/Spanish)
-│   │   ├── products/   # High-value asset listings
-│   │   ├── about/      # Brand timeline & heritage (SpaceX style)
-│   │   └── page.tsx    # Immersive Hero Landing (Full-screen Video)
+├── app/                #sive Hero Landing (Full-screen Video)
 │   ├── layout.tsx      # Root layout, Theme providers, Metadata
 │   └── globals.css     # True Black (#000) & Emerald/Gold variables
 ├── components/         # Atomic Design System
