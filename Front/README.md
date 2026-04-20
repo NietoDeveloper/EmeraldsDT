@@ -13,7 +13,6 @@ nd CSS (V4 ready) + Framer Motion (Cinematic animations).
 ## 🔒 Security & Performance Features
 
 * **Maximum Security Architecture:** Implementation of strict Content Security Policy (CSP) and CSRF protection.
-* **Double Cluster Ready:** Optimized configuration for load balancing in Dockerized environments.
 * **Image Optimization:** Use of `next/image` with AVIF formats for ultra-fast loading of high-resolution gems.
 
 ---
