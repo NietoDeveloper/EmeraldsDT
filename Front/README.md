@@ -11,8 +11,7 @@ nd CSS (V4 ready) + Framer Motion (Cinematic animations).
 ---
  F
 
-* **Immersive Visuals:** Dark backgrounds (`#000000`), bold Sans-Serif typography, and massive use of white spaces.
-* **Paleta de Lujo:** Acentos en Verde Esmeralda (`#047857`) y detalles en Oro (`#D4AF37`).
+* **Immersive Visuals:** Da
 * **Cinematic Transitions:** Subtle entry movements (Fade-in up) in the style of Falcon 9 launches.
 * **Technical Reliability:** Clear interface that conveys confidence, essential for high-value assets.
 
