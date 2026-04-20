@@ -17,10 +17,7 @@ nd CSS (V4 ready) + Framer Motion (Cinematic animations).
 
 ```text
 src/
-├── app/                #sive Hero Landing (Full-screen Video)
-│   ├── layout.tsx      # Root layout, Theme providers, Metadata
-│   └── globals.css     # True Black (#000) & Emerald/Gold variables
-├── components/         # Atomic Design System
+├── app/                #sive HDesign System
 │   ├── ui/             # Atomic: buttons (SpaceX style), countdowns, inputs
 │   ├── shared/         # Shared: Fixed Navbar (Scroll-aware), Footer
 │   ├── sections/       # Composite: HeroSection, ProductsGrid, TechSection
