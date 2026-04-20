@@ -17,8 +17,7 @@ nd CSS (V4 ready) + Framer Motion (Cinematic animations).
 
 ```text
 src/
-├── app/                # Routing & Server Components (Performance-first)
-│   ├── [lang]/         # Dynamic i18n support (English/Spanish)
+├── app/                # Routing  support (English/Spanish)
 │   │   ├── products/   # High-value asset listings
 │   │   ├── about/      # Brand timeline & heritage (SpaceX style)
 │   │   └── page.tsx    # Immersive Hero Landing (Full-screen Video)
