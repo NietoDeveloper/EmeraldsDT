@@ -17,17 +17,7 @@
 <br/>
 
 > *Emerald DT is a high-performance ecosystem designed to redefine the emerald industry in Colombia.*
-> *Inspired by SpaceX's technical rigor, this project integrates luxury e-commerce with industrial-grade logistics and maximum security.*
-
-<br/>
-
-</div>
-
----
-
-## 🏗️ High-Level System Architecture
-
-> The ecosystem is divided into **three specialized pillars**, orchestrated through a **Double Cluster** strategy to ensure 99.9% uptime and data integrity.
+> *Inspired by SpaceX's technical rigor, this project integrates luxury e-commerce with industrsure 99.9% uptime and data integrity.
 
 <br/>
 
@@ -44,9 +34,7 @@
   <tbody>
     <tr>
       <td><strong>🌐 The Launchpad</strong><br/><sub>Front-end</sub></td>
-      <td>Public-facing immersive experience</td>
-      <td><code>Next.js 15</code> · <code>Tailwind CSS V4</code> · <code>Framer Motion</code></td>
-      <td>Cinematic UI, SEO, and high-conversion UX for global buyers</td>
+      <td>Public-facing immconversion UX for global buyers</td>
       <td><code>emerald-dt-front</code></td>
     </tr>
     <tr>
