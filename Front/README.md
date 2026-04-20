@@ -19,10 +19,7 @@ git clone https://github.com/NietoDeveloper/emerald-dt-front.git
 npm install
 ```
 
-Environment Setup:
-Create a `.env.local` file with AWS credentials and the Node.js Backend URL 
-Run Development:
-
+Envir
 ```bash
 npm run dev
 ```
