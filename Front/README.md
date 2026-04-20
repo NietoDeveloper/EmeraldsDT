@@ -8,10 +8,7 @@
 
 **Emerald DT** is the high-end e-commerce platform designed by the **Nieto Laboratory** for the commercialization of Colombian emeralds. Inspired by the minimalist and technical aesthetic of **SpaceX**, this application uses a maximum security architecture, scalability through double cluster, and cutting-edge performance.
 
----
-
-## 🚀 Getting Started
-
+--
 Clone & Install:
 
 This repository contains the **Front-end** built with a **World-Class Engineering** approach:
