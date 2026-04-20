@@ -15,14 +15,6 @@
 Clone & Install:
 
 ```bash
-git clone https://github.com/NietoDeveloper/emerald-dt-front.git
-npm install
-```
-
-
----
-
-## 🛠️ Deployment
 
 This project is prepared to run in Docker containers:
 
