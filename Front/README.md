@@ -18,9 +18,6 @@ Clone & Install:
 
 This project is prepared to run in Docker containers:
 
-```bash
-
----
 
 ## 🏗️ Architecture & Core Stack (Nieto Lab Standard)
 
