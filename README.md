@@ -23,13 +23,7 @@
 
 <table>
   <thead>h>
-    </tr>
-  </thead>
-    <tr>
-      <td><strong>🛰️ Mission Control</strong><br/><sub>Dashboard</sub></td>
-      <td>Internal operations and inventory management</td>
-      <td><code>Next.js 15</code> · <code>RBAC Security</code> · <code>Recharts</code></td>
-      <td>Data density, employee management, and real-time telemetry of gems</td>
+    </tr>ement, and real-time telemetry of gems</td>
       <td><code>emerald-dt-dashboard</code></td>
     </tr>
     <tr>
