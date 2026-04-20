@@ -14,13 +14,6 @@
 
 Clone & Install:
 
-```bash
-
-This project is prepared to run in Docker containers:
-
-
-## 🏗️ Architecture & Core Stack (Nieto Lab Standard)
-
 This repository contains the **Front-end** built with a **World-Class Engineering** approach:
 
 * **Framework:** Next.js 15 (App Router) - SSR/SSG prioritized.
