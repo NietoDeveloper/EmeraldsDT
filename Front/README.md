@@ -9,11 +9,7 @@ nd CSS (V4 ready) + Framer Motion (Cinematic animations).
 * **Stat Dockerized for AWS & Railway infrastructure.
 
 ---
- Far interface that conveys confidence, essential for high-value assets.
-
----
-
-Developed by **Manuel Nieto** ([NietoDeveloper](https://github.com/NietoDeveloper)) — Building scalable systems with 100% discipline. #1 GitHub Colombia Ranking.
+ Far interface that conve
 
 [GitHub Profile](https://github.com/NietoDeveloper) | [Portfolio](https://github.com/NietoDeveloper) | [Software DT Website](https://softwaredt.com)
 
