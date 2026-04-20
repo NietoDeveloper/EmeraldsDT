@@ -12,11 +12,7 @@ nd CSS (V4 ready) + Framer Motion (Cinematic animations).
  F
 
 ---
-
-## 📂 Project Structure
-
-```textation & Caching layers (Nieto Lab Core)
-├── store/             t & Integration testing (Jest/Cypress)
+     t & Integration testing (Jest/Cypress)
 └── public/             # Optimized Static Assets (4K WebM/Avif)
 ```
 
