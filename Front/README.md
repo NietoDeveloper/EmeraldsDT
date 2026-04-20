@@ -12,12 +12,7 @@ nd CSS (V4 ready) + Framer Motion (Cinematic animations).
  F
 
 ---
-     t & Integration testing (Jest/Cypress)
-└── public/             # Optimized Static Assets (4K WebM/Avif)
-```
-
----
-
+     t & Integration testing 
 ## 🎨 Design Philosophy: "The SpaceX Way"
 
 * **Immersive Visuals:** Dark backgrounds (`#000000`), bold Sans-Serif typography, and massive use of white spaces.
