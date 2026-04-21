@@ -44,14 +44,5 @@ export default function DashboardPage() {
           </div>
 
           {/* Inventario / Stock */}
-          <div className="col-span-1 row-span-2 bg-white rounded-xl shadow-sm border border-black/5 p-4">
-            <p className="text-xs font-bold text-black/40 uppercase">Inventory Status</p>
-          </div>
 
-
-        </div>
-
-      </section>
-    </main>
-  );
 }
