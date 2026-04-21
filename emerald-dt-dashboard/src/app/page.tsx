@@ -28,21 +28,7 @@ export default function DashboardPage() {
         </header>
 
         {/* DASHBOARD GRID (El "Canvas") */}
-        <div className="flex-1 p-4 lg:p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-4 gap-4 overflow-hidden">
-          
-          {/* Tarjeta de Ventas en Vivo (Ejemplo de espacio) */}
-          <div className="col-span-1 lg:col-span-2 row-span-1 bg-white rounded-xl shadow-sm border border-black/5 p-4">
-            <p className="text-xs font-bold text-black/40 uppercase">Real-time Sales</p>
-            <div className="mt-2 text-3xl font-bold">$0.00</div>
-          </div>
-
-          {/* Espacio para el Video Digital Twin */}
-          <div className="col-span-1 lg:col-span-2 row-span-2 bg-black rounded-xl overflow-hidden relative border-2 border-gold/30">
-            <div className="absolute inset-0 flex items-center justify-center text-gold/50">
-              [ Digital Twin Video Feed ]
-            </div>
-          </div>
-
+ 
           {/* Inventario / Stock */}
 
 }
