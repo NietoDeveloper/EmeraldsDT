@@ -48,10 +48,6 @@ export default function DashboardPage() {
             <p className="text-xs font-bold text-black/40 uppercase">Inventory Status</p>
           </div>
 
-          {/* Gráfico de Actividad */}
-          <div className="col-span-1 lg:col-span-3 row-span-2 bg-white rounded-xl shadow-sm border border-black/5 p-4">
-            <p className="text-xs font-bold text-black/40 uppercase">System Analytics</p>
-          </div>
 
         </div>
 
