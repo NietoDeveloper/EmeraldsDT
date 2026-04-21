@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #DCDCDC; /* Gainsboro */
+  --foreground: #000000;
+  --accent: #FFD700;     /* Gold */
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Adiós al scroll global */
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Scroll interno solo para componentes que lo necesiten */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #FFD700;
+  border-radius: 10px;
+}
