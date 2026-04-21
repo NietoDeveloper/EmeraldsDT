@@ -7,15 +7,7 @@ export default function Home() {
         <
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs t
-              Learning
-            </a>{" "}
-            center.ate-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
+              Learningg"
               alt="Vercel logomark"
               width={16}
               height={16}
