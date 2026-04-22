@@ -3,5 +3,5 @@
 
 /* Scroll interno solo para componentes que lo necesiten */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
+
 } 
