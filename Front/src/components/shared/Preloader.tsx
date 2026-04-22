@@ -11,14 +11,6 @@ export default function Preloader() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const startLoadingCycle = () => {
-    setLoading(true);
-    if (typeof document !== 'undefined') {
-      document.documentElement.classList.add("js-loading");
-      document.documentElement.classList.remove("js-loaded");
-
-    return () => clearTimeout(timer);
-  };
 
   useEffect(() => {
     setIsMounted(true);
