@@ -7,16 +7,6 @@ import Image from 'next/image';
 export default function Preloader() {
   const [loading, setLoading] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
-  
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  const handleExitComplete = () => {
-    if (typeof document !== 'undefined') {
-      document.documentElement.classList.remove("js-loading");
-      document.documentElement.classList.add("js-loaded");
-    }
-  };
 
   if (!isMounted) return nul
           className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#010502] select-none pointer-events-auto"
