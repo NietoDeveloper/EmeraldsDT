@@ -24,8 +24,3 @@ export const metadata: Metadata = {
     follow: false,
   },
 };
-
-// Configuración crítica para evitar que el usuario haga zoom por accidente en el dashboard
-export const viewport: Viewport = {
-  width: "device-width",
-  ini
