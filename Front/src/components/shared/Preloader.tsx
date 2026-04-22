@@ -8,21 +8,6 @@ export default function Preloader() {
   const [loading, setLoading] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
 
-  if (!isMounted) return nul
-          className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#010502] select-none pointer-events-auto"
-        >
-          {/* FONDO VERDE ATMOSFÉRICO */}
-          <div className="absolute inset-0 overflow-hidden">
-            <motion.div 
-              animate={{ 
-                scale: [1, 1.2, 1],
-                opacity: [0.3, 0.6, 0.3] 
-              }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-emerald-500/20 blur-[140px] rounded-full" 
-            />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.9)_100%)]" />
-          </div>
 
           <div className="relative z-10 flex flex-col items-center w-full max-w-[310px] md:max-w-none px-6">
             
