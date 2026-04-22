@@ -43,6 +43,4 @@ export default function RootLayout({
     <html lang="es" className="selection:bg-gold/30 selection:text-black">
       <body
         className={`
-          ${geistSans.variable} 
-          ${geistMono.variable} 
-          a
+          ${geistSans.var
