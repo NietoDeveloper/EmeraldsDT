@@ -56,9 +56,7 @@ export default function RootLayout({
         `}
       >
         {/* Contenedor de seguridad para evitar saltos de layout */}
-        <div id="dashboard-root" className="relative h-full w-full overflow-hidden">
-          {children}
-        </div>
+  
       </body>
     </html>
   );
