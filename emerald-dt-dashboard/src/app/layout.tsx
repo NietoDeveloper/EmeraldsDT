@@ -47,9 +47,7 @@ export default function RootLayout({
           ${geistMono.variable} 
           antialiased 
           font-sans 
-          bg-main 
-          text-headingColor 
-
+          bg
 
   );
 }
