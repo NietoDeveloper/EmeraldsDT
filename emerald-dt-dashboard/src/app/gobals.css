@@ -1,6 +1,5 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 /* Scroll interno solo para componentes que lo necesiten */
 .custom-scrollbar::-webkit-scrollbar {
