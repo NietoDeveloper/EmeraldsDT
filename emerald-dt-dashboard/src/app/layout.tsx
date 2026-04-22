@@ -49,11 +49,7 @@ export default function RootLayout({
           font-sans 
           bg-main 
           text-headingColor 
-          overflow-hidden 
-          h-screen 
-   
-      >
-    
-    </html>
+
+
   );
 }
