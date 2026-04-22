@@ -4,8 +4,3 @@ import "./globals.css";
 
 // Optimización de fuentes para reducir el Layout Shift
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-¿
