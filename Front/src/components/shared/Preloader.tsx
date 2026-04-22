@@ -16,12 +16,6 @@ export default function Preloader() {
     if (typeof document !== 'undefined') {
       document.documentElement.classList.add("js-loading");
       document.documentElement.classList.remove("js-loaded");
-    }
-
-    // Ciclo total de 5 segundos
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 5000);
 
     return () => clearTimeout(timer);
   };
