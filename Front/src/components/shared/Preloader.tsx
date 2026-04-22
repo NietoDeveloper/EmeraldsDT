@@ -12,10 +12,7 @@ export default function Preloader() {
 
             <motion.div
               initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              clas[1px] w-6 bg-emerald-500" />
-              </div>
+              ani
 
               {/* BARRA DE PROGRESO - CARGA EN 4 SEGUNDOS */}
     
