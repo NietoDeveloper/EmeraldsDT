@@ -18,6 +18,4 @@ export const metadata: Metadata = {
     default: "Emerald DT | Control Center",
     template: "%s | Emerald DT"
   },
-  description: "Senior Software Architect - High-performance industrial monitoring dashboard by Software DT.",
-  robots: {
-    index: false, // Por seguridad, los dashboards no deben ser indexados por Google
+ 
