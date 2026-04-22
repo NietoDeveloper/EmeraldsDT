@@ -12,10 +12,3 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-export const metadata: Metadata = {
-  title: {
-    default: "Emerald DT | Control Center",
-    template: "%s | Emerald DT"
-  },
- 
