@@ -51,9 +51,7 @@ export default function RootLayout({
           text-headingColor 
           overflow-hidden 
           h-screen 
-          w-screen
-          fixed
-        `}
+   
       >
         {/* Contenedor de seguridad para evitar saltos de layout */}
   
