@@ -18,19 +18,7 @@ export default function Preloader() {
     }
   };
 
-  if (!isMounted) return null;
-
-  return (
-    <AnimatePresence mode="wait" onExitComplete={handleExitComplete}>
-      {loading && (
-        <motion.div
-          key="emerald-preloader"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
-          exit={{ 
-            opacity: 0, 
-            transition: { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] } 
-          }}
+  if (!isMounted) return nul
           className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#010502] select-none pointer-events-auto"
         >
           {/* FONDO VERDE ATMOSFÉRICO */}
