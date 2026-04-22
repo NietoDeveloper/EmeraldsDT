@@ -53,9 +53,7 @@ export default function RootLayout({
           h-screen 
    
       >
-        {/* Contenedor de seguridad para evitar saltos de layout */}
-  
-      </body>
+    
     </html>
   );
 }
