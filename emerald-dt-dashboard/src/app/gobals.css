@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #DCDCDC; /* Gainsboro */
-  --foreground: #000000;
-  --accent: #FFD700;     /* Gold */
-}
 
 html, body {
   height: 100%;
