@@ -2,26 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #DCDCDC;
-  --foreground: #000000;
-  --accent: #FFD700;
+@layer base {
+  :root {
+    /* Paleta Oficial Software DT */
+    --background: #DCDCDC; /* Gainsboro */
+    --foreground: #000000;
+    --card: #FFFFFF;
+    --gold: #FFD700;
+    --yellow-color: #FEB60D;
+    --heading-color: #000000;
+    --text-color: #000000;
+    
+    /* Variables de sistema para Next.js */
+    --font-geist-sans: 'Geist Sans', sans-serif;
+    --font-geist-mono: 'Geist Mono', monospace;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Mantiene el dashboard estático sin scroll global */
+    background-color: var(--background);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  background-color: var(--background);
-  color: var(--foreground);
-  margin: 0;
-  padding: 0;
+@layer components {
+  /* Scrollbar Minimalista Gold */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background-clip: content-box;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--yellow-color);
+  }
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
+/* Clases de utilidad para el efecto Glassmorphism del Header */
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #FFD700;
-  border-radius: 10px;
+
+/* Prevenir el "overscroll bounce" en Mac y iOS */
+#dashboard-root {
+  overscroll-behavior: none;
 }
