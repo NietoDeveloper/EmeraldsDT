@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* Paleta Oficial Software DT */
+    /* Paleta Oficial Software DT - Estilo Tesla Industrial */
     --background: #DCDCDC; /* Gainsboro */
     --foreground: #000000;
     --card: #FFFFFF;
@@ -13,26 +13,39 @@
     --heading-color: #000000;
     --text-color: #000000;
     
-    /* Variables de sistema para Next.js */
-    --font-geist-sans: 'Geist Sans', sans-serif;
-    --font-geist-mono: 'Geist Mono', monospace;
+    /* Variables de fuente vinculadas al Layout */
+    --font-geist-sans: var(--font-geist-sans);
+    --font-geist-mono: var(--font-geist-mono);
+  }
+
+  /* Reset radical para Dashboards de alto rendimiento */
+  *, ::before, ::after {
+    box-sizing: border-box;
+    border-color: theme('colors.gray.200');
   }
 
   html, body {
     height: 100%;
     width: 100%;
-    overflow: hidden; /* Mantiene el dashboard estático sin scroll global */
-    background-color: var(--background);
+    overflow: hidden; /* Lock de scroll para el "Canvas" del dashboard */
+    background-color: var(--background) !important;
     color: var(--text-color);
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Evita el scroll elástico en dispositivos móviles y macOS */
+    overscroll-behavior: none;
+  }
+
+  /* Asegurar que el input y botones usen la fuente sans por defecto */
+  input, button, textarea, select {
+    font-family: inherit;
   }
 }
 
 @layer components {
-  /* Scrollbar Minimalista Gold */
+  /* Scrollbar Minimalista Gold - Identidad Nieto Code */
   .custom-scrollbar {
     scrollbar-width: thin;
     scrollbar-color: var(--gold) transparent;
@@ -52,20 +65,34 @@
     border-radius: 20px;
     border: 1px solid transparent;
     background-clip: content-box;
+    transition: background 0.3s ease;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: var(--yellow-color);
   }
+
+  /* Efecto Glassmorphism optimizado para el Header */
+  .glass-header {
+    @apply bg-white/80 backdrop-blur-md border-b border-black/5;
+    -webkit-backdrop-filter: blur(12px);
+  }
 }
 
-/* Clases de utilidad para el efecto Glassmorphism del Header */
-.backdrop-blur-md {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+/* Utilidades de animación para el Digital Twin Feed */
+@keyframes pulse-gold {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
 
-/* Prevenir el "overscroll bounce" en Mac y iOS */
+.animate-pulse-gold {
+  animation: pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Contenedor principal de Next.js */
 #dashboard-root {
-  overscroll-behavior: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
