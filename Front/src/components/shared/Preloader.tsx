@@ -5,11 +5,6 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 
 export default function Preloader() {
-  const [loading, setLoading] = useState(true);
-  const [isMounted, setIsMounted] = useState(false);
-
-.div>
-      )}
-    </AnimatePresence>
+  const [loadince>
   );
 }
