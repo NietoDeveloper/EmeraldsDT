@@ -8,32 +8,7 @@ export default function Preloader() {
   const [loading, setLoading] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
 
-
-          <div className="relative z-10 flex flex-col items-center w-full max-w-[310px] md:max-w-none px-6">
-            
-            {/* LOGO ANIMADO */}
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ 
-                scale: [0.98, 1.05, 0.98],
-                opacity: 1,
-                filter: [
-                  "brightness(1) drop-shadow(0 0 10px rgba(16,185,129,0.2))",
-                  "brightness(1.4) drop-shadow(0 0 35px rgba(16,185,129,0.5))",
-                  "brightness(1) drop-shadow(0 0 10px rgba(16,185,129,0.2))"
-                ]
-              }}
-              transition={{ duration: 3, ease: "easeInOut", repeat: Infinity }}
-              className="relative w-40 h-40 md:w-52 md:h-52 mb-8"
-            >
-              <Image
-                src="/assets/img/logo.png"
-                alt="Emerald DT Logo"
-                fill
-                className="object-contain"
-                priority
-              />
-            </motion.div>
+.div>
 
             <motion.div
               initial={{ y: 20, opacity: 0 }}
