@@ -28,6 +28,4 @@ export const metadata: Metadata = {
 // Configuración crítica para evitar que el usuario haga zoom por accidente en el dashboard
 export const viewport: Viewport = {
   width: "device-width",
-  initialScale: 1,
-  maximumScale: 1,
-  userScalabl
+  ini
