@@ -41,6 +41,3 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="selection:bg-gold/30 selection:text-black">
-      <body
-        className={`
-          ${geistSans.var
