@@ -145,19 +145,7 @@ export default function DashboardPage() {
               </div>
             </DashboardCard>
 
-            {/* ANALYTICS: System Performance */}
-            <DashboardCard title="Node Performance" className="col-span-1 md:col-span-2 lg:col-span-3 lg:row-span-1">
-              <div className="flex items-end justify-between h-full gap-4 pb-1">
-                <div className="flex gap-2 items-end flex-1 h-14">
-                   {[40, 70, 45, 90, 65, 80, 30, 55, 75, 40, 60, 85].map((h, i) => (
-                     <div key={i} style={{ height: `${h}%` }} className="flex-1 bg-black/5 rounded-t-sm group-hover:bg-gold/30 transition-all duration-500" />
-                   ))}
-                </div>
-                <div className="hidden sm:flex flex-col text-right shrink-0">
-                   <span className="text-xl font-black leading-none uppercase tracking-tighter">99.9%</span>
-                   <span className="text-[8px] font-bold text-black/40 uppercase">Uptime Score</span>
-                </div>
-              </div>
+
             </DashboardCard>
 
           </div>
