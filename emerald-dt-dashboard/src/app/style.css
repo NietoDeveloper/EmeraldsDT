@@ -8,15 +8,6 @@
   --accent: #FFD700;
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  background-color: var(--background);
-  color: var(--foreground);
-  margin: 0;
-  padding: 0;
-}
 
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
