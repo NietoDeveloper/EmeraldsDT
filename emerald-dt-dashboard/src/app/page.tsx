@@ -122,20 +122,3 @@ export default function DashboardPage() {
                 </div>
               </div>
             </DashboardCard>
-
-            {/* CENTRAL: DIGITAL TWIN (The Core) */}
-            <DashboardCard dark={true} className="md:col-span-2 lg:col-span-2 lg:row-span-3 !p-0 ring-1 ring-gold/20 shadow-2xl shadow-gold/10">
-              <div className="absolute top-6 left-6 z-20 flex items-center gap-3 px-4 py-2 bg-white/5 backdrop-blur-md rounded-full border border-white/10">
-                <span className="w-2 h-2 rounded-full bg-red-600 animate-ping" />
-                <span className="text-[9px] font-black text-white uppercase tracking-[0.3em]">Digital Twin Stream</span>
-              </div>
-              <div className="w-full h-full bg-[radial-gradient(circle_at_center,_#1a1a1a_0%,_#000_100%)] flex items-center justify-center">
-                <div className="relative group/dt">
-                  <div className="w-32 h-32 border border-gold/10 rounded-full animate-[spin_10s_linear_infinite] absolute -inset-8" />
-                  <span className="text-white/5 font-black text-8xl select-none tracking-[0.2em] uppercase transition-all duration-700 group-hover/dt:text-gold/10">
-                    EMDT
-                  </span>
-                </div>
-              </div>
-            </DashboardCard>
-
