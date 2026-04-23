@@ -1,1 +1,0 @@
-import { EmeraldProduct } from "@/types/inventory"
