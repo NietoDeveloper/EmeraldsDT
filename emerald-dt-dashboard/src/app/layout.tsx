@@ -3,11 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./style.css";
 
 // Optimización de fuentes con display swap para evitar Cumulative Layout Shift (CLS)
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 
 export const metadata: Metadata = {
