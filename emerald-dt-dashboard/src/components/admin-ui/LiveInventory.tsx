@@ -17,9 +17,7 @@ export default function LiveInventory({ products }: Props) {
 
       {/* Lista de Productos (Scroll interno sutil si es necesario, pero el contenedor es fijo) */}
       <div className="flex-1 overflow-y-auto custom-scrollbar">
-        <table className="w-full text-left border-collapse">
-          <thead className="sticky top-0 bg-black text-[9px] text-gray-500 uppercase">
-            <tr>
+      
               <th className="p-2 border-b border-white/5">SKU</th>
 
         
