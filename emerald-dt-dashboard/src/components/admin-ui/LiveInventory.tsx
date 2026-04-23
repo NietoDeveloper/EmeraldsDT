@@ -21,9 +21,7 @@ export default function LiveInventory({ products }: Props) {
           <thead className="sticky top-0 bg-black text-[9px] text-gray-500 uppercase">
             <tr>
               <th className="p-2 border-b border-white/5">SKU</th>
-              <th className="p-2 border-b border-white/5 text-right">Stock</th>
-            </tr>
-          </thead>) => (
+
         
     </div>
   );
