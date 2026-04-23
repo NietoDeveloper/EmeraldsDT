@@ -28,9 +28,7 @@ export default function LiveInventory({ products }: Props) {
             {products.map((item) => (
               <tr key={item.id} className="hover:bg-white/5 transition-colors border-b border-white/5">
                 <td className="p-2 font-mono text-gray-300">{item.sku}</td>
-                <td className={`p-2 text-right font-bold ${item.stock < 5 ? 'text-red-500' : 'text-[#D4AF37]'}`}>
-                  {item.stock}
-                </td>
+
               </tr>
             ))}
           </tbody>
