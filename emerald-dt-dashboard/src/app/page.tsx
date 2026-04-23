@@ -22,10 +22,7 @@ const DashboardCard = ({
       </h3>
     )}
     <div className="flex-1 relative overflow-hidden">
-      {children}
-    </div>
-  </div>
-);
+
 
 
           
