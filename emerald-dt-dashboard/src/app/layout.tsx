@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./style.css";
 
 // Optimización de fuentes con display swap para evitar Cumulative Layout Shift (CLS)
 const geistSans = Geist({
