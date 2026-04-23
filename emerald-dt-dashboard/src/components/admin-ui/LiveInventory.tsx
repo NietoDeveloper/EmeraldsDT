@@ -23,9 +23,7 @@ export default function LiveInventory({ products }: Props) {
               <th className="p-2 border-b border-white/5">SKU</th>
               <th className="p-2 border-b border-white/5 text-right">Stock</th>
             </tr>
-          </thead>
-          <tbody className="text-[11px]">
-            {products.map((item) => (
+          </thead>) => (
         
     </div>
   );
