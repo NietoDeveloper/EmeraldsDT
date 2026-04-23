@@ -31,9 +31,5 @@ export default function DashboardPage() {
   return (
     <main className="flex h-screen w-screen overflow-hidden bg-main text-headingColor selection:bg-gold/30">
       
-      {/* --- SIDEBAR ESTRATÉGICO --- */}
-      <aside className="hidden lg:flex flex-col w-72 bg-black text-white shrink-0 z-20">
-        <div className="p-8 border-b border-white/10">
-     
-        
+
           
