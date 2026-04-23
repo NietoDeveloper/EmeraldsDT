@@ -6,8 +6,7 @@ const DashboardCard = ({
   className = "", 
   title = "" 
 }: { 
-  children: React.ReactNode, 
-  className?: string, 
+ 
 
 
 
