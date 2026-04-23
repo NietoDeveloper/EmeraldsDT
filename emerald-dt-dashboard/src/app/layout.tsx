@@ -8,6 +8,3 @@ export default function RootLayout({
 }) {
       >
         {/* Contenedor principal: Mantiene el control total del viewport */}
-        <div 
-
-}
