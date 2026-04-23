@@ -9,10 +9,7 @@ const DashboardCard = ({
   children: React.ReactNode, 
   className?: string, 
   title?: string 
-}) => (
-  <div className={`
-    bg-card rounded-2xl shadow-sm border border-black/5 p-5 
-    flex flex-col transition-all duration-300 hover:shadow-md 
+x flex-col transition-all duration-300 hover:shadow-md 
 
 
           
