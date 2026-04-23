@@ -85,22 +85,3 @@ export default function DashboardPage() {
             </div>
           </div>
           
-          <div className="flex items-center gap-6">
-            <div className="hidden sm:flex flex-col items-end border-r border-black/10 pr-6">
-              <span className="text-[10px] font-black uppercase tracking-tighter">
-                Server: <span className="text-green-600">Optimal</span>
-              </span>
-              <span className="text-[9px] text-black/40 font-mono font-bold uppercase">24ms Latency</span>
-            </div>
-            <button className="px-6 py-3 bg-black text-white text-[10px] font-black rounded-full hover:bg-gold hover:text-black transition-all duration-500 uppercase tracking-[0.2em] shadow-2xl shadow-black/20">
-              Command Log
-            </button>
-          </div>
-        </header>
-
-        {/* --- SPACEX STYLE GRID --- */}
-        <div className="flex-1 p-4 lg:p-6 overflow-y-auto lg:overflow-hidden bg-[#DCDCDC]">
-          <div className="h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-4 gap-4">
-            
-
-
