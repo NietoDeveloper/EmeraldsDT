@@ -134,17 +134,6 @@ export default function DashboardPage() {
               </div>
             </DashboardCard>
 
-            {/* SECONDARY: Inventory Matrix */}
-            <DashboardCard title="Asset Distribution" className="col-span-1 lg:col-span-1 lg:row-span-3">
-              <div className="space-y-3 mt-2 h-full overflow-hidden">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="h-12 w-full bg-gainsboro/30 rounded-xl border border-black/[0.03] animate-pulse flex items-center px-4">
-                     <div className="w-2 h-2 rounded-full bg-black/10" />
-                  </div>
-                ))}
-              </div>
-            </DashboardCard>
-
 
             </DashboardCard>
 
