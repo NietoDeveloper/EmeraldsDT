@@ -15,10 +15,7 @@ export default function LiveInventory({ products }: Props) {
         <span className="text-[10px] text-green-500 animate-pulse">● REAL-TIME</span>
       </div>
 
-      {/* Lista de Productos (Scroll interno sutil si es necesario, pero el contenedor es fijo) */}
-      <div className="flex-1 overflow-y-auto custom-scrollbar">
-      
-              <th className="p-2 border-b border-white/5">SKU</th>
+     
 
         
     </div>
