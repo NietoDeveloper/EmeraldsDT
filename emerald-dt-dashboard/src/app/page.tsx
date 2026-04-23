@@ -105,7 +105,3 @@ export default function DashboardPage() {
                 <span className="text-4xl font-black tracking-tighter leading-none">$12,840</span>
                 <div className="flex items-center gap-1.5 mt-2">
                    <span className="px-1.5 py-0.5 rounded bg-green-100 text-green-700 text-[9px] font-black">+14.2%</span>
-                   <span className="text-[9px] text-black/40 font-bold uppercase">vs yesterday</span>
-                </div>
-              </div>
-            </DashboardCard>
