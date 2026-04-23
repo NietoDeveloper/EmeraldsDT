@@ -6,7 +6,7 @@ interface Props {
 
 export default function LiveInventory({ products }: Props) {
   return (
-    <div className="h-full flex flex-col bg-black/40 border border-[#D4AF37]/20 rounded-sm overflow-hidden">
+    <div className="h-full flex-col bg-black/40 border border-[#D4AF37]/20 rounded-sm overflow-hidden">
 
 
   );
