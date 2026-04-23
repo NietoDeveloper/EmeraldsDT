@@ -114,8 +114,4 @@ export default function DashboardPage() {
             <DashboardCard title="Active Operations" className="col-span-1 lg:col-span-1 row-span-1">
               <div className="flex flex-col justify-end h-full">
                 <span className="text-4xl font-black tracking-tighter leading-none">48 <span className="text-black/20 text-xl font-medium">/ 150</span></span>
-                <div className="w-full bg-black/5 h-1.5 rounded-full mt-3 overflow-hidden">
-                   <div className="bg-gold h-full w-[32%] rounded-full shadow-[0_0_8px_rgba(255,215,0,0.5)]" />
-                </div>
-              </div>
-            </DashboardCard>
+    
