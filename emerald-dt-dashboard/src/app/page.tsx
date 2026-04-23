@@ -38,7 +38,5 @@ export default function DashboardPage() {
             <div className="w-10 h-10 bg-gold rounded-lg flex items-center justify-center text-black font-black shadow-lg shadow-gold/10">
               E
             </div>
-            <span className="text-xl font-bold tracking-tighter text-white">
-              EMERALD <span className="text-gold uppercase">DT</span>
-            </span>
+        
           
