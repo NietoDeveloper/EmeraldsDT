@@ -119,7 +119,3 @@ export default function DashboardPage() {
                 </div>
               </div>
             </DashboardCard>
-
-            {/* MAIN FEATURE: Digital Twin Viewport */}
-            <DashboardCard className="col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-3 bg-black !p-0 border-2 border-gold/40 shadow-2xl shadow-gold/5 relative">
-   
