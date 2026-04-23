@@ -113,12 +113,3 @@ export default function DashboardPage() {
               </div>
             </DashboardCard>
 
-            {/* KPI: OPERATIONS */}
-            <DashboardCard title="Active Operations" className="lg:row-span-1">
-              <div className="flex flex-col justify-end h-full">
-                <span className="text-4xl font-black tracking-tighter leading-none">48 <span className="text-black/20 text-xl">/ 150</span></span>
-                <div className="w-full bg-black/5 h-1.5 rounded-full mt-4 overflow-hidden">
-                   <div className="bg-gold h-full w-[32%] shadow-[0_0_10px_#D4AF37]" />
-                </div>
-              </div>
-            </DashboardCard>
