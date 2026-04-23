@@ -130,9 +130,6 @@ export default function DashboardPage() {
                 <div className="flex flex-col items-center">
                   <div className="w-20 h-20 border-t-2 border-gold rounded-full animate-spin mb-4 opacity-20" />
                   <span className="italic text-white/5 font-black text-7xl select-none tracking-tighter uppercase">Emerald</span>
-                </div>
-              </div>
-  
 
   );
 }
