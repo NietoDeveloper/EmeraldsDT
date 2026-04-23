@@ -137,9 +137,5 @@ export default function DashboardPage() {
 
             </DashboardCard>
 
-          </div>
-        </div>
-      </section>
-    </main>
   );
 }
