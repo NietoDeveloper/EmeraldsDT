@@ -14,12 +14,7 @@ export default function RootLayout({
       <body
         className="
           antialiased 
-          font-sans 
-          bg-[#DCDCDC] 
-          text-black
-          overflow-hidden 
-          h-screen 
-          w-screen
+         
           fixed
           m-0
           p-0
