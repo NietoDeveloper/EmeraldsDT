@@ -132,10 +132,7 @@ export default function DashboardPage() {
                   <span className="italic text-white/5 font-black text-7xl select-none tracking-tighter uppercase">Emerald</span>
                 </div>
               </div>
-            </DashboardCard>
-
-
-            </DashboardCard>
+  
 
   );
 }
