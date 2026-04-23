@@ -122,7 +122,4 @@ export default function DashboardPage() {
 
             {/* MAIN FEATURE: Digital Twin Viewport */}
             <DashboardCard className="col-span-1 md:col-span-2 lg:col-span-2 lg:row-span-3 bg-black !p-0 border-2 border-gold/40 shadow-2xl shadow-gold/5 relative">
-              <div className="absolute top-4 left-4 z-20 flex items-center gap-2 px-3 py-1.5 bg-black/50 backdrop-blur-md rounded-lg border border-white/10">
-                <span className="w-2 h-2 rounded-full bg-red-600 animate-ping" />
-                <span className="text-[9px] font-black text-white uppercase tracking-[0.2em]">Live DT Stream</span>
-              </div>
+   
