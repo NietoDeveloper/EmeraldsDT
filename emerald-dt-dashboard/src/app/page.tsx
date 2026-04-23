@@ -139,22 +139,3 @@ export default function DashboardPage() {
               </div>
             </DashboardCard>
 
-            {/* ASSET DISTRIBUTION: INVENTORY 20% */}
-            <DashboardCard title="Asset Distribution" className="lg:row-span-3">
-              <div className="flex flex-col gap-2 mt-2 h-full overflow-hidden">
-                {[...Array(8)].map((_, i) => (
-                  <div key={i} className="h-10 w-full bg-black/[0.03] rounded-lg border border-black/[0.05] flex items-center px-4 justify-between group/item hover:bg-black/5 transition-colors">
-                     <div className="w-1.5 h-1.5 rounded-full bg-gold/40 group-hover/item:bg-gold" />
-                     <div className="w-20 h-1 bg-black/5 rounded-full" />
-                     <span className="text-[9px] font-bold text-black/20">0{i+1}</span>
-                  </div>
-                ))}
-              </div>
-            </DashboardCard>
-
-            {/* ANALYTICS: NODE PERFORMANCE */}
-            <DashboardCard title="Node Performance" className="md:col-span-2 lg:col-span-3 lg:row-span-1">
-              <div className="flex items-end justify-between h-full gap-8">
-                <div className="flex gap-1.5 items-end flex-1 h-16">
-                   {[30, 60, 40, 85, 50, 75, 45, 90, 60, 40, 70, 95, 50, 65, 80].map((h, i) => (
-                     <div key={i} style={{ height: `${h}%` }} className="flex-1 bg-black/5 rounded-t-sm group-hover:bg-gold/40 transition-all duration-700 delay-[i*50ms]" />
