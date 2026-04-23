@@ -1,7 +1,1 @@
-import { EmeraldProduct } from "@/types/inventory";
-
-interface Pro
-
-
-  );
-}
+import { EmeraldProduct } from "@/types/inventory"
