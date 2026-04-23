@@ -15,19 +15,7 @@ export default function LiveInventory({ products }: Props) {
   return (
     <div className="h-full flex flex-col bg-black/60 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:border-[#D4AF37]/40 group">
       
-      {/* HEADER TÉCNICO */}
-      <div className="bg-gradient-to-r from-black via-zinc-900 to-black p-3 border-b border-white/5 flex justify-between items-center shrink-0">
-        <div className="flex flex-col">
-          <h2 className="text-[9px] uppercase tracking-[0.3em] text-[#D4AF37] font-black">
-            Asset Inventory
-          </h2>
-          <span className="text-[8px] text-white/30 font-mono">ID: 0x-NIETO-LAB</span>
-        </div>
-        <div className="flex items-center gap-2 bg-black/50 px-2 py-1 rounded-full border border-white/5">
-          <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_#22c55e]" />
-          <span className="text-[8px] text-white/60 font-black tracking-widest uppercase">Syncing</span>
-        </div>
-      </div>
+
 
       {/* BODY DE TABLA - ZERO SCROLL FOCUS */}
       <div className="flex-1 overflow-y-auto custom-scrollbar">
