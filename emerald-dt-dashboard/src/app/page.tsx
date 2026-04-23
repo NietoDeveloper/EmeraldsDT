@@ -8,7 +8,7 @@ const DashboardCard = ({
 }: { 
   children: React.ReactNode, 
   className?: string, 
-flex-col transition-all duration-300 hover:shadow-md 
+
 
 
           
