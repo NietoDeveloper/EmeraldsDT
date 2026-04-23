@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   description: "High-performance industrial monitoring dashboard for Colombian Emeralds. Nieto Laboratory Ecosystem.",
   icons: {
-    icon: "/favicon.ico", // Asegúrate de tenerlo en /public
+    icon: "/favicon.ico",
   },
   robots: {
     index: false,
@@ -52,8 +52,8 @@ export default function RootLayout({
         className="
           antialiased 
           font-sans 
-          bg-[#DCDCDC] 
-          text-black
+          bg-[#020202] 
+          text-white
           overflow-hidden 
           h-screen 
           w-screen
@@ -66,7 +66,7 @@ export default function RootLayout({
         {/* Dashboard Root: El ancla del Zero-Scroll Architecture */}
         <div 
           id="dashboard-root" 
-          className="relative h-full w-full overflow-hidden flex flex-col bg-[radial-gradient(circle_at_top_right,_rgba(212,175,55,0.05),_transparent_40%)]"
+          className="relative h-full w-full overflow-hidden flex flex-col bg-[radial-gradient(circle_at_top_right,_rgba(212,175,55,0.08),_transparent_50%)]"
         >
           {children}
         </div>
