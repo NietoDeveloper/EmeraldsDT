@@ -102,14 +102,5 @@ export default function DashboardPage() {
         <div className="flex-1 p-4 lg:p-6 overflow-y-auto lg:overflow-hidden bg-[#DCDCDC]">
           <div className="h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-4 gap-4">
             
-            {/* KPI: REVENUE */}
-            <DashboardCard title="Real-time Revenue" className="lg:row-span-1">
-              <div className="flex flex-col justify-end h-full">
-                <span className="text-4xl font-black tracking-tighter leading-none">$12,840</span>
-                <div className="flex items-center gap-2 mt-2">
-                   <span className="bg-green-500 text-white text-[9px] px-1.5 py-0.5 rounded-sm font-black">+14.2%</span>
-                   <span className="text-[9px] text-black/40 font-bold uppercase">v. yesterday</span>
-                </div>
-              </div>
-            </DashboardCard>
+
 
