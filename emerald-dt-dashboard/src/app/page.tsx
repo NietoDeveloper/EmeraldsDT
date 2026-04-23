@@ -27,9 +27,5 @@ const DashboardCard = ({
   </div>
 );
 
-export default function DashboardPage() {
-  return (
-    <main className="flex h-screen w-screen overflow-hidden bg-main text-headingColor selection:bg-gold/30">
-      
 
           
