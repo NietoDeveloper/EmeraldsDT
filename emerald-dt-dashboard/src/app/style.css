@@ -1,208 +1,71 @@
-import React, { useState } from 'react';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-// DashboardCard: Átomo con estética SpaceX, bordes dorados en hover y textos blancos.
-const DashboardCard = ({ 
-  children, 
-  className = "", 
-  title = "",
-  dark = true,
-  defaultCol = "xl:col-span-1",
-  defaultRow = "row-span-1",
-  expandCol = "xl:col-span-2",
-  expandRow = "row-span-2",
-  noClickExpand = false
-}: { 
-  children: React.ReactNode, 
-  className?: string, 
-  title?: string,
-  dark?: boolean,
-  defaultCol?: string,
-  defaultRow?: string,
-  expandCol?: string,
-  expandRow?: string,
-  noClickExpand?: boolean
-}) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+:root {
+  /* Paleta Industrial Emerald DT - Optimizado para True Black */
+  --background: #020202; /* Negro profundo para contraste máximo */
+  --foreground: #ffffff;
+  --gold-accent: #D4AF37; /* Oro técnico */
+  --emerald-accent: #047857;
+  --zinc-border: rgba(255, 255, 255, 0.1);
+}
 
-  return (
-    <div 
-      onClick={() => !noClickExpand && setIsExpanded(!isExpanded)}
-      className={`
-        ${dark ? 'bg-black/60 border-white/10' : 'bg-zinc-900/40 border-white/5'} 
-        ${isExpanded ? `${expandCol} ${expandRow} z-30 scale-[1.01]` : `${defaultCol} ${defaultRow} z-10`}
-        backdrop-blur-xl rounded-2xl shadow-2xl border p-4 
-        flex flex-col transition-all duration-500 ease-in-out
-        hover:shadow-[0_0_30px_rgba(212,175,55,0.2)] hover:border-[#D4AF37] group relative overflow-hidden 
-        ${!noClickExpand ? 'cursor-pointer active:scale-[0.98]' : ''}
-        ${className}
-      `}
-    >
-      {title && (
-        <h3 className="text-[10px] font-black uppercase tracking-[0.2em] mb-4 flex items-center justify-between text-[#D4AF37] group-hover:text-white transition-colors">
-          <div className="flex items-center gap-2">
-            <span className={`w-1.5 h-1.5 rounded-full shadow-[0_0_8px_#D4AF37] ${isExpanded ? 'bg-white animate-pulse' : 'bg-[#D4AF37]'}`} />
-            {title}
-          </div>
-          {isExpanded && <span className="text-[7px] border border-[#D4AF37] px-2 py-0.5 rounded-full text-[#D4AF37]">SYSTEM_ACTIVE</span>}
-        </h3>
-      )}
-      <div className="flex-1 relative overflow-hidden text-white/90">
-        {children}
-      </div>
-    </div>
-  );
-};
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Garantiza el Zero Scroll Architecture */
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-export default function DashboardPage() {
-  const [activeCam, setActiveCam] = useState<number | null>(null);
+/* --- SCROLLBAR TÉCNICA (MINIMALISTA) --- */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
 
-  return (
-    <main className="flex h-screen w-screen overflow-hidden bg-[#020202] text-white selection:bg-[#D4AF37]/40 font-sans relative">
-      
-      {/* FONDO ESPACIAL (True Black + Gold Nebula) */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D4AF37]/10 rounded-full blur-[150px] opacity-50" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-900/10 rounded-full blur-[120px] opacity-30" />
-        <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
-      </div>
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
 
-      {/* --- SIDEBAR ORO/NEGRO --- */}
-      <aside className="hidden lg:flex flex-col w-64 bg-black/80 backdrop-blur-3xl text-white shrink-0 z-40 border-r border-[#D4AF37]/20">
-        <div className="p-8 border-b border-white/5">
-          <div className="flex items-center gap-3 group cursor-pointer">
-            <div className="w-10 h-10 bg-[#D4AF37] rounded-xl flex items-center justify-center text-black font-black shadow-[0_0_20px_rgba(212,175,55,0.5)] group-hover:rotate-6 transition-all">E</div>
-            <span className="text-xl font-bold tracking-tighter uppercase italic text-white group-hover:text-[#D4AF37]">Emerald <span className="text-[#D4AF37] group-hover:text-white">DT</span></span>
-          </div>
-        </div>
-        <nav className="flex-1 px-4 py-8 space-y-4">
-          {["Overview", "Inventory", "Drones", "Vault", "Analytics"].map((text, i) => (
-            <div key={i} className={`h-12 w-full rounded-xl flex items-center px-4 gap-4 transition-all cursor-pointer border group ${i === 0 ? 'bg-[#D4AF37] text-black border-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.3)]' : 'text-white/40 border-transparent hover:border-[#D4AF37]/40 hover:text-white hover:bg-[#D4AF37]/5'}`}>
-              <div className={`w-1.5 h-1.5 rounded-full ${i === 0 ? 'bg-black' : 'bg-[#D4AF37] opacity-20 group-hover:opacity-100 shadow-[0_0_5px_#D4AF37]'}`} />
-              <span className="text-[10px] font-black uppercase tracking-[0.2em]">{text}</span>
-            </div>
-          ))}
-        </nav>
-      </aside>
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+}
 
-      <section className="flex-1 flex flex-col h-full relative z-10">
-        <header className="h-20 bg-black/40 backdrop-blur-md border-b border-white/5 flex items-center justify-between px-10 shrink-0">
-          <div className="flex flex-col">
-            <h1 className="text-[14px] font-black uppercase tracking-[0.6em] text-[#D4AF37] drop-shadow-[0_0_10px_rgba(212,175,55,0.3)]">Operational Command</h1>
-            <div className="flex items-center gap-2 mt-1">
-              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#22c55e]" />
-              <span className="text-[9px] text-white/60 font-black uppercase tracking-[0.2em]">Bogotá Node • Secure Connection</span>
-            </div>
-          </div>
-        </header>
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-accent);
+  box-shadow: 0 0 10px var(--gold-accent);
+}
 
-        <div className="flex-1 p-6 overflow-hidden">
-          {/* GRID DINÁMICO DE 10 COLUMNAS */}
-          <div className="h-full w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-10 grid-rows-6 gap-4 grid-flow-dense">
-            
-            {/* 1. CONTROL DE CÁMARAS (8% - Minimalista) */}
-            <DashboardCard title="Cam Control" defaultCol="xl:col-span-1" defaultRow="row-span-2" noClickExpand={true}>
-              <div className="flex flex-col gap-2 h-full justify-center">
-                {[1, 2, 3].map((num) => (
-                  <button 
-                    key={num}
-                    onClick={() => setActiveCam(activeCam === num ? null : num)}
-                    className={`w-full py-2 rounded-lg border text-[9px] font-black transition-all duration-300
-                    ${activeCam === num ? 'bg-[#D4AF37] text-black border-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.4)] scale-105' : 'bg-black/40 text-[#D4AF37] border-[#D4AF37]/20 hover:border-[#D4AF37] hover:bg-[#D4AF37]/10'}`}
-                  >
-                    CAM_0{num}
-                  </button>
-                ))}
-              </div>
-            </DashboardCard>
+/* --- OPTIMIZACIÓN DE RENDIMIENTO --- */
+/* Mejora el renderizado de los componentes que escalan en el Dashboard */
+.grid {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, grid-template-columns;
+}
 
-            {/* 2. VISUALIZADOR DE CÁMARA (25% del Dashboard - Aparece solo al hacer clic) */}
-            {activeCam && (
-              <DashboardCard 
-                title={`Telemetry Stream // CAM_0${activeCam}`} 
-                defaultCol="xl:col-span-4" 
-                defaultRow="row-span-4"
-                className="animate-in fade-in slide-in-from-left-4 duration-500 border-[#D4AF37]/40 shadow-[0_0_50px_rgba(212,175,55,0.1)]"
-              >
-                <div className="w-full h-full bg-black rounded-xl overflow-hidden relative border border-white/5 flex items-center justify-center group">
-                  {/* Overlay Técnico */}
-                  <div className="absolute top-3 left-3 z-20 flex flex-col gap-1">
-                    <div className="flex items-center gap-2 bg-black/60 px-2 py-1 rounded border border-white/10 backdrop-blur-md">
-                      <span className="w-1.5 h-1.5 bg-red-600 rounded-full animate-pulse" />
-                      <span className="text-[7px] font-mono text-white/80 tracking-widest">LIVE_ENCRYPTED</span>
-                    </div>
-                  </div>
-                  
-                  {/* Placeholder del Video */}
-                  <div className="text-[#D4AF37] text-[10px] font-mono animate-pulse tracking-[0.5em] text-center px-10">
-                    ESTABLISHING_SECURE_UPLINK...
-                    <span className="block text-[6px] text-white/20 mt-2">BOG_NODE_ALPHA_7</span>
-                  </div>
+/* --- EFECTO DE PROFUNDIDAD --- */
+#dashboard-root {
+  perspective: 1000px;
+}
 
-                  {/* Escaneado Estilo SpaceX */}
-                  <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-[#D4AF37]/5 to-transparent h-[20%] w-full animate-scan" />
-                </div>
-              </DashboardCard>
-            )}
+/* --- CLASES DE UTILIDAD EMERALD DT --- */
+.text-gold { color: var(--gold-accent); }
+.bg-gold { background-color: var(--gold-accent); }
+.border-gold { border-color: var(--gold-accent); }
 
-            {/* 3. MATRIZ DE ACTIVOS */}
-            <DashboardCard title="Asset Matrix" defaultCol="xl:col-span-2" defaultRow="row-span-3">
-              <div className="flex flex-col h-full space-y-2 custom-scrollbar overflow-y-auto pr-1 text-white">
-                {[...Array(10)].map((_, i) => (
-                  <div key={i} className="flex items-center justify-between p-3 bg-white/[0.03] rounded-xl border border-white/5 hover:border-[#D4AF37]/30 transition-all">
-                    <div className="flex flex-col">
-                      <span className="text-[9px] font-mono font-bold text-white uppercase">EM-GRAD-{i+1}</span>
-                      <span className="text-[6px] text-[#D4AF37] font-black">COLOMBIA_CERT</span>
-                    </div>
-                    <span className="text-[11px] text-[#D4AF37] font-black">{30 - i}u</span>
-                  </div>
-                ))}
-              </div>
-            </DashboardCard>
+/* Animación para el escáner de telemetría de video */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(400%); }
+}
 
-            {/* 4. REVENUE */}
-            <DashboardCard title="Market Value" defaultCol="xl:col-span-2">
-               <div className="flex flex-col justify-center h-full">
-                 <span className="text-[9px] text-white/40 uppercase font-black tracking-widest mb-1">Total Assets</span>
-                 <span className="text-4xl font-black tracking-tighter text-white">$14,500<span className="text-[#D4AF37]">.00</span></span>
-               </div>
-            </DashboardCard>
-
-            {/* 5. UPLINK PERFORMANCE */}
-            <DashboardCard title="Uplink Node" defaultCol="xl:col-span-2">
-              <div className="flex items-end gap-1.5 h-full pb-2">
-                {[40, 70, 45, 90, 65, 80, 30, 100].map((h, i) => (
-                  <div key={i} style={{ height: `${h}%` }} className="flex-1 bg-white/5 rounded-t-sm hover:bg-[#D4AF37] hover:shadow-[0_0_10px_#D4AF37] transition-all duration-700" />
-                ))}
-              </div>
-            </DashboardCard>
-
-            {/* 6. SYSTEM LOGS */}
-            <DashboardCard title="System Logs" defaultCol="xl:col-span-2" defaultRow="row-span-2">
-              <div className="text-[9px] font-mono text-white/40 space-y-2 uppercase">
-                <p className="text-[#D4AF37] animate-pulse">{`> [OK] ENCRYPTED_UPLINK`}</p>
-                <p>{`> [INFO] NIETO_LAB_HUB_SYNC`}</p>
-                <p className="text-blue-400">{`> [VEO] AI_READY`}</p>
-              </div>
-            </DashboardCard>
-
-            {/* 7. SLOTS ADICIONALES */}
-            <DashboardCard title="Vault" />
-            <DashboardCard title="Staff" />
-            <DashboardCard title="Cloud" />
-            <DashboardCard title="Status" />
-          </div>
-        </div>
-      </section>
-
-      <style jsx global>{`
-        @keyframes scan {
-          from { transform: translateY(-100%); }
-          to { transform: translateY(500%); }
-        }
-        .animate-scan {
-          animation: scan 3s linear infinite;
-        }
-      `}</style>
-    </main>
-  );
+.animate-scan {
+  animation: scanline 4s linear infinite;
 }
