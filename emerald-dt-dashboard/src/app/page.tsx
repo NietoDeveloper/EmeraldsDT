@@ -126,10 +126,3 @@ export default function DashboardPage() {
                 <span className="w-2 h-2 rounded-full bg-red-600 animate-ping" />
                 <span className="text-[9px] font-black text-white uppercase tracking-[0.2em]">Live DT Stream</span>
               </div>
-              <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800 to-black flex items-center justify-center">
-                <div className="flex flex-col items-center">
-                  <div className="w-20 h-20 border-t-2 border-gold rounded-full animate-spin mb-4 opacity-20" />
-                  <span className="italic text-white/5 font-black text-7xl select-none tracking-tighter uppercase">Emerald</span>
-
-  );
-}
