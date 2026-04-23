@@ -3,13 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./style.css";
 
 // Optimización de fuentes con display swap para evitar Cumulative Layout Shift (CLS)
-
-
-export const metadata: Metadata = {
-  title: {
-    default: "Emerald DT | Control Center",
-    template: "%s | Emerald DT",
-  },
   description: "High-performance industrial monitoring dashboard for Colombian Emeralds.",
   robots: {
     index: false,
