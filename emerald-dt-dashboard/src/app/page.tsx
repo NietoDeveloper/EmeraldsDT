@@ -158,18 +158,3 @@ export default function DashboardPage() {
                 <div className="flex gap-1.5 items-end flex-1 h-16">
                    {[30, 60, 40, 85, 50, 75, 45, 90, 60, 40, 70, 95, 50, 65, 80].map((h, i) => (
                      <div key={i} style={{ height: `${h}%` }} className="flex-1 bg-black/5 rounded-t-sm group-hover:bg-gold/40 transition-all duration-700 delay-[i*50ms]" />
-                   ))}
-                </div>
-                <div className="flex flex-col text-right shrink-0 pb-1">
-                   <span className="text-2xl font-black tracking-tighter">99.98%</span>
-                   <span className="text-[8px] font-bold text-black/40 uppercase tracking-widest">Uptime Accuracy</span>
-                </div>
-              </div>
-            </DashboardCard>
-
-          </div>
-        </div>
-      </section>
-    </main>
-  );
-}
