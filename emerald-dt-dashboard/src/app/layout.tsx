@@ -9,12 +9,5 @@ export default function RootLayout({
       >
         {/* Contenedor principal: Mantiene el control total del viewport */}
         <div 
-          id="dashboard-root" 
-          className="relative h-full w-full overflow-hidden flex flex-col"
-        >
-          {children}
-        </div>
-      </body>
-    </html>
-  );
+
 }
