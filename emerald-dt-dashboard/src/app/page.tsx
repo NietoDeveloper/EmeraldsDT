@@ -34,9 +34,6 @@ export default function DashboardPage() {
       {/* --- SIDEBAR ESTRATÉGICO --- */}
       <aside className="hidden lg:flex flex-col w-72 bg-black text-white shrink-0 z-20">
         <div className="p-8 border-b border-white/10">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gold rounded-lg flex items-center justify-center text-black font-black shadow-lg shadow-gold/10">
-              E
-            </div>
+     
         
           
