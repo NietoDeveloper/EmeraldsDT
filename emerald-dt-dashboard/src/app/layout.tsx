@@ -6,5 +6,3 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-      >
-        {/* Contenedor principal: Mantiene el control total del viewport */}
