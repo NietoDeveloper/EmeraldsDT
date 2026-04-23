@@ -2,14 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./style.css";
 
-// Optimización de fuentes con display swap para evitar Cumulative Layout Shift (CLS)
-  description: "High-performance industrial monitoring dashboard for Colombian Emeralds.",
-  robots: {
-    index: false,
-    follow: false,
-  },
-};
-
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
