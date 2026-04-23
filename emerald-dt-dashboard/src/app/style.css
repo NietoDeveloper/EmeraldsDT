@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Paleta Industrial Emerald DT */
+  --background: #DCDCDC; /* Gainsboro */
+  --foreground: #000000;
+  --gold-accent: #D4AF37; /* Oro técnico */
+  --emerald-accent: #047857;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Garantiza el Zero Scroll */
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- SCROLLBAR TÉCNICA (MINIMALISTA) --- */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px; /* Ultra fina para no obstruir datos */
+  height: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.2); /* Oro sutil */
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-accent); /* Resalta al interactuar */
+}
+
+/* --- TRANSICIONES DE GRID --- */
+/* Esta clase asegura que cuando las DashboardCards cambien de span, 
+   el reacomodo sea fluido */
+.grid {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- EFECTO DE PROFUNDIDAD --- */
+#dashboard-root {
+  perspective: 1000px;
+}
+
+/* Clases de utilidad para estados de gema */
+.text-gold { color: var(--gold-accent); }
+.bg-gold { background-color: var(--gold-accent); }
+.border-gold { border-color: var(--gold-accent); }
