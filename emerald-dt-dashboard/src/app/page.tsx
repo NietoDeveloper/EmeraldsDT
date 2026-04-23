@@ -17,11 +17,6 @@ const DashboardCard = ({
   `}>
     {title && (
       <h3 className="text-[10px] font-bold text-black/40 uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
-        <span className="w-1 h-1 bg-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-        {title}
-      </h3>
-    )}
-    <div className="flex-1 relative overflow-hidden">
 
 
 
