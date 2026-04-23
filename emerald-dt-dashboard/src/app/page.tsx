@@ -94,14 +94,3 @@ export default function DashboardPage() {
             </button>
           </div>
         </header>
-
-        {/* --- GRID DINÁMICO --- */}
-        <div className="flex-1 p-4 lg:p-8 overflow-y-auto lg:overflow-hidden custom-scrollbar bg-[#F5F5F5]">
-          <div className="h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-4 gap-4 lg:gap-6">
-            
-            {/* KPI: Sales */}
-            <DashboardCard title="Real-time Revenue" className="col-span-1 lg:col-span-1 row-span-1">
-              <div className="flex flex-col justify-end h-full">
-                <span className="text-4xl font-black tracking-tighter leading-none">$12,840</span>
-                <div className="flex items-center gap-1.5 mt-2">
-                   <span className="px-1.5 py-0.5 rounded bg-green-100 text-green-700 text-[9px] font-black">+14.2%</span>
