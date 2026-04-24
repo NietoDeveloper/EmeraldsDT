@@ -1,32 +1,37 @@
 "use client";
 import React, { useState } from 'react';
 
-// DashboardCard con refinamiento Gold-Space
+// DashboardCard: Estética SpaceX optimizada
 const DashboardCard = ({ 
   children, 
   className = "", 
   title = "",
   defaultCol = "xl:col-span-1",
   defaultRow = "row-span-1",
-  noClickExpand = false
-
-
+}: { 
+  children: React.ReactNode, 
+  className?: string, 
+  title?: string,
+  defaultCol?: string,
+  defaultRow?: string,
+}) => {
+  return (
     <div 
       className={`
-        bg-black/60 border-white/10 backdrop-blur-xl rounded-2xl shadow-2xl border p-4 
+        bg-black border border-white/10 rounded-2xl p-4 
         flex flex-col transition-all duration-500 ease-in-out
-        hover:shadow-[0_0_30px_rgba(212,175,55,0.15)] hover:border-[#D4AF37] group relative overflow-hidden 
+        hover:shadow-[0_0_30px_rgba(212,175,55,0.1)] hover:border-[#D4AF37]/40 group relative overflow-hidden 
         ${defaultCol} ${defaultRow}
         ${className}
       `}
     >
       {title && (
-        <h3 className="text-[9px] font-black uppercase tracking-[0.2em] mb-3 flex items-center gap-2 text-[#D4AF37] group-hover:text-white transition-colors">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] shadow-[0_0_8px_#D4AF37]" />
+        <h3 className="text-[9px] font-black uppercase tracking-[0.3em] mb-4 flex items-center gap-2 text-[#D4AF37]">
+          <span className="w-1 h-1 bg-[#D4AF37] rounded-full" />
           {title}
         </h3>
       )}
-      <div className="flex-1 relative overflow-hidden text-white/90">
+      <div className="flex-1 relative overflow-hidden">
         {children}
       </div>
     </div>
@@ -37,93 +42,120 @@ export default function DashboardPage() {
   const [activeCam, setActiveCam] = useState<number | null>(null);
 
   return (
-    <main className="flex h-screen w-screen overflow-hidden bg-[#020202] text-white selection:bg-[#D4AF37]/40 font-sans relative">
+    <main className="flex h-screen w-screen overflow-hidden bg-[#020202] text-white font-sans relative">
       
-      {/* BACKGROUND ETHER */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[150px]" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-900/10 rounded-full blur-[120px]" />
-      </div>
-
       {/* SIDEBAR */}
-      <aside className="hidden lg:flex flex-col w-64 bg-black/80 backdrop-blur-3xl shrink-0 z-40 border-r border-[#D4AF37]/20">
+      <aside className="hidden lg:flex flex-col w-64 bg-black shrink-0 z-40 border-r border-white/5">
         <div className="p-8 border-b border-white/5">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-[#D4AF37] rounded-xl flex items-center justify-center text-black font-black shadow-[0_0_20px_rgba(212,175,55,0.4)]">E</div>
-            <span className="text-xl font-bold tracking-tighter uppercase italic">Emerald <span className="text-[#D4AF37]">DT</span></span>
+            <div className="w-8 h-8 bg-[#D4AF37] rounded flex items-center justify-center text-black font-black text-xs shadow-[0_0_15px_rgba(212,175,55,0.3)]">E</div>
+            <span className="text-sm font-bold tracking-tighter uppercase italic">Emerald <span className="text-[#D4AF37]">DT</span></span>
           </div>
         </div>
-        <nav className="flex-1 px-4 py-8 space-y-2">
-          {["Overview", "Inventory", "Drones", "Vault", "Analytics"].map((text, i) => (
-            <div key={i} className={`h-11 w-full rounded-xl flex items-center px-4 gap-4 transition-all cursor-pointer border ${i === 0 ? 'bg-[#D4AF37]/10 border-[#D4AF37]/30 text-[#D4AF37]' : 'text-white/30 border-transparent hover:bg-white/5 hover:text-white'}`}>
-              <span className="text-[10px] font-black uppercase tracking-[0.2em]">{text}</span>
+        <nav className="flex-1 px-4 py-8 space-y-1">
+          {["Overview", "Inventory", "Drones", "Vault"].map((text, i) => (
+            <div key={i} className={`h-10 w-full rounded-lg flex items-center px-4 transition-all cursor-pointer text-[9px] font-black uppercase tracking-widest ${i === 1 ? 'bg-[#D4AF37] text-black' : 'text-white/40 hover:text-white hover:bg-white/5'}`}>
+              {text}
             </div>
           ))}
         </nav>
       </aside>
 
       <section className="flex-1 flex flex-col h-full relative z-10">
-        <header className="h-20 bg-black/40 backdrop-blur-md border-b border-white/5 flex items-center justify-between px-10 shrink-0">
-          <div className="flex flex-col">
-            <h1 className="text-[12px] font-black uppercase tracking-[0.5em] text-[#D4AF37]">Operational Command</h1>
-            <span className="text-[9px] text-white/40 uppercase tracking-widest mt-1">Bogotá Hub // Secure Session</span>
-          </div>
+        <header className="h-16 border-b border-white/5 flex items-center px-8 shrink-0">
+          <h1 className="text-[10px] font-black uppercase tracking-[0.5em] text-[#D4AF37]">
+            Panel de control Emerald DT
+          </h1>
         </header>
 
-        <div className="flex-1 p-6 relative overflow-hidden">
+        <div className="flex-1 p-6 relative">
           
-          {/* GRID PRINCIPAL */}
-          <div className="h-full w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-10 grid-rows-6 gap-4">
+          <div className="h-full w-full grid grid-cols-10 grid-rows-6 gap-4">
             
-            {/* 1. CAM CONTROL (El 8% del dashboard aprox) */}
-            <DashboardCard title="Cam Links" defaultCol="xl:col-span-2" defaultRow="row-span-2">
-              <div className="grid grid-cols-1 gap-2 h-full">
+            {/* 1. CAM LINKS: BOTONES NEGROS / LETRAS DORADAS */}
+            <DashboardCard title="Camera Uplinks" defaultCol="xl:col-span-2" defaultRow="row-span-2">
+              <div className="flex flex-col gap-2 h-full">
                 {[1, 2, 3].map((num) => (
                   <button 
                     key={num}
                     onClick={() => setActiveCam(num)}
-                    className="w-full flex items-center justify-between px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-[#D4AF37] hover:bg-[#D4AF37]/5 transition-all group"
+                    className={`
+                      w-full py-3 px-4 rounded-lg border text-[9px] font-black transition-all cursor-pointer flex items-center justify-between
+                      ${activeCam === num 
+                        ? 'bg-[#D4AF37] text-black border-[#D4AF37]' 
+                        : 'bg-black text-[#D4AF37] border-[#D4AF37]/30 hover:bg-[#D4AF37]/10 hover:border-[#D4AF37]'}
+                    `}
                   >
-                    <span className="text-[10px] font-mono text-white group-hover:text-[#D4AF37]">UPLINK_0{num}</span>
-                    <div className="w-2 h-2 bg-green-500 rounded-full group-hover:shadow-[0_0_8px_#22c55e]" />
+                    <span>UPLINK_0{num}</span>
+                    <div className={`w-1.5 h-1.5 rounded-full ${activeCam === num ? 'bg-black' : 'bg-green-500 animate-pulse'}`} />
                   </button>
                 ))}
               </div>
             </DashboardCard>
 
-            {/* RESTO DE COMPONENTES */}
+            {/* 2. ASSET MATRIX (INVENTARIO): TEXTO BLANCO / HOVER GOLD */}
+            <DashboardCard title="Asset Matrix" defaultCol="xl:col-span-3" defaultRow="row-span-6">
+              <div className="flex flex-col gap-2 h-full overflow-y-auto custom-scrollbar pr-2">
+                {[...Array(12)].map((_, i) => (
+                  <div 
+                    key={i} 
+                    className="group flex items-center justify-between p-3 bg-white/5 border border-white/5 rounded-xl cursor-pointer hover:border-[#D4AF37]/50 transition-all"
+                  >
+                    <div className="flex flex-col">
+                      <span className="text-[10px] font-bold text-white group-hover:text-[#D4AF37] transition-colors uppercase">
+                        Emerald_Item_0{i+1}
+                      </span>
+                      <span className="text-[7px] text-[#D4AF37]/60 font-black uppercase tracking-widest mt-0.5">Premium Certified</span>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-[10px] text-white font-black">{120 - i * 5}ct</div>
+                      <div className="text-[7px] text-white/30 uppercase font-mono">In Stock</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </DashboardCard>
+
+            {/* 3. NODOS DE DATOS */}
             <DashboardCard title="Revenue Stream" defaultCol="xl:col-span-2" />
-            <DashboardCard title="Uplink Node" defaultCol="xl:col-span-2" />
-            <DashboardCard title="Asset Matrix" defaultCol="xl:col-span-2" defaultRow="row-span-4" />
+            <DashboardCard title="Uplink Health" defaultCol="xl:col-span-1" />
             <DashboardCard title="Vault Status" defaultCol="xl:col-span-2" />
-            <DashboardCard title="System Logs" defaultCol="xl:col-span-4" defaultRow="row-span-2" />
-            <DashboardCard title="Staff" />
-            <DashboardCard title="Cloud" />
-            <DashboardCard title="AI Meta" defaultCol="xl:col-span-2" />
-            <DashboardCard title="Status" />
+            
+            <DashboardCard title="Operational Logs" defaultCol="xl:col-span-5" defaultRow="row-span-2">
+               <div className="font-mono text-[8px] text-white/40 space-y-1">
+                  <p><span className="text-[#D4AF37]">[08:42]</span> SYSTEM_READY: NIETO_LABORATORY_ONLINE</p>
+                  <p><span className="text-[#D4AF37]">[08:43]</span> ENCRYPTING_DATA_PACKETS... DONE</p>
+                  <p><span className="text-[#D4AF37]">[08:45]</span> DRONE_FLEET_01_STANDBY</p>
+               </div>
+            </DashboardCard>
+
+            <DashboardCard title="Security" />
+            <DashboardCard title="Network" />
           </div>
 
-          {/* 2. CAMERA FEED OVERLAY (Ocupa el 25% de la pantalla al activarse) */}
+          {/* 4. CAMERA FEED OVERLAY (Se activa al dar click en Uplinks) */}
           {activeCam && (
-            <div className="absolute inset-0 z-50 flex items-center justify-center pointer-events-none">
-              <div className="w-[45%] h-[45%] bg-black/90 border-2 border-[#D4AF37] rounded-3xl shadow-[0_0_100px_rgba(212,175,55,0.3)] backdrop-blur-2xl overflow-hidden pointer-events-auto animate-in zoom-in-95 duration-300">
-                <div className="h-10 bg-[#D4AF37] flex items-center justify-between px-6">
-                  <span className="text-black font-black text-[10px] tracking-widest uppercase">Live Stream // Node_0{activeCam}</span>
-                  <button onClick={() => setActiveCam(null)} className="text-black font-black hover:scale-125 transition-transform">✕</button>
-                </div>
-                <div className="absolute inset-0 top-10 flex items-center justify-center bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
-                   {/* Inserción de Link de Video */}
-                   <div className="text-[#D4AF37] text-[12px] font-mono animate-pulse">
-                     ESTABLISHING SECURE CONNECTION...
-                   </div>
-                   {/* <iframe src={camLinks[activeCam-1]} className="w-full h-full" /> */}
-                </div>
-                <div className="absolute bottom-6 left-6 right-6 flex justify-between items-center pointer-events-none">
-                  <span className="text-white/20 text-[8px] font-mono tracking-tighter">SEC_LEVEL: MAXIMUM</span>
-                  <div className="flex gap-2">
-                    <div className="w-1.5 h-1.5 bg-red-600 rounded-full animate-ping" />
-                    <span className="text-white/40 text-[8px] font-mono uppercase">Recording</span>
+            <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm transition-all duration-300">
+              <div className="w-[85%] h-[85%] bg-black border-2 border-[#D4AF37] rounded-3xl shadow-[0_0_60px_rgba(212,175,55,0.2)] overflow-hidden flex flex-col">
+                <div className="h-12 bg-black border-b border-[#D4AF37]/20 flex items-center justify-between px-8">
+                  <div className="flex items-center gap-4">
+                    <div className="w-2 h-2 bg-red-600 rounded-full animate-ping" />
+                    <span className="text-white font-black text-[10px] tracking-[0.3em] uppercase">Live Uplink // Source_0{activeCam}</span>
                   </div>
+                  <button 
+                    onClick={() => setActiveCam(null)} 
+                    className="text-[#D4AF37] hover:text-white font-black text-xs cursor-pointer px-4"
+                  >
+                    CLOSE_FEED [X]
+                  </button>
+                </div>
+                <div className="flex-1 bg-[#050505] relative flex items-center justify-center">
+                  {/* Animación de escaneo del style.css */}
+                  <div className="animate-scan" />
+                  <div className="text-[#D4AF37] text-[12px] font-mono animate-pulse tracking-[1em] uppercase">
+                    Establishing Secure Stream...
+                  </div>
+                  <div className="absolute bottom-10 left-10 opacity-20 font-mono text-[10px]">NIETO_LAB_023_EMERALD_DT</div>
                 </div>
               </div>
             </div>
