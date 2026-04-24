@@ -19,8 +19,4 @@ html, body {
   background-color: var(--background) !important;
   color: var(--foreground) !important;
   margin: 0 !important;
-  padding: 0 !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
