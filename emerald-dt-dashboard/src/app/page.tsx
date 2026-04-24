@@ -12,12 +12,7 @@ const DashboardCard = ({
 }: { 
   children: React.ReactNode, 
   className?: string, 
-  title?: string,
-  defaultCol?: string,
-  defaultRow?: string,
-  noClickExpand?: boolean
-}) => {
-  return (
+
     <div 
       className={`
         bg-black/60 border-white/10 backdrop-blur-xl rounded-2xl shadow-2xl border p-4 
