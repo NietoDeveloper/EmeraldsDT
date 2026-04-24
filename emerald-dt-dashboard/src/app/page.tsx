@@ -38,15 +38,3 @@ const DashboardCard = ({
   );
 };
 
-export default function DashboardPage() {
-  const [activeCam, setActiveCam] = useState<number | null>(null);
-
-  return (
-    <main className="flex h-screen w-screen overflow-hidden bg-[#020202] text-white font-sans relative">
-      
-      {/* SIDEBAR */}
-      <aside className="hidden lg:flex flex-col w-64 bg-black shrink-0 z-40 border-r border-white/5">
-        <div className="p-8 border-b border-white/5">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-[#D4AF37] rounded flex items-center justify-center text-black font-black text-xs shadow-[0_0_15px_rgba(212,175,55,0.3)]">E</div>
-            <span className="text-sm font-bold tracking-tighter uppercase italic">Emerald <span className="text-[#D4AF37]">DT</span></span>
