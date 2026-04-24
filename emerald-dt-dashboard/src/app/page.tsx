@@ -101,11 +101,7 @@ export default function DashboardPage() {
                     key={i} 
                     className="group flex items-center justify-between p-3 bg-white/5 border border-white/5 rounded-xl cursor-pointer hover:border-[#D4AF37]/50 transition-all"
                   >
-                    <div className="flex flex-col">
-                      <span className="text-[10px] font-bold text-white group-hover:text-[#D4AF37] transition-colors uppercase">
- 
-             
-            
+
     </main>
   );
 }
