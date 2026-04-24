@@ -12,11 +12,7 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  display: "swap",
-});
 
-    default: "Emerald DT | Control Center",
-    template: "%s | Emerald DT",
 
 
 
