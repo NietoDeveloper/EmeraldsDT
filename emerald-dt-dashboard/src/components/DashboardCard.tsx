@@ -19,9 +19,3 @@ export default function DashboardCard({
   expandedColSpan = "col-span-2",
   expandedRowSpan = "row-span-2",
   dark = false 
-}: DashboardCardProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  // Manejador de expansión
-
-}
