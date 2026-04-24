@@ -59,7 +59,3 @@ html, body {
 .text-gold { color: var(--gold-accent); }
 .bg-gold { background-color: var(--gold-accent); }
 .border-gold { border-color: var(--gold-accent); }
-
-.animate-scan {
-  animation: scanline 4s linear infinite;
-}
