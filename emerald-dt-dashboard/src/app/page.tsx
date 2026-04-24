@@ -70,13 +70,3 @@ export default function DashboardPage() {
 
         <div className="flex-1 p-6 relative">
           
-          <div className="h-full w-full grid grid-cols-10 grid-rows-6 gap-4">
-            
-            {/* 1. CAM LINKS: BOTONES NEGROS / LETRAS DORADAS */}
-            <DashboardCard title="Camera Uplinks" defaultCol="xl:col-span-2" defaultRow="row-span-2">
-              <div className="flex flex-col gap-2 h-full">
-                {[1, 2, 3].map((num) => (
-                  <button 
-                    key={num}
-                    onClick={() => setActiveCam(num)}
-                    className={`
