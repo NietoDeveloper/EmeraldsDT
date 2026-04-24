@@ -57,8 +57,3 @@ button,
 /* --- OPTIMIZACIÓN DE RENDIMIENTO --- */
 /* Suaviza los cambios de tamaño en el grid de Emerald DT */
 .grid {
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform, grid-template-columns, grid-template-rows;
-}
-
-/* --- CLASES DE UTILIDAD EMERALD DT --- */
