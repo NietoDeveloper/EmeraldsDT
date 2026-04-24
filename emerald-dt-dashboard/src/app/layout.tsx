@@ -48,12 +48,7 @@ export default function RootLayout({
       lang="es" 
       className={`${geistSans.variable} ${geistMono.variable} selection:bg-[#D4AF37]/40 selection:text-black`}
     >
-      <body
 
-      >
-        {/* Dashboard Root: El ancla del Zero-Scroll Architecture */}
-
-      </body>
     </html>
   );
 }
