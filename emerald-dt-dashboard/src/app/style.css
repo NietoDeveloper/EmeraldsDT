@@ -62,8 +62,3 @@ button,
 }
 
 /* --- CLASES DE UTILIDAD EMERALD DT --- */
-.text-gold { color: var(--gold-accent) !important; }
-.bg-gold { background-color: var(--gold-accent) !important; }
-.border-gold { border-color: var(--gold-accent) !important; }
-
-/* Efecto de cristal oscuro para las DashboardCards */
