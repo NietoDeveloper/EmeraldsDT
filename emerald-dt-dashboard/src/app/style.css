@@ -29,10 +29,3 @@ html, body {
 button, 
 [role="button"], 
 .cursor-pointer,
-.group {
-  cursor: pointer !important;
-}
-
-/* --- SCROLLBAR TÉCNICA (MINIMALISTA) --- */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 2px; /* Más fina aún para no ensuciar el grid */
