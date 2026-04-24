@@ -12,9 +12,9 @@
 
 /* --- RESET & ESTRUCTURA BASE --- */
 html, body {
-  height: 100% !important;
-  width: 100% !important;
-  overflow: hidden !important;
+  height: 100vh !important;
+  width: 100vw !important;
+  overflow: hidden !important; /* Bloqueo total de scroll global */
   background-color: var(--background) !important;
   color: var(--foreground) !important;
   margin: 0 !important;
@@ -22,90 +22,91 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* --- MOTOR DE SMART GRID (310px a 1900px) --- */
-/* Esta clase organiza los 15 componentes automáticamente */
+/* --- MOTOR DE SMART GRID (ZERO SCROLL ARCHITECTURE) --- */
 .smart-grid {
   display: grid;
-  /* Crea columnas dinámicas: mínimo 280px, máximo lo que de el ancho */
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  /* Altura base de los módulos */
-  grid-auto-rows: 180px; 
-  /* Rellena huecos de forma inteligente para que no queden espacios vacíos */
-  grid-auto-flow: dense; 
-  gap: 1.25rem;
-  padding: 1.5rem;
-  width: 100%;
+  /* El grid ocupa el 100% del espacio disponible sin desbordar */
   height: 100%;
-  overflow-y: auto;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+  
+  /* Layout dinámico: Se ajusta solo según el ancho de pantalla */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  
+  /* Dividimos la altura disponible en 6 filas iguales para forzar que quepa todo */
+  grid-template-rows: repeat(6, 1fr); 
+  grid-auto-flow: dense;
+  overflow: hidden; /* Garantiza que el grid mismo no scrollee */
 }
 
-/* Variantes de tamaño para los 15 componentes */
-.card-tall { grid-row: span 2; }
+/* Variantes de tamaño Proporcionales */
+.card-tall { grid-row: span 3; }
 .card-wide { grid-column: span 2; }
-.card-big { grid-column: span 2; grid-row: span 2; }
+.card-big { grid-column: span 2; grid-row: span 3; }
 
-/* Responsive extremo para móviles de 310px */
+/* Ajuste para monitores Ultra-Wide (1900px+) */
+@media (min-width: 1900px) {
+  .smart-grid {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Responsive extremo para móviles (310px) */
+/* En móviles pequeños habilitamos el scroll interno del grid para no romper el UI */
 @media (max-width: 640px) {
   .smart-grid {
     grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    padding: 1rem;
+    grid-auto-rows: minmax(150px, auto);
+    grid-template-rows: none;
+    overflow-y: auto; /* Solo scrollea en móviles si es necesario */
+    padding: 0.75rem;
   }
   .card-tall, .card-wide, .card-big {
     grid-column: span 1 !important;
     grid-row: span 1 !important;
-    min-height: 250px;
   }
 }
 
 /* --- BOTONES TRUE BLACK (BLINDADOS) --- */
-/* Forzamos que ningún botón herede blanco */
 button, .btn-emerald {
   background-color: #000000 !important;
   color: var(--gold-accent) !important;
-  border: 1px solid rgba(212, 175, 55, 0.3) !important;
-  transition: all 0.3s ease !important;
+  border: 1px solid rgba(212, 175, 55, 0.2) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
   cursor: pointer !important;
   text-transform: uppercase;
   font-weight: 900;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
+  font-size: 8px;
 }
 
-button:hover, .btn-emerald:hover {
+button:hover {
   background-color: var(--gold-accent) !important;
   color: #000000 !important;
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+  border-color: var(--gold-accent) !important;
 }
 
-/* --- CURSORES & INTERACTIVIDAD --- */
-[role="button"], .cursor-pointer, .group {
-  cursor: pointer !important;
-}
-
-/* --- SCROLLBAR TÉCNICA --- */
-.smart-grid::-webkit-scrollbar,
+/* --- SCROLLBAR TÉCNICA (SOLO PARA CONTENIDO INTERNO) --- */
 .custom-scrollbar::-webkit-scrollbar {
   width: 2px;
 }
 
-.smart-grid::-webkit-scrollbar-thumb,
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(212, 175, 55, 0.2);
+  background: rgba(212, 175, 55, 0.1);
   border-radius: 10px;
 }
 
-.smart-grid::-webkit-scrollbar-thumb:hover {
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: var(--gold-accent) !important;
 }
 
-/* --- CLASES DE UTILIDAD --- */
-.text-gold { color: var(--gold-accent) !important; }
-.bg-gold { background-color: var(--gold-accent) !important; }
-
-/* Animación Scanline */
+/* --- ANIMACIONES TÉCNICAS --- */
 @keyframes scanline {
   0% { transform: translateY(-100%); opacity: 0; }
-  50% { opacity: 1; }
+  50% { opacity: 0.5; }
   100% { transform: translateY(400%); opacity: 0; }
 }
 
@@ -116,4 +117,8 @@ button:hover, .btn-emerald:hover {
   width: 100%;
   position: absolute;
   z-index: 20;
+  pointer-events: none;
 }
+
+/* Utilidad para forzar el Negro Absoluto de Nieto Laboratory */
+.bg-true-black { background-color: #000000 !important; }
