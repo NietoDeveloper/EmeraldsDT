@@ -19,15 +19,6 @@ export const metadata: Metadata = {
   title: {
     default: "Emerald DT | Control Center",
     template: "%s | Emerald DT",
-  },
-  description: "High-performance industrial monitoring dashboard for Colombian Emeralds. Nieto Laboratory Ecosystem.",
-  icons: {
-    icon: "/favicon.ico",
-  },
-  robots: {
-    index: false,
-    follow: false,
-  },
-};
+
 
 
