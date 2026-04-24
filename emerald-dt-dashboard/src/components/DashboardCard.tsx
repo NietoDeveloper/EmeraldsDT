@@ -53,9 +53,7 @@ export default function DashboardCard({
 
       {/* Indicador de expansión en el hover */}
       {!isExpanded && (
-        <div className="absolute inset-0 bg-gold/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none flex items-center justify-center">
-          <span className="text-[8px] font-black text-gold uppercase tracking-widest">Click to Expand Control</span>
-        </div>
+
       )}
     </div>
   );
