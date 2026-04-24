@@ -108,12 +108,7 @@ export default function DashboardPage() {
                       <span className="text-[7px] text-[#D4AF37]/60 font-black uppercase tracking-widest mt-0.5">Premium Certified</span>
                     </div>
                     <div className="text-right">
-                      <div className="text-[10px] text-white font-black">{120 - i * 5}ct</div>
-                      <div className="text-[7px] text-white/30 uppercase font-mono">In Stock</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+             
             
     </main>
   );
