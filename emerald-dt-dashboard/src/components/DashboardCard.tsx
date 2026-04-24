@@ -15,7 +15,3 @@ export default function DashboardCard({
   children, 
   title, 
   defaultColSpan = "col-span-1", 
-  defaultRowSpan = "row-span-1",
-  expandedColSpan = "col-span-2",
-  expandedRowSpan = "row-span-2",
-  dark = false 
