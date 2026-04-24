@@ -116,11 +116,6 @@ export default function DashboardPage() {
               </div>
             </DashboardCard>
 
-            {/* 3. NODOS DE DATOS */}
-            <DashboardCard title="Revenue Stream" defaultCol="xl:col-span-2" />
-            <DashboardCard title="Uplink Health" defaultCol="xl:col-span-1" />
-            <DashboardCard title="Vault Status" defaultCol="xl:col-span-2" />
-            
             <DashboardCard title="Operational Logs" defaultCol="xl:col-span-5" defaultRow="row-span-2">
                <div className="font-mono text-[8px] text-white/40 space-y-1">
 
