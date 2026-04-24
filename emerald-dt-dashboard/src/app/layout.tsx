@@ -52,12 +52,7 @@ export default function RootLayout({
 
       >
         {/* Dashboard Root: El ancla del Zero-Scroll Architecture */}
-        <div 
-          id="dashboard-root" 
-          className="relative h-full w-full overflow-hidden flex flex-col bg-[radial-gradient(circle_at_top_right,_rgba(212,175,55,0.08),_transparent_50%)]"
-        >
-          {children}
-        </div>
+
       </body>
     </html>
   );
