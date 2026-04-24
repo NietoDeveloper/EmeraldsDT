@@ -9,8 +9,3 @@ const DashboardCard = ({
   defaultCol = "xl:col-span-1",
   defaultRow = "row-span-1",
 }: { 
-  children: React.ReactNode, 
-  className?: string, 
-  title?: string,
-  defaultCol?: string,
-  defaultRow?: string,
