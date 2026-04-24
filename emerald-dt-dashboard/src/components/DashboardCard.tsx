@@ -10,8 +10,3 @@ interface DashboardCardProps {
   expandedRowSpan?: string;
   dark?: boolean;
 }
-
-export default function DashboardCard({ 
-  children, 
-  title, 
-  defaultColSpan = "col-span-1", 
