@@ -85,16 +85,3 @@ export default function DashboardPage() {
                         ? 'bg-[#D4AF37] text-black border-[#D4AF37]' 
                         : 'bg-black text-[#D4AF37] border-[#D4AF37]/30 hover:bg-[#D4AF37]/10 hover:border-[#D4AF37]'}
                     `}
-                  >
-                    <span>UPLINK_0{num}</span>
-                    <div className={`w-1.5 h-1.5 rounded-full ${activeCam === num ? 'bg-black' : 'bg-green-500 animate-pulse'}`} />
-                  </button>
-                ))}
-              </div>
-            </DashboardCard>
-
-            {/* 2. ASSET MATRIX (INVENTARIO): TEXTO BLANCO / HOVER GOLD */}
-            <DashboardCard title="Asset Matrix" defaultCol="xl:col-span-3" defaultRow="row-span-6">
-              <div className="flex flex-col gap-2 h-full overflow-y-auto custom-scrollbar pr-2">
-                {[...Array(12)].map((_, i) => (
-                  <div 
