@@ -37,16 +37,6 @@ export default function DashboardCard({
     >
       {/* Header técnico */}
       <div className={`
-        px-3 py-2 border-b flex justify-between items-center shrink-0
-        ${dark ? 'bg-white/5 border-white/5' : 'bg-black/5 border-black/5'}
-      `}>
-        <h3 className={`text-[9px] font-black uppercase tracking-[0.2em] ${dark ? 'text-gold' : 'text-black/60'}`}>
-          {title}
-        </h3>
-        <div className={`w-1.5 h-1.5 rounded-full ${isExpanded ? 'bg-gold animate-ping' : 'bg-black/20'}`} />
 
-
-
-    </div>
   );
 }
