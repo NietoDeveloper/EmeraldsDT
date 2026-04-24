@@ -15,8 +15,6 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: {
     default: "Emerald DT | Control Center",
     template: "%s | Emerald DT",
 
