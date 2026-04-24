@@ -2,8 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Paleta Industrial Emerald DT - Optimizado para True Black */
-  --background: #020202; /* Negro absoluto */
-  --foreground: #ffffff;
-  --gold-accent: #D4AF37; /* Oro técnico */
