@@ -15,17 +15,4 @@ html, body {
   height: 100%;
   width: 100%;
   overflow: hidden; /* Garantiza el Zero Scroll Architecture */
-  background-color: var(--background);
-  color: var(--foreground);
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* --- SCROLLBAR TÉCNICA (MINIMALISTA) --- */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
-}
 
