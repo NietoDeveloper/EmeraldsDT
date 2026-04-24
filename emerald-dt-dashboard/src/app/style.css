@@ -10,9 +10,3 @@
   --emerald-accent: #047857;
   --zinc-border: rgba(255, 255, 255, 0.1);
 }
-
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden; /* Garantiza el Zero Scroll Architecture */
-
