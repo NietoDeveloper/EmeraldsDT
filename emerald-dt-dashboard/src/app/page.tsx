@@ -123,43 +123,7 @@ export default function DashboardPage() {
             
             <DashboardCard title="Operational Logs" defaultCol="xl:col-span-5" defaultRow="row-span-2">
                <div className="font-mono text-[8px] text-white/40 space-y-1">
-                  <p><span className="text-[#D4AF37]">[08:42]</span> SYSTEM_READY: NIETO_LABORATORY_ONLINE</p>
-                  <p><span className="text-[#D4AF37]">[08:43]</span> ENCRYPTING_DATA_PACKETS... DONE</p>
-                  <p><span className="text-[#D4AF37]">[08:45]</span> DRONE_FLEET_01_STANDBY</p>
-               </div>
-            </DashboardCard>
 
-            <DashboardCard title="Security" />
-            <DashboardCard title="Network" />
-          </div>
-
-          {/* 4. CAMERA FEED OVERLAY (Se activa al dar click en Uplinks) */}
-          {activeCam && (
-            <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm transition-all duration-300">
-              <div className="w-[85%] h-[85%] bg-black border-2 border-[#D4AF37] rounded-3xl shadow-[0_0_60px_rgba(212,175,55,0.2)] overflow-hidden flex flex-col">
-                <div className="h-12 bg-black border-b border-[#D4AF37]/20 flex items-center justify-between px-8">
-                  <div className="flex items-center gap-4">
-                    <div className="w-2 h-2 bg-red-600 rounded-full animate-ping" />
-                    <span className="text-white font-black text-[10px] tracking-[0.3em] uppercase">Live Uplink // Source_0{activeCam}</span>
-                  </div>
-                  <button 
-                    onClick={() => setActiveCam(null)} 
-                    className="text-[#D4AF37] hover:text-white font-black text-xs cursor-pointer px-4"
-                  >
-                    CLOSE_FEED [X]
-                  </button>
-                </div>
-                <div className="flex-1 bg-[#050505] relative flex items-center justify-center">
-                  {/* Animación de escaneo del style.css */}
-                  <div className="animate-scan" />
-                  <div className="text-[#D4AF37] text-[12px] font-mono animate-pulse tracking-[1em] uppercase">
-                    Establishing Secure Stream...
-                  </div>
-                  <div className="absolute bottom-10 left-10 opacity-20 font-mono text-[10px]">NIETO_LAB_023_EMERALD_DT</div>
-                </div>
-              </div>
-            </div>
-          )}
 
         </div>
       </section>
