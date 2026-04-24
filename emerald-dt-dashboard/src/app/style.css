@@ -67,8 +67,3 @@ button,
 .border-gold { border-color: var(--gold-accent) !important; }
 
 /* Efecto de cristal oscuro para las DashboardCards */
-.glass-card {
-  background: rgba(0, 0, 0, 0.8) !important;
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
