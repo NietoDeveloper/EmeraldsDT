@@ -44,12 +44,7 @@ export default function DashboardCard({
           {title}
         </h3>
         <div className={`w-1.5 h-1.5 rounded-full ${isExpanded ? 'bg-gold animate-ping' : 'bg-black/20'}`} />
-      </div>
 
-      {/* Contenido del componente */}
-      <div className="flex-1 relative overflow-hidden p-4">
-        {children}
-      </div>
 
       {/* Indicador de expansión en el hover */}
       {!isExpanded && (
