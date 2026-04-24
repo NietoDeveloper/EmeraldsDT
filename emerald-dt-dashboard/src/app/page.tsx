@@ -80,8 +80,3 @@ export default function DashboardPage() {
                     key={num}
                     onClick={() => setActiveCam(num)}
                     className={`
-                      w-full py-3 px-4 rounded-lg border text-[9px] font-black transition-all cursor-pointer flex items-center justify-between
-                      ${activeCam === num 
-                        ? 'bg-[#D4AF37] text-black border-[#D4AF37]' 
-                        : 'bg-black text-[#D4AF37] border-[#D4AF37]/30 hover:bg-[#D4AF37]/10 hover:border-[#D4AF37]'}
-                    `}
