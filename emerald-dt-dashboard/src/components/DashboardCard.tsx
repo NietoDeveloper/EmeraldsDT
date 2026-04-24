@@ -46,10 +46,7 @@ export default function DashboardCard({
         <div className={`w-1.5 h-1.5 rounded-full ${isExpanded ? 'bg-gold animate-ping' : 'bg-black/20'}`} />
 
 
-      {/* Indicador de expansión en el hover */}
-      {!isExpanded && (
 
-      )}
     </div>
   );
 }
