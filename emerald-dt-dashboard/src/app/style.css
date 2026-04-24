@@ -24,8 +24,3 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* --- CURSORES & INTERACTIVIDAD --- */
-/* Garantiza que todo lo que tenga un onClick o sea botón muestre la mano */
-button, 
-[role="button"], 
-.cursor-pointer,
