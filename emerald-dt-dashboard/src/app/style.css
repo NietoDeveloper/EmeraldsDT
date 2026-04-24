@@ -15,8 +15,3 @@
 html, body {
   height: 100% !important;
   width: 100% !important;
-  overflow: hidden !important; /* Zero Scroll Architecture */
-  background-color: var(--background) !important;
-  color: var(--foreground) !important;
-  margin: 0 !important;
-
