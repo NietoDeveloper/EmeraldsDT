@@ -77,10 +77,3 @@ button,
   border-color: rgba(212, 175, 55, 0.4) !important;
   box-shadow: 0 0 20px rgba(212, 175, 55, 0.05);
 }
-
-/* Animación para el escáner de telemetría de video */
-@keyframes scanline {
-  0% { transform: translateY(-100%); opacity: 0; }
-  50% { opacity: 1; }
-  100% { transform: translateY(400%); opacity: 0; }
-}
