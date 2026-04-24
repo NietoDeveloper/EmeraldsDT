@@ -98,10 +98,3 @@ export default function DashboardPage() {
               <div className="flex flex-col gap-2 h-full overflow-y-auto custom-scrollbar pr-2">
                 {[...Array(12)].map((_, i) => (
                   <div 
-                    key={i} 
-                    className="group flex items-center justify-between p-3 bg-white/5 border border-white/5 rounded-xl cursor-pointer hover:border-[#D4AF37]/50 transition-all"
-                  >
-
-    </main>
-  );
-}
