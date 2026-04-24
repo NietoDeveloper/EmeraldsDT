@@ -14,8 +14,3 @@ const DashboardCard = ({
   title?: string,
   defaultCol?: string,
   defaultRow?: string,
-}) => {
-  return (
-    <div 
-      className={`
-        bg-black border border-white/10 rounded-2xl p-4 
