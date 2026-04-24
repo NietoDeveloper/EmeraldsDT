@@ -114,14 +114,7 @@ export default function DashboardPage() {
                   </div>
                 ))}
               </div>
-            </DashboardCard>
-
-            <DashboardCard title="Operational Logs" defaultCol="xl:col-span-5" defaultRow="row-span-2">
-               <div className="font-mono text-[8px] text-white/40 space-y-1">
-
-
-        </div>
-      </section>
+            
     </main>
   );
 }
