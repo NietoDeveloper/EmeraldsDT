@@ -19,8 +19,3 @@ const DashboardCard = ({
     <div 
       className={`
         bg-black border border-white/10 rounded-2xl p-4 
-        flex flex-col transition-all duration-500 ease-in-out
-        hover:shadow-[0_0_30px_rgba(212,175,55,0.1)] hover:border-[#D4AF37]/40 group relative overflow-hidden 
-        ${defaultCol} ${defaultRow}
-        ${className}
-
