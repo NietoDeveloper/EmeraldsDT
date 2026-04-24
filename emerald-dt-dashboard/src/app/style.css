@@ -2,8 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Paleta Industrial Emerald DT - Optimizado para True Black */
-  --background: #020202; /* Negro profundo para contraste máximo */
-  --foreground: #ffffff;
 
