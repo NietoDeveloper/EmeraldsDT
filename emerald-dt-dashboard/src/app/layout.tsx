@@ -54,9 +54,6 @@ export default function RootLayout({
           font-sans 
           bg-[#020202] 
           text-white
-          overflow-hidden 
-          h-screen 
-
           m-0
           p-0
           tracking-tight
