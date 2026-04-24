@@ -103,11 +103,7 @@ export default function DashboardPage() {
                   >
                     <div className="flex flex-col">
                       <span className="text-[10px] font-bold text-white group-hover:text-[#D4AF37] transition-colors uppercase">
-                        Emerald_Item_0{i+1}
-                      </span>
-                      <span className="text-[7px] text-[#D4AF37]/60 font-black uppercase tracking-widest mt-0.5">Premium Certified</span>
-                    </div>
-                    <div className="text-right">
+ 
              
             
     </main>
