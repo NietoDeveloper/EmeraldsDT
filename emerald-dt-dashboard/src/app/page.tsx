@@ -23,18 +23,4 @@ const DashboardCard = ({
         hover:shadow-[0_0_30px_rgba(212,175,55,0.1)] hover:border-[#D4AF37]/40 group relative overflow-hidden 
         ${defaultCol} ${defaultRow}
         ${className}
-      `}
-    >
-      {title && (
-        <h3 className="text-[9px] font-black uppercase tracking-[0.3em] mb-4 flex items-center gap-2 text-[#D4AF37]">
-          <span className="w-1 h-1 bg-[#D4AF37] rounded-full" />
-          {title}
-        </h3>
-      )}
-      <div className="flex-1 relative overflow-hidden">
-        {children}
-      </div>
-    </div>
-  );
-};
 
