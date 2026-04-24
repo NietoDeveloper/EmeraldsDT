@@ -84,12 +84,3 @@ button,
   50% { opacity: 1; }
   100% { transform: translateY(400%); opacity: 0; }
 }
-
-.animate-scan {
-  animation: scanline 4s linear infinite;
-  background: linear-gradient(to bottom, transparent, var(--gold-accent), transparent);
-  height: 2px;
-  width: 100%;
-  position: absolute;
-  z-index: 20;
-}
