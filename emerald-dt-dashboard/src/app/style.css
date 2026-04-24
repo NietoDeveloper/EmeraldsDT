@@ -54,8 +54,3 @@ html, body {
 #dashboard-root {
   perspective: 1000px;
 }
-
-/* --- CLASES DE UTILIDAD EMERALD DT --- */
-.text-gold { color: var(--gold-accent); }
-.bg-gold { background-color: var(--gold-accent); }
-.border-gold { border-color: var(--gold-accent); }
