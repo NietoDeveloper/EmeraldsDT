@@ -56,8 +56,7 @@ export default function RootLayout({
           text-white
           overflow-hidden 
           h-screen 
-          w-screen
-          fixed
+
           m-0
           p-0
           tracking-tight

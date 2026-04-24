@@ -1,1 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+:root {
+  /* Paleta Industrial Emerald DT - Optimizado para True Black */
+  --background: #020202; /* Negro absoluto */
+  --foreground: #ffffff;
+  --gold-accent: #D4AF37; /* Oro técnico */
+  --emerald-accent: #047857;
+  --zinc-border: rgba(255, 255, 255, 0.1);
+}
+
+/* --- RESET & ESTRUCTURA BASE --- */
+html, body {
+  height: 100% !important;
+  width: 100% !important;
+  overflow: hidden !important; /* Zero Scroll Architecture */
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- CURSORES & INTERACTIVIDAD --- */
+/* Garantiza que todo lo que tenga un onClick o sea botón muestre la mano */
+button, 
+[role="button"], 
+.cursor-pointer,
+.group {
+  cursor: pointer !important;
+}
+
+/* --- SCROLLBAR TÉCNICA (MINIMALISTA) --- */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 2px; /* Más fina aún para no ensuciar el grid */
+  height: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.15); /* Oro muy sutil */
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-accent) !important;
+  box-shadow: 0 0 8px var(--gold-accent);
+}
+
+/* --- OPTIMIZACIÓN DE RENDIMIENTO --- */
+/* Suaviza los cambios de tamaño en el grid de Emerald DT */
+.grid {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, grid-template-columns, grid-template-rows;
+}
+
+/* --- CLASES DE UTILIDAD EMERALD DT --- */
+.text-gold { color: var(--gold-accent) !important; }
+.bg-gold { background-color: var(--gold-accent) !important; }
+.border-gold { border-color: var(--gold-accent) !important; }
+
+/* Efecto de cristal oscuro para las DashboardCards */
+.glass-card {
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card:hover {
+  border-color: rgba(212, 175, 55, 0.4) !important;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.05);
+}
+
+/* Animación para el escáner de telemetría de video */
+@keyframes scanline {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(400%); opacity: 0; }
+}
+
+.animate-scan {
+  animation: scanline 4s linear infinite;
+  background: linear-gradient(to bottom, transparent, var(--gold-accent), transparent);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  z-index: 20;
+}
