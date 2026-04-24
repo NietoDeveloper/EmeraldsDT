@@ -72,8 +72,3 @@ button,
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
-
-.glass-card:hover {
-  border-color: rgba(212, 175, 55, 0.4) !important;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.05);
-}
