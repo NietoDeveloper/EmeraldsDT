@@ -50,8 +50,3 @@ export default function DashboardPage() {
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-[#D4AF37] rounded flex items-center justify-center text-black font-black text-xs shadow-[0_0_15px_rgba(212,175,55,0.3)]">E</div>
             <span className="text-sm font-bold tracking-tighter uppercase italic">Emerald <span className="text-[#D4AF37]">DT</span></span>
-          </div>
-        </div>
-        <nav className="flex-1 px-4 py-8 space-y-1">
-          {["Overview", "Inventory", "Drones", "Vault"].map((text, i) => (
-            <div key={i} className={`h-10 w-full rounded-lg flex items-center px-4 transition-all cursor-pointer text-[9px] font-black uppercase tracking-widest ${i === 1 ? 'bg-[#D4AF37] text-black' : 'text-white/40 hover:text-white hover:bg-white/5'}`}>
