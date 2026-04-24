@@ -23,10 +23,5 @@ export default function DashboardCard({
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Manejador de expansión
-  const toggleExpand = () => setIsExpanded(!isExpanded);
 
-  return (
-    <div 
-
-  );
 }
