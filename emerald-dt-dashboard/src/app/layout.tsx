@@ -1,0 +1,76 @@
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./style.css";
+
+// Fuentes de alto rendimiento
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: "Emerald DT | Control Center",
+    template: "%s | Emerald DT",
+  },
+  description: "High-performance industrial monitoring dashboard for Colombian Emeralds. Nieto Laboratory Ecosystem.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: "#000000",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html 
+      lang="es" 
+      className={`${geistSans.variable} ${geistMono.variable} selection:bg-[#D4AF37]/40 selection:text-white`}
+    >
+      <body
+        className="
+          antialiased 
+          font-sans 
+          bg-[#020202] 
+          text-white
+          overflow-hidden 
+          h-screen 
+          w-screen
+          fixed
+          m-0
+          p-0
+          tracking-tight
+        "
+      >
+        {/* Dashboard Root: Zero-Scroll Architecture con gradiente técnico */}
+        <div 
+          id="dashboard-root" 
+          className="relative h-full w-full overflow-hidden flex flex-col bg-[radial-gradient(circle_at_top_right,_rgba(212,175,55,0.05),_transparent_50%)]"
+        >
+          {children}
+        </div>
+      </body>
+    </html>
+  );
+}
