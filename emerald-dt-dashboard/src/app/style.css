@@ -29,18 +29,3 @@ html, body {
   height: 3px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(212, 175, 55, 0.2);
-  border-radius: 10px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: var(--gold-accent);
-  box-shadow: 0 0 10px var(--gold-accent);
-}
-
-/* --- OPTIMIZACIÓN DE RENDIMIENTO --- */
