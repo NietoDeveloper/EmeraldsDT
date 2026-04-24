@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #020202;
+  --foreground: #ffffff;
+  --gold-accent: #D4AF37;
+  --emerald-accent: #047857;
+  --zinc-border: rgba(255, 255, 255, 0.1);
+}
+
+/* --- RESET & ESTRUCTURA BASE --- */
+html, body {
+  height: 100% !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- MOTOR DE SMART GRID (310px a 1900px) --- */
+/* Esta clase organiza los 15 componentes automáticamente */
+.smart-grid {
+  display: grid;
+  /* Crea columnas dinámicas: mínimo 280px, máximo lo que de el ancho */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  /* Altura base de los módulos */
+  grid-auto-rows: 180px; 
+  /* Rellena huecos de forma inteligente para que no queden espacios vacíos */
+  grid-auto-flow: dense; 
+  gap: 1.25rem;
+  padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Variantes de tamaño para los 15 componentes */
+.card-tall { grid-row: span 2; }
+.card-wide { grid-column: span 2; }
+.card-big { grid-column: span 2; grid-row: span 2; }
+
+/* Responsive extremo para móviles de 310px */
+@media (max-width: 640px) {
+  .smart-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    padding: 1rem;
+  }
+  .card-tall, .card-wide, .card-big {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+    min-height: 250px;
+  }
+}
+
+/* --- BOTONES TRUE BLACK (BLINDADOS) --- */
+/* Forzamos que ningún botón herede blanco */
+button, .btn-emerald {
+  background-color: #000000 !important;
+  color: var(--gold-accent) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+button:hover, .btn-emerald:hover {
+  background-color: var(--gold-accent) !important;
+  color: #000000 !important;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+/* --- CURSORES & INTERACTIVIDAD --- */
+[role="button"], .cursor-pointer, .group {
+  cursor: pointer !important;
+}
+
+/* --- SCROLLBAR TÉCNICA --- */
+.smart-grid::-webkit-scrollbar,
+.custom-scrollbar::-webkit-scrollbar {
+  width: 2px;
+}
+
+.smart-grid::-webkit-scrollbar-thumb,
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+}
+
+.smart-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-accent) !important;
+}
+
+/* --- CLASES DE UTILIDAD --- */
+.text-gold { color: var(--gold-accent) !important; }
+.bg-gold { background-color: var(--gold-accent) !important; }
+
+/* Animación Scanline */
+@keyframes scanline {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(400%); opacity: 0; }
+}
+
+.animate-scan {
+  animation: scanline 4s linear infinite;
+  background: linear-gradient(to bottom, transparent, var(--gold-accent), transparent);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  z-index: 20;
+}
