@@ -60,13 +60,3 @@ export default function DashboardPage() {
           ))}
         </nav>
       </aside>
-
-      <section className="flex-1 flex flex-col h-full relative z-10">
-        <header className="h-16 border-b border-white/5 flex items-center px-8 shrink-0">
-          <h1 className="text-[10px] font-black uppercase tracking-[0.5em] text-[#D4AF37]">
-            Panel de control Emerald DT
-          </h1>
-        </header>
-
-        <div className="flex-1 p-6 relative">
-          
