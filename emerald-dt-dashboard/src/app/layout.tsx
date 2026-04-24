@@ -46,9 +46,6 @@ export default function RootLayout({
   return (
     <html 
       lang="es" 
-      className={`${geistSans.variable} ${geistMono.variable} selection:bg-[#D4AF37]/40 selection:text-black`}
-    >
 
-    </html>
   );
 }
