@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 export const connectDB = async () => {
-  try {
+  tr
     const conn = await mongoose.conrocess.env.MONGO_URI || '');
     console.log(`📡 Cluster Alphnectado: ${conn.connion.host}`);
   } catch
