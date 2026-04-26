@@ -1,4 +1,4 @@
 import mongoose from 'mongoose';
 
-export const c
+export c
     console.log
