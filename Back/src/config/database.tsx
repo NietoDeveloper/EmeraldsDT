@@ -1,4 +1,3 @@
-import mongoose from 'mongoose';
-
+import mongoose from 'mongo
 export c
     console.log
