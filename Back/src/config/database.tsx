@@ -4,4 +4,4 @@ export const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI || '');
     console.log(`📡 Cluster Alpha Conectado: ${conn.connection.host}`);
-  } catch (er
+  } catch
