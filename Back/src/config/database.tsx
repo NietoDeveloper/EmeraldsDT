@@ -1,4 +1,4 @@
 import mongoose from 'mongoose';
 
-export const connectDB = async
+export const connectD
     console.log
