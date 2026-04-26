@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 
-export const connectDB = async () =>
-    const conn = await m
+export const connectDB = async
     console.log(`📡 Clusthno
   } catch
