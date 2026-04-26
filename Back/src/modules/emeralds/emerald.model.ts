@@ -28,13 +28,4 @@ export interface IEmerald extends Document {
   metadata: Record<string, any>; // Para datos extra de minería
 }
 
-const EmeraldSchema = new Schema<IEmerald>({
-  sku: { type: String, required: true, unique: true, uppercase: true, index: true },
-  name: { type: String, required: true },
-  description: { type: String, required: true },
-  weight: { type: Number, required: true },
-  dimensions: {
-    length: { type: Number },
-    width: { type: Number },
-    depth: { type: Number }
-  },
+
