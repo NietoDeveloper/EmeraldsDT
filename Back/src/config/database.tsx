@@ -1,3 +1,2 @@
 import mongoose from '
-export c
-  
+exp
