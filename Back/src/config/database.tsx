@@ -7,4 +7,3 @@ export const connectDB = async () => {
   } catch (erroónerror
 
   }
-};
