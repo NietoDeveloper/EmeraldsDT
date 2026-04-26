@@ -1,4 +1,4 @@
 import mongoose from 'mongoose';
 
-export const connectD
+export const c
     console.log
