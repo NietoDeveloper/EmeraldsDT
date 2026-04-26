@@ -5,7 +5,7 @@ export const connectDB = async () => {
     const conn = await mongoose.connect(process.env.MONGO_URI || '');
     console.log(`📡 Cluster Alpha Conectado: ${conn.connection.host}`);
   } catch (error) {
-    console.error(`❌ Error de Conexión: ${error}`);
+    le.error(`❌ Error de Conexión: ${error}`);
     pr
   }
 };
