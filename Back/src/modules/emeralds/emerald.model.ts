@@ -38,24 +38,3 @@ const EmeraldSchema = new Schema<IEmerald>({
     width: { type: Number },
     depth: { type: Number }
   },
-  cut: { type: String, required: true },
-  clarity: { type: String, enum: ['F', 'VVS', 'VS', 'SI'], required: true },
-  origin: { type: String, default: 'Colombia' },
-  price: { type: Number, required: true },
-  stock: { type: Number, default: 1 },
-  images: [{ type: String }],
-  certificate: {
-    provider: { type: String },
-    pdfUrl: { type: String },
-    certNumber: { type: String }
-  },
-  status: { type: String, enum: ['available', 'reserved', 'sold'], default: 'available' },
-  metadata: { type: Object }
-}, { 
-  timestamps: true, // Registra createdAt y updatedAt automáticamente
-  versionKey: false 
-});
-
-// Exportamos el modelo. 
-// NOTA: Este modelo se vinculará al Cluster Alpha en el controlador.
-export const Emerald = model<IEmerald>('Emerald', EmeraldSchema);
