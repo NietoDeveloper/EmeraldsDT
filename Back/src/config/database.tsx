@@ -6,6 +6,6 @@ export const connectDB = async () => {
     console.log(`📡 Cluster Alpha Conectado: ${conn.connection.host}`);
   } catch (error) {
     console.error(`❌ Error de Conexión: ${error}`);
-    process.exit(1);
+    process.exit
   }
 };
