@@ -110,9 +110,6 @@ const EmeraldSchema = new Schema<IEmerald>({
     }
 
 
-/**
- * MIDDLEWARE: Generación automática de Slug y Limpieza de SKU
-
 
 
 export const Emerald = model<IEmerald>('Emerald', EmeraldSchema);
