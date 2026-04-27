@@ -25,8 +25,7 @@ export const validateEmeraldData = (req: Request, res: Response, next: NextFunct
 
     // 3. Integridad Financiera
     if (!financials || financials.price < 0) {
-        return res.status(400).json({
-            status: 'REJECTED',
+    
             reason: 'Financial Failure: Asset price cannot be negative.'
         });
     }
