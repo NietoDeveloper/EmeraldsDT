@@ -24,10 +24,6 @@ export const validateEmeraldData = (req: Request, res: Response, next: NextFunct
 
         });
 
-    next(); // Si pasa el filtro de La Constrictor, continúa al controlador
-};
 
-
-        next();
     };
 };
