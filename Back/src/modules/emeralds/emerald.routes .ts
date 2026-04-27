@@ -68,11 +68,4 @@ const EmeraldSchema = new Schema<IEmerald>({
   slug: { type: String, lowercase: true, unique: true },
   description: { type: String, required: true },
   
-  specifications: {
-    weight: { type: Number, required: true, min: 0.01 },
-    dimensions: {
-      length: { type: Number, required: true },
-      width: { type: Number, required: true },
-      depth: { type: Number, required: true }
-    },
-    cut: { type: String, required: true },
+ String, required: true },
