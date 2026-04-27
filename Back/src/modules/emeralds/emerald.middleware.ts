@@ -27,11 +27,7 @@ export const validateEmeraldData = (req: Request, res: Response, next: NextFunct
     next(); // Si pasa el filtro de La Constrictor, continúa al controlador
 };
 
-/**
 
-export const checkStockAvailability = (stockRequired: number) => {
-    return (req: Request, res: Response, next: NextFunction) => {
-        // Esta lógica se expandirá cuando conectemos la venta
         next();
     };
 };
