@@ -112,9 +112,7 @@ const EmeraldSchema = new Schema<IEmerald>({
 
 /**
  * MIDDLEWARE: Generación automática de Slug y Limpieza de SKU
- */
-EmeraldSchema.pre('save', function(next) {
-  if (this.isModified('name')) {
+
 
 
 export const Emerald = model<IEmerald>('Emerald', EmeraldSchema);
