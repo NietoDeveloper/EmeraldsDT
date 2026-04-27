@@ -108,11 +108,6 @@ const EmeraldSchema = new Schema<IEmerald>({
       certNumber: { type: String, unique: true, sparse: true },
       issueDate: { type: Date }
     }
-  },
-
-  audit: {
-    createdBy: { type: Schema.Types.ObjectId, ref: 'User' },
-    lastUpdatedBy: { type: Schema.Types.ObjectId, ref: 'User' }
 
 
 /**
