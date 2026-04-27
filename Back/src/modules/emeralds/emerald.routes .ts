@@ -98,11 +98,3 @@ const EmeraldSchema = new Schema<IEmerald>({
     },
     location: { type: String, default: 'Bogotá Vault' }
   },
-
-ertificate: {
-
-
-
-
-
-export const Emerald = model<IEmerald>('Emerald', EmeraldSchema);
