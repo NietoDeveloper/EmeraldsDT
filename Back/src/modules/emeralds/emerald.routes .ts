@@ -103,11 +103,7 @@ const EmeraldSchema = new Schema<IEmerald>({
     images: [{ type: String }],
     videoUrl: { type: String },
     certificate: {
-      provider: { type: String, enum: ['GIA', 'CDTEC', 'GRS', 'GUEBELIN'] },
-      pdfUrl: { type: String },
-      certNumber: { type: String, unique: true, sparse: true },
-      issueDate: { type: Date }
-    }
+
 
 
 
