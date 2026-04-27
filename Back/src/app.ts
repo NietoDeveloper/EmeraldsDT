@@ -43,20 +43,3 @@ app.get('/api/health', (req: Request, res: Response) => {
     } catch (error) {
         res.status(503).json({ 
             status: 'DEGRADED', 
-            message: 'Database Manager not initialized' 
-        });
-    }
-});
-
-// Root Endpoint
-app.get('/', (_req: Request, res: Response) => {
-  res.status(200).json({ 
-    status: 'Operational', 
-    service: 'Emerald DT Security Cluster',
-    mode: 'Atomic-Proof/Standalone',
-    engineer: 'Software DT',
-    version: "1.0.0"
-  });
-});
-
-export default app;
