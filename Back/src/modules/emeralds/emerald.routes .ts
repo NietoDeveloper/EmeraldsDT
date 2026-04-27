@@ -55,17 +55,3 @@ export interface IEmerald extends Document {
   metadata: Record<string, any>;
 }
 
-const EmeraldSchema = new Schema<IEmerald>({
-  sku: { 
-    type: String, 
-    required: [true, 'SKU is mandatory for asset tracking'], 
-    unique: true, 
-    uppercase: true, 
-    trim: true,
-    index: true 
-  },
-  name: { type: String, required: true, trim: true },
-  slug: { type: String, lowercase: true, unique: true },
-  description: { type: String, required: true },
-  
- String, required: true },
