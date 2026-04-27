@@ -45,13 +45,4 @@ export interface IEmerald extends Document {
       provider: 'GIA' | 'CDTEC' | 'GRS' | 'GUEBELIN';
       pdfUrl: string;
       certNumber: string;
-      issueDate?: Date;
-    };
-  };
-  audit: {
-    createdBy: Types.ObjectId;
-    lastUpdatedBy?: Types.ObjectId;
-  };
-  metadata: Record<string, any>;
-}
 
