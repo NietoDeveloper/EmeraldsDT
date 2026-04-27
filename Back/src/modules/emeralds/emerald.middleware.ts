@@ -1,4 +1,1 @@
-import { Request, Response, NextFunction } from 'express';
-
-/**
- * 🛰️ LA CONSTRICTOR - PROTOCOLO DE VALIDACIÓN S+
+🛰️ LA CONSTRICTOR - PROTOCOLO DE VALIDACIÓN S+
