@@ -10,12 +10,6 @@ import { v4 as uuidv4 } from 'uuid';
 
 class StorageService {
     private isProduction: boolean = process.env.NODE_ENV === 'production';
-    private localPath: string = path.resolve('uploads/emeralds');
-
-    constructor() {
-        this.init();
-    }
-
 
 
 
