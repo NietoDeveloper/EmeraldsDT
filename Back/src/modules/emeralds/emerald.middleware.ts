@@ -22,9 +22,6 @@ export const validateEmeraldData = (req: Request, res: Response, next: NextFunct
             reason: 'Technical Failure: Weight (carats) must be a positive value.'
         });
     }
-
-    // 3. Integridad Financiera
-    if (!financials || financials.price < 0) {
     
             reason: 'Financial Failure: Asset price cannot be negative.'
         });
