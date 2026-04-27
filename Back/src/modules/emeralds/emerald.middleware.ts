@@ -12,9 +12,6 @@ export const validateEmeraldData = (req: Request, res: Response, next: NextFunct
         return res.status(400).json({
             status: 'REJECTED',
             reason: 'Invalid SKU: Minimum 5 characters required for tracking.'
-        });
-    }
-
 
  
 
