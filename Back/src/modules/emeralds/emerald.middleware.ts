@@ -25,11 +25,6 @@ export const validateEmeraldData = (req: Request, res: Response, next: NextFunct
     
             reason: 'Financial Failure: Asset price cannot be negative.'
         });
-    }
-
-    // 4. Sanitización de Datos
-    req.body.sku = sku.toUpperCase().trim();
-    req.body.name = name.trim();
 
     next(); // Si pasa el filtro de La Constrictor, continúa al controlador
 };
