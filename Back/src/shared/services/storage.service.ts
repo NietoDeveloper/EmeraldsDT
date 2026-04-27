@@ -34,23 +34,7 @@ class StorageService {
      */
     public async uploadFile(file: Express.Multer.File, folder: string = 'assets'): Promise<string> {
         if (this.isProduction) {
-            // TODO: Implementar lógica de AWS SDK cuando La Constrictor pase a Prod
-            return `https://s3.amazonaws.com/emerald-dt-bucket/${folder}/${file.filename}`;
-        } else {
-            // Lógica Local para Desarrollo
-            const fileExtension = path.extname(file.originalname);
-            const fileName = `${uuidv4()}${fileExtension}`;
-            const targetPath = path.join(this.localPath, fileName);
 
-            try {
-                await fs.writeFile(targetPath, file.buffer);
-                // Retornamos la ruta relativa para acceso vía URL
-                return `/uploads/emeralds/${fileName}`;
-            } catch (error) {
-                console.error('💥 Storage Error:', error);
-                throw new Error('Falla crítica en el sistema de archivos local.');
-            }
-        }
     }
 
 
