@@ -95,6 +95,3 @@ const EmeraldSchema = new Schema<IEmerald>({
       enum: ['available', 'reserved', 'sold', 'vault'], 
       default: 'available',
       index: true 
-    },
-    location: { type: String, default: 'Bogotá Vault' }
-  },
