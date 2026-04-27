@@ -1,16 +1,20 @@
-# --- EMERALD DT - SECURITY CLUSTER IGNORE ---
+# 💎 EMERALD DT - SECURITY CLUSTER IGNORE (NIETO LABORATORY)
+# -----------------------------------------------------------
 
-# Dependencias
+# Core Dependencies
 node_modules/
 jspm_packages/
+.pnp*
+.yarn/
 
-# Compilación (TypeScript output)
+# Performance & Build Output
 dist/
 build/
 out/
 tsconfig.tsbuildinfo
+*.tsbuildinfo
 
-# Variables de Entorno (CRÍTICO: Nunca subir esto)
+# 🛡️ ARCHIVOS DE ALTA SENSIBILIDAD (CRÍTICO)
 .env
 .env.local
 .env.development.local
@@ -18,15 +22,27 @@ tsconfig.tsbuildinfo
 .env.production.local
 .env.secure
 *.env
+*.pem
+*.key
+cert.json
 
-# Logs
+# 🐍 ASSET STORAGE (LA CONSTRICTOR EXCLUSIVE)
+# Evita que las imágenes y certificados locales pesen en el repo
+uploads/
+uploads/emeralds/
+uploads/certificates/
+# Permitir solo el archivo .gitkeep si quieres mantener la estructura vacía
+!uploads/.gitkeep
+
+# Logs & Monitoring
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 logs/
 *.log
+heartbeat-error.log
 
-# IDEs y Editores
+# IDEs y Entornos de Desarrollo
 .vscode/
 .idea/
 *.suo
@@ -36,15 +52,18 @@ logs/
 *.sw?
 .DS_Store
 
-# Docker & OS
+# Docker & Containerization
 .docker/
+docker-compose.override.yml
 Thumbs.db
 ehthumbs.db
 
-# Testing
+# Quality Control & Testing
 coverage/
 .nyc_output
+.eslintcache
 
-# Archivos Temporales
+# Temporary & Cache
 .tmp/
 .cache/
+.vercel
