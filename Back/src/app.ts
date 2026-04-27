@@ -33,13 +33,3 @@ app.get('/api/health', (req: Request, res: Response) => {
         const { public: publicDB, secure: secureDB } = dbManager.getConnections();
         
         res.status(200).json({ 
-            status: 'ONLINE', 
-            timestamp: new Date().toISOString(),
-            node: 'Emerald DT Core',
-            uptime: process.uptime(),
-            db_alpha: publicDB.readyState === 1 ? 'CONNECTED' : 'CONNECTING',
-            db_omega: secureDB.readyState === 1 ? 'CONNECTED' : 'CONNECTING'
-        });
-    } catch (error) {
-        res.status(503).json({ 
-            status: 'DEGRADED', 
