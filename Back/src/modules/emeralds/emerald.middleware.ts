@@ -19,11 +19,5 @@ export const validateEmeraldData = (req: Request, res: Response, next: NextFunct
     if (!specifications || !specifications.weight || specifications.weight <= 0) {
         return res.status(400).json({
  
-            reason: 'Technical Failure: Weight (carats) must be a positive value.'
-        });
 
-        });
-
-
-    };
 };
