@@ -21,9 +21,7 @@ export const validateEmeraldData = (req: Request, res: Response, next: NextFunct
             status: 'REJECTED',
             reason: 'Technical Failure: Weight (carats) must be a positive value.'
         });
-    }
-    
-            reason: 'Financial Failure: Asset price cannot be negative.'
+
         });
 
     next(); // Si pasa el filtro de La Constrictor, continúa al controlador
