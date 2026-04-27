@@ -12,37 +12,3 @@ import { Schema, model, Document, Types } from 'mongoose';
 
 export interface IEmerald extends Document {
   sku: string;
-  name: string;
-  slug: string; // URL-friendly version of name
-  description: string;
-  specifications: {
-    weight: number;      // Exact Carats
-    dimensions: {
-      length: number;
-      width: number;
-      depth: number;
-    };
-    cut: string;
-    clarity: 'F' | 'VVS' | 'VS' | 'SI' | 'I';
-    colorIntensity: string; // Vivid, Deep, Light
-    origin: 'Muzo' | 'Chivor' | 'Coscuez' | 'Gachalá' | 'Other';
-    treatment: 'None' | 'Minor' | 'Moderate' | 'Significant';
-  };
-  financials: {
-    price: number;
-    currency: string;
-    discountPrice?: number;
-  };
-  inventory: {
-    stock: number;
-    status: 'available' | 'reserved' | 'sold' | 'vault';
-    location: string;    // Physical vault location
-  };
-  assets: {
-    images: string[];    // S3 Secure Links
-    videoUrl?: string;   // S3 Secure Link
-    certificate: {
-      provider: 'GIA' | 'CDTEC' | 'GRS' | 'GUEBELIN';
-      pdfUrl: string;
-      certNumber: string;
-
