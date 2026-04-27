@@ -99,10 +99,7 @@ const EmeraldSchema = new Schema<IEmerald>({
     location: { type: String, default: 'Bogotá Vault' }
   },
 
-  assets: {
-    images: [{ type: String }],
-    videoUrl: { type: String },
-    certificate: {
+ertificate: {
 
 
 
