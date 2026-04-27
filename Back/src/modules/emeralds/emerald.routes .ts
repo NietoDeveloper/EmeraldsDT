@@ -113,13 +113,7 @@ const EmeraldSchema = new Schema<IEmerald>({
   audit: {
     createdBy: { type: Schema.Types.ObjectId, ref: 'User' },
     lastUpdatedBy: { type: Schema.Types.ObjectId, ref: 'User' }
-  },
 
-  metadata: { type: Object }
-}, { 
-  timestamps: true, 
-  versionKey: false 
-});
 
 /**
  * MIDDLEWARE: Generación automática de Slug y Limpieza de SKU
