@@ -18,7 +18,7 @@ export const validateEmeraldData = (req: Request, res: Response, next: NextFunct
     // 2. Validación de Especificaciones Técnicas (La Constrictor no admite errores)
     if (!specifications || !specifications.weight || specifications.weight <= 0) {
         return res.status(400).json({
-            status: 'REJECTED',
+ 
             reason: 'Technical Failure: Weight (carats) must be a positive value.'
         });
 
