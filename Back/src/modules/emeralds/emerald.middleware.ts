@@ -7,9 +7,6 @@ import { Request, Response, NextFunction } from 'express';
 export const validateEmeraldData = (req: Request, res: Response, next: NextFunction) => {
     const { sku, name, specifications, financials } = req.body;
 
-    // 1. Verificación de Identidad del Activo (SKU)
-    if (!sku || sku.length < 5) {
-
  
 
 };
