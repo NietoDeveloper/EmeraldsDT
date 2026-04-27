@@ -16,26 +16,6 @@ class StorageService {
         this.init();
     }
 
-    private async init() {
-        // Asegura que el nido de almacenamiento local exista en desarrollo
-        if (!this.isProduction) {
-            try {
-                await fs.access(this.localPath);
-            } catch {
-                await fs.mkdir(this.localPath, { recursive: true });
-                console.log('📂 [Storage Service]: Directorio local creado.');
-            }
-        }
-    }
-
-    /**
-     * @method uploadFile
-     * @description Guarda archivos (imágenes/certificados) en el almacenamiento activo.
-     */
-    public async uploadFile(file: Express.Multer.File, folder: string = 'assets'): Promise<string> {
-        if (this.isProduction) {
-
-    }
 
 
 
