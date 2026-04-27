@@ -39,9 +39,7 @@ export const validateEmeraldData = (req: Request, res: Response, next: NextFunct
 };
 
 /**
- * 🛡️ CONTROL DE INVENTARIO (Stock Check)
- * Asegura que no se vendan activos inexistentes.
- */
+
 export const checkStockAvailability = (stockRequired: number) => {
     return (req: Request, res: Response, next: NextFunction) => {
         // Esta lógica se expandirá cuando conectemos la venta
