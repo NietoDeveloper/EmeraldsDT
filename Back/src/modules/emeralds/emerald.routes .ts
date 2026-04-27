@@ -76,22 +76,3 @@ const EmeraldSchema = new Schema<IEmerald>({
       depth: { type: Number, required: true }
     },
     cut: { type: String, required: true },
-    clarity: { type: String, enum: ['F', 'VVS', 'VS', 'SI', 'I'], required: true },
-    colorIntensity: { type: String, required: true },
-    origin: { type: String, enum: ['Muzo', 'Chivor', 'Coscuez', 'Gachalá', 'Other'], required: true },
-    treatment: { type: String, enum: ['None', 'Minor', 'Moderate', 'Significant'], default: 'None' }
-  },
-
-  financials: {
-    price: { type: Number, required: true, min: 0 },
-    currency: { type: String, default: 'USD', uppercase: true },
-    discountPrice: { type: Number, min: 0 }
-  },
-
-  inventory: {
-    stock: { type: Number, default: 1, min: 0 },
-    status: { 
-      type: String, 
-      enum: ['available', 'reserved', 'sold', 'vault'], 
-      default: 'available',
-      index: true 
