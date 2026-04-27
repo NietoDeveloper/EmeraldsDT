@@ -115,8 +115,6 @@ const EmeraldSchema = new Schema<IEmerald>({
  */
 EmeraldSchema.pre('save', function(next) {
   if (this.isModified('name')) {
-    this.slug = this.name.split(' ').join('-').toLowerCase();
-();
-});
+
 
 export const Emerald = model<IEmerald>('Emerald', EmeraldSchema);
