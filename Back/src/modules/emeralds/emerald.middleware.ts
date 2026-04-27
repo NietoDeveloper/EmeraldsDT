@@ -9,9 +9,6 @@ export const validateEmeraldData = (req: Request, res: Response, next: NextFunct
 
     // 1. Verificación de Identidad del Activo (SKU)
     if (!sku || sku.length < 5) {
-        return res.status(400).json({
-            status: 'REJECTED',
-            reason: 'Invalid SKU: Minimum 5 characters required for tracking.'
 
  
 
