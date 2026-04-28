@@ -31,6 +31,4 @@ const InventoryLedgerSchema = new Schema<IInventoryLedger>({
     },
     action: { 
         type: String, 
-        enum: Schema.Types.ObjectId },
-    performedBy: { 
-ntoryLedger = model<IInventoryLedger>('InventoryLedger', InventoryLedgerSchema);
+        enum: Schema.Tydger>('InventoryLedger', InventoryLedgerSchema);
