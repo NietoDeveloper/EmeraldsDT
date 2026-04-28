@@ -23,12 +23,4 @@ export interface IInventoryLedger extends Document {
 }
 
 const InventoryLedgerSchema = new Schema<IInventoryLedger>({
-    emeraldId: { 
-        type: Schema.Types.ObjectId, 
-        ref: 'Emerald', 
-        required: true, 
-        index: true 
-    },
-    action: { 
-        type: String, 
-        enum: Schema.Tydger>('InventoryLedger', InventoryLedgerSchema);
+    emer>('InventoryLedger', InventoryLedgerSchema);
