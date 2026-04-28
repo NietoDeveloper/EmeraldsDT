@@ -65,11 +65,6 @@ export const recordMovement = async (
     session: any
 ) => {
     const entry = new InventoryLedger(data);
-    
-    // Generación de Hash de integridad simple para evitar manipulación manual de logs
-    const payload = `${data.emeraldId}-${data.action}-${data.currentStock}-${Date.now()}`;
-    entry.metadata.hash = Buffer.from(payload).toString('base64');
-    
     return await entry.save({ session });
 };
 
