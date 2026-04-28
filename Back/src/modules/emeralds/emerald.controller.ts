@@ -97,18 +97,7 @@ export const getAllEmeralds = async (req: Request, res: Response) => {
 
 // 3. CONSULTA DETALLADA POR SLUG (READ ONE)
 export const getEmeraldBySlug = async (req: Request, res: Response) => {
-    try {
-        const { slug } = req.params;
-        const emerald = await Emerald.findOne({ slug });
 
-        if (!emerald) {
-            return res.status(404).json({ status: 'NOT_FOUND', message: 'Asset not located' });
-        }
-
-        res.status(200).json({ status: 'SUCCESS', data: emerald });
-    } catch (error: any) {
-        res.status(500).json({ status: 'ERROR', message: error.message });
-    }
 };
 
 
