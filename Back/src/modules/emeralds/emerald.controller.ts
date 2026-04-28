@@ -63,16 +63,3 @@ export const createEmerald = async (req: Request, res: Response) => {
             data: newEmerald
         });
 
-    } catch (error: any) {
-        await session.abortTransaction();
-        // 🛡️ RECOVERY PROTOCOL: Si la DB falla, borramos los archivos recién subidos
-        for (const url of uploadedFiles) {
-            await storageService.deleteAsset(url);
-        }
-
-        res.status(500).json({
-            status: 'CRITICAL_FAILURE',
-            origin: 'CONSTRICTOR_PIPELINE',
-            details: error.message
-        });
-    } finally {
