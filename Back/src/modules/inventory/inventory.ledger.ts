@@ -57,15 +57,6 @@ const InventoryLedgerSchema = new Schema<IInventoryLedger>({
 InventoryLedgerSchema.index({ emeraldId: 1, createdAt: -1 });
 
 /**
- * ⚡ L6 ATOMIC ENGINE
- * Este servicio debe ejecutarse dentro de una transacción de Mongoose
- */
-export const recordMovement = async (
-    data: Partial<IInventoryLedger>, 
-    session: any
-) => {
-    const entry = new InventoryLedger(data);
-    return await entry.save({ session });
-};
+
 
 export const InventoryLedger = model<IInventoryLedger>('InventoryLedger', InventoryLedgerSchema);
