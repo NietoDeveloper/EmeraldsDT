@@ -31,13 +31,6 @@ const InventoryLedgerSchema = new Schema<IInventoryLedger>({
     },
     action: { 
         type: String, 
-        enum: ['INLET', 'RESERVE', 'SALE', 'ADJUSTMENT', 'RETURN'], 
-        required: true 
-    },
-    quantity: { type: Number, required: true },
-    previousStock: { type: Number, required: true },
-    currentStock: { type: Number, required: true },
-    reason: { type: String, required: true },
-    referenceId: { type: Schema.Types.ObjectId },
+        enum: Schema.Types.ObjectId },
     performedBy: { 
 ntoryLedger = model<IInventoryLedger>('InventoryLedger', InventoryLedgerSchema);
