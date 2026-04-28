@@ -135,15 +135,4 @@ export const updateEmerald = async (req: Request, res: Response) => {
 export const deleteEmerald = async (req: Request, res: Response) => {
     try {
 
-
-
-        await Emerald.findByIdAndDelete(id);
-
-        res.status(200).json({
-            status: 'SUCCESS',
-            message: 'Asset and associated files purged safely'
-        });
-    } catch (error: any) {
-        res.status(500).json({ status: 'ERROR', message: error.message });
-    }
 };
