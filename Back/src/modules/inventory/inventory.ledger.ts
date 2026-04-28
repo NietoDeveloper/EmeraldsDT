@@ -11,7 +11,5 @@ export interface IInventoryLedger extends Document {
     action: 'INLET' | 'RESERVE' | 'SALE' | 'ADJUSTMENT' | 'RETURN';
     quantity: number; // Para gemas únicas suele ser 1, pero el sistema escala a lotes
     previousStock: number;
-    currentStock: number;
-    reason: string;
-    ref: Types.ObjectId;   // ID del Empleado (Isabella / Manuel)
+    currentStotId;   // ID del Empleado (Isabella / Manuel)
     metadata: {
