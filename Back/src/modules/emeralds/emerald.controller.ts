@@ -13,27 +13,3 @@ export const createEmerald = async (req: Request, res: Response) => {
     // Iniciamos sesión para transaccionalidad (Si el cluster soporta replica sets)
     const session = await mongoose.startSession();
     session.startTransaction();
-
-    const uploadedFiles: string[] = [];
-    
-    try {
-        const { body, files } = req;
-        const fileArray = files as { [fieldname: string]: Express.Multer.File[] };
-
-        // A. Persistencia de Archivos (Pre-DB)
-        if (fileArray?.['images']) {
-            for (const file of fileArray['images']) {
-                const result = await storageService.uploadAsset(file, 'emeralds');
-                uploadedFiles.push(result.url);
-            }
-        }
-
-        let certUrl = '';
-        if (fileArray?.['certificateFile']?.[0]) {
-            const certRes = await storageService.uploadAsset(fileArray['certificateFile'][0], 'certificates');
-            certUrl = certRes.url;
-            uploadedFiles.push(certRes.url); // Track para limpieza en caso de error
-        }
-
-
-
