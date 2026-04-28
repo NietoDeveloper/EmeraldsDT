@@ -35,21 +35,5 @@ export const createEmerald = async (req: Request, res: Response) => {
             uploadedFiles.push(certRes.url); // Track para limpieza en caso de error
         }
 
-        // B. Estructuración de Data L6
-        const emeraldData = {
-            ...body,
-            slug: body.name ? body.name.toLowerCase().split(' ').join('-') : undefined,
-            assets: {
-                images: uploadedFiles.filter(url => url.includes('/emeralds/')),
-                certificate: {
-                    ...body.assets?.certificate,
-                    pdfUrl: certUrl || body.assets?.certificate?.pdfUrl
-                }
-            },
-            inventory: {
-                ...body.inventory,
-                lastStockUpdate: new Date()
-            }
-        };
 
 
