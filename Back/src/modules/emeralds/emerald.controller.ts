@@ -111,10 +111,6 @@ export const getEmeraldBySlug = async (req: Request, res: Response) => {
     }
 };
 
-// 4. ACTUALIZACIÓN DE ACTIVO (UPDATE)
-export const updateEmerald = async (req: Request, res: Response) => {
-
-};
 
 // 5. ELIMINACIÓN ATÓMICA (DELETE)
 export const deleteEmerald = async (req: Request, res: Response) => {
