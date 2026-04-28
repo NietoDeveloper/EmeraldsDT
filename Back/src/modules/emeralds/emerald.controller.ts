@@ -141,12 +141,7 @@ export const deleteEmerald = async (req: Request, res: Response) => {
             return res.status(404).json({ status: 'NOT_FOUND', message: 'Delete failed' });
         }
 
-        // Limpieza de nido: Eliminar archivos físicos antes de borrar de Atlas
-        if (emerald.assets.images) {
-            for (const imgPath of emerald.assets.images) {
-                await storageService.deleteAsset(imgPath);
-            }
-        }
+
 
         await Emerald.findByIdAndDelete(id);
 
