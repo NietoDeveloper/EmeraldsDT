@@ -117,12 +117,5 @@ export const getAllEmeralds = async (req: Request, res: Response) => {
 export const updateEmerald = async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
-        
-        // Nivel L6: Usamos findByIdAndUpdate con proyecciones para evitar tráfico innecesario
-        const updated = await Emerald.findByIdAndUpdate(
-            id,
-            { 
-                $set: { ...req.body, 'inventory.lastStockUpdate': new Date() },
-                $inc: { __v: 1 } // Tracking de versiones de documento
-            },
+
 };
