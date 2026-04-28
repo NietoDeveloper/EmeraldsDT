@@ -94,28 +94,3 @@ export const getAllEmeralds = async (req: Request, res: Response) => {
                 ...(maxPrice && { $lte: Number(maxPrice) }) 
             };
         }
-
-        const emeralds = await Emerald.find(query)
-            .limit(Number(limit))
-            .skip((Number(page) - 1) * Number(limit))
-            .sort({ createdAt: -1 })
-            .lean(); // Nivel L6: .lean() para mayor velocidad de lectura
-
-        const total = await Emerald.countDocuments(query);
-
-        res.status(200).json({
-            status: 'SUCCESS',
-            meta: { total, page: Number(page), pages: Math.ceil(total / Number(limit)) },
-            data: emeralds
-        });
-    } catch (error: any) {
-        res.status(500).json({ status: 'FETCH_ERROR', details: error.message });
-    }
-};
-
-// 3. ACTUALIZACIÓN DE INVENTARIO EN TIEMPO REAL (PATCH/UPDATE)
-export const updateEmerald = async (req: Request, res: Response) => {
-    try {
-        const { id } = req.params;
-
-};
