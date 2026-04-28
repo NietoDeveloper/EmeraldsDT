@@ -113,22 +113,7 @@ export const getEmeraldBySlug = async (req: Request, res: Response) => {
 
 // 4. ACTUALIZACIÓN DE ACTIVO (UPDATE)
 export const updateEmerald = async (req: Request, res: Response) => {
-    try {
-        const { id } = req.params;
-        const updatedEmerald = await Emerald.findByIdAndUpdate(
-            id, 
-            { $set: req.body }, 
-            { new: true, runValidators: true }
-        );
 
-        if (!updatedEmerald) {
-            return res.status(404).json({ status: 'NOT_FOUND', message: 'Update failed: Asset missing' });
-        }
-
-        res.status(200).json({ status: 'SUCCESS', data: updatedEmerald });
-    } catch (error: any) {
-        res.status(500).json({ status: 'ERROR', message: error.message });
-    }
 };
 
 // 5. ELIMINACIÓN ATÓMICA (DELETE)
