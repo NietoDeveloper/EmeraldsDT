@@ -40,15 +40,4 @@ const InventoryLedgerSchema = new Schema<IInventoryLedger>({
     reason: { type: String, required: true },
     referenceId: { type: Schema.Types.ObjectId },
     performedBy: { 
-        type: Schema.Types.ObjectId, 
-        ref: 'User', 
-        required: true 
-    },
-    metadata: {
-        location: { type: String, default: 'Bogotá Vault' },
-        hash: { type: String }
-    }
-
-
-
-export const InventoryLedger = model<IInventoryLedger>('InventoryLedger', InventoryLedgerSchema);
+ntoryLedger = model<IInventoryLedger>('InventoryLedger', InventoryLedgerSchema);
