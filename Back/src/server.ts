@@ -4,81 +4,128 @@ import app from './app';
 import { dbManager } from './config/database';
 import { socketService } from './shared/services/socket.service';
 
+/**
+ * 🛰️ EMERALD DT - CORE INFRASTRUCTURE S+
+ * ENGINEER: Manuel Nieto (Committers #1 Colombia)
+ * VERSION : 1.0.0 (Atomic-Proof)
+ */
+
 const PORT = Number(process.env.PORT) || 4000;
 const HOST = '0.0.0.0';
 
-/**
- * 🚀 ARRANQUE DE INFRAESTRUCTURA CORE S+ - EMERALD DT
- * Versión L6: Implementación de S WebSockets)
- */
+// Códigos de color para la terminal
+const gold = '\x1b[33m';
+const green = '\x1b[32m';
+const cyan = '\x1b[36m';
+const red = '\x1b[31m';
+const reset = '\x1b[0m';
+const bold = '\x1b[1m';
+
 const startServer = async () => {
     try {
-    lusters Alpha y Omega
+        /**
+         * 1. 💎 ESTABILIZACIÓN DE DATACENTERS (ATLAS)
+         * Se establecen los túneles hacia los Clusters Alpha y Omega.
+         */
         const { public: publicDB, secure: secureDB } = await dbManager.connect();
 
-        // 2. Creación del Servidor HTTP (Requerido para Sockets L6)
+        /**
+         * 2. ⚡ HYBRID SERVER ENGINE (L6)
+         * Envolvemos Express en un servidor HTTP nativo para habilitar WebSockets.
+         */
         const httpServer = http.createServer(app);
 
-        // 3. Inicialización del Motor de Sockets (La Constrictor Engine)
+        /**
+         * 3. 🐍 LA CONSTRICTOR - REALTIME PROTOCOL
+         * Inicialización del servicio de telemetría de inventarios.
+         */
         socketService.init(httpServer);
 
-        // 4. Apertura de Canales de Comunicación
-        httpServer.listen(PORT, HOST, () => {
-            const gold = '\x1b[33m';
-            const green = '\x1b[32m';
-            const cyan = '\x1b[36m';
-            const reset = '\x1b[0m';
-            const bold = '\x1b[1m';
-            
+        /**
+         * 4. 🚀 BOOT-UP SEQUENCE
+         */
+        const server = httpServer.listen(PORT, HOST, () => {
             const doubleLine = '═'.repeat(65);
             const singleLine = '─'.repeat(65);
 
             console.log(`\n${gold}${doubleLine}${reset}`);
-            console.log(`${green}${bold}  🛰️  EMERALD DT CORE - INFRAESTRUCTURA NIVEL S+ ACTIVA${reset}`);
+            console.log(`${green}${bold}   🛰️  EMERALD DT CORE - INFRAESTRUCTURA NIVEL S+ ACTIVA${reset}`);
             console.log(`${gold}${doubleLine}${reset}`);
-            console.log(`  ${cyan}👤 ARCHITECT${reset}  : Manuel Nieto (Committers #1 Colombia)`);
-            console.log(`  ${cyan}🌐 NETWORK${reset}    : Protocolo HTTP/WS | Host: ${HOST} | Port: ${PORT}`);
-            console.log(`  ${cyan}🛡️  SECURITY${reset}   : JWT-Bearer & Multi-Cluster Enabled`);
+            console.log(`   ${cyan}👤 ARCHITECT${reset}   : Manuel Nieto (Committers #1 Colombia)`);
+            console.log(`   ${cyan}🌐 NETWORK${reset}     : Protocolo HTTP/WS | Host: ${HOST} | Port: ${PORT}`);
+            console.log(`   ${cyan}🛡️  SECURITY${reset}    : JWT-Bearer & Multi-Cluster L6 Enabled`);
             console.log(`${gold}${singleLine}${reset}`);
-            console.log(`  ${gold}📊 DATACENTERS STATUS (BOGOTÁ):${reset}`);
-            console.log(`    ├─ 💎 Cluster Alpha (Public) : [${publicDB.readyState === 1 ? green+'CONNECTED'+reset : gold+'CONNECTING'+reset}]`);
-            console.log(`    └─ 🛡️ Cluster Omega (Secure) : [${secureDB.readyState === 1 ? green+'CONNECTED'+reset : gold+'CONNECTING'+reset}]`);
+            console.log(`   ${gold}📊 DATACENTERS STATUS (BOGOTÁ):${reset}`);
+            console.log(`     ├─ 💎 Cluster Alpha (Public) : [${publicDB.readyState === 1 ? green + 'CONNECTED' + reset : gold + 'CONNECTING' + reset}]`);
+            console.log(`     └─ 🛡️ Cluster Omega (Secure) : [${secureDB.readyState === 1 ? green + 'CONNECTED' + reset : gold + 'CONNECTING' + reset}]`);
             console.log(`${gold}${doubleLine}${reset}\n`);
         });
 
         /**
-         * ⚠️ GESTIÓN DE ERRORES DE CLUSTER Y REJECTIONS
+         * ⚠️ EVENT LISTENERS: INFRASTRUCTURE HEALTH
          */
-        publicDB.on('error', err => console.error('\n❌ Cluster Alpha Error:', err));
-        secureDB.on('error', err => console.error('\n❌ Cluster Omega Error:', err));
+        publicDB.on('error', err => console.error(`\n${red}❌ Cluster Alpha Error:${reset}`, err));
+        secureDB.on('error', err => console.error(`\n${red}❌ Cluster Omega Error:${reset}`, err));
 
+        // Captura de errores asíncronos fuera de los bloques try-catch
         process.on('unhandledRejection', (reason) => {
-            console.error('\n⚠️ SDT Async Rejection:', reason);
+            console.error(`\n${red}⚠️  SDT Async Rejection Encountered:${reset}`, reason);
         });
 
-        // Manejo de apagado gracioso (Graceful Shutdown) - Práctica L6
-        process.on('SIGTERM', () => {
-            console.log('\n🛑 SIGTERM RECIBIDO: Cerrando infraestructura...');
-            httpServer.close(() => {
-                dbManager.getConnections().public.close();
-                dbManager.getConnections().secure.close();
-                process.exit(0);
-            });
+        process.on('uncaughtException', (err) => {
+            console.error(`\n${red}💥 FATAL EXCEPTION DETECTED:${reset}`, err.message);
+            // Salida de emergencia en caso de excepción no controlada
+            process.exit(1);
         });
 
         /**
-         * 💓 HEARTBEAT (Software DT Standard)
+         * 🛑 GRACEFUL SHUTDOWN PROTOCOL (Nivel Industrial)
+         * Asegura que el servidor no "mate" transacciones en curso al apagarse.
+         */
+        const gracefulShutdown = (signal: string) => {
+            console.log(`\n${gold}🛑 [${signal}] RECIBIDO: Iniciando purga segura de procesos...${reset}`);
+            
+            server.close(async () => {
+                console.log(`   ${cyan}├─ Sockets & HTTP:${reset} Offlines`);
+                
+                try {
+                    await publicDB.close();
+                    await secureDB.close();
+                    console.log(`   ${cyan}├─ DataClusters:${reset} Disconnected`);
+                    console.log(`   ${green}└─ Shutdown Status:${reset} Success\n`);
+                    process.exit(0);
+                } catch (err) {
+                    console.error(`${red}Error durante el cierre de DB:${reset}`, err);
+                    process.exit(1);
+                }
+            });
+        };
+
+        process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
+        process.on('SIGINT', () => gracefulShutdown('SIGINT'));
+
+        /**
+         * 💓 TELEMETRÍA Y HEARTBEAT (Software DT Standard)
+         * Monitoreo de memoria y estado de la red cada 60 segundos.
          */
         setInterval(() => {
-            // Verificamos si el servidor HTTP está activo
-            const timestamp = new Date().toLocaleTimeString();
-            process.stdout.write(`\r \x1b[33m💓\x1b[0m [${timestamp}] Emerald DT Core: Sincronizado`);
+            if (server.listening) {
+                const timestamp = new Date().toLocaleTimeString();
+                const usedMemory = Math.round(process.memoryUsage().heapUsed / 1024 / 1024 * 100) / 100;
+                
+                process.stdout.write(
+                    `\r \x1b[33m💓\x1b[0m [${timestamp}] ${bold}Emerald DT Core:${reset} Sincronizado | RAM: ${usedMemory} MB | Node: ${process.version}`
+                );
+            }
         }, 60000);
 
     } catch (err: any) {
-        console.error('\n💥 CRITICAL INFRASTRUCTURE FAILURE:', err.message);
+        console.error(`\n${red}💥 CRITICAL INFRASTRUCTURE FAILURE:${reset}`, err.message);
         process.exit(1);
     }
 };
 
+/**
+ * ⚡ INVOCACIÓN DEL CLUSTER
+ */
 startServer();
