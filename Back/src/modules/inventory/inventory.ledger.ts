@@ -16,8 +16,3 @@ export interface IInventoryLedger extends Document {
     referenceId?: Types.ObjectId; // ID de la Venta o Ticket de Soporte
     performedBy: Types.ObjectId;   // ID del Empleado (Isabella / Manuel)
     metadata: {
-        location: string;
-        hash?: string; // Para integridad criptográfica de la transacción
-    };
-    timestamp: Date;
-}entoryLedgerSchema);
