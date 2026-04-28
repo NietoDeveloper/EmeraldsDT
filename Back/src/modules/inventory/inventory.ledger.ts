@@ -20,7 +20,4 @@ export interface IInventoryLedger extends Document {
         hash?: string; // Para integridad criptográfica de la transacción
     };
     timestamp: Date;
-}
-
-const InventoryLedgerSchema = new Schema<IInventoryLedger>({
-    emer>('InventoryLedger', InventoryLedgerSchema);
+}entoryLedgerSchema);
