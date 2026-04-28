@@ -52,14 +52,4 @@ export const createEmerald = async (req: Request, res: Response) => {
             }
         };
 
-        const newEmerald = new Emerald(emeraldData);
-        await newEmerald.save({ session });
-
-        await session.commitTransaction();
-        
-        res.status(201).json({
-            status: 'SUCCESS',
-            node: 'ALPHA_CLUSTER',
-            data: newEmerald
-        });
 
