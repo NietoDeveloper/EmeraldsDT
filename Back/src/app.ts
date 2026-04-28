@@ -1,4 +1,4 @@
-import express, { Application, Request, Response } from 'express';
+import express, { Application, Request, Response, NextFunction } from 'express';
 import path from 'path';
 import helmet from 'helmet';
 import cors from 'cors';
@@ -7,35 +7,36 @@ import cookieParser from 'cookie-parser';
 import corsOptions from './config/corsOptions.js';
 import { dbManager } from './config/database'; 
 
-// Inyección de rutas de dominio
+// 🛰️ Inyección de Rutas de Dominio (Cluster Alpha & Omega)
 import emeraldRoutes from './modules/emeralds/emerald.routes';
+import inventoryRoutes from './modules/inventory/inventory.routes';
 
 const app: Application = express();
 
-// 1. Security & Logging
-// Nota: CSP desactivado para permitir carga de imágenes locales en el Dashboard
+// 1. 🛡️ Security & Monitoring Layer
+// CSP desactivado para permitir renderizado de assets locales en dashboards
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(cors(corsOptions));
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 
-// 2. Parsers & Active Storage Access
-app.use(express.json({ limit: '20mb' })); // Incrementado para assets de alta calidad
-app.use(express.urlencoded({ extended: false }));
+// 2. 🗄️ Data Parsing & Static Assets
+app.use(express.json({ limit: '20mb' })); // S+ Rank: Soporte para buffers de alta resolución
+app.use(express.urlencoded({ extended: false, limit: '20mb' }));
 app.use(cookieParser());
 
 /**
- * 🐍 LA CONSTRICTOR - STATIC ASSET DELIVERY
- * Expone la carpeta de archivos para que las esmeraldas y certificados 
- * sean visibles vía URL en el Laboratory y en el Dashboard.
+ * 🐍 STATIC ASSET DELIVERY
+ * Punto de acceso para fotos de esmeraldas y certificados GIA/CDTEC
  */
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
-// 3. Domain API Routes
+// 3. 🛣️ API Routes Pipeline
 app.use('/api/v1/emeralds', emeraldRoutes);
+app.use('/api/v1/inventory', inventoryRoutes);
 
 /**
  * 🛠️ HEALTH CHECK (Nivel S+)
- * Monitoreo en tiempo real de la infraestructura Core
+ * Monitoreo de latencia y estado de doble cluster en tiempo real
  */
 app.get('/api/health', (req: Request, res: Response) => {
     try {
@@ -59,7 +60,7 @@ app.get('/api/health', (req: Request, res: Response) => {
 
 /**
  * 🚀 ROOT ENDPOINT - SOFTWARE DT STANDARD
- * Mantiene la identidad técnica del Security Cluster.
+ * Mantiene la identidad técnica del Security Cluster
  */
 app.get('/', (_req: Request, res: Response) => {
   res.status(200).json({ 
@@ -69,6 +70,21 @@ app.get('/', (_req: Request, res: Response) => {
     engineer: 'Software DT',
     version: "1.0.0"
   });
+});
+
+/**
+ * 💥 GLOBAL ERROR HANDLER (L6 Practice)
+ * Captura fallos en el pipeline y evita fugas de información
+ */
+app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+    const statusCode = err.statusCode || 500;
+    console.error(`\x1b[31m[Critical Error]: ${err.message}\x1b[0m`);
+    
+    res.status(statusCode).json({
+        status: 'CRITICAL_ERROR',
+        message: err.message || 'Internal Server Fault',
+        stack: process.env.NODE_ENV === 'production' ? '🛡️' : err.stack
+    });
 });
 
 export default app;
