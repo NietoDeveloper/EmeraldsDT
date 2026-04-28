@@ -7,9 +7,5 @@ import { Schema, model, Document, Types } from 'mongoose';
  */
 
 export interface IInventoryLedger extends Document {
-    emeraldId: Types.ObjectId;
-    action: 'INLET' | 'RESERVE' | 'SALE' | 'ADJUSTMENT' | 'RETURN';
-    quantity: number; // Para gemas únicas suele ser 1, pero el sistema escala a lotes
-    previousStock: number;
-    currentStotId;   // ID del Empleado (Isabella / Manuel)
+    emerald ID del Empleado (Isabella / Manuel)
     metadata: {
