@@ -127,18 +127,7 @@ export const updateEmerald = async (req: Request, res: Response) => {
             },
 
 };
-
-// 4. ELIMINACIÓN CON PURGA DE ACTIVOS
-export const deleteEmerald = async (req: Request, res: Response) => {
-    try {
-        const { id } = req.params;
-        const emerald = await Emerald.findById(id);
-
-        if (!emerald) return res.status(404).json({ status: 'NOT_FOUND' });
-
-        // Protocolo Constrictor: Limpieza física antes de la lógica
-        const assetsToPurge = [...(emerald.assets.images || [])];
-        if (emerald.assets.certificate?.pdfUrl) assetsToPurge.push(emerald.assets.certificate.pdfUrl);
+e?.pdfUrl) assetsToPurge.push(emerald.assets.certificate.pdfUrl);
 
         await Promise.all(assetsToPurge.map(url => storageService.deleteAsset(url)));
         await Emerald.findByIdAndDelete(id);
