@@ -13,6 +13,5 @@ export interface IInventoryLedger extends Document {
     previousStock: number;
     currentStock: number;
     reason: string;
-    referenceId?: Types.ObjectId; // ID de la Venta o Ticket de Soporte
-    performedBy: Types.ObjectId;   // ID del Empleado (Isabella / Manuel)
+    ref: Types.ObjectId;   // ID del Empleado (Isabella / Manuel)
     metadata: {
