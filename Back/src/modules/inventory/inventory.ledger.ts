@@ -48,15 +48,7 @@ const InventoryLedgerSchema = new Schema<IInventoryLedger>({
         location: { type: String, default: 'Bogotá Vault' },
         hash: { type: String }
     }
-}, { 
-    timestamps: true, 
-    versionKey: false 
-});
 
-// Índice compuesto para auditorías rápidas por gema y fecha
-InventoryLedgerSchema.index({ emeraldId: 1, createdAt: -1 });
-
-/**
 
 
 export const InventoryLedger = model<IInventoryLedger>('InventoryLedger', InventoryLedgerSchema);
