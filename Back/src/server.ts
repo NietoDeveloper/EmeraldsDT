@@ -9,11 +9,11 @@ const HOST = '0.0.0.0';
 
 /**
  * 🚀 ARRANQUE DE INFRAESTRUCTURA CORE S+ - EMERALD DT
- * Versión L6: Implementación de Servidor Híbrido (HTTP + WebSockets)
+ * Versión L6: Implementación de S WebSockets)
  */
 const startServer = async () => {
     try {
-        // 1. Estabilización de Clusters Alpha y Omega
+    lusters Alpha y Omega
         const { public: publicDB, secure: secureDB } = await dbManager.connect();
 
         // 2. Creación del Servidor HTTP (Requerido para Sockets L6)
