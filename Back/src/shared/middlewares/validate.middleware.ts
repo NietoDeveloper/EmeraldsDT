@@ -10,21 +10,7 @@ export const validate = (schema: AnyZodObject) =>
         try {
             // Validamos body, query y params según el esquema
             await schema.parseAsync(req.body);
-            next();
-        } catch (error) {
-            if (error instanceof ZodError) {
-                // Formateamos los errores para que sean legibles por el Front/Dashboard
-                const errorDetails = error.errors.map(err => ({
-                    field: err.path.join('.'),
-                    message: err.message
-                }));
 
-                return res.status(400).json({
-                    status: 'VALIDATION_FAILED',
-                    origin: 'ZOD_SHIELD',
-                    errors: errorDetails
-                });
-            }
 
             // Error inesperado
             return res.status(500).json({
