@@ -96,12 +96,7 @@ router.put(
 
 /**
  * ⚠️ PROTOCOLO DE ELIMINACIÓN (Safe Mode)
- * Solo disponible para nivel S+ Admin
- */
-router.delete(
-    '/decommission/:id', 
-    catchAsync(deleteEmerald)
-);
+
 
 
 export default router;
