@@ -16,22 +16,7 @@ export const slugify = (text: string): string => {
     .toString()
     .toLowerCase()
     .trim()
-    // 1. Normalización NFD: separa caracteres combinados (ej: 'é' -> 'e' + '´')
-    .normalize('NFD')
-    // 2. Elimina diacríticos (acentos y tildes) usando el rango Unicode de bloques de combinación
-    .replace(/[\u0300-\u036f]/g, '')
-    // 3. Reemplaza la 'ñ' explícitamente si la normalización no la cubrió en algunos entornos
-    .replace(/ñ/g, 'n')
-    // 4. Reemplaza espacios y guiones bajos por guiones sencillos
-    .replace(/[\s_]+/g, '-')
-    // 5. Elimina cualquier caracter que no sea alfanumérico o guion
-    .replace(/[^\w-]+/g, '')
-    // 6. Colapsa múltiples guiones consecutivos en uno solo
-    .replace(/--+/g, '-')
-    // 7. Limpia guiones al inicio y al final
-    .replace(/^-+/, '')
-    .replace(/-+$/, '');
-};
+    //
 
 /**
  * 🛰️ UNIQUE SLUG GENERATOR
