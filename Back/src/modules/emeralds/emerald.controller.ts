@@ -130,11 +130,6 @@ export const updateEmerald = async (req: Request, res: Response) => {
 
         if (!updated) return res.status(404).json({ status: 'NOT_FOUND' });
 
-        res.status(200).json({ status: 'SUCCESS', data: updated });
-    } catch (error: any) {
-        res.status(500).json({ status: 'UPDATE_ERROR', details: error.message });
-    }
-};
 
 // 4. ELIMINACIÓN CON PURGA DE ACTIVOS
 export const deleteEmerald = async (req: Request, res: Response) => {
