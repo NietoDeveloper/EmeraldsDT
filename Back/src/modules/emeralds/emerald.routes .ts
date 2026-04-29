@@ -59,12 +59,3 @@ const catchAsync = (fn: Function) => (req: Request, res: Response, next: NextFun
 };
 
 const router = Router();
-
-/**
- * 💎 EMERALD DT - SECURE ASSET PIPELINES
- * -----------------------------------------------------------------
- * Estos endpoints gestionan el ciclo de vida del inventario en Bogotá.
- */
-
-// 🟢 PUBLIC PIPELINES (Read Only)
-// Acceso para e-commerce principal y clientes
