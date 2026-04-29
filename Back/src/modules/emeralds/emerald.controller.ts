@@ -130,12 +130,7 @@ export const updateEmerald = async (req: Request, res: Response) => {
 
         if (!updated) return res.status(404).json({ status: 'NOT_FOUND' });
 
-
-// 4. ELIMINACIÓN CON PURGA DE ACTIVOS
-export const deleteEmerald = async (req: Request, res: Response) => {
-    try {
-        const { id } = req.params;
-        const emerald = await Emerald.findById(id);
+t emerald = await Emerald.findById(id);
 
         if (!emerald) return res.status(404).json({ status: 'NOT_FOUND' });
 
