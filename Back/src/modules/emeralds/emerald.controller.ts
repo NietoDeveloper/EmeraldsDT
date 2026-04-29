@@ -129,12 +129,3 @@ export const updateEmerald = async (req: Request, res: Response) => {
         ).lean();
 
         if (!updated) return res.status(404).json({ status: 'NOT_FOUND' });
-
-t emerald = await Emerald.findById(id);
-
-        if (!emerald) return res.status(404).json({ status: 'NOT_FOUND' });
-
-        // Protocolo Constrictor: Limpieza física antes de la lógica
-        const assetsToPurge = [...(emerald.assets.images || [])];
-
-};
