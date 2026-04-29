@@ -11,11 +11,3 @@ export const validate = (schema: AnyZodObject) =>
             // Validamos body, query y params según el esquema
             await schema.parseAsync(req.body);
 
-
-            // Error inesperado
-            return res.status(500).json({
-                status: 'INTERNAL_VALIDATION_ERROR',
-                message: 'Ocurrió un fallo inesperado en el proceso de validación.'
-            });
-        }
-    };
