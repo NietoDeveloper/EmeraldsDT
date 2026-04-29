@@ -103,13 +103,5 @@ router.delete(
     catchAsync(deleteEmerald)
 );
 
-// 📊 DIAGNOSTIC ROUTE
-router.get('/pipeline/status', (req: Request, res: Response) => {
-    res.status(200).json({
-        node: 'Emerald-DT-Pipeline',
-        shield: 'La Constrictor v1.2',
-        status: 'Operational'
-    });
-});
 
 export default router;
