@@ -15,15 +15,7 @@ import {
 export const emeraldSchema = z.object({
   name: z.string().min(3, "Name must be at least 3 characters").max(100),
   description: z.string().max(1000).optional(),
-  
-  specifications: z.object({
-    sku: z.string().min(5, "SKU required for tracking"),
-    weight: z.number().positive("Weight must be greater than 0"),
-    dimensions: z.string().optional(), // Ej: "8.5 x 6.2 x 4.1 mm"
-    origin: z.nativeEnum(EMERALD_ORIGINS),
-    cut: z.nativeEnum(EMERALD_CUTS),
-    clarity: z.nativeEnum(EMERALD_CLARITY),
-  }),
+
 
   financials: z.object({
     price: z.number().positive("Price must be positive"),
