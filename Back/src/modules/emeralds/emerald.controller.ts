@@ -112,20 +112,3 @@ export const getAllEmeralds = async (req: Request, res: Response) => {
         res.status(500).json({ status: 'FETCH_ERROR', details: error.message });
     }
 };
-
-// 3. ACTUALIZACIÓN DE INVENTARIO EN TIEMPO REAL (PATCH/UPDATE)
-export const updateEmerald = async (req: Request, res: Response) => {
-    try {
-        const { id } = req.params;
-        
-        // Nivel L6: Usamos findByIdAndUpdate con proyecciones para evitar tráfico innecesario
-        const updated = await Emerald.findByIdAndUpdate(
-            id,
-            { 
-                $set: { ...req.body, 'inventory.lastStockUpdate': new Date() },
-                $inc: { __v: 1 } // Tracking de versiones de documento
-            },
-            { new: true, runValidators: true }
-        ).lean();
-
-        if (!updated) return res.status(404).json({ status: 'NOT_FOUND' });
