@@ -91,11 +91,6 @@ router.post(
 router.put(
     '/update/:id', 
     constrictorGuard, 
-    catchAsync(updateEmerald)
-);
-
-/**
- * ⚠️ PROTOCOLO DE ELIMINACIÓN (Safe Mode)
 
 
 
