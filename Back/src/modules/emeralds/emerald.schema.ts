@@ -17,11 +17,6 @@ export const emeraldSchema = z.object({
   description: z.string().max(1000).optional(),
 
 
-  inventory: z.object({
-    stock: z.number().int().nonnegative().default(1),
-    status: z.nativeEnum(INVENTORY_STATUS).default(INVENTORY_STATUS.AVAILABLE),
-  }),
-
   assets: z.object({
     images: z.array(z.string().url()).optional(),
     certificate: z.object({
