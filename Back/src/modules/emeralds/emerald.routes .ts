@@ -32,30 +32,3 @@ const constrictorGuard = (req: Request, res: Response, next: NextFunction) => {
         }
 
         // 3. Integridad Financiera (No se permiten valores negativos)
-        if (!financials?.price || financials.price < 0) {
-            throw new Error('EM-GUARD-04: FINANCIAL_PRICE_ERROR');
-        }
-
-        // Sanitización Proactiva
-        req.body.sku = sku.toUpperCase().trim();
-        req.body.name = name.trim();
-
-        next();
-    } catch (error: any) {
-        return res.status(403).json({
-            status: 'BLOCKED_BY_CONSTRICTOR',
-            error: error.message,
-            timestamp: new Date().toISOString()
-        });
-    }
-};
-
-/**
- * 🛠️ ASYNC WRAPPER
- * Evita que el servidor colapse ante errores no capturados en el controlador.
- */
-const catchAsync = (fn: Function) => (req: Request, res: Response, next: NextFunction) => {
-    Promise.resolve(fn(req, res, next)).catch(next);
-};
-
-const router = Router();
