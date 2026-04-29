@@ -17,15 +17,3 @@ export const slugify = (text: string): string => {
     .toLowerCase()
     .trim()
     //
-
-/**
- * 🛰️ UNIQUE SLUG GENERATOR
- * Combina el nombre con el SKU para garantizar que no existan colisiones en el Cluster Alpha.
- * @param name - Nombre del activo
- * @param sku - SKU único del inventario
- */
-export const generateUniqueSlug = (name: string, sku: string): string => {
-  const base = slugify(name);
-  const suffix = slugify(sku);
-  return `${base}-${suffix}`;
-};
