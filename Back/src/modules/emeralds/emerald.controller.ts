@@ -80,17 +80,3 @@ export const createEmerald = async (req: Request, res: Response) => {
     }
 };
 
-// 2. CONSULTA OPTIMIZADA (READ ALL)
-export const getAllEmeralds = async (req: Request, res: Response) => {
-    try {
-        const { origin, status, minPrice, maxPrice, limit = 20, page = 1 } = req.query;
-        const query: any = {};
-
-        if (origin) query['specifications.origin'] = origin;
-        if (status) query['inventory.status'] = status;
-        if (minPrice || maxPrice) {
-            query['financials.price'] = { 
-                ...(minPrice && { $gte: Number(minPrice) }),
-                ...(maxPrice && { $lte: Number(maxPrice) }) 
-            };
-        }
