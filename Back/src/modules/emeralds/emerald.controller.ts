@@ -148,9 +148,6 @@ export const deleteEmerald = async (req: Request, res: Response) => {
         const assetsToPurge = [...(emerald.assets.images || [])];
         if (emerald.assets.certificate?.pdfUrl) assetsToPurge.push(emerald.assets.certificate.pdfUrl);
 
-        await Promise.all(assetsToPurge.map(url => storageService.deleteAsset(url)));
-        await Emerald.findByIdAndDelete(id);
-
         res.status(200).json({ status: 'SUCCESS', message: 'Asset and Files Permanently Purged' });
     } catch (error: any) {
         res.status(500).json({ status: 'DELETE_ERROR', details: error.message });
