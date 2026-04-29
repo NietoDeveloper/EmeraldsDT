@@ -17,12 +17,6 @@ export const emeraldSchema = z.object({
   description: z.string().max(1000).optional(),
 
 
-  financials: z.object({
-    price: z.number().positive("Price must be positive"),
-    currency: z.string().default('USD'),
-    cost: z.number().optional(), // Solo visible en Dashboard (Cluster Omega logic)
-  }),
-
   inventory: z.object({
     stock: z.number().int().nonnegative().default(1),
     status: z.nativeEnum(INVENTORY_STATUS).default(INVENTORY_STATUS.AVAILABLE),
