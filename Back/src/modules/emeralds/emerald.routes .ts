@@ -68,30 +68,3 @@ const router = Router();
 
 // 🟢 PUBLIC PIPELINES (Read Only)
 // Acceso para e-commerce principal y clientes
-router.get(
-    '/', 
-    catchAsync(getAllEmeralds)
-);
-
-router.get(
-    '/detail/:slug', 
-    catchAsync(getEmeraldBySlug)
-);
-
-// 🔴 PRIVATE PIPELINES (Write/Audit)
-// Acceso exclusivo para el Dashboard de Software DT
-// NOTA: El middleware de JWT se inyectará aquí en el siguiente despliegue.
-
-router.post(
-    '/register', 
-    constrictorGuard, 
-    catchAsync(createEmerald)
-);
-
-router.put(
-    '/update/:id', 
-    constrictorGuard, 
-
-
-
-export default router;
