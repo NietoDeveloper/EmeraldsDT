@@ -146,10 +146,5 @@ export const deleteEmerald = async (req: Request, res: Response) => {
 
         // Protocolo Constrictor: Limpieza física antes de la lógica
         const assetsToPurge = [...(emerald.assets.images || [])];
-        if (emerald.assets.certificate?.pdfUrl) assetsToPurge.push(emerald.assets.certificate.pdfUrl);
 
-        res.status(200).json({ status: 'SUCCESS', message: 'Asset and Files Permanently Purged' });
-    } catch (error: any) {
-        res.status(500).json({ status: 'DELETE_ERROR', details: error.message });
-    }
 };
