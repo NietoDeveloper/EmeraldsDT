@@ -29,9 +29,7 @@ const constrictorSanitizer = (req: Request, res: Response, next: NextFunction) =
         req.body.name = req.body.name.trim();
     }
     next();
-};
-
-const router = Router();
+);
 
 
    
