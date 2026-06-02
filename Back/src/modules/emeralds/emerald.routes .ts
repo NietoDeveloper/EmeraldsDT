@@ -5,6 +5,5 @@ import {
     getEmeraldBySlug, 
     updateEmerald,
     deleteEmerald 
-} from './emerald.controller.js';
-import { validate } from '../../shared/middlewares/val
+} from './emerald
 };
