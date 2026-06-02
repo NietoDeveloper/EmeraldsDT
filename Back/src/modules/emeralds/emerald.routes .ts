@@ -79,6 +79,7 @@ router.post(
     catchAsync(createEmerald)
 );
 
+
 /**
  * ⚠️ UPDATE PROTOCOL
  * Permiso: SUPER_ADMIN y EMPLOYEE para cambios de precio, stock o mutación de estados a 'SOLD'.
