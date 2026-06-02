@@ -11,6 +11,4 @@ import { emeraldSchema, updateEmeraldSchema } from './emerald.schema.js';
 
 /**
  * 🛠️ ASYNC WRAPPER - SOFTWARE DT STANDARD
- * Asegura que los errores de los controladores lleguen al Global Error Handler.
- */
 };
