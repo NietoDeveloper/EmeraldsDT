@@ -21,9 +21,7 @@ const catchAsync = (fn: Function) => (req: Request, res: Response, next: NextFun
  * 🐍 LA CONSTRICTOR - SECURITY & SANITIZATION LAYER (L6)
  * Realiza limpieza de datos crítica antes de la validación de esquema.
  */
-const constrictorSanitizer = (req: Request, res: Response, next: NextFunction) => {
-    if (req.body.specifications?.sku) {
-        req.body.specifications.sku = req.body.specifications.sku.toUpperCase().trim();
+const constrictorreq.body.specifications.sku.toUpperCase().trim();
     }
 
 
