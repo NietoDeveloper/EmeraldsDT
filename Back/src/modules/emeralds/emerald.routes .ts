@@ -73,9 +73,6 @@ router.put(
 );
 
 /**
- * 🛡️ DECOMMISSION PROTOCOL (Safe Mode)
- * Solo para personal nivel S+ (Isabella / Manuel)
- */
 router.delete(
     '/decommission/:id', 
     catchAsync(deleteEmerald)
