@@ -28,7 +28,7 @@ const constrictorSanitizer = (req: Request, res: Response, next: NextFunction) =
     if (req.body.name) {
         req.body.name = req.body.name.trim();
     }
-    next();
+  
 );
 
 
