@@ -61,12 +61,7 @@ router.post(
 router.delete(
 
 // 📊 PIPELINE TELEMETRY
-router.get('/pipeline/status', (req: Request, res: Response) => {
-    res.status(200).json({
-        node: 'Emerald-DT-Pipeline',
-        shield: 'La Constrictor v2.0 (Zod-Integrated)',
-        engine: 'Software DT L6',
-        status: 'Operational'
+router.get('/pipeline/status', (req: Req
     });
 });
 
