@@ -49,6 +49,3 @@ router.get(
     '/detail/:slug', 
     catchAsync(getEmeraldBySlug)
 );
-
-// 🔴 PRIVATE PIPELINES (Write/Audit)
-// Protegidos por La Constrictor + Zod Shield. inicio de este bloque.
