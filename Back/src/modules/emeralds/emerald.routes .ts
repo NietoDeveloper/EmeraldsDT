@@ -9,6 +9,4 @@ import {
 import { validate } from '../../shared/middlewares/validate.middleware.js';
 import { emeraldSchema, updateEmeraldSchema } from './emerald.schema.js';
 
-/**
- * 🛠️ ASYNC WRAPPER - SOFTWARE DT STANDARD
 };
