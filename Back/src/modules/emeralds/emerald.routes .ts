@@ -40,9 +40,7 @@ const router = Router();
 
 // 🟢 PUBLIC PIPELINES (Read Optimized)
 // Accesibles por el E-commerce y motores de búsqueda SEO.
-router.get(
-    '/', 
-    catchAsync(etAllEmeralds)
+router.
 );
 
    
