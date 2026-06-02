@@ -47,5 +47,4 @@ router.get(
 
 router.get(
     '/detail/:slug', 
-    catchAsync(getEmeraldBySlug
-);
+    catchAsync(getEmera
