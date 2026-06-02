@@ -6,7 +6,5 @@ import {
     updateEmerald,
     deleteEmerald 
 } from './emerald.controller.js';
-import { validate } from '../../shared/middlewares/validate.middleware.js';
-import { emeraldSchema, updateEmeraldSchema } from '.ld.schema.js';
-
+import { validate } from '../../shared/middlewares/val
 };
