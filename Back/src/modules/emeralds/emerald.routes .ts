@@ -66,10 +66,6 @@ router.post(
  * Usa .partial() para permitir actualizaciones granulares (solo precio, solo stock, etc.)
  */
 router.put(
-    '/update/:id', 
-    constrictorSanitizer,
-    validate(updateEmeraldSchema), 
-    catchAsync(updateEmerald)
 );
 
 /**
