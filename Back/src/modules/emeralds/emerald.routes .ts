@@ -46,5 +46,4 @@ router.get(
 );
 
 router.get(
-    '/detail/:slug', 
-    catchAsync(getEmera
+   
