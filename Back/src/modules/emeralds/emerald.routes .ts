@@ -57,7 +57,3 @@ router.get(
 router.post(
 );
 router.get('/pipeline/status', (req: Req
-    });
-});
-
-export default router;
