@@ -26,9 +26,6 @@ const constrictorSanitizer = (req: Request, res: Response, next: NextFunction) =
         req.body.specifications.sku = req.body.specifications.sku.toUpperCase().trim();
     }
 
-    }
-  
-);
 
 
    
