@@ -53,7 +53,3 @@ router.get(
 // 🔴 PRIVATE PIPELINES (Write/Audit)
 // Protegidos por La Constrictor + Zod Shield. 
 // Nota: El middleware 'protect' (JWT) se inyectará al inicio de este bloque.
-
-router.post(
-);
-router.get('/pipeline/status', (req: Req
