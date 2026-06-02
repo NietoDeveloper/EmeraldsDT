@@ -25,8 +25,7 @@ const constrictorSanitizer = (req: Request, res: Response, next: NextFunction) =
     if (req.body.specifications?.sku) {
         req.body.specifications.sku = req.body.specifications.sku.toUpperCase().trim();
     }
-    if (req.body.name) {
-        req.body.name = req.body.name.trim();
+
     }
   
 );
