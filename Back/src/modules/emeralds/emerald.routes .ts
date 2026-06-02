@@ -55,17 +55,6 @@ router.get(
 // Nota: El middleware 'protect' (JWT) se inyectará al inicio de este bloque.
 
 router.post(
-    '/register', 
-    constrictorSanitizer,
-    validate(emeraldSchema), // Escudo L5/L6
-    catchAsync(createEmerald)
-);
-
-/**
- * ⚠️ UPDATE PROTOCOL
- * Usa .partial() para permitir actualizaciones granulares (solo precio, solo stock, etc.)
- */
-router.put(
 );
 
 /**
