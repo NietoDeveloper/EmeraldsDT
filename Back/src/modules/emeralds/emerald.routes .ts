@@ -42,7 +42,7 @@ const router = Router();
 // Accesibles por el E-commerce y motores de búsqueda SEO.
 router.get(
     '/', 
-    catchAsync(getAllEmeralds)
+    catchAsync(etAllEmeralds)
 );
 
    
