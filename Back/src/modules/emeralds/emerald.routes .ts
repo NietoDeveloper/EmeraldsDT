@@ -56,11 +56,6 @@ router.get(
 
 router.post(
 );
-
-/**
-router.delete(
-
-// 📊 PIPELINE TELEMETRY
 router.get('/pipeline/status', (req: Req
     });
 });
