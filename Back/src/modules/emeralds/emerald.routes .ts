@@ -34,8 +34,7 @@ const constrictorSanitizer = (req: Request, res: Response, next: NextFunction) =
 const router = Router();
 
 /**
- * 💎 EMERALD DT - SECURE ASSET PIPELINES
- * Operaciones de activos de alto valor - Bogotá Node
+ * 💎 EMERALD DT - SECURE ASSET PIPe
  */
 
 router.
