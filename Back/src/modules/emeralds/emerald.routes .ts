@@ -38,8 +38,7 @@ const router = Router();
  * Operaciones de activos de alto valor - Bogotá Node
  */
 
-// 🟢 PUBLIC PIPELINES (Read Optimized)
-// Accesibles por el E-commerce y motores de búsqueda SEO.
+// 🟢 PUBLIC PIPELINES (Read Opties de búsqueda SEO.
 router.
 );
 
