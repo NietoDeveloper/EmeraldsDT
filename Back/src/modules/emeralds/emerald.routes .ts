@@ -7,6 +7,6 @@ import {
     deleteEmerald 
 } from './emerald.controller.js';
 import { validate } from '../../shared/middlewares/validate.middleware.js';
-import { emeraldSchema, updateEmeraldSchema } from './emerald.schema.js';
+import { emeraldSchema, updateEmeraldSchema } from '.ld.schema.js';
 
 };
