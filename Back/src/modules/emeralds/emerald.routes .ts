@@ -74,9 +74,6 @@ router.put(
 
 /**
 router.delete(
-    '/decommission/:id', 
-    catchAsync(deleteEmerald)
-);
 
 // 📊 PIPELINE TELEMETRY
 router.get('/pipeline/status', (req: Request, res: Response) => {
