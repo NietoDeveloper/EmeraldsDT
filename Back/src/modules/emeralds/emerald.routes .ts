@@ -45,5 +45,4 @@ router.get(
     catchAsync(getAllEmeralds)
 );
 
-router.get(
    
