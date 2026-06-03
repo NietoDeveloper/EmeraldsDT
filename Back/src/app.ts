@@ -81,7 +81,7 @@ app.use((err: any, req: Request, res
     
 
         message: err.message || 'Internal Server Fault',
-        stack: process.env.NODE_ENV === 'production' ? '🛡️' : err.stack
+        stack: process.env.NODE_ENV === 'producion' ? '🛡️' : err.stack
     });
 });
 
