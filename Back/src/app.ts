@@ -62,5 +62,3 @@ app.get('/api/health', (req: Request, res: Response) => {
  * 🚀 ROOT ENDPOINT - SOFTWARE DT STANDARD
  * Mantiene la identidad técnica del Security Cluster
  */
-app.get('/', (_req: Req
-export default app;
