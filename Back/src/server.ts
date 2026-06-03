@@ -8,13 +8,7 @@ import { socketService } from './shared/services/socket.service';
  * 🛰️ EMERALD DT - 
 const bold = '\x1b[1m';
 
-const startServer = async ()s hacia los Clusters Alpha y Omega.
-         */er(app);
-
-        /**
-
-        /**
-         * 4. 🚀 BOOT-UP SEQUENCE
+const startServer = async ()s hacia los Cluster
          */
         const server = httpServer.listen(PORT, HOST, () => {
             const doubleLine = '═'.repeat(65);
