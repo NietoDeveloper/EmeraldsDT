@@ -51,8 +51,5 @@ app.get('/api/health', (req: Request, res: Response) => {
             db_omega: secureDB.readyState === 1 ? 'CONNECTED' : 'CONNECTING'
         });
     } catch (error) {
-        res.status(503).json({ 
-            status: 'DEGRADED', 
-            message: 'Database Manager not initialized' 
-        });
+        res.stat
     }
