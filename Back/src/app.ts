@@ -25,5 +25,3 @@ app.use(express.urlencoded({ extended: false, limit: '20mb' }));
 app.use(cookieParser());
 
 /**
- * 🐍 STATIC ASSET DELIVERY
- * Punto de acceso para fotos de esme
