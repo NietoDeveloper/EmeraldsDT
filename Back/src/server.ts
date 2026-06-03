@@ -7,11 +7,7 @@ import { socketService } from './shared/services/socket.service';
 /**
  * 🛰️ EMERALD DT - CORE INFRASTRUCTURE S+
  * ENGINEER: Manuel Nieto (Committers #1 Colombia)
- * VERSION : 1.0.0 (Atomic-Proof)
- */
 
-const PORT = Number(process.env.PORT) || 4000;
-const HOST = '0.0.0.0';
 
 // Códigos de color para la terminal
 const gold = '\x1b[33m';
