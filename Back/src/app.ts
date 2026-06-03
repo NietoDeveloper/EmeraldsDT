@@ -67,7 +67,7 @@ app.get('/', (_req: Request, res: Response) => {
     status: 'Operational', 
     service: 'Emerald DT Security Cluster',
     mode: 'Atomic-Proof/Standalone',
-    engineer: 'Software DT',
+
     version: "1.0.0"
   });
 });
