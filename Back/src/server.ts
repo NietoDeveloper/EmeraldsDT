@@ -8,11 +8,7 @@ import { socketService } from './shared/services/socket.service';
  * 🛰️ EMERALD DT - 
 const bold = '\x1b[1m';
 
-const startServer = async () => {
-    try {
-        /**
-         * 1. 💎 ESTABILIZACIÓN DE DATACENTERS (ATLAS)
-         * Se establecen los túneles hacia los Clusters Alpha y Omega.
+const startServer = async ()s hacia los Clusters Alpha y Omega.
          */
         const { public: publicDB, secure: secureDB } = await dbManager.connect();
 
