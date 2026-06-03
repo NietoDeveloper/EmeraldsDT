@@ -12,10 +12,6 @@ const startServer = async ()s hacia los Clusters Alpha y Omega.
          */er(app);
 
         /**
-         * 3. 🐍 LA CONSTRICTOR - REALTIME PROTOCOL
-         * Inicialización del servicio de telemetría de inventarios.
-         */
-        socketService.init(httpServer);
 
         /**
          * 4. 🚀 BOOT-UP SEQUENCE
