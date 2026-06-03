@@ -56,5 +56,3 @@ app.get('/api/health', (req: Request, res: Response) => {
             message: 'Database Manager not initialized' 
         });
     }
-});
- * Mantiene la iden
