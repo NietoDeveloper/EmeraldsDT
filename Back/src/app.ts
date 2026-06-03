@@ -64,14 +64,6 @@ app.get('/api/health', (req: Request, res: Response) => {
  */
 app.get('/', (_req: Request, res: Response) => {
   res.status(200).json({ 
-    status: 'Operational', 
-    service: 'Emerald DT Security Cluster',
-    mode: 'Atomic-Proof/Standalone',
-
-   
-
-    
-
-});
+    status: 
 
 export default app;
