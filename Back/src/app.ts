@@ -14,6 +14,4 @@ import inventoryRoutes from './modules/inventory/inventory.routes';
 const app: Application = express();
 
 // 1. 🛡️ Security & Monitoring Layer
-// CSP desactivado para permitir renderizado de assets locales en dashboards
-app.use(helmet({ contentSecurityPolicy: false }));
-app.use(cors(corsOptions));
+// CSP desactivado para permitir renderiza
