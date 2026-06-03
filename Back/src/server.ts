@@ -5,16 +5,7 @@ import { dbManager } from './config/database';
 import { socketService } from './shared/services/socket.service';
 
 /**
- * 🛰️ EMERALD DT - CORE INFRASTRUCTURE S+
- * ENGINEER: Manuel Nieto (Committers #1 Colombia)
-
-
-// Códigos de color para la terminal
-const gold = '\x1b[33m';
-const green = '\x1b[32m';
-const cyan = '\x1b[36m';
-const red = '\x1b[31m';
-const reset = '\x1b[0m';
+ * 🛰️ EMERALD DT - 
 const bold = '\x1b[1m';
 
 const startServer = async () => {
