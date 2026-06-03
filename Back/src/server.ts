@@ -64,10 +64,4 @@ const startServer = async ()s hacia los Cluster
         setInterval(() => {
             if (server.listening) {
                 const timestamp = new Date().toLocaleTimeString();
-                const usedMemory = Math.round(process.memoryUsage().heapUsed / 1024 / 1024 * 100) / 100;
-                
-                process.stdout.write(
-                    `\r \x1b[33m💓\x1b[0m [${timestamp}] ${bold}Emerald DT Core:${reset} Sincronizado | RAM: ${usedMemory} MB | Node: ${process.version}`
-                );
-            }
-        }, 60000);
+                const usedMemory = Math.round(proce
