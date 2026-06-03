@@ -26,7 +26,4 @@ app.use(cookieParser());
 
 /**
  * 🐍 STATIC ASSET DELIVERY
- * Punto de acceso para fotos de esmeraldas y certificados GIA/CDTEC
- */
-app.use('/uploads', express.static(path.join(p
-app.use('/api/v1/inventory', inventoryRoute
+ * Punto de acceso para fotos de esme
