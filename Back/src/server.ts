@@ -26,12 +26,3 @@ const startServer = async ()s hacia los Cluster
             console.log(`     └─ 🛡️ Cluster Omega (Secure) : [${secureDB.readyState === 1 ? green + 'CONNECTED' + reset : gold + 'CONNECTING' + reset}]`);
             console.log(`${gold}${doubleLine}${reset}\n`);
         });
-
-        /**
-         * ⚠️ EVENT LISTENERS: INFRASTRUCTURE HEALTH
-         */
-        publicDB.on('error', err => console.error(`\n${red}❌ Cluster Alpha Error:${reset}`, err));
-        secureDB.on('error', err => console.error(`\n${red}❌ Cluster Omega Error:${reset}`, err));
-
-        // Captura de errores asíncronos futdown('SIGTERM'));
-        process.on('SIGINT', () => gracefulShutdown('SIGINT'));
