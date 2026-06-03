@@ -71,14 +71,3 @@ const startServer = async ()s hacia los Cluster
                 );
             }
         }, 60000);
-
-    } catch (err: any) {
-        console.error(`\n${red}💥 CRITICAL INFRASTRUCTURE FAILURE:${reset}`, err.message);
-        process.exit(1);
-    }
-};
-
-/**
- * ⚡ INVOCACIÓN DEL CLUSTER
- */
-startServer();
