@@ -50,6 +50,3 @@ app.get('/api/health', (req: Request, res: Response) => {
             db_alpha: publicDB.readyState === 1 ? 'CONNECTED' : 'CONNECTING',
             db_omega: secureDB.readyState === 1 ? 'CONNECTED' : 'CONNECTING'
         });
-    } catch (error) {
-        res.stat
-    }
