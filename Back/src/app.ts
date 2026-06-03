@@ -20,8 +20,4 @@ app.use(cors(corsOptions));
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 
 // 2. 🗄️ Data Parsing & Static Assets
-app.use(express.json({ limit: '20mb' })); // S+ Rank: Soporte para buffers de alta resolución
-app.use(express.urlencoded({ extended: false, limit: '20mb' }));
-app.use(cookieParser());
-
-/**
+app.use(express.json({ limit: '
