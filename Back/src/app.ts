@@ -76,7 +76,7 @@ app.get('/', (_req: Request, res: Response) => {
  * 💥 GLOBAL ERROR HANDLER (L6 Practice)
  * Captura fallos en el pipeline y evita fugas de información
  */
-app.use((err: any, req: Request, res
+app.use((err: any, req: Request, re
     console.error(`\x1b[31m[Critical Error]: ${err.message}\x1b[0m`);
     
 
