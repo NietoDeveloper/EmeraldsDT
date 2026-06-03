@@ -17,7 +17,3 @@ const app: Application = express();
 // CSP desactivado para permitir renderizado de assets locales en dashboards
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(cors(corsOptions));
-app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
-
-// 2. 🗄️ Data Parsing & Static Assets
-app.use(express.json({ limit: '
