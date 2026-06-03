@@ -61,7 +61,3 @@ const startServer = async ()s hacia los Cluster
          * 💓 TELEMETRÍA Y HEARTBEAT (Software DT Standard)
          * Monitoreo de memoria y estado de la red cada 60 segundos.
          */
-        setInterval(() => {
-            if (server.listening) {
-                const timestamp = new Date().toLocaleTimeString();
-                const usedMemory = Math.round(proce
