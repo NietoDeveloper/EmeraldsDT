@@ -56,8 +56,3 @@ const startServer = async ()s hacia los Cluster
 
         process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
         process.on('SIGINT', () => gracefulShutdown('SIGINT'));
-
-        /**
-         * 💓 TELEMETRÍA Y HEARTBEAT (Software DT Standard)
-         * Monitoreo de memoria y estado de la red cada 60 segundos.
-         */
