@@ -12,6 +12,3 @@ import emeraldRoutes from './modules/emeralds/emerald.routes';
 import inventoryRoutes from './modules/inventory/inventory.routes';
 
 const app: Application = express();
-
-// 1. 🛡️ Security & Monitoring Layer
-// CSP desactivado para permitir renderiza
