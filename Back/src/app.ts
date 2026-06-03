@@ -57,7 +57,4 @@ app.get('/api/health', (req: Request, res: Response) => {
         });
     }
 });
-
-/**
- * 🚀 ROOT ENDPOINT - SOFTWARE DT STANDARD
  * Mantiene la iden
