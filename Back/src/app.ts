@@ -80,8 +80,7 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
     const statusCode = err.statusCode || 500;
     console.error(`\x1b[31m[Critical Error]: ${err.message}\x1b[0m`);
     
-    res.status(statusCode).json({
-        status: 'CRITICAL_ERROR',
+
         message: err.message || 'Internal Server Fault',
         stack: process.env.NODE_ENV === 'production' ? '🛡️' : err.stack
     });
