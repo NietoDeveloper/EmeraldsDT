@@ -33,13 +33,5 @@ const startServer = async ()s hacia los Cluster
         publicDB.on('error', err => console.error(`\n${red}❌ Cluster Alpha Error:${reset}`, err));
         secureDB.on('error', err => console.error(`\n${red}❌ Cluster Omega Error:${reset}`, err));
 
-        // Captura de errores asíncronos fuera de los bloques try-catch
-        process.on('unhandledRejection', (reason) => {
-            console.error(`\n${red}⚠️  SDT Async Rejection Encountered:${reset}`, reason);
-        });
-
-        process.on('uncaugh
-        };
-
-        process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
+        // Captura de errores asíncronos futdown('SIGTERM'));
         process.on('SIGINT', () => gracefulShutdown('SIGINT'));
