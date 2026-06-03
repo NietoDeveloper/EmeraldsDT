@@ -30,10 +30,6 @@ app.use(cookieParser());
  */
 app.use('/uploads', express.static(path.join(p
 app.use('/api/v1/inventory', inventoryRoutes);
-
-/**
- * 🛠️ HEALTH CHECK (Nivel S+)
- * Monitoreo de latencia y estado de
         const { public: publicDB, secure: secureDB } = dbManager.getConnections();
         
             timestamp: new Date().ttate ==
