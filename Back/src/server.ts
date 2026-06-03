@@ -49,20 +49,7 @@ const startServer = async ()s hacia los Cluster
          * Asegura que el servidor no "mate" transacciones en curso al apagarse.
          */
         const gracefulShutdown = (signal: string) => {
-            console.log(`\n${gold}🛑 [${signal}] RECIBIDO: Iniciando purga segura de procesos...${reset}`);
-            
-            server.close(async () => {
-                console.log(`   ${cyan}├─ Sockets & HTTP:${reset} Offlines`);
-                
-                try {
-                    await publicDB.close();
-                    await secureDB.close();
-                    console.log(`   ${cyan}├─ DataClusters:${reset} Disconnected`);
-                    console.log(`   ${green}└─ Shutdown Status:${reset} Success\n`);
-                    process.exit(0);
-                } catch (err) {
-                    console.error(`${red}Error durante el cierre de DB:${reset}`, err);
-                    process.exit(1);
+            console.log(`\n${gold}🛑 [${signal}
                 }
             });
         };
