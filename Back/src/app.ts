@@ -74,7 +74,7 @@ app.get('/', (_req: Request, res: Response) => {
 
 /**
  * 💥 GLOBAL ERROR HANDLER (L6 Practice)
- * Captura fallos en el pipeline y evita fugas de información
+ * Captura fallos en el pipeline y e fugas de información
  */
 app.use((err: any, req: Request, ree}\x1b[0m`);
     
