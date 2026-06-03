@@ -17,12 +17,4 @@ const startServer = async ()s hacia los Cluster
             console.log(`\n${gold}${doubleLine}${reset}`);
             console.log(`${green}${bold}   🛰️  EMERALD DT CORE - INFRAESTRUCTURA NIVEL S+ ACTIVA${reset}`);
             console.log(`${gold}${doubleLine}${reset}`);
-            console.log(`   ${cyan}👤 ARCHITECT${reset}   : Manuel Nieto (Committers #1 Colombia)`);
-            console.log(`   ${cyan}🌐 NETWORK${reset}     : Protocolo HTTP/WS | Host: ${HOST} | Port: ${PORT}`);
-            console.log(`   ${cyan}🛡️  SECURITY${reset}    : JWT-Bearer & Multi-Cluster L6 Enabled`);
-            console.log(`${gold}${singleLine}${reset}`);
-            console.log(`   ${gold}📊 DATACENTERS STATUS (BOGOTÁ):${reset}`);
-            console.log(`     ├─ 💎 Cluster Alpha (Public) : [${publicDB.readyState === 1 ? green + 'CONNECTED' + reset : gold + 'CONNECTING' + reset}]`);
-            console.log(`     └─ 🛡️ Cluster Omega (Secure) : [${secureDB.readyState === 1 ? green + 'CONNECTED' + reset : gold + 'CONNECTING' + reset}]`);
-            console.log(`${gold}${doubleLine}${reset}\n`);
-        });
+            console.log(`   ${cyan}👤 ARCH
