@@ -9,6 +9,4 @@ import { dbManager } from './config/database';
 
 // 🛰️ Inyección de Rutas de Dominio (Cluster Alpha & Omega)
 import emeraldRoutes from './modules/emeralds/emerald.routes';
-import inventoryRoutes from './modules/inventory/inventory.routes';
-
-const app: Application = express();
+import inventoryRoutes from './
