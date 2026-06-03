@@ -47,6 +47,4 @@ app.get('/api/health', (req: Request, res: Response) => {
             timestamp: new Date().toISOString(),
             node: 'Emerald DT Core',
             uptime: process.uptime(),
-            db_alpha: publicDB.readyState === 1 ? 'CONNECTED' : 'CONNECTING',
-            db_omega: secureDB.readyState === 1 ? 'CONNECTED' : 'CONNECTING'
-        });
+            db_alpha: publicDB.readyState ==
