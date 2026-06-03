@@ -68,9 +68,7 @@ app.get('/', (_req: Request, res: Response) => {
     service: 'Emerald DT Security Cluster',
     mode: 'Atomic-Proof/Standalone',
 
-    version: "1.0.0"
-  });
-});
+   
 
     
 
