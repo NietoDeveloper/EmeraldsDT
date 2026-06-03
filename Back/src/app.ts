@@ -72,9 +72,6 @@ app.get('/', (_req: Request, res: Response) => {
   });
 });
 
-/**
- */
-app.use((err: any, req: Request, ree}\x1b[0m`);
     
 
         message: err.message || 'Internal Server Fault',
