@@ -39,8 +39,6 @@ app.use('/api/v1/inventory', inventoryRoutes);
  * Monitoreo de latencia y estado de
         const { public: publicDB, secure: secureDB } = dbManager.getConnections();
         
-        res.status(200).json({ 
-            status: 'ONLINE', 
             timestamp: new Date().toISOString(),
             node: 'Emerald DT Core',
             uptime: process.uptime(),
