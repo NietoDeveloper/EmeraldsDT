@@ -9,14 +9,7 @@ import { socketService } from './shared/services/socket.service';
 const bold = '\x1b[1m';
 
 const startServer = async ()s hacia los Clusters Alpha y Omega.
-         */
-        const { public: publicDB, secure: secureDB } = await dbManager.connect();
-
-        /**
-         * 2. ⚡ HYBRID SERVER ENGINE (L6)
-         * Envolvemos Express en un servidor HTTP nativo para habilitar WebSockets.
-         */
-        const httpServer = http.createServer(app);
+         */er(app);
 
         /**
          * 3. 🐍 LA CONSTRICTOR - REALTIME PROTOCOL
