@@ -74,9 +74,6 @@ app.get('/', (_req: Request, res: Response) => {
 
     
 
-        message: err.message || 'Internal Server Fault',
-        stack: process.env.NODE_ENV === 'producion' ? '🛡️' : err.stack
-    });
 });
 
 export default app;
