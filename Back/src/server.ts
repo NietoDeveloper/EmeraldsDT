@@ -38,20 +38,7 @@ const startServer = async ()s hacia los Cluster
             console.error(`\n${red}⚠️  SDT Async Rejection Encountered:${reset}`, reason);
         });
 
-        process.on('uncaughtException', (err) => {
-            console.error(`\n${red}💥 FATAL EXCEPTION DETECTED:${reset}`, err.message);
-            // Salida de emergencia en caso de excepción no controlada
-            process.exit(1);
-        });
-
-        /**
-         * 🛑 GRACEFUL SHUTDOWN PROTOCOL (Nivel Industrial)
-         * Asegura que el servidor no "mate" transacciones en curso al apagarse.
-         */
-        const gracefulShutdown = (signal: string) => {
-            console.log(`\n${gold}🛑 [${signal}
-                }
-            });
+        process.on('uncaugh
         };
 
         process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
