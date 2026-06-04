@@ -1,115 +1,74 @@
-import { Router, Request, Response, NextFunction } from 'express';
-import { 
-    createEmerald, 
-    getAllEmeralds, 
-    getEmeraldBySlug, 
-    updateEmerald,
-    deleteEmerald,
-    getInventoryMetrics // 📊 Importación del motor de agregación de estados
-} from './emerald.controller.js';
-import { validate } from '../../shared/middlewares/validate.middleware.js';
-import { requireAuth, restrictTo } from '../auth/auth.middleware.js';
-import { emeraldSchema, updateEmeraldSchema } from './emerald.schema.js';
+import { Schema, model } from 'mongoose';
+import bcrypt from 'bcrypt';
+import { IUser } from '../auth/auth.interfaces.js';
 
 /**
- * 🛠️ ASYNC WRAPPER - SOFTWARE DT STANDARD
- * Asegura que los errores de los controladores lleguen al Global Error Handler.
+ * 🔒 IDENTITY DATABASE MODEL - CLUSTER OMEGA (L6)
+ * Secure user persistence engine with automated state triggers and cryptographic hashing.
  */
-const catchAsync = (fn: Function) => (req: Request, res: Response, next: NextFunction) => {
-    Promise.resolve(fn(req, res, next)).catch(next);
-};
+const userSchema = new Schema<IUser>(
+  {
+    name: { 
+      type: String, 
+      required: [true, 'Name identifier is required'], 
+      trim: true 
+    },
+    email: { 
+      type: String, 
+      required: [true, 'Unique email coordinate is required'], 
+      unique: true, 
+      lowercase: true, 
+      trim: true 
+    },
+    password: { 
+      type: String, 
+      required: [true, 'Cryptographic credential key is required'], 
+      select: false // 🛡️ Evita fugas accidentales: no se incluye en respuestas ni búsquedas por defecto
+    },
+    role: {
+      type: String,
+      enum: ['SUPER_ADMIN', 'EMPLOYEE', 'CLIENT'],
+      default: 'CLIENT'
+    },
+    isActive: { 
+      type: Boolean, 
+      default: true 
+    },
+    lastLogin: { 
+      type: Date 
+    }
+  },
+  { 
+    timestamps: true,
+    versionKey: '__v'
+  }
+);
 
 /**
- * 🐍 LA CONSTRICTOR - SECURITY & SANITIZATION LAYER (L6)
- * Realiza limpieza de datos crítica antes de la validación de esquema.
+ * 🛡️ PRE-SAVE CRYPTOGRAPHIC TRIGGER
+ * Captura el flujo de persistencia y aplica hashing asíncrono asilado con factor de costo industrial.
  */
-const constrictorSanitizer = (req: Request, res: Response, next: NextFunction) => {
-    if (req.body.specifications?.sku) {
-        req.body.specifications.sku = req.body.specifications.sku.toUpperCase().trim();
-    }
-    if (req.body.name) {
-        req.body.name = req.body.name.trim();
-    }
+userSchema.pre('save', async function (next) {
+  // Si la contraseña no sufrió mutación en el pipeline, ignoramos el proceso
+  if (!this.isModified('password')) return next();
+
+  try {
+    const saltRounds = 12; // Estándar de alta seguridad para la arquitectura de Emerald DT
+    const salt = await bcrypt.genSalt(saltRounds);
+    this.password = await bcrypt.hash(this.password!, salt);
     next();
-};
-
-const router = Router();
-
-/**
- * 💎 EMERALD DT - SECURE ASSET PIPELINES
- * Operaciones de activos de alto valor - Bogotá Node
- */
-
-// 🟢 PUBLIC PIPELINES (Read Optimized)
-// Accesibles de forma abierta por el E-commerce público y motores SEO.
-router.get(
-    '/', 
-    catchAsync(getAllEmeralds)
-);
-
-router.get(
-    '/detail/:slug', 
-    catchAsync(getEmeraldBySlug)
-);
-
-// 🔴 PRIVATE PIPELINES (Write/Audit/Decommission)
-// Puertos protegidos con autenticación obligatoria en cascada.
-router.use(requireAuth);
-
-/**
- * 📊 METRICS & TELEMETRY PIPELINE
- * Retorna contadores agregados en tiempo real (AVAILABLE, SOLD, RESERVED).
- * Permiso: SUPER_ADMIN (Manuel) y EMPLOYEE (Isabella / Asesores) para la carga del canvas visual.
- */
-router.get(
-    '/dashboard/metrics',
-    restrictTo('SUPER_ADMIN', 'EMPLOYEE'),
-    catchAsync(getInventoryMetrics)
-);
-
-/**
- * REGISTRO DE ACTIVOS
- * Permiso: SUPER_ADMIN y EMPLOYEE
- */
-router.post(
-    '/register', 
-    restrictTo('SUPER_ADMIN', 'EMPLOYEE'),
-    constrictorSanitizer,
-    validate(emeraldSchema), 
-    catchAsync(createEmerald)
-);
-
-
-/**
- * ⚠️ UPDATE PROTOCOL
- * Permiso: SUPER_ADMIN y EMPLOYEE para cambios de precio, stock o mutación de estados a 'SOLD'.
- */
-router.put(
-    '/update/:id', 
-    restrictTo('SUPER_ADMIN', 'EMPLOYEE'),
-    constrictorSanitizer,
-    validate(updateEmeraldSchema), 
-    catchAsync(updateEmerald)
-);
-
-/**
- * 🛡️ DECOMMISSION PROTOCOL (Safe Mode / Purga Destructiva)
- * Operación crítica de inventario. Restringido estrictamente al nivel del Arquitecto.
- */
-router.delete(
-    '/decommission/:id', 
-    restrictTo('SUPER_ADMIN'),
-    catchAsync(deleteEmerald)
-);
-
-// 📊 PIPELINE TELEMETRY
-router.get('/pipeline/status', (req: Request, res: Response) => {
-    res.status(200).json({
-        node: 'Emerald-DT-Pipeline',
-        shield: 'La Constrictor v2.2 (RBAC, Metrics & Zod Shield Integrated)',
-        engine: 'Software DT L6',
-        status: 'Operational'
-    });
+  } catch (error: any) {
+    next(error);
+  }
 });
 
-export default router;
+/**
+ * ⚔️ VERIFICATION INSTANCE METHOD
+ * Compara de forma segura el string plano de la petición con el hash en DB usando algoritmos de tiempo constante.
+ */
+userSchema.methods.comparePassword = async function (candidatePassword: string): Promise<boolean> {
+  // Como password tiene "select: false", se asume que el controlador lo inyectó explícitamente para validar
+  return bcrypt.compare(candidatePassword, this.password);
+};
+
+export const User = model<IUser>('User', userSchema);
