@@ -12,7 +12,5 @@ const userSchema = new Schema<IUser>(
             enum: ['SUPER_ADMIN', 'EMPLOYEE', 'CLIENT'],
             default: 'CLIENT'
         },
-        isActive: { type: Boolean, default: true },
-        lastLogin: { type: Date }
 
 
