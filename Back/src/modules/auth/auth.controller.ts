@@ -41,9 +41,7 @@ export const login = async (req: Request, res: Response) => {
             return res.status(401).json({ status: 'UNAUTHORIZED', message: 'Invalid credentials' });
         }
 
-        if (!user.isActive) {
-            return res.status(403).json({ status: 'FORBIDDEN', message: 'This account has been deactivated' });
-        }
+
 
         // Registro de auditoría
         user.lastLogin = new Date();
