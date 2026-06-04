@@ -18,11 +18,6 @@ const userSchema = new Schema<IUser>(
 
 );
 
-// 🛡️ Pre-Save Hook: Hasheo automático de contraseñas si han sido modificadas
-
- 
-
-});
 
 // ⚔️ Método de instancia para verificar credenciales de manera segura
 userSchema.methods.comparePassword = async function (candidatePassword: string): Promise<boolean> {
