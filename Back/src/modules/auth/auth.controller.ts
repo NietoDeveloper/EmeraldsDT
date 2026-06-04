@@ -77,15 +77,4 @@ ra evitar reprocesar hooks criptográficos de Bcrypt en el ciclo de guardado.
         await user.save({ validateBeforeSave: false });
 
         const { accessToken } = generateTokens(user._id.toString(), user.role);
-
-        res.status(200).json({
-            status: 'SUCCESS',
-            data: {
-                user: { id: user._id, name: user.name, email: user.email, role: user.role },
-                token: accessToken
-            }
-        });
-    } catch (error: any) {
-        next(error); // Evita colapsos catastróficos en el Bogotá Node
-    }
 };
