@@ -15,10 +15,7 @@ const userSchema = new Schema<IUser>(
         isActive: { type: Boolean, default: true },
         lastLogin: { type: Date }
     },
-    { 
-        timestamps: true,
-        versionKey: '__v'
-    }
+
 );
 
 // 🛡️ Pre-Save Hook: Hasheo automático de contraseñas si han sido modificadas
