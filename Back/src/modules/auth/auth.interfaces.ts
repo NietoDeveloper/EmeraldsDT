@@ -7,9 +7,3 @@ export interface IUser extends Document {
 
     comparePassword(candidatePassword: string): Promise<boolean>;
 }
-
-export interface IJWTPayload {
-
-}
-
-}
