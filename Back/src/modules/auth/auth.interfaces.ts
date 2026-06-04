@@ -18,7 +18,4 @@ export interface IJWTPayload {
     role: 'SUPER_ADMIN' | 'EMPLOYEE' | 'CLIENT';
 }
 
-// Extensión del objeto Request nativo de Express para inyectar la sesión validada
-export interface AuthenticatedRequest extends Request {
-    user?: IJWTPayload;
 }
