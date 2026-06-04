@@ -18,7 +18,3 @@ const userSchema = new Schema<IUser>(
 
 );
 
-
-// ⚔️ Método d
-
-export const User = model<IUser>('User', userSchema);
