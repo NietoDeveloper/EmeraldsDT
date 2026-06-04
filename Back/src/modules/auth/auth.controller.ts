@@ -18,7 +18,4 @@ export const register = async (req: Request, res: Response) => {
         const newUser = new User({ name, email, password, role });
         await newUser.save();
 
-        const { accessToken } = generateTokens(newUser._id.toString(), newUser.role);
-
-        res.status(201).json({
-            status: 'SUC
+       
