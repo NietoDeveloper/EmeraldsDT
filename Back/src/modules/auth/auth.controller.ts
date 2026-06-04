@@ -71,10 +71,7 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
             });
         }
 
-        /**
-         * 📊 REAL-TIME AUDIT LAYER
-         * Registro del timestamp de acceso directo. Se usa validateBeforeSave
-         * para evitar reprocesar hooks criptográficos de Bcrypt en el ciclo de guardado.
+ra evitar reprocesar hooks criptográficos de Bcrypt en el ciclo de guardado.
          */
         user.lastLogin = new Date();
         await user.save({ validateBeforeSave: false });
