@@ -1,75 +1,232 @@
-import { Response, NextFunction } from 'express';
-import jwt from 'jsonwebtoken';
-import { AuthenticatedRequest, IJWTPayload } from './auth.interfaces.js';
+import { Request, Response } from 'express';
+import mongoose from 'mongoose';
+import { Emerald } from './emerald.model.js';
+import { storageService } from '../../shared/services/storage.service.js';
+import { slugify } from '../../shared/utils/slugify.js';
 
 /**
- * 🛡️ CRYPTOGRAPHIC FIREWALL - CLUSTER OMEGA (L6)
- * Intercepts requests, decodes signatures, and handles Role-Based Access Control (RBAC).
+ * 🐍 EMERALD CONTROL CENTER - INDUSTRIAL GRADE (L6)
+ * Protocolo Constrictor: Software DT Standard | Gestión de Activos y Telemetría
  */
 
-/**
- * GUARDIÁN A: VERIFICACIÓN DE AUTENTICIDAD (AUTHENTICATION)
- * Inspecciona la cabecera HTTP, valida la firma simétrica del JWT e inyecta la identidad.
- */
-export const requireAuth = async (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
-  try {
-    const authHeader = req.headers.authorization;
+// 1. REGISTRO DE NUEVOS ACTIVOS (CREATE)
+export const createEmerald = async (req: Request, res: Response) => {
+    const session = await mongoose.startSession();
+    session.startTransaction();
 
-    // Control de formato: Validamos la existencia y el prefijo Bearer estándar de la industria
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return res.status(401).json({
-        status: 'UNAUTHORIZED',
-        origin: 'OMEGA_FIREWALL',
-        message: 'Missing or malformed authorization token.'
-      });
+    const uploadedFiles: string[] = [];
+    
+    try {
+        const { body, files } = req;
+        const fileArray = files as { [fieldname: string]: Express.Multer.File[] };
+
+        // A. Persistencia de Archivos en Storage (Pre-DB)
+        if (fileArray?.['images']) {
+            for (const file of fileArray['images']) {
+                const result = await storageService.uploadAsset(file, 'emeralds');
+                uploadedFiles.push(result.url);
+            }
+        }
+
+        let certUrl = '';
+        if (fileArray?.['certificateFile']?.[0]) {
+            const certRes = await storageService.uploadAsset(fileArray['certificateFile'][0], 'certificates');
+            certUrl = certRes.url;
+            uploadedFiles.push(certRes.url); // Registro para rollback en caso de fallo
+        }
+
+        // B. Estructuración L6 con Sincronización de Slugs y Estados
+        const emeraldData = {
+            ...body,
+            slug: slugify(body.name),
+            assets: {
+                images: uploadedFiles.filter(url => url.includes('/emeralds/')),
+                certificate: {
+                    ...body.assets?.certificate,
+                    pdfUrl: certUrl || body.assets?.certificate?.pdfUrl
+                }
+            },
+            inventory: {
+                ...body.inventory,
+                lastStockUpdate: new Date() // Forzamos timestamp de auditoría
+            }
+        };
+
+        const newEmerald = new Emerald(emeraldData);
+        await newEmerald.save({ session });
+
+        await session.commitTransaction();
+        
+        return res.status(201).json({
+            status: 'SUCCESS',
+            node: 'ALPHA_CLUSTER',
+            data: newEmerald
+        });
+
+    } catch (error: any) {
+        await session.abortTransaction();
+        
+        // 🛡️ RECOVERY PROTOCOL: Limpieza inmediata de storage para evitar archivos huérfanos
+        if (uploadedFiles.length > 0) {
+            await Promise.all(uploadedFiles.map(url => storageService.deleteAsset(url)));
+        }
+
+        return res.status(500).json({
+            status: 'CRITICAL_FAILURE',
+            origin: 'CONSTRICTOR_PIPELINE',
+            details: error.message
+        });
+    } finally {
+        session.endSession();
     }
-
-    const token = authHeader.split(' ')[1];
-    const secret = process.env.JWT_SECRET || 'ALPHA_CLUSTER_SECRET_KEY';
-
-    // Desempaquetado y verificación de firma criptográfica
-    const decoded = jwt.verify(token, secret) as IJWTPayload;
-    
-    // Inyección atómica de la identidad dentro del ciclo de vida de Express
-    req.user = decoded;
-    
-    return next();
-  } catch (error: any) {
-    const gold = '\x1b[33m';
-    const reset = '\x1b[0m';
-    console.warn(`${gold}[Firewall Alert]:${reset} Intento de acceso denegado por token inválido o expirado.`);
-
-    return res.status(401).json({
-      status: 'UNAUTHORIZED',
-      origin: 'OMEGA_FIREWALL',
-      message: 'Session has expired or token signature is corrupt.'
-    });
-  }
 };
 
-/**
- * GUARDIÁN B: AUTORIZACIÓN JERÁRQUICA POR ROLES (AUTHORIZATION - RBAC)
- * Evalúa los niveles de clearance inyectados por el Guardián A antes de permitir mutaciones.
- */
-export const restrictTo = (...allowedRoles: ('SUPER_ADMIN' | 'EMPLOYEE' | 'CLIENT')[]) => {
-  return (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
-    // Salvaguarda estructural en caso de orden incorrecto de middlewares en la ruta
-    if (!req.user) {
-      return res.status(500).json({
-        status: 'INTERNAL_SECURITY_ERROR',
-        message: 'Security context was not initialized properly. Authentication required first.'
-      });
-    }
+// 2. CONSULTA OPTIMIZADA CON FILTROS (READ ALL)
+export const getAllEmeralds = async (req: Request, res: Response) => {
+    try {
+        const { origin, status, minPrice, maxPrice, limit = 20, page = 1 } = req.query;
+        const query: any = {};
 
-    // Validación de nivel de acceso (Clearance Level)
-    if (!allowedRoles.includes(req.user.role)) {
-      return res.status(403).json({
-        status: 'FORBIDDEN',
-        origin: 'OMEGA_AUTHORIZER',
-        message: 'Your clearance level is insufficient to perform this operation.'
-      });
-    }
+        // Filtros semánticos para el Catálogo y consultas analíticas
+        if (origin) query['specifications.origin'] = origin;
+        if (status) query['inventory.status'] = status; // 💎 Filtro nativo por AVAILABLE, SOLD o RESERVED
+        
+        if (minPrice || maxPrice) {
+            query['financials.price'] = { 
+                ...(minPrice && { $gte: Number(minPrice) }),
+                ...(maxPrice && { $lte: Number(maxPrice) }) 
+            };
+        }
 
-    return next();
-  };
+        const emeralds = await Emerald.find(query)
+            .limit(Number(limit))
+            .skip((Number(page) - 1) * Number(limit))
+            .sort({ createdAt: -1 })
+            .lean(); // Performance S+: Desactiva la hidratación pesada de Mongoose
+
+        const total = await Emerald.countDocuments(query);
+
+        return res.status(200).json({
+            status: 'SUCCESS',
+            meta: { 
+                total, 
+                page: Number(page), 
+                pages: Math.ceil(total / Number(limit)) 
+            },
+            data: emeralds
+        });
+    } catch (error: any) {
+        return res.status(500).json({ status: 'FETCH_ERROR', details: error.message });
+    }
+};
+
+// 3. CONSULTA POR SLUG (SEO & VIEWPORT COMPONENT READY)
+export const getEmeraldBySlug = async (req: Request, res: Response) => {
+    try {
+        const { slug } = req.params;
+        const emerald = await Emerald.findOne({ slug }).lean();
+
+        if (!emerald) return res.status(404).json({ status: 'NOT_FOUND' });
+
+        return res.status(200).json({ status: 'SUCCESS', data: emerald });
+    } catch (error: any) {
+        return res.status(500).json({ status: 'FETCH_ERROR', details: error.message });
+    }
+};
+
+// 4. ACTUALIZACIÓN DINÁMICA (PATCH/PUT)
+export const updateEmerald = async (req: Request, res: Response) => {
+    try {
+        const { id } = req.params;
+        const updateData = { ...req.body };
+
+        // Si el Dashboard muta el nombre, recalculamos el slug de inmediato
+        if (updateData.name) {
+            updateData.slug = slugify(updateData.name);
+        }
+
+        const updated = await Emerald.findByIdAndUpdate(
+            id,
+            { 
+                $set: { ...updateData, 'inventory.lastStockUpdate': new Date() },
+                $inc: { __v: 1 } // Seguimiento de versiones del documento para auditoría
+            },
+            { new: true, runValidators: true }
+        ).lean();
+
+        if (!updated) return res.status(404).json({ status: 'NOT_FOUND' });
+
+        return res.status(200).json({ status: 'SUCCESS', data: updated });
+    } catch (error: any) {
+        return res.status(500).json({ status: 'UPDATE_ERROR', details: error.message });
+    }
+};
+
+// 5. ELIMINACIÓN CON PURGA ABSOLUTA (DELETE)
+export const deleteEmerald = async (req: Request, res: Response) => {
+    try {
+        const { id } = req.params;
+        const emerald = await Emerald.findById(id);
+
+        if (!emerald) return res.status(404).json({ status: 'NOT_FOUND' });
+
+        // Protocolo de Purga: Identificación de binarios para destrucción física
+        const images = emerald.assets?.images || [];
+        const cert = emerald.assets?.certificate?.pdfUrl;
+        const assetsToPurge = [...images];
+        if (cert) assetsToPurge.push(cert);
+
+        if (assetsToPurge.length > 0) {
+            await Promise.all(assetsToPurge.map(url => storageService.deleteAsset(url)));
+        }
+
+        await Emerald.findByIdAndDelete(id);
+
+        return res.status(200).json({ 
+            status: 'SUCCESS', 
+            message: 'Asset and Files Permanently Purged from Ecosystem' 
+        });
+    } catch (error: any) {
+        return res.status(500).json({ status: 'DELETE_ERROR', details: error.message });
+    }
+};
+
+// 6. 📊 MOTOR DE AGREGACIÓN DE INVENTARIO (TELEMETRY)
+// Alimenta los contadores estáticos de esmeraldas (Disponibles, Vendidas, Reservadas)
+export const getInventoryMetrics = async (req: Request, res: Response) => {
+    try {
+        const metrics = await Emerald.aggregate([
+            {
+                $group: {
+                    _id: '$inventory.status', // Agrupación directa sobre las constantes de estado
+                    count: { $sum: 1 },
+                    totalValue: { $sum: '$financials.price' } // Sumatoria de capital financiero en esa fase
+                }
+            }
+        ]);
+
+        // Mapeo inicializado en cero para proteger los componentes del Front-end contra nulos
+        const formattedMetrics = {
+            AVAILABLE: { count: 0, capital: 0 },
+            SOLD: { count: 0, capital: 0 },
+            RESERVED: { count: 0, capital: 0 }
+        };
+
+        metrics.forEach(item => {
+            if (item._id in formattedMetrics) {
+                formattedMetrics[item._id as keyof typeof formattedMetrics] = {
+                    count: item.count,
+                    capital: item.totalValue
+                };
+            }
+        });
+
+        return res.status(200).json({
+            status: 'SUCCESS',
+            origin: 'ALPHA_METRICS_ENGINE',
+            data: formattedMetrics
+        });
+    } catch (error: any) {
+        return res.status(500).json({ status: 'METRICS_ERROR', details: error.message });
+    }
 };
