@@ -42,16 +42,6 @@ export const login = async (req: Request, res: Response) => {
         }
 
 
-
-        // Registro de auditoría
-        user.lastLogin = new Date();
-        await user.save({ validateBeforeSave: false });
-
-        const { accessToken } = generateTokens(user._id.toString(), user.role);
-
-        res.status(200).json({
-            status: 'SUCCESS',
-            data: {
                 user: { id: user._id, name: user.name, email: user.email, role: user.role },
                 token: accessToken
             }
