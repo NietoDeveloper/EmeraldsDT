@@ -9,8 +9,3 @@ export const requireAuth = async (req: AuthenticatedRequest, res: Response, next
         if (!authHeader || !authHeader.startsWith('Bearer ')) {
             return res.status(401).json({ status: 'UNAUTHORIZED', message: 'Missing or malformed token' });
         }
-
-        const token = authHeader.split(' ')[1];
-        const secret = process.env.JWT_SECRET || 'ALPHA_CLUSTER_SECRET_KEY';
-
-        next();
