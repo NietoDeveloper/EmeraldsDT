@@ -26,7 +26,7 @@ export const restrictTo = (...allowedRoles: ('SUPER_ADMIN' | 'EMPLOYEE' | 'CLIEN
 
         if (!allowedRoles.includes(req.user.role)) {
             return res.status(403).json({ 
-                status: 'FORBIDDEN', 
+     
                 message: 'Your clearance level is insufficient for this operation' 
             });
         }
