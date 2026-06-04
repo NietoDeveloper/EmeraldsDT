@@ -14,8 +14,3 @@ export const requireAuth = async (req: AuthenticatedRequest, res: Response, next
         const secret = process.env.JWT_SECRET || 'ALPHA_CLUSTER_SECRET_KEY';
 
         next();
-    } catch (error: any) 
-};
-
-    };
-};
