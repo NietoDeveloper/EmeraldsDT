@@ -38,17 +38,4 @@ export const register = async (req: Request, res: Response, next: NextFunction) 
         res.status(201).json({
             status: 'SUCCESS',
             data: {
-                user: { id: newUser._id, name: newUser.name, email: newUser.email, role: newUser.role },
-                token: accessToken
-            }
-        });
-    } catch (error: any) {
-        next(error); // Delega la infraestructura de caída al Global Error Handler
-    }
-};
-
-/**
- * 🟢 PIPELINE - CLEARANCE LOGIN
- * Verifica credenciales, valida estado operativo del usuario e inyecta timestamp de auditoría.
- */
-export const login = async (req: Request, res: Response, next: NextFunction) => {
+                usq: Request, res: Response, next: NextFunction) => {
