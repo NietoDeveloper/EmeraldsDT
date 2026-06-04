@@ -16,10 +16,6 @@ export const requireAuth = async (req: AuthenticatedRequest, res: Response, next
         next();
     } catch (error: any) 
 };
-T')[]) => {
-    return (r
-            });
-        }
-        next();
+
     };
 };
