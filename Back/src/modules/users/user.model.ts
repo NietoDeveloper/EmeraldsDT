@@ -19,9 +19,7 @@ const userSchema = new Schema<IUser>(
 );
 
 // 🛡️ Pre-Save Hook: Hasheo automático de contraseñas si han sido modificadas
-userSchema.pre('save', async function (next) {
-    if (!this.isModified('password')) return next();
-    try {
+
  
 
 });
