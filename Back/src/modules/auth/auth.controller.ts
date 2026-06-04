@@ -52,23 +52,3 @@ export const register = async (req: Request, res: Response, next: NextFunction) 
  * Verifica credenciales, valida estado operativo del usuario e inyecta timestamp de auditoría.
  */
 export const login = async (req: Request, res: Response, next: NextFunction) => {
-    try {
-        const { email, password } = req.body as LoginInput;
-
-        // Explicit select para rehidratar el hash de password oculto por defecto
-        const user = await User.findOne({ email }).select('+password');
-        if (!user || !(await user.comparePassword(password))) {
-            return res.status(401).json({ 
-                status: 'UNAUTHORIZED', 
-                message: 'Invalid credentials or security mismatch' 
-            });
-        }
-
-        if (!user.isActive) {
-            return res.status(403).json({ 
-                status: 'FORBIDDEN', 
-                message: 'This clearance pipeline has been deactivated by the Architect' 
-            });
-        }
-
-ra evitar reprocesar hooks criptográficos de Bcrypt en el ciclo de guardado.
