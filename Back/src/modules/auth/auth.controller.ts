@@ -21,11 +21,4 @@ export const register = async (req: Request, res: Response) => {
         const { accessToken } = generateTokens(newUser._id.toString(), newUser.role);
 
         res.status(201).json({
-            status: 'SUCCESS',
-            data: {
-                user: { id: newUser._id, name: newUser.name, email: newUser.email, role: newUser.role },
-                token: accessToken
-            }
-        });
-    } catch (error: any) {
-        res.status(500).json({ status: 'SERVER_ERROR', details: error.message });
+            status: 'SUC
