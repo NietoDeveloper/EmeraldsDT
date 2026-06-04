@@ -19,8 +19,6 @@ const userSchema = new Schema<IUser>(
 );
 
 
-// ⚔️ Método de instancia para verificar credenciales de manera segura
-userSchema.methods.comparePassword = async function (candidatePassword: string): Promise<boolean> {
-    return bcrypt.compare(candidatePassword, this.password);
+// ⚔️ Método d
 
 export const User = model<IUser>('User', userSchema);
