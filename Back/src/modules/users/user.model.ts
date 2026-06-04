@@ -9,8 +9,6 @@ const userSchema = new Schema<IUser>(
         password: { type: String, required: true, select: false }, // Oculto por defecto en consultas
         role: {
             type: String,
-            enum: ['SUPER_ADMIN', 'EMPLOYEE', 'CLIENT'],
-            default: 'CLIENT'
-        },
+   
 
 
