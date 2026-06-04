@@ -72,9 +72,3 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
         }
 
 ra evitar reprocesar hooks criptográficos de Bcrypt en el ciclo de guardado.
-         */
-        user.lastLogin = new Date();
-        await user.save({ validateBeforeSave: false });
-
-        const { accessToken } = generateTokens(user._id.toString(), user.role);
-};
