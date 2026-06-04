@@ -16,9 +16,7 @@ export const requireAuth = async (req: AuthenticatedRequest, res: Response, next
         const decoded = jwt.verify(token, secret) as IJWTPayload;
         req.user = decoded; // Inyección de la identidad en el flujo
         next();
-    } catch (error: any) {
-        return res.status(401).json({ status: 'UNAUTHORIZED', message: 'Token has expired or is corrupt' });
-    }
+    } catch (error: any) 
 };
 
 // Guardián B: Control de Accesos Basado en Roles (RBAC)
