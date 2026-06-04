@@ -16,9 +16,7 @@ export const requireAuth = async (req: AuthenticatedRequest, res: Response, next
         next();
     } catch (error: any) 
 };
-
-// Guardián B: Control de Accesos Basado en Roles (RBAC)
-export const restrictTo = (...allowedRoles: ('SUPER_ADMIN' | 'EMPLOYEE' | 'CLIENT')[]) => {
+T')[]) => {
     return (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
         if (!req.user) {
             return res.status(401).json({ status: 'UNAUTHORIZED', message: 'Session data not initialized' });
