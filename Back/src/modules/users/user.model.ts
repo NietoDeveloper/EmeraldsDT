@@ -14,7 +14,5 @@ const userSchema = new Schema<IUser>(
         },
         isActive: { type: Boolean, default: true },
         lastLogin: { type: Date }
-    },
 
-);
 
