@@ -11,7 +11,7 @@ export const registerSchema = z.object({
 
 export const loginSchema = z.object({
     body: z.object({
-        email: z.string().email('Invalid format'),
+
 
     })
 });
