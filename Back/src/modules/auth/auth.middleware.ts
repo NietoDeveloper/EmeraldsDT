@@ -17,11 +17,7 @@ export const requireAuth = async (req: AuthenticatedRequest, res: Response, next
     } catch (error: any) 
 };
 T')[]) => {
-    return (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
-        if (!req.user) {
- 
-     
-                message: 'Your clearance level is insufficient for this operation' 
+    return (r
             });
         }
         next();
