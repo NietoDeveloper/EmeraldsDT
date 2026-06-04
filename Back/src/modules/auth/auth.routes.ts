@@ -5,7 +5,6 @@ import { loginSchema, registerSchema } from '../users/user.schema.js';
 
 const router = Router();
 
-// Rutas de Identidad protegidas en la entrada por Zod Shield
 router.post('/register', validate(registerSchema), register);
 router.post('/login', validate(loginSchema), login);
 
