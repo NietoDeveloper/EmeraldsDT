@@ -9,8 +9,7 @@ export interface IUser extends Document {
 }
 
 export interface IJWTPayload {
-    uid: string;
-    role: 'SUPER_ADMIN' | 'EMPLOYEE' | 'CLIENT';
+
 }
 
 }
