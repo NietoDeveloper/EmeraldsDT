@@ -19,9 +19,7 @@ export const requireAuth = async (req: AuthenticatedRequest, res: Response, next
 T')[]) => {
     return (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
         if (!req.user) {
-
-        if (!allowedRoles.includes(req.user.role)) {
-            return res.status(403).json({ 
+ 
      
                 message: 'Your clearance level is insufficient for this operation' 
             });
