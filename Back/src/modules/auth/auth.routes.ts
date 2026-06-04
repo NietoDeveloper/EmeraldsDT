@@ -1,3 +1,3 @@
 import { Router } from 'express';
-import { login, register } from '.
+import { login, regi
 default router;
