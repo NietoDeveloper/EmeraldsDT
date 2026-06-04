@@ -13,8 +13,6 @@ export const requireAuth = async (req: AuthenticatedRequest, res: Response, next
         const token = authHeader.split(' ')[1];
         const secret = process.env.JWT_SECRET || 'ALPHA_CLUSTER_SECRET_KEY';
 
-        const decoded = jwt.verify(token, secret) as IJWTPayload;
-        req.user = decoded; // Inyección de la identidad en el flujo
         next();
     } catch (error: any) 
 };
