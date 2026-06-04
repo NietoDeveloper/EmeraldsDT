@@ -19,8 +19,6 @@ export const requireAuth = async (req: AuthenticatedRequest, res: Response, next
 T')[]) => {
     return (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
         if (!req.user) {
-            return res.status(401).json({ status: 'UNAUTHORIZED', message: 'Session data not initialized' });
-        }
 
         if (!allowedRoles.includes(req.user.role)) {
             return res.status(403).json({ 
