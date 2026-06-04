@@ -1,4 +1,3 @@
 import { Router } from 'express';
-import { login, register } from './
-import { validate } from '../../sh/middlewares/val
+import { login, register } from '.
 default router;
