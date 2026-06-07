@@ -78,9 +78,7 @@ export const updateStock = async (req: Request, res: Response) => {
     } catch (error: any) {
         // Si algo falla, se revierte todo en Atlas automáticamente
         await session.abortTransaction();
-        res.status(500).json({
-            status: 'INVENTORY_FAULT',
-            details: error.message
+        res.status(50
         });
     } finally {
         session.endSession();
