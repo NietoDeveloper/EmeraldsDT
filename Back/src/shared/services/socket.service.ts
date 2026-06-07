@@ -2,14 +2,50 @@ import { Server as SocketIOServer, Socket } from 'socket.io';
 import { Server as HTTPServer } from 'http';
 
 /**
+ * 🔒 DEFINICIÓN DE CONTRATOS DE TELEMETRÍA - LEVEL L6
+ * Estructuras de datos fijas para evitar mutaciones en el canal WebSockets.
+ */
+export interface ISampleInventoryPayload {
+    sku: string;
+    stock: number;
+    status: 'AVAILABLE' | 'RESERVED' | 'SOLD';
+}
+
+export interface ISaleConfirmationPayload {
+    transactionId: string;
+    sku: string;
+    amount: number;
+    currency: 'COP' | 'USD';
+    buyerEmail: string;
+    timestamp: string;
+}
+
+/**
+ * 🐍 LA CONSTRICTOR REALTIME - INTERFACES DE EVENTOS DE SOCKET.IO
+ * Mapeo estricto de firmas que exige TypeScript para los canales de comunicación.
+ */
+interface ServerToClientEvents {
+    'product:stock_update': (data: { sku: string; status: 'AVAILABLE' | 'RESERVED' | 'SOLD' }) => void;
+    'inventory:critical_alert': (data: ISampleInventoryPayload & { timestamp: string }) => void;
+    'sale:confirmed': (data: ISaleConfirmationPayload) => void;
+}
+
+interface ClientToServerEvents {
+    'admin:activity': (data: { action: string; resource: string }) => void;
+}
+
+interface InterServerEvents {}
+interface SocketData {}
+
+/**
  * ⚡ SOCKET SERVICE - REAL-TIME ENGINE (L6)
- * Arquitectura de Namespaces para Emerald DT
+ * Motor reactivo de baja latencia con segregación simétrica por Namespaces.
  */
 class SocketService {
     private static instance: SocketService;
-    private io: SocketIOServer | null = null;
+    private io: SocketIOServer<ClientToServerEvents, ServerToClientEvents, InterServerEvents, SocketData> | null = null;
 
-    // Namespaces
+    // Namespaces aislados para el E-commerce y la Consola de Control
     private readonly ADMIN_NS = '/dashboard-internal';
     private readonly PUBLIC_NS = '/catalog-updates';
 
@@ -23,7 +59,7 @@ class SocketService {
     }
 
     /**
-     * Inicializa el servidor de Sockets con la configuración de CORS de Software DT
+     * Inicializa el servidor de Sockets con las políticas CORS del Bogotá Node
      */
     public init(httpServer: HTTPServer): void {
         this.io = new SocketIOServer(httpServer, {
@@ -35,68 +71,86 @@ class SocketService {
                 methods: ['GET', 'POST'],
                 credentials: true
             },
-            pingTimeout: 60000,
-            allowEIO3: true
+            pingTimeout: 60000, // Ventana optimizada para mantener vivos los hilos
+            pingInterval: 25000,
+            allowEIO3: false // Grado Máximo: Forzar WebSocket puro (EIO4) evitando degradación de red
         });
 
-        console.log('\x1b[35m⚡ [Socket S+]: Engine Inicializado y Protegido\x1b[0m');
+        console.log('\x1b[35m⚡ [La Constrictor Realtime]: Security Socket Architecture Engaged\x1b[0m');
         this.setupHandlers();
     }
 
+    /**
+     * Orquestación de interceptores de red y eventos entrantes/salientes
+     */
     private setupHandlers(): void {
         if (!this.io) return;
 
-        // 🟢 NAMESPACE PÚBLICO: Actualizaciones de Catálogo
+        // 🌐 NAMESPACE PÚBLICO: Sincronización del catálogo web (E-commerce UI)
         this.io.of(this.PUBLIC_NS).on('connection', (socket: Socket) => {
-            console.log(`🌐 [Socket]: Cliente conectado al Catálogo: ${socket.id}`);
+            console.log(`🌐 [Socket]: Cliente conectado al catálogo web: ${socket.id}`);
             
             socket.on('disconnect', () => {
-                console.log('🌐 [Socket]: Cliente desconectado del Catálogo');
+                console.log(`🌐 [Socket]: Cliente desconectado del catálogo web [ID: ${socket.id}]`);
             });
         });
 
-        // 🔴 NAMESPACE ADMIN: Dashboard de Isabella/Manuel (Nivel S+)
+        // 🛡️ NAMESPACE ADMINISTRATIVO: Consola interna sin scroll de Isabella/Manuel (Nivel S+)
         this.io.of(this.ADMIN_NS).on('connection', (socket: Socket) => {
-            console.log(`🛡️ [Socket]: Personal de Dashboard conectado: ${socket.id}`);
+            console.log(`🛡️ [Socket]: Personal de Dashboard autenticado en el hilo de red: ${socket.id}`);
 
-            // Evento de Auditoría: El dashboard reporta actividad
+            // Canal seguro de auditoría en tiempo real para rastrear operaciones críticas
             socket.on('admin:activity', (data) => {
-                console.log(`📊 [Audit]: Actividad en Dashboard: ${data.action}`);
+                console.log(`📊 [Realtime Audit]: Operación detectada en Dashboard -> ${data.action} sobre ${data.resource}`);
             });
 
             socket.on('disconnect', () => {
-                console.log('🛡️ [Socket]: Personal de Dashboard desconectado');
+                console.log(`🛡️ [Socket]: Canal administrativo cerrado para sesión: ${socket.id}`);
             });
         });
     }
 
     /**
-     * @method emitInventoryUpdate
-     * Notifica a ambos mundos que una esmeralda ha cambiado su estado.
+     * 🛰️ METODO - EMIT INVENTORY UPDATE
+     * Despacha ráfagas asíncronas paralelas. Altera el stock del catálogo público
+     * y emite alertas de cambio de estado (AVAILABLE ➔ SOLD) en la sala de control.
      */
-    public emitInventoryUpdate(payload: { sku: string; stock: number; status: string }): void {
-        if (!this.io) return;
+    public emitInventoryUpdate(payload: ISampleInventoryPayload): void {
+        if (!this.io) {
+            console.warn('⚠️ [La Constrictor]: Intent de emisión abortado. Servidor de Sockets no hidratado');
+            return;
+        }
 
-        // Al público solo enviamos lo necesario
+        // 1. Filtrado de datos para el cliente del E-commerce público (Previene ingeniería inversa)
         this.io.of(this.PUBLIC_NS).emit('product:stock_update', {
             sku: payload.sku,
             status: payload.status
         });
 
-        // Al Dashboard enviamos la telemetría completa
+        // 2. Telemetría cruda y completa enviada de inmediato a la mesa de control de inventarios
         this.io.of(this.ADMIN_NS).emit('inventory:critical_alert', {
-            ...payload,
+            sku: payload.sku,
+            stock: payload.stock,
+            status: payload.status,
             timestamp: new Date().toISOString()
         });
     }
 
     /**
-     * @method emitNewSale
-     * Alerta inmediata de venta para el equipo de logística.
+     * 🛰️ METODO - EMIT NEW SALE
+     * Alerta visual e instantánea que se renderiza en las pantallas a 100vh de logística.
      */
-    public emitNewSale(saleData: any): void {
+    public emitNewSale(saleData: ISaleConfirmationPayload): void {
         if (!this.io) return;
-        this.io.of(this.ADMIN_NS).emit('sale:confirmed', saleData);
+        
+        this.io.of(this.ADMIN_NS).emit('sale:confirmed', {
+            transactionId: saleData.transactionId,
+            sku: saleData.sku,
+            amount: saleData.amount,
+            currency: saleData.currency,
+            buyerEmail: saleData.buyerEmail,
+            timestamp: saleData.timestamp
+        });
     }
 }
 
