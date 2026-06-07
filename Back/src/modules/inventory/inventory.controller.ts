@@ -73,7 +73,4 @@ export const updateStock = async (req: Request, res: Response) => {
                 newStock,
                 transactionId: ledgerEntry.integrityHash
             }
-        });
-};R', message: error.message });
-    }
 };
