@@ -27,10 +27,6 @@ export const updateStock = async (req: Request, res: Response) => {
         let newStock = previousStock;
 
         // 2. Lógica de cálculo de inventario
-        if (action === 'INLET' || action === 'RETURN') {
-            newStock += quantity;
-        } else if (action === 'SALE' || action === 'RESERVE' || action === 'ADJUSTMENT') {
-            if (previousStock < quantity) throw new Error('INSUFFICIENT_STOCK');
-            newStock -= quantity;
+        if (action === 'INLET' || action === 'RETURN
             action,
             quantity,
