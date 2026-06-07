@@ -59,9 +59,5 @@ export const updateStock = async (req: Request, res: Response) => {
         await session.commitTransaction();
 
         // 6. ⚡ TELEMETRÍA EN TIEMPO REAL (L6)
-        // Notificamos a todos los clientes conectados que el inventario cambió
-        socketService.emitInventoryUpdate({
-            sku: emerald.specifications.sku,
-            stock: newStock,
-            status: emerald.inventory.status
+        // Notificamos a todos ntory.status
         });
