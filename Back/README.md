@@ -32,21 +32,27 @@ emerald-dt-api/
 │   │   │   └── emerald.schema.ts     # Zod Shield envolvente en req.body con saneamiento nativo
 │   │   │
 │   │   ├── inventory/             # 📊 Sincronización de Stock Físico
-│   │   │   └── inventory.routes.ts# Tubería de inventario cruzado
+│   │   │   ├── inventory.controller.ts # Lógica atómica transaccional ACID de movimientos de stock
+│   │   │   ├── inventory.routes.ts     # Tubería interna para el cruce de datos Dashboard/E-commerce
+│   │   │   └── inventory.schema.ts     # Escudo Zod para saneamiento de transacciones internas
 │   │   │
 │   │   └── payments/              # 💳 Pasarela de Pagos Segura (Grado Bancario)
-│   │       └── ...
+│   │       ├── payments.controller.ts # Orquestación de cargos y procesamiento criptográfico de Webhooks
+│   │       ├── payments.interfaces.ts # Contratos estrictos de respuesta y payloads de Stripe/Wompi
+│   │       ├── payments.routes.ts     # Endpoints perimetrales con captura de Raw Buffers para firmas
+│   │       └── payments.schema.ts     # Validaciones Zod para intenciones de pago y firmas externas
 │   │
 │   ├── shared/                    # Capa Transversal del Ecosistema
 │   │   ├── middlewares/
 │   │   │   └── validate.middleware.ts # Validador genérico interceptor de esquemas Zod
 │   │   └── services/
-│   │       └── socket.service.ts  # 🐍 La Constrictor Realtime: Heartbeat y Sockets del Canvas
+│   │       ├── socket.service.ts  # ⚡ La Constrictor Realtime: Servidor Type-Safe de WebSockets
+│   │       └── storage.service.ts # 🐍 La Constrictor Storage: Gestión híbrida local/S3 Modular v3
 │   │
 │   ├── app.ts                     # Configuración de Express, inyección unificada y Global Error Handler L6
 │   └── server.ts                  # Bootloader del sistema, Guardián de variables y Apagado Seguro
 │
-├── uploads/                       # Almacenamiento local aislado para fotos de gemas y PDFs CDTEC/GIA
+├── uploads/                       # Almacenamiento local aislado para fotos de gemas y PDFs (Entorno Alpha)
 ├── Dockerfile                     # Empaquetado atómico para despliegue en Railway o AWS clusters
 ├── .env.example                   # Plantilla de llaves críticas (JWT_SECRET, URIs de datacenters)
 ├── .gitignore                     # Blindaje anti-fugas de secretos al repositorio
