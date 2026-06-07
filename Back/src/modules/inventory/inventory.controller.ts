@@ -47,5 +47,4 @@ export const updateStock = async (req: Request, res: Response) => {
             quantity,
             previousStock,
             currentStock: newStock,
-            reason,
-                location: metada
+            
