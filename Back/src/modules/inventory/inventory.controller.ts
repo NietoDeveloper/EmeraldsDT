@@ -66,8 +66,5 @@ export const updateStock = async (req: Request, res: Response) => {
             status: emerald.inventory.status
         });
 
-        res.status(200).json({
-            status: 'SUCCESS',
-            messa
-            }
+        re
 };
