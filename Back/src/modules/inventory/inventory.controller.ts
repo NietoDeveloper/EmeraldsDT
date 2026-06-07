@@ -45,6 +45,3 @@ export const updateStock = async (req: Request, res: Response) => {
             emeraldId: emerald._id,
             action,
             quantity,
-            previousStock,
-            currentStock: newStock,
-            
