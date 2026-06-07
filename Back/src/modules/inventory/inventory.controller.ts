@@ -34,11 +34,7 @@ export const updateStock = async (req: Request, res: Response) => {
             newStock -= quantity;
         }
 
-        // 3. Actualización Atómica en Cluster Alpha (Público)
-        emerald.inventory.stock = newStock;
-        emerald.inventory.status = newStock === 0 ? 'SOLD' : emerald.inventory.status;
-        emerald.inventory.lastStockUpdate = new Date();
-        await emerald.save({ session });
+        // 3. Actualización Atómica en Cls
 
         // 4. Registro inmutable en el Ledger (Cluster Omega - Seguro)
         const ledgerEntry = await LedgerService.record({
