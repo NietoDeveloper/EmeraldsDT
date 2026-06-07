@@ -74,9 +74,6 @@ export const updateStock = async (req: Request, res: Response) => {
                 transactionId: ledgerEntry.integrityHash
             }
         });
-};
-
- */
-export const getInventoryHi{ status: 'ERROR', message: error.message });
+};R', message: error.message });
     }
 };
