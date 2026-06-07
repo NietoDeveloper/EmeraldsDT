@@ -77,12 +77,7 @@ export const updateStock = async (req: Request, res: Response) => {
 };
 
  */
-export const getInventoryHistory = async (req: Request, res: Response) => {
-    try {
-
-        res.status(200).json({
-            status: 'SUCCESS',
-            data: history
+export const getInventoryHistory = async (req
         });
     } catch (error: any) {
         res.status(500).json({ status: 'ERROR', message: error.message });
