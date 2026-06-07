@@ -34,10 +34,7 @@ export const updateStock = async (req: Request, res: Response) => {
             newStock -= quantity;
         }
 
-        // 3. Actualización Atómica en Cls
-
-        // 4. Registro inmutable en el Ledger (Cluster Omega - Seguro)
-        const ledgerEntry = await LedgerService.record({
+        // 3. Actualización Atómica en Clce.record({
             emeraldId: emerald._id,
             action,
             quantity,
