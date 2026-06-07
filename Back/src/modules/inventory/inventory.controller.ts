@@ -79,11 +79,6 @@ export const updateStock = async (req: Request, res: Response) => {
  */
 export const getInventoryHistory = async (req: Request, res: Response) => {
     try {
-        const { emeraldId } = req.params;
-        const history = await mongoose.model('InventoryLedger')
-            .find({ emeraldId })
-            .sort({ createdAt: -1 })
-            .lean();
 
         res.status(200).json({
             status: 'SUCCESS',
