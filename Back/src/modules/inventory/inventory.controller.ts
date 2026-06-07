@@ -57,7 +57,3 @@ export const updateStock = async (req: Request, res: Response) => {
 
         // 5. Commit de la transacción
         await session.commitTransaction();
-
-        // 6. ⚡ TELEMETRÍA EN TIEMPO REAL (L6)
-        // Notificamos a todos ntory.status
-        });
