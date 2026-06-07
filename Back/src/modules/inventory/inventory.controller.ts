@@ -76,9 +76,6 @@ export const updateStock = async (req: Request, res: Response) => {
         });
 };
 
-/**
- * @method getInventoryHistory
-
  */
 export const getInventoryHistory = async (req: Request, res: Response) => {
     try {
