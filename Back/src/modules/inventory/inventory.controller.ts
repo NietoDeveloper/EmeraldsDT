@@ -48,6 +48,4 @@ export const updateStock = async (req: Request, res: Response) => {
             previousStock,
             currentStock: newStock,
             reason,
-            performedBy: adminId,
-            metadata: {
                 location: metada
