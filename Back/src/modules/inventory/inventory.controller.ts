@@ -52,5 +52,4 @@ export const updateStock = async (req: Request, res: Response) => {
             metadata: {
                 location: metadata?.location || 'Bogotá Vault',
                 ipAddress: req.ip
-            }
-        }, session);
+  
