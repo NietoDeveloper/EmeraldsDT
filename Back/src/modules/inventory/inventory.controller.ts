@@ -54,6 +54,3 @@ export const updateStock = async (req: Request, res: Response) => {
                 ipAddress: req.ip
             }
         }, session);
-
-        // 5. Commit de la transacción
-        await session.commitTransaction();
