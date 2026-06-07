@@ -65,6 +65,3 @@ export const updateStock = async (req: Request, res: Response) => {
             stock: newStock,
             status: emerald.inventory.status
         });
-
-        re
-};
