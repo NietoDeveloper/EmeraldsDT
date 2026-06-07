@@ -32,9 +32,5 @@ export const updateStock = async (req: Request, res: Response) => {
         } else if (action === 'SALE' || action === 'RESERVE' || action === 'ADJUSTMENT') {
             if (previousStock < quantity) throw new Error('INSUFFICIENT_STOCK');
             newStock -= quantity;
-        }
-
-        // 3. Actualización Atómica en Clce.record({
-            emeraldId: emerald._id,
             action,
             quantity,
