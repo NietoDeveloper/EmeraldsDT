@@ -7,39 +7,46 @@ import cookieParser from 'cookie-parser';
 import corsOptions from './config/corsOptions.js';
 import { dbManager } from './config/database.js';
 
-// 🛰️ Inyección de Rutas de Dominio (Cluster Alpha & Omega)
+// 🛰️ Inyección de Rutas de Dominio (Cluster Alpha & Omega Target)
 import authRoutes from './modules/auth/auth.routes.js'; 
 import emeraldRoutes from './modules/emeralds/emerald.routes.js';
 import inventoryRoutes from './modules/inventory/inventory.routes.js';
-import { AuthenticatedRequest } from './modules/auth/auth.interfaces.js'; // 🔑 Importación de la interfaz extendida
+import paymentRoutes from './modules/payments/payments.routes.js'; // 💳 Nuevo canal financiero
+import { AuthenticatedRequest } from './modules/auth/auth.interfaces.js';
 
 const app: Application = express();
 
-// 1. 🛡️ Security & Monitoring Layer
-// CSP desactivado para permitir renderizado de assets locales en dashboards
-app.use(helmet({ contentSecurityPolicy: false }));
+// 1. 🛡️ SECURITY & MONITORING LAYER (Frontera de Red Unificada)
+app.use(helmet({ contentSecurityPolicy: false })); // CSP Desactivado para rendering fluido de canvas y uploads locales
 app.use(cors(corsOptions));
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
+app.use(cookieParser()); // Gestión inalterable de Refresh Tokens en HTTPOnly Cookies
 
-// 2. 🗄️ Data Parsing & Static Assets
-app.use(express.json({ limit: '20mb' })); // S+ Rank: Soporte para buffers de alta resolución
+/**
+ * ⚡ CRITICAL L6 PRIORITY ROUTING RULE: FINANCIAL WEBHOOK ISOLATION
+ * Inyectamos el enrutador de pagos ANTES de los parsers de JSON globales.
+ * Esto preserva el stream binario de bytes crudos requeridos por Stripe para verificar firmas.
+ */
+app.use('/api/v1/payments', paymentRoutes);
+
+// 2. 🗄️ GLOBAL DATA PARSING (Para el resto de módulos tradicionales del monorepo)
+app.use(express.json({ limit: '20mb' })); // S+ Rank: Soporte extendido para buffers de alta resolución
 app.use(express.urlencoded({ extended: false, limit: '20mb' }));
-app.use(cookieParser()); // Activo para la gestión segura de Refresh Tokens vía httpOnly cookies
 
 /**
  * 🐍 STATIC ASSET DELIVERY
- * Punto de acceso para fotos de esmeraldas y certificados GIA/CDTEC
+ * Punto de distribución perimetral para fotos de gemas y PDFs de laboratorios CDTEC/GIA.
  */
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
-// 3. 🛣️ API Routes Pipeline
-app.use('/api/v1/auth', authRoutes); // 🔑 Canal de Autenticación montado en el pipeline central
+// 3. 🛣️ APIS DOMAIN PIPELINE
+app.use('/api/v1/auth', authRoutes); 
 app.use('/api/v1/emeralds', emeraldRoutes);
-app.use('/api/v1/inventory', inventoryRoutes);
+app.use('/api/v1/inventory', inventoryRoutes); // Cruce de datos de inventario Dashboard ➔ E-commerce
 
 /**
  * 🛠️ HEALTH CHECK (Nivel S+)
- * Monitoreo de latencia y estado de doble cluster en tiempo real
+ * Telemetría en vivo del estado de conectividad de los dos clústeres de datos.
  */
 app.get('/api/health', (req: Request, res: Response) => {
     try {
@@ -48,7 +55,7 @@ app.get('/api/health', (req: Request, res: Response) => {
         res.status(200).json({ 
             status: 'ONLINE', 
             timestamp: new Date().toISOString(),
-            node: 'Emerald DT Core',
+            node: 'Emerald DT Core Node',
             uptime: process.uptime(),
             db_alpha: publicDB.readyState === 1 ? 'CONNECTED' : 'CONNECTING',
             db_omega: secureDB.readyState === 1 ? 'CONNECTED' : 'CONNECTING'
@@ -56,19 +63,18 @@ app.get('/api/health', (req: Request, res: Response) => {
     } catch (error) {
         res.status(503).json({ 
             status: 'DEGRADED', 
-            message: 'Database Manager not initialized' 
+            message: 'Database Engine Orchestrator failure' 
         });
     }
 });
 
 /**
  * 🚀 ROOT ENDPOINT - SOFTWARE DT STANDARD
- * Mantiene la identidad técnica del Security Cluster
  */
 app.get('/', (_req: Request, res: Response) => {
   res.status(200).json({ 
     status: 'Operational', 
-    service: 'Emerald DT Security Cluster',
+    service: 'Emerald DT Security Cluster API',
     mode: 'Atomic-Proof/Standalone',
     engineer: 'Software DT',
     version: "1.0.0"
@@ -76,21 +82,21 @@ app.get('/', (_req: Request, res: Response) => {
 });
 
 /**
- * 💥 GLOBAL ERROR HANDLER (L6 Practice)
- * Captura fallos en el pipeline, audita accesos comprometidos y evita fugas de información.
+ * 💥 GLOBAL ERROR HANDLER (L6 Standard Practice)
+ * Interceptor centralizado de excepciones. Bloquea fugas de memoria y oculta el stack-trace en la nube.
  */
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
     const statusCode = err.statusCode || 500;
-    const authReq = req as AuthenticatedRequest; // Casteo seguro al flujo de identidad
+    const authReq = req as AuthenticatedRequest; 
     
-    // Log avanzado con auditoría de procedencia del error
-    const userContext = authReq.user ? `[User ID: ${authReq.user.uid} | Role: ${authReq.user.role}]` : '[Unauthenticated Request]';
-    console.error(`\x1b[31m[Critical Error] ${userContext}: ${err.message}\x1b[0m`);
+    // Log analítico con procedencia del contexto del operador
+    const userContext = authReq.user ? `[UID: ${authReq.user.uid} | Role: ${authReq.user.role}]` : '[Guest Network Request]';
+    console.error(`\x1b[31m💥 [Pipeline Fault] ${userContext}: ${err.message}\x1b[0m`);
     
     res.status(statusCode).json({
         status: 'CRITICAL_ERROR',
-        message: err.message || 'Internal Server Fault',
-        stack: process.env.NODE_ENV === 'production' ? '🛡️' : err.stack
+        message: err.message || 'Internal Datacenter Server Fault',
+        stack: process.env.NODE_ENV === 'production' ? '🛡️ [Data Protected]' : err.stack
     });
 });
 
