@@ -50,6 +50,4 @@ export const updateStock = async (req: Request, res: Response) => {
             reason,
             performedBy: adminId,
             metadata: {
-                location: metadata?.location || 'Bogotá Vault',
-                ipAddress: req.ip
-  
+                location: metada
