@@ -68,9 +68,6 @@ export const updateStock = async (req: Request, res: Response) => {
 
         res.status(200).json({
             status: 'SUCCESS',
-            message: 'Inventory Synchronized',
-            data: {
-                newStock,
-                transactionId: ledgerEntry.integrityHash
+            messa
             }
 };
