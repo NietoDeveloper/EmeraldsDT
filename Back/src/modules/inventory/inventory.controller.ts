@@ -89,7 +89,7 @@ export const updateStock = async (req: Request, res: Response) => {
 
 /**
  * @method getInventoryHistory
- * Consulta de auditoría para el Dashboard de Isabella
+
  */
 export const getInventoryHistory = async (req: Request, res: Response) => {
     try {
