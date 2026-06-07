@@ -11,53 +11,53 @@ The project uses a modular structure where each resource is independent, facilit
 
 ```
 emerald-dt-api/
-├── dist/                          # Código compilado (JS) listo para producción en la nube
-├── src/                           # Código fuente en TypeScript (TS)
-│   ├── config/                    # Orquestadores de infraestructura
-│   │   ├── corsOptions.ts         # Políticas de acceso perimetral para el Dashboard y E-commerce
-│   │   └── database.ts            # dbManager: Sincronización simétrica de la DB Alpha y Omega
+├── dist/                          # Compiled Production Bundle (JS) optimized for cloud deployment
+├── src/                           # Core Source Infrastructure (TypeScript)
+│   ├── config/                    # Infrastructure & Gateway Orchestrators
+│   │   ├── corsOptions.ts         # Perimeter access control for Dashboard & E-commerce clients
+│   │   └── database.ts            # dbManager: Symmetric synchronization for Alpha & Omega Clusters
 │   │
-│   ├── modules/                   # Dominios de Negocio Autónomos (Aislados en Monorepo)
-│   │   ├── auth/                  # 🔑 Capa de Identidad Criptográfica (Omega Target)
-│   │   │   ├── auth.controller.ts # Login, registro y auditoría automática de accesos
-│   │   │   ├── auth.interfaces.ts # Contratos estrictos, IUser e inyección AuthenticatedRequest
-│   │   │   ├── auth.middleware.ts # Cortafuegos de red RBAC (requireAuth & restrictTo)
-│   │   │   └── auth.routes.ts     # Enrutador e indicador analítico de estado v2.2
+│   ├── modules/                   # Autonomous Business Domains (Monorepo Isolated Units)
+│   │   ├── auth/                  # 🔑 Cryptographic Identity Layer (Omega Cluster Target)
+│   │   │   ├── auth.controller.ts # Authentication handling, tokens, and access auditing
+│   │   │   ├── auth.interfaces.ts # Tight data structures, IUser schema, and Request extensions
+│   │   │   ├── auth.middleware.ts # Perimetric RBAC firewall (requireAuth & restrictTo)
+│   │   │   └── auth.routes.ts     # Identity access routing pipeline v2.2
 │   │   │
-│   │   ├── emeralds/              # 💎 Activos de Alto Valor (Alpha Target)
-│   │   │   ├── emerald.constants.ts  # Enums nativos de la gemología (Cortes, orígenes, estatus)
-│   │   │   ├── emerald.controller.ts # Motores de lectura lean() y agregación de métricas sin scroll
-│   │   │   ├── emerald.model.ts      # Esquema Mongoose con indexación de Slugs
-│   │   │   ├── emerald.routes.ts     # Pipelines de auditoría blindados con La Constrictor v2.2
-│   │   │   └── emerald.schema.ts     # Zod Shield envolvente en req.body con saneamiento nativo
+│   │   ├── emeralds/              # 💎 High-Value Physical Assets (Alpha Cluster Target)
+│   │   │   ├── emerald.constants.ts  # Gemology native enums (Cuts, origins, clarity states)
+│   │   │   ├── emerald.controller.ts # Lean aggregation engines and instant metric views
+│   │   │   ├── emerald.model.ts      # Mongoose schema featuring automated Slug indexing
+│   │   │   ├── emerald.routes.ts     # Protected auditing routes wrapped by La Constrictor v2.2
+│   │   │   └── emerald.schema.ts     # Strict Zod Shield validation wrapper for req.body
 │   │   │
-│   │   ├── inventory/             # 📊 Sincronización de Stock Físico
-│   │   │   ├── inventory.controller.ts # Lógica atómica transaccional ACID de movimientos de stock
-│   │   │   ├── inventory.routes.ts     # Tubería interna para el cruce de datos Dashboard/E-commerce
-│   │   │   └── inventory.schema.ts     # Escudo Zod para saneamiento de transacciones internas
+│   │   ├── inventory/             # 📊 Atomic Stock Synchronization & Ledgering
+│   │   │   ├── inventory.controller.ts # Multi-cluster ACID transactions for inventory mutators
+│   │   │   ├── inventory.routes.ts# Operational inventory validation and telemetry routes
+│   │   │   └── inventory.schema.ts# Input sanitization and structural Zod enforcement
 │   │   │
-│   │   └── payments/              # 💳 Pasarela de Pagos Segura (Grado Bancario)
-│   │       ├── payments.controller.ts # Orquestación de cargos y procesamiento criptográfico de Webhooks
-│   │       ├── payments.interfaces.ts # Contratos estrictos de respuesta y payloads de Stripe/Wompi
-│   │       ├── payments.routes.ts     # Endpoints perimetrales con captura de Raw Buffers para firmas
-│   │       └── payments.schema.ts     # Validaciones Zod para intenciones de pago y firmas externas
+│   │   └── payments/              # 💳 Bank-Grade Secure Payment Gateway Pipeline
+│   │       ├── payments.controller.ts # Transaction orchestrator & secure Webhook parser
+│   │       ├── payments.interfaces.ts # Type-safe contracts for Stripe, Wompi, and fiscal ledgers
+│   │       ├── payments.routes.ts     # Raw bitstreams for cryptographic verification and webhooks
+│   │       └── payments.schema.ts     # Payment intents structural Zod validation rules
 │   │
-│   ├── shared/                    # Capa Transversal del Ecosistema
+│   ├── shared/                    # Transversal System Utilities
 │   │   ├── middlewares/
-│   │   │   └── validate.middleware.ts # Validador genérico interceptor de esquemas Zod
+│   │   │   └── validate.middleware.ts # Generic schema interceptor middleware for Zod Shields
 │   │   └── services/
-│   │       ├── socket.service.ts  # ⚡ La Constrictor Realtime: Servidor Type-Safe de WebSockets
-│   │       └── storage.service.ts # 🐍 La Constrictor Storage: Gestión híbrida local/S3 Modular v3
+│   │       ├── socket.service.ts  # ⚡ La Constrictor Realtime: High-performance type-safe Sockets
+│   │       └── storage.service.ts # 🐍 La Constrictor Storage: S3 Client v3 & safe local asset buffering
 │   │
-│   ├── app.ts                     # Configuración de Express, inyección unificada y Global Error Handler L6
-│   └── server.ts                  # Bootloader del sistema, Guardián de variables y Apagado Seguro
+│   ├── app.ts                     # Express framework piping, global wrappers, and L6 Error Handler
+│   └── server.ts                  # Bootloader init engine, env guardian, and Graceful Shutdown
 │
-├── uploads/                       # Almacenamiento local aislado para fotos de gemas y PDFs (Entorno Alpha)
-├── Dockerfile                     # Empaquetado atómico para despliegue en Railway o AWS clusters
-├── .env.example                   # Plantilla de llaves críticas (JWT_SECRET, URIs de datacenters)
-├── .gitignore                     # Blindaje anti-fugas de secretos al repositorio
-├── package.json                   # Scripts de orquestación y dependencias con soporte ESM nativo
-└── tsconfig.json                  # Reglas estrictas de compilación (strict: true)
+├── uploads/                       # Local safe sandboxed folder for Gem photos and CDTEC/GIA PDFs
+├── Dockerfile                     # Multi-stage lightweight containerization blueprint for Railway/AWS
+├── .env.example                   # Cryptographic secrets template (JWT, Datacenter URIs)
+├── .gitignore                     # Repository leakage prevention rules
+├── package.json                   # ESM engine configurations, orchestration scripts, and dependencies
+└── tsconfig.json                  # High-strictness compiler configuration (strict: true)
 
 ```
 
