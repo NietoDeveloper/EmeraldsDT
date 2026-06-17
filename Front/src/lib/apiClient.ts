@@ -56,9 +56,6 @@ export const apiClient = {
     }
   },
 
-  // Atajos semánticos para los métodos HTTP estándar
-  get<T>(endpoint: string, options?: RequestOptions) {
-    return this.request<T>(endpoint, { ...options, method: 'GET' });
   },
 
   post<T>(endpoint: string, body: any, options?: RequestOptions) {
