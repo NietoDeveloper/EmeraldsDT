@@ -143,14 +143,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
                 {/* CUERPO DE DATOS TÉCNICOS */}
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
-                    <div className="flex justify-between items-baseline gap-2 mb-2">
-                      <h3 className="text-xl font-bold uppercase tracking-tight text-white group-hover:text-gold transition-colors duration-300">
-                        {gem.name}
-                      </h3>
-
-                    {/* Ficha técnica abreviada */}
-                    <div className="grid grid-cols-2 gap-y-2 border-t border-b border-white/5 py-3 my-4 font-mono text-[11px] text-zinc-400">
-                      <div>
+                    <div className="flex justify-between items
           })}
         </div>
       </div>
