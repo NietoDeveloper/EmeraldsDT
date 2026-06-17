@@ -14,18 +14,6 @@ interface HomePageProps {
       </section>
 
       {/* SECCIONES DINÁMICAS DE LAS MINAS */}
-      {mines.map((mine, index) => (
-        <section 
-          key={mine.id}
-          </div>
-                <span className="text-gold italic font-light text-2xl md:text-4xl block mt-4 tracking-normal normal-case">
-                  {isEs ? mine.tagEs : mine.tag}
-                </span>
-              </h3>
-              
-              <p className="text-zinc-300 text-sm md:text-lg mb-10 max-w-xl opacity-80 leading-relaxed font-medium">
-                {isEs ? mine.descEs : mine.desc}
-              </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <MainButton 
