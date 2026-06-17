@@ -7,9 +7,6 @@ interface EmeraldProduct {
   _id: string;
   name: string;
   mine: 'muzo' | 'chivor' | 'coscuez';
-  carats: number;
-  price: number;
-  serialNumber: string;
   searchParams: Promise<{ mine?: string }>;
     </main>
   );
