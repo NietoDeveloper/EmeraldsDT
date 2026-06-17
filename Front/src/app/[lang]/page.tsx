@@ -15,20 +15,7 @@ interface HomePageProps {
 
       {/* SECCIONES DINÁMICAS DE LAS MINAS */}
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <MainButton 
-                  text={isEs ? 'VER COLECCIÓN' : 'VIEW COLLECTION'} 
-                  variant="gold" 
-                  className="border-2 border-gold text-gold hover:bg-gold hover:text-black font-bold py-4 px-12 transition-all duration-500 tracking-widest text-[11px]"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="absolute right-8 md:right-16 bottom-32 hidden md:flex flex-col items-center gap-4 z-20">
-            <span className="text-gold font-mono text-sm font-bold opacity-60">0{index + 2}</span>
-            <div className="w-[1px] h-24 bg-gradient-to-b from-gold to-transparent opacity-30" />
-          </div>
+              <div classN
         </section>
       ))}
 
