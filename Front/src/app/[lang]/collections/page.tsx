@@ -41,8 +41,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
 px-24 xl:px-32 py-24 selection:bg-gold/30 relative overflow-x-hidden">
       {/* Líneas de cuadrícula de fondo estilo ingeniería SpaceX */}
               <span className="w-2 h-2 bg-emerald-500 animate-pulse rounded-full" />
-              <p className="text-[10px] font-mono text-emeral
-          </div>
+
 
               </Link>
             ))}
