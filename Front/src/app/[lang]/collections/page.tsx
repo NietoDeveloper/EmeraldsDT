@@ -38,9 +38,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
     // 1. Fetching directo desde el Servidor hacia el clúster del Back-End
     // Pasamos el filtro opcional de la mina directamente a tu API
     const endpoint = mine ? `/products?mine=${mine}` : '/products';
-px-24 xl:px-32 py-24 selection:bg-gold/30 relative overflow-x-hidden">
-      {/* Líneas de cuadrícula de fondo estilo ingeniería SpaceX */}
-              <span className="w-2 h-2 bg-emerald-500 animate-pulse rounded-full" />
+
 
 
               </Link>
