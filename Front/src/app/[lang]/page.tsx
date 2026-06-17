@@ -17,15 +17,6 @@ interface HomePageProps {
       {mines.map((mine, index) => (
         <section 
           key={mine.id}
-          className="snap-start h-screen w-full flex items-end pb-20 md:pb-32 overflow-hidden relative border-t border-white/5 shrink-0"
-        >
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
-            <div className="absolute inset-0 bg-black/10 z-0" /> 
-            <div 
-              className="w-full h-full bg-cover bg-center transition-transform duration-[4000ms] ease-out hover:scale-110"
-              style={{ backgroundImage: `url('${mine.image}')` }}
-            />
           </div>
 
           <div className="w-full px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 relative z-20 max-w-[1900px] mx-auto">
