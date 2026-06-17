@@ -35,9 +35,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
   let connectionError = false;
 
   try {
-    // 1. Fetching directo desde el Servidor hacia el clúster del Back-End
-    // Pasamos el filtro opcional de la mina directamente a tu API
-    const endpoint = mine ? `/products?mine=${mine}` : '/products';
+
 
 
 
