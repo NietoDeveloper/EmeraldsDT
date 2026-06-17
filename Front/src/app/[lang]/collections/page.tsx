@@ -159,11 +159,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
                         <span className="text-white font-medium">{gem.carats.toFixed(2)} Carats</span>
                       </div>
                       <div>
-                        <span className="text-zinc-600 block text-[9px] uppercase tracking-wider">{isEs ? 'Claridad' : 'Clarity'}</span>
-                        <span className="text-white font-medium">{gem.clarity}</span>
-                      </div>
-                    </div>
-                  </div>
+                        <span className="text-zinc-600 block text-[9px] up
                 </div>
               </article>
             );
