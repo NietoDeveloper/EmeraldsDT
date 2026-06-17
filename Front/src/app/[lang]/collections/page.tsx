@@ -76,13 +76,6 @@ export default async function CollectionPage({ params, searchParams }: Collectio
             </h1>
           </div>
 
-          {/* Menú de filtrado rápido nativo por URL */}
-          <div className="flex flex-wrap gap-2 font-mono text-[11px] tracking-wider">
-            <Link 
-              href={`/${lang}/collection`}
-              className={`px-3 py-1.5 border transition-all ${!mine ? 'border-gold text-gold bg-gold/5' : 'border-white/10 text-zinc-400 hover:border-white/30'}`}
-            >
-              {isEs ? '[ TODOS ]' : '[ ALL ]'}
               </Link>
             ))}
           </div>
