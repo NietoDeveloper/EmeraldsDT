@@ -5,24 +5,6 @@ import { Footer } from "@/components/shared/Footer"; // Importamos el Footer aqu
 interface HomePageProps {
   params: Promise<{ lang: string }>;
 }
-
-export default async function HomePage({ params }: HomePageProps) {
-  const { lang } = await params;
-  const isEs = lang === 'es';
-
-  const mines = [
-    {
-      id: 'muzo',su saturación incomparable.',
-      // CORRECCIÓN: Se elimina '/public' y se usa el path directo
-      image: '/img/Muzo1.2.png', 
-    },
-      name: 'Chivor',añas de Boyacá, las esmeraldas de Chivor son famosas por su pureza cristalina y su fuego verde-azulado único.',
-      image: '/img/Chivor4.png',
-    },
-    {
-    }
-  ];
-
   return (
     <main className="fixed inset-0 w-full bg-black snap-y snap-mandatory overflow-y-auto scrollbar-hide selection:bg-gold/30 z-0">
       
