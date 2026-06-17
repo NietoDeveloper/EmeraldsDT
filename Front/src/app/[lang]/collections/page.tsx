@@ -57,15 +57,6 @@ export default async function CollectionPage({ params, searchParams }: Collectio
   return (
     <main className="min-h-screen w-full bg-black text-white px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-24 selection:bg-gold/30 relative overflow-x-hidden">
       {/* Líneas de cuadrícula de fondo estilo ingeniería SpaceX */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none z-0" />
-      
-      {/* Contenedor fluido con rango responsivo estricto 310px -> 1900px */}
-      <div className="max-w-[1900px] mx-auto relative z-10 w-full min-w-[278px]">
-        
-        {/* ENCABEZADO TÉCNICO DE LA COLECCIÓN */}
-        <header className="border-b border-white/10 pb-8 mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
               <span className="w-2 h-2 bg-emerald-500 animate-pulse rounded-full" />
               <p className="text-[10px] font-mono text-emeral
           </div>
