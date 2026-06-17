@@ -12,9 +12,4 @@ export const apiClient = {
    * E
     
 
-    if (params) {
-
-    }
-
-    
 
