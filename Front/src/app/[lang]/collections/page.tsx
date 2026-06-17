@@ -164,12 +164,6 @@ export default async function CollectionPage({ params, searchParams }: Collectio
                       </div>
                     </div>
                   </div>
-
-                  {/* Enlace de redirección a la especificación técnica individual (Punto 4) */}
-                  <Link 
-                    href={`/${lang}/collection/${gem._id}`}
-                    className="w-full border border-white/10 text-white bg-transparent hover:bg-white hover:text-black transition-all duration-500 font-mono text-[10px] tracking-widest font-bold py-3 text-center uppercase block relative"
-                  >
                     {isEs ? 'VER ESPECIFICACIONES' : 'VIEW SPECIFICATIONS'}
                     
                     {/* Micro marcador de esquina activo en hover */}
