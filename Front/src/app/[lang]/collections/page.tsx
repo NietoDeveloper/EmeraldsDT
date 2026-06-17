@@ -31,14 +31,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
     notFound();
   }
 
-  let products: EmeraldProduct[] = [];
-  let connectionError = false;
-
-  try {
-
-
-
-
+  let produc
               </Link>
             ))}
           </div>
