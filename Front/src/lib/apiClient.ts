@@ -49,9 +49,3 @@ export const apiClient = {
       }
 
       const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || `API Error: Status ${response.status}`);
-
-    }
-};
