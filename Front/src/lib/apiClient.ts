@@ -38,7 +38,7 @@ export const apiClient = {
     };
 
     try {
-      const response = await fetch(url, config);
+
 
       // Manejo de respuestas vacías sin romper el parser JSON (ej: 204 No Content)
       if (response.status === 204) {
