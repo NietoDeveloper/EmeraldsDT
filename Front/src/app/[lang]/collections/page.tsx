@@ -164,11 +164,6 @@ export default async function CollectionPage({ params, searchParams }: Collectio
                       </div>
                     </div>
                   </div>
-                    {isEs ? 'VER ESPECIFICACIONES' : 'VIEW SPECIFICATIONS'}
-                    
-                    {/* Micro marcador de esquina activo en hover */}
-                    <span className="absolute top-0 right-0 w-1 h-1 bg-gold opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
                 </div>
               </article>
             );
