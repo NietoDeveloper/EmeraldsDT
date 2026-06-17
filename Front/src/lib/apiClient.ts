@@ -48,4 +48,3 @@ export const apiClient = {
         return {} as T;
       }
 
-      const data = await response.json();
