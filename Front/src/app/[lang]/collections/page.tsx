@@ -38,24 +38,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
     // 1. Fetching directo desde el Servidor hacia el clúster del Back-End
     // Pasamos el filtro opcional de la mina directamente a tu API
     const endpoint = mine ? `/products?mine=${mine}` : '/products';
-    const response = await apiClient.get<EmeraldProduct[]>(endpoint);
-    
-    // 2. Filtrado perimetral: Renderizar ÚNICAMENTE piezas en estado AVAILABLE
-    products = (response.data || []).filter(p => p.status === 'AVAILABLE');
-  } catch (error) {
-    console.error('CRITICAL // Cluster connection failed during SSR:', error);
-    connectionError = true;
-  }
-
-  // Mapeo de nombres de minas para consistencia visual
-  const mineNames = {
-    muzo: 'Muzo (Capital)',
-    chivor: 'Chivor (Blue Fire)',
-    coscuez: 'Coscuez (Andean Sun)'
-  };
-
-  return (
-    <main className="min-h-screen w-full bg-black text-white px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-24 selection:bg-gold/30 relative overflow-x-hidden">
+px-24 xl:px-32 py-24 selection:bg-gold/30 relative overflow-x-hidden">
       {/* Líneas de cuadrícula de fondo estilo ingeniería SpaceX */}
               <span className="w-2 h-2 bg-emerald-500 animate-pulse rounded-full" />
               <p className="text-[10px] font-mono text-emeral
