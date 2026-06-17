@@ -54,9 +54,4 @@ export const apiClient = {
         throw new Error(data.message || `API Error: Status ${response.status}`);
 
     }
-  },
-
-  },method: 'POST', body: JSON.stringify(body) });
-  },
-
 };
