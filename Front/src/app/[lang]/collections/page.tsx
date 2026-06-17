@@ -22,12 +22,7 @@ interface CollectionPageProps {
 }
 
 export default async function CollectionPage({ params, searchParams }: CollectionPageProps) {
-  const { lang } = await params;
-  const { mine } = await searchParams;
-  const isEs = lang === 'es';
-              </Link>
-            ))}
-          </div>
+  const {
         </header>
 
     </main>
