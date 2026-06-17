@@ -147,10 +147,6 @@ export default async function CollectionPage({ params, searchParams }: Collectio
                       <h3 className="text-xl font-bold uppercase tracking-tight text-white group-hover:text-gold transition-colors duration-300">
                         {gem.name}
                       </h3>
-                      <span className="font-mono text-sm font-semibold text-gold">
-                        ${gem.price.toLocaleString('en-US')} USD
-                      </span>
-                    </div>
 
                     {/* Ficha técnica abreviada */}
                     <div className="grid grid-cols-2 gap-y-2 border-t border-b border-white/5 py-3 my-4 font-mono text-[11px] text-zinc-400">
