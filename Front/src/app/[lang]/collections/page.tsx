@@ -14,10 +14,6 @@ interface EmeraldProduct {
   clarity: string;
   cut: string;
   serialNumber: string;
-}
-
-interface CollectionPageProps {
-  params: Promise<{ lang: string }>;
   searchParams: Promise<{ mine?: string }>;
     </main>
   );
