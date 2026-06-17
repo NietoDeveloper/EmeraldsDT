@@ -52,12 +52,7 @@ export const apiClient = {
 
       if (!response.ok) {
         throw new Error(data.message || `API Error: Status ${response.status}`);
-      }
 
-      return data as T;
-    } catch (error: any) {
-      console.error(`\x1b[31m💥 [Network Fault] Fail to fetch endpoint: ${endpoint} -> ${error.message}\x1b[0m`);
-      throw error;
     }
   },
 
