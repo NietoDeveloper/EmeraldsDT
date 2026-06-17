@@ -155,9 +155,6 @@ export default async function CollectionPage({ params, searchParams }: Collectio
                     {/* Ficha técnica abreviada */}
                     <div className="grid grid-cols-2 gap-y-2 border-t border-b border-white/5 py-3 my-4 font-mono text-[11px] text-zinc-400">
                       <div>
-                        <span className="text-zinc-600 block text-[9px] uppercase tracking-wider">{isEs ? 'Masa' : 'Mass'}</span>
-                        <span className="text-white font-medium">{gem.carats.toFixed(2)} Carats</span>
-                      </div>
           })}
         </div>
       </div>
