@@ -83,14 +83,6 @@ export default async function CollectionPage({ params, searchParams }: Collectio
               className={`px-3 py-1.5 border transition-all ${!mine ? 'border-gold text-gold bg-gold/5' : 'border-white/10 text-zinc-400 hover:border-white/30'}`}
             >
               {isEs ? '[ TODOS ]' : '[ ALL ]'}
-            </Link>
-            {(['muzo', 'chivor', 'coscuez'] as const).map((m) => (
-              <Link
-                key={m}
-                href={`/${lang}/collection?mine=${m}`}
-                className={`px-3 py-1.5 border uppercase transition-all ${mine === m ? 'border-gold text-gold bg-gold/5' : 'border-white/10 text-zinc-400 hover:border-white/30'}`}
-              >
-                {m}
               </Link>
             ))}
           </div>
