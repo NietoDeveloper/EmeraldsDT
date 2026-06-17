@@ -11,10 +11,7 @@ interface RequestOptions extends RequestInit {
 
 export const apiClient = {
   /**
-   * Ejecuta peticiones HTTP asíncronas inyectando headers globales de seguridad
-   */
-  async request<T>(endpoint: string, options: RequestOptions = {}): Promise<T> {
-    const { params, headers, ...customConfig } = options;
+   * E
     
     // 1. Construcción de URL con Query Params si existen
     let url = `${API_BASE_URL}${endpoint}`;
