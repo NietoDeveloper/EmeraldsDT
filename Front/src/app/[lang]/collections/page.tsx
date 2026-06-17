@@ -9,10 +9,6 @@ interface EmeraldProduct {
   mine: 'muzo' | 'chivor' | 'coscuez';
   carats: number;
   price: number;
-  status: 'AVAILABLE' | 'SOLD' | 'RESERVED';
-  images: string[];
-  clarity: string;
-  cut: string;
   serialNumber: string;
   searchParams: Promise<{ mine?: string }>;
     </main>
