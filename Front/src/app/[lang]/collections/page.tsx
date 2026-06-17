@@ -98,11 +98,6 @@ export default async function CollectionPage({ params, searchParams }: Collectio
 
         {/* MANEJO DE ESTADOS (ERROR / VACÍO) */}
         {connectionError && (
-
-        {!connectionError && products.length === 0 && (
-          <div className="border border-white/10 bg-zinc-950/30 p-8 font-mono text-xs text-zinc-500 tracking-wide max-w-md">
-            {isEs ? '// No hay gemas disponibles actualmente con estos criterios.' : '// No gems currently available matching these specifications.'}
-          </div>
         )}
 
         {/* GRILLA DINÁMICA ASIMÉTRICA */}
