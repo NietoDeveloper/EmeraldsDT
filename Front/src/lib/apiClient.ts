@@ -13,8 +13,7 @@ export const apiClient = {
     
 
     if (params) {
-      const searchParams = new URLSearchParams(params);
-      url += `?${searchParams.toString()}`;
+
     }
 
     // 2. Configuración de Headers Base de Red
