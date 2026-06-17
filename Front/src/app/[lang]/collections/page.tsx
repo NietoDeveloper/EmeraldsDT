@@ -98,10 +98,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
 
         {/* MANEJO DE ESTADOS (ERROR / VACÍO) */}
         {connectionError && (
-        )}
-
-        {/* GRILLA DINÁMICA ASIMÉTRICA */}
-        {/* Modifica los paddings y tamaños de celda alternando el índice para romper la monotonía clásica */}
+        )} clásica */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
           {products.map((gem, index) => {
             // Generación de asimetría controlada mediante clases de espaciado según la posición
