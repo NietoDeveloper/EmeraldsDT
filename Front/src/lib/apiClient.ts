@@ -33,10 +33,7 @@ export const apiClient = {
       headers: {
         ...defaultHeaders,
         ...headers,
-      },
-      // Configuración equivalente a withCredentials: true en Axios.
-      // Obligatorio para compartir cookies HTTPOnly (JWT de sesión) entre dominios y puertos.
-      credentials: 'include', 
+    ', 
       ...customConfig,
     };
 
