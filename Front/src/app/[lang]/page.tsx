@@ -16,8 +16,6 @@ export default async function HomePage({ params }: HomePageProps) {
       // CORRECCIÓN: Se elimina '/public' y se usa el path directo
       image: '/img/Muzo1.2.png', 
     },
-    {
-      id: 'chivor',
       name: 'Chivor',añas de Boyacá, las esmeraldas de Chivor son famosas por su pureza cristalina y su fuego verde-azulado único.',
       image: '/img/Chivor4.png',
     },
