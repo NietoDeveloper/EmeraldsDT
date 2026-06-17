@@ -38,9 +38,7 @@ export const apiClient = {
     };
 
     try {
-
-
-      // Manejo de respuestas vacías sin romper el parser JSON (ej: 204 No Content)
+r el parser JSON (ej: 204 No Content)
       if (response.status === 204) {
         return {} as T;
       }
