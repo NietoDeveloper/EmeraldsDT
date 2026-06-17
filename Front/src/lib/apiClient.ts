@@ -19,10 +19,7 @@ export const apiClient = {
     }
 
     // 2. Configuración de Headers Base de Red
-    const defaultHeaders: HeadersInit = {
-      'Content-Type': 'application/json',
-    };
-
+    const default
     const config: RequestInit = {
       method: options.method || 'GET',
       headers: {
