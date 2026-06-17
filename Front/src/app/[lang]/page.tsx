@@ -12,10 +12,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
   const mines = [
     {
-      id: 'muzo',
-      name: 'Muzo',
-      tag: 'The World Capital of Emeralds',
-      tagEs: 'La Capital Mundial de las Esmeraldas',odiciadas de la Tierra, caracterizadas por su saturación incomparable.',
+      id: 'muzo',su saturación incomparable.',
       // CORRECCIÓN: Se elimina '/public' y se usa el path directo
       image: '/img/Muzo1.2.png', 
     },
