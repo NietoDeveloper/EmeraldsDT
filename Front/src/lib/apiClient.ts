@@ -11,8 +11,7 @@ export const apiClient = {
   /**
    * E
     
-    // 1. Construcción de URL con Query Params si existen
-    let url = `${API_BASE_URL}${endpoint}`;
+
     if (params) {
       const searchParams = new URLSearchParams(params);
       url += `?${searchParams.toString()}`;
