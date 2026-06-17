@@ -25,13 +25,6 @@ export default async function CollectionPage({ params, searchParams }: Collectio
   const { lang } = await params;
   const { mine } = await searchParams;
   const isEs = lang === 'es';
-
-  // Validar códigos de idioma soportados
-  if (lang !== 'en' && lang !== 'es') {
-    notFound();
-  }
-
-  let produc
               </Link>
             ))}
           </div>
