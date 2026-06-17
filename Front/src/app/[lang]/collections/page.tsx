@@ -99,15 +99,6 @@ export default async function CollectionPage({ params, searchParams }: Collectio
         {/* MANEJO DE ESTADOS (ERROR / VACÍO) */}
         {connectionError && (
         )} clásica */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-          {products.map((gem, index) => {
-            // Generación de asimetría controlada mediante clases de espaciado según la posición
-            const isEven = index % 2 === 0;
-            const cardSpacing = index % 3 === 1 ? 'lg:translate-y-8' : index % 3 === 2 ? 'lg:-translate-y-4' : '';
-
-            re
-                    <div className="flex justify-between items
-          })}
         </div>
       </div>
     </main>
