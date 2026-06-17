@@ -18,15 +18,6 @@ interface HomePageProps {
         <section 
           key={mine.id}
           </div>
-
-          <div className="w-full px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 relative z-20 max-w-[1900px] mx-auto">
-            <div className="animate-fade-in-up duration-1000">
-              <h2 className="text-emerald-500 font-mono tracking-[0.4em] uppercase mb-4 text-[10px] md:text-xs font-bold opacity-90">
-                {isEs ? `// Origen: Boyacá, Colombia` : `// Origin: Boyacá, Colombia`}
-              </h2>
-              
-              <h3 className="text-5xl md:text-8xl font-black uppercase mb-6 tracking-tighter text-white leading-[0.85]">
-                {mine.name} <br/>
                 <span className="text-gold italic font-light text-2xl md:text-4xl block mt-4 tracking-normal normal-case">
                   {isEs ? mine.tagEs : mine.tag}
                 </span>
