@@ -22,13 +22,6 @@ export default async function HomePage({ params }: HomePageProps) {
       image: '/img/Chivor4.png',
     },
     {
-      id: 'coscuez',
-      name: 'Coscuez',
-      tag: 'Geometry and Brilliance',
-      tagEs: 'Geometría y Brillo',
-      desc: 'Known for producing gems with exceptional brilliance and a slightly yellowish-green tint that captures the sunlight of the Colombian Andes.',
-      descEs: 'Conocidas por producir gemas con un brillo excepcional y un tinte verde-amarillento que captura la luz del sol de los Andes colombianos.',
-      image: '/img/Coscuez2.png',
     }
   ];
 
