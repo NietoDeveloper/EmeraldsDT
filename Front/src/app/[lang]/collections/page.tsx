@@ -118,31 +118,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
             const isEven = index % 2 === 0;
             const cardSpacing = index % 3 === 1 ? 'lg:translate-y-8' : index % 3 === 2 ? 'lg:-translate-y-4' : '';
 
-            return (
-              <article 
-                key={gem._id} 
-                className={`group flex flex-col justify-between border border-white/[0.06] bg-zinc-950/20 backdrop-blur-sm transition-all duration-500 hover:border-white/20 ${cardSpacing}`}
-              >
-                {/* Contenedor de Imagen de Carga Optimizada */}
-                <div className="relative aspect-[4/5] w-full overflow-hidden bg-zinc-900 border-b border-white/[0.06]">
-                  {/* Tag indicador de procedencia industrial */}
-                  <span className="absolute top-4 left-4 z-20 font-mono text-[9px] bg-black/80 border border-white/10 text-zinc-400 px-2 py-1 tracking-widest uppercase">
-                    {gem.mine} // {gem.serialNumber}
-                  </span>
-                  
-                  {/* Imagen del producto con efecto zoom SpaceX */}
-                  <div 
-                    className="w-full h-full bg-cover bg-center transition-transform duration-[2000ms] ease-out group-hover:scale-105"
-                    style={{ backgroundImage: `url('${gem.images[0] || '/img/placeholder-emerald.png'}')` }}
-                  />
-                  
-                  {/* Degradado de sombra interior */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
-                </div>
-
-                {/* CUERPO DE DATOS TÉCNICOS */}
-                <div className="p-6 flex-1 flex flex-col justify-between">
-                  <div>
+            re
                     <div className="flex justify-between items
           })}
         </div>
