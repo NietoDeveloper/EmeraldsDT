@@ -67,13 +67,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
           <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="w-2 h-2 bg-emerald-500 animate-pulse rounded-full" />
-              <p className="text-[10px] font-mono text-emerald-500 tracking-[0.25em] uppercase font-bold">
-                {isEs ? '// SISTEMA DE TRAZABILIDAD EN TIEMPO REAL' : '// REAL-TIME TRACEABILITY SYSTEM'}
-              </p>
-            </div>
-            <h1 className="text-3xl sm:text-5xl font-black uppercase tracking-tighter text-white">
-              {mine ? `${isEs ? 'ORIGEN' : 'ORIGIN'}: ${mineNames[mine as keyof typeof mineNames] || mine}` : (isEs ? 'JOYAS DISPONIBLES' : 'AVAILABLE GEMS')}
-            </h1>
+              <p className="text-[10px] font-mono text-emeral
           </div>
 
               </Link>
