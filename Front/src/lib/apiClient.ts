@@ -10,6 +10,3 @@ interface RequestOptions extends RequestInit {
 export const apiClient = {
   /**
    * E
-    
-
-
