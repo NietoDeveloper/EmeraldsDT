@@ -96,11 +96,6 @@ export default async function CollectionPage({ params, searchParams }: Collectio
           </div>
         </header>
 
-        {/* MANEJO DE ESTADOS (ERROR / VACÍO) */}
-        {connectionError && (
-        )} clásica */}
-        </div>
-      </div>
     </main>
   );
 }
