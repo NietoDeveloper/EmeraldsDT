@@ -98,11 +98,6 @@ export default async function CollectionPage({ params, searchParams }: Collectio
 
         {/* MANEJO DE ESTADOS (ERROR / VACÍO) */}
         {connectionError && (
-          <div className="border border-red-500/30 bg-red-950/10 p-6 font-mono text-sm text-red-400 max-w-xl">
-            <p className="font-bold uppercase mb-2">// SECURITY ALERT //</p>
-            <p>{isEs ? 'Fallo en el enlace con el clúster de datos de la app. Verifica tu conexión de red.' : 'App data cluster link failure. Check your network link.'}</p>
-          </div>
-        )}
 
         {!connectionError && products.length === 0 && (
           <div className="border border-white/10 bg-zinc-950/30 p-8 font-mono text-xs text-zinc-500 tracking-wide max-w-md">
