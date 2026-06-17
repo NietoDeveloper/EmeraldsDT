@@ -16,8 +16,5 @@ export const apiClient = {
 
     }
 
-    // 2. Configuración de Headers Base de Red
-
-        return {} as T;
-      }
+    
 
