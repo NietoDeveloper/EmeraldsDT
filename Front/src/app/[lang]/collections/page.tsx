@@ -19,12 +19,6 @@ interface EmeraldProduct {
 interface CollectionPageProps {
   params: Promise<{ lang: string }>;
   searchParams: Promise<{ mine?: string }>;
-}
-
-export default async function CollectionPage({ params, searchParams }: CollectionPageProps) {
-  const {
-        </header>
-
     </main>
   );
 }
