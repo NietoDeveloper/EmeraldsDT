@@ -13,18 +13,6 @@ interface HomePageProps {
         <HeroSection />
       </section>
 
-      {/* SECCIONES DINÁMICAS DE LAS MINAS */}
-              
-              <div classN
-        </section>
-      ))}
-
-      {/* SECCIÓN FINAL: TECNOLOGÍA */}
-      <section className="snap-start h-screen w-full bg-black relative flex items-center shrink-0 border-t border-white/5 overflow-hidden">
-        <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] bg-emerald-900/10 blur-[150px] rounded-full opacity-50" />
-        <div className="container mx-auto px-6 sm:px-12 md:px-24 lg:px-32 max-w-[1900px] z-10">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
-            <div className="relative">
               <h2 className="text-4xl md:text-6xl font-bold uppercase mb-8 leading-tight text-white tracking-tighter">
                 Nieto Lab <br /> <span className="text-gold italic font-extralight uppercase tracking-normal">Engineering</span>
               </h2>
