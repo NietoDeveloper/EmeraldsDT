@@ -56,10 +56,7 @@ export const apiClient = {
     }
   },
 
-  },
-
-  post<T>(endpoint: string, body: any, options?: RequestOptions) {
-    return this.request<T>(endpoint, { ...options, method: 'POST', body: JSON.stringify(body) });
+  },method: 'POST', body: JSON.stringify(body) });
   },
 
   put<T>(endpoint: string, body: any, options?: RequestOptions) {
