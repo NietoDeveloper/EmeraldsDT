@@ -1,2 +1,1 @@
-import Link from 'next/link';
-import { notFound } from 'next/navig
+import Link from 'next/limport { notFound } from 'next/navig
