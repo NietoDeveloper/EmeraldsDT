@@ -60,16 +60,6 @@ export default function CheckoutForm({ productId, isEs, price }: CheckoutFormPro
     );
   }
 
-  return (
-    <form onSubmit={handleProcessPayment} className="space-y-6 font-mono">
-      <div>
-        <h2 className="text-sm font-bold uppercase tracking-wi
-          type="submit"
-          disabled={status === 'PROCESSING'}
-          className="w-full border border-gold text-gold hover:bg-gold hover:text-black transition-colors font-bold py-3.5 tracking-[0.2em] text-[10px] uppercase disabled:opacity-40"
-        >
-          {status === 'PROCESSING' ? (isEs ? 'ENCRIPTANDO ORDEN...' : 'ENCRYPTING ORDER...') : (isEs ? 'EJECUTAR TRANSACCIÓN' : 'EXECUTE TRANSACTION')}
-        </button>
       </div>
     </form>
   );
