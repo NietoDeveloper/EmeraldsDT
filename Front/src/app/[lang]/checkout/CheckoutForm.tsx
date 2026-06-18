@@ -63,16 +63,7 @@ export default function CheckoutForm({ productId, isEs, price }: CheckoutFormPro
   return (
     <form onSubmit={handleProcessPayment} className="space-y-6 font-mono">
       <div>
-        <h2 className="text-sm font-bold uppercase tracking-wider mb-1 text-white">
-          {isEs ? 'PROCESAMIENTO DE PAGO SEGURO' : 'SECURE PAYMENT PROCESSING'}
-        </h2>
-        <p className="text-[10px] text-zinc-500 tracking-widest uppercase">// GATEWAY INSTANCE V1.0</p>
-      </div>
-
-      {status === 'REJECTED' && (
-      )}
-
-        <button
+        <h2 className="text-sm font-bold uppercase tracking-wi
           type="submit"
           disabled={status === 'PROCESSING'}
           className="w-full border border-gold text-gold hover:bg-gold hover:text-black transition-colors font-bold py-3.5 tracking-[0.2em] text-[10px] uppercase disabled:opacity-40"
