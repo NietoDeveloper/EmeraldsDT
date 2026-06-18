@@ -70,10 +70,6 @@ export default function CheckoutForm({ productId, isEs, price }: CheckoutFormPro
       </div>
 
       {status === 'REJECTED' && (
-        <div className="border-l-2 border-red-500 bg-red-950/10 p-4 text-xs text-red-400">
-          <p className="font-bold uppercase mb-1">// TRANSACTION FAULT</p>
-          <p>{gatewayError || (isEs ? 'Verifica los fondos o pasarela externa.' : 'Verify funds or external gateway Link.')}</p>
-        </div>
       )}
 
         <button
