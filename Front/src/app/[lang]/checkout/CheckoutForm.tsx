@@ -76,13 +76,6 @@ export default function CheckoutForm({ productId, isEs, price }: CheckoutFormPro
         </div>
       )}
 
-      <div className="border-t border-white/5 pt-4">
-        <p className="text-[10px] text-zinc-400 leading-relaxed mb-6">
-          {isEs 
-            ? 'Al accionar el botón de ejecución, aceptas que los fondos serán retenidos de forma segura mientras el clúster procesa la firma del smart contract de la joya.' 
-            : 'By pulling the execution trigger, you agree that funds will be safely held while the cluster processes the signature of the asset smart contract.'}
-        </p>
-
         <button
           type="submit"
           disabled={status === 'PROCESSING'}
