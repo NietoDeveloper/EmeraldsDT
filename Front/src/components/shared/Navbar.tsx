@@ -104,15 +104,7 @@ export const Navbar = () => {
             <div className="hidden md:flex items-center gap-6 text-emerald-500">
               <Link href="/cart" className="hover:text-gold transition-all duration-500 hover:-translate-y-2 hover:drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]">
                 <ShoppingCart size={20} strokeWidth={2} />
-              </Link>
-              <Link href="/login" className="text-[10px] uppercase tracking-[0.3em] font-black hover:text-gold hover:-translate-y-1 transition-all duration-500">
-                Access00/20 transition-all duration-500 hover:border-gold outline-none"
-            >
-
-            </button>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent opacity-40" />
-
-        <div className="relative flex flex-col h-full justify-center items-center px-6 gap-10">
+              </Link>gap-10">
           <div onClick={handleRefresh} className="cursor-pointer mb-2">
               <div className="relative w-16 h-16">
                 <Image src="/img/logo.png" alt="Logo" fill className="object-contain" />
