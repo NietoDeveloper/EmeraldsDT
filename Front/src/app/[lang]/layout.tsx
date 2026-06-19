@@ -31,12 +31,7 @@ export const metadata: Metadata = {
     apple: [{ url: "/img/logo.png", sizes: "180x180", type: "image/png" }],
   },
 };
-
-/**
- * Emerald DT - Root Layout Orchestrator
- * Limpio de Footer para permitir que page.tsx gestione el Snap Scroll.
- */
-export default async function RootLayout(props: RootLayoutProps) {
+ayoutProps) {
   const { children, params } = props;
   const resolvedParams = await params;
   const lang = resolvedParams?.lang || "en";
