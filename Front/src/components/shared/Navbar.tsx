@@ -74,12 +74,6 @@ export const Navbar = () => {
             <div className="flex items-center gap-1">
               <span className="font-bold tracking-[0.15em] uppercase text-emerald-500 text-sm md:text-2xl transition-all duration-500 group-hover:text-gold">
                 Emerald
-              </span>
-              <span className="font-black tracking-tighter uppercase text-gold text-sm md:text-2xl italic">
-                DT
 
-              </div>
-            ))}
-    </>
   );
 };
