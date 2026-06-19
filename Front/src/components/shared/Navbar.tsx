@@ -90,10 +90,7 @@ export const Navbar = () => {
                   className="flex items-center gap-1.5 text-[10px] xl:text-[11px] uppercase tracking-[0.3em] font-bold text-zinc-400 hover:text-gold hover:-translate-y-1 transition-all duration-300"
                 >
                   {link.name}
-                  {link.subItems && (
-                    <ChevronDown size={10} className="group-hover/item:rotate-180 transition-transform duration-300 opacity-70" />
-                  )}
-                </Link>
+    
               </div>
             ))}
     </>
