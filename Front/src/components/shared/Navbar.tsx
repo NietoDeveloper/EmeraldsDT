@@ -117,9 +117,7 @@ export const Navbar = () => {
                 key={item.name} 
                 href={item.href} 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-2xl md:text-4xl uppercase tracking-[0.4em] font-black text-emerald-500/60 hover:text-gold transition-all duration-500
-                  ${isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
-                style={{ transitionDelay: `${index * 50}ms` }}
+
               >
 
               </Link>
