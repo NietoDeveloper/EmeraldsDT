@@ -67,7 +67,3 @@ export const Navbar = () => {
         <div className="w-full max-w-[1900px] mx-auto flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-20">
           
           {/* LOGO & BRAND */}
-          <Link href="/" onClick={handleRefresh} className="group flex items-center gap-2 md:gap-4 z-[120] outline-none cursor-pointer">
-            <div className="relative w-8 h-8 md:w-14 md:h-14 transition-all duration-700 group-hover:rotate-[360deg] group-hover:scale-110">
-              <Image src="/img/logo.png" alt="Emerald DT Logo" fill className="object-contain" />
-            </div>
