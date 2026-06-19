@@ -110,15 +110,6 @@ export const Navbar = () => {
             >
 
             </button>
-          </div>
-        </div>
-      </nav>
-
-      {/* MOBILE MENU OVERLAY */}
-      <div className={`fixed inset-0 z-[130] transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] 
-        ${isMobileMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
-      >
-
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent opacity-40" />
 
         <div className="relative flex flex-col h-full justify-center items-center px-6 gap-10">
