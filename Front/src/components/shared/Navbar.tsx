@@ -36,8 +36,4 @@ const navLinks: NavLink[] = [
 export const Navbar = () => {
   const scrollDirection = useScrollDirection();
   const [isAtTop, setIsAtTop] = useState(true);
-bileMenuOpen ? "-translate-y-full" : "translate-y-0"} 
-          ${isAtTop 
-            ? "bg-transparent py-6 md:py-8" 
 
-      >
