@@ -126,11 +126,6 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* Footer Mobile: Carrito y Login ajustados */}
-          <div className={`flex gap-12 items-center mt-4 transition-all duration-1000 delay-300 ${isMobileMenuOpen ? "opacity-100" : "opacity-0"}`}>
-             <Link href="/cart" onClick={() => setIsMobileMenuOpen(false)} className="text-emerald-500 hover:text-gold hover:scale-125 transition-all duration-500"><ShoppingCart size={32}/></Link>
-             <Link href="/login" onClick={() => setIsMobileMenuOpen(false)} className="text-xs uppercase tracking-[0.4em] font-black text-emerald-500 hover:text-gold transition-all duration-500">Access</Link>
-          </div>
         </div>
       </div>
     </>
