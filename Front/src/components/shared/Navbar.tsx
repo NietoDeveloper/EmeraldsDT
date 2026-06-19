@@ -106,11 +106,7 @@ export const Navbar = () => {
               </Link>gap-10">
 
 
-              </div>
 
-
-
-        </div>
       </div>
     </>
   );
