@@ -83,8 +83,7 @@ export const Navbar = () => {
 
           {/* DESKTOP MENU */}
           <div className="hidden lg:flex items-center gap-6 xl:gap-10">
-            {navLinks.map((link) => (
-              <div key={link.name} className="relative group/item">
+
                 <Link 
 
                   {link.name}
