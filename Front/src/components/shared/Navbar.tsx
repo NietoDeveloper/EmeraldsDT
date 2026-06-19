@@ -99,10 +99,6 @@ export const Navbar = () => {
           </div>
 
           {/* ICONS & HAMBURGER */}
-          <div className="flex items-center gap-3 md:gap-6">
-            {/* Seccion Carrito y Acceso: Verde Esmeralda con Hover Gold Flotante */}
-
-
 
 
       </div>
