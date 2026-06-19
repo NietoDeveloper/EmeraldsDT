@@ -26,23 +26,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://emeralddt.com'croll lo manejará 
-          el contenedor <main> de la página para el Snap.
-      */}
-      <body className="antialiased bg-black text-white selection:bg-emerald-500/30 selection:text-emerald-200 min-h-screen font-sans">
-        
-        <Suspense fallback={null}>
-          <Preloader />
-        </Suspense>
-
-        <div id="main-content" className="relative flex flex-col min-h-screen">
-          <Navbar />
-          
-          <main className="flex-grow w-full relative z-10">
-            <PageTransitionWrapper>
-              {children}
-            </PageTransitionWrapper>
-          </main>
+  metadataBase: new URL('https://emeralddt.com'croll lo 
 
           {/* IMPORTANTE: El Footer se ha removido de aquí.
               Ahora se renderiza al final de cada page.tsx 
