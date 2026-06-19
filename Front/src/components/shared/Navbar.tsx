@@ -21,7 +21,3 @@ const navLinks: NavLink[] = [
   { name: "Home", href: "/" },
   { name: "Catalog", href: "/catalog" },
   { 
-    name: "Categories", 
-    href: "/categories",
-    subItems: [
-      { name: "Muzo Selection", href: "/categories/muzo" },
