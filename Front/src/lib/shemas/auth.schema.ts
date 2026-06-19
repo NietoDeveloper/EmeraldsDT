@@ -7,4 +7,4 @@ export const loginSchema = z.object({
    / Mínimo 6 caracteres' })
 });
 
-export type LoginInput = z.infer<typeof loginSchema>;
+export type LoginInput = z.infer<typeof 
