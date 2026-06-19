@@ -1,8 +1,5 @@
 import { z } from 'zod';
-
-/**
- * 🛡️ FRONT-END VALIDATION SHIELD (LEVEL L5)
- * Réplica exacta de las restricciones del Back-End para mitigar peticiones basura.
+ar peticiones basura.
  */
 export const loginSchema = z.object({
   email: z
