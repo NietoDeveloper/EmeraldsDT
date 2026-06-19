@@ -61,6 +61,5 @@ export const Navbar = () => {
           ${scrollDirection === "down" && !isMobileMenuOpen ? "-translate-y-full" : "translate-y-0"} 
           ${isAtTop 
             ? "bg-transparent py-6 md:py-8" 
-            : "bg-black/60 backdrop-blur-xl py-4 shadow-2xl"
-          }`}
+
       >
