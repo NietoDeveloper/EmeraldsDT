@@ -64,6 +64,3 @@ export const Navbar = () => {
             : "bg-black/60 backdrop-blur-xl py-4 shadow-2xl"
           }`}
       >
-        <div className="w-full max-w-[1900px] mx-auto flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-20">
-          
-          {/* LOGO & BRAND */}
