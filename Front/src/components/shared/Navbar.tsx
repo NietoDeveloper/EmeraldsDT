@@ -34,4 +34,3 @@ const navLinks: NavLink[] = [
 ];
 
 export const Navbar = () => {
-  const scrollDirection = useScrollDirection();
