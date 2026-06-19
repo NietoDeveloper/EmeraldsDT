@@ -5,17 +5,7 @@
       "dom",
       "dom.iterable",
       "esnext"
-    ],
-    "allowJs": true,
 
-
-    "is
-      }
-    ],
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
     }
   },
   "include": [
