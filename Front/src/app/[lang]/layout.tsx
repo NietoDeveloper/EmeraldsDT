@@ -20,20 +20,3 @@ const mono = JetBrains_Mono({
 
 export const viewport: Viewport = {
   width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
-  themeColor: "#000000",
-};
-
-export const metadata: Metadata = {
-  metadataBase: new URL('https://emeralddt.com'croll lo 
-
-          {/* IMPORTANTE: El Footer se ha removido de aquí.
-              Ahora se renderiza al final de cada page.tsx 
-              para que el Snap Scroll funcione correctamente.
-          */}
-        </div>
-      </body>
-    </html>
-  );
-}
