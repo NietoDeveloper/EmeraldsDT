@@ -1,11 +1,4 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
 
-
-    "**/*.mts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
 }
