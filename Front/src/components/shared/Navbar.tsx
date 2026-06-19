@@ -7,10 +7,4 @@ import { useState, useEffect } from "react";
 import { ShoppingCart, ChevronDown } from "lucide-react";
 
 interface NavSubItem {
-  name: string;
-  href: string;
-}
 
-interface NavLink {
-  name: string;
-  href: string;
