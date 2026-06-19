@@ -106,7 +106,7 @@ export const Navbar = () => {
                 <ShoppingCart size={20} strokeWidth={2} />
               </Link>gap-10">
 
-                <Image src="/img/logo.png" alt="Logo" fill className="object-contain" />
+
               </div>
           </div>
 
