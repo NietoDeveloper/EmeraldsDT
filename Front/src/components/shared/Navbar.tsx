@@ -114,9 +114,7 @@ export const Navbar = () => {
           <div className="flex flex-col items-center gap-6 w-full">
             {navLinks.map((item, index) => (
               <Link 
-                key={item.name} 
-                href={item.href} 
-                onClick={() => setIsMobileMenuOpen(false)}
+
 
               >
 
