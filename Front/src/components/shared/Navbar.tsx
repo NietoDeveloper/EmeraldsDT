@@ -71,9 +71,3 @@ export const Navbar = () => {
             <div className="relative w-8 h-8 md:w-14 md:h-14 transition-all duration-700 group-hover:rotate-[360deg] group-hover:scale-110">
               <Image src="/img/logo.png" alt="Emerald DT Logo" fill className="object-contain" />
             </div>
-            <div className="flex items-center gap-1">
-              <span className="font-bold tracking-[0.15em] uppercase text-emerald-500 text-sm md:text-2xl transition-all duration-500 group-hover:text-gold">
-                Emerald
-
-  );
-};
