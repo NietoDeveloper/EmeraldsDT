@@ -96,12 +96,6 @@ export const Navbar = () => {
                 </Link>
               </div>
             ))}
-          </div>
-
-          {/* ICONS & HAMBURGER */}
-
-
-      </div>
     </>
   );
 };
