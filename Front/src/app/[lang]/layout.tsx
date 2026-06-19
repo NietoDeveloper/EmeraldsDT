@@ -26,20 +26,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://emeralddt.com'),ype: "image/png" }],
-    shortcut: "/img/logo.png",
-    apple: [{ url: "/img/logo.png", sizes:
-        <style dangerouslySetInnerHTML={{ __html: `
-          html.js-loading body { overflow: hidden !important; background: #000 !important; }
-          #main-content { opacity: 0; visibility: hidden; }
-          html.js-loaded #main-content { 
-            opacity: 1 !important; 
-            visibility: visible !important; 
-            transition: opacity 1.2s cubic-bezier(0.43, 0.13, 0.23, 0.96); 
-          }
-        `}} />
-      </head>
-      {/* Eliminamos overflow-x-hidden del body porque el scroll lo manejará 
+  metadataBase: new URL('https://emeralddt.com'croll lo manejará 
           el contenedor <main> de la página para el Snap.
       */}
       <body className="antialiased bg-black text-white selection:bg-emerald-500/30 selection:text-emerald-200 min-h-screen font-sans">
