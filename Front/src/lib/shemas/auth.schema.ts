@@ -6,10 +6,7 @@ export const loginSchema = z.object({
     .string()
     .min(1, { message: 'Email is required // Correequerido' })
     .email({ message: 'Invalid email address // Correo inválido' })
-    .toLowerCase(),
-  password: z
-
-    .min(6, { message: 'Password must be ataracters // Mínimo 6 caracteres' })
+   / Mínimo 6 caracteres' })
 });
 
 export type LoginInput = z.infer<typeof loginSchema>;
