@@ -81,8 +81,6 @@ export const Navbar = () => {
             </div>
           </Link>
 
-          {/* DESKTOP MENU */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-10">
 
                 <Link 
 
