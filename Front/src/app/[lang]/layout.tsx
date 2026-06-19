@@ -28,21 +28,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://emeralddt.com'),ype: "image/png" }],
     shortcut: "/img/logo.png",
-    apple: [{ url: "/img/logo.png", sizes: "180x180", type: "image/png" }],
-  },
-};
-ayoutProps) {
-  const { children, params } = props;
-  const resolvedParams = await params;
-  const lang = resolvedParams?.lang || "en";
-
-  return (
-    <html 
-      lang={lang} 
-      className={`${sans.variable} ${mono.variable} scroll-smooth js-loading`}
-      suppressHydrationWarning 
-    >
-      <head>
+    apple: [{ url: "/img/logo.png", sizes:
         <style dangerouslySetInnerHTML={{ __html: `
           html.js-loading body { overflow: hidden !important; background: #000 !important; }
           #main-content { opacity: 0; visibility: hidden; }
