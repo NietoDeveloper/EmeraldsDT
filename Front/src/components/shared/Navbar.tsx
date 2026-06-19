@@ -25,8 +25,3 @@ const navLinks: NavLink[] = [
     href: "/categories",
     subItems: [
       { name: "Muzo Selection", href: "/categories/muzo" },
-      { name: "Chivor Heritage", href: "/categories/chivor" },
-      { name: "Coscuez Shine", href: "/categories/coscuez" },
-    ]
-  },
-  { name: "About", href: "/about" },
