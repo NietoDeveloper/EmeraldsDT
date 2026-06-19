@@ -107,13 +107,7 @@ export const Navbar = () => {
 
 
               </div>
-          </div>
 
-
-              <Link 
-
-
-              >
 
 
         </div>
