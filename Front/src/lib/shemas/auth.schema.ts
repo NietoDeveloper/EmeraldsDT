@@ -3,9 +3,7 @@ ar peticiones basura.
  */
 export const loginSchema = z.object({
   email: z
-    .string()
-    .min(1, { message: 'Email is required // Correequerido' })
-    .email({ message: 'Invalid email address // Correo inválido' })
+    .string()ido' })
    / Mínimo 6 caracteres' })
 });
 
