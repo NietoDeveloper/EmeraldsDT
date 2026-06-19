@@ -109,11 +109,7 @@ export const Navbar = () => {
                 Access
               </Link>
             </div>
-
-            {/* CUSTOM HAMBURGER: Ajustada para evitar que se pisen las rayas */}
-            <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden relative z-[200] w-11 h-11 flex flex-col items-center justify-center bg-emerald-500/5 rounded-full border border-emerald-500/20 transition-all duration-500 hover:border-gold outline-none"
+-col items-center justify-center bg-emerald-500/5 rounded-full border border-emerald-500/20 transition-all duration-500 hover:border-gold outline-none"
             >
 
             </button>
