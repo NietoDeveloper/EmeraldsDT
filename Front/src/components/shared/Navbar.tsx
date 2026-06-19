@@ -102,8 +102,7 @@ export const Navbar = () => {
           <div className="flex items-center gap-3 md:gap-6">
             {/* Seccion Carrito y Acceso: Verde Esmeralda con Hover Gold Flotante */}
             <div className="hidden md:flex items-center gap-6 text-emerald-500">
-              <Link href="/cart" className="hover:text-gold transition-all duration-500 hover:-translate-y-2 hover:drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]">
-                <ShoppingCart size={20} strokeWidth={2} />
+>
               </Link>gap-10">
 
 
