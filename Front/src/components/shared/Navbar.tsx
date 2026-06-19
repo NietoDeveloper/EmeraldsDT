@@ -35,5 +35,3 @@ const navLinks: NavLink[] = [
 
 export const Navbar = () => {
   const scrollDirection = useScrollDirection();
-  const [isAtTop, setIsAtTop] = useState(true);
-
