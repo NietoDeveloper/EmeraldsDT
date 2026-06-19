@@ -14,7 +14,3 @@ interface NavSubItem {
 interface NavLink {
   name: string;
   href: string;
-  subItems?: NavSubItem[];
-}
-
-const navLinks: NavLink[] = [
