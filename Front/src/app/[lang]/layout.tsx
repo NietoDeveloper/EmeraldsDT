@@ -41,11 +41,6 @@ export const metadata: Metadata = {
   },
 };
 
-interface RootLayoutProps {
-  children: React.ReactNode;
-  params: Promise<{ lang?: string }>; 
-}
-
 /**
  * Emerald DT - Root Layout Orchestrator
  * Limpio de Footer para permitir que page.tsx gestione el Snap Scroll.
