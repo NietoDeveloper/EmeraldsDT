@@ -106,10 +106,7 @@ export const Navbar = () => {
                 <ShoppingCart size={20} strokeWidth={2} />
               </Link>
               <Link href="/login" className="text-[10px] uppercase tracking-[0.3em] font-black hover:text-gold hover:-translate-y-1 transition-all duration-500">
-                Access
-              </Link>
-            </div>
--col items-center justify-center bg-emerald-500/5 rounded-full border border-emerald-500/20 transition-all duration-500 hover:border-gold outline-none"
+                Access00/20 transition-all duration-500 hover:border-gold outline-none"
             >
 
             </button>
