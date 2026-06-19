@@ -9,14 +9,3 @@ import PageTransitionWrapper from "@/components/shared/PageTransitionWrapper";
 const sans = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
-  display: 'swap',
-});
-
-const mono = JetBrains_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-  display: 'swap',
-});
-
-export const viewport: Viewport = {
-  width: "device-width",
