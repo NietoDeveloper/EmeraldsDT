@@ -77,15 +77,7 @@ export const Navbar = () => {
               </span>
               <span className="font-black tracking-tighter uppercase text-gold text-sm md:text-2xl italic">
                 DT
-              </span>
-            </div>
-          </Link>
 
-
-                <Link 
-
-                  {link.name}
-    
               </div>
             ))}
     </>
