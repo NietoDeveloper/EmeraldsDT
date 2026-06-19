@@ -26,16 +26,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://emeralddt.com'),
-  title: {
-    default: "Emerald DT | Colombian Emeralds & High Engineering",
-    template: "%s | Emerald DT"
-  },
-  description: "The world's premier platform for high-value Colombian emeralds. Developed by Nieto Laboratory.",
-  keywords: ["Emeralds", "Colombia", "Luxury", "NietoDeveloper", "Software DT", "Gems", "Engineering"],
-  icons: {
-    // Ajustado a la ruta real en /public/img/
-    icon: [{ url: "/img/logo.png", href: "/img/logo.png", type: "image/png" }],
+  metadataBase: new URL('https://emeralddt.com'),ype: "image/png" }],
     shortcut: "/img/logo.png",
     apple: [{ url: "/img/logo.png", sizes: "180x180", type: "image/png" }],
   },
