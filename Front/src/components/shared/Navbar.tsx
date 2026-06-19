@@ -105,8 +105,7 @@ export const Navbar = () => {
               <Link href="/cart" className="hover:text-gold transition-all duration-500 hover:-translate-y-2 hover:drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]">
                 <ShoppingCart size={20} strokeWidth={2} />
               </Link>gap-10">
-          <div onClick={handleRefresh} className="cursor-pointer mb-2">
-              <div className="relative w-16 h-16">
+
                 <Image src="/img/logo.png" alt="Logo" fill className="object-contain" />
               </div>
           </div>
