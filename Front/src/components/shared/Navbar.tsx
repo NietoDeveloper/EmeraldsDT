@@ -86,9 +86,7 @@ export const Navbar = () => {
             {navLinks.map((link) => (
               <div key={link.name} className="relative group/item">
                 <Link 
-                  href={link.href} 
-                  className="flex items-center gap-1.5 text-[10px] xl:text-[11px] uppercase tracking-[0.3em] font-bold text-zinc-400 hover:text-gold hover:-translate-y-1 transition-all duration-300"
-                >
+
                   {link.name}
     
               </div>
