@@ -102,13 +102,6 @@ export default function AuthPage({ params }: AuthPageProps) {
           {/* Campo: Email */}
           <div className="relative group">
             <label className="block text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 mb-2">
-              {isEs ? 'Correo Electrónico' : 'Email Address'}
-            </label>
-            <input
-              type="email"
-              name="email"px] font-mono text-white/20 tracking-widest">
-        EMERALD DT // INTEGRATION
-      </div>
-    </main>
+              {isEs ? 'Correo Electróni
   );
 }
