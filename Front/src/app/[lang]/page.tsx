@@ -87,41 +87,5 @@ export default function AuthPage({ params }: AuthPageProps) {
             {isEs ? 'IDENTIDAD DE ACCESO' : 'ACCESS IDENTITY'}
           </h1>
           <p className="text-[10px] font-mono text-zinc-500 tracking-wider">
-            // SECURE GATEWAY V2.2_
-          </p>
-        </div>
-
-        {/* Formulario */}
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {serverError && (
-            <div className="border-l-2 border-red-500 bg-red-950/20 p-3 text-xs font-mono text-red-400 animate-fade-in">
-              {serverError}
-            </div>
-          )}
-
-          {/* Campo: Email */}
-          <div className="relative group">
-            <label className="block text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 mb-2">
-              {isEs ? 'Correo Electrónico' : 'Email Address'}
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              disabled={loading}
-              className="w-full bg-black border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-gold/60 font-mono tracking-wide transition-colors disabled:opacity-40"
-              placeholder="operator@emeralddt.com"
-              autoComplete="email"
-            />
-            {errors.email && (
-              <p className="text-[11px] font-mono text-red-400 mt-1.5 tracking-wide">{errors.email}</p>
-            )}
-          </div>
-
-
-
-      </div>
-    </main>
-  );
+ 
 }
