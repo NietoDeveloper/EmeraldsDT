@@ -111,45 +111,6 @@ export default function AuthPage({ params }: AuthPageProps) {
               onChange={handleChange}
               disabled={loading}
               className="w-full bg-black border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-gold/60 font-mono tracking-wide transition-colors disabled:opacity-40"
-              placeholder="operator@emeralddt.com"
-              autoComplete="email"
-            />
-            {errors.email && (
-              <p className="text-[11px] font-mono text-red-400 mt-1.5 tracking-wide">{errors.email}</p>
-            )}
-          </div>
-
-          {/* Campo: Contraseña */}
-          <div className="relative group">
-            <label className="block text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 mb-2">
-              {isEs ? 'Contraseña' : 'Password'}
-            </label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              disabled={loading}
-              className="w-full bg-black border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-gold/60 tracking-wide transition-colors disabled:opacity-40"
-              autoComplete="current-password"
-            />
-            {errors.password && (
-              <p className="text-[11px] font-mono text-red-400 mt-1.5 tracking-wide">{errors.password}</p>
-            )}
-          </div>
-
-          {/* Botón de Envío Industrial */}
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full border border-gold text-gold bg-transparent hover:bg-gold hover:text-black transition-all duration-500 font-bold py-4 tracking-widest text-[11px] disabled:opacity-50 uppercase relative overflow-hidden group/btn"
-          >
-            <span className="relative z-10">
-              {loading ? (isEs ? 'PROCESANDO...' : 'PROCESSING...') : (isEs ? 'INGRESAR' : 'ENTER')}
-            </span>
-          </button>
-        </form>
-      </div>
 
       {/* Identificador de pie de página técnico discreto */}
       <div className="absolute bottom-4 left-4 hidden md:block z-10 text-[9px] font-mono text-white/20 tracking-widest">
