@@ -137,12 +137,7 @@ export default function AuthPage({ params }: AuthPageProps) {
               <p className="text-[11px] font-mono text-red-400 mt-1.5 tracking-wide">{errors.password}</p>
             )}
           </div>
-
-          {/* Botón de Envío Industrial */}
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full border border-gold text-gold bg-transparent hover:bg-gold hover:text-black transition-all duration-500 font-bold py-4 tracking-widest text-[11px] disabled:opacity-50 uppercase relative overflow-hidden group/btn"
+Name="w-full border border-gold text-gold bg-transparent hover:bg-gold hover:text-black transition-all duration-500 font-bold py-4 tracking-widest text-[11px] disabled:opacity-50 uppercase relative overflow-hidden group/btn"
           >
             <span className="relative z-10">
               {loading ? (isEs ? 'PROCESANDO...' : 'PROCESSING...') : (isEs ? 'INGRESAR' : 'ENTER')}
