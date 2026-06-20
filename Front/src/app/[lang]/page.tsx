@@ -123,13 +123,7 @@ export default function AuthPage({ params }: AuthPageProps) {
           <div className="relative group">
             <label className="block text-[10px] font-mono uppercase tracking-[0.2em] text-zinc-400 mb-2">
               {isEs ? 'Contraseña' : 'Password'}
-            </label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
 
-        </form>
       </div>
 
 
