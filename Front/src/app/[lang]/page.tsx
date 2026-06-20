@@ -136,9 +136,7 @@ export default function AuthPage({ params }: AuthPageProps) {
             {errors.password && (
               <p className="text-[11px] font-mono text-red-400 mt-1.5 tracking-wide">{errors.password}</p>
             )}
-          </div>
-Name="w-full border border-gold text-gold bg-transparent hover:bg-gold hover:text-black transition-all duration-500 font-bold py-4 tracking-widest text-[11px] disabled:opacity-50 uppercase relative overflow-hidden group/btn"
-          >
+
 
           </button>
         </form>
