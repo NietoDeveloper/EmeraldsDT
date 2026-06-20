@@ -133,9 +133,7 @@ export default function AuthPage({ params }: AuthPageProps) {
               className="w-full bg-black border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-gold/60 tracking-wide transition-colors disabled:opacity-40"
               autoComplete="current-password"
             />
-            {errors.password && (
-              <p className="text-[11px] font-mono text-red-400 mt-1.5 tracking-wide">{errors.password}</p>
-            )}
+
 
 
           </button>
