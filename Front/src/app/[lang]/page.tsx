@@ -27,14 +27,3 @@ export default function AuthPage({ params }: AuthPageProps) {
       setErrors({ ...errors, [e.target.name]: undefined });
     }
   };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setServerError(null);
-    setErrors({});
-
-    // 1. Zod Shield Client Validation (Filtro perimetral anti-basura)
-    const validation = loginSchema.safeParse(formData);
-    
-}
