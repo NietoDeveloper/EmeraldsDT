@@ -68,24 +68,3 @@ export default function AuthPage({ params }: AuthPageProps) {
     }
   };
 
-  return (
-    <main className="min-h-screen w-full bg-black flex items-center justify-center px-4 sm:px-6 relative overflow-hidden selection:bg-gold/30">
-      {/* Luz ambiental esmeralda de bajo contraste (Estilo Aeroespacial) */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-950/10 blur-[150px] rounded-full pointer-events-none z-0" />
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-zinc-900/20 blur-[100px] rounded-full pointer-events-none z-0" />
-      
-      {/* Contenedor Responsivo desde 310px hasta 1900px */}
-      <div className="w-full max-w-[420px] border border-white/10 bg-zinc-950/40 backdrop-blur-md p-6 sm:p-8 md:p-10 relative z-10 my-auto">
-        
-        {/* Marcadores angulares de precisión técnica */}
-        <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-gold/40" />
-        <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-gold/40" />
-
-        {/* Encabezado del Formulario */}
-        <div className="mb-8">
-          <h1 className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white mb-2">
-            {isEs ? 'IDENTIDAD DE ACCESO' : 'ACCESS IDENTITY'}
-          </h1>
-          <p className="text-[10px] font-mono text-zinc-500 tracking-wider">
- 
-}
