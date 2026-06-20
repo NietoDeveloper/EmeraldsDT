@@ -106,14 +106,7 @@ export default function AuthPage({ params }: AuthPageProps) {
             </label>
             <input
               type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              disabled={loading}
-              className="w-full bg-black border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-gold/60 font-mono tracking-wide transition-colors disabled:opacity-40"
-
-      {/* Identificador de pie de página técnico discreto */}
-      <div className="absolute bottom-4 left-4 hidden md:block z-10 text-[9px] font-mono text-white/20 tracking-widest">
+              name="email"px] font-mono text-white/20 tracking-widest">
         EMERALD DT // INTEGRATION
       </div>
     </main>
