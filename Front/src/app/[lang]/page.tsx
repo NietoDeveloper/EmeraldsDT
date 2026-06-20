@@ -128,15 +128,7 @@ export default function AuthPage({ params }: AuthPageProps) {
               type="password"
               name="password"
               value={formData.password}
-              onChange={handleChange}
-              disabled={loading}
-              className="w-full bg-black border border-white/10 rounded-none px-4 py-3 text-sm text-white focus:outline-none focus:border-gold/60 tracking-wide transition-colors disabled:opacity-40"
-              autoComplete="current-password"
-            />
 
-
-
-          </button>
         </form>
       </div>
 
