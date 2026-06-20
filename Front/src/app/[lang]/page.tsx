@@ -132,9 +132,7 @@ export default function AuthPage({ params }: AuthPageProps) {
         </form>
       </div>
 
-      {/* Identificador de pie de página técnico discreto */}
-      <div className="absolute bottom-4 left-4 hidden md:block z-10 text-[9px] font-mono text-white/20 tracking-widest">
-        EMERALD DT // INTEGRATION
+
       </div>
     </main>
   );
