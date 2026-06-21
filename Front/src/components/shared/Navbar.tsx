@@ -121,12 +121,7 @@ export const Navbar = () => {
 
         <div className="relative flex flex-col h-full justify-center items-center px-6 gap-12 font-mono">
           <div className="flex flex-col items-center gap-8 w-full text-center">
-            {navLinks.map((item) => (
-              <Link 
-                key={item.href} 
-                href={item.href} 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg uppercase tracking-[0.3em] font-bold text-zinc-400 hover:text-gold transition-colors"
+            {text-lg uppercase tracking-[0.3em] font-bold text-zinc-400 hover:text-gold transition-colors"
               >
                 {item.name}
               </Link>
