@@ -113,10 +113,5 @@ export const Navbar = () => {
       </nav>
 
       {/* MOBILE MENU OVERLAY */}
-      <div className={`fixed inset-0 z-[130] transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] lg:hidden
-        ${isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"}`}
-      >
-        <div className="absolute inset-0 bg-black/98" />
-    </>
   );
 };
