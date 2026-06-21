@@ -71,9 +71,5 @@ export const Navbar = () => {
               </span>
             </div>
           </Link>
-
-          {/* DESKTOP MENU (Vistas Reales) */}
-          <div className="hidden lg:flex items-center gap-8 xl:gap-12">
-     
   );
 };
