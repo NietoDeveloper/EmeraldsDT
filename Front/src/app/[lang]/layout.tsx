@@ -77,19 +77,7 @@ export default async function RootLayout(props: RootLayoutProps) {
         {/* Orquestación perimetral de carga controlada */}
         <Suspense fallback={null}>
           <Preloader />
-        </Suspense>
-
-        {/* Árbol estructural de interfaz: escala responsiva estricta de 310px a 1900px */}
-        <div id="main-content" className="relative flex flex-col min-h-screen w-full">
-          
-          {/* Barra de navegación global unificada por idioma */}
-          <Navbar />
-          
-itionWrapper>
-          </main>
-
-          {/* NOTA ARQUITECTÓNICA //
-              El Footer se mantiene fuera de este layout raíz para prevenir rupturas 
+        </Suspense>era de este layout raíz para prevenir rupturas 
               en la fricción del Snap Scroll de las vistas de landing. Cada página 
               lo inyecta de manera aséptica al final de su propio contenedor principal.
           */}
