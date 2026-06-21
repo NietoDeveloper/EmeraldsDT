@@ -1,24 +1,6 @@
 'use client';
     }
   };
-
-  if (!isMounted) return null;
-
-  return (
-          <div className="absolute inset-0 overflow-hidden">
-            <motion.div 
-              animate={{ 
-                scale: [1, 1.2, 1],
-                opacity: [0.3, 0.6, 0.3] 
-          <div className="relative z-10 flex flex-col items-center w-full max-w-[310px] md:max-w-none px-6">
-            
-            {/* LOGO ANIMADO CORREGIDO */}
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ 
-                scale: [0.98, 1.05, 0.98],
-                opacity: 1,
-                filter: [
                   "brightness(1) drop-shadow(0 0 10px rgba(16,185,129,0.2))",
                   "brightness(1.4) drop-shadow(0 0 35px rgba(16,185,129,0.5))",
                   "brightness(1) drop-shadow(0 0 10px rgba(16,185,129,0.2))"
