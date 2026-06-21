@@ -57,21 +57,6 @@ export default async function RootLayout(props: RootLayoutProps) {
 
   return (
     <html 
-      lang={lang} 
-      className={`${sans.variable} ${mono.variable} scroll-smooth js-loading`}
-      suppressHydrationWarning 
-    >
-      <head>
-        <style dangerouslySetInnerHTML={{ __html: `
-          html.js-loading body { overflow: hidden !important; background: #000 !important; }
-          #main-content { opacity: 0; visibility: hidden; }
-          html.js-loaded #main-content { 
-            opacity: 1 !important; 
-            visibility: visible !important; 
-            transition: opacity 1.2s cubic-bezier(0.43, 0.13, 0.23, 0.96); 
-          }
-        `}} />
-      </head>
-      <body className="antialiased bg-black text-white selection:bg-emerald-500/30 selection:text-emerald-200 min-h-screen font-sans">
+      lang={lang} ack text-white selection:bg-emerald-500/30 selection:text-emerald-200 min-h-screen font-sans">
         
 }
