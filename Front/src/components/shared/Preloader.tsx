@@ -1,19 +1,4 @@
 'use client';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { usePathname, usión de "Security Cluster"
-    const timer = setTimeout(() => {
-  // Reinicia el preloader en cambios de ruta si es necesario
-  useEffect(() => {
-    if (isMounted) {
-      startLoadingCycle();
-    }
-  }, [pathname, searchParams]);
-
-  const handleExitComplete = () => {
-    if (typeof document !== 'undefined') {
-      document.documentElement.classList.remove("js-loading");
-      document.documentElement.classList.add("js-loaded");
     }
   };
 
