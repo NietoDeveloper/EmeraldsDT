@@ -1,14 +1,7 @@
 'use client';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
-import Image from 'next/image';
-
-export default function Preloader() {
-
-    }
-
-    // Ciclo total de 5 segundos para coincidir con la sensación de "Security Cluster"
+import { usePathname, usión de "Security Cluster"
     const timer = setTimeout(() => {
       setLoading(false);
     }, 5000);
