@@ -1,25 +1,7 @@
 ader
               />
             </motion.div>
-
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="text-center w-full flex flex-col items-center"
-            >
-              <h2 className="text-white font-mono text-xl md:text-3xl tracking-[0.8em] uppercase mb-6 font-bold ml-[0.8em]">
-                EMERALD<span className="text-emerald-400">DT</span>
-              </h2>
-              
-              <div className="flex items-center gap-3 mb-10 opacity-40">
-                 <span className="h-[1px] w-6 bg-emerald-500" />
-                 <span className="text-emerald-400 font-mono text-[8px] tracking-[0.3em] uppercase">Security Cluster Active</span>
-                 <span className="h-[1px] w-6 bg-emerald-500" />
-              </div>
-
-              {/* BARRA DE PROGRESO */}
-              <div className="w-full max-w-[260px] h-[1px] bg-emerald-950/50 relative overflow-hidden rounded-full border border-white/5">
+ve overflow-hidden rounded-full border border-white/5">
                 <motion.div 
                   initial={{ x: "-100%" }}
                   animate={{ x: "0%" }}
