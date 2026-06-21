@@ -74,15 +74,4 @@ export default async function RootLayout(props: RootLayoutProps) {
       </head>
       <body className="antialiased bg-black text-white selection:bg-emerald-500/30 selection:text-emerald-200 min-h-screen font-sans">
         
-        {/* Orquestación perimetral de carga controlada */}
-        <Suspense fallback={null}>
-          <Preloader />
-        </Suspense>era de este layout raíz para prevenir rupturas 
-              en la fricción del Snap Scroll de las vistas de landing. Cada página 
-              lo inyecta de manera aséptica al final de su propio contenedor principal.
-          */}
-        </div>
-      </body>
-    </html>
-  );
 }
