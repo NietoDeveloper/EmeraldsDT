@@ -5,17 +5,7 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 
 export default function Preloader() {
-  const [loading, setLoading] = useState(true);
-  const [isMounted, setIsMounted] = useState(false);
-  
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
 
-  const startLoadingCycle = () => {
-    setLoading(true);
-    if (typeof document !== 'undefined') {
-      document.documentElement.classList.add("js-loading");
-      document.documentElement.classList.remove("js-loaded");
     }
 
     // Ciclo total de 5 segundos para coincidir con la sensación de "Security Cluster"
