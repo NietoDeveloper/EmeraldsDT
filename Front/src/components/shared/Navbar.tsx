@@ -74,12 +74,6 @@ export const Navbar = () => {
 
           {/* DESKTOP MENU (Vistas Reales) */}
           <div className="hidden lg:flex items-center gap-8 xl:gap-12">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.href}
-                href={link.href} 
-
-          </div>
-      {/* MOBILE MENU OVERLAY */}
+     
   );
 };
