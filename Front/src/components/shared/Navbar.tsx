@@ -117,11 +117,6 @@ export const Navbar = () => {
         ${isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"}`}
       >
         <div className="absolute inset-0 bg-black/98" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-950/20 via-transparent to-transparent opacity-60 pointer-events-none" />
-
-          </div>
-        </div>
-      </div>
     </>
   );
 };
