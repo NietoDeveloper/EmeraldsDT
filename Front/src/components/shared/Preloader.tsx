@@ -3,17 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { usePathname, usión de "Security Cluster"
     const timer = setTimeout(() => {
-      setLoading(false);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  };
-
-  useEffect(() => {
-    setIsMounted(true);
-    startLoadingCycle();
-  }, []);
-
   // Reinicia el preloader en cambios de ruta si es necesario
   useEffect(() => {
     if (isMounted) {
