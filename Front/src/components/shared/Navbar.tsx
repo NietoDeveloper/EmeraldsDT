@@ -109,9 +109,6 @@ export const Navbar = () => {
               </div>
             </button>
           </div>
-        </div>
-      </nav>
-
       {/* MOBILE MENU OVERLAY */}
   );
 };
