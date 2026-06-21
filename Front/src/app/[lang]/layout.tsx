@@ -85,11 +85,7 @@ export default async function RootLayout(props: RootLayoutProps) {
           {/* Barra de navegación global unificada por idioma */}
           <Navbar />
           
-          {/* Inyección del viewport de las páginas dinámicas */}
-          <main className="flex-grow w-full relative z-10">
-            <PageTransitionWrapper>
-              {children}
-            </PageTransitionWrapper>
+itionWrapper>
           </main>
 
           {/* NOTA ARQUITECTÓNICA //
