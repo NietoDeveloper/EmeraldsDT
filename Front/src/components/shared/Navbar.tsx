@@ -119,10 +119,6 @@ export const Navbar = () => {
         <div className="absolute inset-0 bg-black/98" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-950/20 via-transparent to-transparent opacity-60 pointer-events-none" />
 
-        <div className="relative flex flex-col h-full justify-center items-cent
-             <Link href={`/${lang}/auth`} onClick={() => setIsMobileMenuOpen(false)} className="text-[10px] uppercase tracking-[0.2em] font-bold text-emerald-500 hover:text-gold transition-colors">
-               {isEs ? "ACCESO" : "ACCESS"}
-             </Link>
           </div>
         </div>
       </div>
