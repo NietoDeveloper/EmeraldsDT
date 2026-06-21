@@ -122,14 +122,7 @@ export const Navbar = () => {
         <div className="relative flex flex-col h-full justify-center items-center px-6 gap-12 font-mono">
           <div className="flex flex-col items-center gap-8 w-full text-center">
             {text-lg uppercase tracking-[0.3em] font-bold text-zinc-400 hover:text-gold transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Footer del Panel Móvil */}
-          <div className="flex gap-10 items-center mt-6 border-t border-white/5 pt-8 w-32 justify-center">
+              >e/5 pt-8 w-32 justify-center">
              <Link href={`/${lang}/collection`} onClick={() => setIsMobileMenuOpen(false)} className="text-emerald-500 hover:text-gold transition-colors">
                <ShoppingCart size={22}/>
              </Link>
