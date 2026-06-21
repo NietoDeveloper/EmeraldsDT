@@ -1,22 +1,4 @@
-'use client';
-    }
-  };
-                  "brightness(1) drop-shadow(0 0 10px rgba(16,185,129,0.2))",
-                  "brightness(1.4) drop-shadow(0 0 35px rgba(16,185,129,0.5))",
-                  "brightness(1) drop-shadow(0 0 10px rgba(16,185,129,0.2))"
-                ]
-              }}
-              transition={{ duration: 3, ease: "easeInOut", repeat: Infinity }}
-              className="relative w-40 h-40 md:w-52 md:h-52 mb-8"
-            >
-              <Image
-                src="/img/logo.png" // RUTA CORREGIDA: public/img/logo.png -> /img/logo.png
-                alt="Emerald DT Logo"
-                fill
-                sizes="(max-width: 768px) 160px, 208px"
-                className="object-contain"
-                priority
-                unoptimized // Úsalo si el logo es un GIF o para evitar latencia de optimización en el preloader
+ader
               />
             </motion.div>
 
