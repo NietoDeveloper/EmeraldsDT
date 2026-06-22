@@ -12,7 +12,6 @@ const nextConfig: NextConfig = {
     '192.168.0.21:3000'
   ],
 
-  // Optimización avanzada de imágenes (Gemas de alta pureza)
   images: {
     formats: ['image/avif', ''],
     remotePatterns: [
