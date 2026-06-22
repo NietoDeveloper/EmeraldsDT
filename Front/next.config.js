@@ -15,10 +15,7 @@ const nextConfig = {
 
       },
     ],
-  },
 
-  // Empaquetado distribuido
-  output: 'standalone'
 };
 
 module.exports = nextConfig;
