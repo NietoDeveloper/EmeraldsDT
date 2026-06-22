@@ -3,10 +3,10 @@ import type { NextConfig } from 'next';
 /**
  * 🚀 EMERALD DT - CORE INFRASTRUCTURE CONFIG
  * Configuración optimizada para despliegues de alta disponibilidad en Docker y Railway.
- * Adaptado con inmunidad de origen para Turbopack en el Nieto Laboratory.
+ * Solución absoluta para el bypass de WebSockets en Turbopack (Nieto Laboratory).
  */
-const nextConfig: NextConfig = {
-  // 1. Autorización de tráfico HMR para Next.js 16 (Llave de primer nivel)
+const nextConfig = {
+  // Desbloqueo perimetral nativo para desarrollo en red local
   allowedDevOrigins: [
     'localhost:3000',
     '192.168.0.21:3000'
@@ -29,6 +29,6 @@ const nextConfig: NextConfig = {
 
   // Configuración de empaquetado para entornos distribuidos
   output: 'standalone'
-};
+} as any; // Cast aséptico temporal para forzar la lectura completa de propiedades raíz en Next 16
 
-export default nextConfig;
+export default nextConfig as NextConfig;
