@@ -6,12 +6,6 @@ export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
 
-
-}
-
-// 2. El matcher ignora API, estáticos, assets y cualquier archivo con extensión (ej. .png, .css, .js)
-export const config = {
-  matcher: [
     /*
      * Excluye rutas del sistema y archivos estáticos. 
      * El patrón `.*\\..*$` evita que el proxy evalúe imágenes de minas u otros recursos dinámicos.
