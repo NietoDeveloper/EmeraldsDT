@@ -5,7 +5,7 @@ import type { NextConfig } from 'next';
 
  */
 const nextConfig: NextConfig = {
-    'localhost:3000',  ],
+    'localhost:3000',  
 
   images: {
     formats: ['image/avif', ''],
