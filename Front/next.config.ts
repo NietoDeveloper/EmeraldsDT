@@ -6,11 +6,7 @@ import type { NextConfig } from 'next';
     ],
   },
 
-  // Máxima seguridad y estabilidad del clúster
-  reactStrictMode: true,
-  poweredByHeader: false, // Perímetro seguro: Mitiga escaneos de firma de framework
-
-    ]
+  // Máxima seguridad y estabilidad d
   }
 };
 
