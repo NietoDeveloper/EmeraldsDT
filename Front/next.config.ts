@@ -10,11 +10,6 @@ const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', ''],
     remotePatterns: [
-      {
 
-
-
-  
-};
 
 export default nextConfig;
