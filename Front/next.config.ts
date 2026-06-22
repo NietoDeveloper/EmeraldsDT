@@ -5,9 +5,3 @@ import type { NextConfig } from 'next';
       },
     ],
   },
-
-  // Máxima seguridad y estabilidad d
-  }
-};
-
-export default nextConfig;
