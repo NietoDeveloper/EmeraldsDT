@@ -1,14 +1,7 @@
 import type { NextConfig } from 'next';
 
 /**
- * 🚀 EMERALD DT - CORE INFRASTRUCTURE CONFIG
- * Configuración optimizada para despliegues de alta disponibilidad en Docker y Railway.
- * Adaptado con inmunidad de origen para Turbopack en el Nieto Laboratory.
- */
-const nextConfig: NextConfig = {
-  // Optimizac
-        protocol: 'https',
-        hostname: '**.amazonaws.com', // Conexión blindada para S3 en AWS
+ * 🚀 EMERALD nexión blindada para S3 en AWS
       },
     ],
   },
