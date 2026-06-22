@@ -17,8 +17,7 @@ const nextConfig = {
     ],
   },
 
-  // Estabilidad del clúster
-  reactStrictMode: true,
+
   poweredByHeader: false,
 
   // Empaquetado distribuido
