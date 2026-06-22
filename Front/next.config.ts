@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**.amazonaws.com', // Conexión blindada para S3 en AWS
+        hostname: '**.amazonaws.com', // Conexión b3 en AWS
       },
     ],
   },
