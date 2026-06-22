@@ -1,0 +1,36 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Configuración de red del servidor de desarrollo para Next.js 16 / Turbopack
+  devServer: {
+    allowedDevOrigins: [
+      'localhost:3000',
+      '192.168.0.21:3000'
+    ]
+  },
+
+  // Compatibilidad alternativa directa exigida por el compilador nativo
+  allowedDevOrigins: [
+    'localhost:3000',
+    '192.168.0.21:3000'
+  ],
+
+  // Optimización avanzada de imágenes
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.amazonaws.com', // Conexión blindada para S3 en AWS
+      },
+    ],
+  },
+
+  // Máxima seguridad y estabilidad del clúster
+  reactStrictMode: true,
+  poweredByHeader: false, // Perímetro seguro: Mitiga escaneos de firma de framework
+
+  // Configuración de empaquetado para entornos distribuidos (Docker/Railway)
+  output: 'standalone'
+};
+
+module.exports = nextConfig;
