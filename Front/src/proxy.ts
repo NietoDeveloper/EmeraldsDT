@@ -5,12 +5,6 @@ import type { NextRequest } from 'next/server';
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // 1. Si entra a la raíz pura '/', detectar el idioma preferido del navegador o redirigir a '/es' por defecto
-  if (pathname === '/') {
-    const acceptLanguage = request.headers.get('accept-language') || '';
-    const preferredLang = acceptLanguage.startsWith('en') ? '/en' : '/es';
-    return NextResponse.redirect(new URL(preferredLang, request.url));
-  }
 
 
 }
