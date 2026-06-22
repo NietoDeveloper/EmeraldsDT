@@ -1,7 +1,7 @@
 import type { NextConfig } from 'next';
 
 /**
- * 🚀 EMERALD DT - CORE INFRASTRUCTURE CONFIG
+
 
  */
 const nextConfig: NextConfig = {
