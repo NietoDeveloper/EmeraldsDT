@@ -27,8 +27,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false, // Perímetro seguro: Mitiga escaneos de firma de framework
 
-  // Configuración de empaquetado para entornos distribuidos
-  output: 'standalone'
+  
 };
 
 export default nextConfig;
