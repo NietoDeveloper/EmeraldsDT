@@ -25,9 +25,6 @@ const nextConfig: NextConfig = {
 
   // Características experimentales autorizadas
   experimental: {
-    // Abre el canal de WebSockets de Turbopack para desarrollo local y en red cableada/Wi-Fi
-    allowedDevOrigins: [
-      'localhost:3000',
       '192.168.0.21:3000'
     ]
   }
