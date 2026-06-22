@@ -1,1 +1,1 @@
-import type { NextConfig } from 'nex
+import type { NextConfig } from '
