@@ -21,11 +21,6 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false, // Perímetro seguro: Mitiga escaneos de firma de framework
 
-
-
-  // Características experimentales autorizadas
-  experimental: {
-      '192.168.0.21:3000'
     ]
   }
 };
