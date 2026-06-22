@@ -8,9 +8,3 @@ const nextConfig = {
 
   // Optimización avanzada de imágenes
   images: {
-    formats: ['image/avif', 'image/webp'],
-
-
-};
-
-module.exports = nextConfig;
