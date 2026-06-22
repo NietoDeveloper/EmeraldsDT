@@ -6,8 +6,6 @@ import type { NextConfig } from 'next';
  * Adaptado con inmunidad de origen para Turbopack en el Nieto Laboratory.
  */
 const nextConfig: NextConfig = {
-  // 1. Autorización de tráfico HMR para Next.js 16 (Llave de primer nivel)
-  allowedDevOrigins: [
     'localhost:3000',  ],
 
   images: {
