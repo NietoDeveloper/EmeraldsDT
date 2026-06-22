@@ -23,10 +23,6 @@ const nextConfig = {
     ],
   },
 
-  // Máxima seguridad y estabilidad del clúster
-  reactStrictMode: true,
-  poweredByHeader: false, // Perímetro seguro: Mitiga escaneos de firma de framework
-
   // Configuración de empaquetado para entornos distribuidos
   output: 'standalone'
 } as any; // Cast aséptico temporal para forzar la lectura completa de propiedades raíz en Next 16
