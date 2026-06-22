@@ -8,8 +8,3 @@ const nextConfig: NextConfig = {
     'localhost:3000',  
 
   images: {
-
-
-
-
-export default nextConfig;
