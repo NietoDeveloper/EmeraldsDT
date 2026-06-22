@@ -9,18 +9,7 @@ const nextConfig = {
   // Desbloqueo perimetral nativo para desarrollo en red local
   allowedDevOrigins: [
     'localhost:3000',
-    '192.168.0.21:3000'
-  ],
-
-  // Optimización avanzada de imágenes (Gemas de alta pureza)
-  images: {
-    formats: ['image/avif', 'image/webp'],
-    remotePatterns: [
-      {
-    ],
-  },
-
-  // Configuración de empaquetado para entornos distribuidos
+    '192.168.0.21:3000' distribuidos
   output: 'standalone'
 } as any; // Cast aséptico temporal para forzar la lectura completa de propiedades raíz en Next 16
 
