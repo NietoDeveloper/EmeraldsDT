@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
 
   // Optimización avanzada de imágenes (Gemas de alta pureza)
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ['image/avif', ''],
     remotePatterns: [
       {
 
