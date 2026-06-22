@@ -17,9 +17,6 @@ const nextConfig = {
     ],
   },
 
-
-  poweredByHeader: false,
-
   // Empaquetado distribuido
   output: 'standalone'
 };
