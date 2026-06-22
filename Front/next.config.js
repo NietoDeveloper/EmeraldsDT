@@ -6,11 +6,3 @@ import type { NextConfig } from 'next';
  * Solución absoluta para el bypass de WebSockets en Turbopack (Nieto Laboratory).
  */
 const nextConfig = {
-  // Desbloqueo perimetral nativo para desarrollo en red local
-  allowedDevOrigins: [
-    'localhost:3000',
-    '192.168.0.21:3000' distribuidos
-  output: 'standalone'
-} as any; // Cast aséptico temporal para forzar la lectura completa de propiedades raíz en Next 16
-
-export default nextConfig as NextConfig;
