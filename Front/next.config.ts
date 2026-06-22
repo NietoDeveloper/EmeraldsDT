@@ -1,1 +1,1 @@
-import type { NextConfig } from '
+import type { NextConfig } 
