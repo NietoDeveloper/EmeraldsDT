@@ -8,9 +8,7 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   // 1. Autorización de tráfico HMR para Next.js 16 (Llave de primer nivel)
   allowedDevOrigins: [
-    'localhost:3000',
-    '192.168.0.21:3000'
-  ],
+    'localhost:3000',  ],
 
   images: {
     formats: ['image/avif', ''],
