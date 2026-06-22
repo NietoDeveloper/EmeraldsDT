@@ -6,11 +6,7 @@ import type { NextConfig } from 'next';
  * Adaptado con inmunidad de origen para Turbopack en el Nieto Laboratory.
  */
 const nextConfig: NextConfig = {
-  // Optimización avanzada de imágenes (Gemas de alta pureza)
-  images: {
-    formats: ['image/avif', 'image/webp'],
-    remotePatterns: [
-      {
+  // Optimizac
         protocol: 'https',
         hostname: '**.amazonaws.com', // Conexión blindada para S3 en AWS
       },
