@@ -12,7 +12,7 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(new URL(preferredLang, request.url));
   }
 
-  return NextResponse.next();
+
 }
 
 // 2. El matcher ignora API, estáticos, assets y cualquier archivo con extensión (ej. .png, .css, .js)
