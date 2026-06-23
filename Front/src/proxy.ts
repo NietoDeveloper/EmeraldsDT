@@ -21,9 +21,3 @@ export function proxy(request: NextRequest) {
 
 
 export const config = {
-  matcher: [
-    /*
-     * EXCLUSIONES CRÍTICAS:
-(?!api|_next/static|_next/image|_next/webpack-hmr|assets|favicon.ico|icon.png|.*\\..*$).*)',
-  ],
-};
