@@ -19,8 +19,3 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '**.amazonaws.com', // Conexión blindada para S3 en AWS
-      },
-    ],
-  },
