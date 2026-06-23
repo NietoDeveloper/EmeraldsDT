@@ -69,19 +69,3 @@ export const apiClient = {
     const url = params 
       ? `${API_BASE_URL}${endpoint}?${new URLSearchParams(params)}`
       : `${API_BASE_URL}${endpoint}`;
-
-    try {
-      const response = await fetch(url, {
-        method,
-        headers: {
-          'Content-Type': 'application/json',
-          ...headers,
-        },
-        credentials: 'include', // Seguridad Transversal: Traspaso estricto de HTTPOnly Cookies
-        body: body ? JSON.stringify(body) : undefined,
-        ...config,
-      });
-
-      if (response.status === 204) return {} as T;
-
- >
