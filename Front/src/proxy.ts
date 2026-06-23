@@ -15,9 +15,3 @@ export function proxy(request: NextRequest) {
     const preferredLang = acceptLanguage.startsWith('en') ? '/en' : '/es';
     return NextResponse.redirect(new URL(preferredLang, request.url));
   }
-
-  return NextResponse.next();
-}
-
-
-export const config = {
