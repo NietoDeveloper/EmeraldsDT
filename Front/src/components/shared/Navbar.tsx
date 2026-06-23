@@ -131,13 +131,7 @@ export const Navbar = () => {
                 className="text-lg uppercase tracking-[0.3em] font-bold text-zinc-400 hover:text-gold transition-colors"
               >
                 {item.name}
-              </Link>
-            ))}
-s
-    
-          </div>
-        </div>
-      </div>
+  
     </>
   );
 };
