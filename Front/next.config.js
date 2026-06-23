@@ -8,8 +8,3 @@ const nextConfig = {
     ]
   },
 
-  // Compatibilidad alternativa directa exigida por el compilador nativo
-  allowedDevOrigins: [
-    'localhost:3000',
-    '192.168.0.21:3000'
-  ],
