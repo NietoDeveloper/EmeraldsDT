@@ -84,12 +84,7 @@ export default async function RootLayout(props: RootLayoutProps) {
         {/* Prioridad 2: Árbol estructural de interfaz latente (Escala responsiva estricta de 310px a 1900px) */}
         <div id="main-content" className="relative flex flex-col min-h-screen w-full🎛️">
           
-          {/* Barra de navegación global unificada por idioma */}
-          <Navbar />
-          
-          {/* Inyección del viewport de las páginas dinámicas */}
-       
-      </body>
+          {/* Barra 
     </html>
   );
 }
