@@ -28,18 +28,7 @@ export const apiClient = {
       ...config,
     });
 
-    if (response.status === 204) return {} as T;
-
-    const data = await response.json();
-    if (!response.ok) throw new Error(data.message || `HTTP_ERROR_${response.status}`);
-
-    return data as T;
-  },
-
-  get<T>(endpoint: string, options?: Omit<RequestOptions, 'method' | 'body'>) {
-
-  },
-
+    if (response.status === 204) re
   put<T>(endpoint: string, body: any, options?: Omit<RequestOptions, 'method' | 'body'>) {
     return this.request<T>(endpoint, { ...options, method: 'PUT', body });
   },
