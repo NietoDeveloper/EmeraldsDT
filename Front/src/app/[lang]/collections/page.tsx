@@ -2,33 +2,11 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { apiClient } from '@/lib/apiClient';
 
-interface EmeraldProduct {
-  _id: string;
-  name: string;
-  mine: 'muzo' | 'chivor' | 'coscuez';
-  carats: number;
-  price: number;
-  status: 'AVAILABLE' | 'SOLD' | 'RESERVED';
-  images: string[];
-  clarity: string;
-  cut: string;
-  serialNumber: string;
-}
+
 
 interface CollectionPageProps {
   params: Promise<{ lang: string }>;
   searchParams: Promise<{ mine?: string }>;
-}
-
-export default async function CollectionPage({ params, searchParams }: CollectionPageProps) {
-  const { lang } = await params;
-  const { mine } = await searchParams;
-  const isEs = lang === 'es';
-
-  if (lang !== 'en' && lang !== 'es') notFound();
-
-  let products: EmeraldProduct[] = [];
-  let connectionError = false;
 
   try {
     const endpoint = mine ? `/products?mine=${mine}` : '/products';
