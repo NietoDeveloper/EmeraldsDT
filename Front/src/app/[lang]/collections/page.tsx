@@ -94,46 +94,6 @@ export default async function CollectionPage({ params, searchParams }: Collectio
             <article 
               key={gem.id} 
               className="group flex flex-col border border-white/5 bg-zinc-950/20 backdrop-blur-sm transition-all duration-500 hover:border-emerald-500/20"
-            >
-              {/* Imagen del Activo */}
-              <div className="relative aspect-[4/5] w-full overflow-hidden bg-zinc-900 border-b border-white/5">
-                <span className="absolute top-4 left-4 z-20 font-mono text-[8px] bg-black/80 border border-white/10 text-zinc-400 px-2 py-0.5 tracking-widest uppercase font-bold">
-                  {gem.origin} // {gem.id.toUpperCase()}
-                </span>
 
-                {/* Badge de Disponibilidad en tiempo real */}
-                <span className={`absolute top-4 right-4 z-20 font-mono text-[8px] border px-2 py-0.5 tracking-widest uppercase font-bold ${
-                  gem.isAvailable 
-                    ? 'bg-emerald-950/80 border-emerald-500 text-emerald-400' 
-                    : 'bg-red-950/80 border-red-500 text-red-400'
-                }`}>
-                  {gem.isAvailable ? (isEs ? 'DISPONIBLE' : 'AVAILABLE') : (isEs ? 'VENDIDO' : 'SOLD')}
-                </span>
-                
-                <div 
-                  className="w-full h-full bg-cover bg-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
-                  style={{ backgroundImage: `url('${gem.images[0] || '/img/placeholder-emerald.png'}')` }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
-              </div>
-
-              {/* Parámetros de la Gema */}
-              <div className="p-6 flex-1 flex flex-col justify-between gap-5">
-                <div>
-                  <div className="flex justify-between items-start gap-4">
-
-
-                <Link 
-                  href={`/${lang}/collections/${gem.id}`}
-                  className="w-full border border-white/10 text-white hover:bg-gold hover:text-black hover:border-gold transition-all duration-300 font-mono text-[9px] tracking-[0.25em] font-bold py-3 text-center uppercase block cursor-pointer"
-                >
-                  {isEs ? 'ESPECIFICACIONES TÉCNICAS' : 'TECHNICAL SPECIFICATIONS'}
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </main>
   );
 }
