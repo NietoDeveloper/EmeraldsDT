@@ -41,11 +41,3 @@ export const Navbar = () => {
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
-    const handleScroll = () => setIsAtTop(window.scrollY < 20);
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  return (
-    <>
