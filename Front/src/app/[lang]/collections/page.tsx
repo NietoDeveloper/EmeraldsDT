@@ -121,25 +121,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
               <div className="p-6 flex-1 flex flex-col justify-between gap-5">
                 <div>
                   <div className="flex justify-between items-start gap-4">
-                    <h3 className="text-lg font-bold uppercase tracking-tight text-white font-mono group-hover:text-gold transition-colors">
-                      {gem.name}
-                    </h3>
-                    <span className="font-mono text-sm font-black text-gold shrink-0">
-                      ${gem.price.toLocaleString('en-US')} USD
-                    </span>
-                  </div>
 
-                  <div className="grid grid-cols-2 gap-4 border-t border-b border-white/5 py-3 my-4 font-mono text-[10px] text-zinc-400">
-                    <div>
-                      <span className="text-zinc-600 block text-[8px] uppercase tracking-wider">{isEs ? 'MASA' : 'MASS'}</span>
-                      <span className="text-zinc-200 font-bold">{gem.carats.toFixed(2)} CTS</span>
-                    </div>
-                    <div>
-                      <span className="text-zinc-600 block text-[8px] uppercase tracking-wider">{isEs ? 'CATEGORÍA' : 'CATEGORY'}</span>
-                      <span className="text-emerald-400 font-bold uppercase">{gem.category}</span>
-                    </div>
-                  </div>
-                </div>
 
                 <Link 
                   href={`/${lang}/collections/${gem.id}`}
