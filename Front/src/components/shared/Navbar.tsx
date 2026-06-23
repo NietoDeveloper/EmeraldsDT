@@ -16,10 +16,3 @@ export const Navbar = () => {
   const scrollDirection = useScrollDirection();
   const params = useParams();
   const router = useRouter(); // 2. Instancia del enrutador de Next.js
-  
-  // Captura el idioma dinámico actual (por defecto 'es' para evitar fallos de SSR)
-  const lang = (params?.lang as string) || "es";
-  const isEs = lang === "es";
-
-  const [isAtTop, setIsAtTop] = useState(true);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
