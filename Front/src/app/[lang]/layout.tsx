@@ -88,12 +88,7 @@ export default async function RootLayout(props: RootLayoutProps) {
           <Navbar />
           
           {/* Inyección del viewport de las páginas dinámicas */}
-          <main className="flex-grow w-full relative z-10">
-            <PageTransitionWrapper>
-
-  
-          */}
-        </div>
+       
       </body>
     </html>
   );
