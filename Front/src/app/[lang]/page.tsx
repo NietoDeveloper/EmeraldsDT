@@ -124,12 +124,3 @@ export default async function HomePage({ params }: HomePageProps) {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* SECCIÓN FOOTER: Snap Scroll nativo */}
-      <section className="snap-start w-full bg-black shrink-0">
-        <Footer />
-      </section>
-    </main>
-  );
-}
