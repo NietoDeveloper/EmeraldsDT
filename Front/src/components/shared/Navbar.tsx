@@ -23,10 +23,3 @@ export const Navbar = () => {
 
   const [isAtTop, setIsAtTop] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  // Mapeo de rutas aséptico basado en los módulos funcionales del monorepo
-  const navLinks: NavLink[] = [
-    { name: isEs ? "Inicio" : "Home", href: `/${lang}` },
-    { name: isEs ? "Colección" : "Collection", href: `/${lang}/collection` },
-
-  useEffect(() => {
