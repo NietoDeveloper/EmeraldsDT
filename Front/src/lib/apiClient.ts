@@ -98,16 +98,4 @@ export const apiClient = {
         return MOCK_PRODUCTS as unknown as T;
       }
       
-      // Si falla un GET de un producto específico, buscamos en nuestros mocks para salvar la página de detalle
-      if (endpoint.startsWith('/products/') && method === 'GET') {
-        const id = endpoint.split('/').pop();
-        const found = MOCK_PRODUCTS.find(p => p.id === id);
-        if (found) return found as unknown as T;
-      }
-
-      // Enrutamientos vacíos seguros por defecto para otros métodos si falla el clúster
-      return [] as unknown as T;
-    }
-  },
-
-  get<T>
+ >
