@@ -117,26 +117,7 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* MOBILE MENU OVERLAY COMPLETAMENTE INTEGRADO (De 310px a md:hidden) */}
-      <div className={`fixed inset-0 z-[130] transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] md:hidden
-        ${isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"}`}
-      >
-        <div className="absolute inset-0 bg-black/98" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-950/20 via-transparent to-transparent opacity-60 pointer-events-none" />
-
-        <div className="relative flex flex-col h-full justify-center items-center px-6 gap-12 font-mono min-w-[310px]">
-          
-          {/* Enlaces de Navegación Móvil */}
-          <div className="flex flex-col items-center gap-8 w-full text-center">
-            {navLinks.map((item) => (
-              <Link 
-                key={item.href} 
-                href={item.href} 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg uppercase tracking-[0.3em] font-bold text-zinc-400 hover:text-gold transition-colors cursor-pointer"
    
-              {isEs ? "ACCESO" : "ACCESS"}
-            </Link>
           </div>
 
         </div>
