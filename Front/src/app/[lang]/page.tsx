@@ -76,31 +76,3 @@ export default async function HomePage({ params }: HomePageProps) {
                 <span className="text-gold italic font-light text-2xl md:text-4xl block mt-4 tracking-normal normal-case">
                   {isEs ? mine.tagEs : mine.tag}
                 </span>
-              </h3>
-              
-              <p className="text-zinc-300 text-sm md:text-lg mb-10 max-w-xl opacity-80 leading-relaxed font-medium">
-                {isEs ? mine.descEs : mine.desc}
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <MainButton 
-                  text={isEs ? 'VER COLECCIÓN' : 'VIEW COLLECTION'} 
-                  variant="gold" 
-                  className="border-2 border-gold text-gold hover:bg-gold hover:text-black font-bold py-4 px-12 transition-all duration-500 tracking-widest text-[11px]"
-                />
-              </div>
-            </div>
-          </div>
-
-        me="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] bg-emerald-900/10 blur-[150px] rounded-full opacity-50" />
-        <div className="container mx-auto px-6 sm:px-12 md:px-24 lg:px-32 max-w-[1900px] z-10">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
-            <div className="relative">
-              <h2 className="text-4xl md:text-6xl font-bold uppercase mb-8 leading-tight text-white tracking-tighter">
-                Nieto Lab <br /> <span className="text-gold italic font-extralight uppercase tracking-normal">Engineering</span>
-              </h2>
-              <ssName="absolute top-0 right-0 w-4 h-4 border-t border-r border-gold/40" />
-              <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-gold/40" />
-            </div>
-          </div>
-        </div>
