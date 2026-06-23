@@ -89,46 +89,7 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* ACCESOS CORPORATIVOS (Escritorio) */}
-          <div className="hidden md:flex items-center gap-4 md:gap-8 font-mono">
-            <div className="flex items-center gap-6 text-emerald-500">
-              <Link href={`/${lang}/collection`} className="hover:text-gold transition-colors cursor-pointer">
-                <ShoppingCart size={18} strokeWidth={2} />
-              </Link>
-              <Link href={`/${lang}/auth`} className="text-[10px] uppercase tracking-[0.3em] font-bold hover:text-gold transition-colors cursor-pointer">
-                {isEs ? "ACCESO" : "ACCESS"}
-              </Link>
-            </div>
-          </div>
 
-          {/* BOTÓN HAMBURGUER (Visible estrictamente de 310px hasta md) */}
-          <button 
-            onClick={() => setIsMobileMenuOpen(true)}
-            className={`md:hidden relative z-[120] w-10 h-10 flex flex-col items-center justify-center bg-zinc-900/40 border border-white/5 transition-opacity duration-300 outline-none cursor-pointer ${isMobileMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100"}`}
-            aria-label="Open Menu"
-          >
-            <div className="relative w-5 h-4 flex flex-col justify-between items-center">
-              <span className="w-full h-[1.5px] bg-emerald-500" />
-              <span className="w-full h-[1.5px] bg-emerald-500" />
-              <span className="w-full h-[1.5px] bg-emerald-500" />
-            </div>
-          </button>
-        </div>
-      </nav>
-
-      {/* INTERFAZ MÓVIL OVERLAY MODERNA (Fondo Color Esmeralda & Letras Gold) */}
-      <div className={`fixed inset-0 z-[200] transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] md:hidden
-        ${isMobileMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
-      >
-      } className="text-red-500 transition-transform group-hover:scale-110" />
-        </button>
-
-        <div className="relative flex flex-col h-full justify-between py-20 items-center px-6 font-mono min-w-[310px] overflow-y-auto">
-          
-          {/* Enlaces Principales del Menú Móvil en Color Gold */}
-          <div className="flex flex-col items-center gap-6 w-full text-center mt-8">
-            {navLinks.map((item) => (
-              <Link 
                 key={item.href} 
                 href={item.href} 
                 onClick={() => setIsMobileMenuOpen(false)}
