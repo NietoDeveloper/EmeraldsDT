@@ -53,17 +53,7 @@ interface RootLayoutProps {
 export default async function RootLayout(props: RootLayoutProps) {
   const { children, params } = props;
   const resolvedParams = await params;
-  const lang = resolvedParams?.lang || "en";
-
-  return (
-    <html 
-      lang={lang} 
-      className={`${sans.variable} ${mono.variable} scroll-smooth js-loading`}
-      suppressHydrationWarning 
-    >
-      <head>
-        {/* Bloqueo perimetral por hardware: Garantiza pantalla negra absoluta y oculta 
-
+  const lang = r
     </html>
   );
 }
