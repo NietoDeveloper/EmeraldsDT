@@ -3,23 +3,6 @@ import { notFound } from 'next/navigation';
 import { apiClient } from '@/lib/apiClient';
 
 
-  return (
-    <main className="min-h-screen w-black uppercase tracking-tighter text-white">
-              {mine ? `${isEs ? 'MINA' : 'MINE'}: ${mineNames[mine as keyof typeof mineNames] || mine}` : (isEs ? 'JOYAS EN STOCK' : 'AVAILABLE STOCK')}
-            </h1>
-          </div>
-
-          {/* Filtros de URL Nativos Rápidos */}
-          <div className="flex flex-wrap gap-1.5 font-mono text-[10px] tracking-widest font-bold">
-            <Link 
-              href={`/${lang}/collection`}
-              className={`px-3 py-1 border transition-colors ${!mine ? 'border-gold text-gold bg-gold/5' : 'border-white/10 text-zinc-500 hover:border-white/30'}`}
-            >
-              {isEs ? 'TODOS' : 'ALL'}
-            </Link>
-            {(['muzo', 'chivor', 'coscuez'] as const).map((m) => (
-              <Link
-                key={m}
                 href={`/${lang}/collection?mine=${m}`}
                 className={`px-3 py-1 border uppercase transition-colors ${mine === m ? 'border-gold text-gold bg-gold/5' : 'border-white/10 text-zinc-500 hover:border-white/30'}`}
               >
