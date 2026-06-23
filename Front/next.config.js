@@ -1,10 +1,2 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configuración de red del servidor de desarrollo para Next.js 16 / Turbopack
-  devServer: {
-    allowedDevOrigins: [
-      'localhost:3000',
-      '192.168.0.21:3000'
-    ]
-  },
-
