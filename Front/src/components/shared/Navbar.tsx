@@ -140,17 +140,6 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* Consolidación Absoluta: Carrito y Acceso fluyendo dentro de la interfaz móvil */}
-          <div className="flex flex-col items-center gap-6 mt-4 border-t border-white/10 pt-8 w-48 justify-center">
-            <Link 
-              href={`/${lang}/collection`} 
-              onClick={() => setIsMobileMenuOpen(false)} 
-              className="text-emerald-500 hover:text-gold transition-colors flex items-center gap-3 text-sm uppercase tracking-[0.15em] font-bold cursor-pointer"
-            >
-              <ShoppingCart size={20} />
-              <span className="md:hidden">{isEs ? "Carrito" : "Cart"}</span>
-            </Link>
-            
             <Link 
               href={`/${lang}/auth`} 
               onClick={() => setIsMobileMenuOpen(false)} 
