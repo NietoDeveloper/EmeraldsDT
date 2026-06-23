@@ -120,17 +120,7 @@ export const Navbar = () => {
       <div className={`fixed inset-0 z-[200] transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] md:hidden
         ${isMobileMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
       >
-        {/* Fondo Esmeralda Alta Costura */}
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-950 via-emerald-900 to-zinc-950" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-500/20 via-transparent to-transparent opacity-40 pointer-events-none" />
-
-        {/* Botón de cierre X Rojo Independiente y Operativo */}
-        <button 
-          onClick={() => setIsMobileMenuOpen(false)}
-          className="absolute top-6 right-4 w-10 h-10 flex items-center justify-center bg-black/40 border border-white/10 rounded-none cursor-pointer outline-none group hover:border-gold transition-colors z-[210]"
-          aria-label="Close Menu"
-        >
-          <X size={22} className="text-red-500 transition-transform group-hover:scale-110" />
+      } className="text-red-500 transition-transform group-hover:scale-110" />
         </button>
 
         <div className="relative flex flex-col h-full justify-between py-20 items-center px-6 font-mono min-w-[310px] overflow-y-auto">
