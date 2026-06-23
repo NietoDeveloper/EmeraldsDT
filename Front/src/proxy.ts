@@ -20,12 +20,5 @@ export function proxy(request: NextRequest) {
 }
 
 // 2. Control perimetral de rutas (Matcher)
-export const config = {
-  matcher: [
-    /*
-     * EXCLUSIONES CRÍTICAS:
-     * - api, _next/static, _next/image: Rutas nativas de Next.js
-     * - _next
-    '/((?!api|_next/static|_next/image|_next/webpack-hmr|assets|favicon.ico|icon.png|.*\\..*$).*)',
-  ],
+export const config
 };
