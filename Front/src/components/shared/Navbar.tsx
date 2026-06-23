@@ -57,64 +57,7 @@ export const Navbar = () => {
         {/* Máximo contenedor responsive alineado de 310px a 1900px */}
         <div className="w-full max-w-[1900px] mx-auto flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-20 min-w-[310px]">
           
-          {/* LOGO & BRAND (Reload nativo con cursor pointer garantizado) */}
-          <Link href={`/${lang}`} onClick={handleRefresh} className="group flex items-center gap-2 md:gap-4 z-[120] outline-none cursor-pointer">
-            <div className="relative w-8 h-8 md:w-11 md:h-11 transition-all duration-700 group-hover:rotate-[360deg]">
-              <Image src="/img/logo.png" alt="Emerald DT Logo" fill className="object-contain animate-fade-in" priority />
-            </div>
-            <div className="flex items-center gap-1 font-mono select-none">
-              <span className="font-black tracking-[0.15em] uppercase text-emerald-500 text-xs md:text-lg transition-colors group-hover:text-gold">
-                Emerald
-              </span>
-              <span className="font-black tracking-tighter uppercase text-gold text-xs md:text-lg italic">
-                DT
-              </span>
-            </div>
-          </Link>
-
-          {/* MENÚ HORIZONTAL DE ESCRITORIO (Visible únicamente en md:flex hacia arriba) */}
-          <div className="hidden md:flex items-center gap-8 xl:gap-12">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.href}
-                href={link.href} 
-                className="text-[10px] xl:text-[11px] uppercase tracking-[0.3em] font-bold text-zinc-400 hover:text-gold transition-colors duration-300 font-mono cursor-pointer"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* ACCESOS CORPORATIVOS DE ESCRITORIO (Ocultos en móviles, integrados al menú hamburguesa) */}
-          <div className="hidden md:flex items-center gap-4 md:gap-8 font-mono">
-            <div className="flex items-center gap-6 text-emerald-500">
-              <Link href={`/${lang}/collection`} className="hover:text-gold transition-colors cursor-pointer">
-                <ShoppingCart size={18} strokeWidth={2} />
-              </Link>
-              <Link href={`/${lang}/auth`} className="text-[10px] uppercase tracking-[0.3em] font-bold hover:text-gold transition-colors cursor-pointer">
-                {isEs ? "ACCESO" : "ACCESS"}
-              </Link>
-            </div>
-          </div>
-
-          {/* BOTÓN HAMBURGUER RESPONSIVO (Activo estrictamente de 310px a md:hidden) */}
-          <button 
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden relative z-[200] w-10 h-10 flex flex-col items-center justify-center bg-zinc-900/40 border border-white/5 transition-colors hover:border-gold outline-none cursor-pointer"
-            aria-label="Toggle Menu"
-          >
-            {isMobileMenuOpen ? (
-              // X en rojo puro de alta visibilidad para el estado abierto
-              <X size={20} className="text-red-500 animate-fade-in transition-transform hover:scale-110" />
-            ) : (
-              <div className="relative w-5 h-4 flex flex-col justify-between items-center">
-                <span className="w-full h-[1.5px] bg-emerald-500 transition-all duration-300" />
-                <span className="w-full h-[1.5px] bg-emerald-500 transition-all duration-300" />
-                <span className="w-full h-[1.5px] bg-emerald-500 transition-all duration-300" />
-              </div>
-            )}
-          </button>
-        </div>
+     
       </nav>
 
    
