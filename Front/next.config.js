@@ -16,6 +16,4 @@ const nextConfig = {
 
   // Optimización avanzada de imágenes
   images: {
-    formats: ['image/avif', 'image/webp'],
-    remotePatterns: [
-      {
+  
