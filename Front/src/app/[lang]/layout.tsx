@@ -43,17 +43,6 @@ export const metadata: Metadata = {
 interface RootLayoutProps {
   children: React.ReactNode;
   params: Promise<{ lang?: string }>; 
-}
 
-/**
- * Emerald DT - Root Layout Orchestrator
- * Arquitectura de alto rendimiento L5 optimizada por Nieto Laboratory.
- * Limpio de Footer global para permitir que cada sección gestione su Snap Scroll nativo.
- */
-export default async function RootLayout(props: RootLayoutProps) {
-  const { children, params } = props;
-  const resolvedParams = await params;
-  const lang = r
-    </html>
   );
 }
