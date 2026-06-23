@@ -84,18 +84,4 @@ export const apiClient = {
 
       if (response.status === 204) return {} as T;
 
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.message || `HTTP_ERROR_${response.status}`);
-
-      return data as T;
-    } catch (error: any) {
-      // INTERCEPTOR DE TOLERANCIA A FALLOS
-      console.warn(`⚠️ [API OVERRIDE] Error en endpoint [${method}] ${endpoint}: ${error.message || error}`);
-      
-      // Si la app solicita productos y el backend está caído, inyectamos los Mocks sin romper el flujo
-      if (endpoint.includes('/products') && method === 'GET') {
-        console.log("🛡️ Escudo Activado: Retornando base de datos inyectada local de esmeraldas.");
-        return MOCK_PRODUCTS as unknown as T;
-      }
-      
  >
