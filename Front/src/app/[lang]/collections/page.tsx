@@ -4,23 +4,7 @@ import { apiClient } from '@/lib/apiClient';
 
 
   return (
-    <main className="min-h-screen w-full bg-black text-white px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-24 selection:bg-gold/30 relative overflow-x-hidden">
-      {/* Malla de Ingeniería de Fondo de Alta Densidad */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:5rem_5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_80%,transparent_100%)] pointer-events-none z-0" />
-      
-      {/* Contenedor Fluido Estricto: 310px -> 1900px */}
-      <div className="max-w-[1900px] mx-auto relative z-10 w-full min-w-[278px]">
-        
-        {/* ENCABEZADO MINIMALISTA */}
-        <header className="border-b border-white/10 pb-6 mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-          <div>
-            <div className="flex items-center gap-2 mb-1.5">
-              <span className="w-1.5 h-1.5 bg-emerald-500 animate-pulse rounded-full" />
-              <p className="text-[9px] font-mono text-emerald-500 tracking-[0.3em] uppercase font-bold">
-                {isEs ? '// TRAZABILIDAD DE STOCK CONTROLADA' : '// CONTROLLED STOCK TRACEABILITY'}
-              </p>
-            </div>
-            <h1 className="text-2xl sm:text-4xl font-black uppercase tracking-tighter text-white">
+    <main className="min-h-screen w-black uppercase tracking-tighter text-white">
               {mine ? `${isEs ? 'MINA' : 'MINE'}: ${mineNames[mine as keyof typeof mineNames] || mine}` : (isEs ? 'JOYAS EN STOCK' : 'AVAILABLE STOCK')}
             </h1>
           </div>
