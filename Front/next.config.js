@@ -13,7 +13,3 @@ const nextConfig = {
     'localhost:3000',
     '192.168.0.21:3000'
   ],
-
-  // Optimización avanzada de imágenes
-  images: {
-  
