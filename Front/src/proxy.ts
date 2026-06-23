@@ -25,9 +25,7 @@ export const config = {
     /*
      * EXCLUSIONES CRÍTICAS:
      * - api, _next/static, _next/image: Rutas nativas de Next.js
-     * - _next/webpack-hmr: EXCEPCIÓN OBLIGATORIA para desbloquear WebSockets de Turbopack en IP local
-     * - assets, *.ico, *.png, .*\\..*$: Archivos estáticos y recursos multimedia de alta fidelidad
-     */
+     * - _next
     '/((?!api|_next/static|_next/image|_next/webpack-hmr|assets|favicon.ico|icon.png|.*\\..*$).*)',
   ],
 };
