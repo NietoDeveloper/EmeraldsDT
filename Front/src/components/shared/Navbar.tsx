@@ -28,16 +28,5 @@ export const Navbar = () => {
   const navLinks: NavLink[] = [
     { name: isEs ? "Inicio" : "Home", href: `/${lang}` },
     { name: isEs ? "Colección" : "Collection", href: `/${lang}/collection` },
-  ];
-
-  // 3. Modificación aséptica: Navegación suave sin destruir el estado del cliente
-  const handleRefresh = (e: React.MouseEvent) => {
-    e.preventDefault();
-    router.push(`/${lang}`);
-  };
-
-  useEffect(() => {
-    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
-  }, [isMobileMenuOpen]);
 
   useEffect(() => {
