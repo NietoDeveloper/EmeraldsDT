@@ -3,25 +3,6 @@ import { notFound } from 'next/navigation';
 import { apiClient } from '@/lib/apiClient';
 
 
-
-interface CollectionPageProps {
-  params: Promise<{ lang: string }>;
-  searchParams: Promise<{ mine?: string }>;
-
-  try {
-    const endpoint = mine ? `/products?mine=${mine}` : '/products';
-    const response = await apiClient.get<EmeraldProduct[]>(endpoint);
-    products = (response || []).filter((p) => p.status === 'AVAILABLE');
-  } catch (error) {
-    connectionError = true;
-  }
-
-  const mineNames = {
-    muzo: 'Muzo (Capital)',
-    chivor: 'Chivor (Blue Fire)',
-    coscuez: 'Coscuez (Andean Sun)',
-  };
-
   return (
     <main className="min-h-screen w-full bg-black text-white px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-24 selection:bg-gold/30 relative overflow-x-hidden">
       {/* Malla de Ingeniería de Fondo de Alta Densidad */}
