@@ -108,18 +108,7 @@ export default async function HomePage({ params }: HomePageProps) {
               <h2 className="text-4xl md:text-6xl font-bold uppercase mb-8 leading-tight text-white tracking-tighter">
                 Nieto Lab <br /> <span className="text-gold italic font-extralight uppercase tracking-normal">Engineering</span>
               </h2>
-              <div className="space-y-6 border-l border-emerald-500/50 pl-8">
-                <p className="text-emerald-500/80 text-lg italic font-medium">"Building scalable systems with 100% discipline."</p>
-                <p className="text-zinc-500 max-w-md text-sm md:text-base leading-relaxed">
-                  {isEs ? 'Arquitectura de seguridad máxima y trazabilidad absoluta...' : 'Maximum security architecture and absolute traceability...'}
-                </p>
-              </div>
-            </div>
-            <div className="hidden md:block h-[350px] border border-white/10 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-sm relative group overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center text-white/5 font-mono text-[10px] uppercase tracking-[1.5em] rotate-90 whitespace-nowrap group-hover:text-white/20 transition-all duration-1000">
-                Technical Specifications // Ciclo S+
-              </div>
-              <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-gold/40" />
+              <ssName="absolute top-0 right-0 w-4 h-4 border-t border-r border-gold/40" />
               <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-gold/40" />
             </div>
           </div>
