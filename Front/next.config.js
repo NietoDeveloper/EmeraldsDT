@@ -30,7 +30,3 @@ const nextConfig = {
   poweredByHeader: false, // Perímetro seguro: Mitiga escaneos de firma de framework
 
 
-  output: 'standalone'
-};
-
-module.exports = nextConfig;
