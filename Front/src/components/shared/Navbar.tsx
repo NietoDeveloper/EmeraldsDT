@@ -82,28 +82,6 @@ export const Navbar = () => {
                 href={link.href} 
                 className="text-[10px] xl:text-[11px] uppercase tracking-[0.3em] font-bold text-zinc-400 hover:text-gold transition-colors duration-300 font-mono"
               >
-                {link.name}
-              </Link>
-            ))}
-          </div>
 
-          {/* ACCESOS CORPORATIVOS */}
-          <div className="flex items-center gap-4 md:gap-8 font-mono">
-            <div className="flex items-center gap-6 text-emerald-500">
-              {/* Carrito enlazado temporalmente a colección/checkout según requerimiento */}
-              <Link href={`/${lang}/collection`} className="hover:text-gold transition-colors">
-                <ShoppingCart size={18} strokeWidth={2} />
-              </Link>
-              <Link href={`/${lang}/auth`} className="text-[10px] uppercase tracking-[0.3em] font-bold hover:text-gold transition-colors">
-                {isEs ? "ACCESO" : "ACCESS"}
-              </Link>
-            </div>
-
-            {/* HAMBURGER MENÚ RESPONSIVO */}
-            <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden relative z-[200] w-10 h-10 flex flex-col items-center justify-center bg-zinc-900/40 border border-white/5 transition-colors hover:border-gold outline-none"
-
-    </>
   );
 };
