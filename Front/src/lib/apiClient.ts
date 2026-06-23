@@ -120,9 +120,3 @@ export const apiClient = {
 
   put<T>(endpoint: string, body: any, options?: Omit<RequestOptions, 'method' | 'body'>) {
     return this.request<T>(endpoint, { ...options, method: 'PUT', body });
-  },
-
-  delete<T>(endpoint: string, options?: Omit<RequestOptions, 'method' | 'body'>) {
-    return this.request<T>(endpoint, { ...options, method: 'DELETE' });
-  }
-};
