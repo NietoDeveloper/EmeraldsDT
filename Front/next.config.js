@@ -24,9 +24,3 @@ const nextConfig = {
       },
     ],
   },
-
-  // Máxima seguridad y estabilidad del clúster
-  reactStrictMode: true,
-  poweredByHeader: false, // Perímetro seguro: Mitiga escaneos de firma de framework
-
-
