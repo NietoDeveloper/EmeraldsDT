@@ -140,8 +140,7 @@ export const Navbar = () => {
              <Link href={`/${lang}/collection`} onClick={() => setIsMobileMenuOpen(false)} className="text-emerald-500 hover:text-gold transition-colors">
                <ShoppingCart size={22}/>
              </Link>
-             <Link href={`/${lang}/auth`} onClick={() => setIsMobileMenuOpen(false)} className="text-[10px] uppercase tracking-[0.2em] font-bold text-emerald-500 hover:text-gold transition-colors">
-               {isEs ? "ACCESO" : "ACCESS"}
+        
              </Link>
           </div>
         </div>
