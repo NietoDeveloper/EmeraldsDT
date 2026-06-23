@@ -63,28 +63,7 @@ export default async function RootLayout(props: RootLayoutProps) {
     >
       <head>
         {/* Bloqueo perimetral por hardware: Garantiza pantalla negra absoluta y oculta 
-            el árbol visual principal hasta que el Preloader de la orden de salida */}
-        <style dangerouslySetInnerHTML={{ __html: `
-          html.js-loading body { overflow: hidden !important; background: #000000 !important; }
-          #main-content { opacity: 0 !important; visibility: hidden !important; }
-          html.js-loaded #main-content { 
-            opacity: 1 !important; 
-            visibility: visible !important; 
-            transition: opacity 1.2s cubic-bezier(0.43, 0.13, 0.23, 0.96); 
-          }
-        `}} />
-      </head>
-      <body className="antialiased bg-black text-white selection:bg-emerald-500/30 selection:text-emerald-200 min-h-screen font-sans">
-        
-        {/* Prioridad 1: Orquestación y ejecución inmediata del ciclo de carga */}
-        <Suspense fallback={null}>
-          <Preloader />
-        </Suspense>
 
-        {/* Prioridad 2: Árbol estructural de interfaz latente (Escala responsiva estricta de 310px a 1900px) */}
-        <div id="main-content" className="relative flex flex-col min-h-screen w-full🎛️">
-          
-          {/* Barra 
     </html>
   );
 }
