@@ -133,12 +133,7 @@ export const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-          </div>
-
-          {/* Footer del Panel Móvil */}
-          <div className="flex gap-10 items-center mt-6 border-t border-white/5 pt-8 w-32 justify-center">
-             <Link href={`/${lang}/collection`} onClick={() => setIsMobileMenuOpen(false)} className="text-emerald-500 hover:text-gold transition-colors">
-               <ShoppingCart size={22}/>
+s
     
           </div>
         </div>
