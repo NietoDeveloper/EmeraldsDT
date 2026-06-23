@@ -110,13 +110,4 @@ export const apiClient = {
     }
   },
 
-  get<T>(endpoint: string, options?: Omit<RequestOptions, 'method' | 'body'>) {
-    return this.request<T>(endpoint, { ...options, method: 'GET' });
-  },
-
-  post<T>(endpoint: string, body: any, options?: Omit<RequestOptions, 'method' | 'body'>) {
-    return this.request<T>(endpoint, { ...options, method: 'POST', body });
-  },
-
-  put<T>(endpoint: string, body: any, options?: Omit<RequestOptions, 'method' | 'body'>) {
-    return this.request<T>(endpoint, { ...options, method: 'PUT', body });
+  get<T>
