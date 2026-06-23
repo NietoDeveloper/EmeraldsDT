@@ -11,7 +11,4 @@ export function proxy(request: NextRequest) {
 
   // 1. Redirección geo-idiomática limpia en la raíz pura
   if (pathname === '/') {
-    const acceptLanguage = request.headers.get('accept-language') || '';
-    const preferredLang = acceptLanguage.startsWith('en') ? '/en' : '/es';
-    return NextResponse.redirect(new URL(preferredLang, request.url));
-  }
+    const acceptLangua
