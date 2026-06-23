@@ -8,7 +8,3 @@ import type { NextRequest } from 'next/server';
  */
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
-
-  // 1. Redirección geo-idiomática limpia en la raíz pura
-  if (pathname === '/') {
-    const acceptLangua
