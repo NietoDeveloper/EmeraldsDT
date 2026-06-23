@@ -134,17 +134,7 @@ export const Navbar = () => {
                 href={item.href} 
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-lg uppercase tracking-[0.3em] font-bold text-zinc-400 hover:text-gold transition-colors cursor-pointer"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-            <Link 
-              href={`/${lang}/auth`} 
-              onClick={() => setIsMobileMenuOpen(false)} 
-              className="text-center text-[11px] uppercase tracking-[0.25em] font-bold text-emerald-500 hover:text-gold transition-colors border border-emerald-500/30 px-6 py-3 bg-emerald-950/20 hover:border-gold w-full cursor-pointer"
-            >
+   
               {isEs ? "ACCESO" : "ACCESS"}
             </Link>
           </div>
