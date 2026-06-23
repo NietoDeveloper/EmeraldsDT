@@ -1,27 +1,5 @@
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { apiClient } from '@/lib/apiClient';
-
-
-                href={`/${lang}/collection?mine=${m}`}
-                className={`px-3 py-1 border uppercase transition-colors ${mine === m ? 'border-gold text-gold bg-gold/5' : 'border-white/10 text-zinc-500 hover:border-white/30'}`}
-              >
-                {m}
-              </Link>
-            ))}
-          </div>
-        </header>
-
-        {/* ESTADOS DE RED / EXCEPCIONES */}
-        {connectionError && (
-          <div className="border border-red-500/20 bg-red-950/10 p-5 font-mono text-xs text-red-400 max-w-xl">
-            <p className="font-bold uppercase mb-1">// LINK FAULT // </p>
-            <p>{isEs ? 'Fallo crítico en el clúster de datos.' : 'Critical failure on data cluster.'}</p>
-          </div>
-        )}
-
-        {!connectionError && products.length === 0 && (
-          <div className="border border-white/10 bg-zinc-950/20 p-6 font-mono text-[11px] text-zinc-500 tracking-wide max-w-sm">
+impallo crítico en el clúster de datos.' : 'Critical failure on data cluster.'}</p>
+          </div>e/10 bg-zinc-950/20 p-6 font-mono text-[11px] text-zinc-500 tracking-wide max-w-sm">
             {isEs ? '// Cero unidades disponibles para este origen.' : '// Zero available items for this source.'}
           </div>
         )}
