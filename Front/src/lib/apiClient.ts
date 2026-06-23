@@ -13,26 +13,7 @@ export const apiClient = {
   async request<T>(endpoint: string, options: RequestOptions = {}): Promise<T> {
     const { params, headers, method = 'GET', body, ...config } = options;
     
-    const url = params 
-      ? `${API_BASE_URL}${endpoint}?${new URLSearchParams(params)}`
-      : `${API_BASE_URL}${endpoint}`;
-
-    const response = await fetch(url, {
-      method,
-      headers: {
-        'Content-Type': 'application/json',
-        ...headers,
-      },
-      credentials: 'include', // Seguridad Transversal: Traspaso estricto de HTTPOnly Cookies
-      body: body ? JSON.stringify(body) : undefined,
-      ...config,
-    });
-
-    if (response.status === 204) re
-  put<T>(endpoint: string, body: any, options?: Omit<RequestOptions, 'method' | 'body'>) {
-    return this.request<T>(endpoint, { ...options, method: 'PUT', body });
-  },
-
+    const url = params
   delete<T>(endpoint: string, options?: Omit<RequestOptions, 'method' | 'body'>) {
     return this.request<T>(endpoint, { ...options, method: 'DELETE' });
   }
