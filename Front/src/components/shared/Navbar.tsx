@@ -103,23 +103,6 @@ export const Navbar = () => {
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden relative z-[200] w-10 h-10 flex flex-col items-center justify-center bg-zinc-900/40 border border-white/5 transition-colors hover:border-gold outline-none"
-            >
-              <div className="relative w-5 h-4 flex flex-col justify-between items-center">
-                <span className={`w-full h-[1.5px] transition-all duration-300 transform ${isMobileMenuOpen ? 'rotate-45 translate-y-[7px] bg-gold' : 'bg-emerald-500'}`} />
-                <span className={`w-full h-[1.5px] transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : 'bg-emerald-500'}`} />
-                <span className={`w-full h-[1.5px] transition-all duration-300 transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-[7px] bg-gold' : 'bg-emerald-500'}`} />
-              </div>
-            </button>
-          </div>
-        </div>
-      </nav>
-
-      {/* MOBILE MENU OVERLAY */}
-      <div className={`fixed inset-0 z-[130] transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] lg:hidden
-        ${isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"}`}
-      >
-        <div className="absolute inset-0 bg-black/98" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-950/20 via-transparent to-transparent opacity-60 pointer-events-none" />
 
     </>
   );
