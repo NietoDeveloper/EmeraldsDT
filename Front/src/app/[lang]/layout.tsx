@@ -90,11 +90,7 @@ export default async function RootLayout(props: RootLayoutProps) {
           {/* Inyección del viewport de las páginas dinámicas */}
           <main className="flex-grow w-full relative z-10">
             <PageTransitionWrapper>
-              {children}
-            </PageTransitionWrapper>
-          </main>
 
-          {/* NOTA ARQUITECTÓNICA //
   
           */}
         </div>
