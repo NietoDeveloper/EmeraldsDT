@@ -17,8 +17,3 @@ export function proxy(request: NextRequest) {
   }
 
   return NextResponse.next();
-}
-
-// 2. Control perimetral de rutas (Matcher)
-export const config
-};
