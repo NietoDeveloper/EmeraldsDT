@@ -65,12 +65,35 @@ export default async function CollectionPage({ params, searchParams }: Collectio
       );
 
   return (
-    <main className="min-h-screen w-full bg-black text-white px-4 sm:px-8 lg:px-16 py-24 selection:bg-gold/30 relative overflow-x-hidden scrollbar-thin scrollbar-track-black scrollbar-thumb-emerald-600">
-      {/* Atmósfera Emerald: Gradiente Radial Orgánico */}
+    <main className="min-h-screen w-full bg-black text-white px-3 sm:px-8 lg:px-16 py-24 selection:bg-gold/30 relative overflow-x-hidden app-scrollbar">
+      {/* Inyección nativa de Scrollbar Esmeralda de Máxima Compatibilidad */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .app-scrollbar::-webkit-scrollbar {
+          width: 6px;
+          height: 6px;
+        }
+        .app-scrollbar::-webkit-scrollbar-track {
+          background: #000000;
+        }
+        .app-scrollbar::-webkit-scrollbar-thumb {
+          background: #059669;
+          border-radius: 3px;
+        }
+        .app-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #10b981;
+        }
+        /* Garantía de renderizado para Firefox */
+        html, .app-scrollbar {
+          scrollbar-width: thin;
+          scrollbar-color: #059669 #000000;
+        }
+      `}} />
+
+      {/* Atmósfera Emerald: Gradiente Radial Orgánico al estilo SpaceX */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,#042f1a_0%,transparent_75%)] pointer-events-none z-0" />
       
-      {/* Contenedor Fluido Técnico: 310px -> 1900px */}
-      <div className="max-w-[1900px] mx-auto relative z-10 w-full min-w-[278px]">
+      {/* Contenedor Fluido Técnico: Estricto desde 310px hasta los 1900px */}
+      <div className="w-full max-w-[1900px] min-w-[286px] mx-auto relative z-10">
         
         {/* ENCABEZADO INTEGRADO */}
         <header className="border-b border-white/5 pb-6 mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
@@ -84,16 +107,16 @@ export default async function CollectionPage({ params, searchParams }: Collectio
                 }
               </p>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white font-mono">
+            <h1 className="text-xl sm:text-3xl font-black uppercase tracking-tight text-white font-mono break-words">
               {mine ? `${isEs ? 'COLECCIÓN' : 'COLLECTION'}: ${mineNames[mine as keyof typeof mineNames] || mine}` : (isEs ? 'JOYAS EXHIBIDAS' : 'DISPLAYED STOCK')}
             </h1>
           </div>
 
           {/* Filtros de Navegación por Mina */}
-          <div className="flex flex-wrap gap-2 font-mono text-[9px] tracking-widest font-bold">
+          <div className="flex flex-wrap gap-2 font-mono text-[9px] tracking-widest font-bold w-full md:w-auto">
             <Link 
               href={`/${lang}/collections`}
-              className={`px-4 py-2 border transition-all duration-300 cursor-pointer ${!mine ? 'border-gold text-gold bg-gold/5' : 'border-white/5 text-zinc-400 hover:border-gold hover:text-gold'}`}
+              className={`px-3 sm:px-4 py-2 border transition-all duration-300 cursor-pointer text-center flex-1 sm:flex-none ${!mine ? 'border-gold text-gold bg-gold/5' : 'border-white/5 text-zinc-400 hover:border-gold hover:text-gold'}`}
             >
               {isEs ? 'TODOS (3 POR MINA)' : 'ALL (3 PER MINE)'}
             </Link>
@@ -101,7 +124,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
               <Link
                 key={m}
                 href={`/${lang}/collections?mine=${m}`}
-                className={`px-4 py-2 border uppercase transition-all duration-300 cursor-pointer ${mine === m ? 'border-gold text-gold bg-gold/5' : 'border-white/5 text-zinc-400 hover:border-gold hover:text-gold'}`}
+                className={`px-3 sm:px-4 py-2 border uppercase transition-all duration-300 cursor-pointer text-center flex-1 sm:flex-none ${mine === m ? 'border-gold text-gold bg-gold/5' : 'border-white/5 text-zinc-400 hover:border-gold hover:text-gold'}`}
               >
                 {m}
               </Link>
@@ -114,7 +137,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
           {displayProducts.map((gem) => (
             <article 
               key={gem.id} 
-              className={`group flex flex-col border bg-zinc-950/30 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 cursor-pointer ${
+              className={`group flex flex-col border bg-zinc-950/30 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 cursor-pointer w-full ${
                 isFallbackActive 
                   ? 'border-white/5 opacity-75 hover:border-emerald-500/30' 
                   : 'border-white/5 hover:border-gold/30 hover:shadow-[0_10px_30px_rgba(212,175,55,0.05)]'
@@ -141,7 +164,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
                   />
                 ) : (
                   <div className="w-full h-full bg-gradient-to-br from-zinc-900 to-zinc-950 flex items-center justify-center relative">
-                    <span className="font-mono text-[10px] text-zinc-600 tracking-widest uppercase">{isEs ? '// CARGANDO ACTIVO' : '// LOADING ASSET'}</span>
+                    <span className="font-mono text-[10px] text-zinc-600 tracking-widest uppercase text-center px-4">{isEs ? '// CARGANDO ACTIVO' : '// LOADING ASSET'}</span>
                     <div className="absolute inset-0 bg-emerald-500/5 animate-pulse" />
                   </div>
                 )}
@@ -155,7 +178,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
                     <span className="font-mono text-[9px] text-gold tracking-widest uppercase font-semibold">
                       {isEs ? `MINA ${gem.origin} // ${gem.category}` : `${gem.origin} MINE // ${gem.category}`}
                     </span>
-                    <h3 className="text-base font-bold uppercase tracking-tight text-white font-mono group-hover:text-gold transition-colors duration-300">
+                    <h3 className="text-base font-bold uppercase tracking-tight text-white font-mono group-hover:text-gold transition-colors duration-300 break-words">
                       {gem.name}
                     </h3>
                     <p className="text-zinc-400 font-sans text-xs mt-1 line-clamp-2 leading-relaxed">
