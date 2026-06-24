@@ -80,18 +80,6 @@ export default async function RootLayout(props: RootLayoutProps) {
             border-radius: 3px !important;
           }
           ::-webkit-scrollbar-thumb:hover {
-            background: #10b981 !important;
-          }
-          html {
-            scrollbar-width: thin !important;
-            scrollbar-color: #059669 #000000 !important;
-            overflow-y: auto !important; /* Fuerza la reactivación del scroll vertical general */
-          }
-        `}} />
-      </head>
-      <body className="antialiased bg-black text-white selection:bg-emerald-500/30 selection:text-emerald-200 min-h-screen font-sans overflow-x-hidden">
-        
-        {/* Orquestación perimetral de carga controlada */}
 
         </div>
       </body>
