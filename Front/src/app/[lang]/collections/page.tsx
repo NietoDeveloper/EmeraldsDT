@@ -175,27 +175,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
               <div className="p-5 flex-1 flex flex-col justify-between gap-5">
                 <div>
                   <div className="flex flex-col gap-1">
-                    <span className="font-mono text-[9px] text-gold tracking-widest uppercase font-semibold">
-                      {isEs ? `MINA ${gem.origin} // ${gem.category}` : `${gem.origin} MINE // ${gem.category}`}
-                    </span>
-                    <h3 className="text-base font-bold uppercase tracking-tight text-white font-mono group-hover:text-gold transition-colors duration-300 break-words">
-                      {gem.name}
-                    </h3>
-                    <p className="text-zinc-400 font-sans text-xs mt-1 line-clamp-2 leading-relaxed">
-                      {gem.description}
-                    </p>
-                  </div>
-
-
-
-                <div className="flex flex-col gap-2">
-                  <Link 
-                    href={`/${lang}/collections/${gem.id}`}
-                    className="w-full border border-white/10 text-zinc-300 hover:bg-zinc-900 hover:text-white transition-all duration-300 font-mono text-[10px] tracking-[0.2em] font-bold py-2.5 text-center uppercase block cursor-pointer"
-                  >
-                    {isEs ? 'VER ESPECIFICACIONES' : 'VIEW SPECIFICATIONS'}
-                  </Link>
-
+           
                     {isEs ? 'COMPRAR ACTIVO' : 'ACQUIRE ASSET'}
                   </Link>
                 </div>
