@@ -7,31 +7,6 @@
     --background: #000000;
     --foreground: #ffffff;
     --emerald: #50C878;
-    --emerald-dark: #047857;
-    --gold: #D4AF37;
-    --gold-dark: #996515;
-    --font-sans: var(--font-sans);
-    --font-mono: var(--font-mono);
-  }
 
-  /* SOLUCIÓN ATÓMICA ANTI-DOUBLE SCROLL:
-     Bloqueamos el scroll en la raíz. Solo el contenedor <main> dentro
-     de la página tendrá permiso para desplazarse.
-  */
-  html, body {
-    @apply bg-black antialiased;
-    /* Bloqueo total para evitar el segundo scroll del navegador */
-    height: 100%;
-    width: 100%;
-    overflow: hidden; 
-    margin: 0;
-    padding: 0;
-    position: fixed; /* Previene rebotes elásticos en iOS */
-  }
-
-  body {
-    @apply text-white;
-    text-rendering: optimizeLegibility;
-  }
 }
 
