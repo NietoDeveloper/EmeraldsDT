@@ -67,44 +67,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
   return (
     <main className="min-h-screen w-full bg-black text-white px-3 sm:px-8 lg:px-16 py-24 selection:bg-gold/30 relative overflow-x-hidden app-scrollbar">
       {/* Inyección nativa de Scrollbar Esmeralda de Máxima Compatibilidad */}
-      <style dangerouslySetInnerHTML={{ __html: `
-        .app-scrollbar::-webkit-scrollbar {
-          width: 6px;
-          height: 6px;
-        }
-        .app-scrollbar::-webkit-scrollbar-track {
-          background: #000000;
-        }
-        .app-scrollbar::-webkit-scrollbar-thumb {
-          background: #059669;
-          border-radius: 3px;
-        }
-        .app-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #10b981;
-        }
-        /* Garantía de renderizado para Firefox */
-        html, .app-scrollbar {
-          scrollbar-width: thin;
-          scrollbar-color: #059669 #000000;
-        }
-      `}} />
 
-      {/* Atmósfera Emerald: Gradiente Radial Orgánico al estilo SpaceX */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,#042f1a_0%,transparent_75%)] pointer-events-none z-0" />
-      
-      {/* Contenedor Fluido Técnico: Estricto desde 310px hasta los 1900px */}
-      <div className="w-full max-w-[1900px] min-w-[286px] mx-auto relative z-10">
-        
-        {/* ENCABEZADO INTEGRADO */}
-        <header className="border-b border-white/5 pb-6 mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-          <div>
-            <div className="flex items-center gap-2 mb-1.5">
-              <span className="w-1.5 h-1.5 bg-emerald-500 animate-pulse rounded-full" />
-              <p className="text-[9px] font-mono text-emerald-400 tracking-[0.3em] uppercase font-bold">
-                {isFallbackActive 
-                  ? (isEs ? '// MODO CONTINGENCIA / BUFFER NACIONAL' : '// CONTINGENCY MODE / LOCAL BUFFER')
-                  : (isEs ? '// CONTROL DE INVENTARIO EN VIVO' : '// LIVE ASSET INVENTORY')
-                }
               </p>
             </div>
             <h1 className="text-xl sm:text-3xl font-black uppercase tracking-tight text-white font-mono break-words">
