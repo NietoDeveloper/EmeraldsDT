@@ -1,25 +1,4 @@
-"use client";
-
-import { useScrollDirection } from "@/hooks/useScrollDirection";
-import Link from "next/link";
-import Image from "next/image";
-import { useState, useEffect } from "react";
-import { useParams } from "next/navigation";
-import { ShoppingCart, X } from "lucide-react";
-
-interface NavLink {
-  name: string;
-  href: string;
-}
-
-export const Navbar = () => {
-  const scrollDirection = useScrollDirection();
-  const params = useParams();
-  
-  const lang = (params?.lang as string) || "es";
-  const isEs = lang === "es";
-
-  const [isAtTop, setIsAtTop] = useState(true);
+tTop] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Mapeo unificado apuntando a las rutas físicas existentes de tu app
