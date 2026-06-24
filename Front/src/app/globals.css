@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Paleta Cromática de Máxima Seguridad y Alta Costura */
+    --background: #010502;
+    --foreground: #ffffff;
+    
+    /* Esmeralda Matricial */
+    --emerald-raw: 16 185 129;
+    --emerald: #10b981;
+    --emerald-dark: #047857;
+    --emerald-deep: #022c16;
+    
+    /* Oro Líquido SpaceX */
+    --gold-raw: 212 175 55;
+    --gold: #d4af37;
+    --gold-light: #f3e5ab;
+    --gold-dark: #996515;
+    
+    --font-sans: var(--font-sans);
+    --font-mono: var(--font-mono);
+  }
+
+  /* SOLUCIÓN ATÓMICA DE CONTROL DE FLUJO DEL DOM
+     Mantiene la sincronización milimétrica entre el Preloader, los layouts elásticos
+     y los componentes responsivos sin provocar saltos visuales o doble scroll.
+  */
+  html, body {
+    @apply bg-[#010502] antialiased selection:bg-emerald-500/20 selection:text-gold;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Estado bloqueado inicial manejado dinámicamente por el Preloader */
+  html.js-loading, 
+  html.js-loading body {
+    overflow: hidden !important;
+    position: fixed;
+    touch-action: none;
+  }
+
+  /* Estado liberado con scrollbar esmeralda de grado ingeniería */
+  html.js-loaded {
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+
+  /* Títulos e Identificadores Técnicos */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-mono tracking-tight uppercase text-white;
+  }
+}
+
+@layer components {
+  /* ==========================================================================
+     SCROLLBAR AVANZADA (Estilo SpaceX / Emerald Industrial)
+     ========================================================================== */
+  html.js-loaded::-webkit-scrollbar,
+  .app-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  html.js-loaded::-webkit-scrollbar-track,
+  .app-scrollbar::-webkit-scrollbar-track {
+    background: #010502;
+  }
+  
+  html.js-loaded::-webkit-scrollbar-thumb,
+  .app-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--emerald-dark);
+    border: 1px solid rgba(214, 175, 55, 0.15);
+    border-radius: 0px;
+    transition: background 0.3s ease;
+  }
+  
+  html.js-loaded::-webkit-scrollbar-thumb:hover,
+  .app-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--emerald);
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+  }
+
+  /* Soporte Estricto para Firefox */
+  html.js-loaded, * {
+    scrollbar-width: thin;
+    scrollbar-color: #047857 #010502;
+  }
+
+  /* ==========================================================================
+     DEGRADADOS ATMOSFÉRICOS DE FONDO (Fusión Gold & Emerald Deep)
+     ========================================================================== */
+  .bg-atmosphere-emerald {
+    background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(4, 47, 26, 0.4) 0%, transparent 70%);
+  }
+
+  .bg-atmosphere-gold {
+    background: radial-gradient(ellipse 70% 50% at 50% 110%, rgba(153, 101, 21, 0.15) 0%, transparent 80%);
+  }
+
+  .bg-cluster-dashboard {
+    background: linear-gradient(180deg, #010502 0%, #021a0f 50%, #010502 100%);
+  }
+
+  /* ==========================================================================
+     SISTEMA CINEMÁTICO SNAP SECTIONS (Responsive 310px - 1900px)
+     ========================================================================== */
+  .snap-container {
+    height: 100dvh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .snap-section {
+    @apply relative w-full flex flex-col justify-end overflow-hidden;
+    height: 100dvh;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  /* Capas de degradados de transición elegantes */
+  .section-overlay-dark {
+    @apply absolute inset-0 pointer-events-none z-10;
+    background: linear-gradient(to top, #010502 0%, rgba(1, 5, 2, 0.4) 50%, rgba(1, 5, 2, 0) 100%);
+  }
+
+  .section-overlay-emerald {
+    @apply absolute inset-0 pointer-events-none z-10;
+    background: linear-gradient(to right, rgba(2, 44, 22, 0.3) 0%, transparent 100%);
+  }
+
+  /* ==========================================================================
+     ELEGANCIA INSTRUMENTAL (Efectos de Texto y Bordes)
+     ========================================================================== */
+  .text-neon-emerald {
+    text-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+  }
+
+  .text-neon-gold {
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+  }
+
+  .border-technical {
+    @apply border border-white/5 hover:border-gold/30 transition-all duration-500;
+  }
+}
+
+/* ==========================================================================
+   Ajustes Críticos de Estructura de Caja de Máxima Compatibilidad
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+/* Clases de utilidad personalizadas para inyecciones rápidas */
+.text-gold {
+  color: var(--gold);
+}
+.bg-gold {
+  background-color: var(--gold);
+}
+.border-gold {
+  border-color: var(--gold);
+}
