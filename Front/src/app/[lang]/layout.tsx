@@ -60,26 +60,7 @@ export default async function RootLayout(props: RootLayoutProps) {
         {/* Estilos de inicialización y scrollbar esmeralda integrado a nivel global */}
         <style dangerouslySetInnerHTML={{ __html: `
           html.js-loading body { overflow: hidden !important; background: #000 !important; }
-          #main-content { opacity: 0; visibility: hidden; }
-          html.js-loaded #main-content { 
-            opacity: 1 !important; 
-            visibility: visible !important; 
-            transition: opacity 1.2s cubic-bezier(0.43, 0.13, 0.23, 0.96); 
-          }
-          
-          /* Inyección del scrollbar esmeralda directo en el motor de renderizado del navegador */
-          ::-webkit-scrollbar {
-            width: 6px !important;
-            height: 6px !important;
-          }
-          ::-webkit-scrollbar-track {
-            background: #000000 !important;
-          }
-          ::-webkit-scrollbar-thumb {
-            background: #059669 !important;
-            border-radius: 3px !important;
-          }
-          ::-webkit-scrollbar-thumb:hover {
+
 
         </div>
       </body>
