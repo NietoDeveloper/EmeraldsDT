@@ -9,28 +9,37 @@ export default function Preloader() {
   const [isMounted, setIsMounted] = useState(false);
   const pathname = usePathname();
 
+  // Función unificada y segura de desbloqueo global del DOM
+  const releaseDOM = () => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.classList.remove("js-loading");
+      document.documentElement.classList.add("js-loaded");
+    }
+  };
+
   useEffect(() => {
     setIsMounted(true);
     
-    // Inyección perimetral de clases en el documento de forma inmediata
+    // Inicialización perimetral de bloqueo
     if (typeof document !== 'undefined') {
       document.documentElement.classList.add("js-loading");
       document.documentElement.classList.remove("js-loaded");
     }
 
-    // Ciclo total de 5 segundos para coincidir con la sensación de "Security Cluster"
+    // Ciclo total de 5 segundos de carga del Security Cluster
     const timer = setTimeout(() => {
       setLoading(false);
     }, 5000);
 
-    return () => clearTimeout(timer);
-  }, []); // Orquestación limpia: solo se ejecuta una vez al montar la app
+    return () => {
+      clearTimeout(timer);
+      // GARANTÍA TÉCNICA: Si el componente se desmonta inesperadamente por navegación, liberamos el DOM
+      releaseDOM();
+    };
+  }, [pathname]); // Se suscribe al pathname para reaccionar asépticamente en los cambios de ruta
 
   const handleExitComplete = () => {
-    if (typeof document !== 'undefined') {
-      document.documentElement.classList.remove("js-loading");
-      document.documentElement.classList.add("js-loaded");
-    }
+    releaseDOM();
   };
 
   if (!isMounted) return null;
@@ -63,7 +72,7 @@ export default function Preloader() {
 
           <div className="relative z-10 flex flex-col items-center w-full max-w-[310px] md:max-w-none px-6">
             
-            {/* LOGO ANIMADO CORREGIDO */}
+            {/* LOGO ANIMADO */}
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ 
