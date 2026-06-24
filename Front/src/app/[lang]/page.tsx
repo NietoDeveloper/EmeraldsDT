@@ -1,3 +1,6 @@
+'use client';
+
+import { use, useEffect } from 'react';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { MainButton } from '@/components/ui/MainButton';
 import { Footer } from "@/components/shared/Footer";
@@ -6,11 +9,19 @@ interface HomePageProps {
   params: Promise<{ lang: string }>;
 }
 
-export default async function HomePage({ params }: HomePageProps) {
-  // Sincronización asíncrona estricta de parámetros para Next.js 16
-  const resolvedParams = await params;
+export default function HomePage({ params }: HomePageProps) {
+  // Desenvuelve los parámetros asíncronos en el cliente de forma segura
+  const resolvedParams = use(params);
   const lang = resolvedParams?.lang || 'en';
   const isEs = lang === 'es';
+
+  // Ciclo de vida estricto para destruir el bloqueo visual de transiciones de ruta
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.classList.remove("js-loading");
+      document.documentElement.classList.add("js-loaded");
+    }
+  }, []);
 
   const mines = [
     {
@@ -65,7 +76,7 @@ export default async function HomePage({ params }: HomePageProps) {
             />
           </div>
 
-          <div className="w-full px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 relative z-20 max-w-[1900px] mx-auto">
+          <div className="w-full px-6 sm:px-12 md:px-24 lg:px-32 xl:px-48 relative z-20 max-w-[1900px] mx-auto min-w-[310px]">
             <div className="animate-fade-in-up duration-1000">
               <h2 className="text-emerald-500 font-mono tracking-[0.4em] uppercase mb-4 text-[10px] md:text-xs font-bold opacity-90">
                 {isEs ? `// Origen: Boyacá, Colombia` : `// Origin: Boyacá, Colombia`}
@@ -99,25 +110,29 @@ export default async function HomePage({ params }: HomePageProps) {
         </section>
       ))}
 
-      {/* SECCIÓN FINAL: TECNOLOGÍA */}
+      {/* SECCIÓN FINAL: CORPORATE LAB ENGINEERING */}
       <section className="snap-start h-screen w-full bg-black relative flex items-center shrink-0 border-t border-white/5 overflow-hidden">
         <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] bg-emerald-900/10 blur-[150px] rounded-full opacity-50" />
-        <div className="container mx-auto px-6 sm:px-12 md:px-24 lg:px-32 max-w-[1900px] z-10">
+        <div className="container mx-auto px-6 sm:px-12 md:px-24 lg:px-32 max-w-[1900px] z-10 min-w-[310px]">
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <h2 className="text-4xl md:text-6xl font-bold uppercase mb-8 leading-tight text-white tracking-tighter">
-                Nieto Lab <br /> <span className="text-gold italic font-extralight uppercase tracking-normal">Engineering</span>
+                Software DT <br /> <span className="text-gold italic font-extralight uppercase tracking-normal">Engineering</span>
               </h2>
               <div className="space-y-6 border-l border-emerald-500/50 pl-8">
-                <p className="text-emerald-500/80 text-lg italic font-medium">"Building scalable systems with 100% discipline."</p>
+                <p className="text-emerald-500/80 text-lg italic font-medium">
+                  {isEs ? '"Construyendo arquitecturas digitales de clase mundial."' : '"Building world-class digital architectures."'}
+                </p>
                 <p className="text-zinc-500 max-w-md text-sm md:text-base leading-relaxed">
-                  {isEs ? 'Arquitectura de seguridad máxima y trazabilidad absoluta...' : 'Maximum security architecture and absolute traceability...'}
+                  {isEs 
+                    ? 'Infraestructura de comercio electrónico de grado industrial respaldada por Software DT. Arquitectura de seguridad de doble clúster, escalabilidad lineal y trazabilidad criptográfica absoluta en el suministro de esmeraldas de alta tasación.' 
+                    : 'Industrial-grade e-commerce infrastructure powered by Software DT. Featuring double-cluster security architecture, linear scalability, and absolute cryptographic traceability for high-asset emerald distribution.'}
                 </p>
               </div>
             </div>
             <div className="hidden md:block h-[350px] border border-white/10 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-sm relative group overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center text-white/5 font-mono text-[10px] uppercase tracking-[1.5em] rotate-90 whitespace-nowrap group-hover:text-white/20 transition-all duration-1000">
-                Technical Specifications // Ciclo S+
+                Technical Specifications // SDT CORE
               </div>
               <div className="absolute top-0 right-0 w-4 h-4 border-t border-r border-gold/40" />
               <div className="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-gold/40" />
@@ -126,7 +141,7 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
 
-      {/* SECCIÓN FOOTER: Snap Scroll nativo */}
+      {/* SECCIÓN FOOTER */}
       <section className="snap-start w-full bg-black shrink-0">
         <Footer />
       </section>

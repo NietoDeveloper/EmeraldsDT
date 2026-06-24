@@ -48,9 +48,8 @@ export const Navbar = () => {
     window.location.href = `/${lang}`;
   };
 
-  // Manejador interceptor para enlaces Next.js Link
+  // Manejador interceptor optimizado para aislar el retorno al Home sin microtask delays
   const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    // Si es un link de anclaje interno (#), permitimos el comportamiento SPA normal
     if (href.includes("#")) {
       handleCloseMobileMenu();
       return;
@@ -58,15 +57,25 @@ export const Navbar = () => {
     
     e.preventDefault();
     handleCloseMobileMenu();
-    triggerRouteTransition();
     
-    // Forzamos un microtask delay para que el render coincida con el montaje de loading.tsx
-    setTimeout(() => {
+    const isTargetHome = href === `/${lang}` || href === `/${lang}/`;
+
+    if (isTargetHome) {
+      // Si el destino es el Home, liberamos preventivamente estados del DOM para evitar pantallas negras
+      if (typeof document !== 'undefined') {
+        document.documentElement.classList.remove("js-loading");
+        document.documentElement.classList.add("js-loaded");
+      }
       router.push(href);
-    }, 50);
+    } else {
+      // Rutas internas regulares usan el proxy seguro de animación
+      triggerRouteTransition();
+      setTimeout(() => {
+        router.push(href);
+      }, 40);
+    }
   };
 
-  // Cierre limpio forzado y aséptico al interactuar con rutas
   const handleCloseMobileMenu = () => {
     setIsMobileMenuOpen(false);
     if (typeof document !== 'undefined') {
@@ -94,7 +103,7 @@ export const Navbar = () => {
           ${scrollDirection === "down" && !isMobileMenuOpen ? "-translate-y-full" : "translate-y-0"} 
           ${isAtTop 
             ? "bg-transparent py-6 md:py-8" 
-            : "bg-black/80 backdrop-blur-md py-4 border-b border-white/5"
+            : "bg-black/90 backdrop-blur-md py-4 border-b border-emerald-500/10 shadow-[0_4px_30px_rgba(0,0,0,0.8)]"
           }`}
       >
         {/* Contenedor responsive rígido (310px a 1900px) */}
@@ -116,7 +125,7 @@ export const Navbar = () => {
               <span className="font-black tracking-[0.15em] uppercase text-emerald-500 text-xs md:text-lg transition-colors group-hover:text-gold">
                 Emerald
               </span>
-              <span className="font-black tracking-tighter uppercase text-gold text-xs md:text-lg italic">
+              <span className="font-black tracking-tighter uppercase text-gold text-xs md:text-lg italic transition-colors group-hover:text-emerald-400">
                 DT
               </span>
             </div>
@@ -142,14 +151,14 @@ export const Navbar = () => {
               <Link 
                 href={`/${lang}/collections`} 
                 onClick={(e) => handleNavigation(e, `/${lang}/collections`)}
-                className="hover:text-gold transition-colors cursor-pointer"
+                className="hover:text-gold transition-colors cursor-pointer p-1.5 duration-300 block"
               >
                 <ShoppingCart size={18} strokeWidth={2} />
               </Link>
               <Link 
                 href={`/${lang}/auth`} 
                 onClick={(e) => handleNavigation(e, `/${lang}/auth`)}
-                className="text-[10px] uppercase tracking-[0.3em] font-bold hover:text-gold transition-colors cursor-pointer"
+                className="text-[10px] uppercase tracking-[0.3em] font-bold text-emerald-400 hover:text-gold transition-colors duration-300 cursor-pointer block"
               >
                 {isEs ? "ACCESO" : "ACCESS"}
               </Link>
@@ -159,7 +168,7 @@ export const Navbar = () => {
           {/* BOTÓN HAMBURGUER */}
           <button 
             onClick={() => setIsMobileMenuOpen(true)}
-            className={`md:hidden relative z-[120] w-10 h-10 flex flex-col items-center justify-center bg-zinc-900/40 border border-white/5 transition-all duration-300 outline-none cursor-pointer group ${isMobileMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+            className={`md:hidden relative z-[120] w-10 h-10 flex flex-col items-center justify-center bg-emerald-950/20 border border-emerald-500/20 transition-all duration-300 outline-none cursor-pointer group ${isMobileMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100 hover:border-gold"}`}
             aria-label="Open Menu"
           >
             <div className="relative w-5 h-3.5 flex flex-col justify-between items-center overflow-hidden">
@@ -171,31 +180,32 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* INTERFAZ MÓVIL OVERLAY */}
+      {/* INTERFAZ MÓVIL OVERLAY (Degradado Esmeralda Intenso a Negro) */}
       <div className={`fixed inset-0 z-[200] transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] md:hidden
         ${isMobileMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-950 via-emerald-900 to-zinc-950" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-500/20 via-transparent to-transparent opacity-40 pointer-events-none" />
+        {/* Fondo Esmeralda Profundo Sincronizado */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#02140b] via-[#010804] to-black" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-500/15 via-transparent to-transparent opacity-50 pointer-events-none" />
 
         <button 
           onClick={handleCloseMobileMenu}
-          className="absolute top-6 right-4 w-10 h-10 flex items-center justify-center bg-black/40 border border-white/10 rounded-none cursor-pointer outline-none group hover:border-gold transition-colors z-[210]"
+          className="absolute top-6 right-4 w-10 h-10 flex items-center justify-center bg-black/60 border border-emerald-500/20 rounded-none cursor-pointer outline-none group hover:border-gold transition-colors z-[210]"
           aria-label="Close Menu"
         >
-          <X size={22} className="text-red-500 transition-transform group-hover:scale-110" />
+          <X size={22} className="text-emerald-500 transition-transform group-hover:scale-110 group-hover:text-gold" />
         </button>
 
         <div className="relative flex flex-col h-full justify-between py-20 items-center px-6 font-mono min-w-[310px] overflow-y-auto">
           
           {/* Enlaces Móviles */}
-          <div className="flex flex-col items-center gap-6 w-full text-center mt-8">
+          <div className="flex flex-col items-center gap-7 w-full text-center mt-8">
             {navLinks.map((item) => (
               <Link 
                 key={item.href} 
                 href={item.href} 
                 onClick={(e) => handleNavigation(e, item.href)}
-                className="text-md uppercase tracking-[0.25em] font-bold text-gold/90 hover:text-white transition-colors cursor-pointer py-1 block"
+                className="text-md uppercase tracking-[0.25em] font-bold text-zinc-300 hover:text-gold transition-colors duration-300 cursor-pointer py-1 block"
               >
                 {item.name}
               </Link>
@@ -203,20 +213,20 @@ export const Navbar = () => {
           </div>
 
           {/* Accesos Inferiores Móviles */}
-          <div className="flex flex-col items-center gap-5 w-full max-w-[240px] border-t border-gold/20 pt-6 mb-4">
+          <div className="flex flex-col items-center gap-5 w-full max-w-[240px] border-t border-emerald-500/20 pt-6 mb-4">
             <Link 
               href={`/${lang}/collections`} 
               onClick={(e) => handleNavigation(e, `/${lang}/collections`)} 
-              className="text-gold hover:text-white transition-colors flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-bold cursor-pointer"
+              className="text-zinc-300 hover:text-gold transition-colors duration-300 flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-bold cursor-pointer"
             >
-              <ShoppingCart size={20} className="text-gold" />
+              <ShoppingCart size={20} className="text-emerald-500" />
               <span>{isEs ? "Carrito" : "Cart"}</span>
             </Link>
             
             <Link 
               href={`/${lang}/auth`} 
               onClick={(e) => handleNavigation(e, `/${lang}/auth`)} 
-              className="text-center text-[10px] uppercase tracking-[0.2em] font-bold text-black bg-gold hover:bg-white transition-colors px-4 py-3 w-full font-black tracking-[0.25em] cursor-pointer"
+              className="text-center text-[10px] uppercase tracking-[0.20em] font-black text-black bg-gold hover:bg-white hover:text-black transition-all duration-300 px-4 py-3 w-full cursor-pointer shadow-[0_0_15px_rgba(212,175,55,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
             >
               {isEs ? "LOG IN / ACCESO" : "LOG IN / ACCESS"}
             </Link>
