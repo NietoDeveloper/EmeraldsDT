@@ -93,13 +93,6 @@ export default async function RootLayout(props: RootLayoutProps) {
         
         {/* Orquestación perimetral de carga controlada */}
 
-
-        {/* Árbol estructural de interfaz: escala responsiva estricta de 310px a 1900px */}
-        <div id="main-content" className="relative flex flex-col min-h-screen w-full overflow-x-hidden">
-          
-          <Navbar />
-
-
         </div>
       </body>
     </html>
