@@ -202,10 +202,6 @@ export default async function CollectionPage({ params, searchParams }: Collectio
                     {isEs ? 'VER ESPECIFICACIONES' : 'VIEW SPECIFICATIONS'}
                   </Link>
 
-                  <Link
-                    href={`/${lang}/checkout?product=${gem.id}`}
-                    className="w-full bg-gold border border-gold text-black hover:bg-transparent hover:text-gold transition-all duration-300 font-mono text-[10px] tracking-[0.2em] font-bold py-2.5 text-center uppercase block cursor-pointer"
-                  >
                     {isEs ? 'COMPRAR ACTIVO' : 'ACQUIRE ASSET'}
                   </Link>
                 </div>
