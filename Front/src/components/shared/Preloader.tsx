@@ -115,17 +115,7 @@ export default function Preloader() {
               </div>
 
               {/* BARRA DE PROGRESO */}
-              <div className="w-full max-w-[260px] h-[1px] bg-emerald-950/50 relative overflow-hidden rounded-full border border-white/5">
-                <motion.div 
-                  initial={{ x: "-100%" }}
-                  animate={{ x: "0%" }}
-                  transition={{ 
-                    duration: 4, 
-                    ease: [0.65, 0, 0.35, 1] 
-                  }}
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-400 to-emerald-600 shadow-[0_0_10px_rgba(52,211,153,0.5)]"
-                />
-              </div>
+              
 
       )}
     </AnimatePresence>
