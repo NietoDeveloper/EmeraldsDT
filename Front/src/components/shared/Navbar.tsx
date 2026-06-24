@@ -4,7 +4,7 @@ import { useScrollDirection } from "@/hooks/useScrollDirection";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { ShoppingCart, X } from "lucide-react";
 
 interface NavLink {
@@ -15,6 +15,7 @@ interface NavLink {
 export const Navbar = () => {
   const scrollDirection = useScrollDirection();
   const params = useParams();
+  const router = useRouter();
   
   const lang = (params?.lang as string) || "es";
   const isEs = lang === "es";
@@ -22,7 +23,6 @@ export const Navbar = () => {
   const [isAtTop, setIsAtTop] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Mapeo unificado apuntando a las rutas físicas existentes de tu app
   const navLinks: NavLink[] = [
     { name: isEs ? "Inicio" : "Home", href: `/${lang}` },
     { name: isEs ? "Colección" : "Collection", href: `/${lang}/collections` },
@@ -30,13 +30,40 @@ export const Navbar = () => {
     { name: isEs ? "Contacto" : "Contact", href: `/${lang}#contact` },
   ];
 
+  // Disparador de estado de carga para transiciones fluidas internas
+  const triggerRouteTransition = () => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.classList.remove("js-loaded");
+      document.documentElement.classList.add("js-loading");
+    }
+  };
+
   // Forzar recarga nativa real del navegador al pulsar el logotipo
   const handleNativeReload = (e: React.MouseEvent) => {
     e.preventDefault();
+    triggerRouteTransition();
     if (typeof document !== 'undefined') {
       document.body.style.overflow = "";
     }
     window.location.href = `/${lang}`;
+  };
+
+  // Manejador interceptor para enlaces Next.js Link
+  const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Si es un link de anclaje interno (#), permitimos el comportamiento SPA normal
+    if (href.includes("#")) {
+      handleCloseMobileMenu();
+      return;
+    }
+    
+    e.preventDefault();
+    handleCloseMobileMenu();
+    triggerRouteTransition();
+    
+    // Forzamos un microtask delay para que el render coincida con el montaje de loading.tsx
+    setTimeout(() => {
+      router.push(href);
+    }, 50);
   };
 
   // Cierre limpio forzado y aséptico al interactuar con rutas
@@ -73,7 +100,7 @@ export const Navbar = () => {
         {/* Contenedor responsive rígido (310px a 1900px) */}
         <div className="w-full max-w-[1900px] mx-auto flex justify-between items-center px-4 sm:px-8 md:px-12 lg:px-20 min-w-[310px]">
           
-          {/* LOGO & BRAND (Fuerza recarga completa) */}
+          {/* LOGO & BRAND */}
           <a href={`/${lang}`} onClick={handleNativeReload} className="group flex items-center gap-2 md:gap-4 z-[120] outline-none cursor-pointer">
             <div className="relative w-8 h-8 md:w-11 md:h-11 transition-all duration-700 group-hover:rotate-[360deg]">
               <Image 
@@ -95,12 +122,13 @@ export const Navbar = () => {
             </div>
           </a>
 
-          {/* MENÚ HORIZONTAL (Escritorio - Desde md:flex en adelante) */}
+          {/* MENÚ HORIZONTAL (Escritorio) */}
           <div className="hidden md:flex items-center gap-6 lg:gap-8 xl:gap-12">
             {navLinks.map((link) => (
               <Link 
                 key={link.href}
                 href={link.href} 
+                onClick={(e) => handleNavigation(e, link.href)}
                 className="text-[10px] xl:text-[11px] uppercase tracking-[0.3em] font-bold text-zinc-400 hover:text-gold transition-colors duration-300 font-mono cursor-pointer"
               >
                 {link.name}
@@ -111,16 +139,24 @@ export const Navbar = () => {
           {/* ACCESOS CORPORATIVOS (Escritorio) */}
           <div className="hidden md:flex items-center gap-4 md:gap-8 font-mono">
             <div className="flex items-center gap-6 text-emerald-500">
-              <Link href={`/${lang}/collections`} className="hover:text-gold transition-colors cursor-pointer">
+              <Link 
+                href={`/${lang}/collections`} 
+                onClick={(e) => handleNavigation(e, `/${lang}/collections`)}
+                className="hover:text-gold transition-colors cursor-pointer"
+              >
                 <ShoppingCart size={18} strokeWidth={2} />
               </Link>
-              <Link href={`/${lang}/auth`} className="text-[10px] uppercase tracking-[0.3em] font-bold hover:text-gold transition-colors cursor-pointer">
+              <Link 
+                href={`/${lang}/auth`} 
+                onClick={(e) => handleNavigation(e, `/${lang}/auth`)}
+                className="text-[10px] uppercase tracking-[0.3em] font-bold hover:text-gold transition-colors cursor-pointer"
+              >
                 {isEs ? "ACCESO" : "ACCESS"}
               </Link>
             </div>
           </div>
 
-          {/* BOTÓN HAMBURGUER (Con efectos y animaciones sutiles a Oro) */}
+          {/* BOTÓN HAMBURGUER */}
           <button 
             onClick={() => setIsMobileMenuOpen(true)}
             className={`md:hidden relative z-[120] w-10 h-10 flex flex-col items-center justify-center bg-zinc-900/40 border border-white/5 transition-all duration-300 outline-none cursor-pointer group ${isMobileMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100"}`}
@@ -135,15 +171,13 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* INTERFAZ MÓVIL OVERLAY MODERNA (Fondo Color Esmeralda & Letras Gold) */}
+      {/* INTERFAZ MÓVIL OVERLAY */}
       <div className={`fixed inset-0 z-[200] transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] md:hidden
         ${isMobileMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
       >
-        {/* Fondo Esmeralda Alta Costura */}
         <div className="absolute inset-0 bg-gradient-to-b from-emerald-950 via-emerald-900 to-zinc-950" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-500/20 via-transparent to-transparent opacity-40 pointer-events-none" />
 
-        {/* Botón de cierre X Rojo Independiente y Operativo */}
         <button 
           onClick={handleCloseMobileMenu}
           className="absolute top-6 right-4 w-10 h-10 flex items-center justify-center bg-black/40 border border-white/10 rounded-none cursor-pointer outline-none group hover:border-gold transition-colors z-[210]"
@@ -154,13 +188,13 @@ export const Navbar = () => {
 
         <div className="relative flex flex-col h-full justify-between py-20 items-center px-6 font-mono min-w-[310px] overflow-y-auto">
           
-          {/* Enlaces Principales del Menú Móvil en Color Gold */}
+          {/* Enlaces Móviles */}
           <div className="flex flex-col items-center gap-6 w-full text-center mt-8">
             {navLinks.map((item) => (
               <Link 
                 key={item.href} 
                 href={item.href} 
-                onClick={handleCloseMobileMenu}
+                onClick={(e) => handleNavigation(e, item.href)}
                 className="text-md uppercase tracking-[0.25em] font-bold text-gold/90 hover:text-white transition-colors cursor-pointer py-1 block"
               >
                 {item.name}
@@ -168,11 +202,11 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* Sección de Accesos Inferiores (Carrito y Acceso / Log in) */}
+          {/* Accesos Inferiores Móviles */}
           <div className="flex flex-col items-center gap-5 w-full max-w-[240px] border-t border-gold/20 pt-6 mb-4">
             <Link 
               href={`/${lang}/collections`} 
-              onClick={handleCloseMobileMenu} 
+              onClick={(e) => handleNavigation(e, `/${lang}/collections`)} 
               className="text-gold hover:text-white transition-colors flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-bold cursor-pointer"
             >
               <ShoppingCart size={20} className="text-gold" />
@@ -181,7 +215,7 @@ export const Navbar = () => {
             
             <Link 
               href={`/${lang}/auth`} 
-              onClick={handleCloseMobileMenu} 
+              onClick={(e) => handleNavigation(e, `/${lang}/auth`)} 
               className="text-center text-[10px] uppercase tracking-[0.2em] font-bold text-black bg-gold hover:bg-white transition-colors px-4 py-3 w-full font-black tracking-[0.25em] cursor-pointer"
             >
               {isEs ? "LOG IN / ACCESO" : "LOG IN / ACCESS"}
