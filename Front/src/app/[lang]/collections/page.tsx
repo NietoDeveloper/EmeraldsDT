@@ -186,13 +186,7 @@ export default async function CollectionPage({ params, searchParams }: Collectio
                     </p>
                   </div>
 
-                  <div className="flex justify-between items-center border-t border-b border-white/5 py-2.5 mt-4 font-mono text-xs">
-                    <span className="text-zinc-500 font-medium">{gem.carats.toFixed(2)} CTS</span>
-                    <span className="font-black text-white group-hover:text-gold transition-colors duration-300">
-                      ${gem.price.toLocaleString('en-US')} USD
-                    </span>
-                  </div>
-                </div>
+
 
                 <div className="flex flex-col gap-2">
                   <Link 
