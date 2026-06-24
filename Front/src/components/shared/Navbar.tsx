@@ -161,17 +161,7 @@ export const Navbar = () => {
               href={`/${lang}/collections`} 
               onClick={() => setIsMobileMenuOpen(false)} 
               className="text-gold hover:text-white transition-colors flex items-center gap-3 text-xs uppercase tracking-[0.2em] font-bold cursor-pointer"
-            >
-              <ShoppingCart size={20} className="text-gold" />
-              <span>{isEs ? "Carrito" : "Cart"}</span>
-            </Link>
-            
-            <Link 
-              href={`/${lang}/auth`} 
-              onClick={() => setIsMobileMenuOpen(false)} 
-              className="text-center text-[10px] uppercase tracking-[0.2em] font-bold text-black bg-gold hover:bg-white transition-colors px-4 py-3 w-full font-black tracking-[0.25em] cursor-pointer"
-            >
-              {isEs ? "LOG IN / ACCESO" : "LOG IN / ACCESS"}
+
             </Link>
           </div>
 
