@@ -45,11 +45,6 @@ interface RootLayoutProps {
   params: Promise<{ lang?: string }>; 
 }
 
-/**
- * Emerald DT - Root Layout Orchestrator
- * Arquitectura de alto rendimiento L5 optimizada por Nieto Laboratory.
- * Soporte responsivo estricto garantizado (310px -> 1900px).
- */
 export default async function RootLayout(props: RootLayoutProps) {
   const { children, params } = props;
   const resolvedParams = await params;
@@ -62,75 +57,56 @@ export default async function RootLayout(props: RootLayoutProps) {
       suppressHydrationWarning 
     >
       <head>
-        {/* Inyección Técnica: Control de Preloader + Scrollbar Esmeralda Unificado */}
+        {/* Estilos de inicialización y scrollbar esmeralda integrado a nivel global */}
         <style dangerouslySetInnerHTML={{ __html: `
           html.js-loading body { overflow: hidden !important; background: #000 !important; }
           #main-content { opacity: 0; visibility: hidden; }
-          
           html.js-loaded #main-content { 
             opacity: 1 !important; 
             visibility: visible !important; 
             transition: opacity 1.2s cubic-bezier(0.43, 0.13, 0.23, 0.96); 
           }
-
-          /* Configuración Maestra del Scrollbar Esmeralda Global */
+          
+          /* Inyección del scrollbar esmeralda directo en el motor de renderizado del navegador */
           ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
+            width: 6px !important;
+            height: 6px !important;
           }
           ::-webkit-scrollbar-track {
-            background: #000000;
+            background: #000000 !important;
           }
           ::-webkit-scrollbar-thumb {
-            background: #059669;
-            border-radius: 3px;
+            background: #059669 !important;
+            border-radius: 3px !important;
           }
           ::-webkit-scrollbar-thumb:hover {
-            background: #10b981;
+            background: #10b981 !important;
           }
           html {
-            scrollbar-width: thin;
-            scrollbar-color: #059669 #000000;
+            scrollbar-width: thin !important;
+            scrollbar-color: #059669 #000000 !important;
+            overflow-y: auto !important; /* Fuerza la reactivación del scroll vertical general */
           }
         `}} />
-        
-        {/* Script inline de rescate: Si el Preloader falla por JS en cliente, esto libera la UI a los 3.5s */}
-        <script dangerouslySetInnerHTML={{ __html: `
-          document.addEventListener("DOMContentLoaded", function() {
-            // El componente Preloader debe ejecutar este cambio de clase al terminar su animación.
-            // Dejamos este fail-safe global por si tarda en responder la red.
-            setTimeout(function() {
-              document.documentElement.classList.remove('js-loading');
-              document.documentElement.classList.add('js-loaded');
-            }, 3500);
-          });
-        `}} />
       </head>
-      <body className="antialiased bg-black text-white selection:bg-emerald-500/30 selection:text-emerald-200 min-h-screen font-sans">
+      <body className="antialiased bg-black text-white selection:bg-emerald-500/30 selection:text-emerald-200 min-h-screen font-sans overflow-x-hidden">
         
-        {/* Orquestación de carga controlada */}
+        {/* Orquestación perimetral de carga controlada */}
         <Suspense fallback={null}>
           <Preloader />
         </Suspense>
 
         {/* Árbol estructural de interfaz: escala responsiva estricta de 310px a 1900px */}
-        <div id="main-content" className="relative flex flex-col min-h-screen w-full">
+        <div id="main-content" className="relative flex flex-col min-h-screen w-full overflow-x-hidden">
           
-          {/* Barra de navegación global unificada por idioma */}
           <Navbar />
           
-          {/* Inyección del viewport de las páginas dinámicas */}
-          <main className="flex-grow w-full relative z-10">
+          <main className="flex-grow w-full relative z-10 flex flex-col">
             <PageTransitionWrapper>
               {children}
             </PageTransitionWrapper>
           </main>
 
-          {/* NOTA ARQUITECTÓNICA //
-              El Footer se mantiene fuera de este layout raíz para prevenir rupturas 
-              en la fricción del Snap Scroll de las vistas de landing. Cada página 
-              lo inyecta de manera aséptica al final de su propio contenedor principal.
-          */}
         </div>
       </body>
     </html>
