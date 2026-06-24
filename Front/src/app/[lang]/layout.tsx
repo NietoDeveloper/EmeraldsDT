@@ -100,12 +100,7 @@ export default async function RootLayout(props: RootLayoutProps) {
         <div id="main-content" className="relative flex flex-col min-h-screen w-full overflow-x-hidden">
           
           <Navbar />
-          
-          <main className="flex-grow w-full relative z-10 flex flex-col">
-            <PageTransitionWrapper>
-              {children}
-            </PageTransitionWrapper>
-          </main>
+
 
         </div>
       </body>
