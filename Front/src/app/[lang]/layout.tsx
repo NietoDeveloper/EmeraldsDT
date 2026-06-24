@@ -92,9 +92,7 @@ export default async function RootLayout(props: RootLayoutProps) {
       <body className="antialiased bg-black text-white selection:bg-emerald-500/30 selection:text-emerald-200 min-h-screen font-sans overflow-x-hidden">
         
         {/* Orquestación perimetral de carga controlada */}
-        <Suspense fallback={null}>
-          <Preloader />
-        </Suspense>
+
 
         {/* Árbol estructural de interfaz: escala responsiva estricta de 310px a 1900px */}
         <div id="main-content" className="relative flex flex-col min-h-screen w-full overflow-x-hidden">
