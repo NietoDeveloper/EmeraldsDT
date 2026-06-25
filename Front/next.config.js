@@ -1,13 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 1. Desbloqueo perimetral de WebSockets para desarrollo en red local (Next.js 16 / Turbopack)
-  allowedDevOrigins: [
-    'localhost:3000',
-    '192.168.0.21:3000',
-    '192.168.0.21'
-  ],
+  // Configuración Experimental Avanzada (Next.js 16 / Turbopack)
+  experimental: {
+    // Desbloqueo perimetral para desarrollo y WebSockets en red local
+    serverActions: {
+      allowedOrigins: [
+        'localhost:3000',
+        '192.168.0.21:3000',
+        '192.168.0.21'
+      ],
+    },
+  },
 
-  // Optimización avanzada de imágenes (Gemas de alta pureza)
+  // Optimización avanzada de imágenes (Renderizado de Gemas de alta pureza)
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -18,11 +23,13 @@ const nextConfig = {
     ],
   },
 
-  // Máxima seguridad y estabilidad del clúster
+  // Máxima seguridad y estabilidad del ecosistema
   reactStrictMode: true,
-  poweredByHeader: false, // Perímetro seguro: Mitiga escaneos de firma de framework
+  poweredByHeader: false, // Perímetro seguro: Oculta la firma del framework para mitigar escaneos de vulnerabilidades
 
-  // Configuración dinámica: 'standalone' para Docker/Railway, inactivo para Serverless nativo en Vercel
+  // Arquitectura de despliegue híbrida y dinámica
+  // 'standalone' optimiza al máximo para contenedores Docker/Railway empaquetando solo lo necesario,
+  // mientras que para Vercel se desactiva permitiendo el comportamiento serverless nativo automatizado.
   output: process.env.VERCEL ? undefined : 'standalone'
 };
 
