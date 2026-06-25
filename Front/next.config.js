@@ -22,8 +22,8 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false, // Perímetro seguro: Mitiga escaneos de firma de framework
 
-  // Configuración de empaquetado para entornos distribuidos (Docker/Railway)
-  output: 'standalone'
+  // Configuración dinámica: 'standalone' para Docker/Railway, inactivo para Serverless nativo en Vercel
+  output: process.env.VERCEL ? undefined : 'standalone'
 };
 
 module.exports = nextConfig;
